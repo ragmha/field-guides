@@ -3,7 +3,11 @@ title: Know what changes on GHE.com
 section: What GHE.com gives you
 order: 3
 description: Understand the dedicated subdomain, managed identities and feature differences before planning anything else.
-verified: "2026-11-12"
+verified: "2026-11-13"
+diagram: platform-architecture
+additionalDiagrams:
+  - environment-choice
+  - feature-availability
 checks:
   - question: Can developers keep their personal github.com accounts and use them in the GHE.com enterprise?
     answer: No. GHE.com enterprises use Enterprise Managed Users. Your identity provider creates and controls the accounts, and they are separate from personal github.com accounts.
@@ -12,6 +16,7 @@ checks:
   - question: A workflow uses a Marketplace action that calls api.github.com directly. Will it work unchanged?
     answer: Not necessarily. Actions that hard-code api.github.com may fail, because the GHE.com API lives at api.SUBDOMAIN.ghe.com. Test your critical actions during the trial.
 sources:
+  - https://docs.github.com/en/enterprise-server@latest/admin/overview/about-github-enterprise-server
   - https://github.com/enterprise/data-residency
   - https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-github-enterprise-cloud-with-data-residency
   - https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency
@@ -42,6 +47,12 @@ Neither country is an EU member state. Norway is in the EEA, where the GDPR appl
 </details>
 
 ## What changes for every user
+
+| Deployment | Hosting | Primary operational tradeoff |
+| --- | --- | --- |
+| GitHub Enterprise Cloud on github.com | GitHub-managed SaaS | Shared github.com endpoints; check the applicable storage commitments. |
+| GHE.com | GitHub-managed SaaS with a selected data residency region | Managed identities and a dedicated enterprise subdomain; check the documented exceptions. |
+| [GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@latest/admin/overview/about-github-enterprise-server) | Self-hosted appliance on your infrastructure | You control the deployment, maintenance and infrastructure; releases and features differ. |
 
 | | github.com | GHE.com |
 | --- | --- | --- |

@@ -1,0 +1,21 @@
+<svg viewBox="0 0 640 316" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="security-layers-title security-layers-desc">
+  <title id="security-layers-title">Security controls and residual risk</title>
+  <desc id="security-layers-desc">Identity, repository controls, monitoring and incident response work together; gaps in any layer leave residual risk that the customer must assess.</desc>
+  <rect width="640" height="316" fill="#fff" class="paper"/>
+  <rect x="40" y="24" width="560" height="52" rx="4" fill="#fff" stroke="#d1d9e0" class="node"/>
+  <rect x="40" y="76" width="560" height="52" rx="4" fill="#fff" stroke="#d1d9e0" class="node"/>
+  <rect x="40" y="128" width="560" height="52" rx="4" fill="#eaf6ed" stroke="#1a7f37" class="focal"/>
+  <rect x="40" y="180" width="560" height="52" rx="4" fill="#fff" stroke="#d1d9e0" class="node"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <g fill="#1f2328" font-size="12" font-weight="600" class="ink">
+      <text x="64" y="55">Identity and access</text><text x="64" y="107">Repository controls</text>
+      <text x="64" y="159">Monitoring</text><text x="64" y="211">Response and recovery</text>
+    </g>
+    <g fill="#59636e" font-size="10" text-anchor="end" class="muted">
+      <text x="576" y="55">IdP policies · least privilege</text><text x="576" y="107">review · rules · scanning</text>
+      <text x="576" y="159">audit events · alerts</text><text x="576" y="211">runbooks · tested exports</text>
+    </g>
+    <text x="40" y="268" font-size="11" font-weight="600" fill="#1f2328" class="ink">Residual risk remains.</text>
+    <text x="40" y="288" font-size="10" fill="#59636e" class="muted">Check availability, scope, ownership and gaps for each layer.</text>
+  </g>
+</svg>

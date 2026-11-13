@@ -5,6 +5,9 @@ order: 6
 description: Walk through the GitHub Data Protection Agreement clause by clause, map it to GDPR Article 28, and note what you still own.
 verified: "2026-11-12"
 diagram: breach-notification
+additionalDiagrams:
+  - contract-stack
+  - government-request
 checks:
   - question: GitHub tells you about a security incident affecting your enterprise. Who decides whether the supervisory authority must be notified?
     answer: The controller determines whether notification is required. The DPA commits GitHub to notify you "without undue delay" and to assist, but you remain responsible for your own notification duties under GDPR Article 33.
@@ -52,18 +55,18 @@ Two Product Terms details matter for residency buyers. They list "GitHub Enterpr
 | Subprocessors | §9: general authorisation, a published [subprocessor list](https://docs.github.com/en/site-policy/privacy-policies/github-subprocessors), 30 days' notice, and a right to terminate the affected service without penalty. |
 | Help with data subject requests | §3.G: GitHub redirects data subjects to you and provides "the necessary means to respond". |
 | Help with security, breach and DPIA duties | §6: incident notice "without undue delay", investigation and mitigation. §6.C: help with your notifications, to the extent required by applicable law. |
-| Delete or return at the end | §8: "delete or return all the Customer Personal Data to You, whichever you elect". The General Terms §9.5 give 90 days after termination to migrate repository data. |
+| Delete or return at the end | §8: "delete or return all the Customer Personal Data to You, whichever you elect". The General Terms §9.5 allow up to 90 days after termination to migrate or request migration of repository data, without production use. |
 | Audits and information | §5: SOC 1 Type 2, SOC 2 Type 2 and ISO 27001 reports on request. Where a regulator needs more, there is an independent accredited auditor, 30 days' notice and your cost. |
 
 ## Clauses that matter most for EU residency
 
 ### Your region is an instruction (§7.A)
 
-"If you select and use an Online Service where certain data is stored at rest in a specific geographic area, GitHub will store the applicable data based on that instruction." This is the contractual anchor for GHE.com residency. Read it with the [documented exceptions](/part-2/2-data-map/), which §7 also permits.
+"If you select and use an Online Service where certain data is stored at rest in a specific geographic area, GitHub will store the applicable data based on that instruction." This is the contractual anchor for GHE.com residency. Read it with the [documented exceptions](/part-3/1-data-map/), which §7 also permits.
 
 ### Transfers still have a legal basis (§7.B–C)
 
-Data that leaves the EU, such as telemetry, billing or default Copilot data, is covered by:
+For applicable personal-data transfers, the DPA describes these safeguards; assess the actual data, destination and applicable terms:
 
 - GitHub's self-certification to the **EU-US Data Privacy Framework**, with the UK and Swiss extensions.
 - And/or the **2021 Standard Contractual Clauses** ([Decision 2021/914](https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj)): Module One for GitHub as controller, and Modules Two and Three for GitHub as processor. They are governed by **Dutch law**, with disputes before **Dutch courts**.

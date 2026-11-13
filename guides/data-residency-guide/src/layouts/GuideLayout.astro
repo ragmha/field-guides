@@ -4,6 +4,8 @@ import Diagram from '../components/Diagram.astro';
 import { chapters, coursePath, parts } from '../course';
 import Landing from '../../../../shared/Landing.astro';
 import landingArt from '../assets/landing.jpg';
+import { quizzes } from '../quizzes';
+import { highlights } from '../highlights';
 import '../styles/global.css';
 
 interface Props {
@@ -22,6 +24,10 @@ const current = sequence.indexOf(page.id);
 const previous = current > 0 ? entryFor(sequence[current - 1]) : undefined;
 const next = current >= 0 && current < sequence.length - 1 ? entryFor(sequence[current + 1]) : undefined;
 const chapter = chapters.find(chapter => chapter.id === page.id);
+const quiz = chapter && quizzes[chapter.id];
+const highlight = chapter && highlights[chapter.id];
+if (chapter && (!quiz || quiz.length !== 5)) throw new Error(`Missing five-question quiz: ${chapter.id}`);
+if (chapter && !highlight) throw new Error(`Missing chapter highlights: ${chapter.id}`);
 const titleFor = (entry: CollectionEntry<'guide'>) => {
   const chapter = chapters.find(chapter => chapter.id === entry.id);
   return chapter ? `${chapter.number} ${entry.data.title}` : entry.id === 'start' ? 'Course index' : entry.data.title;
@@ -84,23 +90,38 @@ const landingParts = parts.map(part => ({
                 })}</div>
               </section>
             ))}
-            <div class="course-appendix"><span>Appendix</span><a href={href('sources')} aria-current={page.id === 'sources' ? 'page' : undefined}>Sources & verification</a></div>
+            <div class="course-appendix"><span>Appendix</span><a href={href('glossary')} aria-current={page.id === 'glossary' ? 'page' : undefined}>Glossary</a><a href={href('sources')} aria-current={page.id === 'sources' ? 'page' : undefined}>Sources & verification</a></div>
           </nav>
         </details>
         <div class="sidebar-note">Know where your data lives.<br />Prove it with sources.</div>
+        <button type="button" id="reset-progress">Reset course progress</button>
+        <p id="progress-status" role="status" aria-live="polite"></p>
       </aside>}
       <main id="content">
         {page.id === 'start' && <Landing name="data-residency-guide" art={landingArt} alt="Pen-and-ink illustration of an open stone vault door revealing server racks, resting on clouds." reviewed={page.data.verified} stale={stale} start={href(chapters[0].id)} secondary={{ href: href('sources'), label: 'Sources & verification' }} parts={landingParts} />}
         <div class="article-grid">
-          <article>
+          {chapter && <div id="course-locked" class="course-locked" role="status">
+            <h2>Chapter locked</h2>
+            <p id="locked-message">Enable JavaScript and browser storage to take the required quizzes and track progress on this device.</p>
+            <a href={href('start')}>Return to the course index</a>
+          </div>}
+          <article id="course-article" hidden={!!chapter}>
             {page.id !== 'start' && <><div class="eyebrow">{chapter ? `Part ${chapter.part}: ${chapter.partTitle}` : page.data.section}<span class="eyebrow-line"></span></div>
             <TitleTag class="page-title">{chapter && <span class="lesson-number">{chapter.number} </span>}{titleWords.join(' ')}{titleEmphasis && <> <span class="title-emphasis">{titleEmphasis}</span></>}</TitleTag>
             <p class="lede">{page.data.description}</p>
             <div class="page-meta"><span>INDEPENDENT</span><span>Reviewed {page.data.verified}</span>{stale && <strong class="status caution">Review overdue · verify against sources</strong>}</div>
+            {highlight && <section class="at-a-glance" aria-label="At a glance">
+              <div><strong>THE ESSENTIAL</strong><p>{highlight[0]}</p></div>
+              <div><strong>YOUR DECISION</strong><p>{highlight[1]}</p></div>
+            </section>}
             {page.data.diagram && <section class="diagram-section" aria-label="Visual explanation">
               <div class="figure-label">VISUAL LESSON</div>
               <Diagram name={page.data.diagram} />
-            </section>}</>}
+            </section>}
+            {page.data.additionalDiagrams?.map(name => <section class="diagram-section" aria-label="Visual explanation">
+              <div class="figure-label">VISUAL LESSON</div>
+              <Diagram name={name} />
+            </section>)}</>}
             <div class="prose"><slot /></div>
             {outlineParts.length > 0 && <div class="course-outline prose">
               {outlineParts.map(part => {
@@ -118,24 +139,109 @@ const landingParts = parts.map(part => ({
               <div class="figure-label">APPLY THE CONCEPT</div>
               <Diagram name={page.data.scenarioDiagram} />
             </section>}
-            {page.data.checks && <section class="self-check prose" aria-labelledby="check-your-understanding">
-              <h2 id="check-your-understanding">Check your understanding</h2>
-              <p>Try each question before opening the answer.</p>
-              {page.data.checks.map(check => <details><summary>{check.question}</summary><p>{check.answer}</p></details>)}
+            {quiz && <section class="self-check prose" aria-labelledby="check-your-understanding">
+              <h2 id="check-your-understanding">Chapter quiz</h2>
+              <p>Answer all five questions. Score at least 80% to continue. You can retry as often as needed. Progress is stored only in this browser; it is not a security control.</p>
+              <form id="chapter-quiz" data-chapter={page.id}>
+                {quiz.map(([question, correct, wrong1, wrong2, explanation], index) => {
+                  const options = [correct, wrong1, wrong2];
+                  const offset = index % options.length;
+                  const ordered = [...options.slice(offset), ...options.slice(0, offset)];
+                  return <fieldset data-answer={correct}>
+                    <legend>{index + 1}. {question}</legend>
+                    {ordered.map(option => <label><input type="radio" name={`q${index}`} value={option} required /> {option}</label>)}
+                    <p class="quiz-feedback" hidden><strong>Correct answer:</strong> {correct}. {explanation}</p>
+                  </fieldset>;
+                })}
+                <button type="submit">Check answers</button>
+                <p id="quiz-status" role="status" aria-live="polite"></p>
+              </form>
             </section>}
             <section class="source-note" aria-labelledby="page-sources">
               <h2 id="page-sources">Sources & freshness</h2>
               <p>Source review: <time datetime={page.data.verified}>{page.data.verified}</time>. This independent guide is not legal advice, a contract, or a substitute for your own agreements. Source links are authoritative; recommendations are labeled as guide advice.</p>
               <ul>{page.data.sources.map((source) => <li><a href={source} target="_blank" rel="noopener noreferrer">{new URL(source).hostname} / {new URL(source).pathname.split('/').filter(Boolean).at(-1)?.replaceAll('-', ' ')} ↗</a></li>)}</ul>
             </section>
-            {page.id !== 'start' && <nav class="pagination" aria-label="Reading sequence">{previous ? <a rel="prev" href={href(previous.id)}><small>← PREVIOUS</small>{titleFor(previous)}</a> : <span></span>}{next ? <a class="next" rel="next" href={href(next.id)}><small>NEXT CHAPTER →</small>{titleFor(next)}</a> : <a class="next" href={href('start')}><small>{page.id === 'sources' ? 'RETURN TO COURSE →' : 'COURSE COMPLETE →'}</small>Course index</a>}</nav>}
+            {page.id !== 'start' && <nav class="pagination" aria-label="Reading sequence">{previous ? <a rel="prev" href={href(previous.id)}><small>← PREVIOUS</small>{titleFor(previous)}</a> : <span></span>}{next ? <a class="next" rel="next" href={href(next.id)} hidden={!!chapter}><small>NEXT CHAPTER →</small>{titleFor(next)}</a> : <a class="next" href={href('start')} hidden={!!chapter}><small>{page.id === 'sources' ? 'RETURN TO COURSE →' : 'COURSE COMPLETE →'}</small>Course index</a>}</nav>}
             <footer class="article-footer">EU Data Residency <span>Independent guidance. Official sources, clearly linked.</span></footer>
           </article>
-          {page.id !== 'start' && <aside class="toc" aria-label="On this page"><div>ON THIS PAGE</div>{headings.filter((h) => h.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}{outlineParts.map(part => <a href={`#part-${parts.indexOf(part) + 1}`}>{page.id === 'start' ? part.title : 'Chapters in this part'}</a>)}{page.data.checks && <a href="#check-your-understanding">Check your understanding</a>}<a href="#page-sources">Sources & freshness</a></aside>}
+          {page.id !== 'start' && <aside class="toc" aria-label="On this page"><div>ON THIS PAGE</div>{headings.filter((h) => h.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}{outlineParts.map(part => <a href={`#part-${parts.indexOf(part) + 1}`}>{page.id === 'start' ? part.title : 'Chapters in this part'}</a>)}{quiz && <a href="#check-your-understanding">Chapter quiz</a>}<a href="#page-sources">Sources & freshness</a></aside>}
         </div>
       </main>
     </div>
     <script>
+      import { chapters } from '../course';
+      import { canOpenChapter, scoreQuiz } from '../progress';
+
+      const progressKey = 'eu-residency-progress-v1';
+      const form = document.querySelector<HTMLFormElement>('#chapter-quiz');
+      const article = document.querySelector<HTMLElement>('#course-article')!;
+      const locked = document.querySelector<HTMLElement>('#course-locked');
+      const lockedMessage = document.querySelector<HTMLElement>('#locked-message');
+      const nextLink = document.querySelector<HTMLAnchorElement>('.pagination .next');
+      const status = document.querySelector<HTMLElement>('#quiz-status');
+      // The landing page has no sidebar, so progress controls are absent there.
+      const progressStatus = document.querySelector<HTMLElement>('#progress-status');
+      const chapterIndex = chapters.findIndex(chapter => chapter.id === form?.dataset.chapter);
+      let progress: string[] = [];
+
+      function showStorageError() {
+        const message = 'Progress could not be saved or read. Enable browser storage, then reload or reset progress.';
+        if (progressStatus) progressStatus.textContent = message;
+        if (status) status.textContent = message;
+        if (lockedMessage) lockedMessage.textContent = message;
+      }
+
+      function refreshProgress() {
+        if (progressStatus) progressStatus.textContent = `${progress.length} of ${chapters.length} chapter quizzes passed on this browser.`;
+        if (chapterIndex < 0) return;
+        const unlocked = canOpenChapter(chapters.map(chapter => chapter.id), progress, chapterIndex);
+        article.hidden = !unlocked;
+        if (locked) locked.hidden = unlocked;
+        if (!unlocked && lockedMessage) lockedMessage.textContent = 'Pass each earlier chapter quiz before opening this chapter.';
+        if (nextLink) nextLink.hidden = !progress.includes(chapters[chapterIndex].id);
+      }
+
+      try {
+        const saved = localStorage.getItem(progressKey);
+        const parsed: unknown = saved ? JSON.parse(saved) : [];
+        if (!Array.isArray(parsed) || !parsed.every(id => typeof id === 'string' && chapters.some(chapter => chapter.id === id))) throw new Error('Invalid progress');
+        progress = parsed;
+        refreshProgress();
+      } catch {
+        showStorageError();
+      }
+
+      form?.addEventListener('submit', event => {
+        event.preventDefault();
+        const fields = [...form.querySelectorAll<HTMLFieldSetElement>('fieldset')];
+        const score = scoreQuiz(fields.map(field => field.querySelector<HTMLInputElement>('input:checked')?.value), fields.map(field => field.dataset.answer!));
+        fields.forEach(field => { field.querySelector<HTMLElement>('.quiz-feedback')!.hidden = false; });
+        if (score >= 4) {
+          const updated = [...new Set([...progress, form.dataset.chapter!])];
+          try {
+            localStorage.setItem(progressKey, JSON.stringify(updated));
+            progress = updated;
+            refreshProgress();
+            status!.textContent = `${score} out of 5. Passed; the next chapter is unlocked.`;
+          } catch {
+            showStorageError();
+          }
+        } else {
+          status!.textContent = `${score} out of 5. You need 4 correct answers; review the explanations and try again.`;
+        }
+      });
+
+      document.querySelector<HTMLButtonElement>('#reset-progress')?.addEventListener('click', () => {
+        if (!confirm('Reset all quiz progress in this browser?')) return;
+        try {
+          localStorage.removeItem(progressKey);
+          location.href = import.meta.env.BASE_URL;
+        } catch {
+          showStorageError();
+        }
+      });
+
       const select = document.querySelector<HTMLSelectElement>('#theme')!;
       const media = matchMedia('(prefers-color-scheme: dark)');
       const mobile = matchMedia('(max-width: 760px)');

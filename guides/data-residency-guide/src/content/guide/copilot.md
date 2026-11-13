@@ -4,6 +4,10 @@ section: What GHE.com gives you
 order: 5
 description: Turn on Copilot data residency, know what it guarantees and costs, and answer the questions legal and security teams ask about AI on your code.
 verified: "2026-11-12"
+diagram: copilot-flow
+additionalDiagrams:
+  - copilot-governance
+  - ip-commitment
 checks:
   - question: You bought Copilot Business for your GHE.com enterprise and changed no settings. Is inference happening in the EU?
     answer: Not guaranteed. The "Restrict Copilot to data residency compliant models" policy is disabled by default. Until an enterprise owner enables it, Copilot data can be processed and stored outside the region.
@@ -52,7 +56,7 @@ With the policy on, GitHub says: "Your code, prompts, and Copilot responses neve
 - **Features:** all generally available Copilot features work. Preview features are supported with compliant models when they reach general availability.
 - **Clients:** developers need a Copilot extension or CLI released in 2025 or later. Older clients are prompted to update.
 
-**Guide advice:** turn the policy on before you assign the first Copilot seat. Then a developer can never send a prompt out of region by accident during rollout, and the 10% uplift is in your budget from day one.
+**Guide advice:** turn the policy on before assigning Copilot seats, check that developers use compatible clients and supported features, and budget for the 10% uplift. Review other tools and integrations separately; this policy does not govern every possible destination for code or prompts.
 
 ## The questions legal will ask
 

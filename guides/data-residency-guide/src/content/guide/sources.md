@@ -16,7 +16,7 @@ sources:
 - See which questions no public source answered, so you can ask GitHub directly.
 - Keep the guide current with a short review routine.
 
-All sources were checked on **12 November 2026**. Where a page says something different today, the page wins: tell your stakeholders and update your records.
+The original sources were reviewed on **12 November 2026**; the GitHub Enterprise Server overview was added and reviewed on **13 November 2026**. Where a page says something different today, the page wins: tell your stakeholders and update your records.
 
 ## GitHub contracts
 
@@ -24,7 +24,7 @@ All sources were checked on **12 November 2026**. Where a page says something di
 | --- | --- |
 | [GitHub Customer Agreement](https://github.com/customer-terms) | Which documents make up a direct contract |
 | [General Terms](https://github.com/customer-terms/general-terms) | One licence per cloud environment (§1.3), termination (§9.2), regulatory withdrawal (§9.4), 90-day migration window (§9.5), sanctions (§10.5), Irish law for EU customers (§10.11) |
-| [GitHub Data Protection Agreement](https://github.com/customer-terms/github-data-protection-agreement) | Roles, residency instruction (§7.A), transfers, government requests (Annex IV), subprocessors, audits, deletion |
+| [GitHub Data Protection Agreement](https://github.com/customer-terms/github-data-protection-agreement) | October 2025 version reviewed; roles, residency instruction (§7.A), transfers, government requests (Annex IV), subprocessors, audits, deletion. Confirm the version that applies to your purchase route. |
 | [Generative AI Services Terms](https://github.com/customer-terms/github-generative-ai-services-terms) | Ownership of Inputs and Outputs, no training, defence of claims on Outputs |
 | [Microsoft Product Terms: GitHub Offerings](https://www.microsoft.com/licensing/terms/productoffering/GitHubOfferings/MCA) | Purchases through Microsoft; SOC 1 and SOC 2 Type II for GitHub Enterprise with data residency |
 
@@ -33,6 +33,7 @@ All sources were checked on **12 November 2026**. Where a page says something di
 | Source | Supports |
 | --- | --- |
 | [GitHub data residency overview](https://github.com/enterprise/data-residency) | What GHE.com is |
+| [About GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@latest/admin/overview/about-github-enterprise-server) | Self-hosted deployment and its operational responsibilities |
 | [About GitHub Enterprise Cloud with data residency](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-github-enterprise-cloud-with-data-residency) | Regions, Enterprise Managed Users requirement |
 | [About storage of your data](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency) | What is stored in the region and the documented exceptions |
 | [Feature overview](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency) | Features unavailable or different on GHE.com |

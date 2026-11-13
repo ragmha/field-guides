@@ -1,0 +1,17 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="government-request-title government-request-desc">
+<title id="government-request-title">Government request safeguards</title><desc id="government-request-desc">The DPA describes redirecting requests where possible, notification unless legally prohibited and challenges under its terms. Exceptions and applicable law matter.</desc>
+<defs><marker id="government-request-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="640" height="300" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<line x1="148" y1="132" x2="176" y2="132" class="arrow" stroke="#59636e" marker-end="url(#government-request-arrow)"/>
+<line x1="304" y1="132" x2="332" y2="132" class="arrow" stroke="#59636e" marker-end="url(#government-request-arrow)"/>
+<line x1="460" y1="132" x2="488" y2="132" class="arrow" stroke="#59636e" marker-end="url(#government-request-arrow)"/>
+<rect x="20" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="84" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Request</text>
+<rect x="176" y="104" width="128" height="56" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="240" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Redirect if able</text>
+<rect x="332" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="396" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Notify if lawful</text>
+<rect x="488" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="552" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Challenge per terms</text>
+</g></svg>

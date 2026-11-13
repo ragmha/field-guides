@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-label="Data map. Stored in the EU region: repositories and source code, pull requests, issues and comments, Actions data and logs, backups and disaster recovery, and user identity data. Documented exceptions that may be stored outside the region: telemetry with identifiers, billing and licence data, support and feedback data, Copilot data unless the residency policy is enabled, opt-in secret scanning checks, and TLS certificate data. Your integrations, such as self-hosted runners, webhooks and apps, audit log stream destinations and developer machines, are part of your perimeter.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="data-map-title data-map-desc">
+  <title id="data-map-title">The data residency boundary</title>
+  <desc id="data-map-desc">GitHub stores specified customer data in the EU region, documents categories that may be stored elsewhere, and does not control where a customer's integrations send data.</desc>
   <rect class="focus" x="24" y="24" width="430" height="320" rx="10"/>
   <text class="ink" x="48" y="62" font-size="19" font-weight="700">Stored in the EU region</text>
-  <text class="muted" x="48" y="86" font-size="13">EU locations plus Azure regions in Norway and Switzerland</text>
+  <text class="muted" x="48" y="86" font-size="13">EU, Norway and Switzerland locations</text>
   <g font-size="15" class="ink">
     <circle class="accent" cx="56" cy="124" r="5"/><text x="72" y="129">Repositories and source code</text>
     <circle class="accent" cx="56" cy="160" r="5"/><text x="72" y="165">Pull requests, issues and comments</text>

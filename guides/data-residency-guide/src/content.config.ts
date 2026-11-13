@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const diagram = z.enum(['sovereignty-layers', 'data-map', 'adoption-path', 'breach-notification']);
+const diagram = z.string().regex(/^[a-z0-9-]+$/);
 
 const guide = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guide' }),
@@ -14,6 +14,7 @@ const guide = defineCollection({
     sources: z.array(z.string().url()).min(1),
     diagram: diagram.optional(),
     scenarioDiagram: diagram.optional(),
+    additionalDiagrams: z.array(diagram).optional(),
     checks: z.array(z.object({ question: z.string(), answer: z.string() })).min(2).optional(),
   }),
 });

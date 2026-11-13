@@ -32,9 +32,9 @@ Answers reflect public sources on 12 November 2026. Where no public source answe
 
 ## Data and location
 
-### Does anything leave the EU?
+### Can anything leave GitHub's EU region?
 
-Yes, a documented set of categories: telemetry with identifiers, billing, support data, Copilot data unless you enable the policy, opt-in secret scanning checks and TLS certificate data. See [the data map](/part-2/2-data-map/). GitHub "does not notify you when transfers occur".
+Yes, a documented set of categories: telemetry with identifiers, billing, support data, Copilot data unless you enable the policy, opt-in secret scanning checks and TLS certificate data. See [the data map](/part-3/1-data-map/). GitHub "does not notify you when transfers occur".
 
 ### Is our data stored only in EU member states?
 
@@ -54,9 +54,9 @@ We found no public documentation of customer-managed keys for GHE.com at the rev
 
 No. The [Generative AI Services Terms](https://github.com/customer-terms/github-generative-ai-services-terms), section 3: GitHub will not use Inputs or Outputs to train generative AI models without your documented instructions.
 
-### Does Copilot inference happen in the EU?
+### Does Copilot inference happen in GitHub's EU region?
 
-Only after an enterprise owner enables **Restrict Copilot to data residency compliant models**. It is off by default and adds 10% to AI credit consumption. See [Copilot](/part-2/3-copilot/).
+The enabled **Restrict Copilot to data residency compliant models** policy enforces regional processing for supported inference. It is off by default and adds 10% to AI credit consumption. Use compatible clients and review supported features. See [Copilot](/part-6/1-copilot/).
 
 ### Are prompts recorded in the audit log?
 
@@ -74,11 +74,11 @@ For direct purchases, the contract is with GitHub, Inc. The [General Terms §10.
 
 ### What happens if a government asks GitHub for our data?
 
-GitHub's [legal request guidelines](https://docs.github.com/en/site-policy/other-site-policies/guidelines-for-legal-requests-of-user-data) say it will not disclose the contents of private repositories without a valid search warrant, and it notifies affected users unless the law prevents it. The DPA adds redirecting requests to you and challenging orders (Annex IV). See [Map the regulations](/part-3/2-regulations/) on the CLOUD Act.
+GitHub's [legal request guidelines](https://docs.github.com/en/site-policy/other-site-policies/guidelines-for-legal-requests-of-user-data) say it will not disclose the contents of private repositories without a valid search warrant, and it notifies affected users unless the law prevents it. The DPA adds redirecting requests to you and challenging orders (Annex IV). See [Map the regulations](/part-8/1-regulations/) on the CLOUD Act.
 
 ### Can GitHub withdraw the service?
 
-The General Terms allow termination without cause on 30 days' notice (§9.2). GitHub can also modify or withdraw a product in a jurisdiction for regulatory reasons, with a refund as the sole remedy (§9.4), and can suspend where performance would breach US trade or sanctions laws (§10.5). These are the reasons your [exit plan](/part-4/1-readiness/) matters.
+The General Terms allow termination without cause on 30 days' notice (§9.2). GitHub can also modify or withdraw a product in a jurisdiction for regulatory reasons, with a refund as the sole remedy (§9.4), and can suspend where performance would breach US trade or sanctions laws (§10.5). These are the reasons your [exit plan](/part-10/1-readiness/) matters.
 
 ### Do GitHub staff commit to EU-only operations?
 
@@ -92,7 +92,7 @@ Yes. [General Terms §1.3](https://github.com/customer-terms/general-terms): one
 
 ### Can we move back to github.com later, or change our subdomain?
 
-There is no official migration path from GHE.com back to github.com, and the subdomain is permanent. Choose both deliberately. See [Set up, connect and migrate](/part-4/2-migrate/).
+There is no official migration path from GHE.com back to github.com, and the subdomain is permanent. Choose both deliberately. See [Set up, connect and migrate](/part-9/1-migrate/).
 
 ### Can developers still contribute to open source?
 

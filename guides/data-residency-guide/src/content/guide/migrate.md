@@ -4,6 +4,11 @@ section: Adopt with confidence
 order: 9
 description: Stand up the enterprise, connect identity, networks and developer tools, then move repositories in waves with the right tool.
 verified: "2026-11-12"
+diagram: migration-window
+additionalDiagrams:
+  - importer-flow
+  - runner-deployment
+  - cutover-handoff
 checks:
   - question: You migrate 200 repositories with GitHub Enterprise Importer. Do Actions secrets come across?
     answer: No. GEI does not migrate Actions secrets, variables, environments, runners or run history. Recreate them on GHE.com, ideally from your secrets manager.
@@ -50,7 +55,7 @@ Send your firewall team the [network details page](https://docs.github.com/en/en
 
 ## 3. Point every client at GHE.com
 
-Most help-desk tickets in the first week come from clients that still point to `github.com`. Publish this table internally:
+Clients that still point to `github.com` need to be reconfigured. Publish this table internally:
 
 | Client | Setting |
 | --- | --- |

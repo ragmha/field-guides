@@ -4,6 +4,9 @@ section: Why sovereignty
 order: 1
 description: Understand the legal, regulatory and strategic pressures that make EU organisations ask where their code lives and who can reach it.
 verified: "2026-11-12"
+diagram: sovereignty-drivers
+additionalDiagrams:
+  - decision-owners
 checks:
   - question: Your general counsel says "the EU-US Data Privacy Framework is in force, so transfers are solved." What is the risk in relying on that alone?
     answer: The two previous EU-US frameworks were both struck down by the Court of Justice (Schrems I and Schrems II). The current framework survived a General Court challenge in September 2025, but an appeal is pending. Keeping data in the EU reduces how much you depend on any one transfer mechanism surviving.
@@ -49,13 +52,13 @@ The [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj) lets personal data lea
 
 The current [EU-US Data Privacy Framework](https://eur-lex.europa.eu/eli/dec_impl/2023/1795/oj) was adopted on 10 July 2023. On 3 September 2025 the General Court [dismissed an action to annul it](https://curia.europa.eu/site/upload/docs/application/pdf/2025-09/cp250106en.pdf) (Latombe v Commission), and an [appeal (C-703/25 P)](https://eur-lex.europa.eu/eli/C/2025/6610/oj/eng) has been lodged. The framework is in force today. History says to plan for it changing.
 
-**Why residency helps:** when your core data is stored in the EU, fewer of your processing activities depend on a transfer mechanism surviving the next court case.
+**Why residency helps:** when your core data is stored in GitHub's EU region, fewer of your processing activities may depend on a transfer mechanism surviving the next court case. The region also includes Norway and Switzerland; assess transfers under your circumstances.
 
 ### 2. Reach of foreign law
 
 The US [CLOUD Act](https://www.law.cornell.edu/uscode/text/18/2713) (18 U.S.C. § 2713) requires US providers to disclose data within their "possession, custody, or control, regardless of whether" it is located inside or outside the United States. US surveillance law was also the core of the Schrems II ruling.
 
-**Why residency only partly helps:** GitHub is a US company owned by Microsoft. Storing data in the EU changes where it is, not which governments can make demands of the provider. What you can add is a contract that commits the provider to resist, which [the DPA chapter](/part-3/1-dpa/) covers.
+**Why residency only partly helps:** GitHub is a US company owned by Microsoft. Storing data in the EU changes where it is, not which governments can make demands of the provider. What you can add is a contract that commits the provider to resist, which [the DPA chapter](/part-7/1-dpa/) covers.
 
 ### 3. Operational resilience rules
 
@@ -75,9 +78,9 @@ In June 2026 the European Commission proposed the [Cloud and AI Development Act]
 
 | Question your stakeholders ask | Does EU data residency answer it? |
 | --- | --- |
-| Is our code stored in the EU? | **Yes.** Repositories, pull requests, Actions logs and personal identifiers are stored in-region. |
-| Is our Copilot traffic processed in the EU? | **Only when you turn it on.** The Copilot data residency policy is off by default. |
-| Does anything leave the EU? | **Some documented categories.** Telemetry, billing, support and some feature data can. See [the data map](/part-2/2-data-map/). |
+| Is our code stored in GitHub's EU region? | **Yes.** Repositories, pull requests, Actions logs and personal identifiers are stored in-region, which also includes Norway and Switzerland. |
+| Is supported Copilot inference processed in the EU region? | **Enable the policy.** It is off by default; check supported clients and features. |
+| Does anything leave the region? | **Some documented categories can.** Telemetry, billing, support and some feature data can be stored elsewhere. See [the data map](/part-3/1-data-map/). |
 | Can a non-EU government compel access? | **Not solved by location.** It is reduced by contract terms and transparency, not eliminated. |
 | Can we leave if we need to? | **Partly.** Git is portable. Plan the rest, such as issues, Actions and integrations. |
 
@@ -90,7 +93,7 @@ In June 2026 the European Commission proposed the [Cloud and AI Development Act]
 A weak answer is "yes, it is in the EU". The strong answer has four parts:
 
 1. Our code and personal data are stored in GitHub's EU region, under a DPA that records that instruction.
-2. Copilot prompts and responses stay in the EU because we enabled the residency policy.
+2. With the residency policy enabled, supported Copilot inference stays in the selected EU region, which includes Norway and Switzerland.
 3. GitHub is US-owned, so the remaining risk is a legal order. The DPA commits GitHub to redirect the requester, notify us where allowed and challenge the order. GitHub publishes a transparency report.
 4. We hold a tested exit plan, so we are not locked in if the risk picture changes.
 

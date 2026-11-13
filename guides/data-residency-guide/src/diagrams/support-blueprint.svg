@@ -1,0 +1,32 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="support-blueprint-title support-blueprint-desc">
+<title id="support-blueprint-title">Support handoffs</title><desc id="support-blueprint-desc">Customer actions and visible support interactions sit above the visibility line. GitHub&#x27;s internal support process is not verified here.</desc>
+<defs><marker id="support-blueprint-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="640" height="300" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="244" y="38" text-anchor="middle" font-size="11" class="ink" font-weight="600">Report</text>
+<text x="388" y="38" text-anchor="middle" font-size="11" class="ink" font-weight="600">Investigate</text>
+<text x="532" y="38" text-anchor="middle" font-size="11" class="ink" font-weight="600">Resolve</text>
+<text x="156" y="86" text-anchor="end" font-size="9" class="muted">CUSTOMER</text>
+<rect x="176" y="56" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="244" y="85" text-anchor="middle" font-size="10" class="ink">Open case</text>
+<rect x="320" y="56" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="388" y="85" text-anchor="middle" font-size="10" class="ink">Share evidence</text>
+<rect x="464" y="56" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="532" y="85" text-anchor="middle" font-size="10" class="ink">Confirm outcome</text>
+<text x="156" y="150" text-anchor="end" font-size="9" class="muted">VISIBLE</text>
+<rect x="176" y="120" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="244" y="149" text-anchor="middle" font-size="10" class="ink">Acknowledge</text>
+<rect x="320" y="120" width="136" height="48" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="388" y="149" text-anchor="middle" font-size="10" class="ink">Support response</text>
+<rect x="464" y="120" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="532" y="149" text-anchor="middle" font-size="10" class="ink">Close case</text>
+<text x="156" y="214" text-anchor="end" font-size="9" class="muted">BACKSTAGE</text>
+<rect x="176" y="184" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="244" y="213" text-anchor="middle" font-size="10" class="ink">Not verified</text>
+<rect x="320" y="184" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="388" y="213" text-anchor="middle" font-size="10" class="ink">Not verified</text>
+<rect x="464" y="184" width="136" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="532" y="213" text-anchor="middle" font-size="10" class="ink">Not verified</text>
+<line x1="168" y1="180" x2="608" y2="180" stroke="#1f2328" stroke-width="2" class="rule"/>
+<text x="168" y="274" text-anchor="start" font-size="10" class="muted">Visibility line; internal process not verified</text>
+</g></svg>

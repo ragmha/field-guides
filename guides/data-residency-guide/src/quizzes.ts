@@ -1,0 +1,88 @@
+// The first option is correct; presentation rotates it so it is not always first.
+type Question = [question: string, correct: string, distractor1: string, distractor2: string, explanation: string];
+export const quizzes: Record<string, Question[]> = {
+  'why-sovereignty': [
+    ['What besides source code can a repository contain?', 'Personal data and security findings', 'Only executable files', 'No information about people', 'Discussions, author details and security findings can all be sensitive.'],
+    ['Does EU residency alone prevent foreign legal demands?', 'No', 'Yes, in all cases', 'Only for public repositories', 'Location does not by itself remove a provider’s legal obligations.'],
+    ['What does residency reduce?', 'Dependence on transfers for data kept in-region', 'All supplier risk', 'The need for incident response', 'Documented exceptions and integrations still need assessment.'],
+    ['What should a regulated customer consider alongside residency?', 'Supplier risk and an exit plan', 'Only the subdomain name', 'Only the colour of the interface', 'Operational resilience and portability remain customer responsibilities.'],
+    ['What is the status of the EU-US Data Privacy Framework in this guide?', 'In force at review, with an appeal pending', 'Automatically permanent', 'A substitute for all contractual review', 'The guide links to the adequacy decision and the pending appeal.'],
+  ],
+  'residency-vs-sovereignty': [
+    ['What does residency primarily describe?', 'Where applicable data is stored or processed', 'Who owns the provider', 'Whether a service can never be interrupted', 'Residency is a geographic commitment; sovereignty includes more dimensions.'],
+    ['Which dimension does a tested exit plan address?', 'Portability', 'Identity provisioning', 'The storage region', 'A tested export reduces dependency on a single service.'],
+    ['Is localisation the same as residency?', 'No, localisation can be a legal requirement', 'Yes, the terms are always interchangeable', 'No, localisation means encrypting files', 'The guide distinguishes product commitments from legal localisation requirements.'],
+    ['Does EU storage alone establish full sovereignty?', 'No', 'Yes, regardless of provider control', 'Yes, if a subdomain is selected', 'Operational control, legal reach and portability also matter.'],
+    ['How should a customer describe residual risk?', 'By documenting each layer and its controls', 'By claiming no data can leave', 'By ignoring contract terms', 'The guide recommends describing the actual controls and remaining gaps.'],
+  ],
+  'ghe-com': [
+    ['What is GHE.com?', 'A multi-tenant GitHub Enterprise Cloud deployment with a chosen data region', 'A self-hosted GitHub Enterprise Server installation', 'A personal github.com account', 'GHE.com is a cloud service with an enterprise subdomain and region.'],
+    ['Which accounts are required on GHE.com?', 'Enterprise Managed Users', 'Personal accounts only', 'Anonymous accounts', 'Managed accounts are provisioned and controlled through the organisation’s IdP.'],
+    ['Can the selected subdomain be renamed later?', 'No', 'Yes, at any time', 'Only after the first migration', 'Choose the production subdomain before starting the trial.'],
+    ['Which locations are included in GitHub’s EU region?', 'EU locations plus Norway and Switzerland', 'Only EU member states', 'The United States only', 'The documented region expanded to include the two EFTA countries.'],
+    ['How should a team handle feature differences?', 'Check the current feature overview and test workflows', 'Assume every github.com feature behaves identically', 'Disable all integrations permanently', 'Availability changes; use the live documentation and a representative trial.'],
+  ],
+  'data-map': [
+    ['Which category is documented as stored in the chosen region?', 'Repository customer content', 'Every support request', 'Every external integration’s data', 'GitHub lists customer content among the in-region categories.'],
+    ['Can support case data be stored outside the region?', 'Yes', 'No, never', 'Only if the repository is public', 'Support requests and case notes are documented exceptions.'],
+    ['Will GitHub notify you whenever an out-of-region transfer occurs?', 'No', 'Yes, for every transfer', 'Only for billing transfers', 'GitHub documents the reasons but does not notify each transfer.'],
+    ['Where do self-hosted runners run?', 'Where the customer hosts them', 'Always inside GitHub’s EU storage region', 'Only on developer laptops', 'The customer’s runner location is part of the wider data perimeter.'],
+    ['What changes Copilot’s default residency behaviour?', 'Enable the enterprise residency policy', 'Rename a repository', 'Add a pull-request label', 'Copilot has a separate policy, disabled by default.'],
+  ],
+  identity: [
+    ['Who provisions Enterprise Managed Users?', 'The organisation’s identity provider', 'Each developer’s personal account', 'The external auditor', 'The IdP provisions managed accounts using SCIM.'],
+    ['Are managed accounts the same as personal github.com accounts?', 'No', 'Yes', 'Only for administrators', 'Managed accounts are separate from personal accounts.'],
+    ['What should a team test when a user leaves?', 'Deprovisioning and dependent automation', 'Only the user’s browser theme', 'Only repository names', 'Test removal of access and reassign ownership or automation as needed.'],
+    ['Which API hostname should integrations target?', 'api.SUBDOMAIN.ghe.com', 'A hard-coded api.github.com in every case', 'The developer’s email domain', 'GHE.com has enterprise-specific endpoints.'],
+    ['What is a sensible token control?', 'Least privilege and planned rotation', 'Share one administrator token with everyone', 'Commit tokens to repositories', 'Credentials should be scoped, protected and rotated.'],
+  ],
+  security: [
+    ['What should you check on a compliance report?', 'Its scope and relevant exceptions', 'Only its cover colour', 'Only whether it mentions cloud', 'A report is useful only when its scope covers the service and period you need.'],
+    ['Who chooses the audit-log streaming destination?', 'The customer', 'Every repository visitor', 'A random developer client', 'The destination is part of the customer’s data perimeter.'],
+    ['What should be tested after configuring a log stream?', 'Delivery, retention and alert ownership', 'Only the repository name', 'Whether all users have personal accounts', 'Streaming is useful only if events arrive and someone can act on them.'],
+    ['Does a certification eliminate the need for customer controls?', 'No', 'Yes', 'Only after a migration', 'Controls, scope and residual risks still require review.'],
+    ['How can teams check GHE.com feature availability?', 'Consult the current feature overview and test', 'Assume every deployment has identical features', 'Use an old screenshot alone', 'Availability can differ and change over time.'],
+  ],
+  copilot: [
+    ['Is Copilot residency enabled by default?', 'No', 'Yes', 'Only for new users', 'An enterprise owner must enable the residency policy.'],
+    ['What is the documented credit uplift with the policy?', '10%', '0%', '100%', 'GitHub’s example turns 100 credits into 110.'],
+    ['What does the policy restrict?', 'Available models to those compliant with the selected region', 'All GitHub logins', 'Repository names', 'GitHub routes to region-compliant models when the policy is enabled.'],
+    ['Is content exclusion a filesystem security boundary?', 'No', 'Yes, including every third-party tool', 'Yes, for any local file', 'GitHub describes it as a guardrail, not a filesystem security boundary.'],
+    ['Are local Copilot prompts included in the enterprise audit log?', 'No', 'Always', 'Only in public repositories', 'GitHub says the audit log does not include local client session prompts.'],
+  ],
+  dpa: [
+    ['What does DPA §7.A say about a selected storage region?', 'It is an instruction for applicable data', 'It forbids every transfer', 'It applies only to billing invoices', 'The agreement ties applicable storage to the customer’s geographic instruction.'],
+    ['What is GitHub’s breach-notice timing in §6?', 'Without undue delay', 'Always exactly 24 hours', 'Only at contract renewal', 'The DPA does not specify a fixed number of hours for GitHub’s notice.'],
+    ['Who assesses the controller’s GDPR notification duties?', 'The customer as controller', 'Every developer independently', 'The certificate authority', 'The controller assesses the risk and applicable notice obligations.'],
+    ['Are previews automatically covered by the DPA?', 'No, unless designated otherwise', 'Yes, without exception', 'Only when enabled by a developer', 'The DPA excludes previews unless GitHub designates otherwise.'],
+    ['What should a Microsoft-purchase customer confirm?', 'Which agreement and DPA version apply', 'That all GitHub contracts are identical', 'That no privacy terms apply', 'Purchase routes differ, so review the applicable signed terms.'],
+  ],
+  regulations: [
+    ['What can GDPR Article 33 require?', 'Notification without undue delay and, where feasible, within 72 hours', 'Notification of every incident within exactly one hour', 'No risk assessment', 'The controller assesses the risk and applicable notification requirement.'],
+    ['What does DORA require for ICT services supporting critical functions?', 'An exit strategy', 'A guarantee of zero downtime', 'A public repository', 'DORA Article 28 addresses exit strategies for critical or important functions.'],
+    ['What should organisations check for NIS2?', 'Applicable national implementing law', 'Only the enterprise subdomain', 'Only the developer IDE', 'NIS2 is a directive; national implementation matters.'],
+    ['What does the AI Act include for staff using AI?', 'An AI literacy obligation', 'A requirement to publish every prompt', 'A blanket prohibition of code assistance', 'Article 4 addresses sufficient AI literacy.'],
+    ['What is the purpose of a transfer assessment?', 'Assess relevant out-of-region processing and safeguards', 'Rename the enterprise', 'Replace the purchase agreement', 'A residency selection does not remove every documented transfer.'],
+  ],
+  migrate: [
+    ['When should the GHE.com subdomain be chosen?', 'Before creating the trial', 'After production cutover', 'Whenever developers request a rename', 'The chosen subdomain cannot be changed later.'],
+    ['Do Actions secrets automatically migrate with GEI?', 'No; recreate them', 'Yes, always', 'Only for public repositories', 'Plan to recreate secrets, variables, environments and runners.'],
+    ['What is a prudent migration sequence?', 'Pilot, migrate in waves, verify and cut over', 'Delete the source before testing', 'Move all teams without a pilot', 'A pilot and verified waves reduce cutover risk.'],
+    ['What should network teams consult?', 'The current GHE.com network details', 'Only an old github.com IP list', 'A repository README from another vendor', 'GitHub publishes hostnames and network details that can change.'],
+    ['What must teams check for a move back to github.com?', 'There is no official migration path back', 'The subdomain automatically changes', 'All service history is always portable', 'Plan and test exit separately from the forward migration.'],
+  ],
+  readiness: [
+    ['Who should review the data map?', 'The DPO or privacy lead', 'Only a UI designer', 'No one after the region is selected', 'Privacy review includes documented exceptions and transfers.'],
+    ['What belongs in the evidence pack?', 'Applicable contract, report scope and data map', 'Only a marketing screenshot', 'Unverified assumptions about staff location', 'Keep source-backed evidence and record unresolved questions.'],
+    ['Why test an exit plan?', 'To learn what can be exported and what is missing', 'To rename the subdomain', 'To avoid evaluating contracts', 'Code history and collaboration metadata need separate consideration.'],
+    ['What is an appropriate go-live prerequisite?', 'Test identity, integrations, monitoring and migration', 'Assume trial behaviour matches every production workflow', 'Skip the owner assignment', 'A go/no-go review makes control gaps visible before production.'],
+    ['Who should consider Copilot’s residency uplift?', 'The budget owner alongside privacy and platform teams', 'Only the certificate authority', 'Only external visitors', 'The policy affects processing location and AI credit consumption.'],
+  ],
+  faq: [
+    ['Does the EU region include Norway and Switzerland?', 'Yes', 'No, only EU member states', 'Only for personal github.com accounts', 'GitHub added EFTA regions to its EU region in 2026.'],
+    ['Is formal GitHub coverage by Microsoft’s EU Data Boundary confirmed in this guide?', 'No; confirm with the provider', 'Yes, automatically', 'Yes, because the subdomain ends in ghe.com', 'The guide distinguishes alignment from verified formal coverage.'],
+    ['Are customer-managed keys confirmed for GHE.com here?', 'No; ask GitHub', 'Yes, for every account', 'No encryption exists', 'The guide records this as an unresolved public-source question.'],
+    ['Can a managed account contribute to public repositories on GHE.com?', 'No; use a separate personal account under your policy', 'Yes, without restrictions', 'Only by changing the subdomain', 'Public repositories are unavailable on GHE.com managed accounts.'],
+    ['Does EU storage eliminate every possibility of government access?', 'No', 'Yes', 'Only when Copilot is disabled', 'The guide describes contractual protections and residual legal risk.'],
+  ],
+};

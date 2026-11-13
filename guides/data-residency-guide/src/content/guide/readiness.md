@@ -5,6 +5,10 @@ order: 8
 description: Bring the right people in, collect an evidence pack, make the go or no-go decision, and write your exit plan before you need it.
 verified: "2026-11-12"
 diagram: adoption-path
+additionalDiagrams:
+  - exit-states
+  - support-blueprint
+  - go-no-go
 checks:
   - question: The CISO asks for GitHub's SOC 2 report before approving GHE.com. Where do you get it?
     answer: An enterprise owner can download SOC 1 and SOC 2 Type 2, ISO/IEC 27001:2022, CSA STAR and other reports from the Compliance tab of the enterprise settings. Check that each report's scope covers GHE.com; the Microsoft Product Terms state SOC 1 and SOC 2 Type II compliance for GitHub Enterprise with data residency.
@@ -51,13 +55,13 @@ Collect these before the go or no-go meeting. Most are public or downloadable.
 
 | Evidence | Where to get it | Answers |
 | --- | --- | --- |
-| Data map | [Chapter 2.2](/part-2/2-data-map/) and GitHub's [storage doc](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency) | What stays in the EU and what does not |
+| Data map | [Chapter 3.1](/part-3/1-data-map/) and GitHub's [storage doc](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency) | What stays in GitHub's EU region and what does not |
 | Compliance reports | Enterprise settings, then **Compliance** ([how](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/accessing-compliance-reports-for-your-enterprise)) | SOC 1 and 2 Type 2, ISO 27001, CSA STAR, continuity plan |
 | Trust centre | [GitHub Enterprise Cloud trust portal](https://ghec.github.trust.page/) | Security controls and documents to request |
 | Signed contract and DPA | Your agreement; public [DPA](https://github.com/customer-terms/github-data-protection-agreement) | Processor terms, transfers and audit rights |
 | Subprocessor list | [GitHub subprocessors](https://docs.github.com/en/site-policy/privacy-policies/github-subprocessors) | Who else processes the data |
 | Service status | [GitHub Enterprise Cloud EU status page](https://eu.githubstatus.com/) | Incident history and live status for the EU region |
-| Copilot settings | Screenshot of the residency policy and its audit log entry | That inference stays in the EU |
+| Copilot settings | Screenshot of the residency policy and its audit log entry | That supported inference stays in the selected region |
 | Exit plan | Your own document (see below) | That you can leave |
 
 Check the scope statement of each compliance report. The [Microsoft Product Terms for GitHub Offerings](https://www.microsoft.com/licensing/terms/productoffering/GitHubOfferings/MCA) state SOC 1 and SOC 2 Type II compliance for "GitHub Enterprise (with data residency enabled)".
@@ -75,7 +79,7 @@ Tick every item before you move production work:
 - [ ] Preview features disabled until assessed (DPA §2.A).
 - [ ] Subprocessor notices subscribed to, with a named reader.
 - [ ] Incident runbook updated with GitHub contacts and the EU status page.
-- [ ] Migration plan and pilot repositories chosen ([chapter 4.2](/part-4/2-migrate/)).
+- [ ] Migration plan and pilot repositories chosen ([chapter 9.1](/part-9/1-migrate/)).
 - [ ] Exit plan written and tested.
 
 ## Write the exit plan now
@@ -84,7 +88,7 @@ Your exit plan should answer four questions:
 
 1. **What do we need to keep?** Code and history, issues and pull requests, Actions workflows and logs, packages, wikis and release assets.
 2. **How do we get it out?** Git clones keep full history. Migration and export tools cover more, but check what each one does not move. Store secrets and variables in your own vault so they never need exporting.
-3. **How long do we have?** The [General Terms §9.5](https://github.com/customer-terms/general-terms) allow 90 days after termination to migrate repository data. The DPA §8 lets you choose deletion or return.
+3. **How long do we have?** The [General Terms §9.5](https://github.com/customer-terms/general-terms) allow up to 90 days after termination to migrate or request migration of repository data, without production use during that period. The DPA §8 lets you choose deletion or return. Confirm which terms apply to your agreement.
 4. **Have we tested it?** Run an export of a representative repository at least once a year, and record the result.
 
 **Guide advice:** keep a scheduled mirror of critical repositories outside GitHub. It is cheap, it proves portability to auditors, and it is your fallback if access is ever suspended.

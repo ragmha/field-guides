@@ -4,6 +4,10 @@ section: Contracts and law
 order: 7
 description: Match each EU law that touches your GitHub enterprise to what it asks, what GitHub gives you as evidence, and what you still have to do.
 verified: "2026-11-12"
+diagram: regulation-timeline
+additionalDiagrams:
+  - privacy-assessments
+  - regulation-comparison
 checks:
   - question: Your bank uses GHE.com for the code behind its payment platform. Which DORA duty is easiest to forget?
     answer: The exit strategy. DORA Article 28(8) requires exit strategies for ICT services supporting critical or important functions. Residency does not remove that duty, so document how you would move repositories, Actions workflows and history to another platform.
@@ -37,11 +41,11 @@ This is a map, not legal advice. Sector rules, national laws and your regulator'
 
 | Rule | What it asks | GitHub evidence | Your action |
 | --- | --- | --- | --- |
-| [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj) Art. 28 | A processor contract with set terms | [GitHub DPA](/part-3/1-dpa/) | Keep the signed version and your record of processing |
-| GDPR Ch. V (Art. 44–46) | A legal basis for transfers outside the EEA | DPA §7: Data Privacy Framework certification and SCCs | Transfer impact assessment for the [out-of-region categories](/part-2/2-data-map/) |
-| GDPR Art. 33 | Tell the supervisory authority within 72 hours of becoming aware of a breach | DPA §6: notice "without undue delay" | Put GitHub notices into your incident runbook |
+| [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj) Art. 28 | A processor contract with set terms | [GitHub DPA](/part-7/1-dpa/) | Keep the signed version and your record of processing |
+| GDPR Ch. V (Art. 44–46) | A legal basis for transfers outside the EEA | DPA §7: Data Privacy Framework certification and SCCs | Transfer impact assessment for the [out-of-region categories](/part-3/1-data-map/) |
+| GDPR Art. 33 | Notify the supervisory authority without undue delay and, where feasible, within 72 hours, unless the breach is unlikely to risk individuals' rights and freedoms | DPA §6: notice "without undue delay" | Put GitHub notices into your incident runbook |
 | [NIS2](https://eur-lex.europa.eu/eli/dir/2022/2555/oj) Art. 21(2)(d) | Supply chain security, including direct suppliers | SOC 1 and SOC 2 Type 2 and ISO 27001 reports (DPA §5) | Supplier risk assessment and secure development rules on the platform |
-| [DORA](https://eur-lex.europa.eu/eli/reg/2022/2554/oj) Art. 28 | Register of information; exit strategy for critical functions (Art. 28(8)) | DPA §8 deletion and return; General Terms §9.5, a 90-day migration window | Add GitHub to the register; write and test an exit plan |
+| [DORA](https://eur-lex.europa.eu/eli/reg/2022/2554/oj) Art. 28 | Register of information; exit strategy for critical functions (Art. 28(8)) | DPA §8 deletion and return; General Terms §9.5, up to 90 days for repository migration without production use | Add GitHub to the register; verify your terms; write and test an exit plan |
 | DORA Art. 30 | Key contract provisions in one written document | Customer Agreement, DPA and SLAs | Gap-check the contract against Art. 30 with legal |
 | [AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj) Art. 4 | AI literacy for staff using AI systems | Copilot documentation and policies | Train developers; keep a record |
 | [Data Act](https://eur-lex.europa.eu/eli/reg/2023/2854/oj) Ch. VI | Switching rights; switching charges banned from 12 January 2027 (Art. 29) | Git is portable; export and migration tools | Know your switching terms and test an export |
@@ -68,7 +72,7 @@ NIS2 had a transposition deadline of 17 October 2024. Your duties depend on your
 
 The EU-US Data Privacy Framework rests on [adequacy decision 2023/1795](https://eur-lex.europa.eu/eli/dec_impl/2023/1795/oj). The General Court dismissed the Latombe challenge on 3 September 2025 ([press release](https://curia.europa.eu/site/upload/docs/application/pdf/2025-09/cp250106en.pdf)). An appeal to the Court of Justice is pending.
 
-Two earlier transfer frameworks, Safe Harbour and Privacy Shield, were struck down. Residency reduces how much depends on the outcome: repository content is stored in the EU, and with Copilot residency on, inference stays in the EU. But the DPA keeps the SCCs as a second basis, and some categories still leave the region.
+Two earlier transfer frameworks, Safe Harbour and Privacy Shield, were struck down. Residency can reduce transfer exposure: repository content and supported Copilot inference stay in GitHub's selected EU region, which also includes Norway and Switzerland. The DPA also provides for SCCs, and some categories may leave the region. Assess the relevant transfers and your applicable terms.
 
 **Guide advice:** write your transfer impact assessment so it still works if the Data Privacy Framework falls. In practice that means relying on the SCCs plus residency, and listing the data that still leaves the EU.
 

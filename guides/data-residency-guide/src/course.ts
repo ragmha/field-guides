@@ -1,8 +1,14 @@
 export const parts = [
   { title: 'Why sovereignty', pages: ['why-sovereignty', 'residency-vs-sovereignty'] },
-  { title: 'What GHE.com gives you', pages: ['ghe-com', 'data-map', 'copilot'] },
-  { title: 'Contracts and law', pages: ['dpa', 'regulations'] },
-  { title: 'Adopt with confidence', pages: ['readiness', 'migrate', 'faq'] },
+  { title: 'The platform', pages: ['ghe-com'] },
+  { title: 'Your data', pages: ['data-map'] },
+  { title: 'Identity and access', pages: ['identity'] },
+  { title: 'Security and assurance', pages: ['security'] },
+  { title: 'Copilot', pages: ['copilot'] },
+  { title: 'Contracts and DPA', pages: ['dpa'] },
+  { title: 'EU regulation', pages: ['regulations'] },
+  { title: 'Migration', pages: ['migrate'] },
+  { title: 'Operate and exit', pages: ['readiness', 'faq'] },
 ];
 
 export const chapters = parts.flatMap((part, partIndex) => part.pages.map((id, index) => ({
@@ -14,6 +20,7 @@ export const chapters = parts.flatMap((part, partIndex) => part.pages.map((id, i
 export function coursePath(id: string) {
   if (id === 'start') return '';
   if (id === 'sources') return 'sources';
+  if (id === 'glossary') return 'glossary';
   const chapter = chapters.find(entry => entry.id === id);
   if (!chapter) throw new Error(`Unknown course page: ${id}`);
   return chapter.path;

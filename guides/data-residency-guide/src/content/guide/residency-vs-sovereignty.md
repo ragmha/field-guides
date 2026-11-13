@@ -54,7 +54,7 @@ Use these layers to describe any provider. The scoring is guide advice based on 
 
 ### 1. Data location: strong
 
-GitHub [stores customer content, Actions data and logs, backups and personal identifiers](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency) in the EU region. The [DPA, section 7.A](https://github.com/customer-terms/github-data-protection-agreement), turns your region choice into a contractual instruction: "GitHub will store the applicable data based on that instruction." The exceptions are documented, and Copilot needs a policy switched on. See [the data map](/part-2/2-data-map/) and [Copilot](/part-2/3-copilot/).
+GitHub [stores customer content, Actions data and logs, backups and personal identifiers](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency) in the EU region. The [DPA, section 7.A](https://github.com/customer-terms/github-data-protection-agreement), turns your region choice into a contractual instruction: "GitHub will store the applicable data based on that instruction." The exceptions are documented, and Copilot needs a policy switched on. See [the data map](/part-3/1-data-map/) and [Copilot](/part-6/1-copilot/).
 
 ### 2. Operational control: shared
 
@@ -79,7 +79,7 @@ What stays:
 
 ### 4. Portability and exit: good for code, plan the rest
 
-Git is an open format, so every clone is a full copy of history. The General Terms ([section 9.5](https://github.com/customer-terms/general-terms)) give you 90 days after termination to migrate repository data. Issues, pull request history, Actions workflows, secrets, Packages and integrations need their own export plan. There is no official migration path from GHE.com back to github.com. See [Set up, connect and migrate](/part-4/2-migrate/).
+Git is an open format, so a full clone includes repository history. The direct-purchase General Terms ([section 9.5](https://github.com/customer-terms/general-terms)) allow up to 90 days after termination to migrate or request migration of repository data, without production use. Verify the terms applicable to your purchase. Issues, pull request history, Actions workflows, secrets, Packages and integrations need their own export plan. There is no official migration path from GHE.com back to github.com. See [Set up, connect and migrate](/part-9/1-migrate/).
 
 ## Write down the residual risk
 

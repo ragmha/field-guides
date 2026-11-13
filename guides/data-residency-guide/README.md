@@ -3,18 +3,12 @@
 An independent, source-backed guide for teams adopting GitHub Enterprise Cloud
 with data residency (GHE.com) in the EU.
 
-Four parts:
+Ten parts cover sovereignty, platform choices, data, identity, security,
+Copilot, contracts, EU law, migration, and operation and exit. Each chapter
+has five questions: 80% unlocks the next chapter, with unlimited retries.
+Progress is local to the browser and is not a security control.
 
-1. **Why sovereignty:** the legal and strategic pressures, and how residency
-   differs from sovereignty.
-2. **What GHE.com gives you:** the platform, what stays in the EU, and Copilot
-   with data residency.
-3. **Contracts and law:** the GitHub DPA clause by clause, and a map of GDPR,
-   NIS2, DORA, the AI Act, the Data Act, the CRA and the CLOUD Act.
-4. **Adopt with confidence:** a readiness checklist, setup and migration, and
-   an FAQ.
-
-Every factual claim links to a primary source. Recommendations are labelled
+The guide links to primary sources. Recommendations are labelled
 "Guide advice" and worked examples are labelled "Hypothetical scenario". The
 sources page lists what could not be verified. This is not legal advice.
 

@@ -5,13 +5,16 @@ order: 4
 description: Separate what GitHub stores in the EU region from the documented exceptions, then decide which exceptions need a control.
 verified: "2026-11-12"
 diagram: data-map
+additionalDiagrams:
+  - exceptions-flow
+  - data-lifecycle
 checks:
   - question: Your DPO asks whether GitHub will notify you each time data leaves the EU region. What is the answer?
     answer: No. GitHub documents the reasons for transfers out of the region but does not notify you when a transfer happens. Assess the documented categories once, then re-check the page on a schedule.
-  - question: An engineer attaches a failing source file to a support ticket. Is that file guaranteed to stay in the EU?
+  - question: An engineer attaches a failing source file to a support ticket. Is that file guaranteed to stay in the EU region?
     answer: No. Support requests and case notes are listed as data that may be stored outside the region. Set a rule for what may go into tickets.
-  - question: Copilot is enabled with default settings. Are prompts and responses kept in the EU?
-    answer: No. Copilot data is stored outside the region by default. Prompts, responses, inference, logs and telemetry stay in-region only after you enable the "Restrict Copilot to data residency compliant models" policy.
+  - question: Copilot is enabled with default settings. Are prompts and responses guaranteed to stay in the EU region?
+    answer: No. Copilot data may be stored outside the region by default. Enable the "Restrict Copilot to data residency compliant models" policy and use supported clients and features for regional enforcement.
 sources:
   - https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency
   - https://github.com/customer-terms/github-data-protection-agreement
@@ -33,7 +36,7 @@ GitHub's [storage page](https://docs.github.com/en/enterprise-cloud@latest/admin
 - **Data or logs that identify your company:** GitHub Actions data and logs, and business continuity and disaster recovery (BCDR) data.
 - **Data or logs that identify a person:** email address, username, first and last name, and IP address.
 
-Backups and disaster recovery stay in the region too. For most organisations, this is the core requirement: code, collaboration history and personal data, stored in the EU.
+Backups and disaster recovery stay in the region too. This covers code, collaboration history and applicable personal data in GitHub's EU region, which also includes Norway and Switzerland.
 
 ## The documented exceptions, and what to do with each
 
@@ -44,7 +47,7 @@ The same page lists data that GitHub "may store outside your chosen region" for 
 | Telemetry or logs with consistent identifiers | User IDs or GUIDs, unsalted hashes of email, username, name or IP | **Accept.** Pseudonymous operational data, covered by the DPA. Record it in your transfer assessment. |
 | Information to administer a paid plan | Contact, billing, purchase, payment and licence data | **Accept and minimise.** Use a shared billing mailbox rather than a named person where you can. |
 | Support and feedback data | Support requests, case notes, calls, chats, remote sessions | **Policy.** No secrets, personal data or regulated code in tickets unless your assessment allows it. |
-| GitHub Copilot data | Copilot data and logs, **outside the region by default** | **Configure.** Enable the data-residency policy for Copilot. See [chapter 2.3](/part-2/3-copilot/). |
+| GitHub Copilot data | Copilot data and logs **may be outside the region by default** | **Configure.** Enable the data-residency policy for Copilot. See [chapter 6.1](/part-6/1-copilot/). |
 | Secret scanning data | Validity checks and extended metadata checks, only if you enable them | **Decide.** These checks contact the token issuer. Enable them per repository risk. |
 | TLS certificate information | Certificate details sent to certificate authorities and transparency logs | **Accept.** Public by design and limited to your subdomain name. |
 

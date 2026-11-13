@@ -1,15 +1,17 @@
 ---
+import { extraDiagrams } from '../extra-diagrams';
 // ponytail: inline SVG themed by CSS variables; one file per diagram, no light/dark export pipeline.
 const svgs = import.meta.glob<string>('../diagrams/*.svg', { query: '?raw', import: 'default', eager: true });
 
-const diagrams = {
+const diagrams: Record<string, { title: string; description: string; sources?: string[] }> = {
+  ...extraDiagrams,
   'sovereignty-layers': {
     title: 'Residency is one layer of sovereignty',
     description: 'Data sovereignty stacks four questions: where data is stored, who can operate the service, which law can compel access, and whether you can leave. GHE.com in the EU answers the first directly and contributes to the others; contracts, encryption choices and an exit plan cover the rest.',
   },
   'data-map': {
-    title: 'What stays in the EU, and what is documented as an exception',
-    description: 'Code, collaboration history, Actions logs, backups and user identity data are stored in the EU region. GitHub documents a short list of categories that may be stored outside it, including Copilot data unless you enable the residency policy. Each needs a decision. Your own integrations sit outside GitHub\'s residency promise.',
+    title: 'What stays in the EU region, and documented exceptions',
+    description: 'Code, collaboration history, Actions logs, backups and user identity data are stored in the EU region, which includes Norway and Switzerland. GitHub documents categories that may be stored outside it, including Copilot data unless you enable the residency policy. Your own integrations sit outside GitHub\'s residency promise.',
   },
   'adoption-path': {
     title: 'Five steps from question to production',
@@ -19,30 +21,68 @@ const diagrams = {
     title: 'Who notifies whom after a breach',
     description: 'GitHub notifies the customer without undue delay and assists as required by applicable law. The controller assesses notification duties under GDPR Articles 33 and 34: notice to the authority without undue delay and, where feasible, within 72 hours unless risk is unlikely. High risk may also require notice to individuals.',
   },
+  'identity-sequence': {
+    title: 'From identity provider to managed access',
+    description: 'The IdP provisions managed accounts with SCIM and authenticates users. The exact sign-in protocol depends on the supported identity provider and configuration.',
+  },
+  'security-layers': {
+    title: 'Layer controls, then assess what remains',
+    description: 'These are guide recommendations, not a claim that every control is enabled. Verify feature availability, report scope and ownership before relying on a control.',
+  },
+  'copilot-flow': {
+    title: 'The policy changes where inference runs',
+    description: 'With the enterprise policy enabled, GitHub routes requests to region-compliant model endpoints. Confirm client versions, available models and current feature coverage in the linked documentation.',
+  },
+  'platform-architecture': {
+    title: 'The enterprise, identity and data region',
+    description: 'GHE.com is a GitHub-managed cloud service. The selected region applies to documented categories of data, not automatically to every external integration or exception.',
+  },
+  'regulation-timeline': {
+    title: 'Selected dates, different obligations',
+    description: 'These milestones do not establish applicability to your organisation. Check the legislation, national implementation and later amendments with counsel.',
+  },
+  'migration-window': {
+    title: 'Plan overlap and the separate exit window',
+    description: 'Trial, migration and termination dates here are hypothetical. General Terms §9.5 allows up to 90 days after termination to migrate or request migration of repository data, without production use. Verify the terms in your agreement.',
+  },
+  'sovereignty-drivers': {
+    title: 'Several pressures lead to one decision',
+    description: 'Data protection, foreign legal reach and resilience each require an assessment. Residency addresses location but does not settle every question of control.',
+  },
 };
 
-interface Props { name: keyof typeof diagrams }
+interface Props { name: string }
 const { name } = Astro.props;
-const { title, description } = diagrams[name];
+const diagram = diagrams[name];
+if (!diagram) throw new Error(`Unknown diagram: ${name}`);
+const { title, description, sources } = diagram;
 const svg = svgs[`../diagrams/${name}.svg`];
 if (!svg) throw new Error(`Missing diagram source: ${name}`);
+const width = Number(svg.match(/viewBox="0 0 (\d+) /)?.[1]);
+if (!width) throw new Error(`Missing diagram viewBox width: ${name}`);
 const headingId = `${name}-heading`;
 ---
 
 <figure class="diagram-embed" aria-labelledby={headingId}>
   <h3 id={headingId}>{title}</h3>
-  <div id={`${name}-viewport`} class="diagram-scroll" tabindex="0" role="region" aria-label={`${title}. Scroll horizontally to explore.`}>
+  <div id={`${name}-viewport`} class="diagram-scroll" style={`--diagram-width:${width}px`} tabindex="0" role="region" aria-label={`${title}. Scroll horizontally to explore.`}>
     <Fragment set:html={svg} />
   </div>
-  <figcaption><p>{description}</p></figcaption>
+  <p class="scroll-hint">Scroll horizontally to explore the diagram when needed.</p>
+  <figcaption><p>{description}</p>{sources && <p>Sources: {sources.map((source, index) => <a href={source}>[{index + 1}]</a>)}</p>}</figcaption>
 </figure>
 
 <style>
   .diagram-embed { min-width: 0; margin: 1rem 0 2rem; }
   h3 { color: var(--ink); font: 650 19px/1.4 var(--font-sans); margin: 0 0 16px; }
-  .diagram-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
-  .diagram-scroll :global(svg) { display: block; width: 100%; min-width: 640px; height: auto; font-family: var(--font-sans); }
-  @media print { .diagram-scroll { overflow-x: visible; } .diagram-scroll :global(svg) { min-width: 0; } }
+  .diagram-scroll {
+    --surface:#fff; --inset:#f6f8fa; --ink:#1f2328; --muted:#59636e;
+    --rule:#d1d9e0; --accent:#1a7f37; --tint:#eaf6ed; --amber:#854d0e; --amber-bg:#fff8c5;
+    overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface);
+  }
+  .diagram-scroll :global(svg) { display: block; width: 100%; min-width: var(--diagram-width); height: auto; font-family: var(--font-sans); }
+  .scroll-hint { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+  @media print { .diagram-scroll { overflow-x: visible; } .diagram-scroll :global(svg) { min-width: 0; } .scroll-hint { display: none; } }
   figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
   figcaption p { margin: 0; }
   .diagram-scroll :global(.ink) { fill: var(--ink); }

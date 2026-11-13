@@ -1,0 +1,14 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="regulation-comparison-title regulation-comparison-desc">
+<title id="regulation-comparison-title">Regulatory focus</title><desc id="regulation-comparison-desc">The laws address different risks and apply only where their scope and applicable national rules are met. The guide is not legal advice.</desc>
+<defs><marker id="regulation-comparison-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="640" height="300" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="40" y="28" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="64" y="57" text-anchor="start" font-size="12" class="ink" font-weight="600">01   GDPR · personal data</text>
+<rect x="40" y="84" width="560" height="48" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="64" y="113" text-anchor="start" font-size="12" class="ink" font-weight="600">02   NIS2 · cyber risk</text>
+<rect x="40" y="140" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="64" y="169" text-anchor="start" font-size="12" class="ink" font-weight="600">03   DORA · ICT resilience</text>
+<rect x="40" y="196" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="64" y="225" text-anchor="start" font-size="12" class="ink" font-weight="600">04   CRA · product security</text>
+</g></svg>
