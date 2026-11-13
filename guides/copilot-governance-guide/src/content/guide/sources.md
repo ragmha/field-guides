@@ -47,4 +47,6 @@ The course was informed by [Octodemo's governance-at-scale repository](https://g
 
 The diagram HTML is based on [diagram-design](https://github.com/cathrynlavery/diagram-design) templates; its [MIT notice](/licenses/diagram-design-MIT.txt) is retained.
 
+The figures use decision flowcharts, paired budget-evaluation traces, a seat lifecycle phase map, compensating security layers, a billing responsibility map and an adoption-set overlap. Their hypothetical inputs and limitations come from the corresponding lessons, not additional product claims. In the budget variant, an unspecified included-pool status is omitted rather than inferred; denial ends the trace. Diagram outcomes are explanations, not evidence of live configuration or enforcement.
+
 This independent guide is not affiliated with or endorsed by GitHub.

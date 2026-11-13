@@ -1,54 +1,54 @@
 {
   "access-assignment": {
     "title": "Two paths to a seat",
-    "description": "An enterprise chooses an available assignment path: directly assign eligible enterprise users or enable organizations to assign seats. Check the plan, policies and owner for the chosen path."
-  },
-  "access-lifecycle": {
-    "title": "Maintain the seat lifecycle",
-    "description": "Assign an eligible person, help them onboard, review membership and activity, investigate exceptions, and update the assignment when authorized. Other assignment paths may still apply."
+    "description": "Check prerequisites, choose a plan-supported direct or organization assignment path, and review repository access independently."
   },
   "policy-scope": {
     "title": "Find the policy source",
-    "description": "Start with the seat source. Organization-assigned and enterprise-assigned users can follow different defaults. Check effective policy and feature-specific conflict rules."
-  },
-  "model-feature-baseline": {
-    "title": "Review availability before rollout",
-    "description": "Set separate defaults for features and models, decide whether to enable, disable or delegate each capability, then verify the effective experience and schedule review."
-  },
-  "billing-ownership": {
-    "title": "One service, distinct financial questions",
-    "description": "A Copilot rollout raises separate seat and metered usage questions. Identify the financial owner for both, and distinguish spending authorization from a forecast."
+    "description": "Trace the seat source, check delegated defaults or feature-specific organization conflicts, then confirm the setting on the actual surface."
   },
   "consumption-controls": {
     "title": "Find the actual limit",
-    "description": "Identify the applicable user-level budget, check included-usage and paid-usage conditions, then inspect applicable metered spending controls. A different budget cannot override a user-level hard stop."
+    "description": "Resolve the first applicable user-level budget by specificity; its hard stop precedes independent included-usage and metered controls."
   },
   "budget-scenario": {
-    "title": "A blocked user with budget headroom",
-    "description": "In this hypothetical scenario, the user-level budget is exhausted even though the cost-center metered budget has headroom. The user-level hard stop still blocks credit-consuming work."
+    "title": "Two independent budget stops",
+    "description": "The worked example stops at the exhausted individual $15 ULB; the variant has ULB headroom but stops at an enforced metered limit."
   },
   "agent-operating-scope": {
     "title": "Bound an agent rollout",
-    "description": "Choose a permitted audience and environment, review repository access and controls, then require appropriate review of the proposed changes."
+    "description": "Cloud policy and repository exclusion bound the pilot; repository write access then separates read-only sessions from proposed changes subject to checks and human review."
   },
   "agent-tools-network": {
-    "title": "Review separate execution paths",
-    "description": "Agent work can use Bash-started processes and MCP servers. The firewall directly covers the former, not MCP processes. Review permissions and protections for each path."
+    "title": "Evaluate an MCP server entry",
+    "description": "Check managed-allowlist scope, built-in defaults, deny precedence and every deployed allowlist, while reviewing out-of-scope profiles and credentials separately."
   },
   "instructions-context": {
     "title": "Improve guidance through review",
-    "description": "Select the audience and supported instruction scope, write task-relevant guidance, then evaluate outputs and update the guidance. Instructions are not permissions."
+    "description": "Choose a supported instruction scope, write task-relevant guidance and rerun a fresh-session task, refining it when the response lacks matching execution evidence."
   },
-  "sensitive-content": {
-    "title": "Use complementary protections",
-    "description": "Sensitive content needs both access restrictions and supported content exclusions. Review connected tools and remaining limitations; exclusions are not a security boundary."
-  },
-  "adoption-measurement": {
-    "title": "Interpret adoption in context",
-    "description": "Define a question and denominator, select a complete reporting period and supported metric, then interpret trends alongside feedback and coverage limitations."
+  "model-feature-baseline": {
+    "title": "Review availability before rollout",
+    "description": "Record separate unconfigured GA defaults for models and features, check model release status and restrictions, then make an explicit decision and verify the eligible user's experience."
   },
   "agent-activity": {
     "title": "Choose evidence with care",
-    "description": "An agent-activity question can use audit evidence or client telemetry, each with its own coverage. Review access, privacy and retention before collection."
+    "description": "Use sufficient existing session or audit evidence first; otherwise assess optional collection and preview eligibility, minimize capture and propose privacy controls before any change."
+  },
+  "billing-ownership": {
+    "title": "Route a budget alert",
+    "description": "In the hypothetical pilot, the platform team owns seats, finance retains metered-spending approval authority and names an alert responder to investigate alerts."
+  },
+  "sensitive-content": {
+    "title": "Use complementary protections",
+    "description": "Supported content exclusions leave access gaps, so independently restrict repository and filesystem access and review external tools, while retaining explicit residual risk."
+  },
+  "adoption-measurement": {
+    "title": "Count distinct users, not summed totals",
+    "description": "In the fictional completed period, organizations with 8 and 7 active users overlap by 3, yielding 12 distinct active users out of 20 assigned licenses, or 60%."
+  },
+  "access-lifecycle": {
+    "title": "Maintain the seat lifecycle",
+    "description": "A seat moves from assignment through onboarding and scoped review to an owner decision, with support and assignment-path waits before any authorized, timing-dependent removal."
   }
 }

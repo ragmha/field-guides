@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 704 504" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="budget-scenario-dark-title budget-scenario-dark-desc" id="budget-scenario-dark-root">
-        <title id="budget-scenario-dark-title">A blocked user with budget headroom</title>
-        <desc id="budget-scenario-dark-desc">In this hypothetical scenario, the user-level budget is exhausted even though the cost-center metered budget has headroom. The user-level hard stop still blocks credit-consuming work.</desc>
+<svg viewBox="0 0 704 968" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="budget-scenario-dark-title budget-scenario-dark-desc" id="budget-scenario-dark-root">
+        <title id="budget-scenario-dark-title">Two independent budget stops</title>
+        <desc id="budget-scenario-dark-desc">The worked example stops at the exhausted individual $15 ULB; the variant has ULB headroom but stops at an enforced metered limit.</desc>
         <defs>
       <style>#budget-scenario-dark-root { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; color: #f0f6fc; }
       #budget-scenario-dark-root .diagram-container { width: 100%; overflow-x: auto; }
       @media print {
 #budget-scenario-dark-root .diagram-container { overflow-x: visible; }
 }</style><marker id="budget-scenario-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
-        <rect x="0" y="0" width="704" height="504" fill="#07090d"/>
-        <path d="M 300,120 V 132 Q 300,140 292,140 H 216 Q 208,140 208,148 V 168" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-scenario-dark-arrow)"/>
-        <path d="M 404,120 V 132 Q 404,140 412,140 H 488 Q 496,140 496,148 V 168" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-scenario-dark-arrow)"/>
-        <path d="M 208,248 V 260 Q 208,268 216,268 H 292 Q 300,268 300,276 V 296" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-scenario-dark-arrow)"/>
-        <g>
-      <rect x="192" y="40" width="320" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
-      <text x="208" y="70" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Credit-consuming request</text>
-      <text x="208" y="94" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Hypothetical user</text>
-    </g>
-        <g>
-      <rect x="88" y="168" width="240" height="80" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
-      <text x="104" y="198" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User-level budget</text>
-      <text x="104" y="222" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Exhausted: hard stop</text>
-    </g>
-        <g>
-      <rect x="376" y="168" width="240" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
-      <text x="392" y="198" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cost-center metered budget</text>
-      <text x="392" y="222" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Headroom remains</text>
-    </g>
-        <g>
-      <rect x="192" y="296" width="320" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
-      <text x="208" y="326" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Work is blocked</text>
-      <text x="208" y="350" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">User-level budget takes effect</text>
-    </g>
-        <text x="40" y="416" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Metered headroom does not override the hard stop.</text>
-        <line x1="40" y1="444" x2="664" y2="444" stroke="#3d444d" stroke-width="1"/>
-        <text x="40" y="472" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Box: topic or action    ·    Arrow: relationship</text>
-        <text x="40" y="488" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Green box: lesson focus, not approval or a safety rating</text>
+        <rect x="0" y="0" width="704" height="968" fill="#07090d"/>
+        <path d="M 72 216 L 48 216 A 8 8 0 0 0 40 224 L 40 732 A 8 8 0 0 0 48 740 L 72 740" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-scenario-dark-arrow)"/>
+        <path d="M 512 280 L 512 336" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-scenario-dark-arrow)"/>
+        <path d="M 512 464 L 512 504" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-scenario-dark-arrow)"/>
+        <path d="M 512 632 L 512 700" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-scenario-dark-arrow)"/>
+        <text x="192" y="52" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="14" font-weight="600">A · worked example</text>
+        <text x="512" y="52" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="14" font-weight="600">B · metered variant</text>
+        <text x="192" y="76" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Individual ULB $15; consumed $15</text>
+        <text x="512" y="76" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">ULB has headroom; metered limit enforced</text>
+        <text x="352" y="120" text-anchor="middle" fill="#3fb950" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">FIRST DIVERGENCE: ULB HEADROOM</text>
+        <polygon points="192,152 312,216 192,280 72,216" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="192.0" y="212.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">ULB headroom</text>
+        <text x="192.0" y="228.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">FAIL [X]</text>
+        <polygon points="512,152 632,216 512,280 392,216" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="512.0" y="212.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">ULB headroom</text>
+        <text x="512.0" y="228.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">PASS [+]</text>
+        <rect x="72" y="352" width="240" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="192.0" y="396.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Metered phase</text>
+        <text x="192.0" y="412.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">NOT REACHED [-]</text>
+        <polygon points="512,336 632,400 512,464 392,400" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="512.0" y="396.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Metered phase</text>
+        <text x="512.0" y="412.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">PASS [+]</text>
+        <rect x="72" y="520" width="240" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="192.0" y="564.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Metered headroom</text>
+        <text x="192.0" y="580.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">NOT REACHED [-]</text>
+        <polygon points="512,504 632,568 512,632 392,568" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="512.0" y="564.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Metered headroom</text>
+        <text x="512.0" y="580.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">FAIL [X]</text>
+        <rect x="72" y="700" width="240" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="192.0" y="736.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Blocked by ULB</text>
+        <text x="192.0" y="752.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Pool and metered headroom do not help</text>
+        <rect x="392" y="700" width="240" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="512.0" y="736.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Metered use blocked</text>
+        <text x="512.0" y="752.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Independent enforced-limit stop</text>
+        <text x="40" y="828" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A stops at the ULB: dashed cells are context, not a continued trace.</text>
+        <text x="40" y="844" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">B states no included-pool condition; none is inferred here.</text>
+        <text x="40" y="860" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">PASS means the condition holds, not approval; B&#x27;s metered limit is enforced.</text>
+        <line x1="40" y1="908" x2="664" y2="908" stroke="#3d444d"/>
+        <text x="40" y="932" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Diamond: evaluated rule; dashed box: not reached; oval: outcome; arrow: trace</text>
+        <text x="40" y="952" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
       </svg>

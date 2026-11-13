@@ -1,58 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 704 744" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="access-lifecycle-light-title access-lifecycle-light-desc" id="access-lifecycle-light-root">
+<svg viewBox="0 0 704 952" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="access-lifecycle-light-title access-lifecycle-light-desc" id="access-lifecycle-light-root">
         <title id="access-lifecycle-light-title">Maintain the seat lifecycle</title>
-        <desc id="access-lifecycle-light-desc">Assign an eligible person, help them onboard, review membership and activity, investigate exceptions, and update the assignment when authorized. Other assignment paths may still apply.</desc>
+        <desc id="access-lifecycle-light-desc">A seat moves from assignment through onboarding and scoped review to an owner decision, with support and assignment-path waits before any authorized, timing-dependent removal.</desc>
         <defs>
       <style>#access-lifecycle-light-root { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; color: #1f2328; }
       #access-lifecycle-light-root .diagram-container { width: 100%; overflow-x: auto; }
       @media print {
 #access-lifecycle-light-root .diagram-container { overflow-x: visible; }
 }</style><marker id="access-lifecycle-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
-        <rect x="0" y="0" width="704" height="744" fill="#f3f5f7"/>
-        <circle cx="352" cy="16" r="6" fill="#1f2328"/>
-        <line x1="352" y1="22" x2="352" y2="40" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/>
-        <line x1="352" y1="120" x2="352" y2="160" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/>
-        <line x1="352" y1="240" x2="352" y2="280" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/>
-        <line x1="352" y1="360" x2="352" y2="400" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/>
-        <line x1="352" y1="480" x2="352" y2="520" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/>
-        <path d="M 512,560 H 592 Q 600,560 600,552 V 328 Q 600,320 592,320 H 512" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/>
-        <rect x="608" y="432" width="56" height="16" fill="#f3f5f7"/>
-        <text x="636" y="444" text-anchor="middle" fill="#59636e" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace" font-size="8">RECHECK</text>
-        <g>
-      <rect x="192" y="40" width="320" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="70" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assigned</text>
-      <text x="208" y="94" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Eligible seat</text>
-    </g>
-        <g>
-      <rect x="192" y="160" width="320" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="190" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Onboarding</text>
-      <text x="208" y="214" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Help the user get started</text>
-    </g>
-        <g>
-      <rect x="192" y="280" width="320" height="80" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
-      <text x="208" y="310" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Review</text>
-      <text x="208" y="334" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Membership and activity</text>
-    </g>
-        <g>
-      <rect x="192" y="400" width="320" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="430" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Owner decision</text>
-      <text x="208" y="454" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Investigate before removal</text>
-    </g>
-        <g>
-      <rect x="192" y="520" width="320" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="550" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Authorized action</text>
-      <text x="208" y="574" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Recheck assignment paths</text>
-    </g>
-        <rect x="360" y="134" width="112" height="12" fill="#f3f5f7"/>
-        <text x="416" y="144" text-anchor="middle" fill="#59636e" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace" font-size="8">ONBOARD</text>
-        <rect x="360" y="254" width="112" height="12" fill="#f3f5f7"/>
-        <text x="416" y="264" text-anchor="middle" fill="#59636e" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace" font-size="8">REVIEW</text>
-        <rect x="360" y="374" width="112" height="12" fill="#f3f5f7"/>
-        <text x="416" y="384" text-anchor="middle" fill="#59636e" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace" font-size="8">DECIDE</text>
-        <rect x="360" y="494" width="112" height="12" fill="#f3f5f7"/>
-        <text x="416" y="504" text-anchor="middle" fill="#59636e" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace" font-size="8">IF APPROVED</text>
-        <text x="40" y="648" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Other assignment paths and removal timing matter.</text>
-        <line x1="40" y1="684" x2="664" y2="684" stroke="#d1d9e0" stroke-width="1"/>
-        <text x="40" y="712" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Dot: start    ·    Box: state    ·    Arrow: transition</text>
-        <text x="40" y="728" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Green box: lesson focus, not approval or a safety rating</text>
+        <rect x="0" y="0" width="704" height="952" fill="#f3f5f7"/>
+        <path d="M 160 152 L 208 152" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="166.25" y="132" width="35.5" height="12" rx="2" fill="#f3f5f7"/><text x="184" y="141" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SETUP</text>
+        <path d="M 328 152 L 376 152" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="331.5" y="132" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="352" y="141" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">REVIEW</text>
+        <path d="M 496 152 L 544 152" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="499.5" y="132" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="520" y="141" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ASSESS</text>
+        <path d="M 584 192 L 584 232 A 8 8 0 0 1 576 240 L 176 240 A 8 8 0 0 0 168 248 L 168 352" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="328.25" y="220" width="79.5" height="12" rx="2" fill="#f3f5f7"/><text x="368" y="229" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NEEDS SUPPORT</text>
+        <path d="M 624 192 L 624 352" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="632" y="264" width="35.5" height="12" rx="2" fill="#f3f5f7"/><text x="649.75" y="273" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">PATHS</text>
+        <path d="M 40 400 L 32 400 A 8 8 0 0 1 24 392 L 24 80 A 8 8 0 0 1 32 72 L 408 72 A 8 8 0 0 1 416 80 L 416 112" fill="none" stroke="#59636e" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="32" y="268" width="85" height="12" rx="2" fill="#f3f5f7"/><text x="74.5" y="277" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">FOLLOW-UP DATE</text>
+        <path d="M 664 400 L 672 400 A 8 8 0 0 0 680 392 L 680 80 A 8 8 0 0 0 672 72 L 464 72 A 8 8 0 0 0 456 80 L 456 112" fill="none" stroke="#59636e" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="531" y="52" width="74" height="12" rx="2" fill="#f3f5f7"/><text x="568" y="61" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">REVIEW AGAIN</text>
+        <path d="M 536 448 L 536 684" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#access-lifecycle-light-arrow)"/><rect x="544" y="560" width="63" height="12" rx="2" fill="#f3f5f7"/><text x="575.5" y="569" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">AUTHORIZED</text>
+        <text x="40" y="52" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">PRIMARY PHASES</text>
+        <text x="40" y="292" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WAIT / RECOVERY</text>
+        <text x="40" y="636" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">TERMINAL OUTCOME · conditional, not the worked example</text>
+        <rect x="40" y="112" width="120" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="100.0" y="156.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assigned</text>
+        <rect x="208" y="112" width="120" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="268.0" y="156.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Onboarding</text>
+        <rect x="376" y="112" width="120" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="436.0" y="140.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Review</text>
+        <text x="436.0" y="156.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Report scope;</text>
+        <text x="436.0" y="172.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">assignment date</text>
+        <rect x="544" y="112" width="120" height="80" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="604.0" y="148.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Owner</text>
+        <text x="604.0" y="164.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">decision</text>
+        <rect x="40" y="352" width="256" height="96" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="168.0" y="388.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Pending support; seat retained</text>
+        <text x="168.0" y="404.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Resolve setup/network issue</text>
+        <text x="168.0" y="420.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Set follow-up date</text>
+        <rect x="408" y="352" width="256" height="96" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="536.0" y="388.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Confirm all assignment paths</text>
+        <text x="536.0" y="404.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Other paths may still apply</text>
+        <text x="536.0" y="420.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Before proposing any removal</text>
+        <rect x="408" y="684" width="256" height="96" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="536.0" y="720.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Removed: only after confirmation</text>
+        <text x="536.0" y="736.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Authorized decision; every path checked</text>
+        <text x="536.0" y="752.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Timing depends on plan and path</text>
+        <text x="40" y="828" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Activity prompts investigation; it is not performance or proof a seat is unnecessary.</text>
+        <text x="40" y="844" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Removal is not necessarily immediate; a worksheet does not prove revocation.</text>
+        <line x1="40" y1="892" x2="664" y2="892" stroke="#d1d9e0"/>
+        <text x="40" y="916" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rounded boxes: states; dashed arrows: follow-up/re-entry; terminal band: removal outcome</text>
+        <text x="40" y="936" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
       </svg>

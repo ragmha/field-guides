@@ -64,6 +64,20 @@ the same geometry and substitute theme colors. Each figure retains its 704px
 canvas inside a horizontal scroll region so the labels do not shrink on narrow
 screens.
 
+Figures use decision flowcharts rather than architecture branches for policy
+logic, paired traces for the budget example, a lifecycle phase map for seats,
+compensating layers for sensitive content, a responsibility map for billing,
+and a two-set Venn for deduplicated adoption. Status text and shape carry
+meaning independently of color. Budget traces stop at denial; the variant
+does not infer an included-pool status absent from the lesson.
+
+Before exporting, run the skill's `self_check.py --offline <html>` and
+`verify_geometry.py <html>` for both themes. Check all six connector rules,
+the type/pattern budgets and the taste gate, then inspect the lesson embeds
+and standalone sources at desktop and mobile widths. Keep decisions and
+limitations traceable to lesson prose; a diagram is not evidence that a
+setting is configured or enforced.
+
 ### Diagram color roles
 
 The diagrams use local course tokens and system fonts; no remote assets.

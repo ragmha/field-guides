@@ -3,59 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Review separate execution paths</title>
+  <title>Evaluate an MCP server entry</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
     .frame { max-width: 704px; min-width: 0; width: 100%; }
     .diagram-container { width: 100%; overflow-x: auto; }
-    .eyebrow { font-family: ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace; font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
-    h1 { font-size: 1.75rem; line-height: 1.15; color: #1f2328; margin-bottom: 1.5rem; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
     svg { width: 100%; min-width: 704px; display: block; }
     @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
   </style>
 </head>
 <body>
   <div class="frame">
-    <p class="eyebrow">Governance guide · branch</p>
-    <h1>Review separate execution paths</h1>
-    <div class="diagram-container" tabindex="0" role="region" aria-label="Review separate execution paths. Scroll horizontally to explore.">
-      <svg viewBox="0 0 704 568" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="agent-tools-network-light-title agent-tools-network-light-desc">
-        <title id="agent-tools-network-light-title">Review separate execution paths</title>
-        <desc id="agent-tools-network-light-desc">Agent work can use Bash-started processes and MCP servers. The firewall directly covers the former, not MCP processes. Review permissions and protections for each path.</desc>
+    <p class="eyebrow">Governance guide · Flowchart</p>
+    <h1>Evaluate an MCP server entry</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Evaluate an MCP server entry. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 1148" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="agent-tools-network-light-title agent-tools-network-light-desc">
+        <title id="agent-tools-network-light-title">Evaluate an MCP server entry</title>
+        <desc id="agent-tools-network-light-desc">Check managed-allowlist scope, built-in defaults, deny precedence and every deployed allowlist, while reviewing out-of-scope profiles and credentials separately.</desc>
         <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
-        <rect x="0" y="0" width="704" height="568" fill="#f3f5f7"/>
-        <rect x="72" y="176" width="272" height="120" rx="8" fill="none" stroke="#59636e" stroke-width="1" stroke-dasharray="4,3"/>
-        <rect x="84" y="168" width="120" height="16" fill="#f3f5f7"/>
-        <text x="92" y="180" fill="#59636e" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace" font-size="8">FIREWALL SCOPE</text>
-        <path d="M 300,120 V 132 Q 300,140 292,140 H 216 Q 208,140 208,148 V 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <path d="M 404,120 V 132 Q 404,140 412,140 H 488 Q 496,140 496,148 V 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <path d="M 208,280 V 324 Q 208,332 216,332 H 292 Q 300,332 300,340 V 360" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <path d="M 496,280 V 324 Q 496,332 488,332 H 412 Q 404,332 404,340 V 360" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <g>
-      <rect x="192" y="40" width="320" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="70" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cloud execution</text>
-      <text x="208" y="94" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Agent and code review paths</text>
-    </g>
-        <g>
-      <rect x="88" y="200" width="240" height="80" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
-      <text x="104" y="230" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Bash-started processes</text>
-      <text x="104" y="254" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Firewall applies to this path</text>
-    </g>
-        <g>
-      <rect x="376" y="200" width="240" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="392" y="230" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">MCP server processes</text>
-      <text x="392" y="254" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Not directly covered</text>
-    </g>
-        <g>
-      <rect x="192" y="360" width="320" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="390" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Review separately</text>
-      <text x="208" y="414" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Permissions, controls and residual risk</text>
-    </g>
-        <text x="40" y="480" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">The firewall is not complete exfiltration protection.</text>
-        <line x1="40" y1="508" x2="664" y2="508" stroke="#d1d9e0" stroke-width="1"/>
-        <text x="40" y="536" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Box: topic or action    ·    Arrow: relationship    ·    Dashed boundary: firewall scope</text>
-        <text x="40" y="552" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Green box: lesson focus, not approval or a safety rating</text>
+        <rect x="0" y="0" width="704" height="1148" fill="#f3f5f7"/>
+        <path d="M 352 112 L 464 112" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="398.5" y="92" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="408" y="101" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 224 184 L 224 252" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="232" y="210" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="244.25" y="219" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 336 308 L 464 308" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="387.75" y="288" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="400" y="297" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 224 364 L 224 432" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="232" y="390" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="241.5" y="399" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 336 488 L 464 488" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="387.75" y="468" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="400" y="477" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 224 544 L 224 612" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="232" y="570" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="241.5" y="579" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 352 684 L 556 684 A 8 8 0 0 0 564 676 L 564 528" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="406.5" y="664" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="416" y="673" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 224 756 L 224 824" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="232" y="782" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="244.25" y="791" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <polygon points="224,40 352,112 224,184 96,112" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="224.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Managed-list</text>
+        <text x="224.0" y="124.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">scope?</text>
+        <rect x="464" y="56" width="200" height="112" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="564.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Review separately</text>
+        <text x="564.0" y="116.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Repository custom-agent profile:</text>
+        <text x="564.0" y="132.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">execution, network, credentials</text>
+        <polygon points="224,252 336,308 224,364 112,308" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="224.0" y="304.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Built-in</text>
+        <text x="224.0" y="320.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">default?</text>
+        <rect x="464" y="268" width="200" height="80" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="564.0" y="304.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allowed by these rules</text>
+        <text x="564.0" y="320.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Credentials may still be excessive</text>
+        <polygon points="224,432 336,488 224,544 112,488" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="224.0" y="484.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Deny rule</text>
+        <text x="224.0" y="500.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">matches?</text>
+        <rect x="464" y="448" width="200" height="80" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="564.0" y="476.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Blocked</text>
+        <text x="564.0" y="492.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Deny wins; invalid list or</text>
+        <text x="564.0" y="508.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">unresolved variable also blocks</text>
+        <polygon points="224,612 352,684 224,756 96,684" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="224.0" y="680.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Each deployed</text>
+        <text x="224.0" y="696.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">list matches?</text>
+        <rect x="64" y="824" width="320" height="80" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="224.0" y="852.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allowed by these rules</text>
+        <text x="224.0" y="868.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Non-built-in: valid lists, resolved variables</text>
+        <text x="224.0" y="884.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Credentials may still be excessive</text>
+        <text x="40" y="944" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Scope: user/repository settings on supported clients or cloud sandboxes.</text>
+        <text x="40" y="960" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Final gate also requires valid lists and resolved variables for non-built-ins.</text>
+        <text x="40" y="1008" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Firewall: Bash-started processes, not MCP or configured setup-step processes.</text>
+        <text x="40" y="1024" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Cloud agent and code review have separate settings; bypasses are possible.</text>
+        <text x="40" y="1040" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">It is not comprehensive exfiltration protection.</text>
+        <line x1="40" y1="1088" x2="664" y2="1088" stroke="#d1d9e0"/>
+        <text x="40" y="1112" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="1132" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
       </svg>
     </div>
   </div>

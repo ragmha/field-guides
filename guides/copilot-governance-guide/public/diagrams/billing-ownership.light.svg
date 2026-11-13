@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 704 504" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="billing-ownership-light-title billing-ownership-light-desc" id="billing-ownership-light-root">
-        <title id="billing-ownership-light-title">One service, distinct financial questions</title>
-        <desc id="billing-ownership-light-desc">A Copilot rollout raises separate seat and metered usage questions. Identify the financial owner for both, and distinguish spending authorization from a forecast.</desc>
+<svg viewBox="0 0 704 736" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="billing-ownership-light-title billing-ownership-light-desc" id="billing-ownership-light-root">
+        <title id="billing-ownership-light-title">Route a budget alert</title>
+        <desc id="billing-ownership-light-desc">In the hypothetical pilot, the platform team owns seats, finance retains metered-spending approval authority and names an alert responder to investigate alerts.</desc>
         <defs>
       <style>#billing-ownership-light-root { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; color: #1f2328; }
       #billing-ownership-light-root .diagram-container { width: 100%; overflow-x: auto; }
       @media print {
 #billing-ownership-light-root .diagram-container { overflow-x: visible; }
 }</style><marker id="billing-ownership-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
-        <rect x="0" y="0" width="704" height="504" fill="#f3f5f7"/>
-        <path d="M 300,120 V 132 Q 300,140 292,140 H 216 Q 208,140 208,148 V 168" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#billing-ownership-light-arrow)"/>
-        <path d="M 404,120 V 132 Q 404,140 412,140 H 488 Q 496,140 496,148 V 168" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#billing-ownership-light-arrow)"/>
-        <path d="M 208,248 V 260 Q 208,268 216,268 H 292 Q 300,268 300,276 V 296" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#billing-ownership-light-arrow)"/>
-        <path d="M 496,248 V 260 Q 496,268 488,268 H 412 Q 404,268 404,276 V 296" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#billing-ownership-light-arrow)"/>
-        <g>
-      <rect x="192" y="40" width="320" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="70" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot rollout</text>
-      <text x="208" y="94" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Financial responsibilities</text>
-    </g>
-        <g>
-      <rect x="88" y="168" width="240" height="80" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
-      <text x="104" y="198" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Seat access</text>
-      <text x="104" y="222" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">License owner</text>
-    </g>
-        <g>
-      <rect x="376" y="168" width="240" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="392" y="198" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Metered usage</text>
-      <text x="392" y="222" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Owner and spending approver</text>
-    </g>
-        <g>
-      <rect x="192" y="296" width="320" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="326" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Finance and platform</text>
-      <text x="208" y="350" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Agree response and reporting</text>
-    </g>
-        <text x="40" y="416" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">A forecast is not spending approval.</text>
-        <line x1="40" y1="444" x2="664" y2="444" stroke="#d1d9e0" stroke-width="1"/>
-        <text x="40" y="472" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Box: topic or action    ·    Arrow: relationship</text>
-        <text x="40" y="488" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Green box: lesson focus, not approval or a safety rating</text>
+        <rect x="0" y="0" width="704" height="736" fill="#f3f5f7"/>
+        <path d="M 296 104 L 296 144 A 8 8 0 0 1 288 152 L 192 152 A 8 8 0 0 0 184 160 L 184 204" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#billing-ownership-light-arrow)"/>
+        <path d="M 408 104 L 408 128 A 8 8 0 0 0 416 136 L 512 136 A 8 8 0 0 1 520 144 L 520 204" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#billing-ownership-light-arrow)"/>
+        <path d="M 520 300 L 520 400" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#billing-ownership-light-arrow)"/>
+        <rect x="192" y="40" width="320" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="68.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Hypothetical Copilot Business pilot</text>
+        <text x="352.0" y="84.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Route the budget alert</text>
+        <rect x="40" y="204" width="288" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="248.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Platform team</text>
+        <text x="184.0" y="264.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Owns and maintains seat assignment</text>
+        <rect x="376" y="204" width="288" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="240.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Finance</text>
+        <text x="520.0" y="256.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Approves metered spending</text>
+        <text x="520.0" y="272.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Keeps approval authority; names responder</text>
+        <rect x="376" y="400" width="288" height="96" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="520.0" y="436.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Named alert responder</text>
+        <text x="520.0" y="452.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Investigates budget alerts</text>
+        <text x="520.0" y="468.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Name must be recorded by finance</text>
+        <text x="40" y="548" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Approval gate: route proposed changes through the organization&#x27;s approval process.</text>
+        <text x="40" y="564" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A forecast is not approval; the metered budget does not cap license fees.</text>
+        <text x="40" y="612" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Alert-only threshold: it can be crossed while charges continue.</text>
+        <text x="40" y="628" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Naming owners does not configure a threshold or approve more spending.</text>
+        <line x1="40" y1="676" x2="664" y2="676" stroke="#d1d9e0"/>
+        <text x="40" y="700" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Boxes: responsibilities; arrows: ownership/routing, not spending authorization</text>
+        <text x="40" y="720" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
       </svg>

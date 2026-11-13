@@ -90,3 +90,18 @@ test('each part has a complete scored quiz', () => {
     expect(count).toBeLessThanOrEqual(12);
   }
 });
+
+test('diagram themes preserve identical geometry with only house-token substitutions', async () => {
+  const colors = [
+    ['#f3f5f7', '#07090d'], ['#ffffff', '#0d1117'], ['#1f2328', '#f0f6fc'],
+    ['#59636e', '#9198a1'], ['#1a7f37', '#3fb950'], ['#eaf6ed', '#102219'],
+    ['#d1d9e0', '#3d444d'],
+  ];
+  for (const slug of Object.keys(diagrams)) {
+    const light = await readFile(`public/diagrams/${slug}.light.html`, 'utf8');
+    const dark = await readFile(`public/diagrams/${slug}.dark.html`, 'utf8');
+    let expected = light.replaceAll(`${slug}-light-`, `${slug}-dark-`);
+    for (const [from, to] of colors) expected = expected.replaceAll(from, to);
+    expect(dark).toBe(expected);
+  }
+});

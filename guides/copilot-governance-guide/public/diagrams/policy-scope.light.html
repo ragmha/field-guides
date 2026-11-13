@@ -9,50 +9,48 @@
     body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
     .frame { max-width: 704px; min-width: 0; width: 100%; }
     .diagram-container { width: 100%; overflow-x: auto; }
-    .eyebrow { font-family: ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace; font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
-    h1 { font-size: 1.75rem; line-height: 1.15; color: #1f2328; margin-bottom: 1.5rem; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
     svg { width: 100%; min-width: 704px; display: block; }
     @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
   </style>
 </head>
 <body>
   <div class="frame">
-    <p class="eyebrow">Governance guide · branch</p>
+    <p class="eyebrow">Governance guide · Flowchart</p>
     <h1>Find the policy source</h1>
     <div class="diagram-container" tabindex="0" role="region" aria-label="Find the policy source. Scroll horizontally to explore.">
-      <svg viewBox="0 0 704 504" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="policy-scope-light-title policy-scope-light-desc">
+      <svg viewBox="0 0 704 832" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="policy-scope-light-title policy-scope-light-desc">
         <title id="policy-scope-light-title">Find the policy source</title>
-        <desc id="policy-scope-light-desc">Start with the seat source. Organization-assigned and enterprise-assigned users can follow different defaults. Check effective policy and feature-specific conflict rules.</desc>
+        <desc id="policy-scope-light-desc">Trace the seat source, check delegated defaults or feature-specific organization conflicts, then confirm the setting on the actual surface.</desc>
         <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
-        <rect x="0" y="0" width="704" height="504" fill="#f3f5f7"/>
-        <path d="M 300,120 V 132 Q 300,140 292,140 H 216 Q 208,140 208,148 V 168" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <path d="M 404,120 V 132 Q 404,140 412,140 H 488 Q 496,140 496,148 V 168" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <path d="M 208,248 V 260 Q 208,268 216,268 H 292 Q 300,268 300,276 V 296" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <path d="M 496,248 V 260 Q 496,268 488,268 H 412 Q 404,268 404,276 V 296" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <g>
-      <rect x="192" y="40" width="320" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="70" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Identify the user</text>
-      <text x="208" y="94" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Trace the seat source</text>
-    </g>
-        <g>
-      <rect x="88" y="168" width="240" height="80" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
-      <text x="104" y="198" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Organization-assigned</text>
-      <text x="104" y="222" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Review licensing organizations</text>
-    </g>
-        <g>
-      <rect x="376" y="168" width="240" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="392" y="198" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise-assigned</text>
-      <text x="392" y="222" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Check the separate default</text>
-    </g>
-        <g>
-      <rect x="192" y="296" width="320" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
-      <text x="208" y="326" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Effective policy</text>
-      <text x="208" y="350" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Check feature-specific conflict rules</text>
-    </g>
-        <text x="40" y="416" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12">Conflict rules have documented exceptions.</text>
-        <line x1="40" y1="444" x2="664" y2="444" stroke="#d1d9e0" stroke-width="1"/>
-        <text x="40" y="472" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Box: topic or action    ·    Arrow: relationship</text>
-        <text x="40" y="488" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9">Green box: lesson focus, not approval or a safety rating</text>
+        <rect x="0" y="0" width="704" height="832" fill="#f3f5f7"/>
+        <path d="M 240 96 L 192 96 A 8 8 0 0 0 184 104 L 184 220" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="162" width="63" height="12" rx="2" fill="#f3f5f7"/><text x="223.5" y="171" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ENTERPRISE</text>
+        <path d="M 464 96 L 512 96 A 8 8 0 0 1 520 104 L 520 220" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="528" y="162" width="74" height="12" rx="2" fill="#f3f5f7"/><text x="565.0" y="171" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ORGANIZATION</text>
+        <path d="M 184 300 L 184 548" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 520 332 L 520 412" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="528" y="364" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="540.25" y="373" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 400 276 L 360 276 A 8 8 0 0 0 352 284 L 352 564 A 8 8 0 0 1 344 572 L 328 572" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="360" y="376" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="369.5" y="385" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 520 508 L 520 644 A 8 8 0 0 1 512 652 L 192 652 A 8 8 0 0 1 184 644 L 184 628" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <polygon points="352,40 464,96 352,152 240,96" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Seat source?</text>
+        <rect x="40" y="220" width="288" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="256.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise-assigned users</text>
+        <text x="184.0" y="272.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Check their separate delegated-policy default</text>
+        <polygon points="520,220 640,276 520,332 400,276" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="272.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Licensing orgs</text>
+        <text x="520.0" y="288.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">disagree?</text>
+        <rect x="376" y="412" width="288" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="448.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Use the feature&#x27;s conflict rule</text>
+        <text x="520.0" y="464.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Usually least restrictive; exceptions apply</text>
+        <text x="520.0" y="480.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Public-code matching: most restrictive</text>
+        <rect x="40" y="548" width="288" height="80" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="584.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Confirm on the actual surface</text>
+        <text x="184.0" y="600.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Prediction is not an effective-setting test</text>
+        <text x="40" y="708" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Across enterprises: most restrictive almost always applies, with exceptions.</text>
+        <text x="40" y="724" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Check the specific policy; neither summary is a universal algorithm.</text>
+        <line x1="40" y1="772" x2="664" y2="772" stroke="#d1d9e0"/>
+        <text x="40" y="796" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="816" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
       </svg>
     </div>
   </div>
