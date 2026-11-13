@@ -154,14 +154,6 @@ const landingParts = parts.map(part => ({
       }
       syncNavigation();
       mobile.addEventListener('change', syncNavigation);
-      document.querySelectorAll<HTMLButtonElement>('[data-diagram-size]').forEach((button) => {
-        button.hidden = false;
-        button.addEventListener('click', () => {
-          const zoomed = button.closest('figure')!.classList.toggle('diagram-zoomed');
-          button.setAttribute('aria-pressed', String(zoomed));
-          button.textContent = zoomed ? 'Fit figure to screen' : 'Zoom figure';
-        });
-      });
       select.value = document.documentElement.dataset.preference || 'system';
       function applyTheme() {
         const preference = select.value;

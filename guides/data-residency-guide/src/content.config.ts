@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const diagram = z.enum(['sovereignty-layers', 'data-map', 'adoption-path']);
+const diagram = z.enum(['sovereignty-layers', 'data-map', 'adoption-path', 'breach-notification']);
 
 const guide = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guide' }),

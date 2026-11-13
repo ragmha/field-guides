@@ -4,9 +4,10 @@ section: Contracts and law
 order: 6
 description: Walk through the GitHub Data Protection Agreement clause by clause, map it to GDPR Article 28, and note what you still own.
 verified: "2026-11-12"
+diagram: breach-notification
 checks:
-  - question: GitHub tells you about a security incident affecting your enterprise. Who notifies your supervisory authority within 72 hours?
-    answer: You do. The DPA commits GitHub to notify you "without undue delay" and to assist, but you are "solely responsible" for your own notification duties under GDPR Article 33.
+  - question: GitHub tells you about a security incident affecting your enterprise. Who decides whether the supervisory authority must be notified?
+    answer: The controller determines whether notification is required. The DPA commits GitHub to notify you "without undue delay" and to assist, but you remain responsible for your own notification duties under GDPR Article 33.
   - question: GitHub adds a new subprocessor you cannot accept. What are your options?
     answer: GitHub gives 30 days' notice before the subprocessor gets access. If you object, you can terminate the affected service without penalty by written notice before the notice period ends. If the service is part of a bundle, the termination applies to the whole bundle.
   - question: A team wants to try a preview Copilot feature on a repository with customer data. What does the DPA say?
@@ -28,7 +29,7 @@ sources:
 - Map the GitHub DPA to the GDPR Article 28 processor checklist.
 - List the duties the DPA leaves with you.
 
-This chapter summarises the [GitHub Data Protection Agreement](https://github.com/customer-terms/github-data-protection-agreement) as published on 12 November 2026. It is not legal advice. Your signed agreement and its referenced versions are what count.
+This chapter summarises the October 2025 [GitHub Data Protection Agreement](https://github.com/customer-terms/github-data-protection-agreement) reviewed on 12 November 2026. It is not legal advice. Your signed agreement and its referenced versions are what count.
 
 ## Which documents apply
 
@@ -50,7 +51,7 @@ Two Product Terms details matter for residency buyers. They list "GitHub Enterpr
 | Security of processing (Art. 32) | §4 and Annex II: technical and organisational measures, including at least weekly backups stored apart from primary systems, least privilege, logging and annual risk assessment. |
 | Subprocessors | §9: general authorisation, a published [subprocessor list](https://docs.github.com/en/site-policy/privacy-policies/github-subprocessors), 30 days' notice, and a right to terminate the affected service without penalty. |
 | Help with data subject requests | §3.G: GitHub redirects data subjects to you and provides "the necessary means to respond". |
-| Help with security, breach and DPIA duties | §6: incident notice "without undue delay", investigation and mitigation. §6.C: help with your notifications. |
+| Help with security, breach and DPIA duties | §6: incident notice "without undue delay", investigation and mitigation. §6.C: help with your notifications, to the extent required by applicable law. |
 | Delete or return at the end | §8: "delete or return all the Customer Personal Data to You, whichever you elect". The General Terms §9.5 give 90 days after termination to migrate repository data. |
 | Audits and information | §5: SOC 1 Type 2, SOC 2 Type 2 and ISO 27001 reports on request. Where a regulator needs more, there is an independent accredited auditor, 30 days' notice and your cost. |
 
@@ -98,7 +99,7 @@ Without GitHub's prior written consent, do not upload criminal-offence data subj
 ## What stays with you
 
 - **Lawfulness:** §3.D says GitHub is not responsible for working out which laws apply to your business.
-- **Breach notification:** you notify your supervisory authority within 72 hours under GDPR Article 33. GitHub's notice has no fixed hour count, so build that into your incident runbook.
+- **Breach notification:** under GDPR Article 33, the controller notifies the supervisory authority without undue delay and, where feasible, within 72 hours of becoming aware, unless the breach is unlikely to risk individuals' rights and freedoms. Article 34 can require notice to affected individuals when risk is high. GitHub's notice has no fixed hour count, so build that into your incident runbook.
 - **Data subject requests:** you answer them. GitHub redirects requesters to you.
 - **Records and assessments:** your record of processing, any DPIA, and a transfer impact assessment for the out-of-region categories.
 - **Contact details:** §14 says you must keep your notice contact accurate and monitor it. Notices to GitHub go to support or the privacy form, with a copy to `dpo@github.com`.

@@ -15,6 +15,10 @@ const diagrams = {
     title: 'Five steps from question to production',
     description: 'Decide the requirement, sign the paper, prepare identity and network, migrate in waves, then operate with evidence. Each step has a named owner and an exit artefact.',
   },
+  'breach-notification': {
+    title: 'Who notifies whom after a breach',
+    description: 'GitHub notifies the customer without undue delay and assists as required by applicable law. The controller assesses notification duties under GDPR Articles 33 and 34: notice to the authority without undue delay and, where feasible, within 72 hours unless risk is unlikely. High risk may also require notice to individuals.',
+  },
 };
 
 interface Props { name: keyof typeof diagrams }
@@ -27,10 +31,7 @@ const headingId = `${name}-heading`;
 
 <figure class="diagram-embed" aria-labelledby={headingId}>
   <h3 id={headingId}>{title}</h3>
-  <div class="diagram-tools">
-    <button class="diagram-zoom" type="button" data-diagram-size aria-pressed="false" aria-controls={`${name}-viewport`} hidden>Zoom figure</button>
-  </div>
-  <div id={`${name}-viewport`} class="diagram-scroll" tabindex="0" role="region" aria-label={`${title}. When zoomed, scroll horizontally to explore.`}>
+  <div id={`${name}-viewport`} class="diagram-scroll" tabindex="0" role="region" aria-label={`${title}. Scroll horizontally to explore.`}>
     <Fragment set:html={svg} />
   </div>
   <figcaption><p>{description}</p></figcaption>
@@ -39,16 +40,9 @@ const headingId = `${name}-heading`;
 <style>
   .diagram-embed { min-width: 0; margin: 1rem 0 2rem; }
   h3 { color: var(--ink); font: 650 19px/1.4 var(--font-sans); margin: 0 0 16px; }
-  .diagram-tools { display: flex; gap: 20px; font-size: 13px; }
-  .diagram-zoom { display: none; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 10px 14px; margin-bottom: 12px; cursor: pointer; }
-  .diagram-zoom:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .diagram-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
   .diagram-scroll :global(svg) { display: block; width: 100%; min-width: 640px; height: auto; font-family: var(--font-sans); }
-  @media (max-width: 760px) {
-    .diagram-zoom:not([hidden]) { display: inline-block; }
-    .diagram-scroll :global(svg) { min-width: 0; }
-    .diagram-zoomed .diagram-scroll :global(svg) { min-width: 640px; }
-  }
+  @media print { .diagram-scroll { overflow-x: visible; } .diagram-scroll :global(svg) { min-width: 0; } }
   figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
   figcaption p { margin: 0; }
   .diagram-scroll :global(.ink) { fill: var(--ink); }
@@ -59,4 +53,11 @@ const headingId = `${name}-heading`;
   .diagram-scroll :global(.accent) { fill: var(--accent); }
   .diagram-scroll :global(.amber) { fill: var(--amber); }
   .diagram-scroll :global(.line) { stroke: var(--muted); fill: none; stroke-width: 1.5; }
+  .diagram-scroll :global(.paper) { fill: var(--surface); }
+  .diagram-scroll :global(.rule) { stroke: var(--rule); }
+  .diagram-scroll :global(.node) { fill: var(--surface); stroke: var(--ink); }
+  .diagram-scroll :global(.focal) { fill: var(--tint); stroke: var(--accent); }
+  .diagram-scroll :global(.store), .diagram-scroll :global(.external), .diagram-scroll :global(.optional) { fill: var(--ink); stroke: var(--muted); }
+  .diagram-scroll :global(.arrow) { stroke: var(--muted); fill: none; }
+  .diagram-scroll :global(.arrow-accent) { stroke: var(--accent); fill: none; }
 </style>
