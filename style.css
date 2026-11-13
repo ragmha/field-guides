@@ -57,7 +57,7 @@ h3 { font-size: 18px; line-height: 1.5; margin: 28px 0 12px; }
 .skip:focus { top: 8px; }
 .topbar { height: 76px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; padding: 0 32px; gap: 40px; position: sticky; top: 0; background: var(--surface); z-index: 5; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; white-space: nowrap; text-decoration: none; letter-spacing: -.3px; }
-.brand-mark { display: block; flex-shrink: 0; width: 30px; height: 30px; }
+.brand-mark { display: block; flex-shrink: 0; width: 30px; height: 30px; fill: currentColor; }
 .breadcrumbs { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--muted); }
 .breadcrumbs span:last-child { color: var(--body); }
 .theme-label { margin-left: auto; display: flex; align-items: center; gap: 8px; color: var(--muted); }
