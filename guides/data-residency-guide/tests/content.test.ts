@@ -84,7 +84,7 @@ test('chapter figures resolve to accessible SVGs without decorating appendices',
     if (chapter.id !== 'faq') expect(names.length).toBeGreaterThan(0);
     else expect(names).toHaveLength(0);
   }
-  expect(used.size).toBe(32);
+  expect(used.size).toBe(33);
   for (const id of ['glossary', 'sources']) {
     const text = await readFile(`src/content/guide/${id}.md`, 'utf8');
     expect(text).not.toMatch(/^(diagram|additionalDiagrams):/m);

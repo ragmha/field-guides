@@ -1,17 +1,32 @@
-<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="runner-deployment-title runner-deployment-desc">
-<title id="runner-deployment-title">Runner and network boundary</title><desc id="runner-deployment-desc">The customer chooses where self-hosted runners and external services operate; their locations are not automatically covered by GitHub&#x27;s data residency commitment.</desc>
-<defs><marker id="runner-deployment-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
-<rect width="640" height="300" fill="#fff" class="paper"/>
-<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-<line x1="148" y1="132" x2="176" y2="132" class="arrow" stroke="#59636e" marker-end="url(#runner-deployment-arrow)"/>
-<line x1="304" y1="132" x2="332" y2="132" class="arrow" stroke="#59636e" marker-end="url(#runner-deployment-arrow)"/>
-<line x1="460" y1="132" x2="488" y2="132" class="arrow" stroke="#59636e" marker-end="url(#runner-deployment-arrow)"/>
-<rect x="20" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
-<text x="84" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">GHE.com</text>
-<rect x="176" y="104" width="128" height="56" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
-<text x="240" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Runner</text>
-<rect x="332" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
-<text x="396" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Build output</text>
-<rect x="488" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
-<text x="552" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Your services</text>
-</g></svg>
+<svg viewBox="0 0 960 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="runner-deployment-title runner-deployment-desc">
+  <title id="runner-deployment-title">Example runner deployment boundaries</title>
+  <desc id="runner-deployment-desc">In this illustrative deployment, a self-hosted runner runs on a customer-managed host in a private network and connects to GitHub Actions. A workflow may also send data to a customer-selected service. Locations, versions and network rules must be chosen by the customer.</desc>
+  <defs><marker id="runner-deployment-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#0550ae"/></marker></defs>
+  <rect width="960" height="360" fill="#fff" class="paper"/>
+  <rect x="16" y="52" width="264" height="236" rx="8" fill="#f6f8fa" stroke="#59636e" stroke-dasharray="4,4"/>
+  <rect x="340" y="52" width="264" height="236" rx="8" fill="#f6f8fa" stroke="#59636e" stroke-dasharray="4,4"/>
+  <rect x="664" y="52" width="280" height="236" rx="8" fill="#f6f8fa" stroke="#59636e" stroke-dasharray="4,4"/>
+  <text x="32" y="76" font-size="12" font-weight="600" class="muted">GITHUB · SELECTED REGION</text>
+  <text x="356" y="76" font-size="12" font-weight="600" class="muted">CUSTOMER · PRIVATE NETWORK</text>
+  <text x="680" y="76" font-size="12" font-weight="600" class="muted">CUSTOMER-SELECTED SERVICE</text>
+  <path d="M376 160 H244" fill="none" stroke="#0550ae" stroke-width="1.5" marker-end="url(#runner-deployment-arrow)"/>
+  <path d="M568 160 H700" fill="none" stroke="#0550ae" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#runner-deployment-arrow)"/>
+  <rect x="272" y="124" width="76" height="20" fill="#fff"/>
+  <text x="310" y="138" text-anchor="middle" font-size="10" fill="#0550ae">HTTPS</text>
+  <rect x="604" y="124" width="64" height="20" fill="#fff"/>
+  <text x="636" y="138" text-anchor="middle" font-size="10" fill="#0550ae">OPTIONAL</text>
+  <rect x="52" y="112" width="192" height="96" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+  <text x="68" y="132" font-size="10" class="muted">MANAGED SERVICE</text>
+  <text x="68" y="160" font-size="14" font-weight="600" class="ink">GitHub Actions</text>
+  <text x="68" y="184" font-size="11" class="muted">GHE.com enterprise</text>
+  <rect x="376" y="112" width="192" height="96" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+  <text x="392" y="132" font-size="10" class="muted">CUSTOMER HOST</text>
+  <text x="392" y="156" font-size="14" font-weight="600" class="ink">Self-hosted runner</text>
+  <rect x="392" y="168" width="160" height="24" rx="4" fill="#fff" stroke="#59636e"/>
+  <text x="400" y="184" font-size="10" class="ink">Runner · version varies</text>
+  <rect x="700" y="112" width="208" height="96" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+  <text x="716" y="132" font-size="10" class="muted">EXTERNAL DESTINATION</text>
+  <text x="716" y="160" font-size="14" font-weight="600" class="ink">Workflow service</text>
+  <text x="716" y="184" font-size="11" class="muted">Endpoint and protocol vary</text>
+  <text x="24" y="324" font-size="12" class="muted">Example only. Choose runner location, service destination and firewall rules for your deployment.</text>
+</svg>

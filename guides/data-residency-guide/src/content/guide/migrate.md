@@ -20,6 +20,7 @@ sources:
   - https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/getting-started-with-data-residency-for-github-enterprise-cloud
   - https://github.blog/changelog/2025-05-16-github-enterprise-cloud-with-data-residency-now-available-for-self-service-trial/
   - https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/network-details-for-ghecom
+  - https://docs.github.com/en/enterprise-cloud@latest/actions/reference/runners/self-hosted-runners
   - https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-in-your-ide/set-up-copilot/authenticate-to-ghecom
   - https://docs.github.com/en/enterprise-cloud@latest/github-cli/github-cli/using-multiple-accounts
   - https://docs.github.com/en/enterprise-cloud@latest/migrations/overview/migration-paths-to-github

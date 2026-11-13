@@ -39,6 +39,7 @@ The original sources were reviewed on **12 November 2026**; the GitHub Enterpris
 | [Feature overview](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency) | Features unavailable or different on GHE.com |
 | [Getting started](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/getting-started-with-data-residency-for-github-enterprise-cloud) | Trial, setup and the permanent subdomain |
 | [Network details](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/network-details-for-ghecom) | Hostnames, IP ranges and runner regions |
+| [Self-hosted runners reference](https://docs.github.com/en/enterprise-cloud@latest/actions/reference/runners/self-hosted-runners) | Runner hosts, connectivity and software management |
 | [Enterprise Managed Users](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/identity-and-access-management/enterprise-managed-users) | Supported identity providers |
 | [Copilot with data residency](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/github-copilot-with-data-residency) | Residency policy, enforcement, 10% uplift, [EU model list](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/github-copilot-with-data-residency#available-ai-models-by-region) |
 | [Manage Copilot enterprise policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies) | Where to enable policies |

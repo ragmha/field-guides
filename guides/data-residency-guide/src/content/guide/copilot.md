@@ -6,6 +6,7 @@ description: Turn on Copilot data residency, know what it guarantees and costs, 
 verified: "2026-11-12"
 diagram: copilot-flow
 additionalDiagrams:
+  - copilot-policy-delta
   - copilot-governance
   - ip-commitment
 checks:

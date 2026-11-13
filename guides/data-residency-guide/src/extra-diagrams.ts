@@ -1,4 +1,12 @@
 export const extraDiagrams: Record<string, { title: string; description: string; sources?: string[] }> = {
+  "copilot-policy-delta": {
+    "title": "What changes when the Copilot policy is enabled",
+    "description": "This conceptual comparison shows the regional restriction, not GitHub's internal architecture. With the policy disabled, Copilot data may be processed or stored outside the region. Enabled, supported requests use regional compliant models.",
+    "sources": [
+      "https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/github-copilot-with-data-residency",
+      "https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-storage-of-your-data-with-data-residency"
+    ]
+  },
   "decision-owners": {
     "title": "Decision owners",
     "description": "A named adoption owner coordinates privacy, security and platform decisions; each team owns its evidence."
@@ -68,8 +76,12 @@ export const extraDiagrams: Record<string, { title: string; description: string;
     "description": "Inventory and pilot a migration; verify imported data and recreate items that are not migrated, such as Actions secrets."
   },
   "runner-deployment": {
-    "title": "Runner and network boundary",
-    "description": "The customer chooses where self-hosted runners and external services operate; their locations are not automatically covered by GitHub's data residency commitment."
+    "title": "Example runner deployment boundaries",
+    "description": "This example places a self-hosted runner on a customer-managed host in a private network. The customer chooses its location, network rules and any workflow destinations; these are not automatically covered by GitHub's data residency commitment.",
+    "sources": [
+      "https://docs.github.com/en/enterprise-cloud@latest/actions/reference/runners/self-hosted-runners",
+      "https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/network-details-for-ghecom"
+    ]
   },
   "cutover-handoff": {
     "title": "Cutover handoffs",
