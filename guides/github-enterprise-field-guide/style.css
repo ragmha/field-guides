@@ -90,6 +90,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .breadcrumb { display: flex; align-items: center; gap: 14px; margin: 0; font-size: 1rem }
 .breadcrumb a { color: var(--mute); text-decoration: none }
+.collection-home { display: inline-flex; align-items: center; gap: 8px }
+.brand-mark { display: block; flex-shrink: 0; width: 26px; height: 26px; fill: currentColor }
 .breadcrumb span[aria-hidden] { color: var(--mute) }
 .breadcrumb [aria-current] { font-weight: 600 }
 .theme-toggle {

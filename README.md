@@ -1,4 +1,4 @@
-# OpenField
+# Enterprise enablement
 
 Independent, source-backed guidance for GitHub Enterprise, Copilot and AI
 adoption, starting with five guides. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
@@ -22,8 +22,10 @@ The hub and all five guides share the `theme` localStorage preference.
 repositories. Each guide's start page opens with a shared landing: a hero
 with the guide's pen-and-ink illustration and a Parts grid. The Astro guides
 render `shared/Landing.astro`; the two static guides carry the same markup
-and CSS in their own files. Chapter pages and guide styling are otherwise
-unchanged.
+and CSS in their own files. Astro landings retain introductory notes and sources
+without repeating chapter sidebars or course indexes. Every topic has a visible
+return to the collection on mobile. Chapter-page layouts and the static topics'
+substantive content are retained.
 
 ## Build and preview
 

@@ -35,7 +35,7 @@ const reviewedOn = new Date(`${reviewed}T00:00:00Z`).toLocaleDateString('en-GB',
     <p>Start with Part 1, or jump to the part you need.</p>
     <ol class="part-grid">
       {parts.map((part, index) => (
-        <li class="part-card">
+        <li class="part-card" id={`part-${index + 1}`}>
           <div class="part-top"><span aria-hidden="true">↖</span><span>{String(index + 1).padStart(2, '0')}</span></div>
           <h3>{part.title}</h3>
           <p>{part.description}</p>

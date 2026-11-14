@@ -60,6 +60,7 @@ h3 { font-size: 18px; line-height: 1.5; margin: 28px 0 12px; }
 .brand-mark { display: block; flex-shrink: 0; width: 30px; height: 30px; fill: currentColor; }
 .breadcrumbs { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--muted); }
 .breadcrumbs span:last-child { color: var(--body); }
+.hub-home { display: none; }
 .theme-label { margin-left: auto; display: flex; align-items: center; gap: 8px; color: var(--muted); }
 .theme-label > span { font-size: 23px; }
 select, .print-button { font-size: 13px; color: var(--body); background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px; }
@@ -181,6 +182,7 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
   .shell { grid-template-columns: 250px minmax(0, 1fr); }
   .sidebar { padding: 28px 15px; }
   .breadcrumbs { display: none; }
+  .hub-home { display: block; padding: 8px 18px; font-size: 13px; }
 }
 /* Course-style landing: mirrors shared/Landing.astro used by the Astro guides. */
 .landing { --serif: ui-serif, "New York", Georgia, "Times New Roman", serif; max-width: 1180px; margin: 0 auto; padding: 0 44px; }
@@ -248,7 +250,7 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
     --muted: #444; --rule: #bbb; --accent: #1a7f37; --link: #0550ae; --tint: #eaf6ed;
   }
   body { font-size: 10pt; }
-  .topbar, .sidebar, .toc, .button, .landing-art, .landing-actions, .landing-parts, .phase-nav, .skip, .diagram-hint { display: none !important; }
+  .topbar, .hub-home, .sidebar, .toc, .button, .landing-art, .landing-actions, .landing-parts, .phase-nav, .skip, .diagram-hint { display: none !important; }
   .shell, .article-grid { display: block; }
   main { padding: 0; background: none; }
   h1, .hero h2 { font-size: 30pt; }

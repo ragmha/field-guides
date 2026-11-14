@@ -19,10 +19,11 @@ test('reading sequence, self-checks, themes and lesson diagrams', async ({ page 
   page.on('pageerror', error => errors.push(error.message));
   const base = '/field-guides/copilot-governance-guide/';
   await page.goto('./');
-  await expect(page.getByRole('navigation', { name: 'Guide chapters' }).locator('.course-part')).toHaveCount(parts.length);
+  await expect(page.locator('.part-card')).toHaveCount(parts.length);
+  await expect(page.getByRole('navigation', { name: 'Guide chapters' })).toHaveCount(0);
   let previousPath = base;
   for (const chapter of chapters) {
-    const next = page.locator('.pagination a[rel="next"]');
+    const next = chapter === chapters[0] ? page.locator('.landing-button').first() : page.locator('.pagination a[rel="next"]');
     await expect(next).toHaveAttribute('href', `${base}${chapter.path}/`);
     await next.click();
     await expect(page.locator('h1')).toContainText(`${chapter.number} `);
@@ -108,7 +109,7 @@ test('quiz gates links and direct visits until a perfect score, and saves progre
   const firstSummary = chapters.find(chapter => chapter.part === 1 && chapter.kind === 'summary')!;
   const secondOverview = chapters.find(chapter => chapter.part === 2 && chapter.kind === 'overview')!;
   await page.goto('./');
-  const locked = page.getByRole('navigation', { name: 'Guide chapters' }).locator(`a[href$="${secondOverview.path}/"]`);
+  const locked = page.locator(`.part-card a[href$="${secondOverview.path}/"]`);
   await expect(locked).toHaveAttribute('aria-disabled', 'true');
   await locked.focus();
   await page.keyboard.press('Enter');
@@ -149,7 +150,7 @@ test('invalid saved progress is rejected and can be reset', async ({ page }) => 
   await page.evaluate(() => localStorage.setItem('copilot-governance-guide:quiz-progress:v2', '{"version":2,"passed":[2]}'));
   await page.reload();
   await expect(page.locator('#progress-notice')).toContainText('invalid');
-  await expect(page.locator('.course-part').nth(1).locator('a').first()).toHaveAttribute('aria-disabled', 'true');
+  await expect(page.locator('#part-2 a')).toHaveAttribute('aria-disabled', 'true');
   await page.getByRole('button', { name: 'Reset invalid progress' }).click();
   await expect(page.locator('#progress-notice')).toContainText('was reset');
   expect(await page.evaluate(() => localStorage.getItem('copilot-governance-guide:quiz-progress:v2'))).toBeNull();
@@ -160,7 +161,7 @@ test('older quiz progress does not unlock the revised quiz', async ({ page }) =>
   await page.evaluate(() => localStorage.setItem('copilot-governance-guide:quiz-progress:v1', '{"version":1,"passed":[1]}'));
   await page.reload();
   await expect(page.locator('#progress-notice')).toContainText('Previous quiz progress does not carry over');
-  await expect(page.locator('.course-part').nth(1).locator('a').first()).toHaveAttribute('aria-disabled', 'true');
+  await expect(page.locator('#part-2 a')).toHaveAttribute('aria-disabled', 'true');
 });
 
 test('unavailable storage is reported and cannot unlock progress', async ({ page }) => {

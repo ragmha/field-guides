@@ -84,10 +84,11 @@ test('course index links to the neutral needs assessment and preserves legacy UR
     for (const theme of ['light', 'dark']) {
       await page.goto('./');
       await page.getByLabel('Color theme').selectOption(theme);
-      await expect(page.getByRole('navigation', { name: 'Guide chapters', includeHidden: true })).not.toContainText('For teams');
+      await expect(page.getByRole('navigation', { name: 'Guide chapters', includeHidden: true })).toHaveCount(0);
+      await page.screenshot({ path: `${shots}/start-${width}-${theme}.png`, fullPage: true });
+      await page.locator('#part-2 a').click();
       const path = page.locator('.course-outline a').filter({ hasText: 'Identify what you need' });
       await expect(path).toHaveAttribute('href', `/field-guides/ai-credits-guide/${coursePath('identify-needs')}/`);
-      await page.screenshot({ path: `${shots}/start-${width}-${theme}.png`, fullPage: true });
       await path.click();
       await expect(page).toHaveURL(new RegExp(`/field-guides/ai-credits-guide/${coursePath('identify-needs')}/?$`));
       await expect(page.locator('h1')).toHaveText('2.2 Identify what you need');
@@ -104,16 +105,16 @@ test('course index links to the neutral needs assessment and preserves legacy UR
   }
 });
 
-test('full course outline and previous/next chain span all parts without the appendix', async ({ page }) => {
+test('parts landing and chapter previous/next chain span all parts without the appendix', async ({ page }) => {
   await page.goto('./');
   const outline = page.getByRole('navigation', { name: 'Guide chapters' });
-  await expect(outline.locator('.course-part')).toHaveCount(parts.length);
-  await expect(outline.locator('.chapter-pages a')).toHaveCount(chapters.length);
+  await expect(outline).toHaveCount(0);
+  await expect(page.locator('.part-card')).toHaveCount(parts.length);
   await expect(page.locator('.reader-path')).toHaveCount(0);
-  await expect(page.locator('.course-outline a')).toHaveCount(chapters.length);
+  await expect(page.locator('.course-outline')).toHaveCount(0);
   let previousPath = '/field-guides/ai-credits-guide/';
   for (const chapter of chapters) {
-    const next = page.locator('.pagination a[rel="next"]');
+    const next = chapter === chapters[0] ? page.locator('.landing-button').first() : page.locator('.pagination a[rel="next"]');
     await expect(next).toHaveAttribute('href', `/field-guides/ai-credits-guide/${chapter.path}/`);
     await next.click();
     await expect(page).toHaveURL(new RegExp(`/field-guides/ai-credits-guide/${chapter.path}/$`));
@@ -318,6 +319,8 @@ test('theme persistence, system updates and narrow-to-wide navigation', async ({
   await page.emulateMedia({ colorScheme: 'dark' });
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator('.landing-button').first().click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(page.locator('.chapter-nav')).not.toHaveAttribute('open');
   await page.locator('.chapter-nav > summary').click();
   await expect(page.getByRole('navigation', { name: 'Guide chapters' })).toBeVisible();
@@ -353,7 +356,7 @@ test('branded home keeps readable light/dark colors without web-font downloads',
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto('./');
-    await expect(page.getByRole('heading', { name: 'Learn to budget GitHub AI credits', exact: true })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'AI Credits', exact: true })).toBeVisible();
     for (const theme of ['light', 'dark']) {
       await page.emulateMedia({ colorScheme: theme === 'dark' ? 'light' : 'dark' });
       await page.getByLabel('Color theme').selectOption(theme);
@@ -361,12 +364,12 @@ test('branded home keeps readable light/dark colors without web-font downloads',
         const bg = getComputedStyle(document.body).backgroundColor;
         return {
           bg,
-          text: getComputedStyle(document.querySelector('.lede')!).color,
-          accent: getComputedStyle(document.querySelector('.title-emphasis')!).color,
+          text: getComputedStyle(document.querySelector('.landing-intro')!).color,
+          heading: getComputedStyle(document.querySelector('.landing h1')!).color,
           link: getComputedStyle(document.querySelector('.prose p a')!).color,
         };
       });
-      for (const foreground of [colors.text, colors.accent, colors.link]) {
+      for (const foreground of [colors.text, colors.heading, colors.link]) {
         expect(contrast(foreground, colors.bg)).toBeGreaterThanOrEqual(4.5);
       }
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -389,7 +392,7 @@ function contrast(a: string, b: string) {
 }
 
 test('monospace labels resolve to available platform fonts rather than Courier', async ({ page }) => {
-  await page.goto('./');
+  await page.goto(`${coursePath('understand')}/`);
   await page.evaluate(() => document.fonts.ready);
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('DOM.enable');

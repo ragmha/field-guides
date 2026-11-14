@@ -64,6 +64,16 @@ try {
   const expectLanding = async (guide, width) => {
     const landing = page.locator('.landing');
     assert.equal(await landing.locator('h1').isVisible(), true, `${guide.name} landing needs a title`);
+    assert.equal(await page.locator('.topbar svg').isVisible(), true, `${guide.name} header needs the GitHub mark`);
+    assert.equal(await page.getByRole('link', { name: 'Enterprise enablement', exact: true }).isVisible(), true, `${guide.name} needs a visible return to the collection at ${width}px`);
+    if (guide.type === 'astro') {
+      assert.equal(await page.locator('main .landing').count(), 1, `${guide.name} landing belongs in the main landmark`);
+      assert.equal(await page.locator('.sidebar, .toc, .course-outline, .page-title').count(), 0, `${guide.name} landing must not repeat the legacy course index`);
+      assert.equal(await page.locator('#page-sources').isVisible(), true, `${guide.name} must retain source notes`);
+      for (let part = 1; part <= guide.parts; part++) {
+        assert.equal(await page.locator(`#part-${part}`).count(), 1, `${guide.name} must preserve Part ${part}'s fragment target`);
+      }
+    }
     assert.equal(await landing.locator('.landing-button').count(), 2, `${guide.name} landing needs two buttons`);
     assert.equal(await landing.locator('.landing-art').evaluate(image => image.complete && image.naturalWidth > 0), true, `${guide.name} illustration must load`);
     const art = await landing.locator('.landing-art').boundingBox();
@@ -79,12 +89,17 @@ try {
       checkedLinks.add(href);
     }
   };
-  for (const width of [1440, 390, 320]) {
+  for (const width of [1600, 1440, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
     for (const theme of ['light', 'dark']) {
       await page.goto(base);
       await page.selectOption('#theme', theme);
       await page.reload();
+      assert.equal(await page.title(), 'Enterprise enablement', 'Hub must use the approved collection name');
+      assert.equal(await page.locator('.brand').getAttribute('aria-label'), 'Enterprise enablement home');
+      assert.equal((await page.locator('.brand').textContent()).trim(), 'Enterprise enablement');
+      assert.equal(await page.locator('meta[property="og:title"]').getAttribute('content'), 'Enterprise enablement');
+      assert.ok((await page.locator('.article-footer').textContent()).startsWith('Enterprise enablement '));
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
       assert.equal(await page.locator('.guide-card').count(), guides.length);
       assert.equal(await page.locator('.hero-art').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero illustration must load');
@@ -92,23 +107,37 @@ try {
       const copy = await page.locator('.hero-copy').boundingBox();
       assert.ok(width > 760 ? art.x >= copy.x + copy.width : art.y >= copy.y + copy.height, 'Hero illustration must sit right of the copy on desktop and below it on mobile');
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `Hub overflow at ${width}px`);
-      if (process.env.SCREENSHOT_DIR && width !== 320) {
+      if (process.env.SCREENSHOT_DIR && [1440, 390].includes(width)) {
         await mkdir(process.env.SCREENSHOT_DIR, { recursive: true });
         await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `hub-${theme}-${width}.png`), fullPage: true });
       }
       for (const guide of guides) {
         await page.goto(`${base}${guide.name}/`);
         assert.equal(await page.locator('html').getAttribute('data-theme'), theme, `${guide.name} must inherit ${theme}`);
-        assert.equal(await page.locator('header a', { hasText: 'OpenField' }).evaluate(link => link.href), base, `${guide.name} breadcrumb must link to the hub`);
+        assert.equal(await page.locator('header a', { hasText: 'Enterprise enablement' }).evaluate(link => link.href), base, `${guide.name} breadcrumb must link to the hub`);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
         await expectLanding(guide, width);
-        if (process.env.SCREENSHOT_DIR && width !== 320) {
+        if (process.env.SCREENSHOT_DIR && [1440, 390].includes(width)) {
           const landing = await page.locator('.landing').boundingBox();
-          await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `landing-${guide.name}-${theme}-${width}.png`), fullPage: true, clip: { x: 0, y: 0, width, height: landing.y + landing.height } });
+          await page.screenshot({
+            path: join(process.env.SCREENSHOT_DIR, `landing-${guide.name}-${theme}-${width}.png`),
+            fullPage: true,
+            ...(guide.type === 'astro' ? {} : { clip: { x: 0, y: 0, width, height: landing.y + landing.height } }),
+          });
+        }
+        if (width <= 760) {
+          await page.getByRole('link', { name: 'Enterprise enablement', exact: true }).focus();
+          await Promise.all([page.waitForURL(base), page.keyboard.press('Enter')]);
+          assert.equal(page.url(), base, `${guide.name} mobile home link must work with the keyboard`);
         }
       }
     }
   }
+  await page.goto(`${base}github-enterprise-field-guide/ledger.html`);
+  const ledgerHubLink = page.getByRole('link', { name: 'Enterprise enablement', exact: true });
+  assert.equal(await ledgerHubLink.evaluate(link => link.href), base, 'Evidence ledger breadcrumb must link to the hub');
+  await ledgerHubLink.click();
+  assert.equal(page.url(), base, 'Evidence ledger breadcrumb must return to the collection');
   await page.goto(base);
   await page.selectOption('#theme', 'system');
   for (const colorScheme of ['dark', 'light']) {
