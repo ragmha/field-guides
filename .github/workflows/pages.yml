@@ -25,9 +25,6 @@ jobs:
       - run: bun run test:browser
         env:
           BROWSER_CHANNEL: chromium
-      - run: bun run test:diagrams
-        env:
-          BROWSER_CHANNEL: chromium
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

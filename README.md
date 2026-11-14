@@ -53,15 +53,18 @@ bun run check          # Astro/TypeScript checks across all Astro workspaces
 bun run test           # Existing content tests in all three Astro guides
 bun run build
 bun run test:browser   # Existing browser suites, Champions checks, site checks
-bun run test:diagrams  # AI Credits native Excalidraw export checks
+bun run test:diagrams  # AI Credits native Excalidraw export checks (local only)
 ```
+
+`test:diagrams` re-measures diagram text with installed system fonts, so the
+committed SVGs only match on macOS where they were exported. CI skips it; run
+it locally after editing a diagram.
 
 Browser checks use installed Google Chrome by default. Alternatively:
 
 ```sh
 bunx playwright install chromium
 BROWSER_CHANNEL=chromium bun run test:browser
-BROWSER_CHANNEL=chromium bun run test:diagrams
 ```
 
 `bun run test:site` checks generated HTML routes and local linked assets,
