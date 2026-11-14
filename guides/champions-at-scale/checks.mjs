@@ -59,7 +59,8 @@ try {
     await page.setViewportSize({ width, height: 900 });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `Page overflows at ${width}px`);
   }
-  assert.equal(await page.locator('.chapter-nav').getAttribute('open'), null);
+  await page.waitForFunction(() => !document.querySelector('.chapter-nav').open);
+  assert.equal(await page.locator('.chapter-nav').evaluate(nav => nav.open), false);
   await page.locator('.chapter-nav summary').click();
   await page.locator('.chapter-nav a[href="#readiness"]').click();
   assert.equal(await page.locator('.chapter-nav').getAttribute('open'), null);
