@@ -68,10 +68,10 @@ try {
       await page.reload();
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
       assert.equal(await page.locator('.guide-card').count(), guides.length);
-      assert.equal(await page.locator('.hero-photo').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero photograph must load');
-      const photo = await page.locator('.hero-photo').boundingBox();
+      assert.equal(await page.locator('.hero-art').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero illustration must load');
+      const art = await page.locator('.hero-art').boundingBox();
       const copy = await page.locator('.hero-copy').boundingBox();
-      assert.ok(width > 760 ? photo.x >= copy.x + copy.width : photo.y >= copy.y + copy.height, 'Hero photo must sit right of the copy on desktop and below it on mobile');
+      assert.ok(width > 760 ? art.x >= copy.x + copy.width : art.y >= copy.y + copy.height, 'Hero illustration must sit right of the copy on desktop and below it on mobile');
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `Hub overflow at ${width}px`);
       if (process.env.SCREENSHOT_DIR && width !== 320) {
         await mkdir(process.env.SCREENSHOT_DIR, { recursive: true });

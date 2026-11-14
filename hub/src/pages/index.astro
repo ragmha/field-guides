@@ -1,6 +1,6 @@
 ---
 import { guides } from '../../../guides.mjs';
-import fieldNotes from '../assets/field-notes.jpg';
+import heroArt from '../assets/enterprise-network.jpg';
 import '../../../guides/ai-credits-guide/src/styles/global.css';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -42,7 +42,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <p class="lede">Independent field guides for adopting, governing and operating GitHub at enterprise scale. Start with the challenge in front of you.</p>
             <a class="browse" href="#guides">Browse guides <span aria-hidden="true">↓</span></a>
           </div>
-          <img class="hero-photo" src={fieldNotes.src} width={fieldNotes.width} height={fieldNotes.height} alt="An open field notebook with diagrams, a pencil, a laptop and a green plant on a desk." loading="eager" fetchpriority="high" />
+          <img class="hero-art" src={heroArt.src} width={heroArt.width} height={heroArt.height} alt="Pen-and-ink illustration of three server towers linked by network lines to clusters of workstations, surrounded by clouds." loading="eager" fetchpriority="high" />
         </section>
         <section id="guides" aria-labelledby="guides-heading">
           <div class="collection-heading">
@@ -87,7 +87,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .theme-label{margin-left:0}
   .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:center;gap:52px;padding:80px 0;border-bottom:1px solid var(--rule)}
   .hero-copy{min-width:0}
-  .hero-photo{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid var(--rule);border-radius:4px}
+  /* White paper drops out against the page in light mode; inverted ink reads as light lines on dark. */
+  .hero-art{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+  :global([data-theme=dark]) .hero-art{filter:invert(1) brightness(.82);mix-blend-mode:screen}
   h1{font-size:clamp(42px,4.6vw,64px);max-width:950px}
   .lede{max-width:62ch}
   .browse{display:inline-flex;align-items:center;gap:28px;padding:12px 22px;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:var(--surface);font-weight:650;text-decoration:none}
