@@ -15,6 +15,51 @@ foundations.addEventListener('change', updateReadiness);
 document.querySelector('.readiness-result').hidden = false;
 updateReadiness();
 
+const questLevels = document.querySelector('#quest-levels');
+const questChecks = [...questLevels.querySelectorAll('input[type="checkbox"]')];
+const questStatus = document.querySelector('#quest-status');
+const questProgress = document.querySelector('#quest-progress');
+const questStorage = document.querySelector('#quest-storage');
+const questKey = 'champions-quest-progress';
+
+function updateQuests() {
+  const completed = questChecks.filter(check => check.checked).length;
+  questStatus.textContent = `${completed} of ${questChecks.length} quests checked`;
+  questProgress.max = questChecks.length;
+  questProgress.value = completed;
+  questLevels.querySelectorAll('.quest-level').forEach(level => {
+    level.querySelector('legend small').hidden = ![...level.querySelectorAll('input')].every(check => check.checked);
+  });
+}
+
+try {
+  const saved = (localStorage.getItem(questKey) || '').split(',');
+  questChecks.forEach(check => { check.checked = saved.includes(check.value); });
+} catch {
+  questStorage.textContent = 'Browser storage is unavailable. Progress will not survive a reload.';
+}
+questLevels.addEventListener('change', () => {
+  updateQuests();
+  try {
+    localStorage.setItem(questKey, questChecks.filter(check => check.checked).map(check => check.value).join(','));
+    questStorage.textContent = 'Saved only in this browser.';
+  } catch {
+    questStorage.textContent = 'Could not save. Progress will not survive a reload.';
+  }
+});
+document.querySelector('#quest-reset').addEventListener('click', () => {
+  try {
+    localStorage.removeItem(questKey);
+    questChecks.forEach(check => { check.checked = false; });
+    updateQuests();
+    questStorage.textContent = 'Quest progress cleared from this browser.';
+  } catch {
+    questStorage.textContent = 'Could not clear saved progress. Check browser storage settings and try again.';
+  }
+});
+document.querySelector('.quest-summary').hidden = false;
+updateQuests();
+
 const printButton = document.querySelector('.print-button');
 printButton.hidden = false;
 printButton.addEventListener('click', () => window.print());

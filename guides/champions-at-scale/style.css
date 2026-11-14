@@ -134,6 +134,17 @@ input[type="checkbox"] { width: 18px; height: 18px; margin: 4px 0 0; flex-shrink
 .phase summary span { display: block; font: 11px/1.8 var(--font-mono); color: var(--accent); }
 .phase summary strong { font-size: 16px; }
 .deliverable { background: var(--inset); border: 1px solid var(--rule); padding: 14px; border-radius: 4px; }
+.quest-summary { padding: 18px; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); }
+.quest-summary > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center; }
+.quest-summary button { color: var(--body); background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px; font-size: 13px; }
+.quest-summary progress { width: 100%; height: 8px; accent-color: var(--accent); }
+.quest-summary p { margin: 4px 0 0; font-size: 12px; color: var(--muted); }
+.quest-level { border-top: 1px solid var(--rule); padding: 12px 0 0; margin: 28px 0; }
+.quest-level legend { padding: 0 10px 0 0; color: var(--ink); font-size: 19px; font-weight: 700; }
+.quest-level legend > span { font: 600 12px var(--font-mono); color: var(--accent); margin-right: 8px; }
+.quest-level legend small { display: inline-block; font: 600 11px var(--font-sans); color: var(--accent); margin-left: 8px; }
+.quest-level > p { font-size: 14px; margin: 8px 0; }
+.quest-level .quest-links { margin: -2px 0 12px 48px; font-size: 12px; }
 .closing { font-size: 28px; color: var(--ink); font-weight: 700; line-height: 1.35; letter-spacing: -.5px; margin: 36px 0 20px; }
 .closing span { color: var(--muted); }
 .source-list { padding-left: 23px; }
@@ -158,6 +169,7 @@ footer p { margin: 8px 0 12px; }
 .connector { marker-end: url(#network-arrow); }
 .peer-connector { marker-start: url(#network-arrow); }
 .cycle-connector { marker-end: url(#cycle-arrow); }
+.evidence-connector { fill: none; stroke: var(--muted); stroke-width: 1.2; marker-end: url(#evidence-arrow); }
 .diagram-heading { font-size: 14px; font-weight: 650; fill: var(--ink); }
 .node-name { font-size: 13px; font-weight: 600; fill: var(--ink); }
 .node-sub { font-size: 11px; fill: var(--muted); }
@@ -167,6 +179,15 @@ footer p { margin: 8px 0 12px; }
 .cycle-name { font-size: 18px; font-weight: 650; fill: var(--ink); }
 .cycle-sub { font-size: 13px; fill: var(--body); }
 figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.brief-page { background: var(--bg); }
+.brief { max-width: 800px; margin: 0 auto; padding: 32px; background: var(--surface); }
+.brief h1 { font-size: 36px; margin: 8px 0; }
+.brief h2 { font-size: 16px; margin: 0 0 8px; }
+.brief-intro, .brief-nav, .brief-footer { font-size: 13px; }
+.brief-fields section { border-top: 1px solid var(--rule); padding: 12px 0 4px; }
+.brief-fields p { max-width: none; font-size: 13px; margin: 0 0 10px; }
+.write-line { display: block; min-height: 22px; border-bottom: 1px solid var(--rule); }
+.brief-footer { margin: 14px 0 0; color: var(--muted); }
 [hidden] { display: none !important; }
 @media (min-width: 1600px) { main { padding-top: 64px; } .article-grid { gap: 80px; } }
 @media (max-width: 1180px) {
@@ -235,6 +256,7 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
 }
 @media (max-width: 400px) { .brand-tail { display: none; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@page { margin: 12mm; }
 @media print {
   :root, :root[data-theme] {
     color-scheme: light;
@@ -242,7 +264,7 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
     --muted: #444; --rule: #bbb; --accent: #1a7f37; --link: #0550ae; --tint: #eaf6ed;
   }
   body { font-size: 10pt; }
-  .topbar, .hub-home, .sidebar, .toc, .button, .landing-art, .landing-actions, .landing-parts, .phase-nav, .skip, .diagram-hint { display: none !important; }
+  .topbar, .hub-home, .sidebar, .toc, .button, .landing-art, .landing-actions, .landing-parts, .phase-nav, .skip, .diagram-hint, #quest-reset { display: none !important; }
   .shell, .article-grid { display: block; }
   main { padding: 0; background: none; }
   h1 { font-size: 30pt; }
@@ -257,4 +279,12 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
   details::details-content { content-visibility: visible; height: auto; }
   .source-list a { overflow-wrap: anywhere; }
   .source-list > li > a::after { content: " (" attr(href) ")"; font-size: 8pt; font-weight: 400; }
+  .brief { max-width: none; padding: 0; }
+  .brief-nav { display: none; }
+  .brief h1 { font-size: 25pt; }
+  .brief h2 { font-size: 11pt; }
+  .brief-intro, .brief-fields p, .brief-footer { font-size: 9pt; }
+  .brief-fields section { padding: 7px 0 0; break-inside: avoid; }
+  .brief-fields p { margin-bottom: 5px; }
+  .write-line { min-height: 15px; }
 }

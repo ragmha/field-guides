@@ -64,10 +64,10 @@
           <a href="#why">The case for champions</a><a href="#now">What changes in 2026</a>
         </div></div>
         <div class="nav-group"><h2><span>Plan &amp; launch</span> Build the network</h2><div class="chapter-pages">
-          <a href="#model">The operating model</a><a href="#readiness">Before you launch</a><a href="#playbook">Your first 90 days</a>
+          <a href="#model">The operating model</a><a href="#readiness">Before you launch</a><a href="#playbook">Your first 90 days</a><a href="./charter.html">Sponsor brief</a>
         </div></div>
         <div class="nav-group"><h2><span>Operate</span> Keep it useful</h2><div class="chapter-pages">
-          <a href="#measure">Measure what matters</a><a href="#sustain">Keep it sustainable</a>
+          <a href="#quest">Champion quest path</a><a href="#measure">Measure what matters</a><a href="#sustain">Keep it sustainable</a>
         </div></div>
         <a class="guide-home" href="#sources">Sources &amp; templates</a>
       </nav>
@@ -172,6 +172,7 @@
         <p class="lead">A prompt is easy to copy. Knowing when the result is useful, safe and correct takes more work.</p>
         <p>For Copilot and agent-assisted work, champions can help teams evaluate outputs, document approved patterns and share failure cases. Keep examples grounded in real tasks with explicit review and data boundaries. A popular workflow is not automatically a safe one.</p>
         <p>The <strong>2025 DORA research</strong> describes AI as an amplifier of an organization's existing strengths and weaknesses. Its findings support investing in the surrounding system of work, rather than expecting a tool rollout alone to deliver results. The report also identifies delivery-stability risks alongside positive relationships with throughput and product performance. It does <strong>not</strong> establish that champion programs cause productivity gains. <a class="citation" href="#source-dora">[4]</a></p>
+        <p>Google's 2025 DORA AI Capabilities Model identifies seven foundations for AI-assisted software development: a clear, communicated AI stance; healthy data ecosystems; AI-accessible internal data; strong version control; small batches; a user-centric focus; and quality internal platforms. Use these as prompts for a foundations discussion, not as proof that a champion network delivers outcomes. Access to internal data still needs appropriate authorization and controls. <a class="citation" href="#source-dora-model">[9]</a></p>
 
         <dl class="editorial-list">
           <div><dt>Share workflows, not just tips.</dt><dd>Capture the task, approved data, steps, human review, observed result and known limitations. Include what failed. Remove obsolete examples when the tool changes.</dd></div>
@@ -179,7 +180,32 @@
           <div><dt>Make agent permissions explicit.</dt><dd>Use least privilege and approved environments. Review code and consequential actions. Never treat a champion's enthusiasm as authorization to expose data or bypass controls.</dd></div>
           <div><dt>Build beyond one product.</dt><dd>The same network can support reusable Actions workflows, platform adoption, inner-source and secure-development practices. Start with one use case; expand only when the network has capacity.</dd></div>
         </dl>
-        <p class="caption">The practices in this section are this guide's recommendations for modern programs, not additional requirements attributed to GitHub or DORA.</p>
+        <p class="caption">The practices above are this guide's recommendations for modern programs, not additional requirements attributed to GitHub or DORA.</p>
+        <h3>A shared kit, not an exception to policy</h3>
+        <p>Start with one recurring task and keep the smallest useful asset in an approved, access-controlled home. Check support for your client: custom instructions add recurring context; prompt files are selected for a task; agent skills package task-specific instructions and optional resources that supported agents load when relevant. <a class="citation" href="#source-customization">[6]</a> <a class="citation" href="#source-skills">[7]</a></p>
+        <figure class="diagram-embed">
+          <h3>Anatomy of a reusable team kit</h3>
+          <p class="diagram-hint">Scroll the figure horizontally to see the whole kit.</p>
+          <div class="diagram-scroll" role="region" aria-label="Reusable team kit anatomy, scroll horizontally" tabindex="0">
+            <svg viewBox="0 0 672 300" role="img" aria-labelledby="kit-title kit-desc">
+              <title id="kit-title">Anatomy of a reusable team kit</title>
+              <desc id="kit-desc">An approved shared home contains recurring instructions, task prompts and agent skills; an owner reviews them against security boundaries and retires stale guidance.</desc>
+              <rect x="32" y="24" width="608" height="232" rx="6" class="diagram-node"/>
+              <text class="diagram-heading" x="52" y="50">APPROVED SHARED HOME</text>
+              <rect x="52" y="68" width="568" height="48" rx="4" class="diagram-node focal"/>
+              <text class="node-name" x="68" y="97">Instructions</text><text class="node-sub" x="220" y="97">Recurring context and conventions</text>
+              <rect x="52" y="124" width="568" height="48" rx="4" class="diagram-node"/>
+              <text class="node-name" x="68" y="153">Prompt files</text><text class="node-sub" x="220" y="153">Selected task and review steps</text>
+              <rect x="52" y="180" width="568" height="48" rx="4" class="diagram-node"/>
+              <text class="node-name" x="68" y="209">Agent skills</text><text class="node-sub" x="220" y="209">Task guidance and optional resources</text>
+              <text class="diagram-legend" x="32" y="282">Owner + review date · approved data and tools · human review · retirement</text>
+            </svg>
+          </div>
+          <figcaption>An illustrative kit, not three mandatory files. The cabinet-like grouping makes the parts visible; it does not imply a precedence order.</figcaption>
+        </figure>
+        <p>For example, a repository instruction can name its test command; a selected review prompt can ask for evidence and human review; a skill can document a repeatable, approved triage workflow. Name an owner, scope, permitted inputs and tools, review date and retirement path. Champions propose and test examples; repository or platform owners approve them, and security owners decide data and permission boundaries. Review any included scripts like code. Do not put secrets or sensitive examples in shared assets.</p>
+        <p>Anthropic describes a “bottom-up discovery, top-down scale” pattern for Claude Cowork: champions turn pilot workflows into skills, and administrators provision proven workflows more widely through a managed marketplace. Adapt the idea to your approved tools and review process; do not assume the same distribution features exist in every product. <a class="citation" href="#source-anthropic">[10]</a></p>
+        <p><strong>Instructions are guidance, not enforcement.</strong> Use existing access controls, protected environments and human approval for consequential actions; verify outputs and supported behavior for each surface. <a class="citation" href="#source-customization">[6]</a></p>
       </section>
 
       <section class="chapter" id="model" aria-labelledby="model-title">
@@ -187,6 +213,7 @@
         <h2 id="model-title">A network needs<br>more than volunteers.</h2>
         <p class="lead">Give people permission, time and a route to someone who can make decisions.</p>
         <p>GitHub's guidance emphasizes executive sponsorship and enthusiastic, influential practitioners. Advocacy is a behavior, not a title. Recruit for curiosity, generosity and peer trust; high usage alone does not make someone a good champion. <a class="citation" href="#source-github">[1–3]</a></p>
+        <p>OpenAI distinguishes <strong>Leaders</strong>, who coordinate strategy, sponsorship, governance and operating rhythm, from <strong>Activators</strong>, who build and adapt workflows with their teams. Being skilled at AI for one's own work is not the same as helping peers adopt it. These are useful role lenses, not mandatory titles. <a class="citation" href="#source-openai-role">[11]</a></p>
         <div class="table-wrap" role="region" aria-label="Program responsibilities, scroll horizontally on narrow screens" tabindex="0">
           <table>
             <caption>Minimum responsibilities. One person may hold more than one role.</caption>
@@ -199,8 +226,11 @@
             </tbody>
           </table>
         </div>
+        <p>For a ChatGPT rollout, OpenAI also assigns departmental leaders a role in nominating champions, a project lead the champions group, HR and learning teams policy and training, and workspace admins access and governance. Adapt these responsibilities to existing owners rather than creating duplicate roles. <a class="citation" href="#source-openai-rollout">[12]</a></p>
         <h3>Staff for coverage and capacity</h3>
         <p>Map business units, working hours, languages and relevant disciplines before counting champions. Ask managers what work will stop to make room. Offer an accessible, asynchronous way to participate, not only live sessions at headquarters' convenience.</p>
+        <p><strong>Nominate and select:</strong> invite self-nominations and manager or peer nominations. Ask for a short example of helping peers, willingness to learn and share, familiarity with local work and ability to recognize when to escalate. Confirm interest and protected time with the person and manager; do not select by title or Copilot usage alone.</p>
+        <p>Map candidates against the pilot's business units, time zones, languages and disciplines; record gaps and a reachable backup or asynchronous route for each. Ask underserved teams to help nominate peers, publish the selection criteria and review coverage as the pilot changes. Treat the map as a planning aid, not a quota or a ranking of people.</p>
         <details>
           <summary>What do the source templates say about staffing?</summary>
           <div class="detail-body">
@@ -263,6 +293,7 @@
         <h2 id="playbook-title">Start narrow.<br>Earn the next step.</h2>
         <p class="lead">One use case. A representative pilot. A decision at each gate.</p>
         <p>The timeline below is this guide's proposed launch path. Adapt it to risk, capacity and procurement constraints. Open each phase for the work, accountable owners and evidence needed to move on.</p>
+        <p><a href="./charter.html">Use the printable one-page sponsor brief →</a> Fill it with the sponsor and pilot teams before committing capacity.</p>
         <nav class="phase-nav" aria-label="Pilot phases"><a href="#days-30">Days 1–30</a><a href="#days-60">Days 31–60</a><a href="#days-90">Days 61–90</a></nav>
         <details class="phase" id="days-30" open>
           <summary><span>Days 1–30</span><strong>Give the pilot a purpose</strong></summary>
@@ -308,11 +339,95 @@
         </details>
       </section>
 
+      <section class="chapter" id="quest" aria-labelledby="quest-title">
+        <div class="section-heading"><span class="chapter-label">Champion quest path</span><span class="reading-note">Learn, practice, share</span></div>
+        <h2 id="quest-title">Power up your practice.<br>Choose your own path.</h2>
+        <p class="lead">Four optional milestones combine learning with useful work. Start where it makes sense; nothing is locked.</p>
+        <p>This is personal, opt-in and self-checked. These guide-defined milestones are not credentials: they mark learning, not performance or productivity, and completion does not prove competence. There are no leaderboards, rankings or manager reports. Checking a quest saves only your selections in this browser's local storage; nothing is sent anywhere. Reset clears them. <a class="citation" href="#source-github-skills">[13]</a> <a class="citation" href="#source-ms-learn">[14]</a></p>
+        <p class="caption">Use an approved training environment and no sensitive data. GitHub Skills exercises may create public repositories and use Actions minutes or Codespaces; Enterprise Managed Users may need <a href="https://github.com/skills/skills-for-emu">additional setup</a>.</p>
+        <div class="quest-summary" hidden>
+          <div><strong id="quest-status" role="status" aria-live="polite"></strong><button type="button" id="quest-reset">Reset quest progress</button></div>
+          <progress id="quest-progress" max="12" value="0" aria-label="Completed quests"></progress>
+          <p id="quest-storage" role="status" aria-live="polite"></p>
+        </div>
+        <noscript><p>JavaScript is off: check quests for this visit or print them. Progress will not be saved.</p></noscript>
+        <div id="quest-levels">
+          <fieldset class="quest-level">
+            <legend><span>01</span> Explorer <small hidden>Milestone checked</small></legend>
+            <p>Get oriented and find a real problem worth exploring.</p>
+            <label><input type="checkbox" value="explorer-github"><span><strong>Power-up · GitHub Skills</strong>Try Introduction to GitHub.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/introduction-to-github">Open exercise ↗</a></p>
+            <label><input type="checkbox" value="explorer-learn"><span><strong>Power-up · Microsoft Learn</strong>Explore GitHub Foundations, Part 1.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/github-foundations/">Open learning path ↗</a></p>
+            <label><input type="checkbox" value="explorer-field"><span><strong>Field quest</strong>Ask a teammate where work gets stuck and identify an appropriate owner for the issue.</span></label>
+          </fieldset>
+          <fieldset class="quest-level">
+            <legend><span>02</span> Practitioner <small hidden>Milestone checked</small></legend>
+            <p>Try an approved workflow and make its boundaries visible.</p>
+            <label><input type="checkbox" value="practitioner-github"><span><strong>Power-up · GitHub Skills</strong>Try Getting Started with GitHub Copilot.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/getting-started-with-github-copilot">Open exercise ↗</a></p>
+            <label><input type="checkbox" value="practitioner-learn"><span><strong>Power-up · Microsoft Learn</strong>Explore Copilot Fundamentals, Part 1.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/copilot/">Open learning path ↗</a></p>
+            <label><input type="checkbox" value="practitioner-field"><span><strong>Field quest</strong>Document an approved workflow, its data boundaries, human review and a result or limitation.</span></label>
+          </fieldset>
+          <fieldset class="quest-level">
+            <legend><span>03</span> Multiplier <small hidden>Milestone checked</small></legend>
+            <p>Make a useful pattern easier for someone else to use.</p>
+            <label><input type="checkbox" value="multiplier-github"><span><strong>Power-up · GitHub Skills</strong>Try Customize Your GitHub Copilot Experience.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/customize-your-github-copilot-experience">Open exercise ↗</a></p>
+            <label><input type="checkbox" value="multiplier-learn"><span><strong>Power-up · Microsoft Learn</strong>Explore Copilot Fundamentals, Part 2.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/gh-copilot-2/">Open learning path ↗</a></p>
+            <label><input type="checkbox" value="multiplier-field"><span><strong>Field quest</strong>Share a peer-reviewed reusable asset in an approved home and run a Learn, Share, Listen, Reflect session.</span></label>
+          </fieldset>
+          <fieldset class="quest-level">
+            <legend><span>04</span> Steward <small hidden>Milestone checked</small></legend>
+            <p>Keep the network safe, current and less dependent on one person.</p>
+            <label><input type="checkbox" value="steward-github"><span><strong>Power-up · GitHub Skills</strong>Try Introduction to Secret Protection.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/introduction-to-secret-scanning">Open exercise ↗</a></p>
+            <label><input type="checkbox" value="steward-learn"><span><strong>Power-up · Microsoft Learn</strong>Explore GitHub Advanced Security, Part 1.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/github-advanced-security/">Open learning path ↗</a></p>
+            <label><input type="checkbox" value="steward-field"><span><strong>Field quest</strong>Mentor a new champion, retire or update a stale asset, and route a finding to the platform team.</span></label>
+          </fieldset>
+        </div>
+        <p class="caption"><a href="https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/">Certification</a> is optional and is not required for a milestone.</p>
+      </section>
+
       <section class="chapter" id="measure" aria-labelledby="measure-title">
         <div class="section-heading"><span class="chapter-label">Measure what matters</span><span class="reading-note">Evidence, not a leaderboard</span></div>
         <h2 id="measure-title">Activity is a signal.<br>Useful change is the goal.</h2>
         <p class="lead">Decide what evidence would change your mind before you launch.</p>
         <p>The GitHub templates list adoption, engagement, attendance, certifications, contributions and surveys as possible measures. <a class="citation" href="#source-charter">[2]</a> This guide recommends separating those leading signals from outcomes, and checking the cost and risks alongside them.</p>
+        <h3>Review privacy before collecting</h3>
+        <p>Before collecting usage or measuring people, involve privacy, legal and security owners; identify the purpose, data needed, lawful basis where applicable, access, retention, notice and risks of re-identification. Prefer aggregate reporting with appropriate minimum-group and suppression rules agreed with privacy owners; aggregation is not automatically anonymous. Complete a data protection impact assessment where required and consult employee representatives or works councils where applicable <strong>before</strong> introducing monitoring. GDPR and consultation duties depend on the processing and jurisdiction; for example, Dutch rules require works-council consent for certain employee monitoring arrangements. Local counsel must determine the obligations. <a class="citation" href="#source-privacy">[8]</a></p>
+        <h3>Read actual Copilot signals in context</h3>
+        <p>GitHub's usage dashboard reports daily or weekly active users, chat requests and suggested versus accepted inline completions; agent adoption is the share of licensed active users who tried an agent in the current calendar month. Define the population, time window and supported surfaces before comparing. The usage dashboard charts exclude Copilot CLI; metrics and exports differ in coverage, and the same user can appear in more than one organization. Do not add organization totals to make an enterprise total. <a class="citation" href="#source-metrics">[5]</a></p>
+        <p>Acceptance rate describes accepted suggestions, not correctness or productivity. Active use, prompt counts, generated lines and pull request counts are not individual performance scores. Exports can contain identifiable user-level data; availability is not permission to collect or use it for employee ranking, surveillance or performance management.</p>
+        <figure class="diagram-embed">
+          <h3>From signals to a sponsor decision</h3>
+          <p class="diagram-hint">Scroll the figure horizontally to follow the evidence.</p>
+          <div class="diagram-scroll" role="region" aria-label="Evidence to decision flow, scroll horizontally" tabindex="0">
+            <svg viewBox="0 0 672 184" role="img" aria-labelledby="evidence-title evidence-desc">
+              <title id="evidence-title">Evidence to decision</title>
+              <desc id="evidence-desc">Agree privacy safeguards, compare a baseline and pilot signals with outcome and workload evidence, then decide whether to expand, adapt, hold or stop.</desc>
+              <defs><marker id="evidence-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8" fill="var(--muted)"/></marker></defs>
+              <path d="M156 76 H176" class="evidence-connector"/>
+              <path d="M316 76 H336" class="evidence-connector"/>
+              <path d="M476 76 H496" class="evidence-connector"/>
+              <rect x="16" y="32" width="140" height="88" rx="6" class="diagram-node"/>
+              <text class="node-name" x="28" y="59">1 · Safeguards</text><text class="node-sub" x="28" y="82">Purpose, access,</text><text class="node-sub" x="28" y="100">consultation</text>
+              <rect x="176" y="32" width="140" height="88" rx="6" class="diagram-node"/>
+              <text class="node-name" x="188" y="59">2 · Baseline</text><text class="node-sub" x="188" y="82">Same workflow,</text><text class="node-sub" x="188" y="100">population, period</text>
+              <rect x="336" y="32" width="140" height="88" rx="6" class="diagram-node"/>
+              <text class="node-name" x="348" y="59">3 · Pilot evidence</text><text class="node-sub" x="348" y="82">Usage + quality</text><text class="node-sub" x="348" y="100">+ workload</text>
+              <rect x="496" y="32" width="160" height="88" rx="6" class="diagram-node focal"/>
+              <text class="node-name" x="508" y="59">4 · Decision</text><text class="node-sub" x="508" y="82">Expand, adapt,</text><text class="node-sub" x="508" y="100">hold or stop</text>
+              <text class="diagram-legend" x="16" y="156">Explain context and uncertainty; a before/after comparison does not establish cause.</text>
+            </svg>
+          </div>
+          <figcaption>Editorial decision path: agree the safeguards before collection and combine signals rather than optimizing a single number.</figcaption>
+        </figure>
+        <p>For one approved workflow, record a pre-pilot period and pilot period, eligible population and definitions. Compare the same workflow's turnaround or rework and quality, alongside aggregate usage, support effort, champion hours and team feedback. Note changes in work mix, staffing and tooling; include non-users. If the evidence is incomplete, say so and choose a smaller next experiment rather than assigning a causal ROI.</p>
+        <p>For its Claude Cowork pilot, Anthropic suggests counting champion-authored skills as a leading indicator for the scale phase. If relevant and approved, use that count to see whether reusable assets are emerging—not as a target for individuals, evidence of quality, adoption or business value. Pair it with review, reuse and workflow outcomes. <a class="citation" href="#source-anthropic">[10]</a></p>
         <div class="table-wrap" role="region" aria-label="Pilot measures, scroll horizontally on narrow screens" tabindex="0">
           <table>
             <caption>A measurement menu. Choose a small set for your pilot, not every row.</caption>
@@ -355,11 +470,21 @@
           <li id="source-charter"><a href="https://cseafdprod-dxcabeg6ega6fggz.b01.azurefd.net/well-architected/collaboration/recommendations/assets/champion-program-charter.pdf">Champion program charter <span class="file-type">PDF</span> <span aria-hidden="true">↗</span></a><p>A source template for mission, goals, roles, time, coverage, communications and measures. Adapt it with your sponsor.</p></li>
           <li id="source-handbook"><a href="https://cseafdprod-dxcabeg6ega6fggz.b01.azurefd.net/well-architected/collaboration/recommendations/assets/champion-handbook.pdf">Champion handbook <span class="file-type">PDF</span> <span aria-hidden="true">↗</span></a><p>Practical guidance for onboarding, peer advocacy and the Learn, Share, Listen, Reflect loop.</p></li>
           <li id="source-dora"><a href="https://dora.dev/research/2025/">DORA: State of AI-assisted Software Development 2025 <span aria-hidden="true">↗</span></a><p>Research on AI adoption and the surrounding organizational system. See also <a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report">Google Cloud's report announcement</a>. Context for the argument, not a study of champion-program effectiveness.</p></li>
+          <li id="source-metrics"><a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics/copilot-usage-metrics">GitHub: Data available in Copilot usage metrics <span aria-hidden="true">↗</span></a><p>Dashboard and export definitions and scope. See also <a href="https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics">coverage and interpretation</a>.</p></li>
+          <li id="source-customization"><a href="https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions">GitHub: Custom instructions for Copilot <span aria-hidden="true">↗</span></a><p>Instruction scopes, client support and limitations; links to prompt files.</p></li>
+          <li id="source-skills"><a href="https://docs.github.com/en/copilot/reference/customization-cheat-sheet">GitHub: Copilot customization cheat sheet <span aria-hidden="true">↗</span></a><p>Definitions and locations for instructions, prompts and agent skills; support differs by surface.</p></li>
+          <li id="source-privacy"><a href="https://www.autoriteitpersoonsgegevens.nl/en/themes/employment-and-benefits/monitoring-employees/conditions-for-monitoring-employees">Dutch Data Protection Authority: Conditions for monitoring employees <span aria-hidden="true">↗</span></a><p>Jurisdiction-specific example of employee-monitoring safeguards, works-council consent and DPIA conditions; not legal advice for all jurisdictions.</p></li>
+          <li id="source-dora-model"><a href="https://services.google.com/fh/files/misc/2025_dora_ai_capabilities_model.pdf">Google: DORA AI Capabilities Model, 2025 <span class="file-type">PDF</span> <span aria-hidden="true">↗</span></a><p>Seven capabilities for AI-assisted software development. “DORA AI Capabilities Model” by Google LLC, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p></li>
+          <li id="source-anthropic"><a href="https://claude.com/resources/guides/deploying-claude-across-your-organization/adoption-at-scale">Anthropic: Driving Claude Cowork adoption at scale <span aria-hidden="true">↗</span></a><p>Product-specific pilot, champion-authored skills and administrator-managed scaling guidance.</p></li>
+          <li id="source-openai-role"><a href="https://academy.openai.com/public/clubs/champions-ecqup/resources/the-ai-champion-role">OpenAI Academy: The AI Champion role <span aria-hidden="true">↗</span></a><p>Leader and Activator roles and their contributions to peer adoption.</p></li>
+          <li id="source-openai-rollout"><a href="https://academy.openai.com/public/clubs/admins-6o6xf/resources/planning-your-chatgpt-rollout">OpenAI Academy: Planning your ChatGPT rollout <span aria-hidden="true">↗</span></a><p>ChatGPT rollout responsibilities, including sponsorship, learning, administration and champions.</p></li>
+          <li id="source-github-skills"><a href="https://learn.github.com/skills">GitHub Skills <span aria-hidden="true">↗</span></a><p>Hands-on exercises; Enterprise Managed Users may require the <a href="https://github.com/skills/skills-for-emu">EMU setup guide</a>.</p></li>
+          <li id="source-ms-learn"><a href="https://learn.microsoft.com/en-us/training/github/">Microsoft Learn: GitHub training <span aria-hidden="true">↗</span></a><p>Learning paths and optional certifications; the quest path is this guide's editorial selection.</p></li>
         </ol>
       </section>
       <footer><strong>Champions at Scale</strong><p>An independent enterprise field guide for 2026 and beyond.<br>No affiliation with or endorsement by GitHub. No analytics, accounts or tracking.</p><a href="#top">Back to top ↑</a></footer>
       </article>
-      <aside class="toc" aria-label="On this page"><div>ON THIS PAGE</div><a href="#why">The enterprise case</a><a href="#now">2026 &amp; beyond</a><a href="#model">Operating model</a><a href="#readiness">Readiness checklist</a><a href="#playbook">90-day pilot</a><a href="#measure">Measurement</a><a href="#sustain">Sustainability</a><a href="#sources">Sources</a></aside>
+      <aside class="toc" aria-label="On this page"><div>ON THIS PAGE</div><a href="#why">The enterprise case</a><a href="#now">2026 &amp; beyond</a><a href="#model">Operating model</a><a href="#readiness">Readiness checklist</a><a href="#playbook">90-day pilot</a><a href="#quest">Champion quest path</a><a href="#measure">Measurement</a><a href="#sustain">Sustainability</a><a href="#sources">Sources</a></aside>
       </div>
     </main>
   </div>

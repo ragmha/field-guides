@@ -33,6 +33,32 @@ try {
   for (const href of await page.locator('a[href^="#"]').evaluateAll(links => links.map(link => link.getAttribute('href')))) {
     assert.equal(await page.locator(href).count(), 1, `Broken anchor: ${href}`);
   }
+  const quests = page.locator('#quest-levels input');
+  assert.equal(await quests.count(), 12);
+  assert.equal(await page.evaluate(() => localStorage.getItem('champions-quest-progress')), null, 'Do not save before opting in');
+  const firstQuestLink = page.locator('#quest-levels a').first();
+  await firstQuestLink.evaluate(link => link.addEventListener('click', event => event.preventDefault(), { once: true }));
+  await firstQuestLink.click();
+  assert.equal(await quests.nth(0).isChecked(), false, 'Opening a resource must not complete a quest');
+  assert.equal(await page.evaluate(() => localStorage.getItem('champions-quest-progress')), null);
+  for (let index = 0; index < 3; index++) await quests.nth(index).check();
+  assert.equal(await page.locator('#quest-status').textContent(), '3 of 12 quests checked');
+  assert.equal(await page.locator('.quest-level').first().locator('legend small').isVisible(), true);
+  await quests.nth(1).uncheck();
+  assert.equal(await page.locator('.quest-level').first().locator('legend small').isVisible(), false);
+  await page.reload();
+  assert.equal(await quests.nth(0).isChecked(), true);
+  assert.equal(await quests.nth(1).isChecked(), false);
+  assert.equal(await quests.nth(2).isChecked(), true);
+  await page.emulateMedia({ media: 'print' });
+  assert.equal(await quests.nth(0).isVisible(), true);
+  assert.equal(await quests.nth(0).isChecked(), true);
+  assert.equal(await page.locator('#quest-reset').isVisible(), false);
+  await page.emulateMedia({ media: 'screen' });
+  await page.locator('#quest-reset').click();
+  assert.equal(await page.evaluate(() => localStorage.getItem('champions-quest-progress')), null);
+  await page.reload();
+  assert.equal(await quests.nth(0).isChecked(), false);
   const status = page.locator('#readiness-status');
   assert.equal(await status.textContent(), '0 of 6 foundations in place.');
   const checks = page.locator('#foundations input');
@@ -63,7 +89,9 @@ try {
   await page.locator('.chapter-nav summary').click();
   await page.locator('.chapter-nav a[href="#readiness"]').click();
   assert.equal(await page.locator('.chapter-nav').getAttribute('open'), null);
-  assert.equal(await page.locator('svg[role="img"]').count(), 2);
+  assert.equal(await page.locator('svg[role="img"]').count(), 4);
+  assert.equal(await page.locator('.evidence-connector').count(), 3);
+  assert.equal(await page.locator('.evidence-connector').evaluateAll(lines => lines.every(line => getComputedStyle(line).markerEnd.includes('evidence-arrow'))), true);
   assert.deepEqual(await page.locator('svg[role="img"]').evaluateAll(figures => figures.flatMap(svg => {
     const box = svg.viewBox.baseVal;
     return [...svg.querySelectorAll('text')].filter(text => {
@@ -80,12 +108,31 @@ try {
   for (const scroller of await page.locator('.diagram-scroll').all()) {
     assert.equal(await scroller.evaluate(node => node.scrollWidth > node.clientWidth && getComputedStyle(node).overflowX === 'auto'), true);
   }
+  await page.goto('http://127.0.0.1:4173/charter.html');
+  assert.equal(await page.locator('.brief-fields section').count(), 4);
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'Charter overflows on mobile');
   const noJS = await browser.newContext({ javaScriptEnabled: false });
   const plain = await noJS.newPage();
   await plain.goto(process.env.GUIDE_URL || 'http://127.0.0.1:4173/');
+  assert.equal(await plain.locator('#quest-levels input').count(), 12);
+  await plain.locator('#quest-levels input').first().check();
+  assert.equal(await plain.locator('#quest-levels input').first().isChecked(), true);
+  await plain.emulateMedia({ media: 'print' });
+  assert.equal(await plain.locator('#quest-levels input').first().isVisible(), true);
   await plain.locator('#days-90 summary').click();
   assert.notEqual(await plain.locator('#days-90').getAttribute('open'), null);
   await noJS.close();
+  const blocked = await browser.newContext();
+  await blocked.addInitScript(() => Object.defineProperty(window, 'localStorage', { get() { throw new DOMException('Denied', 'SecurityError'); } }));
+  const blockedPage = await blocked.newPage();
+  await blockedPage.goto('http://127.0.0.1:4173/');
+  assert.match(await blockedPage.locator('#quest-storage').textContent(), /unavailable/);
+  await blockedPage.locator('#quest-levels input').first().check();
+  assert.match(await blockedPage.locator('#quest-storage').textContent(), /Could not save/);
+  await blockedPage.locator('#quest-reset').click();
+  assert.match(await blockedPage.locator('#quest-storage').textContent(), /Could not clear/);
+  assert.equal(await blockedPage.locator('#quest-levels input').first().isChecked(), true);
+  await blocked.close();
 
   await symlink(resolve('.'), join(temp, 'champions-at-scale'), 'dir');
   server = spawn('python3', ['-u', '-m', 'http.server', '0', '--bind', '127.0.0.1', '--directory', temp], { stdio: ['ignore', 'pipe', 'pipe'] });
@@ -102,7 +149,7 @@ try {
   assert.equal(await page.locator('h1').evaluate(node => getComputedStyle(node).color), 'rgb(31, 35, 40)');
   assert.equal(await status.textContent(), '0 of 6 foundations in place.');
   assert.deepEqual(errors, []);
-  console.log('Guide checks passed: themes, diagrams, navigation, checklist, print, keyboard, mobile, no-JS and subpath.');
+  console.log('Guide checks passed: themes, diagrams, navigation, checklist, quest storage, print, keyboard, mobile, no-JS and subpath.');
 } finally {
   await browser.close();
   if (server) {
