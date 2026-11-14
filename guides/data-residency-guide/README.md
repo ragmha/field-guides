@@ -27,7 +27,7 @@ bun install --frozen-lockfile
 bun run dev
 ```
 
-Open <http://127.0.0.1:4321/data-residency-guide/>. The base path matches
+Open <http://127.0.0.1:4321/field-guides/data-residency-guide/>. The base path matches
 GitHub Pages.
 
 ```sh

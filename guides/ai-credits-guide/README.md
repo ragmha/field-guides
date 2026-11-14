@@ -35,7 +35,7 @@ bun install --frozen-lockfile
 bun run dev
 ```
 
-Open <http://localhost:4321/ai-credits-guide/>. The `/ai-credits-guide/` base is
+Open <http://localhost:4321/field-guides/ai-credits-guide/>. The `/field-guides/ai-credits-guide/` base is
 intentional: local previews exercise the same paths as GitHub Pages.
 
 ```sh
@@ -60,8 +60,8 @@ existing lesson and cookie-jar screenshots.
 Part 4 additionally captures its overview figure, GitHub-insights chapter with
 an expanded answer, and summary at both widths in both themes.
 
-The index is `/ai-credits-guide/`; chapter URLs follow
-`/ai-credits-guide/part-1/2-understand/`. All former chapter URLs, including
+The index is `/field-guides/ai-credits-guide/`; chapter URLs follow
+`/field-guides/ai-credits-guide/part-1/2-understand/`. All former chapter URLs, including
 `/identify-needs/`, have native static redirects directly to
 their canonical course pages. Internal links retain their anchors.
 
@@ -80,17 +80,16 @@ choose an artifact directory. Generated screenshots are not committed.
 
 ## Publish to GitHub Pages
 
-The configured project is `ragmha/ai-credits-guide`, served at
-<https://ragmha.github.io/ai-credits-guide/>. `astro.config.mjs` sets both the
+The configured project is `ragmha/field-guides`, served at
+<https://ragmha.github.io/field-guides/ai-credits-guide/>. `astro.config.mjs` sets both the
 site origin and project base; the Markdown link transform, layout navigation,
 and diagram embeds use that base. Update these together if the repository
 name or hosting path changes.
 
-In repository **Settings → Pages**, choose **GitHub Actions** as the source.
-The `Build and deploy guide` workflow checks and builds pull requests. Pushes
-to `main` build and deploy `dist/` using GitHub's Pages artifact/deploy actions.
-No inference token is needed for deployment. Implementation PRs must be
-reviewed before merge; this workflow does not merge them.
+Deployment is managed by the [root monorepo workflow](../../.github/workflows/pages.yml).
+It checks all guides and deploys one combined artifact on `master` once Pages
+is configured. See the [root README](../../README.md) for commands and setup.
+The original guide repository is unchanged.
 
 ## Keep the guide current
 
@@ -103,28 +102,10 @@ raise unresolved blockers as `[freshness]` issues. Dates advance only after
 successful checks and human review. No completed review is implied by this
 assignment.
 
-The editable workflow is
-`.github/workflows/ai-credits-freshness.md`; its compiled
-`.lock.yml` is checked in as a **future automation option**, not an automatic
-freshness service. No successful hosted review run has been recorded. It can
-run weekly or manually, but is deliberately
-inactive until its licensed Copilot credential is configured and
-`FRESHNESS_ENABLED=true` is set.
-
-Before relying on automation, follow [the one-time freshness setup](docs/freshness-setup.md#future-automation-one-time-credential-setup), including
-`COPILOT_GITHUB_TOKEN`, the activation order, permissions, and the first
-manual run. It proposes draft PRs or blocker issues; it never auto-merges.
-Do not treat skipped runs as successful source verification.
-
-To recompile after editing the agentic workflow:
-
-```sh
-gh aw compile
-```
-
-Compilation was performed with gh-aw v0.72.1. Compilation does not prove that
-hosted authentication or source access works; activation requires the
-documented manual hosted check.
+The original repository's disabled freshness workflow was not migrated.
+No automatic freshness service runs in this monorepo. The imported
+[freshness setup document](docs/freshness-setup.md) preserves the original
+repository's background; its credential and activation steps do not apply here.
 
 ## Editorial conventions
 

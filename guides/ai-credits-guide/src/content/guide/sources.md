@@ -150,7 +150,7 @@ The reviewer reads complete sources and checks material claims, release labels, 
 
 Dates advance only after relevant claims and release labels have actually been rechecked, not just because a URL returns successfully. A failed check is not a clean bill of health. After 30 days, the next site build displays an overdue review notice; a static deployed site needs a rebuild for that build-time notice to change.
 
-**Automation is a future option, not current freshness coverage.** No successful hosted freshness review has been recorded. The checked-in GitHub Agentic Workflow stays disabled until a maintainer configures its credential and explicitly activates it. A successful hosted review must then be demonstrated before claiming automatic freshness coverage. When enabled, it proposes changes for human review or raises an issue when sources conflict; it never auto-merges. Static-site deployment is separate and needs no model credential. See the [repository setup instructions](https://github.com/ragmha/ai-credits-guide#readme) and [GitHub Agentic Workflows documentation](https://github.github.com/gh-aw/).
+**Freshness review is manual in this monorepo.** The original repository's disabled GitHub Agentic Workflow was not migrated. No automatic source-review service is enabled here. Static-site deployment is separate and needs no model credential. See the [monorepo setup instructions](https://github.com/ragmha/field-guides#readme).
 
 ## A few useful definitions
 

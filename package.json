@@ -1,0 +1,18 @@
+{
+  "name": "field-guides",
+  "private": true,
+  "type": "module",
+  "workspaces": ["hub", "guides/*"],
+  "scripts": {
+    "build": "bun scripts/build.mjs",
+    "test": "bun --cwd guides/ai-credits-guide run test && bun --cwd guides/data-residency-guide run test && bun --cwd guides/copilot-governance-guide run test",
+    "check": "bun --cwd hub run check && bun --cwd guides/ai-credits-guide run check && bun --cwd guides/data-residency-guide run check && bun --cwd guides/copilot-governance-guide run check",
+    "preview": "bun scripts/preview.mjs",
+    "test:site": "bun scripts/check-site.mjs",
+    "test:browser": "bun --cwd guides/ai-credits-guide run test:browser && bun --cwd guides/copilot-governance-guide run test:browser && bun run test:site",
+    "test:diagrams": "bun --cwd guides/ai-credits-guide run test:diagrams"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}

@@ -10,14 +10,14 @@ if (!process.env.PLAYWRIGHT_MODULE) {
   throw new Error('Set PLAYWRIGHT_MODULE to the installed playwright-core/index.mjs path (see README).');
 }
 const { chromium } = await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE));
-const browser = await chromium.launch({ channel: 'chrome' });
+const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'chrome' });
 const errors = [];
 const temp = await mkdtemp(join(tmpdir(), 'champions-check-'));
 let server;
 try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto('http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
+  await page.goto(process.env.GUIDE_URL || 'http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
   assert.equal(await page.title(), 'Champions at Scale — An enterprise field guide');
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
@@ -82,7 +82,7 @@ try {
   }
   const noJS = await browser.newContext({ javaScriptEnabled: false });
   const plain = await noJS.newPage();
-  await plain.goto('http://127.0.0.1:4173/');
+  await plain.goto(process.env.GUIDE_URL || 'http://127.0.0.1:4173/');
   await plain.locator('#days-90 summary').click();
   assert.notEqual(await plain.locator('#days-90').getAttribute('open'), null);
   await noJS.close();

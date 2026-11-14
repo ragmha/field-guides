@@ -41,12 +41,17 @@ window.addEventListener('afterprint', () => {
 const theme = document.querySelector('#theme');
 theme.closest('label').hidden = false;
 const systemTheme = matchMedia('(prefers-color-scheme: dark)');
+theme.value = document.documentElement.dataset.preference || 'system';
 function applyTheme() {
   document.documentElement.dataset.theme = theme.value === 'system'
     ? (systemTheme.matches ? 'dark' : 'light')
     : theme.value;
+  document.documentElement.dataset.preference = theme.value;
 }
-theme.addEventListener('change', applyTheme);
+theme.addEventListener('change', () => {
+  try { localStorage.setItem('theme', theme.value); } catch {}
+  applyTheme();
+});
 systemTheme.addEventListener('change', applyTheme);
 applyTheme();
 

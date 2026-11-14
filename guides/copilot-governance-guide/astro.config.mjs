@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-const base = '/copilot-governance-guide';
+const base = '/field-guides/copilot-governance-guide';
 
 function projectLinks() {
   return (tree) => {

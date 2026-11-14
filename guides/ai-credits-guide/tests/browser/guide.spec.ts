@@ -61,7 +61,7 @@ test('visual-first lessons, editable downloads, base paths and themed rendering'
 
       const links = await page.locator('article a[href^="/"]').evaluateAll((anchors) => anchors.map((a) => a.getAttribute('href')!));
       for (const link of links) {
-        expect(link).toMatch(/^\/ai-credits-guide\//);
+        expect(link).toMatch(/^\/field-guides\/ai-credits-guide\//);
         const response = await page.request.get(link.split('#')[0]);
         expect(response.status(), link).toBe(200);
         if (link.endsWith('.excalidraw')) {
@@ -86,10 +86,10 @@ test('course index links to the neutral needs assessment and preserves legacy UR
       await page.getByLabel('Color theme').selectOption(theme);
       await expect(page.getByRole('navigation', { name: 'Guide chapters', includeHidden: true })).not.toContainText('For teams');
       const path = page.locator('.course-outline a').filter({ hasText: 'Identify what you need' });
-      await expect(path).toHaveAttribute('href', `/ai-credits-guide/${coursePath('identify-needs')}/`);
+      await expect(path).toHaveAttribute('href', `/field-guides/ai-credits-guide/${coursePath('identify-needs')}/`);
       await page.screenshot({ path: `${shots}/start-${width}-${theme}.png`, fullPage: true });
       await path.click();
-      await expect(page).toHaveURL(new RegExp(`/ai-credits-guide/${coursePath('identify-needs')}/?$`));
+      await expect(page).toHaveURL(new RegExp(`/field-guides/ai-credits-guide/${coursePath('identify-needs')}/?$`));
       await expect(page.locator('h1')).toHaveText('2.2 Identify what you need');
       await expect(page.locator('article')).toContainText('whether you administer an enterprise or help one plan');
       await expect(page.getByRole('columnheader', { name: 'Question to resolve' })).toBeVisible();
@@ -100,7 +100,7 @@ test('course index links to the neutral needs assessment and preserves legacy UR
   }
   for (const [from, to] of Object.entries(legacyRoutes)) {
     await page.goto(`${from.slice(1)}/`);
-    await expect(page).toHaveURL(new RegExp(`/ai-credits-guide${to}$`));
+    await expect(page).toHaveURL(new RegExp(`/field-guides/ai-credits-guide${to}$`));
   }
 });
 
@@ -111,16 +111,16 @@ test('full course outline and previous/next chain span all parts without the app
   await expect(outline.locator('.chapter-pages a')).toHaveCount(chapters.length);
   await expect(page.locator('.reader-path')).toHaveCount(0);
   await expect(page.locator('.course-outline a')).toHaveCount(chapters.length);
-  let previousPath = '/ai-credits-guide/';
+  let previousPath = '/field-guides/ai-credits-guide/';
   for (const chapter of chapters) {
     const next = page.locator('.pagination a[rel="next"]');
-    await expect(next).toHaveAttribute('href', `/ai-credits-guide/${chapter.path}/`);
+    await expect(next).toHaveAttribute('href', `/field-guides/ai-credits-guide/${chapter.path}/`);
     await next.click();
-    await expect(page).toHaveURL(new RegExp(`/ai-credits-guide/${chapter.path}/$`));
+    await expect(page).toHaveURL(new RegExp(`/field-guides/ai-credits-guide/${chapter.path}/$`));
     await expect(page.locator('h1')).toContainText(`${chapter.number} `);
     await expect(page.locator('.pagination a[rel="prev"]')).toHaveAttribute('href', previousPath);
     await expect(outline.locator('[aria-current="page"]')).toHaveCount(1);
-    await expect(outline.locator('[aria-current="page"]')).toHaveAttribute('href', `/ai-credits-guide/${chapter.path}/`);
+    await expect(outline.locator('[aria-current="page"]')).toHaveAttribute('href', `/field-guides/ai-credits-guide/${chapter.path}/`);
     await expect(outline.locator('.chapter-pages a')).toHaveCount(chapters.length);
     if (chapter.kind === 'lesson') {
       const checks = page.locator('.self-check details');
@@ -136,13 +136,13 @@ test('full course outline and previous/next chain span all parts without the app
     } else {
       await expect(page.getByRole('heading', { name: 'Key Takeaways' })).toBeVisible();
     }
-    previousPath = `/ai-credits-guide/${chapter.path}/`;
+    previousPath = `/field-guides/ai-credits-guide/${chapter.path}/`;
   }
   await expect(page.locator('.pagination a[rel="next"]')).toHaveCount(0);
-  await expect(page.locator('.pagination .next')).toHaveAttribute('href', '/ai-credits-guide/');
+  await expect(page.locator('.pagination .next')).toHaveAttribute('href', '/field-guides/ai-credits-guide/');
   await page.goto('sources/');
   await expect(page.locator('.pagination a[rel]')).toHaveCount(0);
-  await expect(page.locator('.pagination .next')).toHaveAttribute('href', '/ai-credits-guide/');
+  await expect(page.locator('.pagination .next')).toHaveAttribute('href', '/field-guides/ai-credits-guide/');
   await page.setViewportSize({ width: 390, height: 900 });
   await page.locator('.chapter-nav > summary').click();
   await expect(outline.locator('.chapter-pages a')).toHaveCount(chapters.length);
@@ -291,7 +291,7 @@ test('credit-jar connects shared cookies, personal limits and buying extras', as
 test('credit-jar keeps its explanation without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4321/ai-credits-guide/controls/');
+  await page.goto('http://127.0.0.1:4321/field-guides/ai-credits-guide/controls/');
   const jar = page.locator('.credit-jar');
   await expect(jar.getByRole('group', { name: 'Try a situation' })).toBeHidden();
   await expect(jar.getByRole('img', { name: /One cookie jar/ })).toBeVisible();

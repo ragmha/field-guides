@@ -51,4 +51,4 @@ The platform team owns seats; finance approves metered spending and assigns an a
 
 </details>
 
-For detailed credit calculations and budgeting, see the [AI Credits Learning Guide](https://ragmha.github.io/ai-credits-guide/).
+For detailed credit calculations and budgeting, see the [AI Credits Learning Guide](https://ragmha.github.io/field-guides/ai-credits-guide/).

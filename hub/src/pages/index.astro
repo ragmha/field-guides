@@ -1,0 +1,101 @@
+---
+import { guides } from '../../../guides.mjs';
+import '../../../guides/ai-credits-guide/src/styles/global.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Independent field guides for adopting, governing and operating GitHub at enterprise scale." />
+    <meta name="color-scheme" content="light dark" />
+    <title>Field Guides · Enterprise enablement</title>
+    <script is:inline>
+      (() => {
+        let preference = 'system';
+        try { preference = localStorage.getItem('theme') || 'system'; } catch {}
+        const dark = preference === 'dark' || (preference === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.documentElement.dataset.preference = preference;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href={`${base}/`} aria-label="Field Guides home">
+        <svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="30" height="30"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>
+        Field Guides
+      </a>
+      <nav class="breadcrumbs" aria-label="Navigation"><a href="#guides">Explore the collection</a></nav>
+      <a class="github-link" href="https://github.com/ragmha/field-guides">GitHub <span aria-hidden="true">↗</span></a>
+      <label class="theme-label"><span aria-hidden="true">◐</span><span class="sr-only">Color theme</span><select id="theme" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+    </header>
+    <main id="content">
+      <div class="hub">
+        <section class="hero" aria-labelledby="headline">
+          <div class="eyebrow">Enterprise enablement<span class="eyebrow-line"></span></div>
+          <h1 id="headline">Learn the model.<span class="title-emphasis">Put it into practice.</span></h1>
+          <p class="lede">Independent field guides for adopting, governing and operating GitHub at enterprise scale. Start with the challenge in front of you.</p>
+          <a class="browse" href="#guides">Browse guides <span aria-hidden="true">↓</span></a>
+        </section>
+        <section id="guides" aria-labelledby="guides-heading">
+          <div class="collection-heading">
+            <h2 id="guides-heading">The field guides</h2>
+            <p>Choose a guide. Read at your own pace.</p>
+          </div>
+          <div class="guide-grid">
+            {guides.map(guide => (
+              <article class="guide-card">
+                <div class="card-meta">FIELD GUIDE / EN</div>
+                <h3>{guide.title}</h3>
+                <p>{guide.description}</p>
+                <a class="get-started" href={`${base}/${guide.name}/`} aria-label={`Get started with ${guide.title}`}>Get started <span aria-hidden="true">→</span></a>
+              </article>
+            ))}
+          </div>
+        </section>
+        <footer class="article-footer">Field Guides <span>Independent guidance. Official sources, clearly linked.</span></footer>
+      </div>
+    </main>
+    <script>
+      const select = document.querySelector<HTMLSelectElement>('#theme')!;
+      const media = matchMedia('(prefers-color-scheme: dark)');
+      select.value = document.documentElement.dataset.preference || 'system';
+      function applyTheme() {
+        const preference = select.value;
+        document.documentElement.dataset.theme = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.preference = preference;
+      }
+      select.addEventListener('change', () => {
+        try { localStorage.setItem('theme', select.value); } catch {}
+        applyTheme();
+      });
+      media.addEventListener('change', applyTheme);
+    </script>
+  </body>
+</html>
+<style>
+  .hub{max-width:1120px;margin:0 auto}
+  main{padding:0 44px 20px}
+  .github-link{margin-left:auto;color:var(--muted);font-size:13px;text-decoration:none;white-space:nowrap}
+  .theme-label{margin-left:0}
+  .hero{padding:100px 0 88px;border-bottom:1px solid var(--rule)}
+  h1{font-size:clamp(42px,5.5vw,76px);max-width:950px}
+  .lede{max-width:62ch}
+  .browse{display:inline-flex;align-items:center;gap:28px;padding:12px 22px;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:var(--surface);font-weight:650;text-decoration:none}
+  :global([data-theme=dark]) .browse{color:var(--bg)}
+  .collection-heading{padding:48px 0 26px}
+  .collection-heading h2{font-size:30px;letter-spacing:-.7px;color:var(--ink);margin:0 0 6px}
+  .collection-heading p{margin:0;color:var(--muted)}
+  .guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:64px}
+  .guide-card{display:flex;flex-direction:column;padding:28px;border:1px solid var(--rule);border-radius:4px;background:var(--surface)}
+  .card-meta{font:600 11px/1.6 var(--font-mono);letter-spacing:1px;color:var(--muted)}
+  .guide-card h3{font-size:24px;letter-spacing:-.5px;line-height:1.3;color:var(--ink);margin:20px 0 14px}
+  .guide-card p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 28px}
+  .get-started{display:flex;justify-content:space-between;margin-top:auto;padding-top:18px;border-top:1px solid var(--rule);font-size:14px;font-weight:650;text-decoration:none}
+  @media(max-width:1000px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:760px){main{padding:0 22px 12px}.hero{padding:56px 0}.guide-grid{grid-template-columns:1fr;gap:18px}.guide-card{padding:24px}.topbar{gap:12px}.github-link{font-size:12px}.collection-heading{padding-top:36px}}
+  @media(max-width:400px){.topbar{padding:0 12px;gap:8px}.brand{gap:6px;font-size:13px}.brand-mark{width:22px;height:22px}.theme-label>span[aria-hidden]{display:none}}
+</style>

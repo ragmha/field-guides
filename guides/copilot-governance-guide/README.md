@@ -20,7 +20,7 @@ bun install --frozen-lockfile
 bun run dev
 ```
 
-Open <http://127.0.0.1:4321/copilot-governance-guide/>. The project base is
+Open <http://127.0.0.1:4321/field-guides/copilot-governance-guide/>. The project base is
 intentional and matches the configured GitHub Pages path.
 
 ```sh
@@ -86,9 +86,10 @@ are not used as essential boundaries. No diagram-only colors were needed.
 
 ## Deployment
 
-The static output is `dist/`. The Pages workflow builds pull requests and
-deploys pushes to `master`; configure GitHub Pages to use GitHub Actions only
-after reviewing the course for publication.
+The guide's static output is `dist/`. The root monorepo build copies it into
+`../../dist/copilot-governance-guide/`. Deployment is managed by the
+[root Pages workflow](../../.github/workflows/pages.yml); see the
+[root README](../../README.md) before publication.
 
 The [Octodemo MIT notice](public/licenses/octodemo-MIT.txt) and
 [Octicons MIT notice](public/licenses/octicons-MIT.txt) are retained.

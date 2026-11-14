@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-const base = '/data-residency-guide';
+const base = '/field-guides/data-residency-guide';
 
 function projectLinks() {
   return (tree) => {

@@ -1,4 +1,4 @@
-name: Build and deploy guide
+name: Build and deploy field guides
 on:
   push:
     branches: [master]
@@ -21,6 +21,13 @@ jobs:
       - run: bun run check
       - run: bun run test
       - run: bun run build
+      - run: bunx playwright install --with-deps chromium
+      - run: bun run test:browser
+        env:
+          BROWSER_CHANNEL: chromium
+      - run: bun run test:diagrams
+        env:
+          BROWSER_CHANNEL: chromium
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

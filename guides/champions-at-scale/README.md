@@ -4,7 +4,7 @@ An independent interactive field guide for enterprise champion programs in 2026
 and beyond. Original synthesis with links to GitHub's recommendation, charter,
 handbook and 2025 DORA research. Not affiliated with or endorsed by GitHub.
 
-Read the guide at https://ragmha.github.io/champions-at-scale/.
+Read the guide at https://ragmha.github.io/field-guides/champions-at-scale/.
 
 ## Local preview
 

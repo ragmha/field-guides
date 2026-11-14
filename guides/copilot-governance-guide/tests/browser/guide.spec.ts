@@ -17,7 +17,7 @@ async function passQuiz(page: Page, part: number) {
 test('reading sequence, self-checks, themes and lesson diagrams', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  const base = '/copilot-governance-guide/';
+  const base = '/field-guides/copilot-governance-guide/';
   await page.goto('./');
   await expect(page.getByRole('navigation', { name: 'Guide chapters' }).locator('.course-part')).toHaveCount(parts.length);
   let previousPath = base;

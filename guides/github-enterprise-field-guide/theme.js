@@ -1,12 +1,18 @@
-const themeKey='ghe-theme',root=document.documentElement;
-const savedTheme=localStorage.getItem(themeKey);
-if(savedTheme==='light'||savedTheme==='dark')root.dataset.theme=savedTheme;
+const themeKey='theme',root=document.documentElement;
+let preference='system';
+try{preference=localStorage.getItem(themeKey)||'system'}catch{}
+const media=matchMedia('(prefers-color-scheme: dark)');
+const apply=()=>{
+  root.dataset.theme=preference==='system'?(media.matches?'dark':'light'):preference;
+  root.dataset.preference=preference;
+};
+apply();
 document.addEventListener('DOMContentLoaded',()=>{
   const toggle=document.querySelector('[data-theme-toggle]');
   if(!toggle)return;
   const dark=()=>root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
   const sync=()=>{toggle.setAttribute('aria-pressed',String(dark()));toggle.textContent='Dark mode'};
-  toggle.addEventListener('click',()=>{root.dataset.theme=dark()?'light':'dark';localStorage.setItem(themeKey,root.dataset.theme);sync()});
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(!root.dataset.theme)sync()});
+  toggle.addEventListener('click',()=>{preference=dark()?'light':'dark';try{localStorage.setItem(themeKey,preference)}catch{}apply();sync()});
+  media.addEventListener('change',()=>{apply();sync()});
   sync();
 });

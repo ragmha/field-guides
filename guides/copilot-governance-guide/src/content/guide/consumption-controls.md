@@ -47,6 +47,6 @@ The individual ULB is the most specific, so $15 applies even though the cost-cen
 <details>
 <summary>Model answer</summary>
 
-The individual ULB overrides the $10 cost-center and $20 universal defaults. At $15 consumed it is exhausted; the request is blocked. The separate included-usage and metered-spending controls still matter when the ULB permits a request. For detailed budgeting, see the [AI Credits Learning Guide](https://ragmha.github.io/ai-credits-guide/).
+The individual ULB overrides the $10 cost-center and $20 universal defaults. At $15 consumed it is exhausted; the request is blocked. The separate included-usage and metered-spending controls still matter when the ULB permits a request. For detailed budgeting, see the [AI Credits Learning Guide](https://ragmha.github.io/field-guides/ai-credits-guide/).
 
 </details>
