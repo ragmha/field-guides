@@ -6,6 +6,10 @@ import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import { guides } from '../guides.mjs';
 
+for (const guide of guides) {
+  assert.doesNotMatch(guide.description, /\bguides?\b/i, `${guide.name} description must describe the topic without "guide"`);
+}
+
 const base = 'http://127.0.0.1:4173/field-guides/';
 const server = spawn('bun', ['run', 'preview'], { stdio: 'inherit' });
 let browser;
@@ -63,7 +67,9 @@ try {
   const checkedLinks = new Set();
   const expectLanding = async (guide, width) => {
     const landing = page.locator('.landing');
+    assert.equal(await page.locator('h1').count(), 1, `${guide.name} needs exactly one page title`);
     assert.equal(await landing.locator('h1').isVisible(), true, `${guide.name} landing needs a title`);
+    assert.equal(await landing.locator('.landing-intro').textContent(), guide.description, `${guide.name} hero description must match the collection`);
     assert.equal(await page.locator('.topbar svg').isVisible(), true, `${guide.name} header needs the GitHub mark`);
     assert.equal(await page.getByRole('link', { name: 'Enterprise enablement', exact: true }).isVisible(), true, `${guide.name} needs a visible return to the collection at ${width}px`);
     if (guide.type === 'astro') {
@@ -72,6 +78,20 @@ try {
       assert.equal(await page.locator('#page-sources').isVisible(), true, `${guide.name} must retain source notes`);
       for (let part = 1; part <= guide.parts; part++) {
         assert.equal(await page.locator(`#part-${part}`).count(), 1, `${guide.name} must preserve Part ${part}'s fragment target`);
+      }
+    } else {
+      assert.equal(await page.locator('main .hero, main .intro, main .hero-bottom, #hero-title, .hero-footnote, main .page-meta').count(), 0, `${guide.name} must not repeat the old hero below the landing`);
+      assert.equal(await page.getByRole('heading', { name: /^(GitHub Enterprise\s+platform governance|A rollout reaches people\.)/ }).count(), 0, `${guide.name} must not repeat the old title`);
+      assert.equal(await page.getByRole('link', { name: 'Make the case' }).count(), 0, `${guide.name} must not repeat the old hero action`);
+      if (guide.name === 'github-enterprise-field-guide') {
+        assert.match(await page.locator('.scope-note').textContent(), /Where this fits:/);
+        assert.equal(await page.locator('nav[aria-label="Assessment sections"] a').count(), guide.parts);
+        assert.equal(await page.locator('.prog #reset').isVisible(), true);
+      } else {
+        assert.equal(await page.locator('.chapter-nav').count(), 1, 'Champions contents must remain');
+        assert.equal(await page.getByRole('complementary', { name: 'On this page', includeHidden: true }).count(), 1);
+        assert.equal(await page.locator('svg[data-diagram="architecture-delta"]').count(), 1);
+        assert.match(await page.locator('.diagram-embed').first().locator('figcaption').textContent(), /Central policy and specialist support remain in place/);
       }
     }
     assert.equal(await landing.locator('.landing-button').count(), 2, `${guide.name} landing needs two buttons`);
@@ -102,6 +122,7 @@ try {
       assert.ok((await page.locator('.article-footer').textContent()).startsWith('Enterprise enablement '));
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
       assert.equal(await page.locator('.guide-card').count(), guides.length);
+      assert.deepEqual(await page.locator('.guide-card > p').allTextContents(), guides.map(guide => guide.description));
       assert.equal(await page.locator('.hero-art').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero illustration must load');
       const art = await page.locator('.hero-art').boundingBox();
       const copy = await page.locator('.hero-copy').boundingBox();
@@ -118,12 +139,27 @@ try {
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
         await expectLanding(guide, width);
         if (process.env.SCREENSHOT_DIR && [1440, 390].includes(width)) {
-          const landing = await page.locator('.landing').boundingBox();
           await page.screenshot({
             path: join(process.env.SCREENSHOT_DIR, `landing-${guide.name}-${theme}-${width}.png`),
             fullPage: true,
-            ...(guide.type === 'astro' ? {} : { clip: { x: 0, y: 0, width, height: landing.y + landing.height } }),
           });
+        }
+        if (guide.name === 'github-enterprise-field-guide' && width === 390 && theme === 'light') {
+          const card = page.locator('.part-card a[href="#identity"]');
+          await card.click();
+          assert.equal(await page.locator('#identity').evaluate(section => section.open), true, 'Mobile part card must open its section');
+          await page.locator('#identity > summary').click();
+          await card.click();
+          assert.equal(await page.locator('#identity').evaluate(section => section.open), true, 'Same-fragment card navigation must reopen its section');
+          await page.locator('input[name="i1"][value="y"]').check();
+          assert.equal(await page.locator('#count').textContent(), '1');
+          await page.reload();
+          assert.equal(await page.locator('input[name="i1"][value="y"]').isChecked(), true, 'Assessment answers must survive reload');
+          assert.equal(await page.locator('#count').textContent(), '1');
+          await page.locator('#reset').click();
+          assert.equal(await page.locator('#count').textContent(), '0');
+          await page.reload();
+          assert.equal(await page.locator('input:checked').count(), 0, 'Reset must clear saved assessment answers');
         }
         if (width <= 760) {
           await page.getByRole('link', { name: 'Enterprise enablement', exact: true }).focus();
