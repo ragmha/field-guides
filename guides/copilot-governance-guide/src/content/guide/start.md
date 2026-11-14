@@ -1,5 +1,5 @@
 ---
-title: Copilot Governance Learning Guide
+title: Govern GitHub Copilot at enterprise scale
 section: Course index
 order: 0
 description: Make practical, accountable decisions about access, capabilities, cost, agents, context and evidence.

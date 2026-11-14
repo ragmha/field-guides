@@ -60,6 +60,25 @@ try {
   page.on('response', response => {
     if (response.status() >= 400 && response.url().startsWith(base)) errors.push(`${response.status()} ${response.url()}`);
   });
+  const checkedLinks = new Set();
+  const expectLanding = async (guide, width) => {
+    const landing = page.locator('.landing');
+    assert.equal(await landing.locator('h1').isVisible(), true, `${guide.name} landing needs a title`);
+    assert.equal(await landing.locator('.landing-button').count(), 2, `${guide.name} landing needs two buttons`);
+    assert.equal(await landing.locator('.landing-art').evaluate(image => image.complete && image.naturalWidth > 0), true, `${guide.name} illustration must load`);
+    const art = await landing.locator('.landing-art').boundingBox();
+    const copy = await landing.locator('.landing-copy').boundingBox();
+    assert.ok(width > 760 ? art.x >= copy.x + copy.width : art.y >= copy.y + copy.height, `${guide.name} illustration must sit right of the copy on desktop and below it on mobile`);
+    const links = await landing.locator('.part-card a').evaluateAll(anchors => anchors.map(anchor => anchor.href));
+    assert.equal(links.length, guide.parts, `${guide.name} needs ${guide.parts} part cards`);
+    for (const href of [...links, ...await landing.locator('.landing-button').evaluateAll(anchors => anchors.map(anchor => anchor.href))]) {
+      if (checkedLinks.has(href)) continue;
+      const url = new URL(href);
+      assert.equal((await fetch(url)).status, 200, `${guide.name} link ${href} must resolve`);
+      if (url.hash) assert.equal(await page.locator(url.hash).count(), 1, `${guide.name} anchor ${url.hash} must exist`);
+      checkedLinks.add(href);
+    }
+  };
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
     for (const theme of ['light', 'dark']) {
@@ -80,8 +99,13 @@ try {
       for (const guide of guides) {
         await page.goto(`${base}${guide.name}/`);
         assert.equal(await page.locator('html').getAttribute('data-theme'), theme, `${guide.name} must inherit ${theme}`);
-        assert.equal(await page.locator('header a', { hasText: 'Field Guides' }).evaluate(link => link.href), base, `${guide.name} breadcrumb must link to the hub`);
+        assert.equal(await page.locator('header a', { hasText: 'OpenField' }).evaluate(link => link.href), base, `${guide.name} breadcrumb must link to the hub`);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
+        await expectLanding(guide, width);
+        if (process.env.SCREENSHOT_DIR && width !== 320) {
+          const landing = await page.locator('.landing').boundingBox();
+          await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `landing-${guide.name}-${theme}-${width}.png`), fullPage: true, clip: { x: 0, y: 0, width, height: landing.y + landing.height } });
+        }
       }
     }
   }

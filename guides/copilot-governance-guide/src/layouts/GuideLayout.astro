@@ -3,6 +3,8 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import Diagram from '../components/Diagram.astro';
 import PartQuiz from '../components/PartQuiz.astro';
 import { chapters, coursePath, parts } from '../course';
+import Landing from '../../../../shared/Landing.astro';
+import landingArt from '../assets/landing.jpg';
 import '../styles/global.css';
 
 interface Props {
@@ -31,6 +33,12 @@ const href = (id: string) => `${base}/${coursePath(id)}${id === 'start' ? '' : '
 const stale = Date.now() - new Date(`${page.data.verified}T00:00:00Z`).getTime() > 30 * 86400000;
 const titleWords = page.data.title.split(' ');
 const titleEmphasis = page.id === 'start' ? titleWords.splice(-3).join(' ') : '';
+const TitleTag = page.id === 'start' ? 'h2' : 'h1';
+const landingParts = parts.map(part => ({
+  title: part.title,
+  href: href(part.pages[0]),
+  description: part.pages[0].endsWith('-overview') ? entryFor(part.pages[0]).data.description : part.pages.map(id => entryFor(id).data.title).join(' · '),
+}));
 ---
 <!doctype html>
 <html lang="en">
@@ -39,7 +47,7 @@ const titleEmphasis = page.id === 'start' ? titleWords.splice(-3).join(' ') : ''
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={page.data.description} />
     <meta name="color-scheme" content="light dark" />
-    <title>{titleFor(page)}{chapter ? ` · ${chapter.partTitle}` : ''} · Copilot Governance Guide</title>
+    <title>{titleFor(page)}{chapter ? ` · ${chapter.partTitle}` : ''} · Copilot Governance</title>
     <script is:inline>
       (() => {
         let preference = 'system';
@@ -51,16 +59,17 @@ const titleEmphasis = page.id === 'start' ? titleWords.splice(-3).join(' ') : ''
     </script>
   </head>
   <body data-current-part={chapter?.part || 0}>
-    <a class="skip" href="#content">Skip to content</a>
+    <a class="skip" href={page.id === 'start' ? '#landing-title' : '#content'}>Skip to content</a>
     <noscript><div class="progress-notice">JavaScript is required to score quizzes and enforce course progression. Navigation is not locked without it.</div></noscript>
     <header class="topbar">
-      <a class="brand" href={`${base}/`} aria-label="Copilot Governance Guide home">
+      <a class="brand" href={`${base}/`} aria-label="Copilot Governance home">
         <svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="30" height="30"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>
-        Learning Guide
+        Copilot Governance
       </a>
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={base.replace(/[^/]+$/, '')}>Field Guides</a><span aria-hidden="true">/</span><span>{chapter ? `Part ${chapter.part}: ${chapter.partTitle}` : page.data.section}</span></nav>
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={base.replace(/[^/]+$/, '')}>OpenField</a><span aria-hidden="true">/</span><span>{chapter ? `Part ${chapter.part}: ${chapter.partTitle}` : page.data.section}</span></nav>
       <label class="theme-label"><span aria-hidden="true">◐</span><span class="sr-only">Color theme</span><select id="theme" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
     </header>
+    {page.id === 'start' && <Landing name="copilot-governance-guide" art={landingArt} alt="Pen-and-ink illustration of an aircraft cockpit with two pilot seats facing an instrument panel above the clouds." reviewed={page.data.verified} stale={stale} start={href(chapters[0].id)} secondary={{ href: href('sources'), label: 'Sources & release status' }} parts={landingParts} />}
     <div class="shell">
       <aside class="sidebar">
         <div class="edition">COURSE CONTENTS<span>Copilot governance</span></div>
@@ -90,9 +99,9 @@ const titleEmphasis = page.id === 'start' ? titleWords.splice(-3).join(' ') : ''
         <div class="article-grid">
           <article>
             <div class="eyebrow">{chapter ? `Part ${chapter.part}: ${chapter.partTitle}` : page.data.section}<span class="eyebrow-line"></span></div>
-            <h1>{chapter && <span class="lesson-number">{chapter.number} </span>}{titleWords.join(' ')}{titleEmphasis && <> <span class="title-emphasis">{titleEmphasis}</span></>}</h1>
+            <TitleTag class="page-title">{chapter && <span class="lesson-number">{chapter.number} </span>}{titleWords.join(' ')}{titleEmphasis && <> <span class="title-emphasis">{titleEmphasis}</span></>}</TitleTag>
             <p class="lede">{page.data.description}</p>
-            <div class="page-meta"><span>ENTERPRISE GUIDE</span><span>Reviewed {page.data.verified}</span>{stale && <strong class="status caution">Review overdue · verify against sources</strong>}</div>
+            <div class="page-meta"><span>ENTERPRISE</span><span>Reviewed {page.data.verified}</span>{stale && <strong class="status caution">Review overdue · verify against sources</strong>}</div>
             {page.data.diagram && <section class="diagram-section" aria-label="Visual explanation">
               <div class="figure-label">VISUAL LESSON</div>
               <Diagram name={page.data.diagram} />
@@ -126,7 +135,7 @@ const titleEmphasis = page.id === 'start' ? titleWords.splice(-3).join(' ') : ''
               <ul>{page.data.sources.map((source) => <li><a href={source} target="_blank" rel="noopener noreferrer">{new URL(source).hostname} / {new URL(source).pathname.split('/').filter(Boolean).at(-1)?.replaceAll('-', ' ')} ↗</a></li>)}</ul>
             </section>
             <nav class="pagination" aria-label="Reading sequence">{previous ? <a rel="prev" href={href(previous.id)}><small>← PREVIOUS</small>{titleFor(previous)}</a> : <span></span>}{next ? <a class="next" rel="next" href={href(next.id)}><small>NEXT CHAPTER →</small>{titleFor(next)}</a> : <a class="next" href={href('start')}><small>{page.id === 'sources' ? 'RETURN TO COURSE →' : 'COURSE COMPLETE →'}</small>Course index</a>}</nav>
-            <footer class="article-footer">Copilot Governance Guide <span>Independent guidance. Official sources, clearly linked.</span></footer>
+            <footer class="article-footer">Copilot Governance <span>Independent guidance. Official sources, clearly linked.</span></footer>
           </article>
           <aside class="toc" aria-label="On this page"><div>ON THIS PAGE</div>{headings.filter((h) => h.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}{outlineParts.map(part => <a href={`#part-${parts.indexOf(part) + 1}`}>{page.id === 'start' ? part.title : 'Chapters in this part'}</a>)}{page.data.checks && <a href="#check-your-understanding">Check your understanding</a>}{chapter?.kind === 'summary' && <a href="#part-quiz-title">Part quiz</a>}<a href="#page-sources">Sources & freshness</a></aside>
         </div>

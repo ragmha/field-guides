@@ -1,15 +1,15 @@
-# Field Guides
+# OpenField
 
-Independent, source-backed field guides for GitHub Enterprise, Copilot and AI
-adoption. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
+Independent, source-backed guidance for GitHub Enterprise, Copilot and AI
+adoption, starting with five guides. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
 
 | Guide | Source | Site path |
 | --- | --- | --- |
-| AI Credits Learning Guide | Astro | `/field-guides/ai-credits-guide/` |
-| EU Data Residency Guide | Astro | `/field-guides/data-residency-guide/` |
-| Copilot Governance Guide | Astro | `/field-guides/copilot-governance-guide/` |
+| AI Credits | Astro | `/field-guides/ai-credits-guide/` |
+| EU Data Residency | Astro | `/field-guides/data-residency-guide/` |
+| Copilot Governance | Astro | `/field-guides/copilot-governance-guide/` |
 | Champions at Scale | Static HTML | `/field-guides/champions-at-scale/` |
-| GitHub Enterprise Field Guide | Static HTML | `/field-guides/github-enterprise-field-guide/` |
+| GitHub Enterprise | Static HTML | `/field-guides/github-enterprise-field-guide/` |
 
 Each guide lives in `guides/<name>/`, with its original Git history and license
 notices retained. Original repositories remain unchanged. The private
@@ -19,7 +19,11 @@ agent-engineering course is not included.
 CSS and uses its Octicons brand mark, system fonts and theme selector.
 The hub and all five guides share the `theme` localStorage preference.
 `guides.mjs` is the collection list; descriptions come from the source
-repositories. Guide styling is otherwise unchanged.
+repositories. Each guide's start page opens with a shared landing: a hero
+with the guide's pen-and-ink illustration and a Parts grid. The Astro guides
+render `shared/Landing.astro`; the two static guides carry the same markup
+and CSS in their own files. Chapter pages and guide styling are otherwise
+unchanged.
 
 ## Build and preview
 
@@ -70,7 +74,8 @@ BROWSER_CHANNEL=chromium bun run test:browser
 `bun run test:site` checks generated HTML routes and local linked assets,
 theme persistence across all guides, system theme changes, keyboard access
 and narrow-screen containment. Set `SCREENSHOT_DIR` to an artifact directory
-to capture the hub in light/dark at desktop/mobile widths and one guide.
+to capture the hub and every guide landing in light/dark at desktop and
+mobile widths.
 It starts and stops its own preview on port 4173; stop a manual preview first.
 Existing guide screenshot output stays in ignored `test-results/`.
 
@@ -81,8 +86,10 @@ Existing guide screenshot output stays in ignored `test-results/`.
    If Git lacks `subtree`, fetch the branch, merge `FETCH_HEAD` with
    `-s ours --no-commit --allow-unrelated-histories`, then run
    `git read-tree --prefix=guides/<name>/ -u FETCH_HEAD` and commit.
-2. Add its name, title, source repository description and `astro` or `static`
-   type to `guides.mjs`. Astro packages need a unique workspace name.
+2. Add its name, title, source repository description, part count and
+   `astro` or `static` type to `guides.mjs`. Astro packages need a unique
+   workspace name. Give its start page the landing (`shared/Landing.astro`
+   for Astro, copied markup for static) with one card per part.
 3. For Astro, set `site` to `https://ragmha.github.io` and `base` to
    `/field-guides/<name>/`. Update content, tests and preview URLs that use
    the old project path. Keep static asset references relative.

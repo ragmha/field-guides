@@ -15,7 +15,7 @@ test('visual-first lessons, editable downloads, base paths and themed rendering'
     for (const path of ['./', ...lessons.map((lesson) => `${lesson}/`), 'identify-needs/', 'sources/', ...chapters.filter(chapter => chapter.part === 4).map(chapter => `${chapter.path}/`)]) {
       await page.goto(path);
       await expect(page.locator('h1')).toBeVisible();
-      await expect(page).toHaveTitle(/AI Credits Learning Guide/);
+      await expect(page).toHaveTitle(/AI Credits/);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 
       if (await page.locator('.diagram-section').count()) {

@@ -11,9 +11,40 @@
 </head>
 <body class="guide">
 <header class="topbar">
-  <p class="breadcrumb"><a href="../">Field Guides</a><span aria-hidden="true">/</span><a href="./">GitHub Enterprise</a><span aria-hidden="true">/</span><span aria-current="page">Platform governance</span></p>
+  <p class="breadcrumb"><a href="../">OpenField</a><span aria-hidden="true">/</span><a href="./">GitHub Enterprise</a><span aria-hidden="true">/</span><span aria-current="page">Platform governance</span></p>
   <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
 </header>
+
+<div class="landing">
+  <section class="landing-hero" aria-labelledby="landing-title">
+    <div class="landing-copy">
+      <h1 id="landing-title">GitHub Enterprise</h1>
+      <p class="landing-intro">Mobile-first field guide for designing a GitHub Enterprise service: deployment options, identity, roles, licensing, audit.</p>
+      <p class="landing-note">Checked against official docs on 7 Nov 2026</p>
+      <div class="landing-actions">
+        <a class="landing-button" href="#platform">Start now <span aria-hidden="true">→</span></a>
+        <a class="landing-button" href="ledger.html">Evidence ledger</a>
+      </div>
+    </div>
+    <img class="landing-art" src="assets/landing.jpg" width="640" height="960" alt="Pen-and-ink illustration of an airport control tower above office buildings and hangars, resting on clouds." fetchpriority="high">
+  </section>
+  <section class="landing-parts" aria-labelledby="parts-title">
+    <h2 id="parts-title">Parts</h2>
+    <p>Ten decisions. Start with the platform, or jump to the one you need.</p>
+    <ol class="part-grid">
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>01</span></div><h3>Choose the platform and account type</h3><p>The biggest decision, and the hardest to reverse. Identity, external access and migration effort all follow from it.</p><a href="#platform">Open section<span class="sr-only">: Choose the platform and account type</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>02</span></div><h3>Identity: sign-in and provisioning</h3><p>SSO decides who can sign in. SCIM decides who exists and in which groups.</p><a href="#identity">Open section<span class="sr-only">: Identity: sign-in and provisioning</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>03</span></div><h3>Roles and authorization</h3><p>A short role catalogue: what each role allows, who approves it and how often it’s reviewed.</p><a href="#roles">Open section<span class="sr-only">: Roles and authorization</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>04</span></div><h3>External users</h3><p>Partners and contractors: hard to identify, hard to review and easy to forget.</p><a href="#external">Open section<span class="sr-only">: External users</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>05</span></div><h3>On- and offboarding</h3><p>Request roles, swap groups when people move and let SCIM remove leavers.</p><a href="#lifecycle">Open section<span class="sr-only">: On- and offboarding</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>06</span></div><h3>Audit and compliance</h3><p>Three records that line up: the ticket, the IdP log and the GitHub audit log.</p><a href="#audit">Open section<span class="sr-only">: Audit and compliance</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>07</span></div><h3>Licensing and rollout at scale</h3><p>Know who holds a licence, match Visual Studio subscribers and reconcile against the IdP.</p><a href="#licensing">Open section<span class="sr-only">: Licensing and rollout at scale</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>08</span></div><h3>Cost: what else gets billed</h3><p>The seat is only part of the bill. Every other meter needs an owner and a budget.</p><a href="#cost">Open section<span class="sr-only">: Cost: what else gets billed</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>09</span></div><h3>ITSM and fulfilment</h3><p>Keep the ITSM tool as the system of record and let the IdP do the granting.</p><a href="#itsm">Open section<span class="sr-only">: ITSM and fulfilment</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>10</span></div><h3>Pilot and phased rollout</h3><p>Prerequisites, a pilot, expansion in waves, then regular reviews.</p><a href="#rollout">Open section<span class="sr-only">: Pilot and phased rollout</span> <span aria-hidden="true">→</span></a></li>
+    </ol>
+  </section>
+</div>
 
 <div class="page-layout">
 <aside>
@@ -30,8 +61,8 @@
 
 <main>
 <section class="intro">
-  <p class="eyebrow">GitHub Enterprise · Governance guide</p>
-  <h1>GitHub Enterprise<br><span>platform governance</span></h1>
+  <p class="eyebrow">GitHub Enterprise · Governance assessment</p>
+  <h2>GitHub Enterprise<br><span>platform governance</span></h2>
   <p class="lede">A decision-led assessment for running GitHub Enterprise as a governed service: who owns it, how people get access, what they can do, what it costs and how you prove it. Each recommendation links to official documentation, which remains the source of truth.</p>
   <p class="meta">Checked against official docs on 7 Nov 2026 · <a href="ledger.html">Evidence ledger</a></p>
   <p class="scope-note"><b>Where this fits:</b> This assessment focuses on GitHub Well-Architected <a href="https://learn.github.com/well-architected/governance/overview">Governance</a> and <a href="https://learn.github.com/well-architected/architecture/overview">Architecture</a>—especially enterprise boundaries, identity, access, audit and operating decisions. It is not a full review of application security, collaboration or developer productivity; use the <a href="https://learn.github.com/well-architected/">full framework</a> for those pillars.</p>
@@ -371,7 +402,7 @@ reset.onclick=()=>{s={};localStorage.removeItem(K);items.forEach(li=>{delete li.
 const fit=()=>{if(wide.matches)secs.forEach(d=>d.open=true)};fit();wide.addEventListener('change',fit);
 document.querySelectorAll('summary').forEach(x=>x.addEventListener('click',e=>{if(wide.matches)e.preventDefault()}));
 const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a===link(e.target)))}),{rootMargin:'-15% 0px -75% 0px'});secs.forEach(d=>spy.observe(d));
-links.forEach(a=>a.onclick=()=>{document.querySelector(a.hash).open=true});
+[...links,...document.querySelectorAll('.part-card a')].forEach(a=>a.onclick=()=>{document.querySelector(a.hash).open=true});
 if(location.hash){const d=document.querySelector(location.hash);if(d&&d.tagName==='DETAILS')d.open=true}
 draw();
 </script>

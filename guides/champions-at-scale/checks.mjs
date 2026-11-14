@@ -18,7 +18,7 @@ try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(process.env.GUIDE_URL || 'http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
-  assert.equal(await page.title(), 'Champions at Scale — An enterprise field guide');
+  assert.equal(await page.title(), 'Champions at Scale');
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
   await page.selectOption('#theme', 'light');

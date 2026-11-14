@@ -54,7 +54,7 @@ main{
 article{min-width:0}
 .eyebrow{font:600 12px/1.6 var(--font-mono);text-transform:uppercase;letter-spacing:1.2px;color:var(--accent);display:flex;align-items:center;gap:14px}
 .eyebrow-line{width:32px;height:1px;background:var(--accent)}
-h1{font-size:clamp(36px,4vw,60px);font-weight:800;line-height:1.08;letter-spacing:-.035em;color:var(--ink);margin:18px 0 24px;max-width:740px;text-wrap:balance}
+h1,.page-title{font-size:clamp(36px,4vw,60px);font-weight:800;line-height:1.08;letter-spacing:-.035em;color:var(--ink);margin:18px 0 24px;max-width:740px;text-wrap:balance}
 .title-emphasis{display:block;color:var(--accent)}
 .lesson-number{color:var(--accent)}
 .lede{font-size:18px;line-height:1.65;color:var(--muted);margin:0 0 26px;max-width:62ch}
@@ -131,7 +131,7 @@ a[aria-disabled=true]{color:var(--muted);text-decoration:none}
   .chapter-nav>summary{display:flex;justify-content:space-between;font-size:13px;cursor:pointer;list-style:none}
   .chapter-nav>nav{padding-top:20px}.chapter-nav:not([open])>nav{display:none}
   .chapter-pages a,.course-home,.course-appendix a{font-size:13px}
-  main{padding:32px 22px 12px}h1{font-size:38px}.lede{font-size:17px}.page-meta{margin-bottom:24px}
+  main{padding:32px 22px 12px}h1,.page-title{font-size:38px}.lede{font-size:17px}.page-meta{margin-bottom:24px}
   .prose{font-size:15px}.prose h2{font-size:22px}.toc{display:none}
   .article-footer{display:block}.article-footer span{display:block}
 }
