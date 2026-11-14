@@ -91,7 +91,25 @@ try {
   assert.equal(await page.locator('.chapter-nav').getAttribute('open'), null);
   assert.equal(await page.locator('svg[role="img"]').count(), 4);
   assert.equal(await page.locator('.evidence-connector').count(), 3);
-  assert.equal(await page.locator('.evidence-connector').evaluateAll(lines => lines.every(line => getComputedStyle(line).markerEnd.includes('evidence-arrow'))), true);
+  assert.equal(await page.locator('.evidence-connector').evaluateAll(lines => lines.every(line => {
+    const reference = getComputedStyle(line).markerEnd.match(/^url\(["']?(.*?)["']?\)$/)?.[1];
+    if (!reference) return false;
+    const url = new URL(reference, document.baseURI);
+    const marker = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    if (!(marker instanceof SVGMarkerElement) || marker.ownerSVGElement !== line.ownerSVGElement) return false;
+    const arrow = marker.querySelector('path');
+    if (!arrow || marker.markerWidth.baseVal.value <= 0 || marker.markerHeight.baseVal.value <= 0) return false;
+    const bounds = arrow.getBBox();
+    const style = getComputedStyle(arrow);
+    const start = line.getPointAtLength(0);
+    const end = line.getPointAtLength(line.getTotalLength());
+    return bounds.width > 0 && bounds.height > 0 && arrow.getTotalLength() > 0
+      && style.fill !== 'none' && style.fill !== 'rgba(0, 0, 0, 0)' && Number(style.opacity) > 0 && Number(style.fillOpacity) > 0
+      && marker.orientType.baseVal === SVGMarkerElement.SVG_MARKER_ORIENT_AUTO
+      && marker.refX.baseVal.value === bounds.x + bounds.width
+      && marker.refY.baseVal.value === bounds.y + bounds.height / 2
+      && end.x > start.x && end.y === start.y;
+  })), true, 'Safeguards → baseline → pilot evidence → decision must have forward arrowheads');
   assert.deepEqual(await page.locator('svg[role="img"]').evaluateAll(figures => figures.flatMap(svg => {
     const box = svg.viewBox.baseVal;
     return [...svg.querySelectorAll('text')].filter(text => {
