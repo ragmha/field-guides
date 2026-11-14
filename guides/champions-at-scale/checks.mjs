@@ -10,6 +10,7 @@ if (!process.env.PLAYWRIGHT_MODULE) {
   throw new Error('Set PLAYWRIGHT_MODULE to the installed playwright-core/index.mjs path (see README).');
 }
 const { chromium } = await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE));
+const baseURL = process.env.GUIDE_URL || 'http://127.0.0.1:4173/';
 const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'chrome' });
 const errors = [];
 const temp = await mkdtemp(join(tmpdir(), 'champions-check-'));
@@ -17,7 +18,7 @@ let server;
 try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto(process.env.GUIDE_URL || 'http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
+  await page.goto(baseURL, { waitUntil: 'networkidle' });
   assert.equal(await page.title(), 'Champions at Scale');
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
@@ -126,12 +127,12 @@ try {
   for (const scroller of await page.locator('.diagram-scroll').all()) {
     assert.equal(await scroller.evaluate(node => node.scrollWidth > node.clientWidth && getComputedStyle(node).overflowX === 'auto'), true);
   }
-  await page.goto('http://127.0.0.1:4173/charter.html');
+  await page.goto(new URL('charter.html', baseURL).href);
   assert.equal(await page.locator('.brief-fields section').count(), 4);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'Charter overflows on mobile');
   const noJS = await browser.newContext({ javaScriptEnabled: false });
   const plain = await noJS.newPage();
-  await plain.goto(process.env.GUIDE_URL || 'http://127.0.0.1:4173/');
+  await plain.goto(baseURL);
   assert.equal(await plain.locator('#quest-levels input').count(), 12);
   await plain.locator('#quest-levels input').first().check();
   assert.equal(await plain.locator('#quest-levels input').first().isChecked(), true);
@@ -143,7 +144,7 @@ try {
   const blocked = await browser.newContext();
   await blocked.addInitScript(() => Object.defineProperty(window, 'localStorage', { get() { throw new DOMException('Denied', 'SecurityError'); } }));
   const blockedPage = await blocked.newPage();
-  await blockedPage.goto('http://127.0.0.1:4173/');
+  await blockedPage.goto(baseURL);
   assert.match(await blockedPage.locator('#quest-storage').textContent(), /unavailable/);
   await blockedPage.locator('#quest-levels input').first().check();
   assert.match(await blockedPage.locator('#quest-storage').textContent(), /Could not save/);
