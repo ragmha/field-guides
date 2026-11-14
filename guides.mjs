@@ -3,14 +3,14 @@ export const guides = [
     name: 'ai-credits-guide',
     title: 'AI Credits',
     parts: 4,
-    description: 'Enterprise AI credit budgeting guide for teams and platform admins',
+    description: 'Enterprise AI credit budgeting for teams and platform admins',
     type: 'astro',
   },
   {
     name: 'data-residency-guide',
     title: 'EU Data Residency',
     parts: 4,
-    description: 'An independent, source-backed guide to adopting GitHub Enterprise Cloud with EU data residency (GHE.com): sovereignty, Copilot, the DPA and EU law.',
+    description: 'Independent, source-backed guidance on adopting GitHub Enterprise Cloud with EU data residency (GHE.com): sovereignty, Copilot, the DPA and EU law.',
     type: 'astro',
   },
   {
@@ -24,14 +24,14 @@ export const guides = [
     name: 'champions-at-scale',
     title: 'Champions at Scale',
     parts: 3,
-    description: 'An independent interactive field guide to building sustainable enterprise champion programs for 2026 and beyond.',
+    description: 'Independent, interactive guidance on building sustainable enterprise champion programs for 2026 and beyond.',
     type: 'static',
   },
   {
     name: 'github-enterprise-field-guide',
     title: 'GitHub Enterprise',
     parts: 10,
-    description: 'Mobile-first field guide for designing a GitHub Enterprise service: deployment options, identity, roles, licensing, audit.',
+    description: 'Mobile-first guidance for designing a GitHub Enterprise service: deployment options, identity, roles, licensing, audit.',
     type: 'static',
   },
 ];
