@@ -43,7 +43,7 @@ No credentials or runtime server are needed to host the generated site.
 For individual Astro development:
 
 ```sh
-bun --cwd guides/ai-credits-guide run dev
+bun run --cwd guides/ai-credits-guide dev
 ```
 
 ## Checks

@@ -1,5 +1,6 @@
 ---
 import { guides } from '../../../guides.mjs';
+import fieldNotes from '../assets/field-notes.jpg';
 import '../../../guides/ai-credits-guide/src/styles/global.css';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -35,10 +36,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <main id="content">
       <div class="hub">
         <section class="hero" aria-labelledby="headline">
-          <div class="eyebrow">Enterprise enablement<span class="eyebrow-line"></span></div>
-          <h1 id="headline">Learn the model.<span class="title-emphasis">Put it into practice.</span></h1>
-          <p class="lede">Independent field guides for adopting, governing and operating GitHub at enterprise scale. Start with the challenge in front of you.</p>
-          <a class="browse" href="#guides">Browse guides <span aria-hidden="true">↓</span></a>
+          <div class="hero-copy">
+            <div class="eyebrow">Enterprise enablement<span class="eyebrow-line"></span></div>
+            <h1 id="headline">Learn the model.<span class="title-emphasis">Put it into practice.</span></h1>
+            <p class="lede">Independent field guides for adopting, governing and operating GitHub at enterprise scale. Start with the challenge in front of you.</p>
+            <a class="browse" href="#guides">Browse guides <span aria-hidden="true">↓</span></a>
+          </div>
+          <img class="hero-photo" src={fieldNotes.src} width={fieldNotes.width} height={fieldNotes.height} alt="An open field notebook with diagrams, a pencil, a laptop and a green plant on a desk." loading="eager" fetchpriority="high" />
         </section>
         <section id="guides" aria-labelledby="guides-heading">
           <div class="collection-heading">
@@ -81,8 +85,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   main{padding:0 44px 20px}
   .github-link{margin-left:auto;color:var(--muted);font-size:13px;text-decoration:none;white-space:nowrap}
   .theme-label{margin-left:0}
-  .hero{padding:100px 0 88px;border-bottom:1px solid var(--rule)}
-  h1{font-size:clamp(42px,5.5vw,76px);max-width:950px}
+  .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:center;gap:52px;padding:80px 0;border-bottom:1px solid var(--rule)}
+  .hero-copy{min-width:0}
+  .hero-photo{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid var(--rule);border-radius:4px}
+  h1{font-size:clamp(42px,4.6vw,64px);max-width:950px}
   .lede{max-width:62ch}
   .browse{display:inline-flex;align-items:center;gap:28px;padding:12px 22px;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:var(--surface);font-weight:650;text-decoration:none}
   :global([data-theme=dark]) .browse{color:var(--bg)}
@@ -96,6 +102,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .guide-card p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 28px}
   .get-started{display:flex;justify-content:space-between;margin-top:auto;padding-top:18px;border-top:1px solid var(--rule);font-size:14px;font-weight:650;text-decoration:none}
   @media(max-width:1000px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media(max-width:760px){main{padding:0 22px 12px}.hero{padding:56px 0}.guide-grid{grid-template-columns:1fr;gap:18px}.guide-card{padding:24px}.topbar{gap:12px}.github-link{font-size:12px}.collection-heading{padding-top:36px}}
+  @media(max-width:760px){main{padding:0 22px 12px}.hero{grid-template-columns:1fr;gap:32px;padding:56px 0}.guide-grid{grid-template-columns:1fr;gap:18px}.guide-card{padding:24px}.topbar{gap:12px}.github-link{font-size:12px}.collection-heading{padding-top:36px}}
   @media(max-width:400px){.topbar{padding:0 12px;gap:8px}.brand{gap:6px;font-size:13px}.brand-mark{width:22px;height:22px}.theme-label>span[aria-hidden]{display:none}}
 </style>
