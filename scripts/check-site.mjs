@@ -80,6 +80,7 @@ try {
       for (const guide of guides) {
         await page.goto(`${base}${guide.name}/`);
         assert.equal(await page.locator('html').getAttribute('data-theme'), theme, `${guide.name} must inherit ${theme}`);
+        assert.equal(await page.locator('header a', { hasText: 'Field Guides' }).evaluate(link => link.href), base, `${guide.name} breadcrumb must link to the hub`);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
       }
     }
