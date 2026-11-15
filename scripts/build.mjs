@@ -1,10 +1,10 @@
 import { cpSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { guides } from '../guides.mjs';
+import { guides, platformReferences } from '../guides.mjs';
 
 rmSync('dist', { recursive: true, force: true });
 mkdirSync('dist');
-for (const { name, type } of [{ name: 'hub', type: 'astro' }, ...guides]) {
+for (const { name, type } of [{ name: 'hub', type: 'astro' }, ...guides, ...platformReferences]) {
   const source = name === 'hub' ? 'hub' : `guides/${name}`;
   const target = name === 'hub' ? 'dist' : `dist/${name}`;
   if (type === 'astro') {
