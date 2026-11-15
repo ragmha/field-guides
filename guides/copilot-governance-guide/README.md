@@ -7,7 +7,7 @@ policies, cost, agents, context and observability.
 The course adapts ideas from
 [Copilot governance at scale](https://github.com/octodemo/copilot-governance-at-scale)
 and uses the visual and technical scaffold of
-[AI Credits Learning Guide](https://github.com/ragmha/ai-credits-guide).
+[AI Credits](../ai-credits-guide/).
 Examples are hypothetical. Review the content and current official sources
 before applying changes to your organization.
 

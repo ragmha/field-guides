@@ -9,7 +9,7 @@ export const guides = [
   {
     name: 'data-residency-guide',
     title: 'EU Data Residency',
-    parts: 4,
+    parts: 10,
     description: 'Independent, source-backed guidance on adopting GitHub Enterprise Cloud with EU data residency (GHE.com): sovereignty, Copilot, the DPA and EU law.',
     type: 'astro',
   },

@@ -236,7 +236,7 @@ const landingParts = parts.map(part => ({
         if (!confirm('Reset all quiz progress in this browser?')) return;
         try {
           localStorage.removeItem(progressKey);
-          location.href = import.meta.env.BASE_URL;
+          location.href = document.querySelector<HTMLAnchorElement>('.brand')!.href;
         } catch {
           showStorageError();
         }

@@ -146,7 +146,7 @@ The dates below apply to these source checks, not a fresh review of every older 
 
 Each page records a source-review date and links. **Current maintenance is manual:** repository maintainer **@ragmha** is assigned a weekly review on **Mondays at 07:37 UTC**, with the next planned review on **2026-11-16**. This assignment does not mean a review has already happened.
 
-The reviewer reads complete sources and checks material claims, release labels, self-check answers and diagram text. Actual findings and evidence belong in a review PR and the repository's source observation ledger; inaccessible sources and unresolved conflicts belong in `[freshness]` issues. The ledger is not prepopulated without actual reviewed source observations. See the [manual-review process](https://github.com/ragmha/ai-credits-guide/blob/main/docs/freshness-setup.md#current-maintenance-manual-review).
+The reviewer reads complete sources and checks material claims, release labels, self-check answers and diagram text. Actual findings and evidence belong in a review PR and the repository's source observation ledger; inaccessible sources and unresolved conflicts belong in `[freshness]` issues. The ledger is not prepopulated without actual reviewed source observations. See the [manual-review process](https://github.com/ragmha/field-guides/blob/main/guides/ai-credits-guide/docs/freshness-setup.md#current-maintenance-manual-review).
 
 Dates advance only after relevant claims and release labels have actually been rechecked, not just because a URL returns successfully. A failed check is not a clean bill of health. After 30 days, the next site build displays an overdue review notice; a static deployed site needs a rebuild for that build-time notice to change.
 
