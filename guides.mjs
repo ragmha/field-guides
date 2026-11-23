@@ -21,6 +21,22 @@ export const guides = [
     type: 'astro',
   },
   {
+    name: 'copilot-ide-guide',
+    title: 'Copilot in your IDE',
+    parts: 3,
+    description: 'Set up and use GitHub Copilot in VS Code, with client-specific differences called out.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
+    name: 'copilot-prompting-guide',
+    title: 'Better prompts and context',
+    parts: 3,
+    description: 'Give Copilot useful goals, repository context and constraints, then verify its work.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
     name: 'champions-at-scale',
     title: 'Champions at Scale',
     parts: 3,

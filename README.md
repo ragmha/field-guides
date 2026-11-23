@@ -1,25 +1,28 @@
 # Enterprise enablement
 
 Independent, source-backed guidance for GitHub Enterprise, Copilot and AI
-adoption, starting with five guides. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
+adoption across seven guides. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
 
 | Guide | Source | Site path |
 | --- | --- | --- |
 | AI Credits | Astro | `/field-guides/ai-credits-guide/` |
 | EU Data Residency | Astro | `/field-guides/data-residency-guide/` |
 | Copilot Governance | Astro | `/field-guides/copilot-governance-guide/` |
+| Copilot in your IDE | Shared Astro how-to workspace | `/field-guides/copilot-ide-guide/` |
+| Better prompts and context | Shared Astro how-to workspace | `/field-guides/copilot-prompting-guide/` |
 | Champions at Scale | Static HTML | `/field-guides/champions-at-scale/` |
 | GitHub Enterprise | Static HTML | `/field-guides/github-enterprise-field-guide/` |
 
-Each guide lives in `guides/<name>/`, with its original Git history and license
-notices retained. Original repositories remain unchanged. The private
+The five imported guides live in `guides/<name>/`, with their original Git history and license
+notices retained. The two how-tos share `guides/copilot-how-tos/` while retaining
+separate routes. Original repositories remain unchanged. The private
 agent-engineering course is not included.
 
 `hub/` contains the single-page collection. It imports the AI Credits guide's
 CSS and uses its Octicons brand mark, system fonts and theme selector.
-The hub and all five guides share the `theme` localStorage preference.
-`guides.mjs` is the collection list; descriptions come from the source
-repositories. Each guide's start page opens with a shared landing: a hero
+The hub and all seven guides share the `theme` localStorage preference.
+`guides.mjs` is the collection list; imported descriptions come from the source
+repositories, and how-to descriptions match the shared workspace manifest. Each guide's start page opens with a shared landing: a hero
 with the guide's pen-and-ink illustration and a Parts grid. The Astro guides
 render `shared/Landing.astro`; the two static guides carry the same markup
 and CSS in their own files. Astro landings retain introductory notes and sources
@@ -43,6 +46,9 @@ Open <http://127.0.0.1:4173/field-guides/>.
 The preview serves the real project prefix, not `/`.
 The root `dist/` contains the hub and one subdirectory per guide.
 Astro also retains each guide's local `dist/` for its existing preview checks.
+The how-to workspace builds once with the `/field-guides` base, then its
+guide routes and shared assets merge into the root output. The build rejects
+file collisions rather than overwriting another workspace's output.
 Static guides copy only HTML, CSS, JavaScript, assets and license notices.
 No credentials or runtime server are needed to host the generated site.
 
@@ -56,7 +62,7 @@ bun run --cwd guides/ai-credits-guide dev
 
 ```sh
 bun run check          # Astro/TypeScript checks across all Astro workspaces
-bun run test           # Existing content tests in all three Astro guides
+bun run test           # Content tests in all four Astro workspaces
 bun run build
 bun run test:browser   # Existing browser suites, Champions checks, site checks
 bun run test:diagrams  # AI Credits native Excalidraw export checks (local only)
@@ -74,6 +80,7 @@ BROWSER_CHANNEL=chromium bun run test:browser
 ```
 
 `bun run test:site` checks generated HTML routes and local linked assets,
+the how-to lesson sequence and sources, the five imported guide registrations,
 theme persistence across all guides, system theme changes, keyboard access
 and narrow-screen containment. Set `SCREENSHOT_DIR` to an artifact directory
 to capture the hub and every guide landing in light/dark at desktop and
@@ -99,9 +106,16 @@ Existing guide screenshot output stays in ignored `test-results/`.
    guide's existing checks to root scripts; run `bun install` at the root.
 5. Run the root checks and inspect the built guide before publication.
 
+To extend the existing how-tos instead, follow
+[`guides/copilot-how-tos/README.md`](guides/copilot-how-tos/README.md):
+edit its manifest and Markdown content together, and keep the corresponding
+`guides.mjs` card in sync. The shared workspace uses `/field-guides` as its
+base and emits both guide route directories in a single build; its `workspace`
+metadata in `guides.mjs` ensures that build runs only once.
+
 ## Deployment and maintenance
 
-`.github/workflows/pages.yml` checks pull requests and builds all five guides
+`.github/workflows/pages.yml` checks pull requests and builds all seven guides
 into one Pages artifact. On `master`, it deploys with `actions/deploy-pages`
 once Pages is configured to use GitHub Actions.
 No repository settings are changed by the build.

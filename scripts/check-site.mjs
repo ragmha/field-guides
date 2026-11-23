@@ -5,6 +5,27 @@ import { fileURLToPath } from 'node:url';
 import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import { guides } from '../guides.mjs';
+import { guides as howTos } from '../guides/copilot-how-tos/src/manifest.ts';
+import { landingPath, lessonRoutes, sourcePath } from '../guides/copilot-how-tos/src/course.ts';
+
+const existingGuides = [
+  ['ai-credits-guide', 4, 'astro'],
+  ['data-residency-guide', 10, 'astro'],
+  ['copilot-governance-guide', 6, 'astro'],
+  ['champions-at-scale', 3, 'static'],
+  ['github-enterprise-field-guide', 10, 'static'],
+];
+assert.equal(guides.length, existingGuides.length + 2);
+for (const [name, parts, type] of existingGuides) {
+  const matches = guides.filter(guide => guide.name === name);
+  assert.equal(matches.length, 1, `${name} must remain registered exactly once`);
+  assert.equal(matches[0].parts, parts);
+  assert.equal(matches[0].type, type);
+}
+assert.deepEqual(
+  guides.filter(guide => guide.workspace === 'copilot-how-tos').map(guide => guide.name).sort(),
+  howTos.map(guide => guide.slug).sort(),
+);
 
 for (const guide of guides) {
   assert.doesNotMatch(guide.description, /\bguides?\b/i, `${guide.name} description must describe the topic without "guide"`);
@@ -122,7 +143,12 @@ try {
       assert.ok((await page.locator('.article-footer').textContent()).startsWith('Enterprise enablement '));
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
       assert.equal(await page.locator('.guide-card').count(), guides.length);
+      assert.deepEqual(await page.locator('.guide-card h3').allTextContents(), guides.map(guide => guide.title));
       assert.deepEqual(await page.locator('.guide-card > p').allTextContents(), guides.map(guide => guide.description));
+      assert.deepEqual(
+        await page.locator('.guide-card .get-started').evaluateAll(links => links.map(link => link.href)),
+        guides.map(guide => `${base}${guide.name}/`),
+      );
       assert.equal(await page.locator('.hero-art').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero illustration must load');
       const art = await page.locator('.hero-art').boundingBox();
       const copy = await page.locator('.hero-copy').boundingBox();
@@ -169,6 +195,23 @@ try {
       }
     }
   }
+  for (const guide of howTos) {
+    const lessons = lessonRoutes(guide);
+    assert.equal(lessons.length, 6);
+    const paths = [landingPath(guide), ...lessons.map(lesson => lesson.path), sourcePath(guide)];
+    for (let index = 1; index < paths.length; index++) {
+      await page.goto(new URL(paths[index].slice(1), base).href);
+      assert.equal(await page.locator('h1').count(), 1, `${paths[index]} needs a title`);
+      assert.equal(await page.locator('nav[aria-label="Guide chapters"] .chapter-pages a').count(), 6);
+      assert.equal(await page.locator('a[rel="prev"]').getAttribute('href'), `/field-guides${paths[index - 1]}`);
+      assert.equal(await page.locator('a[rel="next"]').getAttribute('href'), `/field-guides${paths[index + 1] ?? paths[0]}`);
+      if (index < paths.length - 1) {
+        assert.equal(await page.locator('#page-sources').count(), 1, `${paths[index]} needs sources`);
+      } else {
+        assert.ok(await page.locator('.source-index a').count() > 0, `${paths[index]} needs a source index`);
+      }
+    }
+  }
   await page.goto(`${base}github-enterprise-field-guide/ledger.html`);
   const ledgerHubLink = page.getByRole('link', { name: 'Enterprise enablement', exact: true });
   assert.equal(await ledgerHubLink.evaluate(link => link.href), base, 'Evidence ledger breadcrumb must link to the hub');
@@ -203,7 +246,7 @@ try {
   });
   if (checks.error) throw checks.error;
   assert.equal(checks.status, 0, 'Existing Champions checks must pass');
-  console.log(`Site checks passed: ${targets.size} routes/assets, all five guides, shared themes, keyboard navigation and mobile widths.`);
+  console.log(`Site checks passed: ${targets.size} routes/assets, all ${guides.length} guides, shared themes, keyboard navigation and mobile widths.`);
 } finally {
   await browser?.close();
   server.kill();

@@ -1,0 +1,217 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Landing from '../../../../shared/Landing.astro';
+import { artworkUrl } from '../artwork';
+import { landingPath, lessonRoutes, routeForLesson, sourcePath } from '../course';
+import type { GuideDefinition } from '../manifest';
+import '../styles/global.css';
+
+type PageKind = 'landing' | 'lesson' | 'sources';
+type SourceRecord = { url: string; pages: string[] };
+
+interface Props {
+  guide: GuideDefinition;
+  page: CollectionEntry<'guide'>;
+  pageKind: PageKind;
+  reviewed: string;
+  sourceRecords: SourceRecord[];
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { guide, page, pageKind, reviewed, sourceRecords, headings } = Astro.props;
+const bodyHasSelfCheck = headings.some(heading => heading.text.trim().toLowerCase() === 'self-check');
+const entries = await getCollection('guide');
+const entryFor = (id: string) => {
+  const entry = entries.find(candidate => candidate.id === `${guide.slug}/${id}`);
+  if (!entry) throw new Error(`Missing content for ${guide.slug}/${id}`);
+  return entry;
+};
+const routes = lessonRoutes(guide);
+const lessonId = page.id.split('/').at(-1) ?? '';
+const currentLesson = routes.find(lesson => lesson.id === lessonId);
+const readingOrder = [
+  { path: landingPath(guide), title: guide.title, kind: 'landing' as const },
+  ...routes.map(lesson => ({
+    path: lesson.path,
+    title: `${lesson.partNumber}.${lesson.lessonNumber} ${entryFor(lesson.id).data.title}`,
+    kind: 'lesson' as const,
+  })),
+  { path: sourcePath(guide), title: 'Sources', kind: 'sources' as const },
+];
+const currentPath = pageKind === 'landing'
+  ? landingPath(guide)
+  : pageKind === 'sources'
+    ? sourcePath(guide)
+    : currentLesson?.path;
+if (!currentPath) throw new Error(`Unable to resolve route for ${page.id}`);
+const currentIndex = readingOrder.findIndex(item => item.path === currentPath);
+const previous = readingOrder[currentIndex - 1];
+const next = readingOrder[currentIndex + 1] ?? readingOrder[0];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (path: string) => `${base}${path}`;
+const stale = Date.now() - new Date(`${reviewed}T00:00:00Z`).getTime() > 30 * 86400000;
+const title = pageKind === 'landing'
+  ? guide.title
+  : pageKind === 'sources'
+    ? `${guide.title} sources`
+    : `${currentLesson!.partNumber}.${currentLesson!.lessonNumber} ${page.data.title}`;
+const pageDescription = pageKind === 'sources'
+  ? `Sources and latest review date for ${guide.title}.`
+  : page.data.description;
+const parts = guide.parts.map((part, partIndex) => ({
+  ...part,
+  number: partIndex + 1,
+  lessons: part.lessons.map((lesson, lessonIndex) => ({
+    ...lesson,
+    number: lessonIndex + 1,
+    entry: entryFor(lesson.id),
+    path: routeForLesson(guide, lesson.id),
+  })),
+}));
+const artwork = artworkUrl(guide);
+const landingParts = parts.map(part => ({
+  title: part.title,
+  description: part.description,
+  href: href(part.lessons[0].path),
+}));
+const linkedPage = (id: string) => {
+  const route = readingOrder.find(item => item.path === id);
+  if (route) return route.title;
+  const [slug, lesson] = id.split('/');
+  return slug === guide.slug ? entryFor(lesson).data.title : id;
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={pageDescription} />
+    <meta name="color-scheme" content="light dark" />
+    <title>{title} · Copilot how-tos</title>
+    <script is:inline>
+      (() => {
+        let preference = 'system';
+        try { preference = localStorage.getItem('theme') || 'system'; } catch {}
+        const dark = preference === 'dark' || (preference === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.documentElement.dataset.preference = preference;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href={pageKind === 'landing' ? '#landing-title' : '#content'}>Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href={`${base}/`} aria-label="Copilot how-tos home">
+        <svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="30" height="30"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>
+        Copilot how-tos
+      </a>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href={`${base}/`}>Enterprise enablement</a><span aria-hidden="true">/</span><span>{guide.title}</span>
+      </nav>
+      <label class="theme-label"><span aria-hidden="true">◐</span><span class="sr-only">Color theme</span><select id="theme" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+    </header>
+    <a class="hub-home" href={`${base}/`}><span aria-hidden="true">← </span>Enterprise enablement</a>
+    <div class:list={['shell', { 'landing-page': pageKind === 'landing' }]}>
+      {pageKind !== 'landing' && <aside class="sidebar">
+        <div class="edition">HOW-TO CONTENTS<span>{guide.title}</span></div>
+        <details class="chapter-nav" open>
+          <summary>Explore this guide <span aria-hidden="true">⌄</span></summary>
+          <nav aria-label="Guide chapters">
+            <a class="course-home" href={href(landingPath(guide))}>Guide overview</a>
+            {parts.map(part => (
+              <section class="course-part">
+                <h2><span class="chapter-number">Part {part.number}</span> {part.title}</h2>
+                <div class="chapter-pages">{part.lessons.map(lesson => (
+                  <a href={href(lesson.path)} aria-current={lesson.id === lessonId ? 'page' : undefined}>
+                    {part.number}.{lesson.number} {lesson.entry.data.title}
+                  </a>
+                ))}</div>
+              </section>
+            ))}
+            <div class="course-appendix"><span>Appendix</span><a href={href(sourcePath(guide))} aria-current={pageKind === 'sources' ? 'page' : undefined}>Sources & review date</a></div>
+          </nav>
+        </details>
+      </aside>}
+      <main id="content">
+        {pageKind === 'landing' && <Landing
+          name={guide.slug}
+          art={{ src: artwork, width: guide.artwork.width, height: guide.artwork.height }}
+          alt={guide.artwork.alt}
+          reviewed={page.data.reviewed}
+          stale={stale}
+          start={href(routes[0].path)}
+          secondary={{ href: href(sourcePath(guide)), label: 'Sources' }}
+          parts={landingParts}
+        />}
+        <div class="article-grid">
+          <article>
+            {pageKind !== 'landing' && <>
+              <div class="eyebrow">{pageKind === 'sources' ? 'References' : `Part ${currentLesson!.partNumber}: ${guide.parts[currentLesson!.partIndex].title}`}<span class="eyebrow-line"></span></div>
+              <h1 class="page-title">{title}</h1>
+              <p class="lede">{pageDescription}</p>
+              <div class="page-meta"><span>COPILOT HOW-TOS</span><span>Reviewed <time datetime={reviewed}>{reviewed}</time></span>{stale && <strong class="status caution">Review overdue · verify against sources</strong>}</div>
+            </>}
+            {pageKind === 'sources'
+              ? <section class="sources-page prose" aria-labelledby="source-index-title">
+                  <h2 id="source-index-title">Source index</h2>
+                  <p>These official references are used across {guide.title}. The latest page review date is <time datetime={reviewed}>{reviewed}</time>.</p>
+                  <ul class="source-index">{sourceRecords.map(record => (
+                    <li>
+                      <a href={record.url} target="_blank" rel="noopener noreferrer">{record.url}</a>
+                      <span>Used in: {record.pages.map(linkedPage).join(', ')}</span>
+                    </li>
+                  ))}</ul>
+                </section>
+              : <div class:list={['prose', { 'landing-prose': pageKind === 'landing' }]}><slot /></div>}
+            {pageKind !== 'sources' && page.data.checks && !bodyHasSelfCheck && <section class="self-check prose" aria-labelledby="check-your-understanding">
+              <h2 id="check-your-understanding">Check your understanding</h2>
+              <p>Try each question before opening the answer.</p>
+              {page.data.checks.map(check => <details><summary>{check.question}</summary><p>{check.answer}</p></details>)}
+            </section>}
+            {pageKind !== 'sources' && <section class="source-note" aria-labelledby="page-sources">
+              <h2 id="page-sources">Sources & freshness</h2>
+              <p>Source review: <time datetime={page.data.reviewed}>{page.data.reviewed}</time>.</p>
+              <ul>{page.data.sources.map(source => <li><a href={source} target="_blank" rel="noopener noreferrer">{new URL(source).hostname} / {new URL(source).pathname.split('/').filter(Boolean).at(-1)?.replaceAll('-', ' ') || 'reference'} ↗</a></li>)}</ul>
+            </section>}
+            {pageKind !== 'landing' && <nav class="pagination" aria-label="Reading sequence">
+              {previous
+                ? <a rel="prev" href={href(previous.path)}><small>← PREVIOUS</small>{previous.title}</a>
+                : <span></span>}
+              <a class="next" rel="next" href={href(next.path)}><small>{pageKind === 'sources' ? 'RETURN TO GUIDE →' : 'NEXT →'}</small>{next.title}</a>
+            </nav>}
+            <footer class="article-footer">Copilot how-tos <span>Independent guidance. Official sources, clearly linked.</span></footer>
+          </article>
+          {pageKind === 'lesson' && <aside class="toc" aria-label="On this page">
+            <div>ON THIS PAGE</div>
+            {headings.filter(heading => heading.depth === 2).map(heading => <a href={`#${heading.slug}`}>{heading.text}</a>)}
+            {pageKind === 'lesson' && page.data.checks && !bodyHasSelfCheck && <a href="#check-your-understanding">Check your understanding</a>}
+            <a href="#page-sources">Sources & freshness</a>
+          </aside>}
+        </div>
+      </main>
+    </div>
+    <script>
+      const select = document.querySelector<HTMLSelectElement>('#theme')!;
+      const media = matchMedia('(prefers-color-scheme: dark)');
+      select.value = document.documentElement.dataset.preference || 'system';
+      function applyTheme() {
+        const preference = select.value;
+        const theme = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.preference = preference;
+      }
+      select.addEventListener('change', () => {
+        try { localStorage.setItem('theme', select.value); } catch {}
+        applyTheme();
+      });
+      media.addEventListener('change', applyTheme);
+      const navigation = document.querySelector<HTMLDetailsElement>('.chapter-nav');
+      const mobile = matchMedia('(max-width: 760px)');
+      if (navigation) navigation.open = !mobile.matches;
+      mobile.addEventListener('change', () => {
+        if (navigation) navigation.open = !mobile.matches;
+      });
+    </script>
+  </body>
+</html>
