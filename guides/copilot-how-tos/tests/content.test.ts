@@ -15,7 +15,7 @@ function entriesFor(guide: (typeof guides)[number]) {
 }
 
 describe('how-to route and content contract', () => {
-  test('keeps the hub entries and illustration dimensions in sync with both guides', () => {
+  test('keeps the hub entries and illustration dimensions in sync with all guides', () => {
     const shared = collection.filter(guide => guide.workspace === 'copilot-how-tos');
     expect(shared.map(guide => guide.name).sort()).toEqual(guides.map(guide => guide.slug).sort());
     for (const guide of guides) {
@@ -25,6 +25,16 @@ describe('how-to route and content contract', () => {
       });
       const svg = readFileSync(new URL(`../${guide.artwork.src}`, import.meta.url), 'utf8');
       expect(svg).toMatch(new RegExp(`<svg\\b[^>]*\\bwidth="${guide.artwork.width}"[^>]*\\bheight="${guide.artwork.height}"`));
+    }
+  });
+
+  test('registers the four workflow tracks with six distinct lessons each', () => {
+    for (const slug of ['copilot-cli-guide', 'copilot-agent-mode-guide', 'copilot-instructions-guide', 'copilot-skills-agents-guide']) {
+      const guide = guides.find(entry => entry.slug === slug);
+      expect(guide).toBeDefined();
+      const routes = lessonRoutes(guide!);
+      expect(routes).toHaveLength(6);
+      expect(new Set(routes.map(route => route.path)).size).toBe(6);
     }
   });
 
