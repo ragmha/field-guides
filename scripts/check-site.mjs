@@ -121,26 +121,6 @@ try {
         await page.evaluate(() => document.fonts.ready);
         assert.match(await landing.locator('h1').evaluate(heading => getComputedStyle(heading).fontFamily), /^"Mona Sans"/, 'Agentic title must use Mona Sans');
         assert.equal(await landing.locator('h1').evaluate(heading => document.fonts.check(`700 ${getComputedStyle(heading).fontSize} "Mona Sans"`)), true, 'Mona Sans must load for the agentic title');
-        const skillLink = page.getByRole('link', { name: 'Download the Agent Skill', exact: true });
-        assert.equal(await skillLink.getAttribute('href'), 'assets/agentic-engineering-review/SKILL.md', 'Agentic guide must link to the companion skill');
-        assert.equal(await skillLink.getAttribute('download'), 'SKILL.md', 'The companion skill must be downloadable');
-        assert.match(await (await fetch(new URL(await skillLink.getAttribute('href'), page.url()))).text(), /^---\nname: agentic-engineering-review\n/m, 'The downloadable skill must have valid Copilot skill metadata');
-        assert.match(await page.locator('#agentic-skill').textContent(), /\.github\/skills\/agentic-engineering-review\/SKILL\.md/, 'The guide must explain the repository install path');
-        const codeBlock = page.locator('[data-code-block]');
-        await page.waitForFunction(() => document.querySelector('[data-code-block]')?.dataset.loaded === 'true');
-        assert.equal(await codeBlock.locator('code').textContent(), await (await fetch(new URL(await skillLink.getAttribute('href'), page.url()))).text(), 'The code block must display the actual skill source');
-        assert.equal(await codeBlock.locator('.code-block-copy').isEnabled(), true, 'The skill copy action must be enabled once its source loads');
-        const wrapButton = codeBlock.locator('.code-block-wrap');
-        await wrapButton.click();
-        assert.equal(await wrapButton.getAttribute('aria-pressed'), 'true', 'The skill code block must offer a wrap mode');
-        assert.equal(await codeBlock.locator('code').evaluate(code => getComputedStyle(code).whiteSpace), 'pre-wrap', 'Wrapped Markdown lines must not require horizontal scrolling');
-        await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', {
-          configurable: true,
-          value: { writeText: text => { window.__copiedSkill = text; return Promise.resolve(); } },
-        }));
-        await codeBlock.locator('.code-block-copy').click();
-        assert.equal(await page.evaluate(() => window.__copiedSkill), await codeBlock.locator('code').textContent(), 'Copy must put the full Markdown source on the clipboard');
-        assert.equal(await codeBlock.locator('.code-block-copy').textContent(), 'Copied', 'Copy must confirm completion');
         const chapters = page.locator('.chapter[data-part]');
         assert.equal(await chapters.count(), guide.parts, 'Each agentic engineering part needs a chapter');
         for (const [index, id] of agenticChapters.entries()) {
@@ -149,6 +129,36 @@ try {
           assert.equal(await chapter.getAttribute('id'), id, `Part ${index + 1} needs its fragment target`);
           assert.equal(await landing.locator('.part-card a').nth(index).getAttribute('href'), `#${id}`, `Part ${index + 1} card must open its chapter`);
           assert.ok(await chapter.locator('a[href^="https://docs.github.com/"]').count() > 0, `Part ${index + 1} needs GitHub documentation`);
+          const preview = chapter.locator('[data-skill-preview]');
+          assert.equal(await preview.count(), 1, `Part ${index + 1} needs its own Agent Skill`);
+          const skillName = await preview.getAttribute('data-skill-name');
+          const skillLink = preview.getByRole('link', { name: 'Download SKILL.md', exact: true });
+          const skillPath = `assets/agentic-engineering-skills/${skillName}/SKILL.md`;
+          assert.equal(await skillLink.getAttribute('href'), skillPath, `Part ${index + 1} skill download must match its skill folder`);
+          assert.equal(await skillLink.getAttribute('download'), 'SKILL.md', `Part ${index + 1} skill must download as SKILL.md`);
+          assert.match(await preview.locator('.skill-preview-body').textContent(), new RegExp(`\\.github/skills/${skillName}/SKILL\\.md`), `Part ${index + 1} must explain its install path`);
+          const sourceResponse = await fetch(new URL(skillPath, page.url()));
+          assert.equal(sourceResponse.status, 200, `Part ${index + 1} skill file must be served`);
+          const skillSource = await sourceResponse.text();
+          assert.match(skillSource, new RegExp(`^---\\r?\\nname: ${skillName}\\r?\\n`, 'm'), `Part ${index + 1} skill needs matching Copilot metadata`);
+          if (index === 0) {
+            const codeBlock = preview.locator('[data-code-block]');
+            await preview.locator('summary').click();
+            await codeBlock.locator('[data-loaded="true"]').waitFor();
+            assert.equal(await codeBlock.locator('code').textContent(), skillSource, 'The first code block must show its actual skill source');
+            assert.equal(await codeBlock.locator('.code-block-copy').isEnabled(), true, 'The skill copy action must be enabled once its source loads');
+            const wrapButton = codeBlock.locator('.code-block-wrap');
+            await wrapButton.click();
+            assert.equal(await wrapButton.getAttribute('aria-pressed'), 'true', 'Skill code blocks must offer a wrap mode');
+            assert.equal(await codeBlock.locator('code').evaluate(code => getComputedStyle(code).whiteSpace), 'pre-wrap', 'Wrapped Markdown lines must not require horizontal scrolling');
+            await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', {
+              configurable: true,
+              value: { writeText: text => { window.__copiedSkill = text; return Promise.resolve(); } },
+            }));
+            await codeBlock.locator('.code-block-copy').click();
+            await page.waitForFunction(() => document.querySelector('[data-skill-name="agentic-vocabulary-review"] .code-block-copy')?.textContent === 'Copied');
+            assert.equal(await page.evaluate(() => window.__copiedSkill), skillSource, 'Copy must put the full Markdown source on the clipboard');
+          }
         }
         const diagrams = page.locator('figure.diagram-embed');
         assert.equal(await diagrams.count(), 7, 'Agentic guide needs its seven concept diagrams');

@@ -90,25 +90,6 @@
       <article class="guide-content">
         <p>GitHub can be the place where a team records intent, reviews changes and runs delivery controls. It is not automatically the runtime, the evaluator or the observability backend for every AI system. This distinction makes the following choices easier.</p>
         <p>The examples below describe a fictional service and are starting points, not default policies. Feature availability depends on your plan, environment and organization settings.</p>
-        <aside class="practice skill-callout" id="agentic-skill" aria-labelledby="skill-title">
-          <h3 id="skill-title">Run the exercises with a Copilot Agent Skill</h3>
-          <p>The companion skill can review one topic or all ten against a repository, cite the evidence it finds and call out what it cannot verify. It is read-only: your team keeps the decisions and any changes.</p>
-          <p><a href="assets/agentic-engineering-review/SKILL.md" download="SKILL.md">Download the Agent Skill</a></p>
-          <p><strong>Install:</strong> add the downloaded file to your repository at <code>.github/skills/agentic-engineering-review/SKILL.md</code>, then ask Copilot to review a specific part or the full guide.</p>
-          <div class="code-block" data-code-block data-source="assets/agentic-engineering-review/SKILL.md">
-            <div class="code-block-header">
-              <span>SKILL.md</span>
-              <button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false">Wrap</button>
-              <button class="code-block-copy" type="button" disabled>Copy</button>
-            </div>
-            <div class="code-block-content" role="region" aria-label="Agent Skill Markdown source" tabindex="0">
-              <pre><code>Loading skill source…</code></pre>
-            </div>
-            <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
-          </div>
-          <noscript><p>JavaScript is required to preview the file. <a href="assets/agentic-engineering-review/SKILL.md" download="SKILL.md">Download SKILL.md</a> instead.</p></noscript>
-        </aside>
-
         <section class="chapter" id="terminology" data-part="1" aria-labelledby="terminology-title">
           <h2 id="terminology-title"><span>PART 01</span> A shared vocabulary for agentic work</h2>
           <p>An agent is more than a model response: it works toward a goal, chooses actions, observes results and may try again. A <strong>harness</strong> supplies the execution loop, tools, context and limits around that model. A <strong>skill</strong> supplies reusable task guidance; an <strong>evaluation</strong> tests an outcome or behavior against stated criteria.</p>
@@ -131,6 +112,18 @@
               <li>Name the person who decides whether the change is acceptable and the control that enforces that decision.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="agentic-vocabulary-review">
+            <summary>View Agent Skill · Agentic vocabulary</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/agentic-vocabulary-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/agentic-vocabulary-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/agentic-vocabulary-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="Agentic vocabulary skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> Definitions and product surfaces change. Use terms to clarify responsibility, not as a maturity score.</p>
           <p class="source-note"><a href="https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github">Copilot on GitHub</a> &middot; <a href="https://docs.github.com/en/copilot/concepts/customizations/agent-skills">Agent skills</a></p>
         </section>
@@ -149,6 +142,18 @@
               <li>Open an issue for an approved fix, review the pull request and compare the next deployment with the same operational signals.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="aiops-devops-incident-review">
+            <summary>View Agent Skill · AIOps and DevOps</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/aiops-devops-incident-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/aiops-devops-incident-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/aiops-devops-incident-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="AIOps and DevOps skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> An AI-generated diagnosis is a hypothesis. Confirm it against production evidence and keep remediation approvals appropriate to the risk.</p>
           <p class="source-note"><a href="https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows">GitHub Actions workflows</a> &middot; <a href="https://dora.dev/guides/dora-metrics/">DORA delivery metrics</a></p>
         </section>
@@ -175,6 +180,18 @@
               <li>Measure accepted and rejected proposals, missed problems and reversions. Only consider increasing autonomy after a risk owner reviews the evidence and rollback plan.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="software-factory-path-review">
+            <summary>View Agent Skill · Agents to factories</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/software-factory-path-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/software-factory-path-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/software-factory-path-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="Software factory skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> Agent Merge can address selected pull request blockers; it is not the same as auto-merge and does not replace review or repository merge requirements.</p>
           <p class="source-note"><a href="https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations">Copilot automations</a> &middot; <a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/watch-and-fix-pull-requests">Agent Merge</a> &middot; <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets">Rulesets</a> &middot; <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">Code owners</a></p>
         </section>
@@ -201,6 +218,18 @@
               <li>Exercise failures, timeouts and access denial. Add a separate, explicitly authorized write path only if the workflow actually needs one.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="mcp-api-boundary-review">
+            <summary>View Agent Skill · MCP and APIs</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/mcp-api-boundary-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/mcp-api-boundary-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/mcp-api-boundary-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="MCP and API skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> A tool's read-only label is not a substitute for server-side authorization. Do not put credentials in the repository or in example prompts.</p>
           <p class="source-note"><a href="https://docs.github.com/en/copilot/concepts/customizations/mcp">MCP with Copilot</a> &middot; <a href="https://github.com/github/github-mcp-server">GitHub MCP server</a> &middot; <a href="https://modelcontextprotocol.io/specification/latest/basic/security_best_practices">MCP security</a></p>
         </section>
@@ -227,6 +256,18 @@
               <li>After deployment, compare the affected service's signals and capture the outcome for the next evaluation.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="agentic-observability-review">
+            <summary>View Agent Skill · Agentic observability</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/agentic-observability-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/agentic-observability-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/agentic-observability-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="Agentic observability skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> Session access, sharing and retention vary by environment. Treat logs and tool results as potentially sensitive; collect the minimum needed and apply your organization's access and retention rules.</p>
           <p class="source-note"><a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents">Agent sessions</a> &middot; <a href="https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data">Session data</a> &middot; <a href="https://github.com/open-telemetry/semantic-conventions-genai">OpenTelemetry GenAI conventions</a></p>
         </section>
@@ -257,6 +298,18 @@
               <li>Set an investigation and rollback path for a quality regression even when HTTP errors remain low.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="ai-observability-release-map">
+            <summary>View Agent Skill · AI observability</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/ai-observability-release-map/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/ai-observability-release-map/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/ai-observability-release-map/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="AI observability skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> OpenTelemetry GenAI conventions are evolving. Pin the version your instrumentation emits and verify field names before relying on dashboards.</p>
           <p class="source-note"><a href="https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs">Actions run logs</a> &middot; <a href="https://github.com/open-telemetry/semantic-conventions-genai">OpenTelemetry GenAI conventions</a></p>
         </section>
@@ -283,6 +336,18 @@
               <li>Run the same representative task several times before and after the change. Compare outcomes, unnecessary retries and reviewer corrections.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="agent-harness-review">
+            <summary>View Agent Skill · Agent harnesses</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/agent-harness-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/agent-harness-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/agent-harness-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="Agent harness skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> A better harness reduces avoidable failures; it does not guarantee a correct or safe change. Human review and independently enforced checks still matter.</p>
           <p class="source-note"><a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions">Repository instructions</a> &middot; <a href="https://docs.github.com/en/copilot/concepts/customizations/agent-skills">Agent skills</a> &middot; <a href="https://docs.github.com/en/actions/reference/security/secure-use">Secure Actions use</a></p>
         </section>
@@ -301,6 +366,18 @@
               <li>Compare the candidate with the previous version, review disagreements and run independent holdouts through a trusted, isolated evaluation path before changing the release decision.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="llm-evaluation-review">
+            <summary>View Agent Skill · LLM evaluation</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/llm-evaluation-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/llm-evaluation-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/llm-evaluation-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="LLM evaluation skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> Offline tests catch known regressions; permissioned, sampled production evaluation can reveal new ones. GitHub Models was retired in July 2026, so do not design a new evaluation workflow around it.</p>
           <p class="source-note"><a href="https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows">Actions workflows</a> &middot; <a href="https://docs.github.com/en/actions/concepts/workflows-and-actions/workflow-artifacts">Workflow artifacts</a> &middot; <a href="https://docs.github.com/en/github-models">GitHub Models retirement</a></p>
         </section>
@@ -319,6 +396,18 @@
               <li>Default to metadata. Collect prompt, response or retrieved content only with an approved purpose, redaction, access controls and retention period.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="llm-observability-review">
+            <summary>View Agent Skill · LLM observability</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/llm-observability-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/llm-observability-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/llm-observability-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="LLM observability skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> A successful HTTP response is not a quality verdict. Avoid putting raw prompts, secrets or personal data in public issues, workflow logs or artifacts.</p>
           <p class="source-note"><a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics">Copilot usage metrics</a> &middot; <a href="https://docs.github.com/en/actions/reference/security/secure-use">Secure Actions use</a> &middot; <a href="https://github.com/open-telemetry/semantic-conventions-genai">OpenTelemetry GenAI conventions</a></p>
         </section>
@@ -346,6 +435,18 @@
               <li><strong>Week 4:</strong> Review sampled outcomes, latency and usage after release. Revert or pause on an agreed condition, and turn reviewed failures into new cases.</li>
             </ol>
           </div>
+          <details class="skill-preview" data-skill-preview data-skill-name="llmops-release-review">
+            <summary>View Agent Skill · LLMOps</summary>
+            <div class="skill-preview-body">
+              <p>Download this focused skill and add it to <code>.github/skills/llmops-release-review/SKILL.md</code>.</p>
+              <p><a href="assets/agentic-engineering-skills/llmops-release-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
+              <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/llmops-release-review/SKILL.md">
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-content" role="region" aria-label="LLMOps skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
+                <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </details>
           <p class="boundary"><strong>Boundary:</strong> Store secrets in an approved secret manager or CI secret facility, never in source, prompts, examples or logs. Review data access, retention and model-provider terms before using real records.</p>
           <p class="source-note"><a href="https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments">Deployment environments</a> &middot; <a href="https://docs.github.com/en/github-models">GitHub Models retirement</a> &middot; <a href="https://docs.github.com/en/actions/reference/security/secure-use">Secure Actions use</a></p>
         </section>
@@ -361,6 +462,6 @@
     </div>
   </main>
   <footer class="footer">Enterprise enablement &middot; Independent guidance. Official sources, clearly linked.</footer>
-  <script src="assets/agentic-engineering-review/code-block.js" type="module"></script>
+  <script src="assets/agentic-engineering-skills/code-block.js" type="module"></script>
 </body>
 </html>
