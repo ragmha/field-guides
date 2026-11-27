@@ -7,6 +7,7 @@
     "build": "bun scripts/build.mjs",
     "test": "bun run --cwd guides/ai-credits-guide test && bun run --cwd guides/data-residency-guide test && bun run --cwd guides/copilot-governance-guide test",
     "check": "bun run --cwd hub check && bun run --cwd guides/ai-credits-guide check && bun run --cwd guides/data-residency-guide check && bun run --cwd guides/copilot-governance-guide check",
+    "check:freshness": "node scripts/check-freshness.mjs",
     "preview": "bun scripts/preview.mjs",
     "test:site": "bun scripts/check-site.mjs",
     "test:browser": "bun run --cwd guides/ai-credits-guide test:browser && bun run --cwd guides/copilot-governance-guide test:browser && bun run test:site",
