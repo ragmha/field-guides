@@ -20,6 +20,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="skill-copy-icon" viewBox="0 0 24 24">
+      <rect x="8" y="8" width="14" height="14" rx="2"></rect>
+      <path d="M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2"></path>
+    </symbol>
+    <symbol id="skill-copied-icon" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6"></path>
+    </symbol>
+  </svg>
   <!-- THESIS: Make agentic engineering legible as a delivery system, not a promise of autonomous software.
        OWN-WORLD: Extend the collection's restrained reading layout, shared theme, part grid and ink illustration.
        STORY: Connect each source to a GitHub practice, an operating boundary and a concrete next step.
@@ -69,20 +78,22 @@
 
     <div class="reading-shell">
       <aside class="guide-nav" aria-label="Guide navigation">
-        <details open>
-          <summary>In this guide</summary>
-          <nav aria-label="Guide parts">
-            <a href="#terminology">01 &nbsp; Agentic vocabulary</a>
-            <a href="#aiops-devops">02 &nbsp; AIOps and DevOps</a>
-            <a href="#factories">03 &nbsp; Agents to factories</a>
-            <a href="#mcp-api">04 &nbsp; MCP and APIs</a>
-            <a href="#agentic-observability">05 &nbsp; Agentic observability</a>
-            <a href="#ai-observability">06 &nbsp; AI observability</a>
-            <a href="#harness">07 &nbsp; Agent harnesses</a>
-            <a href="#evaluation">08 &nbsp; LLM evaluation</a>
-            <a href="#llm-observability">09 &nbsp; LLM observability</a>
-            <a href="#llmops">10 &nbsp; LLMOps</a>
-            <a href="#sources">Sources and scope</a>
+        <div class="edition">CONTENTS<span>Agentic Engineering</span></div>
+        <details class="chapter-nav" open>
+          <summary>Explore the guide <span aria-hidden="true">⌄</span></summary>
+          <nav aria-label="Guide chapters">
+            <a class="guide-home" href="#landing-title">Overview</a>
+            <a class="guide-part" href="#terminology"><span>Part 1</span> Agentic vocabulary</a>
+            <a class="guide-part" href="#aiops-devops"><span>Part 2</span> AIOps and DevOps</a>
+            <a class="guide-part" href="#factories"><span>Part 3</span> Agents to factories</a>
+            <a class="guide-part" href="#mcp-api"><span>Part 4</span> MCP and APIs</a>
+            <a class="guide-part" href="#agentic-observability"><span>Part 5</span> Agentic observability</a>
+            <a class="guide-part" href="#ai-observability"><span>Part 6</span> AI observability</a>
+            <a class="guide-part" href="#harness"><span>Part 7</span> Agent harnesses</a>
+            <a class="guide-part" href="#evaluation"><span>Part 8</span> LLM evaluation</a>
+            <a class="guide-part" href="#llm-observability"><span>Part 9</span> LLM observability</a>
+            <a class="guide-part" href="#llmops"><span>Part 10</span> LLMOps</a>
+            <div class="guide-appendix"><span>Appendix</span><a href="#sources">Sources and scope</a></div>
           </nav>
         </details>
       </aside>
@@ -118,7 +129,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/agentic-vocabulary-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/agentic-vocabulary-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/agentic-vocabulary-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="Agentic vocabulary skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -148,7 +159,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/aiops-devops-incident-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/aiops-devops-incident-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/aiops-devops-incident-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="AIOps and DevOps skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -186,7 +197,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/software-factory-path-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/software-factory-path-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/software-factory-path-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="Software factory skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -224,7 +235,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/mcp-api-boundary-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/mcp-api-boundary-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/mcp-api-boundary-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="MCP and API skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -262,7 +273,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/agentic-observability-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/agentic-observability-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/agentic-observability-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="Agentic observability skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -304,7 +315,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/ai-observability-release-map/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/ai-observability-release-map/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/ai-observability-release-map/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="AI observability skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -342,7 +353,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/agent-harness-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/agent-harness-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/agent-harness-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="Agent harness skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -372,7 +383,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/llm-evaluation-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/llm-evaluation-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/llm-evaluation-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="LLM evaluation skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -402,7 +413,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/llm-observability-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/llm-observability-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/llm-observability-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="LLM observability skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -441,7 +452,7 @@
               <p>Download this focused skill and add it to <code>.github/skills/llmops-release-review/SKILL.md</code>.</p>
               <p><a href="assets/agentic-engineering-skills/llmops-release-review/SKILL.md" download="SKILL.md">Download SKILL.md</a></p>
               <div class="code-block" data-code-block data-source="assets/agentic-engineering-skills/llmops-release-review/SKILL.md">
-                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" disabled>Copy</button></div>
+                <div class="code-block-header"><span>SKILL.md</span><button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false" disabled>Wrap</button><button class="code-block-copy" type="button" aria-label="Copy skill Markdown" title="Copy skill Markdown" disabled><svg class="code-block-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#skill-copy-icon"></use></svg></button></div>
                 <div class="code-block-content" role="region" aria-label="LLMOps skill Markdown source" tabindex="0"><pre><code>Open this section to load the skill source.</code></pre></div>
                 <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
               </div>
@@ -462,6 +473,8 @@
     </div>
   </main>
   <footer class="footer">Enterprise enablement &middot; Independent guidance. Official sources, clearly linked.</footer>
+  <script src="guide.js" type="module"></script>
+  <script src="guide.js" type="module"></script>
   <script src="assets/agentic-engineering-skills/code-block.js" type="module"></script>
 </body>
 </html>

@@ -123,6 +123,15 @@ try {
         assert.equal(await landing.locator('h1').evaluate(heading => document.fonts.check(`700 ${getComputedStyle(heading).fontSize} "Mona Sans"`)), true, 'Mona Sans must load for the agentic title');
         const chapters = page.locator('.chapter[data-part]');
         assert.equal(await chapters.count(), guide.parts, 'Each agentic engineering part needs a chapter');
+        const navigation = page.locator('.guide-nav .chapter-nav');
+        await page.waitForFunction(expanded => document.querySelector('.guide-nav .chapter-nav')?.open === expanded, width > 760);
+        assert.equal(await navigation.locator('.guide-part').count(), guide.parts, 'Guide navigation needs a link for every part');
+        assert.equal(await navigation.evaluate(details => details.open), width > 760, 'Guide navigation should be expanded on desktop and collapsed on mobile');
+        assert.equal(await navigation.locator('summary').isVisible(), width <= 760, 'Guide navigation disclosure should be visible on mobile');
+        if (width <= 760) await navigation.locator('summary').click();
+        await navigation.locator('a[href="#mcp-api"]').click();
+        await page.waitForFunction(() => document.querySelector('.guide-nav a[href="#mcp-api"]')?.getAttribute('aria-current') === 'location');
+        if (width <= 760) assert.equal(await navigation.evaluate(details => details.open), false, 'Mobile guide navigation should close after selecting a part');
         for (const [index, id] of agenticChapters.entries()) {
           const chapter = chapters.nth(index);
           assert.equal(await chapter.getAttribute('data-part'), String(index + 1), 'Chapters must stay in topic order');
@@ -136,6 +145,9 @@ try {
           const skillPath = `assets/agentic-engineering-skills/${skillName}/SKILL.md`;
           assert.equal(await skillLink.getAttribute('href'), skillPath, `Part ${index + 1} skill download must match its skill folder`);
           assert.equal(await skillLink.getAttribute('download'), 'SKILL.md', `Part ${index + 1} skill must download as SKILL.md`);
+          const copyButton = preview.locator('.code-block-copy');
+          assert.equal(await copyButton.getAttribute('aria-label'), 'Copy skill Markdown', 'The copy icon needs an accessible label');
+          assert.equal(await copyButton.locator('svg[aria-hidden="true"] use').getAttribute('href'), '#skill-copy-icon', 'The copy action needs its clipboard icon');
           assert.match(await preview.locator('.skill-preview-body').textContent(), new RegExp(`\\.github/skills/${skillName}/SKILL\\.md`), `Part ${index + 1} must explain its install path`);
           const sourceResponse = await fetch(new URL(skillPath, page.url()));
           assert.equal(sourceResponse.status, 200, `Part ${index + 1} skill file must be served`);
@@ -144,13 +156,13 @@ try {
           if (index === 0) {
             const codeBlock = preview.locator('[data-code-block]');
             await preview.locator('summary').click();
-            await codeBlock.locator('[data-loaded="true"]').waitFor();
+            await preview.locator('[data-code-block][data-loaded="true"]').waitFor();
             assert.equal(await codeBlock.locator('code').textContent(), skillSource, 'The first code block must show its actual skill source');
             assert.ok(await codeBlock.locator('.md-yaml-key').count() > 0, 'Skill front matter must be syntax highlighted');
             assert.ok(await codeBlock.locator('.md-heading-text').count() > 0, 'Skill headings must be syntax highlighted');
             assert.ok(await codeBlock.locator('.md-list-marker').count() > 0, 'Skill list markers must be syntax highlighted');
             assert.ok(await codeBlock.locator('.md-strong').count() > 0, 'Skill emphasis must be syntax highlighted');
-            assert.equal(await codeBlock.locator('.code-block-copy').isEnabled(), true, 'The skill copy action must be enabled once its source loads');
+            assert.equal(await copyButton.isEnabled(), true, 'The skill copy action must be enabled once its source loads');
             const wrapButton = codeBlock.locator('.code-block-wrap');
             await wrapButton.click();
             assert.equal(await wrapButton.getAttribute('aria-pressed'), 'true', 'Skill code blocks must offer a wrap mode');
@@ -159,9 +171,11 @@ try {
               configurable: true,
               value: { writeText: text => { window.__copiedSkill = text; return Promise.resolve(); } },
             }));
-            await codeBlock.locator('.code-block-copy').click();
-            await page.waitForFunction(() => document.querySelector('[data-skill-name="agentic-vocabulary-review"] .code-block-copy')?.textContent === 'Copied');
+            await copyButton.click();
+            await page.waitForFunction(() => document.querySelector('[data-skill-name="agentic-vocabulary-review"] .code-block-copy')?.dataset.copied === 'true');
+            assert.equal(await copyButton.locator('use').getAttribute('href'), '#skill-copied-icon', 'Copy success should replace the clipboard glyph with a confirmation icon');
             assert.equal(await page.evaluate(() => window.__copiedSkill), skillSource, 'Copy must put the full Markdown source on the clipboard');
+            assert.equal(await codeBlock.locator('.code-block-status').textContent(), 'Skill Markdown copied to the clipboard.', 'Copy success must be announced');
           }
         }
         const diagrams = page.locator('figure.diagram-embed');

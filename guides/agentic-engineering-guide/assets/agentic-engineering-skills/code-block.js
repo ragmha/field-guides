@@ -83,7 +83,9 @@ for (const preview of document.querySelectorAll("[data-skill-preview]")) {
   const code = block.querySelector("code");
   const wrapButton = block.querySelector(".code-block-wrap");
   const copyButton = block.querySelector(".code-block-copy");
+  const copyIcon = copyButton.querySelector("use");
   const status = block.querySelector(".code-block-status");
+  let copyResetTimer;
 
   const loadSource = async () => {
     if (block.dataset.loaded === "true" || block.dataset.loading === "true") return;
@@ -120,10 +122,19 @@ for (const preview of document.querySelectorAll("[data-skill-preview]")) {
   copyButton.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(code.textContent);
-      copyButton.textContent = "Copied";
+      clearTimeout(copyResetTimer);
+      copyIcon.setAttribute("href", "#skill-copied-icon");
+      copyButton.dataset.copied = "true";
+      copyResetTimer = setTimeout(() => {
+        copyIcon.setAttribute("href", "#skill-copy-icon");
+        delete copyButton.dataset.copied;
+      }, 2000);
       status.textContent = "Skill Markdown copied to the clipboard.";
       status.classList.remove("sr-only");
     } catch (error) {
+      clearTimeout(copyResetTimer);
+      copyIcon.setAttribute("href", "#skill-copy-icon");
+      delete copyButton.dataset.copied;
       status.textContent = "Could not copy automatically. Focus the Markdown and copy it manually.";
       status.classList.remove("sr-only");
       console.error(error);
