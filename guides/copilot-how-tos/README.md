@@ -1,6 +1,6 @@
 # Copilot how-to workspace
 
-This Astro workspace serves the IDE and prompting guides at separate routes under `/field-guides`. The manifest at `src/manifest.ts` owns guide display metadata, artwork metadata, part order, lesson order, and route inputs. Static generation validates the manifest against every Markdown file before emitting pages.
+This Astro workspace serves the Copilot how-to guides at separate routes under `/field-guides`. The manifest at `src/manifest.ts` owns guide display metadata, artwork metadata, part order, lesson order, and route inputs. Static generation validates the manifest against every Markdown file before emitting pages.
 
 ## Adding or editing content
 

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="600" viewBox="0 0 720 600" role="img" aria-labelledby="title desc">
+  <title id="title">An interactive agent task</title>
+  <desc id="desc">An engraved editor connected to task cards and a magnifying glass.</desc>
+  <defs><pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" stroke="#333" stroke-width=".65"/></pattern></defs>
+  <g fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M83 359C56 257 104 144 202 106M523 105c95 44 131 149 104 244M98 356C75 264 117 157 208 120M518 120c78 39 113 133 94 225" stroke-width=".8"/>
+    <path d="M351 62v24m-12-12h24M104 165l-12-7m19-8-10-9m498 25 12-7m-19-8 10-9"/>
+    <path d="M103 151h334q12 0 12 12v245q0 12-12 12H103q-12 0-12-12V163q0-12 12-12z" fill="#fff" stroke-width="2.4"/>
+    <path d="M97 157h346v29H97z" fill="url(#h)" stroke-width="1"/>
+    <circle cx="112" cy="171" r="3" fill="#fff"/><circle cx="124" cy="171" r="3" fill="#fff"/><circle cx="136" cy="171" r="3" fill="#fff"/>
+    <path d="M104 193h76v216h-76zM187 193v216" stroke-width="1"/>
+    <path d="M115 210h39m-39 13h49m-49 13h34m-34 25h42m-42 13h48m-48 13h37M204 214h54m9 0h48m-111 20h25m9 0h85m-107 20h48m9 0h73m-130 20h33m9 0h92m-144 20h69m9 0h36m-114 20h28m10 0h70m-108 20h55m9 0h41" stroke-width="1.8"/>
+    <path d="M205 348h151v35H205z" fill="url(#h)" stroke-width=".8"/><path d="M215 360h54m8 0h65m-127 12h85" stroke-width="1"/>
+    <path d="M477 175l140 12-5 72-140-12zM480 288l140-12 6 72-140 12z" fill="#fff" stroke-width="2"/>
+    <path d="M487 189l115 10m-116 5 88 8m-90 6 104 9M492 302l112-10m-110 23 84-8m-82 21 103-9" stroke-width="1.4"/>
+    <circle cx="460" cy="220" r="5" fill="#fff"/><circle cx="463" cy="320" r="5" fill="#fff"/>
+    <path d="M449 220h6m-1 100h4m-2-95c-20 23-20 56 1 89M460 264h-10m10 0-5-5m5 5-5 5" stroke-width="1.2"/>
+    <circle cx="500" cy="409" r="58" fill="#fff" stroke-width="2.5"/><circle cx="500" cy="409" r="48" stroke-width="1"/>
+    <path d="M469 405l12 12 19-25m-13 35h34m-28 9h28" stroke-width="2"/>
+    <path d="M542 450l73 73-12 12-73-73z" fill="#fff" stroke-width="2.5"/><path d="M544 459l63 63m-69-57 63 63" stroke-width=".8"/>
+    <path d="M104 446c90 9 199 12 303 8M111 456c83 8 188 11 275 8M131 480c98 10 205 11 301 5M169 490c81 7 164 8 239 4" stroke-width=".8"/>
+    <path d="M130 433l-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7m22-7-12 7" stroke-width=".6"/>
+  </g>
+</svg>

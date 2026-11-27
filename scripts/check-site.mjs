@@ -15,7 +15,7 @@ const existingGuides = [
   ['champions-at-scale', 3, 'static'],
   ['github-enterprise-field-guide', 10, 'static'],
 ];
-assert.equal(guides.length, existingGuides.length + 2);
+assert.equal(guides.length, existingGuides.length + howTos.length);
 for (const [name, parts, type] of existingGuides) {
   const matches = guides.filter(guide => guide.name === name);
   assert.equal(matches.length, 1, `${name} must remain registered exactly once`);
