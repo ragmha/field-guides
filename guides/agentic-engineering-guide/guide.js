@@ -13,9 +13,11 @@ let updateScheduled = false;
 function updateCurrent() {
   updateScheduled = false;
   const threshold = document.querySelector(".topbar").getBoundingClientRect().bottom + 40;
+  const scrollPadding = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
   let active = sections[0];
   for (const section of sections.slice(1)) {
-    if (section.target.getBoundingClientRect().top <= threshold) active = section;
+    const scrollMargin = parseFloat(getComputedStyle(section.target).scrollMarginTop) || 0;
+    if (section.target.getBoundingClientRect().top <= Math.max(threshold, scrollPadding + scrollMargin + 2)) active = section;
     else break;
   }
   const last = sections.at(-1);
