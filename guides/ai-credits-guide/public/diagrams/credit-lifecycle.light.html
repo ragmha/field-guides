@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Follow the credits, not the seats</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; background: #f3f5f7; color: #1f2328; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 704px; margin: 0 auto; }
+    .eyebrow { color: #59636e; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 8px 0 20px; font-size: 24px; line-height: 1.2; }
+    .diagram-container { overflow-x: auto; border: 1px solid #d1d9e0; border-radius: 6px; background: #f3f5f7; }
+    .diagram-container:focus-visible { outline: 2px solid #1a7f37; outline-offset: 3px; }
+    svg { display: block; width: 100%; min-width: 640px; height: auto; }
+    figcaption { margin-top: 12px; color: #59636e; font-size: 12px; }
+    nav { display: flex; gap: 16px; margin-top: 12px; }
+    a { color: #0550ae; text-underline-offset: 3px; }
+    @media print { body { padding: 0; } .diagram-container { overflow: visible; } svg { min-width: 0; } nav { display: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">AI Credits guide · Flowchart</p>
+    <h1>Follow the credits, not the seats</h1>
+    <figure>
+      <div class="diagram-container" tabindex="0" role="region" aria-label="Follow the credits, not the seats. Scroll horizontally to explore."><svg viewBox="0 0 640 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="credit-lifecycle-light-title credit-lifecycle-light-desc">
+  <title id="credit-lifecycle-light-title">Follow the credits, not the seats</title>
+  <desc id="credit-lifecycle-light-desc">Business and Enterprise licenses fund a shared included pool. After it is exhausted, paid usage needs policy permission and available enforced headroom. Copilot access has no included pool.</desc>
+  <defs><marker id="credit-lifecycle-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M 0 0 L 8 3 L 0 6 Z" fill="#59636e"/></marker></defs>
+  <style>
+    svg { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1f2328; }
+    .paper { fill: #f3f5f7; }
+    .node, .step-card { fill: #ffffff; stroke: #d1d9e0; stroke-width: 1.5; }
+    .node.focus, .step-card.focus { fill: #eaf6ed; stroke: #1a7f37; stroke-width: 2; }
+    .decision { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+    .hub { fill: #eaf6ed; stroke: #1a7f37; stroke-width: 1.5; }
+    .step-number { fill: #f3f5f7; stroke: #d1d9e0; stroke-width: 1.5; }
+    .step-number.focus { fill: #1a7f37; stroke: #1a7f37; }
+    .eyebrow, .detail, .note { fill: #59636e; }
+    .node-name, .number { fill: #1f2328; }
+    .arrow { fill: none; stroke: #59636e; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#credit-lifecycle-light-arrow); }
+    .spoke { fill: none; stroke: #59636e; stroke-width: 1; stroke-dasharray: 4 3; }
+    .eyebrow { font-size: 8px; font-weight: 600; letter-spacing: .12em; }
+    .node-name { font-size: 12px; font-weight: 600; }
+    .detail { font-size: 9px; }
+    .arrow-label { fill: #59636e; font-size: 8px; font-weight: 600; letter-spacing: .06em; }
+    .label-mask { fill: #f3f5f7; }
+    .number { font-size: 9px; font-weight: 600; }
+    .note { font-size: 10px; }
+  </style>
+  <rect x="0" y="0" width="640" height="560" class="paper"/>
+  <path d="M 320 100 L 320 144" class="arrow" marker-end="url(#credit-lifecycle-light-arrow)"/><path d="M 216 196 L 164 196 Q 156 196 156 204 L 156 320" class="arrow" marker-end="url(#credit-lifecycle-light-arrow)"/><rect x="161" y="237" width="30" height="16" rx="2" class="label-mask"/><text x="176" y="248" text-anchor="middle" class="arrow-label">YES</text><path d="M 424 196 L 473 196 Q 481 196 481 204 L 481 300" class="arrow" marker-end="url(#credit-lifecycle-light-arrow)"/><rect x="439" y="237" width="24" height="16" rx="2" class="label-mask"/><text x="451" y="248" text-anchor="middle" class="arrow-label">NO</text><path d="M 154 408 L 154 472" class="arrow" marker-end="url(#credit-lifecycle-light-arrow)"/><path d="M 386 352 L 360 352 Q 352 352 352 360 L 352 472" class="arrow" marker-end="url(#credit-lifecycle-light-arrow)"/><rect x="337" y="410" width="30" height="16" rx="2" class="label-mask"/><text x="352" y="421" text-anchor="middle" class="arrow-label">YES</text><path d="M 576 352 L 580 352 Q 584 352 584 356 L 584 472" class="arrow" marker-end="url(#credit-lifecycle-light-arrow)"/><rect x="572" y="410" width="24" height="16" rx="2" class="label-mask"/><text x="584" y="421" text-anchor="middle" class="arrow-label">NO</text><g><rect x="180" y="32" width="280" height="68" rx="6" class="node"/><text x="320" y="50" text-anchor="middle" class="eyebrow"><tspan>FUNDING</tspan></text><text x="320" y="74" text-anchor="middle" class="node-name"><tspan>Business or Enterprise</tspan></text><text x="320" y="90" text-anchor="middle" class="detail"><tspan>Shared included-credit pool</tspan></text></g><g><polygon points="320,144 424,196 320,248 216,196" class="decision"/><text x="320" y="189" text-anchor="middle" class="node-name"><tspan>Included credits</tspan><tspan x="320" dy="14">remain?</tspan></text></g><g><rect x="36" y="320" width="236" height="88" rx="6" class="node focus"/><text x="154" y="338" text-anchor="middle" class="eyebrow"><tspan>INCLUDED</tspan></text><text x="154" y="362" text-anchor="middle" class="node-name"><tspan>Shared pool</tspan></text><text x="154" y="378" text-anchor="middle" class="detail"><tspan>Credits are pooled,</tspan><tspan x="154" dy="12">not user wallets</tspan></text></g><g><polygon points="481,300 576,352 481,404 386,352" class="decision"/><text x="481" y="345" text-anchor="middle" class="node-name"><tspan>Paid-use policy and</tspan><tspan x="481" dy="14">enforced budgets allow?</tspan></text></g><g><rect x="36" y="472" width="236" height="64" rx="6" class="node"/><text x="154" y="490" text-anchor="middle" class="eyebrow"><tspan>CONTINUE</tspan></text><text x="154" y="514" text-anchor="middle" class="node-name"><tspan>Credit use continues</tspan></text><text x="154" y="530" text-anchor="middle" class="detail"><tspan>Within included funding</tspan></text></g><g><rect x="304" y="472" width="160" height="64" rx="6" class="node"/><text x="384" y="490" text-anchor="middle" class="eyebrow"><tspan>YES</tspan></text><text x="384" y="514" text-anchor="middle" class="node-name"><tspan>Metered use</tspan></text><text x="384" y="530" text-anchor="middle" class="detail"><tspan>Paid usage allowed</tspan></text></g><g><rect x="492" y="472" width="124" height="64" rx="6" class="node"/><text x="554" y="490" text-anchor="middle" class="eyebrow"><tspan>NO</tspan></text><text x="554" y="514" text-anchor="middle" class="node-name"><tspan>Blocked</tspan></text><text x="554" y="530" text-anchor="middle" class="detail"><tspan>Policy denies spend</tspan></text></g>
+</svg></div>
+      <figcaption>Business and Enterprise licenses fund a shared included pool. After it is exhausted, paid usage needs policy permission and available enforced headroom. Copilot access has no included pool.</figcaption>
+    </figure>
+    <nav aria-label="Diagram variants"><a href="credit-lifecycle.light.html">Light version</a><a href="credit-lifecycle.dark.html">Dark version</a></nav>
+  </main>
+</body>
+</html>

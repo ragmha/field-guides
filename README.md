@@ -38,8 +38,11 @@ repositories. Each guide's start page opens with a shared landing: a hero
 with the guide's pen-and-ink illustration and a Parts grid. The Astro guides
 render `shared/Landing.astro`; the two static guides carry the same markup
 and CSS in their own files. Astro landings retain introductory notes and sources
-without repeating chapter sidebars or course indexes. Every topic has a visible
-return to the collection on mobile. Chapter-page layouts and the static topics'
+without repeating chapter sidebars or course indexes. Astro guides share
+`shared/GuideHeader.astro`, with a breadcrumb linking back to **All guides**
+and the guide overview, and identifying the current page.
+Every topic has a visible return to the collection on mobile.
+Chapter-page layouts and the static topics'
 substantive content are retained.
 
 ## Build and preview
@@ -71,7 +74,7 @@ bun run --cwd guides/ai-credits-guide dev
 
 ```sh
 bun run check          # Astro/TypeScript checks across all Astro workspaces
-bun run test           # Existing content tests in all three Astro guides
+bun run test           # Existing content tests in all Astro guides
 bun run build
 bun run test:browser   # Existing browser suites, Champions checks, site checks
 bun run test:diagrams  # AI Credits native Excalidraw export checks (local only)
@@ -90,10 +93,12 @@ BROWSER_CHANNEL=chromium bun run test:browser
 
 `bun run test:site` checks generated HTML routes and local linked assets,
 theme persistence across all guides, system theme changes, keyboard access
-and narrow-screen containment. Set `SCREENSHOT_DIR` to an artifact directory
+and narrow-screen containment. It also requires Python (`python` on Windows,
+`python3` elsewhere). Set `SCREENSHOT_DIR` to an artifact directory
 to capture the hub and every guide landing in light/dark at desktop and
 mobile widths.
-It starts and stops its own preview on port 4173; stop a manual preview first.
+It starts and stops its own preview on port 4173. Set `PORT` to use a
+different port if a preview is already running.
 Existing guide screenshot output stays in ignored `test-results/`.
 
 ## Add a guide
