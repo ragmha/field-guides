@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-const base = '/field-guides/data-residency-guide';
+const base = `${process.env.SITE_BASE ?? '/field-guides'}/data-residency-guide`;
 
 function projectLinks() {
   return (tree) => {

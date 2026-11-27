@@ -93,11 +93,28 @@ Existing guide screenshot output stays in ignored `test-results/`.
    workspace name. Give its start page the landing (`shared/Landing.astro`
    for Astro, copied markup for static) with one card per part.
 3. For Astro, set `site` to `https://ragmha.github.io` and `base` to
-   `/field-guides/<name>/`. Update content, tests and preview URLs that use
+   `` `${process.env.SITE_BASE ?? '/field-guides'}/<name>` `` so translated
+   builds can move it under `/field-guides/<locale>/`. Update content, tests and preview URLs that use
    the old project path. Keep static asset references relative.
 4. Remove imported `.github/` workflows and per-guide lockfiles. Add the
    guide's existing checks to root scripts; run `bun install` at the root.
 5. Run the root checks and inspect the built guide before publication.
+
+## Translations
+
+Finnish lives in `i18n/fi/`, which mirrors source paths (for example
+`i18n/fi/shared/Landing.astro`). `bun run build` copies the sources to the
+ignored `.i18n-build/fi/`, overlays the translations and builds
+`dist/fi/` at `/field-guides/fi/`. Files without a translation fall back to
+English. Pages with a counterpart get `hreflang` links and a language switch.
+Add another locale by creating `i18n/<two-letter code>/`.
+
+`.github/workflows/translate-fi.md` is a
+[GitHub Agentic Workflow](https://github.github.com/gh-aw/). On pushes to
+`main` that touch guide sources, and on manual dispatch, it translates new
+or changed files and opens a draft `[translate-fi]` pull request for review.
+It needs a `COPILOT_GITHUB_TOKEN` repository secret. After editing the
+workflow, run `gh aw compile translate-fi` and commit the `.lock.yml`.
 
 ## Deployment and maintenance
 

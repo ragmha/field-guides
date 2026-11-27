@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { existsSync } from 'node:fs';
 import { readdir, readFile, mkdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -174,6 +175,16 @@ try {
   assert.equal(await ledgerHubLink.evaluate(link => link.href), base, 'Evidence ledger breadcrumb must link to the hub');
   await ledgerHubLink.click();
   assert.equal(page.url(), base, 'Evidence ledger breadcrumb must return to the collection');
+  if (existsSync('dist/fi')) {
+    await page.goto(`${base}fi/`);
+    assert.equal(await page.locator('html').getAttribute('lang'), 'fi', 'Finnish hub must declare its language');
+    assert.equal(await page.locator('.guide-card').count(), guides.length, 'Finnish hub must list every guide');
+    await page.locator('.lang-switch').click();
+    assert.equal(page.url(), base, 'Finnish pages must link to their English original');
+    await page.goto(`${base}ai-credits-guide/`);
+    await page.locator('.lang-switch').click();
+    assert.equal(page.url(), `${base}fi/ai-credits-guide/`, 'English pages must link to their Finnish translation');
+  }
   await page.goto(base);
   await page.selectOption('#theme', 'system');
   for (const colorScheme of ['dark', 'light']) {
