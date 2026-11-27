@@ -141,7 +141,7 @@ try {
           const preview = chapter.locator('[data-skill-preview]');
           assert.equal(await preview.count(), 1, `Part ${index + 1} needs its own Agent Skill`);
           const skillName = await preview.getAttribute('data-skill-name');
-          const skillLink = preview.getByRole('link', { name: 'Download SKILL.md', exact: true });
+          const skillLink = preview.getByRole('link', { name: 'Download SKILL.md', exact: true, includeHidden: true });
           const skillPath = `assets/agentic-engineering-skills/${skillName}/SKILL.md`;
           assert.equal(await skillLink.getAttribute('href'), skillPath, `Part ${index + 1} skill download must match its skill folder`);
           assert.equal(await skillLink.getAttribute('download'), 'SKILL.md', `Part ${index + 1} skill must download as SKILL.md`);
