@@ -12,6 +12,7 @@ adoption.
 | [Copilot Governance](https://ragmha.github.io/field-guides/copilot-governance-guide/) | Enterprise adoption and controls |
 | [Champions at Scale](https://ragmha.github.io/field-guides/champions-at-scale/) | Building a champions programme |
 | [GitHub Enterprise](https://ragmha.github.io/field-guides/github-enterprise-field-guide/) | Enterprise enablement |
+| [Agentic Engineering](https://ragmha.github.io/field-guides/agentic-engineering-guide/) | Agentic software engineering and operations |
 
 ## How it works
 
