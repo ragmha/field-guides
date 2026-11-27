@@ -121,6 +121,26 @@ try {
         await page.evaluate(() => document.fonts.ready);
         assert.match(await landing.locator('h1').evaluate(heading => getComputedStyle(heading).fontFamily), /^"Mona Sans"/, 'Agentic title must use Mona Sans');
         assert.equal(await landing.locator('h1').evaluate(heading => document.fonts.check(`700 ${getComputedStyle(heading).fontSize} "Mona Sans"`)), true, 'Mona Sans must load for the agentic title');
+        const skillLink = page.getByRole('link', { name: 'Download the Agent Skill', exact: true });
+        assert.equal(await skillLink.getAttribute('href'), 'assets/agentic-engineering-review/SKILL.md', 'Agentic guide must link to the companion skill');
+        assert.equal(await skillLink.getAttribute('download'), 'SKILL.md', 'The companion skill must be downloadable');
+        assert.match(await (await fetch(new URL(await skillLink.getAttribute('href'), page.url()))).text(), /^---\nname: agentic-engineering-review\n/m, 'The downloadable skill must have valid Copilot skill metadata');
+        assert.match(await page.locator('#agentic-skill').textContent(), /\.github\/skills\/agentic-engineering-review\/SKILL\.md/, 'The guide must explain the repository install path');
+        const codeBlock = page.locator('[data-code-block]');
+        await page.waitForFunction(() => document.querySelector('[data-code-block]')?.dataset.loaded === 'true');
+        assert.equal(await codeBlock.locator('code').textContent(), await (await fetch(new URL(await skillLink.getAttribute('href'), page.url()))).text(), 'The code block must display the actual skill source');
+        assert.equal(await codeBlock.locator('.code-block-copy').isEnabled(), true, 'The skill copy action must be enabled once its source loads');
+        const wrapButton = codeBlock.locator('.code-block-wrap');
+        await wrapButton.click();
+        assert.equal(await wrapButton.getAttribute('aria-pressed'), 'true', 'The skill code block must offer a wrap mode');
+        assert.equal(await codeBlock.locator('code').evaluate(code => getComputedStyle(code).whiteSpace), 'pre-wrap', 'Wrapped Markdown lines must not require horizontal scrolling');
+        await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', {
+          configurable: true,
+          value: { writeText: text => { window.__copiedSkill = text; return Promise.resolve(); } },
+        }));
+        await codeBlock.locator('.code-block-copy').click();
+        assert.equal(await page.evaluate(() => window.__copiedSkill), await codeBlock.locator('code').textContent(), 'Copy must put the full Markdown source on the clipboard');
+        assert.equal(await codeBlock.locator('.code-block-copy').textContent(), 'Copied', 'Copy must confirm completion');
         const chapters = page.locator('.chapter[data-part]');
         assert.equal(await chapters.count(), guide.parts, 'Each agentic engineering part needs a chapter');
         for (const [index, id] of agenticChapters.entries()) {

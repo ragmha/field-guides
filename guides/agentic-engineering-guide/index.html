@@ -90,6 +90,24 @@
       <article class="guide-content">
         <p>GitHub can be the place where a team records intent, reviews changes and runs delivery controls. It is not automatically the runtime, the evaluator or the observability backend for every AI system. This distinction makes the following choices easier.</p>
         <p>The examples below describe a fictional service and are starting points, not default policies. Feature availability depends on your plan, environment and organization settings.</p>
+        <aside class="practice skill-callout" id="agentic-skill" aria-labelledby="skill-title">
+          <h3 id="skill-title">Run the exercises with a Copilot Agent Skill</h3>
+          <p>The companion skill can review one topic or all ten against a repository, cite the evidence it finds and call out what it cannot verify. It is read-only: your team keeps the decisions and any changes.</p>
+          <p><a href="assets/agentic-engineering-review/SKILL.md" download="SKILL.md">Download the Agent Skill</a></p>
+          <p><strong>Install:</strong> add the downloaded file to your repository at <code>.github/skills/agentic-engineering-review/SKILL.md</code>, then ask Copilot to review a specific part or the full guide.</p>
+          <div class="code-block" data-code-block data-source="assets/agentic-engineering-review/SKILL.md">
+            <div class="code-block-header">
+              <span>SKILL.md</span>
+              <button class="code-block-wrap" type="button" aria-label="Wrap lines" aria-pressed="false">Wrap</button>
+              <button class="code-block-copy" type="button" disabled>Copy</button>
+            </div>
+            <div class="code-block-content" role="region" aria-label="Agent Skill Markdown source" tabindex="0">
+              <pre><code>Loading skill source…</code></pre>
+            </div>
+            <p class="code-block-status sr-only" role="status" aria-live="polite"></p>
+          </div>
+          <noscript><p>JavaScript is required to preview the file. <a href="assets/agentic-engineering-review/SKILL.md" download="SKILL.md">Download SKILL.md</a> instead.</p></noscript>
+        </aside>
 
         <section class="chapter" id="terminology" data-part="1" aria-labelledby="terminology-title">
           <h2 id="terminology-title"><span>PART 01</span> A shared vocabulary for agentic work</h2>
@@ -343,5 +361,6 @@
     </div>
   </main>
   <footer class="footer">Enterprise enablement &middot; Independent guidance. Official sources, clearly linked.</footer>
+  <script src="assets/agentic-engineering-review/code-block.js" type="module"></script>
 </body>
 </html>

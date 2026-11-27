@@ -146,6 +146,19 @@ html[data-theme="dark"] .landing-art { filter: invert(1) brightness(.82); mix-bl
 .practice { margin: 24px 0; padding: 20px 24px; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface) }
 .practice h3 { margin-top: 0 }
 .practice > :last-child { margin-bottom: 0 }
+.skill-callout > p code { padding: 2px 5px; background: var(--inset); font: 13px/1.5 var(--font-mono) }
+.code-block { margin-top: 20px; overflow: hidden; border: 1px solid var(--rule); border-radius: 6px; background: var(--inset) }
+.code-block-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 12px; border-bottom: 1px solid var(--rule); background: var(--surface); color: var(--muted); font: 12px/1.4 var(--font-mono) }
+.code-block-wrap, .code-block-copy { min-height: 32px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); color: var(--ink); font: 600 12px/1.4 var(--font-sans); cursor: pointer }
+.code-block-wrap { margin-left: auto }
+.code-block-wrap:hover, .code-block-copy:hover:not(:disabled) { border-color: var(--link); color: var(--link) }
+.code-block-wrap[aria-pressed="true"] { border-color: var(--link); color: var(--link) }
+.code-block-copy:disabled { color: var(--muted); cursor: not-allowed }
+.code-block-content { max-height: 620px; overflow: auto; overscroll-behavior: contain }
+.code-block pre { margin: 0; padding: 16px; text-align: left }
+.code-block-content code { color: var(--body); font: 13px/1.6 var(--font-mono); white-space: pre }
+.code-block-content code.is-wrapped { white-space: pre-wrap; overflow-wrap: anywhere }
+.code-block-status:not(.sr-only) { margin: 0; padding: 8px 12px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px }
 .boundary { padding: 14px 16px; border: 1px solid var(--rule); border-radius: 4px; background: var(--inset) }
 .source-note { margin-top: 24px !important; color: var(--muted); font-size: 14px }
 .source-note a { white-space: normal }
@@ -202,4 +215,5 @@ html[data-theme="dark"] .landing-art { filter: invert(1) brightness(.82); mix-bl
   .diagram-embed { break-inside: avoid }
   .diagram-hint { display: none }
   .diagram-scroll { overflow: visible }
+  .code-block-content { max-height: none; overflow: visible }
 }
