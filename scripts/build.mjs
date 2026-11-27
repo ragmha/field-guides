@@ -6,7 +6,6 @@ import { guides } from '../guides.mjs';
 const sites = [{ name: 'hub', type: 'astro' }, ...guides];
 const sourceOf = name => (name === 'hub' ? 'hub' : `guides/${name}`);
 const locales = existsSync('i18n') ? readdirSync('i18n').filter(locale => /^[a-z]{2}$/.test(locale)) : [];
-const language = { fi: 'Suomeksi', en: 'In English' };
 
 function build(root, out, base) {
   for (const { name, type } of sites) {
@@ -61,14 +60,26 @@ function pages(directory, relative = '') {
 
 function link(html, to, href) {
   const url = `/field-guides/${href.replace(/(^|\/)index\.html$/, '$1')}`;
+  const current = to === 'en' ? 'fi' : 'en';
+  const hasHeader = /<header(?:\s|>)/i.test(html);
+  const assets = hasHeader
+    ? '<link rel="stylesheet" href="/field-guides/language-switch.css" /><script type="module" src="/field-guides/language-switch.js"></script>'
+    : '';
+  const control = `<div class="language-switch" data-language-switch data-language="${current}" data-target="${url}"><a class="language-switch-fallback" href="${url}" hreflang="${to}">${to === 'fi' ? 'Suomeksi' : 'In English'}</a></div>`;
   return html
-    .replace('</head>', `<link rel="alternate" hreflang="${to}" href="${url}" /></head>`)
-    .replace('</body>', `<a class="lang-switch" href="${url}" hreflang="${to}" lang="${to}" style="position:fixed;right:12px;bottom:12px;z-index:50;padding:6px 12px;border:1px solid var(--rule,#d0d7de);border-radius:4px;background:var(--surface,#fff);color:var(--ink,#1f2328);font:600 13px/1.4 system-ui,sans-serif;text-decoration:none">${language[to]}</a></body>`);
+    .replace('</head>', `<link rel="alternate" hreflang="${to}" href="${url}" />${assets}</head>`)
+    .replace(/<\/header>/i, `${control}</header>`);
 }
 
 rmSync('dist', { recursive: true, force: true });
 mkdirSync('dist');
 build('.', 'dist', '/field-guides');
+if (locales.length) {
+  const bundle = spawnSync('bun', ['build', 'shared/language-switch.jsx', '--target=browser', '--minify', '--define', 'process.env.NODE_ENV="production"', '--outfile=dist/language-switch.js'], { stdio: 'inherit' });
+  if (bundle.error) throw bundle.error;
+  if (bundle.status !== 0) process.exit(bundle.status ?? 1);
+  cpSync('shared/language-switch.css', 'dist/language-switch.css');
+}
 for (const locale of locales) {
   buildLocale(locale);
   for (const page of pages('dist')) {

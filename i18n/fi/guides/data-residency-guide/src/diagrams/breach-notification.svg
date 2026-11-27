@@ -1,0 +1,73 @@
+<svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="breach-notification-title breach-notification-desc">
+  <title id="breach-notification-title">Kuka ilmoittaa kenelle tietoturvaloukkauksen jälkeen</title>
+  <desc id="breach-notification-desc">GitHub ilmoittaa sinulle ilman aiheetonta viivytystä DPA:n §6:n mukaisesti ja avustaa lain edellyttämällä tavalla. Rekisterinpitäjä arvioi, onko sen ilmoitettava viranomaiselle ilman aiheetonta viivytystä ja mahdollisuuksien mukaan 72 tunnin kuluessa sekä onko sen ilmoitettava suuren riskin kohteena oleville henkilöille GDPR:n artiklojen 33 ja 34 mukaisesti.</desc>
+  <defs>
+    <marker id="breach-notification-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e" class="muted"/></marker>
+    <marker id="breach-notification-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a7f37" class="accent"/></marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff" class="paper"/>
+
+  <line x1="40" y1="104" x2="600" y2="104" stroke="#d1d9e0" class="rule"/>
+  <line x1="40" y1="184" x2="600" y2="184" stroke="#d1d9e0" class="rule"/>
+  <line x1="40" y1="264" x2="600" y2="264" stroke="#d1d9e0" class="rule"/>
+  <line x1="128" y1="24" x2="128" y2="264" stroke="#d1d9e0" class="rule"/>
+
+  <text x="40" y="52" fill="#59636e" font-size="8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" letter-spacing="0.18em" class="muted">GITHUB</text>
+  <text x="40" y="68" fill="#59636e" font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">käsittelijä</text>
+  <text x="40" y="132" fill="#59636e" font-size="8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" letter-spacing="0.18em" class="muted">SINÄ</text>
+  <text x="40" y="148" fill="#59636e" font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">rekisterinpitäjä</text>
+  <text x="40" y="212" fill="#59636e" font-size="8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" letter-spacing="0.18em" class="muted">SAAJAT</text>
+  <text x="40" y="228" fill="#59636e" font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">viranomainen / henkilöt</text>
+
+  <line x1="280" y1="64" x2="312" y2="64" stroke="#59636e" stroke-width="1.2" class="arrow" marker-end="url(#breach-notification-arrow)"/>
+  <line x1="216" y1="88" x2="216" y2="120" stroke="#59636e" stroke-width="1.2" class="arrow" marker-end="url(#breach-notification-arrow)"/>
+  <line x1="376" y1="88" x2="376" y2="120" stroke="#59636e" stroke-width="1.2" stroke-dasharray="5,4" class="arrow" marker-end="url(#breach-notification-arrow)"/>
+  <line x1="280" y1="144" x2="312" y2="144" stroke="#59636e" stroke-width="1.2" class="arrow" marker-end="url(#breach-notification-arrow)"/>
+  <line x1="376" y1="168" x2="376" y2="200" stroke="#1a7f37" stroke-width="1.4" class="arrow-accent" marker-end="url(#breach-notification-arrow-accent)"/>
+  <line x1="440" y1="144" x2="472" y2="144" stroke="#59636e" stroke-width="1.2" stroke-dasharray="5,4" class="arrow" marker-end="url(#breach-notification-arrow)"/>
+  <line x1="536" y1="168" x2="536" y2="200" stroke="#59636e" stroke-width="1.2" stroke-dasharray="5,4" class="arrow" marker-end="url(#breach-notification-arrow)"/>
+
+  <rect x="386" y="178" width="64" height="12" rx="2" fill="#ffffff" class="paper"/>
+  <text x="390" y="187" fill="#1a7f37" font-size="8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="start" letter-spacing="0.06em" class="accent">JOS MAHD.</text>
+
+  <rect x="152" y="40" width="128" height="48" rx="6" fill="#ffffff" stroke="#1f2328" stroke-width="1" class="node"/>
+  <text x="216" y="60" fill="#1f2328" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" text-anchor="middle" class="ink">Ilmoittaa sinulle</text>
+  <text x="216" y="78" fill="#59636e" font-size="9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" class="muted">viivytyksettä · §6</text>
+
+  <rect x="312" y="40" width="128" height="48" rx="6" fill="#ffffff" stroke="#1f2328" stroke-width="1" class="node"/>
+  <text x="376" y="60" fill="#1f2328" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" text-anchor="middle" class="ink">Tutkii</text>
+  <text x="376" y="78" fill="#59636e" font-size="9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" class="muted">lieventää · §6</text>
+
+  <rect x="152" y="120" width="128" height="48" rx="6" fill="#ffffff" stroke="#1f2328" stroke-width="1" class="node"/>
+  <text x="216" y="140" fill="#1f2328" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" text-anchor="middle" class="ink">Arvioi loukkaus</text>
+  <text x="216" y="158" fill="#59636e" font-size="9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" class="muted">riski henkilöille</text>
+
+  <rect x="312" y="120" width="128" height="48" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1" class="focal"/>
+  <text x="376" y="140" fill="#1f2328" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" text-anchor="middle" class="ink">Ilmoita viranomaiselle</text>
+  <text x="376" y="158" fill="#59636e" font-size="9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" class="muted">jos riski · 33 art.</text>
+
+  <rect x="472" y="120" width="128" height="48" rx="6" fill="#1f2328" fill-opacity="0.02" stroke="#59636e" stroke-width="1" stroke-dasharray="4,3" class="optional"/>
+  <text x="536" y="140" fill="#1f2328" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" text-anchor="middle" class="ink">Ilmoita henkilöille</text>
+  <text x="536" y="158" fill="#59636e" font-size="9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" class="muted">suuri riski · 34 art.</text>
+
+  <rect x="312" y="200" width="128" height="48" rx="6" fill="#1f2328" fill-opacity="0.03" stroke="#59636e" stroke-width="1" class="external"/>
+  <text x="376" y="220" fill="#1f2328" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" text-anchor="middle" class="ink">Viranomainen</text>
+  <text x="376" y="238" fill="#59636e" font-size="9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" class="muted">valvova</text>
+
+  <rect x="472" y="200" width="128" height="48" rx="6" fill="#1f2328" fill-opacity="0.03" stroke="#59636e" stroke-width="1" class="external"/>
+  <text x="536" y="220" fill="#1f2328" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" text-anchor="middle" class="ink">Henkilöt</text>
+  <text x="536" y="238" fill="#59636e" font-size="9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" class="muted">rekisteröidyt</text>
+
+  <line x1="40" y1="280" x2="600" y2="280" stroke="#d1d9e0" stroke-width="0.8" class="rule"/>
+  <text x="40" y="296" fill="#59636e" font-size="8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" letter-spacing="0.14em" class="muted">SELITTEET</text>
+  <rect x="40" y="308" width="14" height="10" rx="2" fill="#ffffff" stroke="#1f2328" stroke-width="1" class="node"/>
+  <text x="60" y="317" fill="#59636e" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">Toimi</text>
+  <rect x="120" y="308" width="14" height="10" rx="2" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1" class="focal"/>
+  <text x="140" y="317" fill="#59636e" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">Velvollisuutesi</text>
+  <rect x="222" y="308" width="14" height="10" rx="2" fill="#1f2328" fill-opacity="0.03" stroke="#59636e" stroke-width="1" class="external"/>
+  <text x="242" y="317" fill="#59636e" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">Vastaanottaja</text>
+  <line x1="320" y1="313" x2="340" y2="313" stroke="#59636e" stroke-width="1.2" stroke-dasharray="4,3" class="arrow" marker-end="url(#breach-notification-arrow)"/>
+  <text x="348" y="317" fill="#59636e" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">Avustus / ehdollinen</text>
+  <line x1="476" y1="313" x2="496" y2="313" stroke="#1a7f37" stroke-width="1.4" class="arrow-accent" marker-end="url(#breach-notification-arrow-accent)"/>
+  <text x="504" y="317" fill="#59636e" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" class="muted">72 h:ssa jos mahdollista</text>
+</svg>

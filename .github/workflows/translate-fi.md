@@ -8,8 +8,10 @@ on:
       - "hub/src/**"
       - "shared/**"
       - "guides/*/src/**"
+      - "guides/*/public/diagrams/**"
       - "guides/*/*.html"
       - "guides/*/*.js"
+      - "i18n/fi/**"
   workflow_dispatch:
 permissions:
   contents: read
@@ -45,11 +47,14 @@ Translate any file under these paths that contains reader-visible English text:
 
 - `guides.mjs` (only `title` and `description`)
 - `hub/src/**`, `shared/**`
-- `guides/*/src/**` (`.md`, `.astro`, `.ts` content and UI strings)
+- `guides/*/src/**` (`.md`, `.astro`, `.ts`, SVG diagram text and
+  reader-visible titles and descriptions in diagram metadata)
+- `guides/*/public/diagrams/*.svg` and `*.html` (rendered diagrams)
 - `guides/*/*.html` and `guides/*/*.js` (static guides)
 
 Skip tests, configs (`astro.config.mjs`, `content.config.ts`, `package.json`),
-styles, images, `.json` diagram data and anything without reader-visible text.
+styles, non-SVG images, editable diagram source files and anything without
+reader-visible text.
 
 ## How to work
 
@@ -77,11 +82,18 @@ functionally identical:
 - Never change code, imports, identifiers, object keys, CSS, HTML structure, element
   `id`s or `class`es, URLs, slugs, file names, frontmatter keys, `order`, `section`
   ids, `verified` dates, `sources`, `diagram` names, or `{expressions}`.
+- In rendered SVGs and their HTML variants, translate visible text and accessible
+  titles and descriptions, but preserve geometry, IDs, links and other attributes.
+  Keep corresponding light, dark and full-size variants consistent.
+- In diagram metadata JSON, translate only human-readable titles and descriptions;
+  preserve keys, links and all other data.
 - In `guides.mjs`, keep `name`, `parts` and `type` unchanged.
 - Leave code blocks, inline code, commands, and CLI or API output untranslated.
 - Set `<html lang="fi">` where a file declares `lang="en"`. Use `fi-FI` for date
   formatting where `en-GB` or `en-US` is used.
 - Keep Markdown structure, link targets and heading levels identical.
+- Preserve existing heading-fragment targets used by links, adding explicit
+  anchors where translating a heading would otherwise change its generated ID.
 
 ## Terminology and tone
 

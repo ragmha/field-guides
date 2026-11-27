@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="data-map-title data-map-desc">
+  <title id="data-map-title">Datan alueellisen sijainnin raja</title>
+  <desc id="data-map-desc">GitHub tallentaa määritellyt asiakastiedot EU-alueella, dokumentoi luokat, joita voidaan tallentaa muualla, eikä hallitse asiakkaan integraatioiden lähettämän datan kohteita.</desc>
+  <rect class="focus" x="24" y="24" width="430" height="320" rx="10"/>
+  <text class="ink" x="48" y="62" font-size="19" font-weight="700">Tallennetaan EU-alueella</text>
+  <text class="muted" x="48" y="86" font-size="13">Sijainnit EU:ssa, Norjassa ja Sveitsissä</text>
+  <g font-size="15" class="ink">
+    <circle class="accent" cx="56" cy="124" r="5"/><text x="72" y="129">Repositoriot ja lähdekoodi</text>
+    <circle class="accent" cx="56" cy="160" r="5"/><text x="72" y="165">Pull requestit, issuet ja kommentit</text>
+    <circle class="accent" cx="56" cy="196" r="5"/><text x="72" y="201">Actionsin tiedot ja lokit</text>
+    <circle class="accent" cx="56" cy="232" r="5"/><text x="72" y="237">Varmuuskopiot ja häiriöstä palautuminen</text>
+    <circle class="accent" cx="56" cy="268" r="5"/><text x="72" y="273">Käyttäjäidentiteetti: sähköposti, käyttäjänimi, nimi, IP</text>
+  </g>
+  <text class="accent" x="48" y="320" font-size="14" font-weight="700">Perustana DPA §7.A</text>
+
+  <rect class="warn" x="506" y="24" width="430" height="320" rx="10"/>
+  <text class="ink" x="530" y="62" font-size="19" font-weight="700">Voidaan tallentaa muualla</text>
+  <text class="muted" x="530" y="86" font-size="13">GitHubin dokumentoimat; kukin vaatii päätöksesi</text>
+  <g font-size="15" class="ink">
+    <text x="530" y="129">Tunnisteita sisältävä telemetria</text><text class="muted" x="912" y="129" text-anchor="end" font-size="13">HYVÄKSY</text>
+    <text x="530" y="165">Laskutus- ja lisenssitiedot</text><text class="muted" x="912" y="165" text-anchor="end" font-size="13">MINIMOI</text>
+    <text x="530" y="201">Tuki- ja palautetiedot</text><text class="muted" x="912" y="201" text-anchor="end" font-size="13">KÄYTÄNTÖ</text>
+    <text x="530" y="237" font-weight="700">Copilotin tiedot oletuksena</text><text class="amber" x="912" y="237" text-anchor="end" font-size="13" font-weight="700">KÄYTÄNTÖ PÄÄLLE</text>
+    <text x="530" y="273">Salaisuuksien tarkistus (erikseen käyttöön)</text><text class="muted" x="912" y="273" text-anchor="end" font-size="13">PÄÄTÄ</text>
+    <text x="530" y="309">TLS-varmenteiden tiedot</text><text class="muted" x="912" y="309" text-anchor="end" font-size="13">HYVÄKSY</text>
+  </g>
+
+  <path class="line" d="M454 184 H506" stroke-dasharray="5 5"/>
+
+  <rect class="box" x="24" y="370" width="912" height="106" rx="10"/>
+  <text class="ink" x="48" y="404" font-size="17" font-weight="700">Hallintarajaasi kuuluu myös se, mitä yhdistät</text>
+  <g font-size="15" class="ink">
+    <text x="48" y="440">Omat runnerit</text>
+    <text x="260" y="440">Webhookit ja sovellukset</text>
+    <text x="460" y="440">Auditointilokin kohde</text>
+    <text x="720" y="440">Kehittäjien laitteet</text>
+  </g>
+  <text class="muted" x="48" y="464" font-size="13">Alueellinen sijainti kattaa GitHubin tallennuspaikan. Muualle lähetetty data menee valitsemaasi kohteeseen.</text>
+</svg>

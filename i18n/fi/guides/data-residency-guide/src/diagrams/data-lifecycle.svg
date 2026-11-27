@@ -1,0 +1,24 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="data-lifecycle-title data-lifecycle-desc">
+<title id="data-lifecycle-title">Suunnittele tietojen palautus tai poisto</title><desc id="data-lifecycle-desc">Arvioi soveltuvan DPA:n mukainen palautus- tai poistopyyntö ja mahdolliset soveltuvat poikkeukset; varmista tulos ja säilytä todistusaineisto.</desc>
+<defs><marker id="data-lifecycle-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="640" height="300" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<circle cx="8" cy="132" r="4" fill="#1f2328" class="ink"/>
+<line x1="12" y1="132" x2="20" y2="132" class="arrow" stroke="#59636e" marker-end="url(#data-lifecycle-arrow)"/>
+<circle cx="628" cy="132" r="7" fill="none" stroke="#1f2328"/><circle cx="628" cy="132" r="3" fill="#1f2328" class="ink"/>
+<line x1="616" y1="132" x2="620" y2="132" class="arrow" stroke="#59636e" marker-end="url(#data-lifecycle-arrow)"/>
+<line x1="148" y1="132" x2="176" y2="132" class="arrow" stroke="#59636e" marker-end="url(#data-lifecycle-arrow)"/>
+<text x="162" y="121" text-anchor="middle" font-size="8" class="muted">LOPPU</text>
+<line x1="304" y1="132" x2="332" y2="132" class="arrow" stroke="#59636e" marker-end="url(#data-lifecycle-arrow)"/>
+<text x="318" y="121" text-anchor="middle" font-size="8" class="muted">PYYNTÖ</text>
+<line x1="460" y1="132" x2="488" y2="132" class="arrow" stroke="#59636e" marker-end="url(#data-lifecycle-arrow)"/>
+<text x="474" y="121" text-anchor="middle" font-size="8" class="muted">TARKISTA</text>
+<rect x="20" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="84" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Aktiivinen</text>
+<rect x="176" y="104" width="128" height="56" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="240" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Päättynyt</text>
+<rect x="332" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="396" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Käynnissä</text>
+<rect x="488" y="104" width="128" height="56" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="552" y="137" text-anchor="middle" font-size="11" class="ink" font-weight="600">Varmennettu</text>
+</g></svg>

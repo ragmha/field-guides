@@ -78,7 +78,8 @@ theme persistence across all guides, system theme changes, keyboard access
 and narrow-screen containment. Set `SCREENSHOT_DIR` to an artifact directory
 to capture the hub and every guide landing in light/dark at desktop and
 mobile widths.
-It starts and stops its own preview on port 4173; stop a manual preview first.
+It starts and stops its own preview on port 4173; set `PORT` to use another
+port if a manual preview is already running.
 Existing guide screenshot output stays in ignored `test-results/`.
 
 ## Add a guide
@@ -107,19 +108,27 @@ Finnish lives in `i18n/fi/`, which mirrors source paths (for example
 ignored `.i18n-build/fi/`, overlays the translations and builds
 `dist/fi/` at `/field-guides/fi/`. Files without a translation fall back to
 English. Pages with a counterpart get `hreflang` links and a language switch.
+The EN/FI switch appears in page headers; without JavaScript it remains a link.
+Guide-card availability is tracked in `shared/translation-status.mjs`. Add a
+guide as `partial` when Finnish content is available, and mark it `complete`
+only after reviewing its content and interface. Mark it `partial` again if
+subsequent source changes need translation.
 Add another locale by creating `i18n/<two-letter code>/`.
 
 `.github/workflows/translate-fi.md` is a
 [GitHub Agentic Workflow](https://github.github.com/gh-aw/). On pushes to
-`main` that touch guide sources, and on manual dispatch, it translates new
-or changed files and opens a draft `[translate-fi]` pull request for review.
+`main` that touch guide sources or the Finnish overlay, and on manual dispatch,
+it translates up to 15 new or changed files and opens a draft `[translate-fi]`
+pull request for review, including reader-visible text in rendered diagrams.
+Merging one batch starts the next until caught up.
 It needs a `COPILOT_GITHUB_TOKEN` repository secret. After editing the
 workflow, run `gh aw compile translate-fi` and commit the `.lock.yml`.
 
 ## Deployment and maintenance
 
-`.github/workflows/pages.yml` checks pull requests and builds all five guides
-into one Pages artifact. On `master`, it deploys with `actions/deploy-pages`
+`.github/workflows/pages.yml` checks pull requests and builds the site,
+including the `/fi/` translation overlay, into one Pages artifact. On `main`,
+it deploys with `actions/deploy-pages`
 once Pages is configured to use GitHub Actions.
 No repository settings are changed by the build.
 

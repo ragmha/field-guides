@@ -6,12 +6,13 @@ import { fileURLToPath } from 'node:url';
 import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import { guides } from '../guides.mjs';
+import { finnishGuideStatus } from '../shared/translation-status.mjs';
 
 for (const guide of guides) {
   assert.doesNotMatch(guide.description, /\bguides?\b/i, `${guide.name} description must describe the topic without "guide"`);
 }
 
-const base = 'http://127.0.0.1:4173/field-guides/';
+const base = `http://127.0.0.1:${process.env.PORT || 4173}/field-guides/`;
 const server = spawn('bun', ['run', 'preview'], { stdio: 'inherit' });
 let browser;
 try {
@@ -123,6 +124,8 @@ try {
       assert.ok((await page.locator('.article-footer').textContent()).startsWith('Enterprise enablement '));
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
       assert.equal(await page.locator('.guide-card').count(), guides.length);
+      assert.deepEqual(await page.locator('.guide-card .card-meta').allTextContents(), guides.map(guide =>
+        `${guide.parts} PARTS / EN${finnishGuideStatus[guide.name] === 'complete' ? ' · FI' : finnishGuideStatus[guide.name] === 'partial' ? ' · FI (partial)' : ''}`));
       assert.deepEqual(await page.locator('.guide-card > p').allTextContents(), guides.map(guide => guide.description));
       assert.equal(await page.locator('.hero-art').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero illustration must load');
       const art = await page.locator('.hero-art').boundingBox();
@@ -176,14 +179,40 @@ try {
   await ledgerHubLink.click();
   assert.equal(page.url(), base, 'Evidence ledger breadcrumb must return to the collection');
   if (existsSync('dist/fi')) {
-    await page.goto(`${base}fi/`);
-    assert.equal(await page.locator('html').getAttribute('lang'), 'fi', 'Finnish hub must declare its language');
-    assert.equal(await page.locator('.guide-card').count(), guides.length, 'Finnish hub must list every guide');
-    await page.locator('.lang-switch').click();
-    assert.equal(page.url(), base, 'Finnish pages must link to their English original');
-    await page.goto(`${base}ai-credits-guide/`);
-    await page.locator('.lang-switch').click();
-    assert.equal(page.url(), `${base}fi/ai-credits-guide/`, 'English pages must link to their Finnish translation');
+    const paths = ['', ...guides.map(guide => `${guide.name}/`), 'github-enterprise-field-guide/ledger.html', 'champions-at-scale/charter.html'];
+    for (const width of [1440, 320]) {
+      await page.setViewportSize({ width, height: 1000 });
+      for (const path of paths) {
+        await page.goto(`${base}${path}`);
+        const toggle = page.locator('header').getByRole('switch', { name: 'Finnish / Suomi' });
+        await toggle.waitFor({ state: 'visible' });
+        assert.equal(await toggle.count(), 1, `${path} needs a language switch in its header`);
+        assert.equal(await toggle.isChecked(), false, `${path} must start in English`);
+        assert.equal(await toggle.evaluate(el => {
+          const box = el.getBoundingClientRect();
+          return box.left >= 0 && box.right <= innerWidth;
+        }), true, `${path} language switch must fit at ${width}px`);
+        await toggle.focus();
+        await Promise.all([page.waitForURL(`${base}fi/${path}`), page.keyboard.press('Space')]);
+        const finnishToggle = page.locator('header').getByRole('switch', { name: 'Finnish / Suomi' });
+        assert.equal(await finnishToggle.isChecked(), true, `${path} must show Finnish as selected`);
+        assert.equal(await page.locator('html').getAttribute('lang'), 'fi');
+        if (!path) {
+          assert.deepEqual(await page.locator('.guide-card .card-meta').allTextContents(), guides.map(guide =>
+            `${guide.parts} OSAA / EN${finnishGuideStatus[guide.name] === 'complete' ? ' · FI' : finnishGuideStatus[guide.name] === 'partial' ? ' · FI (osittain)' : ''}`));
+        }
+        assert.equal(await finnishToggle.evaluate(el => {
+          const box = el.getBoundingClientRect();
+          return box.left >= 0 && box.right <= innerWidth;
+        }), true, `Finnish ${path} language switch must fit at ${width}px`);
+        await Promise.all([page.waitForURL(`${base}${path}`), finnishToggle.click()]);
+      }
+    }
+    const noScript = await browser.newContext({ javaScriptEnabled: false });
+    const fallbackPage = await noScript.newPage();
+    await fallbackPage.goto(base);
+    assert.equal(await fallbackPage.locator('header .language-switch-fallback').getAttribute('href'), '/field-guides/fi/');
+    await noScript.close();
   }
   await page.goto(base);
   await page.selectOption('#theme', 'system');

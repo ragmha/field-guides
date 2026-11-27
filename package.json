@@ -13,6 +13,9 @@
     "test:diagrams": "bun run --cwd guides/ai-credits-guide test:diagrams"
   },
   "devDependencies": {
+    "@base-ui/react": "^1.9.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "@playwright/test": "^1.56.0"
   }
 }

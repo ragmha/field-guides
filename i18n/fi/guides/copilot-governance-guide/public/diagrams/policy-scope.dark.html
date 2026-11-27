@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selvitä käytännön lähde</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Hallintaopas · Vuokaavio</p>
+    <h1>Selvitä käytännön lähde</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Selvitä käytännön lähde. Vieritä vaakasuunnassa tarkastellaksesi.">
+      <svg viewBox="0 0 704 832" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="policy-scope-dark-title policy-scope-dark-desc">
+        <title id="policy-scope-dark-title">Selvitä käytännön lähde</title>
+        <desc id="policy-scope-dark-desc">Selvitä käyttöpaikan lähde, tarkista delegoidut oletukset tai ominaisuuskohtaiset organisaatioristiriidat ja varmista asetus todellisessa käyttöympäristössä.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="832" fill="#07090d"/>
+        <path d="M 240 96 L 192 96 A 8 8 0 0 0 184 104 L 184 220" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="162" width="63" height="12" rx="2" fill="#07090d"/><text x="223.5" y="171" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YRITYS</text>
+        <path d="M 464 96 L 512 96 A 8 8 0 0 1 520 104 L 520 220" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="528" y="162" width="74" height="12" rx="2" fill="#07090d"/><text x="565.0" y="171" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ORGANISAATIO</text>
+        <path d="M 184 300 L 184 548" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 520 332 L 520 412" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="528" y="364" width="24.5" height="12" rx="2" fill="#07090d"/><text x="540.25" y="373" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">KYLLÄ</text>
+        <path d="M 400 276 L 360 276 A 8 8 0 0 0 352 284 L 352 564 A 8 8 0 0 1 344 572 L 328 572" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="360" y="376" width="19" height="12" rx="2" fill="#07090d"/><text x="369.5" y="385" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">EI</text>
+        <path d="M 520 508 L 520 644 A 8 8 0 0 1 512 652 L 192 652 A 8 8 0 0 1 184 644 L 184 628" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <polygon points="352,40 464,96 352,152 240,96" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Käyttöpaikan lähde?</text>
+        <rect x="40" y="220" width="288" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="184.0" y="256.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Yritykseltä käyttöoikeuden saaneet</text>
+        <text x="184.0" y="272.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Tarkista delegoitujen käytäntöjen erillinen oletus</text>
+        <polygon points="520,220 640,276 520,332 400,276" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="520.0" y="272.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Lisensoivat organisaatiot</text>
+        <text x="520.0" y="288.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">eri mieltä?</text>
+        <rect x="376" y="412" width="288" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="520.0" y="448.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Käytä ominaisuuden ristiriitasääntöä</text>
+        <text x="520.0" y="464.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yleensä vähiten rajoittava; poikkeuksia on</text>
+        <text x="520.0" y="480.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Julkista koodia vastaavat: rajoittavin</text>
+        <rect x="40" y="548" width="288" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="184.0" y="584.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Varmista todellisessa käyttöympäristössä</text>
+        <text x="184.0" y="600.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Ennuste ei testaa voimassa olevaa asetusta</text>
+        <text x="40" y="708" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yritysten välillä: rajoittavin pätee lähes aina, mutta poikkeuksia on.</text>
+        <text x="40" y="724" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Tarkista kyseinen käytäntö; kumpikaan yhteenveto ei ole yleispätevä algoritmi.</text>
+        <line x1="40" y1="772" x2="664" y2="772" stroke="#3d444d"/>
+        <text x="40" y="796" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Soikio: alku/loppu; suorakulmio: toiminto; vinoneliö: päätös; nuoli: seuraava vaihe</text>
+        <text x="40" y="816" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Vihreä laatikko: oppitunnin painotus, ei hyväksyntä tai turvallisuusluokitus</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ip-commitment-title ip-commitment-desc">
+<title id="ip-commitment-title">Tarkista immateriaalioikeussitoumus</title><desc id="ip-commitment-desc">Ostoreitti määrää, mitkä ehdot on tarkistettava. Lakiasiantuntijoiden tulee tarkistaa soveltuva sopimus, soveltamisala ja poissulut ennen puolustussitoumukseen tukeutumista.</desc>
+<defs><marker id="ip-commitment-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="640" height="300" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<line x1="320" y1="40" x2="320" y2="80" class="arrow" stroke="#59636e" marker-end="url(#ip-commitment-arrow)"/>
+<path d="M320 80 L400 128 L320 176 L240 128 Z" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="320" y="132" text-anchor="middle" font-size="11" class="ink" font-weight="600">Suora osto?</text>
+<line x1="240" y1="128" x2="196" y2="128" class="arrow" stroke="#59636e" marker-end="url(#ip-commitment-arrow)"/>
+<line x1="400" y1="128" x2="444" y2="128" class="arrow" stroke="#59636e" marker-end="url(#ip-commitment-arrow)"/>
+<text x="220" y="118" text-anchor="middle" font-size="9" class="muted">KYLLÄ</text>
+<text x="422" y="118" text-anchor="middle" font-size="9" class="muted">EI</text>
+<rect x="36" y="104" width="160" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="116" y="133" text-anchor="middle" font-size="11" class="ink" font-weight="600">Tarkista GitHubin ehdot</text>
+<rect x="444" y="104" width="160" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="524" y="133" text-anchor="middle" font-size="11" class="ink" font-weight="600">Tarkista Microsoftin ehdot</text>
+</g></svg>

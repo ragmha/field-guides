@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Riippumaton opas yritysten champion-ohjelmien rakentamiseen: liiketoimintaperusteet, toimintamalli, 90 päivän pilotti ja merkitykselliset mittarit vuodelle 2026 ja sen jälkeen.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0d1117">
+  <script>
+    (() => {
+      let preference = 'system';
+      try { preference = localStorage.getItem('theme') || 'system'; } catch {}
+      const dark = preference === 'dark' || (preference === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      document.documentElement.dataset.preference = preference;
+    })();
+  </script>
+  <title>Champions at Scale</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1117'/%3E%3Cpath d='M44 21a17 17 0 1 0 0 22' fill='none' stroke='%233fb950' stroke-width='8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./guide.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Siirry sisältöön</a>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Champions at Scale, takaisin alkuun"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="30" height="30"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg><span>Champions<span class="brand-tail"> at Scale</span></span></a>
+    <nav class="breadcrumbs" aria-label="Murupolku"><a href="../">Enterprise enablement</a><span aria-hidden="true">/</span><span>Champions at Scale</span></nav>
+    <label class="theme-label" hidden><span aria-hidden="true">◐</span><span class="sr-only">Väriteema</span><select id="theme" aria-label="Väriteema"><option value="system">Järjestelmä</option><option value="light">Vaalea</option><option value="dark">Tumma</option></select></label>
+    <button class="print-button" type="button" hidden>Tulosta opas <span aria-hidden="true">↗</span></button>
+  </header>
+  <a class="hub-home" href="../"><span aria-hidden="true">← </span>Enterprise enablement</a>
+
+  <div class="landing" id="top">
+    <section class="landing-hero" aria-labelledby="landing-title">
+      <div class="landing-copy">
+        <h1 id="landing-title">Champions at Scale</h1>
+        <p class="landing-intro">Riippumaton, vuorovaikutteinen opas kestävien yritysten champion-ohjelmien rakentamiseen vuonna 2026 ja sen jälkeen.</p>
+        <div class="landing-actions">
+          <a class="landing-button" href="#why">Aloita nyt <span aria-hidden="true">→</span></a>
+          <a class="landing-button" href="#sources">Lähteet ja mallipohjat</a>
+        </div>
+      </div>
+      <img class="landing-art" src="./assets/landing.jpg" width="640" height="960" alt="Mustepiirros viidestä köysillä yhteen sidotusta kuumailmapallosta ajelehtimassa pilvien joukossa." fetchpriority="high">
+    </section>
+    <section class="landing-parts" aria-labelledby="parts-title">
+      <h2 id="parts-title">Osat</h2>
+      <p>Aloita osasta 1 tai siirry tarvitsemaasi osaan.</p>
+      <ol class="part-grid">
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>01</span></div><h3>Perustelut yritykselle</h3><p>Miksi championit · Mikä muuttuu vuonna 2026</p><a href="#why">Näytä luvut<span class="sr-only"> osassa Perustelut yritykselle</span> <span aria-hidden="true">→</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>02</span></div><h3>Rakenna verkosto</h3><p>Toimintamalli · Ennen aloittamista · Ensimmäiset 90 päivää</p><a href="#model">Näytä luvut<span class="sr-only"> osassa Rakenna verkosto</span> <span aria-hidden="true">→</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>03</span></div><h3>Pidä verkosto hyödyllisenä</h3><p>Mittaa olennaista · Huolehdi kestävyydestä</p><a href="#measure">Näytä luvut<span class="sr-only"> osassa Pidä verkosto hyödyllisenä</span> <span aria-hidden="true">→</span></a></li>
+      </ol>
+    </section>
+  </div>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="edition">SISÄLTÖ<span>Champions at Scale</span></div>
+      <details class="chapter-nav" open>
+      <summary>Tutustu oppaaseen <span aria-hidden="true">⌄</span></summary>
+      <nav aria-label="Oppaan luvut">
+        <a class="guide-home" href="#top">Yleiskuva</a>
+        <div class="nav-group"><h2><span>Ymmärrä</span> Perustelut yritykselle</h2><div class="chapter-pages">
+          <a href="#why">Miksi championit</a><a href="#now">Mikä muuttuu vuonna 2026</a>
+        </div></div>
+        <div class="nav-group"><h2><span>Suunnittele ja käynnistä</span> Rakenna verkosto</h2><div class="chapter-pages">
+          <a href="#model">Toimintamalli</a><a href="#readiness">Ennen aloittamista</a><a href="#playbook">Ensimmäiset 90 päivää</a><a href="./charter.html">Sponsorin muistio</a>
+        </div></div>
+        <div class="nav-group"><h2><span>Toimi</span> Pidä verkosto hyödyllisenä</h2><div class="chapter-pages">
+          <a href="#quest">Championin tehtäväpolku</a><a href="#measure">Mittaa olennaista</a><a href="#sustain">Huolehdi kestävyydestä</a>
+        </div></div>
+        <a class="guide-home" href="#sources">Lähteet ja mallipohjat</a>
+      </nav>
+      </details>
+      <p class="sidebar-note">Yritysjohtajille,<br>käyttöönoton tukitiimeille ja<br>käytännön työtä tekeville.</p>
+      <a class="sidebar-cta" href="#readiness">Tarkista perusedellytykset <span aria-hidden="true">↓</span></a>
+    </aside>
+
+    <main id="main">
+      <div class="article-grid">
+      <article>
+        <p>Työkalut voidaan ottaa käyttöön keskitetysti. Hyödylliset tavat juurtuvat paikallisesti. Rakenna verkosto, joka muuttaa yrityksen tavoitteet arjen käytännöiksi.</p>
+        <figure class="diagram-embed">
+          <h3>Keskitetty tuki ja vertaisverkosto</h3>
+          <p class="diagram-hint">Vertaa molempia malleja vierittämällä kuvaa vaakasuunnassa.</p>
+          <div class="diagram-scroll" role="region" aria-label="Keskitetyn tuen ja champion-verkoston vertailu, vieritä vaakasuunnassa" tabindex="0">
+            <svg data-diagram="architecture-delta" class="network-diagram" viewBox="0 0 672 504" role="img" aria-labelledby="champions-network-title champions-network-desc">
+              <title id="champions-network-title">Miten champion-verkosto täydentää keskitettyä tukea</title>
+              <desc id="champions-network-desc">Alusta- ja tietoturvatiimit säilyttävät suoran tuen ja käytäntövastuun; championien lisääminen yhdistää paikalliset tiimit vertaisoppimiseen ja välittää palautetta keskitetyille vastuuhenkilöille.</desc>
+              <defs><marker id="network-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8" fill="var(--muted)"/></marker></defs>
+              <text class="diagram-heading" x="16" y="32">Keskitetty tuki</text>
+              <text class="diagram-heading" x="416" y="32">Champion-verkoston kanssa</text>
+              <g data-snapshot="before" data-grid="240 400 4" transform="translate(16 56)">
+                <path data-kind="relationship" data-object-id="pa" data-status="unchanged" data-signature="specialist-support" data-from="P" data-to="A" d="M80 96 V120 Q80 128 72 128 H40 Q32 128 32 136 V300" class="connector"/>
+                <path data-kind="relationship" data-object-id="pb" data-status="unchanged" data-signature="specialist-support" data-from="P" data-to="B" d="M160 96 V120 Q160 128 168 128 H200 Q208 128 208 136 V300" class="connector"/>
+                <g data-kind="component" data-object-id="P" data-status="unchanged" data-signature="platform-security-policy-support">
+                  <rect data-role="bounds" x="48" y="32" width="144" height="64" rx="6" class="diagram-node"/>
+                  <text class="node-name" x="120" y="56" text-anchor="middle">Alusta ja</text><text class="node-name" x="120" y="76" text-anchor="middle">tietoturva</text>
+                </g>
+                <g data-kind="component" data-object-id="A" data-status="unchanged" data-signature="local-team-a">
+                  <rect data-role="bounds" x="0" y="300" width="104" height="64" rx="6" class="diagram-node"/>
+                  <text class="node-name" x="52" y="328" text-anchor="middle">Tiimi</text><text class="node-sub" x="52" y="348" text-anchor="middle">Paikallinen työ</text>
+                </g>
+                <g data-kind="component" data-object-id="B" data-status="unchanged" data-signature="local-team-b">
+                  <rect data-role="bounds" x="136" y="300" width="104" height="64" rx="6" class="diagram-node"/>
+                  <text class="node-name" x="188" y="328" text-anchor="middle">Tiimi</text><text class="node-sub" x="188" y="348" text-anchor="middle">Paikallinen työ</text>
+                </g>
+              </g>
+              <text class="diagram-heading" x="280" y="88">Lisätuki</text>
+              <text data-change="ADDED" data-target="C" class="change-entry" x="280" y="132"><tspan>+ Championit</tspan><tspan x="280" dy="18">Paikallinen konteksti</tspan></text>
+              <text data-change="ADDED" data-target="pc" class="change-entry" x="280" y="204"><tspan>+ Jaetut mallit</tspan><tspan x="280" dy="18">ja palaute</tspan><tspan x="280" dy="16">alustalle</tspan></text>
+              <text data-change="ADDED" data-target="ca" class="change-entry" x="280" y="292"><tspan>+ Vertaisoppiminen</tspan><tspan x="280" dy="18">Tiimien kanssa</tspan></text>
+              <text data-change="ADDED" data-target="cb" class="change-entry" x="280" y="364"><tspan>+ Paikallinen palaute</tspan><tspan x="280" dy="18">Tiimeiltä</tspan></text>
+              <g data-snapshot="after" data-grid="240 400 4" transform="translate(416 56)">
+                <path data-kind="relationship" data-object-id="pa" data-status="unchanged" data-signature="specialist-support" data-from="P" data-to="A" d="M80 96 V120 Q80 128 72 128 H40 Q32 128 32 136 V300" class="connector"/>
+                <path data-kind="relationship" data-object-id="pb" data-status="unchanged" data-signature="specialist-support" data-from="P" data-to="B" d="M160 96 V120 Q160 128 168 128 H200 Q208 128 208 136 V300" class="connector"/>
+                <path data-kind="relationship" data-object-id="pc" data-status="added" data-signature="feedback-shared-patterns" data-from="P" data-to="C" d="M120 96 V164" class="connector peer-connector"/>
+                <path data-kind="relationship" data-object-id="ca" data-status="added" data-signature="peer-learning" data-from="C" data-to="A" d="M80 228 V252 Q80 260 72 260 H64 Q56 260 56 268 V300" class="connector peer-connector"/>
+                <path data-kind="relationship" data-object-id="cb" data-status="added" data-signature="peer-learning" data-from="C" data-to="B" d="M160 228 V252 Q160 260 168 260 H176 Q184 260 184 268 V300" class="connector peer-connector"/>
+                <g data-kind="component" data-object-id="P" data-status="unchanged" data-signature="platform-security-policy-support">
+                  <rect data-role="bounds" x="48" y="32" width="144" height="64" rx="6" class="diagram-node"/>
+                  <text class="node-name" x="120" y="56" text-anchor="middle">Alusta ja</text><text class="node-name" x="120" y="76" text-anchor="middle">tietoturva</text>
+                </g>
+                <g data-kind="component" data-object-id="C" data-status="added" data-signature="champions-peer-learning">
+                  <rect data-role="bounds" x="48" y="164" width="144" height="64" rx="6" class="diagram-node focal"/>
+                  <text class="node-name" x="120" y="188" text-anchor="middle">Championit</text><text class="node-sub" x="120" y="208" text-anchor="middle">Paikallinen konteksti</text>
+                </g>
+                <g data-kind="component" data-object-id="A" data-status="unchanged" data-signature="local-team-a">
+                  <rect data-role="bounds" x="0" y="300" width="104" height="64" rx="6" class="diagram-node"/>
+                  <text class="node-name" x="52" y="328" text-anchor="middle">Tiimi</text><text class="node-sub" x="52" y="348" text-anchor="middle">Paikallinen työ</text>
+                </g>
+                <g data-kind="component" data-object-id="B" data-status="unchanged" data-signature="local-team-b">
+                  <rect data-role="bounds" x="136" y="300" width="104" height="64" rx="6" class="diagram-node"/>
+                  <text class="node-name" x="188" y="328" text-anchor="middle">Tiimi</text><text class="node-sub" x="188" y="348" text-anchor="middle">Paikallinen työ</text>
+                </g>
+              </g>
+              <text class="diagram-legend" x="24" y="480">Nuolet näyttävät tukikanavat. Vertaiskanavat välittävät oppimista ja palautetta molempiin suuntiin.</text>
+            </svg>
+          </div>
+          <figcaption>Havainnollistava rakenne, ei pakollinen ohjausmalli. Keskitetyt käytännöt ja asiantuntijatuki säilyvät; championit lisäävät luotettua paikallista oppimista ja palautereitin.</figcaption>
+        </figure>
+        <p class="caption">Itsenäinen yhteenveto, jonka taustalla ovat GitHub Well-Architected ja DORA-tutkimus. Ei virallinen GitHub-julkaisu.</p>
+
+      <section class="chapter" id="why" aria-labelledby="why-title">
+        <div class="section-heading"><span class="chapter-label">Miksi championit</span><span class="reading-note">Aloita ongelmasta</span></div>
+        <h2 id="why-title">Lisenssit skaalautuvat<br>oppimista nopeammin.</h2>
+        <p class="lead">Käyttöoikeuden ostaminen poistaa yhden esteen. Se ei vastaa kysymykseen: ”Miten tämä auttaa tiimiäni tekemään työnsä paremmin?”</p>
+        <p>Yrityksen kasvaessa samaa työkalua käytetään erilaisissa koodikannoissa, riskiprofiileissa, kielissä ja työtavoissa. Keskitetty tiimi voi määrittää suunnan ja tarjota asiantuntemusta. Se ei kuitenkaan voi istua jokaisen tiimin vieressä, kun uusi käytäntö kohtaa todellisen määräajan.</p>
+        <p>Champion-ohjelma luo jatkuvan käytäntöyhteisön: luotetut käytännön tekijät auttavat kollegoita kokeilemaan hyödyllisiä työnkulkuja, jakavat käytännössä toimiviksi osoittautuneita ratkaisuja ja vievät toistuvat esteet niiden ratkaisemisesta vastaaville. GitHub erottaa tämän jatkuvan verkoston määräaikaisesta kouluttajien koulutuksesta. <a class="citation" href="#source-github">[1]</a></p>
+
+        <div class="comparison">
+          <div class="comparison-head"><span>Kun käyttöönoton tuki jää keskitetyksi</span><span>Mitä tuettu verkosto voi muuttaa</span></div>
+          <div><p>Yksi yleinen koulutus ei vastaa paikallisiin tarpeisiin.</p><p>Käytännön tekijät soveltavat ohjeita tiimin todelliseen työnkulkuun.</p></div>
+          <div><p>Sama kysymys päätyy yhä samoille asiantuntijoille.</p><p>Vastauksista syntyy uudelleenkäytettäviä esimerkkejä; asiantuntijat käsittelevät vaikeat tapaukset.</p></div>
+          <div><p>Johto näkee käytön mutta ei kitkaa.</p><p>Championit tuovat esiin toistuvia ilmiöitä, myös työkalujen tai käytäntöjen muutostarpeita.</p></div>
+          <div><p>Julkaisu saa huomiota. Seuraava vuosineljännes ei.</p><p>Säännöllinen oppimiskierros pitää tiedon ajan tasalla käynnistyksen jälkeen.</p></div>
+        </div>
+        <p class="caption">Nämä ovat organisaatiossa kokeiltavia toimintamekanismeja, eivät taattuja tuottavuushyötyjä.</p>
+
+        <h3>Investoinnin perustelut ilman hypetystä</h3>
+        <p>Rahoita pieni verkosto, kun toistuvat kysymykset, epätasainen käyttöönotto tai hidas palaute rajoittavat liiketoiminnalle tärkeää kyvykkyyttä. Sido pilotti tiettyyn ongelmaan, esimerkiksi tiimien auttamiseen hyväksytyn koodikatselmointityönkulun käytössä vähemmillä toistuvilla tukisiirroilla.</p>
+        <p>Budjetoi championien aika, koordinointi, asiantuntijatuki ja jaetun materiaalin ylläpito. Vertaa tuloksia lähtötasoon ja verkoston kustannuksiin. Ohjelma, joka tuottaa kokouksia parantamatta hyödyllistä työtä, ei onnistu.</p>
+        <aside class="takeaway">
+          <h3>Kaikki organisaatiot eivät tarvitse uutta ohjelmaa.</h3>
+          <p>Jos olemassa olevat yhteisöt yhdistävät tiimit jo luotettavaan apuun ja päätöksentekijöihin, vahvista niitä. Pieni, hyvin verkostoitunut organisaatio voi tarvita yhteisen kanavan ja varattua aikaa uuden hallintakerroksen sijaan.</p>
+        </aside>
+      </section>
+
+      <section class="chapter" id="now" aria-labelledby="now-title">
+        <div class="section-heading"><span class="chapter-label">Mikä muuttuu vuonna 2026</span><span class="reading-note">Enemmän kyvykkyyksiä. Enemmän kontekstia.</span></div>
+        <h2 id="now-title">Tekoäly korostaa<br>yhteisen harkinnan merkitystä.</h2>
+        <p class="lead">Kehote on helppo kopioida. Sen tunnistaminen, milloin tulos on hyödyllinen, turvallinen ja oikea, vaatii enemmän työtä.</p>
+        <p>Copilotin ja agenttiavusteisen työn yhteydessä championit voivat auttaa tiimejä arvioimaan tuotoksia, dokumentoimaan hyväksyttyjä toimintamalleja ja jakamaan epäonnistumisia. Perusta esimerkit todellisiin tehtäviin ja määritä tarkistus sekä datan käytön rajat selkeästi. Suosittu työnkulku ei ole automaattisesti turvallinen.</p>
+        <p><strong>Vuoden 2025 DORA-tutkimus</strong> kuvaa tekoälyä organisaation olemassa olevien vahvuuksien ja heikkouksien vahvistajana. Tulokset tukevat investointeja ympäröivään työnteon järjestelmään sen sijaan, että tuloksia odotettaisiin pelkästään työkalun käyttöönotolta. Raportti tunnistaa myös toimitusvakauteen liittyviä riskejä sekä myönteisiä yhteyksiä läpimenoon ja tuotteen suorituskykyyn. Se <strong>ei</strong> osoita, että champion-ohjelmat aiheuttavat tuottavuushyötyjä. <a class="citation" href="#source-dora">[4]</a></p>
+        <p>Googlen vuoden 2025 DORA AI Capabilities Model tunnistaa seitsemän tekoälyavusteisen ohjelmistokehityksen perustaa: selkeä ja viestitty tekoälylinjaus, terveet dataekosysteemit, tekoälyn käytettävissä oleva sisäinen data, vahva versionhallinta, pienet työerät, käyttäjäkeskeisyys ja laadukkaat sisäiset alustat. Käytä niitä perusedellytyksiä koskevan keskustelun virikkeinä, älä todisteena siitä, että champion-verkosto tuottaa tuloksia. Sisäisen datan käyttö edellyttää edelleen asianmukaisia käyttöoikeuksia ja hallintakeinoja. <a class="citation" href="#source-dora-model">[9]</a></p>
+
+        <dl class="editorial-list">
+          <div><dt>Jaa työnkulkuja, älä vain vinkkejä.</dt><dd>Kirjaa tehtävä, hyväksytty data, vaiheet, ihmisen tekemä tarkistus, havaittu tulos ja tunnetut rajoitukset. Kerro myös epäonnistumisista. Poista vanhentuneet esimerkit työkalun muuttuessa.</dd></div>
+          <div><dt>Pidä päätösvalta oikeilla tahoilla.</dt><dd>Tietoturvan ja alustan omistajat määrittävät käytännöt, hyväksyvät käyttöoikeudet ja hoitavat häiriöt. Championit opastavat näiden rajojen sisällä; he eivät voi myöntää niistä poikkeuksia.</dd></div>
+          <div><dt>Määritä agenttien oikeudet selkeästi.</dt><dd>Käytä vähimpien oikeuksien periaatetta ja hyväksyttyjä ympäristöjä. Tarkista koodi ja merkittävät toimet. Championin innostus ei koskaan oikeuta datan paljastamista tai kontrollien ohittamista.</dd></div>
+          <div><dt>Rakenna yhtä tuotetta laajemmalle.</dt><dd>Sama verkosto voi tukea uudelleenkäytettäviä Actions-työnkulkuja, alustan käyttöönottoa, inner-sourcea ja turvallisen kehityksen käytäntöjä. Aloita yhdestä käyttötapauksesta; laajenna vain, kun verkostolla on kapasiteettia.</dd></div>
+        </dl>
+        <p class="caption">Yllä olevat käytännöt ovat tämän oppaan suosituksia nykyaikaisille ohjelmille, eivät GitHubin tai DORAn lisävaatimuksia.</p>
+        <h3>Yhteinen työkalupaketti, ei poikkeus käytännöistä</h3>
+        <p>Aloita yhdestä toistuvasta tehtävästä ja säilytä pienin hyödyllinen aineisto hyväksytyssä, käyttöoikeuksin rajatussa paikassa. Tarkista asiakassovelluksesi tuki: mukautetut ohjeet lisäävät toistuvaa kontekstia; kehotetiedostot valitaan tehtävää varten; agent skills -taidot paketoivat tehtäväkohtaiset ohjeet ja valinnaiset resurssit, jotka niitä tukevat agentit lataavat tarvittaessa. <a class="citation" href="#source-customization">[6]</a> <a class="citation" href="#source-skills">[7]</a></p>
+        <figure class="diagram-embed">
+          <h3>Uudelleenkäytettävän tiimipaketin rakenne</h3>
+          <p class="diagram-hint">Vieritä kuvaa vaakasuunnassa nähdäksesi koko paketin.</p>
+          <div class="diagram-scroll" role="region" aria-label="Uudelleenkäytettävän tiimipaketin rakenne, vieritä vaakasuunnassa" tabindex="0">
+            <svg viewBox="0 0 672 300" role="img" aria-labelledby="kit-title kit-desc">
+              <title id="kit-title">Uudelleenkäytettävän tiimipaketin rakenne</title>
+              <desc id="kit-desc">Hyväksytty yhteinen paikka sisältää toistuvat ohjeet, tehtäväkehotteet ja agenttitaidot; omistaja tarkistaa ne tietoturvarajoja vasten ja poistaa vanhentuneet ohjeet.</desc>
+              <rect x="32" y="24" width="608" height="232" rx="6" class="diagram-node"/>
+              <text class="diagram-heading" x="52" y="50">HYVÄKSYTTY YHTEINEN PAIKKA</text>
+              <rect x="52" y="68" width="568" height="48" rx="4" class="diagram-node focal"/>
+              <text class="node-name" x="68" y="97">Ohjeet</text><text class="node-sub" x="220" y="97">Toistuva konteksti ja käytännöt</text>
+              <rect x="52" y="124" width="568" height="48" rx="4" class="diagram-node"/>
+              <text class="node-name" x="68" y="153">Kehotetiedostot</text><text class="node-sub" x="220" y="153">Valittu tehtävä ja tarkistusvaiheet</text>
+              <rect x="52" y="180" width="568" height="48" rx="4" class="diagram-node"/>
+              <text class="node-name" x="68" y="209">Agenttitaidot</text><text class="node-sub" x="220" y="209">Tehtäväohjeet ja valinnaiset resurssit</text>
+              <text class="diagram-legend" x="32" y="282">Omistaja ja tarkistuspäivä · hyväksytty data ja työkalut · ihmisen tarkistus · käytöstäpoisto</text>
+            </svg>
+          </div>
+          <figcaption>Havainnollistava paketti, ei kolmea pakollista tiedostoa. Kaappimainen ryhmittely tekee osat näkyviksi; se ei osoita niiden etusijajärjestystä.</figcaption>
+        </figure>
+        <p>Esimerkiksi repositorion ohjeessa voidaan nimetä testikomento; valittu katselmointikehote voi pyytää näyttöä ja ihmisen tarkistusta; taito voi dokumentoida toistettavan, hyväksytyn triage-työnkulun. Nimeä omistaja, rajaus, sallitut syötteet ja työkalut, tarkistuspäivä ja käytöstäpoistotapa. Championit ehdottavat ja testaavat esimerkkejä; repositorion tai alustan omistajat hyväksyvät ne, ja tietoturvan omistajat päättävät datan ja käyttöoikeuksien rajoista. Tarkista mukana olevat skriptit kuten koodi. Älä sijoita salaisuuksia tai arkaluonteisia esimerkkejä yhteisiin aineistoihin.</p>
+        <p>Anthropic kuvaa Claude Coworkille mallin ”löytäminen alhaalta ylöspäin, skaalaus ylhäältä alaspäin”: championit muuttavat pilotin työnkulut taidoiksi, ja ylläpitäjät provisioivat toimiviksi osoittautuneet työnkulut laajemmin hallitun kauppapaikan kautta. Sovita ajatus hyväksyttyihin työkaluihin ja tarkistusprosessiin; älä oleta samojen jakeluominaisuuksien olevan kaikissa tuotteissa. <a class="citation" href="#source-anthropic">[10]</a></p>
+        <p><strong>Ohjeet ovat opastusta, eivät pakottava kontrolli.</strong> Käytä merkittäviin toimiin olemassa olevia käyttöoikeuskontrolleja, suojattuja ympäristöjä ja ihmisen hyväksyntää; varmista tuotokset ja tuettu toiminta kussakin käyttöympäristössä. <a class="citation" href="#source-customization">[6]</a></p>
+      </section>
+
+      <section class="chapter" id="model" aria-labelledby="model-title">
+        <div class="section-heading"><span class="chapter-label">Toimintamalli</span><span class="reading-note">Selkeät vastuut ovat lisäkerroksia tärkeämpiä</span></div>
+        <h2 id="model-title">Verkosto tarvitsee<br>muutakin kuin vapaaehtoisia.</h2>
+        <p class="lead">Anna ihmisille lupa, aikaa ja yhteys päätöksentekijään.</p>
+        <p>GitHubin ohjeistus korostaa johdon sponsorointia sekä innostuneita ja vaikutusvaltaisia käytännön tekijöitä. Edistäminen on toimintaa, ei titteli. Rekrytoi uteliaisuuden, avuliaisuuden ja kollegoiden luottamuksen perusteella; pelkkä runsas käyttö ei tee ihmisestä hyvää championia. <a class="citation" href="#source-github">[1–3]</a></p>
+        <p>OpenAI erottaa <strong>Leaderit</strong>, jotka koordinoivat strategiaa, sponsorointia, hallintaa ja toimintarytmiä, <strong>Activatoreista</strong>, jotka rakentavat ja mukauttavat työnkulkuja tiimiensä kanssa. Tekoälyn taitava käyttö omassa työssä ei ole sama asia kuin kollegoiden auttaminen sen käyttöönotossa. Nämä ovat hyödyllisiä roolinäkökulmia, eivät pakollisia titteleitä. <a class="citation" href="#source-openai-role">[11]</a></p>
+        <div class="table-wrap" role="region" aria-label="Ohjelman vastuut, vieritä vaakasuunnassa kapeilla näytöillä" tabindex="0">
+          <table>
+            <caption>Vähimmäisvastuut. Yhdellä henkilöllä voi olla useampi rooli.</caption>
+            <thead><tr><th scope="col">Kuka</th><th scope="col">Vastaa</th><th scope="col">Ei saa muuttua</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Johdon sponsori</th><td>Liiketoiminnan tarkoitus, varattu kapasiteetti ja organisatoristen esteiden poistaminen.</td><td>Nimeksi esityksessä ilman sitoutunutta aikaa tai vaikutusvaltaa.</td></tr>
+              <tr><th scope="row">Ohjelman omistaja</th><td>Peruskirja, perehdytys, toimintarytmi, palautteen ohjaus ja ohjelman arvioinnit. Voi olla champion.</td><td>Päivittäisen oppimisen uudeksi hyväksymispullonkaulaksi.</td></tr>
+              <tr><th scope="row">Paikalliset championit</th><td>Oppiminen, vertaistuki, uudelleenkäytettävät esimerkit ja selkeä kuva paikallisesta kitkasta.</td><td>Palkattomaksi pysyväksi helpdeskiksi tai esihenkilötyön korvikkeeksi.</td></tr>
+              <tr><th scope="row">Alustan ja tietoturvan omistajat</th><td>Luotettavat tekniset ohjeet, hyväksytty pääsy, käytäntöpäätökset ja eskalointeihin vastaaminen.</td><td>Etäiseksi eskalointikohteeksi, joka ei koskaan sulje palautekiertoa.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>ChatGPT:n käyttöönotossa OpenAI antaa myös yksiköiden johtajille roolin championien nimeämisessä, projektipäällikölle champion-ryhmän, henkilöstö- ja oppimistiimeille käytännöt ja koulutuksen sekä työtilan ylläpitäjille käyttöoikeudet ja hallinnan. Sovita nämä vastuut nykyisille vastuuhenkilöille päällekkäisten roolien luomisen sijaan. <a class="citation" href="#source-openai-rollout">[12]</a></p>
+        <h3>Mitoita henkilöstö kattavuuden ja kapasiteetin mukaan</h3>
+        <p>Kartoita liiketoimintayksiköt, työajat, kielet ja olennaiset osaamisalat ennen championien määrän laskemista. Kysy esihenkilöiltä, mikä työ jää pois tilan tekemiseksi. Tarjoa saavutettava, eriaikainen osallistumistapa, ei vain pääkonttorille sopivia reaaliaikaisia tilaisuuksia.</p>
+        <p><strong>Ehdota ja valitse:</strong> pyydä itseilmoittautumisia sekä esihenkilöiden ja kollegoiden ehdotuksia. Pyydä lyhyt esimerkki kollegoiden auttamisesta sekä tietoa halusta oppia ja jakaa, paikallisen työn tuntemuksesta ja kyvystä tunnistaa eskaloinnin tarve. Vahvista kiinnostus ja varattu aika henkilön ja esihenkilön kanssa; älä valitse pelkän tittelin tai Copilotin käytön perusteella.</p>
+        <p>Vertaa ehdokkaita pilotin liiketoimintayksiköihin, aikavyöhykkeisiin, kieliin ja osaamisaloihin; kirjaa puutteet sekä tavoitettavissa oleva varahenkilö tai eriaikainen reitti kullekin. Pyydä puutteellisesti palveltavia tiimejä ehdottamaan kollegoitaan, julkaise valintaperusteet ja arvioi kattavuutta pilotin muuttuessa. Käytä kartoitusta suunnittelun apuna, älä kiintiönä tai ihmisten paremmuusjärjestyksenä.</p>
+        <details>
+          <summary>Mitä lähteiden mallipohjat sanovat henkilöstömitoituksesta?</summary>
+          <div class="detail-body">
+            <p>GitHubin peruskirjamalli ehdottaa lähtöodotukseksi useita tunteja viikossa eli noin 10 % työajasta. Se antaa tilanteesta riippuvia esimerkkejä: pienemmissä organisaatioissa 1–3 championia 100 käyttäjää kohti ja suuremmissa organisaatioissa kevyempi kattavuus noin 1/1 000, kun käytössä on porrastettu johtavien championien malli. <a class="citation" href="#source-charter">[2]</a></p>
+            <p><strong>Lähteen ohjeistus, ei yleispätevä henkilöstösääntö.</strong> Henkilömäärä tai suhdeluku ei todista kattavuuden riittävyyttä. Mitoita kapasiteetti todellisen työn, maantieteellisen hajonnan ja eskalointikuorman mukaan; mukauta sitä ennen kuin vapaaehtoiset joutuvat paikkaamaan erotuksen.</p>
+          </div>
+        </details>
+
+        <h3>Toimiva oppimiskierros</h3>
+        <figure class="diagram-embed">
+          <p class="diagram-hint">Vieritä vaakasuunnassa nähdäksesi kaikki neljä vaihetta.</p>
+          <div class="diagram-scroll" role="region" aria-label="Opi, Jaa, Kuuntele, Pohdi -toimintakierros, vieritä vaakasuunnassa" tabindex="0">
+            <svg class="cycle-diagram" viewBox="0 0 672 384" role="img" aria-labelledby="champions-cycle-title champions-cycle-desc">
+              <title id="champions-cycle-title">Championin oppimiskierros</title>
+              <desc id="champions-cycle-desc">Opi tarkistamalla hyväksytty työnkulku, jaa löydettävä esimerkki, kuuntele esteitä myös ei-käyttäjiltä ja pohdi näyttöä valitaksesi seuraavan kokeilun ja oppiaksesi uudelleen.</desc>
+              <defs><marker id="cycle-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8" fill="var(--muted)"/></marker></defs>
+              <path d="M272 88 H400" class="cycle-connector"/>
+              <path d="M520 136 V232" class="cycle-connector"/>
+              <path d="M400 280 H272" class="cycle-connector"/>
+              <path d="M152 232 V136" class="cycle-connector"/>
+              <rect x="32" y="40" width="240" height="96" rx="6" class="diagram-node"/>
+              <text class="cycle-name" x="52" y="72">1 · Opi</text><text class="cycle-sub" x="52" y="96"><tspan>Kokeile hyväksyttyä työnkulkua.</tspan><tspan x="52" dy="18">Tarkista tulokset ja rajat.</tspan></text>
+              <rect x="400" y="40" width="240" height="96" rx="6" class="diagram-node"/>
+              <text class="cycle-name" x="420" y="72">2 · Jaa</text><text class="cycle-sub" x="420" y="96"><tspan>Muuta hyödyllinen osa</tspan><tspan x="420" dy="18">löydettäväksi esimerkiksi.</tspan></text>
+              <rect x="400" y="232" width="240" height="96" rx="6" class="diagram-node"/>
+              <text class="cycle-name" x="420" y="264">3 · Kuuntele</text><text class="cycle-sub" x="420" y="288"><tspan>Kerää esteitä myös</tspan><tspan x="420" dy="18">käytön lopettaneilta.</tspan></text>
+              <rect x="32" y="232" width="240" height="96" rx="6" class="diagram-node focal"/>
+              <text class="cycle-name" x="52" y="264">4 · Pohdi</text><text class="cycle-sub" x="52" y="288"><tspan>Arvioi. Poista vanhat ohjeet.</tspan><tspan x="52" dy="18">Valitse seuraava kokeilu.</tspan></text>
+              <text class="diagram-legend" x="32" y="364">Jokainen pohdinta ohjaa seuraavaa kokeilua. Toista uudelleenkäynnistyksen sijaan.</text>
+            </svg>
+          </div>
+          <figcaption>Opi todellisessa tehtävässä, jaa lyhyt esimerkki, kuuntele ei-käyttäjiä ja innokkaita käyttäjiä ja pohdi ennen seuraavaa kokeilua. Mukautettu käsikirjan toimintakierrosta. <a class="citation" href="#source-handbook">[3]</a></figcaption>
+        </figure>
+        <p>Käytä olemassa olevaa Teams- tai Slack-kanavaa ja yhtä haettavaa paikkaa vastauksille. Mahdollinen pilotin rytmi on viikoittaiset eriaikaiset muistiinpanot, vertaisklinikka joka toinen viikko ja kuukausittainen sponsorin arviointi. Tämä rytmi on toimituksellinen lähtökohta; kevennä sitä, jos se kuluttaa enemmän kapasiteettia kuin tuottaa hyötyä. Oppimiskierros on peräisin käsikirjasta. <a class="citation" href="#source-handbook">[3]</a></p>
+      </section>
+
+      <section class="chapter readiness-section" id="readiness" aria-labelledby="readiness-title">
+        <div class="section-heading"><span class="chapter-label">Ennen aloittamista</span><span class="reading-note">Käytännön tarkistuslista, ei kypsyysarvio</span></div>
+        <h2 id="readiness-title">Ovatko edellytykset<br>riittävät pilotille?</h2>
+        <p>Merkitse se, mikä on todella kunnossa, älä pelkkiä lupauksia. Merkitsemättömät kohdat vaativat suunnittelua. Nämä ovat oppaan käynnistyksen perusedellytykset, joiden taustalla on käytetty lähteiden ohjeita.</p>
+        <fieldset id="foundations">
+          <legend class="sr-only">Pilotin perusedellytykset</legend>
+          <label><input type="checkbox" value="sponsor"><span><strong>Toimintakykyinen sponsori</strong>Nimetty johtaja tukee yhden liiketoimintaongelman ratkaisua ja voi poistaa esteitä.</span></label>
+          <label><input type="checkbox" value="capacity"><span><strong>Varattu työaika</strong>Esihenkilöt sopivat kapasiteetista ja siitä, mistä championit luopuvat.</span></label>
+          <label><input type="checkbox" value="ownership"><span><strong>Ohjelman omistaja ja eskalointireitti</strong>Joku vastaa toimintakierrosta; alusta- ja tietoturvatiimit hyväksyvät oman osuutensa.</span></label>
+          <label><input type="checkbox" value="coverage"><span><strong>Luotetut kollegat pilottitiimeissä</strong>Halukkaat käytännön tekijät kattavat palveltavat tiimit ja työajat.</span></label>
+          <label><input type="checkbox" value="channels"><span><strong>Paikka oppimiselle ja jakamiselle</strong>Olemassa oleva kanava, haettavat vastaukset ja vertaisoppimiselle avoin kulttuuri.</span></label>
+          <label><input type="checkbox" value="baseline"><span><strong>Lähtötaso ja arviointipäivä</strong>Yksi määritelty käyttötapaus, kerättävä näyttö ja päivä, jolloin muutoksista päätetään.</span></label>
+        </fieldset>
+        <div class="readiness-result" hidden>
+          <p id="readiness-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <p id="readiness-next"></p>
+        </div>
+        <p class="caption">Valinnat pysyvät vain tällä sivulla ja nollautuvat, kun se ladataan uudelleen. Tulosta säilyttääksesi kopion. Mitään ei lähetetä tai tallenneta.</p>
+        <noscript><p>Tarkista perusedellytykset käsin ja käytä sitten alla olevaa pilottia. Tulostus ja oppaan koko sisältö toimivat ilman JavaScriptiä.</p></noscript>
+      </section>
+
+      <section class="chapter" id="playbook" aria-labelledby="playbook-title">
+        <div class="section-heading"><span class="chapter-label">Ensimmäiset 90 päivää</span><span class="reading-note">Ehdotus pilotiksi, ei määräaika</span></div>
+        <h2 id="playbook-title">Aloita rajatusti.<br>Ansaitse seuraava askel.</h2>
+        <p class="lead">Yksi käyttötapaus. Edustava pilotti. Päätös jokaisessa tarkistuspisteessä.</p>
+        <p>Alla oleva aikataulu on oppaan ehdotus käynnistyspoluksi. Sovita se riskeihin, kapasiteettiin ja hankintarajoitteisiin. Avaa jokainen vaihe nähdäksesi työn, vastuuhenkilöt ja jatkamiseen tarvittavan näytön.</p>
+        <p><a href="./charter.html">Käytä tulostettavaa yhden sivun sponsorimuistiota →</a> Täytä se sponsorin ja pilottitiimien kanssa ennen kapasiteetin sitomista.</p>
+        <nav class="phase-nav" aria-label="Pilotin vaiheet"><a href="#days-30">Päivät 1–30</a><a href="#days-60">Päivät 31–60</a><a href="#days-90">Päivät 61–90</a></nav>
+        <details class="phase" id="days-30" open>
+          <summary><span>Päivät 1–30</span><strong>Määritä pilotin tarkoitus</strong></summary>
+          <div class="detail-body">
+            <p><strong>Vastuussa:</strong> ohjelman omistaja yhdessä sponsorin ja pilottitiimien esihenkilöiden kanssa.</p>
+            <ul>
+              <li>Laadi yhden sivun peruskirja: liiketoimintaongelma, kohdetiimit, hyväksytty rajaus, kapasiteetti, eskaloinnin vastuuhenkilöt ja arviointipäivä.</li>
+              <li>Rekrytoi halukkaita, luotettuja kollegoita pilotin eri työajoilta. Sovi varatusta työajasta ja vuorottelu- tai poistumismahdollisuudesta.</li>
+              <li>Mittaa valitun työnkulun lähtötaso ja kerää nykyiset esteet. Tarkista sovellettavat käytännöt alustan ja tietoturvan vastuuhenkilöiden kanssa.</li>
+              <li>Ota käyttöön olemassa oleva kanava, tietopankki ja perehdytys. Kerro, mihin championit voivat vastata ja minne he eskaloivat asiat.</li>
+            </ul>
+            <p class="deliverable"><strong>Vaiheen tulokset:</strong> sovittu peruskirja, nimetyt henkilöt, lähtötaso ja yksi hyväksytty kokeiltava työnkulku.</p>
+            <p><strong>Tarkistuspiste:</strong> aloita käytännön työ vasta, kun kapasiteetti, rajat ja eskaloinnin vastuut ovat todella kunnossa. Muuten rajaa pilottia tai keskeytä se.</p>
+          </div>
+        </details>
+        <details class="phase" id="days-60">
+          <summary><span>Päivät 31–60</span><strong>Opi käytännön työssä</strong></summary>
+          <div class="detail-body">
+            <p><strong>Vastuussa:</strong> paikalliset championit vertaisoppimisesta; ohjelman omistaja palautteen ratkaisemisesta.</p>
+            <ul>
+              <li>Kokeile hyväksyttyä työnkulkua todellisissa tehtävissä. Dokumentoi konteksti, ihmisen tekemä tarkistus, hyödylliset tulokset ja epäonnistumiset.</li>
+              <li>Järjestä lyhyitä vertaisklinikoita. Muunna toistuvat kysymykset haettaviksi vastauksiksi ja pyydä myös ei-käyttäjiä kertomaan kitkasta.</li>
+              <li>Ohjaa käytäntöihin ja alustaan liittyvät esteet vastuuhenkilöille. Kirjaa päätökset ja kerro tiimeille, mikä muuttui.</li>
+              <li>Arvioi championien työkuorma esihenkilöiden kanssa. Karsi toiminta, joka ei auta pilotin ongelmassa.</li>
+            </ul>
+            <p class="deliverable"><strong>Vaiheen tulokset:</strong> tarkistetut esimerkit, esteloki vastuuhenkilöineen ja näyttöä hyödyllisestä toistuvasta käytöstä.</p>
+            <p><strong>Tarkistuspiste:</strong> jatka, kun työnkulku on hyödyllinen ja tarkistettavissa, tukipyynnöillä on vastuuhenkilö ja championien työkuorma mahtuu sovittuun kapasiteettiin. Ratkaisemattomat turvallisuusongelmat estävät laajentamisen.</p>
+          </div>
+        </details>
+        <details class="phase" id="days-90">
+          <summary><span>Päivät 61–90</span><strong>Päätä, mitä kannattaa laajentaa</strong></summary>
+          <div class="detail-body">
+            <p><strong>Vastuussa:</strong> sponsori ja ohjelman omistaja pilottitiimien sekä alustan ja tietoturvan vastuuhenkilöiden tietojen pohjalta.</p>
+            <ul>
+              <li>Vertaa pilottia lähtötasoon. Selitä työn koostumuksen, tiimin koon tai työkalujen muutokset, jotka vaikeuttavat vaikutusten kohdentamista.</li>
+              <li>Arvioi käyttöönottoa yhdessä laadun, tukityön ja championien hyvinvoinnin kanssa. Ota mukaan myös osallistumisesta luopuneet.</li>
+              <li>Julkaise lyhyt sisäinen päätös: laajenna, mukauta, pidä ennallaan tai lopeta. Selitä näyttö ja jäljellä oleva epävarmuus.</li>
+              <li>Jos laajennat, perehdytä seuraava ryhmä, korjaa kattavuuspuutteet, rahoita kapasiteetti ja määritä jaettujen esimerkkien ylläpitovastuu.</li>
+            </ul>
+            <p class="deliverable"><strong>Vaiheen tulokset:</strong> sponsorin päätös, päivitetty peruskirja, resurssit ja seuraava arviointipäivä.</p>
+            <p><strong>Tarkistuspiste:</strong> laajentaminen edellyttää hyödyllisiä tuloksia, kestävää kapasiteettia ja toimivia hallintakeinoja. Pelkkä osallistuminen tai lisenssin aktivointi ei riitä.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="chapter" id="quest" aria-labelledby="quest-title">
+        <div class="section-heading"><span class="chapter-label">Championin tehtäväpolku</span><span class="reading-note">Opi, harjoittele, jaa</span></div>
+        <h2 id="quest-title">Kehitä osaamistasi.<br>Valitse oma polkusi.</h2>
+        <p class="lead">Neljä valinnaista välitavoitetta yhdistää oppimisen hyödylliseen työhön. Aloita sopivasta kohdasta; mitään ei ole lukittu.</p>
+        <p>Tämä on henkilökohtainen, vapaaehtoinen ja itse tarkistettava. Oppaassa määritellyt välitavoitteet eivät ole pätevyyksiä: ne kuvaavat oppimista, eivät suoriutumista tai tuottavuutta, eikä niiden suorittaminen todista osaamista. Tulostaulukoita, sijoituksia tai esihenkilöraportteja ei ole. Tehtävän merkitseminen tallentaa vain valintasi tämän selaimen paikalliseen tallennustilaan; mitään ei lähetetä minnekään. Nollaus poistaa valinnat. <a class="citation" href="#source-github-skills">[13]</a> <a class="citation" href="#source-ms-learn">[14]</a></p>
+        <p class="caption">Käytä hyväksyttyä harjoitteluympäristöä, älä arkaluonteisia tietoja. GitHub Skills -harjoitukset voivat luoda julkisia repositorioita ja käyttää Actions-minuutteja tai Codespacesia; Enterprise Managed Users voi tarvita <a href="https://github.com/skills/skills-for-emu">lisämäärityksiä</a>.</p>
+        <div class="quest-summary" hidden>
+          <div><strong id="quest-status" role="status" aria-live="polite"></strong><button type="button" id="quest-reset">Nollaa tehtävien edistyminen</button></div>
+          <progress id="quest-progress" max="12" value="0" aria-label="Suoritetut tehtävät"></progress>
+          <p id="quest-storage" role="status" aria-live="polite"></p>
+        </div>
+        <noscript><p>JavaScript ei ole käytössä: merkitse tehtävät tämän käynnin ajaksi tai tulosta ne. Edistymistä ei tallenneta.</p></noscript>
+        <div id="quest-levels">
+          <fieldset class="quest-level">
+            <legend><span>01</span> Tutkija <small hidden>Välitavoite merkitty</small></legend>
+            <p>Perehdy ja löydä todellinen tutkimisen arvoinen ongelma.</p>
+            <label><input type="checkbox" value="explorer-github"><span><strong>Tehostus · GitHub Skills</strong>Kokeile Introduction to GitHub -harjoitusta.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/introduction-to-github">Avaa harjoitus ↗</a></p>
+            <label><input type="checkbox" value="explorer-learn"><span><strong>Tehostus · Microsoft Learn</strong>Tutustu GitHub Foundations -oppimispolun osaan 1.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/github-foundations/">Avaa oppimispolku ↗</a></p>
+            <label><input type="checkbox" value="explorer-field"><span><strong>Kenttätehtävä</strong>Kysy tiimikaverilta, missä työ takkuilee, ja tunnista ongelmalle sopiva vastuuhenkilö.</span></label>
+          </fieldset>
+          <fieldset class="quest-level">
+            <legend><span>02</span> Käytännön tekijä <small hidden>Välitavoite merkitty</small></legend>
+            <p>Kokeile hyväksyttyä työnkulkua ja tee sen rajat näkyviksi.</p>
+            <label><input type="checkbox" value="practitioner-github"><span><strong>Tehostus · GitHub Skills</strong>Kokeile Getting Started with GitHub Copilot -harjoitusta.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/getting-started-with-github-copilot">Avaa harjoitus ↗</a></p>
+            <label><input type="checkbox" value="practitioner-learn"><span><strong>Tehostus · Microsoft Learn</strong>Tutustu Copilot Fundamentals -oppimispolun osaan 1.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/copilot/">Avaa oppimispolku ↗</a></p>
+            <label><input type="checkbox" value="practitioner-field"><span><strong>Kenttätehtävä</strong>Dokumentoi hyväksytty työnkulku, sen datarajat, ihmisen tekemä tarkistus sekä tulos tai rajoitus.</span></label>
+          </fieldset>
+          <fieldset class="quest-level">
+            <legend><span>03</span> Vaikutuksen moninkertaistaja <small hidden>Välitavoite merkitty</small></legend>
+            <p>Tee hyödyllisestä mallista helpompi käyttää muille.</p>
+            <label><input type="checkbox" value="multiplier-github"><span><strong>Tehostus · GitHub Skills</strong>Kokeile Customize Your GitHub Copilot Experience -harjoitusta.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/customize-your-github-copilot-experience">Avaa harjoitus ↗</a></p>
+            <label><input type="checkbox" value="multiplier-learn"><span><strong>Tehostus · Microsoft Learn</strong>Tutustu Copilot Fundamentals -oppimispolun osaan 2.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/gh-copilot-2/">Avaa oppimispolku ↗</a></p>
+            <label><input type="checkbox" value="multiplier-field"><span><strong>Kenttätehtävä</strong>Jaa vertaisarvioitu uudelleenkäytettävä aineisto hyväksytyssä paikassa ja järjestä Opi, Jaa, Kuuntele, Pohdi -tilaisuus.</span></label>
+          </fieldset>
+          <fieldset class="quest-level">
+            <legend><span>04</span> Ylläpitäjä <small hidden>Välitavoite merkitty</small></legend>
+            <p>Pidä verkosto turvallisena, ajan tasalla ja vähemmän riippuvaisena yhdestä henkilöstä.</p>
+            <label><input type="checkbox" value="steward-github"><span><strong>Tehostus · GitHub Skills</strong>Kokeile Introduction to Secret Protection -harjoitusta.</span></label>
+            <p class="quest-links"><a href="https://github.com/skills/introduction-to-secret-scanning">Avaa harjoitus ↗</a></p>
+            <label><input type="checkbox" value="steward-learn"><span><strong>Tehostus · Microsoft Learn</strong>Tutustu GitHub Advanced Security -oppimispolun osaan 1.</span></label>
+            <p class="quest-links"><a href="https://learn.microsoft.com/en-us/training/paths/github-advanced-security/">Avaa oppimispolku ↗</a></p>
+            <label><input type="checkbox" value="steward-field"><span><strong>Kenttätehtävä</strong>Mentoroi uutta championia, poista tai päivitä vanhentunut aineisto ja välitä havainto alustatiimille.</span></label>
+          </fieldset>
+        </div>
+        <p class="caption"><a href="https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/">Sertifiointi</a> on valinnainen eikä sitä vaadita välitavoitteen suorittamiseen.</p>
+      </section>
+
+      <section class="chapter" id="measure" aria-labelledby="measure-title">
+        <div class="section-heading"><span class="chapter-label">Mittaa olennaista</span><span class="reading-note">Näyttöä, ei tulostaulukkoa</span></div>
+        <h2 id="measure-title">Aktiivisuus on signaali.<br>Hyödyllinen muutos on tavoite.</h2>
+        <p class="lead">Päätä ennen aloittamista, millainen näyttö saisi sinut muuttamaan mieltäsi.</p>
+        <p>GitHubin mallipohjat listaavat mahdollisiksi mittareiksi käyttöönoton, sitoutumisen, osallistumisen, sertifioinnit, kontribuutiot ja kyselyt. <a class="citation" href="#source-charter">[2]</a> Tämä opas suosittelee erottamaan nämä ennakoivat signaalit tuloksista ja tarkastelemaan samalla kustannuksia ja riskejä.</p>
+        <h3>Arvioi tietosuoja ennen keräämistä</h3>
+        <p>Ota tietosuojan, lakiasioiden ja tietoturvan vastuuhenkilöt mukaan ennen käyttötietojen keräämistä tai ihmisten mittaamista; määritä tarkoitus, tarvittavat tiedot, soveltuva oikeusperuste, käyttöoikeudet, säilytys, informointi ja uudelleentunnistamisen riskit. Suosi koottua raportointia ja sovi tietosuojan vastuuhenkilöiden kanssa asianmukaisista vähimmäisryhmäkoko- ja piilotussäännöistä; koonti ei tee tiedoista automaattisesti anonyymejä. Tee tietosuojaa koskeva vaikutustenarviointi tarvittaessa ja kuule työntekijöiden edustajia tai yritysneuvostoja soveltuvin osin <strong>ennen</strong> seurannan käyttöönottoa. GDPR:n ja kuulemisen velvoitteet riippuvat käsittelystä ja oikeudenkäyttöalueesta; esimerkiksi Alankomaiden säännöt edellyttävät yritysneuvoston suostumusta tiettyihin työntekijöiden valvontajärjestelyihin. Paikallisen lakiasiantuntijan on määritettävä velvoitteet. <a class="citation" href="#source-privacy">[8]</a></p>
+        <h3>Tulkitse todellisia Copilot-signaaleja kontekstissaan</h3>
+        <p>GitHubin käyttönäkymä raportoi päivittäin tai viikoittain aktiiviset käyttäjät, chat-pyynnöt sekä ehdotetut ja hyväksytyt rivinsisäiset täydennykset; agentin käyttöönotto on niiden lisensoitujen aktiivisten käyttäjien osuus, jotka kokeilivat agenttia kuluvan kalenterikuukauden aikana. Määritä kohdejoukko, aikaväli ja tuetut käyttöympäristöt ennen vertailua. Käyttönäkymän kaaviot eivät sisällä Copilot CLI:tä; mittareiden ja vientien kattavuus vaihtelee, ja sama käyttäjä voi esiintyä useassa organisaatiossa. Älä laske organisaatioiden kokonaismääriä yhteen yrityksen kokonaismääräksi. <a class="citation" href="#source-metrics">[5]</a></p>
+        <p>Hyväksymisaste kuvaa hyväksyttyjä ehdotuksia, ei oikeellisuutta tai tuottavuutta. Aktiivinen käyttö, kehotteiden määrät, luodut rivit ja pull requestien määrät eivät ole yksilöllisiä suorituspisteitä. Viennit voivat sisältää tunnistettavia käyttäjäkohtaisia tietoja; saatavuus ei anna lupaa kerätä tai käyttää niitä työntekijöiden järjestykseen asettamiseen, valvontaan tai suorituksen johtamiseen.</p>
+        <figure class="diagram-embed">
+          <h3>Signaaleista sponsorin päätökseen</h3>
+          <p class="diagram-hint">Seuraa näyttöä vierittämällä kuvaa vaakasuunnassa.</p>
+          <div class="diagram-scroll" role="region" aria-label="Näytöstä päätökseen etenevä prosessi, vieritä vaakasuunnassa" tabindex="0">
+            <svg viewBox="0 0 672 184" role="img" aria-labelledby="evidence-title evidence-desc">
+              <title id="evidence-title">Näytöstä päätökseen</title>
+              <desc id="evidence-desc">Sovi tietosuojatoimista, vertaa lähtötasoa ja pilotin signaaleja tulos- ja työkuormanäyttöön ja päätä sitten, laajennetaanko, mukautetaanko, pidetäänkö ennallaan vai lopetetaanko.</desc>
+              <defs><marker id="evidence-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8" fill="var(--muted)"/></marker></defs>
+              <path d="M156 76 H176" class="evidence-connector"/>
+              <path d="M316 76 H336" class="evidence-connector"/>
+              <path d="M476 76 H496" class="evidence-connector"/>
+              <rect x="16" y="32" width="140" height="88" rx="6" class="diagram-node"/>
+              <text class="node-name" x="28" y="59">1 · Suojatoimet</text><text class="node-sub" x="28" y="82">Tarkoitus, pääsy,</text><text class="node-sub" x="28" y="100">kuuleminen</text>
+              <rect x="176" y="32" width="140" height="88" rx="6" class="diagram-node"/>
+              <text class="node-name" x="188" y="59">2 · Lähtötaso</text><text class="node-sub" x="188" y="82">Sama työnkulku,</text><text class="node-sub" x="188" y="100">kohdejoukko, jakso</text>
+              <rect x="336" y="32" width="140" height="88" rx="6" class="diagram-node"/>
+              <text class="node-name" x="348" y="59">3 · Pilotin näyttö</text><text class="node-sub" x="348" y="82">Käyttö + laatu</text><text class="node-sub" x="348" y="100">+ työkuorma</text>
+              <rect x="496" y="32" width="160" height="88" rx="6" class="diagram-node focal"/>
+              <text class="node-name" x="508" y="59">4 · Päätös</text><text class="node-sub" x="508" y="82">Laajenna, mukauta,</text><text class="node-sub" x="508" y="100">pidä tai lopeta</text>
+              <text class="diagram-legend" x="16" y="156">Selitä konteksti ja epävarmuus; ennen–jälkeen-vertailu ei osoita syytä.</text>
+            </svg>
+          </div>
+          <figcaption>Toimituksellinen päätöspolku: sovi suojatoimista ennen keräämistä ja yhdistä signaaleja yksittäisen luvun optimoinnin sijaan.</figcaption>
+        </figure>
+        <p>Kirjaa yhdelle hyväksytylle työnkululle pilottia edeltävä jakso ja pilottijakso, soveltuva kohdejoukko ja määritelmät. Vertaa saman työnkulun läpimenoaikaa tai uudelleentyötä ja laatua sekä koottua käyttöä, tukityötä, championien tunteja ja tiimipalautetta. Huomioi työn koostumuksen, henkilöstön ja työkalujen muutokset; ota mukaan myös ei-käyttäjät. Jos näyttö on puutteellista, kerro se ja valitse pienempi seuraava kokeilu sen sijaan, että esittäisit syy-seuraussuhteeseen perustuvan ROI:n.</p>
+        <p>Anthropic ehdottaa Claude Cowork -pilotilleen championien laatimien taitojen määrää skaalausvaiheen ennakoivaksi mittariksi. Jos se on tarkoituksenmukaista ja hyväksyttyä, käytä lukua nähdäksesi, syntyykö uudelleenkäytettäviä aineistoja – ei yksilöiden tavoitteena tai näyttönä laadusta, käyttöönotosta tai liiketoiminta-arvosta. Tarkastele sen rinnalla arviointia, uudelleenkäyttöä ja työnkulun tuloksia. <a class="citation" href="#source-anthropic">[10]</a></p>
+        <div class="table-wrap" role="region" aria-label="Pilotin mittarit, vieritä vaakasuunnassa kapeilla näytöillä" tabindex="0">
+          <table>
+            <caption>Mittausvalikko. Valitse pilotille pieni joukko, älä jokaista riviä.</caption>
+            <thead><tr><th scope="col">Näkökulma</th><th scope="col">Kerättävä näyttö</th><th scope="col">Tulkinta</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Tavoittavuus ja oppiminen</th><td>Tavoitetut tiimit, klinikkaosallistuminen, vastatut kysymykset ja jaetut tarkistetut esimerkit.</td><td>Osoittaa avun saatavuuden. Ei todista työn parantuneen.</td></tr>
+              <tr><th scope="row">Hyödyllinen käyttöönotto</th><td>Valitun työnkulun toistuva käyttö sekä tiimien palaute siitä, milloin se auttaa ja milloin ei.</td><td>Määritä ensin ”toistuva” ja soveltuva kohdejoukko. Ota mukaan ei-käyttäjät.</td></tr>
+              <tr><th scope="row">Tieto ja kitka</th><td>Uudelleenkäytetyt vastaukset, toistuvat esteet, ratkaisuaika ja siirrot keskitetylle tuelle.</td><td>Etsi toistuvien esteiden vähenemistä, älä kysymysten vähentämistä hinnalla millä hyvänsä.</td></tr>
+              <tr><th scope="row">Liiketoiminta ja laatu</th><td>Työnkulkukohtainen tulos, kuten katselmoinnin läpimenoaika, uudelleentyö tai toimitusvarmuus.</td><td>Vertaa lähtötasoon ja kontekstiin. Nopeampi ei ole parempi, jos virheet lisääntyvät.</td></tr>
+              <tr><th scope="row">Kapasiteetti ja hyvinvointi</th><td>Championien aika, koordinointityö, työkuormapalaute, vuorottelu ja kattamatta jääneet tiimit.</td><td>Laske kustannukset. Kasvava kysyntä ilman rahoitettua aikaa on varoitus.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="takeaway">
+          <h3>Parempi kysymys sponsorille</h3>
+          <p>”Mikä tiimin ongelma helpottui, mikä näyttö tukee sitä, mitä se maksoi ja heikkenikö laatu tai hyvinvointi?”</p>
+          <p>Käytä koottua, oikeasuhtaista näyttöä. Vältä yksilöiden tuottavuusvertailuja, valvontaa ja keksittyä ROI-lukua. Havaittu parannus ei todista ohjelman aiheuttaneen sitä.</p>
+        </aside>
+      </section>
+
+      <section class="chapter" id="sustain" aria-labelledby="sustain-title">
+        <div class="section-heading"><span class="chapter-label">Huolehdi kestävyydestä</span><span class="reading-note">Suunnittele käynnistystä seuraavaa vuosineljännestä varten</span></div>
+        <h2 id="sustain-title">Suojele ihmisiä,<br>jotka saavat tämän toimimaan.</h2>
+        <p>Ohjelmat ajautuvat sivuraiteelle, kun auttavaisimmista ihmisistä tulee huomaamatta tukijärjestelmä. Tarkastele verkostoa rajallisena palveluna, ei ehtymättömänä hyvän tahdon lähteenä.</p>
+        <details><summary>Championeista tulee pysyvä helpdesk</summary><div class="detail-body"><p>Erota vertaisoppiminen häiriötilanteiden hoidosta. Julkaise tuen rajat, ohjaa toistuvat ongelmat vastuulliselle alustan omistajalle ja suojaa sovittu kapasiteetti. Jos kysyntä ylittää kapasiteetin, rajaa toimintaa tai rahoita lisää tukea.</p></div></details>
+        <details><summary>Äänekkäimmät tiimit saavat kaiken huomion</summary><div class="detail-body"><p>Arvioi kattavuutta liiketoimintayksikön, aikavyöhykkeen, kielen ja osaamisalan mukaan. Tarjoa mahdollisuus osallistua eriaikaisesti. Kysy aliedustetuilta tiimeiltä ja ei-käyttäjiltä, mikä estää osallistumisen; älä oleta hiljaisuuden tarkoittavan tyytyväisyyttä.</p></div></details>
+        <details><summary>Tunnustus palkitsee määrää hyödyllisyyden sijaan</summary><div class="detail-body"><p>Anna tunnustusta selkeästä selityksestä, uudelleenkäytetystä vastauksesta tai hyvin eskaloidusta riskistä. Älä aseta ihmisiä järjestykseen kehotteiden määrän, käytön tai tapahtumaosallistumisen perusteella. Tee panos näkyväksi esihenkilöille tekemättä osallistumisesta piilotettua suoriutumisvaatimusta.</p></div></details>
+        <details><summary>Ohjeet vanhenevat työkalujen kehittyessä</summary><div class="detail-body"><p>Nimeä jaetuille esimerkeille omistaja ja tarkistuspäivä. Tarkista ne uudelleen merkittävien työkalu- tai käytäntömuutosten jälkeen. Arkistoi virheelliset ohjeet ja kerro tiimeille muutoksista. Peruskirjan neljännesvuosittainen tarkistus on kohtuullinen aloitusrytmi, mutta se ei korvaa välitöntä reagointia turvallisuusongelmiin.</p></div></details>
+        <details><summary>Ohjelma riippuu samoista harvoista ihmisistä</summary><div class="detail-body"><p>Tarjoa valmistumispolku, suunniteltua vuorottelua ja mahdollisuus poistua ilman syyllisyyttä. Muodosta pareja uusista ja poistuvista championeista, säilytä tietopankki ja varmista esihenkilöiden jatkuva tuki. GitHub suosittelee valmistumispolkua, jotta championit voivat siirtää vastuun seuraaville johdon suojatessa heidän aikaansa. <a class="citation" href="#source-github">[1]</a></p></div></details>
+        <p class="closing">Skaalaa oppimista.<br><span>Älä riippuvuutta muutamasta sankarista.</span></p>
+        <a class="button" href="#playbook">Takaisin pilottiin <span aria-hidden="true">↑</span></a>
+      </section>
+
+      <section class="chapter sources" id="sources" aria-labelledby="sources-title">
+        <div class="section-heading"><span class="chapter-label">Lähteet ja mallipohjat</span><span class="reading-note">Tutustu alkuperäisiin lähteisiin</span></div>
+        <h2 id="sources-title">Ohjeistukseen perustuva.<br>Omaan tilanteeseesi sovitettava.</h2>
+        <p>Tämä riippumaton opas yhdistää alla olevat lähteet. Pilotin aikataulu, valmiuden tarkistuslista, nykyaikaiset suojatoimet ja mittauskehys ovat toimituksellisia suosituksia, eivät virallisia vaatimuksia tai näyttöä taatuista tuloksista.</p>
+        <ol class="source-list">
+          <li id="source-github"><a href="https://learn.github.com/well-architected/collaboration/recommendations/champion-program">GitHub Well-Architected: Champion program <span aria-hidden="true">↗</span></a><p>Jatkuva yhteisömalli, sponsorointi, valmius, rekrytointi ja seuraajasuunnittelu. Julkaistu 15.9.2025.</p></li>
+          <li id="source-charter"><a href="https://cseafdprod-dxcabeg6ega6fggz.b01.azurefd.net/well-architected/collaboration/recommendations/assets/champion-program-charter.pdf">Champion program charter <span class="file-type">PDF</span> <span aria-hidden="true">↗</span></a><p>Lähdemalli tehtävälle, tavoitteille, rooleille, ajankäytölle, kattavuudelle, viestinnälle ja mittareille. Mukauta se sponsorin kanssa.</p></li>
+          <li id="source-handbook"><a href="https://cseafdprod-dxcabeg6ega6fggz.b01.azurefd.net/well-architected/collaboration/recommendations/assets/champion-handbook.pdf">Champion handbook <span class="file-type">PDF</span> <span aria-hidden="true">↗</span></a><p>Käytännön ohjeita perehdytykseen, vertaisvaikuttamiseen ja Opi, Jaa, Kuuntele, Pohdi -kierrokseen.</p></li>
+          <li id="source-dora"><a href="https://dora.dev/research/2025/">DORA: State of AI-assisted Software Development 2025 <span aria-hidden="true">↗</span></a><p>Tutkimus tekoälyn käyttöönotosta ja sitä ympäröivästä organisatorisesta järjestelmästä. Katso myös <a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report">Google Cloudin raporttijulkistus</a>. Taustaa perustelulle, ei tutkimus champion-ohjelman vaikuttavuudesta.</p></li>
+          <li id="source-metrics"><a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics/copilot-usage-metrics">GitHub: Data available in Copilot usage metrics <span aria-hidden="true">↗</span></a><p>Käyttönäkymän ja vientien määritelmät ja rajaus. Katso myös <a href="https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics">kattavuus ja tulkinta</a>.</p></li>
+          <li id="source-customization"><a href="https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions">GitHub: Custom instructions for Copilot <span aria-hidden="true">↗</span></a><p>Ohjeiden vaikutusalueet, asiakastuki ja rajoitukset; linkit kehotetiedostoihin.</p></li>
+          <li id="source-skills"><a href="https://docs.github.com/en/copilot/reference/customization-cheat-sheet">GitHub: Copilot customization cheat sheet <span aria-hidden="true">↗</span></a><p>Ohjeiden, kehotteiden ja agenttitaitojen määritelmät ja sijainnit; tuki vaihtelee käyttöympäristöittäin.</p></li>
+          <li id="source-privacy"><a href="https://www.autoriteitpersoonsgegevens.nl/en/themes/employment-and-benefits/monitoring-employees/conditions-for-monitoring-employees">Dutch Data Protection Authority: Conditions for monitoring employees <span aria-hidden="true">↗</span></a><p>Oikeudenkäyttöaluekohtainen esimerkki työntekijöiden valvonnan suojatoimista, yritysneuvoston suostumuksesta ja DPIA:n edellytyksistä; ei oikeudellista neuvontaa kaikilla oikeudenkäyttöalueilla.</p></li>
+          <li id="source-dora-model"><a href="https://services.google.com/fh/files/misc/2025_dora_ai_capabilities_model.pdf">Google: DORA AI Capabilities Model, 2025 <span class="file-type">PDF</span> <span aria-hidden="true">↗</span></a><p>Seitsemän tekoälyavusteisen ohjelmistokehityksen kyvykkyyttä. Google LLC:n ”DORA AI Capabilities Model”, lisenssi <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p></li>
+          <li id="source-anthropic"><a href="https://claude.com/resources/guides/deploying-claude-across-your-organization/adoption-at-scale">Anthropic: Driving Claude Cowork adoption at scale <span aria-hidden="true">↗</span></a><p>Tuotekohtaisia ohjeita pilotista, championien laatimista taidoista ja ylläpitäjien hallitsemasta skaalauksesta.</p></li>
+          <li id="source-openai-role"><a href="https://academy.openai.com/public/clubs/champions-ecqup/resources/the-ai-champion-role">OpenAI Academy: The AI Champion role <span aria-hidden="true">↗</span></a><p>Leader- ja Activator-roolit ja niiden panos vertaisten käyttöönottoon.</p></li>
+          <li id="source-openai-rollout"><a href="https://academy.openai.com/public/clubs/admins-6o6xf/resources/planning-your-chatgpt-rollout">OpenAI Academy: Planning your ChatGPT rollout <span aria-hidden="true">↗</span></a><p>ChatGPT:n käyttöönoton vastuut, mukaan lukien sponsorointi, oppiminen, ylläpito ja championit.</p></li>
+          <li id="source-github-skills"><a href="https://learn.github.com/skills">GitHub Skills <span aria-hidden="true">↗</span></a><p>Käytännön harjoituksia; Enterprise Managed Users saattaa tarvita <a href="https://github.com/skills/skills-for-emu">EMU-asennusoppaan</a>.</p></li>
+          <li id="source-ms-learn"><a href="https://learn.microsoft.com/en-us/training/github/">Microsoft Learn: GitHub training <span aria-hidden="true">↗</span></a><p>Oppimispolut ja valinnaiset sertifioinnit; tehtäväpolku on tämän oppaan toimituksellinen valikoima.</p></li>
+        </ol>
+      </section>
+      <footer><strong>Champions at Scale</strong><p>Riippumaton yritysten käytännön opas vuodelle 2026 ja sen jälkeen.<br>Ei sidosta GitHubiin eikä GitHubin hyväksyntää. Ei analytiikkaa, tilejä tai seurantaa.</p><a href="#top">Takaisin alkuun ↑</a></footer>
+      </article>
+      <aside class="toc" aria-label="Tällä sivulla"><div>TÄLLÄ SIVULLA</div><a href="#why">Perustelut yritykselle</a><a href="#now">2026 ja sen jälkeen</a><a href="#model">Toimintamalli</a><a href="#readiness">Valmiuden tarkistuslista</a><a href="#playbook">90 päivän pilotti</a><a href="#quest">Championin tehtäväpolku</a><a href="#measure">Mittaus</a><a href="#sustain">Kestävyys</a><a href="#sources">Lähteet</a></aside>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

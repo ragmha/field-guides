@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Enterprise -alustan hallinta</title>
+<meta name="description" content="Käytännön tarkistuslista GitHub Enterprisen suunnitteluun hallituksi palveluksi: alustavalinta, identiteetti, roolit, ulkoiset käyttäjät, auditointi, lisensointi, kustannukset ja ITSM.">
+<link rel="icon" href="data:,">
+<script src="theme.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="guide">
+<header class="topbar">
+  <p class="breadcrumb"><a class="collection-home" href="../"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="26" height="26"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>Enterprise enablement</a><span aria-hidden="true">/</span><a href="./">GitHub Enterprise</a><span aria-hidden="true">/</span><span aria-current="page">Alustan hallinta</span></p>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Tumma tila</button>
+</header>
+
+<div class="landing">
+  <section class="landing-hero" aria-labelledby="landing-title">
+    <div class="landing-copy">
+      <h1 id="landing-title">GitHub Enterprise</h1>
+      <p class="landing-intro">Mobiilikäyttö edellä suunniteltu opas GitHub Enterprise -palvelun suunnitteluun: käyttöönottovaihtoehdot, identiteetti, roolit, lisensointi ja auditointi.</p>
+      <p class="landing-note">Tarkistettu virallisesta dokumentaatiosta 7.11.2026</p>
+      <div class="landing-actions">
+        <a class="landing-button" href="#platform">Aloita nyt <span aria-hidden="true">→</span></a>
+        <a class="landing-button" href="ledger.html">Lähdeluettelo</a>
+      </div>
+    </div>
+    <img class="landing-art" src="assets/landing.jpg" width="640" height="960" alt="Mustepiirros lennonjohtotornista toimistorakennusten ja lentokonehallien yläpuolella pilvien päällä." fetchpriority="high">
+  </section>
+  <section class="landing-parts" aria-labelledby="parts-title">
+    <h2 id="parts-title">Osat</h2>
+    <p>Kymmenen päätöstä. Aloita alustasta tai siirry tarvitsemaasi kohtaan.</p>
+    <ol class="part-grid">
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>01</span></div><h3>Valitse alusta ja tilityyppi</h3><p>Suurin päätös, jota on vaikeinta muuttaa. Siitä seuraavat identiteetti, ulkoinen pääsy ja siirtymisen työmäärä.</p><a href="#platform">Avaa osio<span class="sr-only">: Valitse alusta ja tilityyppi</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>02</span></div><h3>Identiteetti: kirjautuminen ja provisiointi</h3><p>SSO määrittää, kuka voi kirjautua. SCIM määrittää käyttäjät ja heidän ryhmänsä.</p><a href="#identity">Avaa osio<span class="sr-only">: Identiteetti: kirjautuminen ja provisiointi</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>03</span></div><h3>Roolit ja käyttöoikeudet</h3><p>Lyhyt rooliluettelo: mitä kukin rooli sallii, kuka sen hyväksyy ja kuinka usein se tarkistetaan.</p><a href="#roles">Avaa osio<span class="sr-only">: Roolit ja käyttöoikeudet</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>04</span></div><h3>Ulkoiset käyttäjät</h3><p>Kumppaneita ja alihankkijoita on vaikea tunnistaa ja tarkistaa sekä helppo unohtaa.</p><a href="#external">Avaa osio<span class="sr-only">: Ulkoiset käyttäjät</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>05</span></div><h3>Käyttäjien aloitus ja poistuminen</h3><p>Pyydä roolit, vaihda ryhmät tehtävän vaihtuessa ja anna SCIMin poistaa lähtevät käyttäjät.</p><a href="#lifecycle">Avaa osio<span class="sr-only">: Käyttäjien aloitus ja poistuminen</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>06</span></div><h3>Auditointi ja vaatimustenmukaisuus</h3><p>Kolme täsmäävää tietuetta: tiketti, IdP-loki ja GitHubin auditointiloki.</p><a href="#audit">Avaa osio<span class="sr-only">: Auditointi ja vaatimustenmukaisuus</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>07</span></div><h3>Lisensointi ja laajamittainen käyttöönotto</h3><p>Selvitä lisenssien haltijat, kohdista Visual Studio -tilaajat ja täsmäytä tiedot IdP:hen.</p><a href="#licensing">Avaa osio<span class="sr-only">: Lisensointi ja laajamittainen käyttöönotto</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>08</span></div><h3>Kustannukset: mistä muusta laskutetaan</h3><p>Käyttöpaikka on vain osa laskua. Jokainen muu kulutusmittari tarvitsee vastuuhenkilön ja budjetin.</p><a href="#cost">Avaa osio<span class="sr-only">: Kustannukset: mistä muusta laskutetaan</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>09</span></div><h3>ITSM ja toteutus</h3><p>Pidä ITSM-työkalu ensisijaisena kirjausjärjestelmänä ja anna IdP:n myöntää oikeudet.</p><a href="#itsm">Avaa osio<span class="sr-only">: ITSM ja toteutus</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>10</span></div><h3>Pilotti ja vaiheittainen käyttöönotto</h3><p>Edeltävät vaatimukset, pilotti, laajennus aalloissa ja sitten säännölliset tarkistukset.</p><a href="#rollout">Avaa osio<span class="sr-only">: Pilotti ja vaiheittainen käyttöönotto</span> <span aria-hidden="true">→</span></a></li>
+    </ol>
+  </section>
+</div>
+
+<div class="page-layout">
+<aside>
+<p class="sidebar-title">Alustan hallinta</p>
+<p class="sidebar-label">Tässä arvioinnissa</p>
+<div class="prog">
+<div class="progress"><span id="bar"></span></div>
+<p class="meta"><span id="count">0</span> / <span id="total">0</span> vastattu · <span id="todo">0</span> edellyttää toimia · tallennettu tähän laitteeseen · <button id="reset" type="button">Nollaa</button></p>
+</div>
+<nav aria-label="Arvioinnin osiot">
+  <a href="#platform">Alusta</a><a href="#identity">Identiteetti</a><a href="#roles">Roolit</a><a href="#external">Ulkoiset käyttäjät</a><a href="#lifecycle">Aloitus ja poistuminen</a><a href="#audit">Auditointi</a><a href="#licensing">Lisensointi</a><a href="#cost">Kustannukset</a><a href="#itsm">ITSM</a><a href="#rollout">Käyttöönotto</a>
+</nav>
+</aside>
+
+<main>
+<p>Päätöslähtöinen arvio GitHub Enterprisen käytöstä hallittuna palveluna: kuka vastaa siitä, miten käyttöoikeudet saadaan, mitä niillä voi tehdä, mitä palvelu maksaa ja miten nämä osoitetaan.</p>
+<p>Jokainen suositus linkittää viralliseen dokumentaatioon, joka on edelleen ensisijainen tietolähde.</p>
+<p class="scope-note"><b>Mihin arviointi keskittyy:</b> Tämä arviointi keskittyy GitHub Well-Architected -viitekehyksen <a href="https://learn.github.com/well-architected/governance/overview">Governance</a>- ja <a href="https://learn.github.com/well-architected/architecture/overview">Architecture</a>-osa-alueisiin, erityisesti yrityksen rajoihin, identiteettiin, käyttöoikeuksiin, auditointiin ja toimintapäätöksiin. Se ei ole täydellinen arvio sovellusturvallisuudesta, yhteistyöstä tai kehittäjien tuottavuudesta; käytä näihin osa-alueisiin <a href="https://learn.github.com/well-architected/">koko viitekehystä</a>.</p>
+
+<details id="platform" open>
+<summary><span class="n">1</span>Valitse alusta ja tilityyppi</summary>
+<div class="body">
+<p>Suurin päätös, jota on vaikeinta muuttaa. Tee se ensin, sillä identiteetti, ulkoinen pääsy ja siirtymisen työmäärä seuraavat siitä.</p>
+<div class="compare">
+  <section><h3>GHEC, henkilökohtaiset tilit</h3><p>Käyttäjät kirjautuvat omalla github.com-tilillään. Lisää SAML SSO yrityksen tai organisaation tasolle. SCIM on saatavilla vain organisaatiokohtaisesti. Käyttäjätunnuksia ei voi hallita.</p><p class="tag">Paras, kun käyttäjien on työskenneltävä samalla tilillä myös avoimen lähdekoodin parissa.</p></section>
+  <section><h3>GHEC, hallitut käyttäjät (EMU)</h3><p>IdP luo jokaisen tilin (<code>handle_shortcode</code>) ja jäädyttää sen poistettaessa. SAML tai OIDC ja Conditional Access, kun IdP on Entra ID. Hallitut käyttäjät eivät voi osallistua yrityksen ulkopuolella.</p><p class="tag">Vain uudelle yritykselle, joten siirtyminen edellyttää migraatiota.</p></section>
+  <section><h3>GHE.com (datan sijainti)</h3><p>Hallittujen käyttäjien yritys omassa GHE.com-aliverkkotunnuksessaan; data tallennetaan EU:ssa, Australiassa, Yhdysvalloissa tai Japanissa.</p><p class="tag">Valitse tämä, kun datan sijainti on ehdoton vaatimus.</p></section>
+  <section><h3>GitHub Enterprise Server</h3><p>Palvelu toimii omassa infrastruktuurissasi: päivitykset, varmuuskopiot, korkea käytettävyys ja ajurit. SAML ja SCIM ovat yleisesti saatavilla versiosta 3.17 alkaen. Serverissä ei ole hallittuja käyttäjiä, ja Copilotin kaltaiset pilvipalvelut pysyvät pilvessä.</p><p class="tag">Valitse tämä, kun palvelu on isännöitävä itse.</p></section>
+</div>
+<a href="assets/platform-decision.svg"><img src="assets/platform-decision.svg" alt="Päätöspolku datan sijainnista omaan isännöintiin, hallittuihin käyttäjiin ja henkilökohtaisiin tileihin"></a>
+<ul class="qs">
+  <li data-id="p1"><p class="q">Onko datan sijainnille tai omalle isännöinnille kirjallinen vaatimus? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-github-enterprise-cloud-with-data-residency">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="p1" value="y"><span>Kyllä</span></label><label><input type="radio" name="p1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y fork"><b>Johtopäätös:</b> Ota harkintaan GHE.com datan sijaintia varten tai GitHub Enterprise Server omaa isännöintiä varten. Pyydä vaatimuksen omistajaa vahvistamaan se ennen sitoutumista.</p>
+    <p class="a if-n ok"><b>Tilanne kunnossa.</b> Pysy github.comissa ja valitse seuraavien kysymysten avulla henkilökohtaisten tilien ja hallittujen käyttäjien välillä.</p></li>
+  <li data-id="p2"><p class="q">Tarvitseeko käyttäjien osallistua julkiseen avoimeen lähdekoodiin työtilillään? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/abilities-and-restrictions-of-managed-user-accounts">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="p2" value="y"><span>Kyllä</span></label><label><input type="radio" name="p2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y fork"><b>Johtopäätös:</b> Tämä puoltaa henkilökohtaisia tilejä. Hallitut käyttäjät eivät voi osallistua yrityksen ulkopuolella, ja heillä on julkiseen GitHubiin vain lukuoikeus. Jos vain harva tarvitsee sitä, he voivat sen sijaan pitää erillisen henkilökohtaisen tilin.</p>
+    <p class="a if-n ok"><b>Tilanne kunnossa.</b> Hallitut käyttäjät ovat edelleen vaihtoehto, jolla saat tilit ja käyttäjätunnukset täysin hallintaasi.</p></li>
+  <li data-id="p3"><p class="q">Onko jokaisella käyttäjällä, myös ulkoisilla käyttäjillä, identiteetti IdP:ssämme? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/identity-and-access-management/enterprise-managed-users">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="p3" value="y"><span>Kyllä</span></label><label><input type="radio" name="p3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Hallitut käyttäjät ja SCIM ovat molemmat mahdollisia, koska jokainen tili voidaan luoda ja poistaa IdP:stä.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Korjaa tämä ensin. Anna ulkoisille käyttäjille vieras- tai jäsentili Entra ID:ssä. Ilman sitä et voi soveltaa SSO:ta, tarkistaa heidän oikeuksiaan tai poistaa niitä automaattisesti.</p></li>
+  <li data-id="p4"><p class="q">Olemmeko arvioineet hallittuihin käyttäjiin siirtymisen työmäärän: repositoriot, ajurit, integraatiot ja tokenit? <a class="doc" href="https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/about-migrations-between-github-products">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="p4" value="y"><span>Kyllä</span></label><label><input type="radio" name="p4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Muista, mitä tuontityökalu ei siirrä: Actions-salaisuudet ja -ajurit, sovellukset, paketit, tiimien käyttöoikeudet ja auditointilokit.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Arvioi työmäärä ennen päätöstä. Hallitut käyttäjät tarvitsevat uuden yrityksen, eikä tuontityökalu siirrä Actions-salaisuuksia ja -ajureita, sovelluksia, paketteja, tiimien käyttöoikeuksia tai auditointilokeja.</p></li>
+  <li data-id="p5"><p class="q">Ovatko kaikki organisaatiomme yhden yritystilin sisällä? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-organizations-in-your-enterprise/adding-organizations-to-your-enterprise">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="p5" value="y"><span>Kyllä</span></label><label><input type="radio" name="p5" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Käytännöt, SSO ja laskutus voidaan määrittää yhdessä paikassa.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Listaa ensin kaikki organisaatiot. Yrityksen ulkopuoliset organisaatiot jäävät sen käytäntöjen, SSO:n ja laskutuksen ulkopuolelle. Kutsu ne mukaan tai suunnittele niiden siirto.</p></li>
+</ul>
+<p class="warn"><b>Huomio:</b> olemassa olevaa yritystä ei voi vaihtaa hallittuihin käyttäjiin. Siirtyminen tarkoittaa uuden yrityksen luomista ja migraatiota siihen, joten suunnittele se projektina.</p>
+</div>
+</details>
+
+<details id="identity">
+<summary><span class="n">2</span>Identiteetti: kirjautuminen ja provisiointi</summary>
+<div class="body">
+<p>Kaksi erillistä hallintakeinoa. <b>SSO</b> määrittää, kuka voi kirjautua. <b>SCIM</b> määrittää käyttäjät ja heidän ryhmänsä. Ilman SCIMiä käyttäjän poistaminen IdP:stä ei poista häntä GitHubista.</p>
+<a href="assets/identity-flow.svg"><img src="assets/identity-flow.svg" alt="Entra ID:stä GitHub-yrityssovellukseen, sitten SSO:hon ja SCIMiin ja edelleen organisaatioihin, tiimeihin ja repositorioihin"></a>
+<ul class="qs">
+  <li data-id="i1"><p class="q">Onko Entran GitHub-sovellus määritetty ryhmille yksittäisten käyttäjien sijaan? <a class="doc" href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/assign-user-or-group-access-portal">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="i1" value="y"><span>Kyllä</span></label><label><input type="radio" name="i1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Määritä ryhmät. Käyttöoikeus seuraa silloin ryhmäjäsenyyttä ja tarkistukset tapahtuvat yhdessä paikassa. Ryhmäpohjainen määritys edellyttää Entra ID P1:tä tai sitä korkeampaa tasoa.</p></li>
+  <li data-id="i2"><p class="q">Onko meillä tarvittavat Entra-lisenssit: P1 ryhmiin ja provisiointiin sekä ID Governance käyttöoikeuksien tarkistuksiin? <a class="doc" href="https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="i2" value="y"><span>Kyllä</span></label><label><input type="radio" name="i2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Tarkista ennen kuin suunnittelet ratkaisun niiden varaan. Ilman P1:tä ei ole ryhmäpohjaista määritystä eikä sovellusten provisiointia. Käyttöoikeuksien tarkistukset edellyttävät ID Governancea tai Entra Suitea; vain osa ominaisuuksista toimii P2:lla.</p></li>
+  <li data-id="i3"><p class="q">Onko SCIM suunniteltu niin, että henkilön poistaminen IdP:stä poistaa hänet myös GitHubista? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-saml-single-sign-on-for-your-organization/about-scim-for-organizations">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="i3" value="y"><span>Kyllä</span></label><label><input type="radio" name="i3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Kutsu ja poista henkilöt sen jälkeen vain IdP:n kautta. Manuaaliset kutsut jättävät tilit linkittämättä, eikä niitä poisteta automaattisesti.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Suunnittele se. Ilman SCIMiä henkilön poistaminen IdP:stä ei poista häntä GitHubista, ja hänen valtuuttamansa tokenit toimivat edelleen. Henkilökohtaisilla tileillä SCIM on organisaatiokohtainen ja tarvitsee erillisen omistajatilin valtuuttaman OAuth-sovelluksen; tili käyttää lisenssiä.</p></li>
+  <li data-id="i4"><p class="q">Henkilökohtaiset tilit: olemmeko päättäneet, sijoitetaanko SAML yrityksen vai kunkin organisaation tasolle? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/using-saml-for-enterprise-iam/deciding-whether-to-configure-saml-for-your-enterprise-or-your-organizations">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="i4" value="y"><span>Kyllä</span></label><label><input type="radio" name="i4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Muista, että yritystason SAML ohittaa organisaatiotason SAMLin eikä organisaatiotason SAML suojaa sisäisiä repositorioita.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Päätä ajoissa. Yritystason SAML kattaa kaikki organisaatiot ja ohittaa niiden asetukset. Organisaatiotason SAML ei suojaa sisäisiä repositorioita. Varmista GitHubilta, miten SCIM sopii valintaasi.</p></li>
+  <li data-id="i5"><p class="q">Hallitut käyttäjät Entran kanssa: käytämmekö OIDC:tä, jotta Conditional Access on voimassa? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/configuring-authentication-for-enterprise-managed-users/about-support-for-your-idps-conditional-access-policy">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="i5" value="y"><span>Kyllä</span></label><label><input type="radio" name="i5" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Huomaa, että yksi Entra-vuokraaja tukee vain yhtä OIDC-yritystä.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Harkitse OIDC:tä. Se on saatavilla vain Entra ID:n kanssa ja mahdollistaa Conditional Accessin IP-ehtojen soveltamisen GitHubissa.</p></li>
+  <li data-id="i6"><p class="q">Onko SSO:n palautuskoodit tallennettu turvallisesti ja onko omistajalla hätäkäyttöreitti? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/managing-recovery-codes-for-your-enterprise/downloading-your-enterprise-accounts-single-sign-on-recovery-codes">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="i6" value="y"><span>Kyllä</span></label><label><input type="radio" name="i6" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Lataa ja tallenna ne nyt. Niiden avulla omistaja pääsee sisään, kun IdP ei toimi tai on määritetty väärin.</p></li>
+  <li data-id="i7"><p class="q">Onko GitHub-tiimit yhdistetty Entra-ryhmiin niin, että jäsenyys seuraa IdP:tä? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/using-saml-for-enterprise-iam/managing-team-synchronization-for-organizations-in-your-enterprise">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="i7" value="y"><span>Kyllä</span></label><label><input type="radio" name="i7" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Yhdistä ne: tiimien synkronointi henkilökohtaisilla tileillä, SCIM-ryhmät hallituilla käyttäjillä. Tiimien synkronointi ei luo tilejä eikä Entra provisioi sisäkkäisiä ryhmiä, joten pidä ryhmät tasaisina.</p></li>
+</ul>
+<p class="warn"><b>Huomio:</b> kun SCIM on käytössä, kutsu ja poista henkilöt <i>vain</i> IdP:n kautta. Manuaaliset kutsut jättävät tilit linkittämättä ja rikkovat automaattisen poistamisen. Organisaatiotason SCIM riippuu myös erillisen omistajatilin valtuuttamasta OAuth-sovelluksesta; tili käyttää lisenssiä.</p>
+</div>
+</details>
+
+<details id="roles">
+<summary><span class="n">3</span>Roolit ja käyttöoikeudet</summary>
+<div class="body">
+<p>Rooliluettelo on lyhyt taulukko: rooli, taso, sen sallimat toimet, hyväksyjä ja tarkistustiheys.</p>
+<a href="assets/role-layers.svg"><img src="assets/role-layers.svg" alt="Sisäkkäiset tasot: yritys, organisaatio, tiimi ja repositorio rooleineen"></a>
+<ul class="qs">
+  <li data-id="r1"><p class="q">Onko meillä vähintään kaksi nimettyä yrityksen omistajaa ja onko rooli rajattu alustan ylläpitäjille? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-roles-in-your-enterprise/abilities-of-roles">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="r1" value="y"><span>Kyllä</span></label><label><input type="radio" name="r1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Nimeä kaksi, jotta yhden henkilön menetys ei estä pääsyä, ja jätä muut roolin ulkopuolelle. Omistajat hallitsevat kaikkia asetuksia ja organisaatioita.</p></li>
+  <li data-id="r2"><p class="q">Onko organisaation perusoikeudeksi asetettu none tai read? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/setting-base-permissions-for-an-organization">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="r2" value="y"><span>Kyllä</span></label><label><input type="radio" name="r2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Myönnä lisäoikeudet tiimien kautta.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Laske sitä. Perusoikeus koskee jokaista jäsentä kaikissa repositorioissa. Myönnä lisäoikeudet tiimien kautta.</p></li>
+  <li data-id="r3"><p class="q">Vastaako luettelon kutakin roolia yksi Entra-ryhmä ja yksi GitHub-tiimi tai -rooli? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/using-saml-for-enterprise-iam/managing-team-synchronization-for-organizations-in-your-enterprise">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="r3" value="y"><span>Kyllä</span></label><label><input type="radio" name="r3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Kohdista ne yksi yhteen. Pyynnöissä nimetään silloin rooli, ja tarkistukset ja poistot tehdään ryhmäkohtaisesti.</p></li>
+  <li data-id="r4"><p class="q">Olemmeko määrittäneet repositorion omistajan, ylläpitäjän, osallistujan ja lukijan? <a class="doc" href="https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="r4" value="y"><span>Kyllä</span></label><label><input type="radio" name="r4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Aloita viidestä sisäänrakennetusta roolista: read, triage, write, maintain ja admin.</p></li>
+  <li data-id="r5"><p class="q">Kattavatko sisäänrakennetut roolit tarpeemme? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/about-custom-repository-roles">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="r5" value="y"><span>Kyllä</span></label><label><input type="radio" name="r5" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Harvempia rooleja on helpompi tarkistaa.</p>
+    <p class="a if-n fork"><b>Johtopäätös:</b> Käytä mukautettuja repositorio- tai organisaatiorooleja. Yrityksen mukautetut roolit ovat yhä esiversiossa, joten älä vielä rakenna niiden varaan.</p></li>
+  <li data-id="r6"><p class="q">Pakotetaanko haarojen ja repositorioiden vähimmäiskontrollit sääntökokoelmilla? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-organization-settings/creating-rulesets-for-repositories-in-your-organization">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="r6" value="y"><span>Kyllä</span></label><label><input type="radio" name="r6" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Sovita vaaditut katselmoinnit ja tilatarkistukset repositorion riskiin.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Määritä perustaso organisaation sääntökokoelmilla ja dokumentoi sitten mahdolliset repositoriokohtaiset poikkeukset.</p></li>
+</ul>
+</div>
+</details>
+
+<details id="external">
+<summary><span class="n">4</span>Ulkoiset käyttäjät</summary>
+<div class="body">
+<p>Kumppanit ja alihankkijat ovat yleensä riskialttein ryhmä: heitä on vaikea tunnistaa ja tarkistaa sekä helppo unohtaa.</p>
+<ul class="qs">
+  <li data-id="e1"><p class="q">Onko jokaisella ulkoisella käyttäjällä IdP-identiteetti, nimetty sponsori ja päättymispäivä? <a class="doc" href="https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-overview">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="e1" value="y"><span>Kyllä</span></label><label><input type="radio" name="e1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Lisää kaikki kolme. Entran käyttöoikeuspaketeilla voi määrittää vieraille hyväksynnät ja päättymispäivän.</p></li>
+  <li data-id="e2"><p class="q">Henkilökohtaiset tilit: sisältyvätkö ulkopuoliset yhteistyökumppanit lisenssimääriimme? <a class="doc" href="https://docs.github.com/en/billing/reference/github-license-users">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="e2" value="y"><span>Kyllä</span></label><label><input type="radio" name="e2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Laske heidät mukaan. Yksityisten tai sisäisten repositorioiden ulkopuoliset yhteistyökumppanit käyttävät kukin lisenssin.</p></li>
+  <li data-id="e3"><p class="q">Hallitut käyttäjät: saavatko toimittajat vierailevan yhteistyökumppanin roolin? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/enabling-guest-collaborators">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="e3" value="y"><span>Kyllä</span></label><label><input type="radio" name="e3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b> Vieraat näkevät sisäiset repositoriot vain niissä organisaatioissa, joiden jäseniä he ovat.</p>
+    <p class="a if-n fix"><b>Suositus:</b> Käytä sitä. Tavallinen hallittu käyttäjä missä tahansa organisaatiossa näkee yrityksen kaikki sisäiset repositoriot. Vieras näkee ne vain niissä organisaatioissa, joiden jäsen hän on.</p></li>
+  <li data-id="e4"><p class="q">Päättyykö käyttöoikeus automaattisesti ulkoisen käyttäjän päättymispäivän umpeuduttua? <a class="doc" href="https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-overview">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="e4" value="y"><span>Kyllä</span></label><label><input type="radio" name="e4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Automatisoi se. Anna Entra-määrityksen päättyä ja provisioinnin poistaa oikeus; käsittele uusiminen uutena pyyntönä.</p></li>
+  <li data-id="e5"><p class="q">Olemmeko päättäneet, tehdäänkö kumppanityö omassa organisaatiossa vai tiimeissä? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/enterprise-best-practices/organize-work">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="e5" value="y"><span>Kyllä</span></label><label><input type="radio" name="e5" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Päätä tämä. Erillinen organisaatio eristää kumppanin käyttöoikeudet ja asetukset. Tiimit ovat yksinkertaisempia, kun kumppanit työskentelevät oman henkilöstön rinnalla.</p></li>
+</ul>
+</div>
+</details>
+
+<details id="lifecycle">
+<summary><span class="n">5</span>Käyttäjien aloitus ja poistuminen</summary>
+<div class="body">
+<a href="assets/access-lifecycle.svg"><img src="assets/access-lifecycle.svg" alt="Kahdeksan vaihetta ITSM-pyynnöstä hyväksyntöjen, Entra-ryhmämuutoksen, provisioinnin, näytön ja tarkistuksen kautta poistamiseen"></a>
+<ul class="qs">
+  <li data-id="l1"><p class="q">Nimeääkö aloittavan käyttäjän pyyntö rooliluettelon roolin repositorioluettelon sijaan?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="l1" value="y"><span>Kyllä</span></label><label><input type="radio" name="l1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Pyydä sen sijaan rooleja. Repositorioluetteloa ei voi tarkistaa tai poistaa johdonmukaisesti.</p></li>
+  <li data-id="l2"><p class="q">Poistuvatko vanhat käyttöoikeudet automaattisesti henkilön roolin vaihtuessa?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="l2" value="y"><span>Kyllä</span></label><label><input type="radio" name="l2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Vaihda ryhmät uusiin sen sijaan, että vain lisäät ryhmiä. Vanhat oikeudet poistuvat vanhan ryhmän mukana.</p></li>
+  <li data-id="l3"><p class="q">Poistaako IdP-tilin poistaminen käytöstä lähtevän henkilön GitHub-käyttöoikeuden? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-saml-single-sign-on-for-your-organization/about-scim-for-organizations">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="l3" value="y"><span>Kyllä</span></label><label><input type="radio" name="l3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Vain SCIM tekee sen. Ilman sitä lähteville jää organisaation jäsenyys ja valtuutetut tokenit, kunnes joku poistaa ne käsin.</p></li>
+  <li data-id="l4"><p class="q">Toimivatko automaatiot ja putket GitHub Apps -sovelluksilla henkilön tokenin sijaan? <a class="doc" href="https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/deciding-when-to-build-a-github-app">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="l4" value="y"><span>Kyllä</span></label><label><input type="radio" name="l4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Siirrä ne GitHub Apps -sovelluksiin. Henkilökohtaista tokenia käyttävä putki lakkaa toimimasta henkilön lähtiessä ja sisältää kaikki hänen käyttöoikeutensa.</p></li>
+  <li data-id="l5"><p class="q">Onko passiivisille käyttäjille sovittu sääntö? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/managing-dormant-users">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="l5" value="y"><span>Kyllä</span></label><label><input type="radio" name="l5" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Sovi sellainen, esimerkiksi neljännesvuosittainen tarkistus. Passiiviset jäsenet käyttävät edelleen lisenssiä.</p></li>
+</ul>
+</div>
+</details>
+
+<details id="audit">
+<summary><span class="n">6</span>Auditointi ja vaatimustenmukaisuus</summary>
+<div class="body">
+<p>Auditoija tarvitsee kolme täsmäävää tietuetta: <b>tiketin</b> (miksi ja kuka hyväksyi), <b>IdP-lokin</b> (ryhmämuutos) ja <b>GitHubin auditointilokin</b> (mitä tapahtui).</p>
+<figure class="diagram wide">
+  <a href="assets/audit-stream.svg"><img src="assets/audit-stream.svg" alt="GitHubin auditointitapahtumat säilytetään omassa lokissa rajoitetun ajan tai suoratoistetaan pitkäaikaiseen tallennukseen tai SIEM-järjestelmään."></a>
+  <figcaption>Suoratoisto alkaa käyttöönotettaessa; aiempia tapahtumia ei täydennetä jälkikäteen.</figcaption>
+</figure>
+<ul class="qs">
+  <li data-id="a1"><p class="q">Riittääkö meille sisäisen auditointilokin säilytysaika: 180 päivää verkkotapahtumille ja 7 päivää Git-tapahtumille? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/security-and-compliance/audit-log-for-an-enterprise">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="a1" value="y"><span>Kyllä</span></label><label><input type="radio" name="a1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Suoratoista auditointiloki tallennustilaan tai SIEM-järjestelmään pidempää säilytystä varten.</p></li>
+  <li data-id="a2"><p class="q">Onko auditointilokin suoratoisto käytössä? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="a2" value="y"><span>Kyllä</span></label><label><input type="radio" name="a2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Ota se käyttöön ajoissa esimerkiksi Azure Event Hubsiin tai Blob Storageen. Se kerää tapahtumia vasta käyttöönottopäivästä alkaen.</p></li>
+  <li data-id="a3"><p class="q">Säilytämmekö Entran auditointilokeja Entran oletusaikaa pidempään? <a class="doc" href="https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="a3" value="y"><span>Kyllä</span></label><label><input type="radio" name="a3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Vie ne talteen. Entra säilyttää auditointi- ja kirjautumislokeja Free-tasolla 7 päivää ja P1- tai P2-tasolla 30 päivää, joten GitHub-käyttöoikeuksien taustalla olevat ryhmämuutokset katoavat nopeasti.</p></li>
+  <li data-id="a4"><p class="q">Tehdäänkö GitHub-tiimien taustalla oleville Entra-ryhmille käyttöoikeuksien tarkistuksia? <a class="doc" href="https://learn.microsoft.com/en-us/entra/id-governance/access-reviews-overview">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="a4" value="y"><span>Kyllä</span></label><label><input type="radio" name="a4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Määritä ryhmien tai repositorioiden omistajat tarkistajiksi. Käyttöoikeuksien tarkistukset edellyttävät ID Governancea tai Entra Suitea.</p></li>
+  <li data-id="a5"><p class="q">Voimmeko yhdistää tiketin siihen liittyvään Entra-ryhmämuutokseen ja GitHubin auditointitapahtumaan?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="a5" value="y"><span>Kyllä</span></label><label><input type="radio" name="a5" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Kirjaa tiketin numero jokaisen ryhmämuutoksen yhteyteen, jotta kaikki kolme tietuetta voidaan yhdistää.</p></li>
+</ul>
+</div>
+</details>
+
+<details id="licensing">
+<summary><span class="n">7</span>Lisensointi ja laajamittainen käyttöönotto</summary>
+<div class="body">
+<ul class="qs">
+  <li data-id="c1"><p class="q">Tiedämmekö, ketkä käyttävät lisenssiä tällä hetkellä? <a class="doc" href="https://docs.github.com/en/billing/reference/github-license-users">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="c1" value="y"><span>Kyllä</span></label><label><input type="radio" name="c1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Lataa lisenssien käyttöraportti. Jäsenet, yksityisten tai sisäisten repositorioiden ulkopuoliset yhteistyökumppanit ja passiiviset jäsenet lasketaan kaikki mukaan. Myös odottavat kutsut lasketaan, ellei käytössä ole käyttöperusteinen laskutus tai hallitut käyttäjät.</p></li>
+  <li data-id="c2"><p class="q">Kutsutaanko Visual Studio -tilaajat heidän Entra UPN -tunnuksellaan? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/billing/concepts/enterprise-billing/visual-studio-subs">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="c2" value="y"><span>Kyllä</span></label><label><input type="radio" name="c2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Kutsu heidät UPN-tunnuksella. Tilaukseen sisältyvää lisenssiä käytetään vain, kun GitHub-tilin vahvistettu sähköpostiosoite vastaa sitä; muuten he käyttävät erillistä lisenssiä.</p></li>
+  <li data-id="c3"><p class="q">Voimmeko lisätä käyttäjän poistamatta toista? <a class="doc" href="https://docs.github.com/en/billing/concepts/enterprise-billing/usage-based-licenses">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="c3" value="y"><span>Kyllä</span></label><label><input type="radio" name="c3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Harkitse käyttöperusteisia lisenssejä: maksa kuukausittain käytössä olevista käyttöpaikoista kiinteän määrän sijaan; maksu voidaan suorittaa Azuren kautta. Jokaisesta, jolla oli käyttöpaikka kuukauden aikana, laskutetaan kyseiseltä kuukaudelta.</p></li>
+  <li data-id="c4"><p class="q">Onko lisenssiraportti täsmäytetty IdP:hen? <a class="doc" href="https://docs.github.com/en/billing/reference/github-license-users">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="c4" value="y"><span>Kyllä</span></label><label><input type="radio" name="c4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Tee se ennen migraatiota. Jokaisen GitHub-käyttäjän tulisi vastata IdP-identiteettiä; kaikille, jotka eivät vastaa, tarvitaan omistaja tai poisto.</p></li>
+</ul>
+<p class="warn"><b>Huomio:</b> kiinteä käyttöpaikkakatto painostaa tiimejä poistamaan jonkun tehdäkseen tilaa. Käyttöperusteinen lisensointi ja tarkistukset poistavat paineen hallinnan säilyessä.</p>
+</div>
+</details>
+
+<details id="cost">
+<summary><span class="n">8</span>Kustannukset: mistä muusta laskutetaan</summary>
+<div class="body">
+<p>Käyttöpaikka on vain osa laskua. Kaikella alla olevalla on oma kulutusmittarinsa, vastuuhenkilönsä ja budjettinsa.</p>
+<figure class="diagram wide">
+  <a href="assets/billing-flow.svg"><img src="assets/billing-flow.svg" alt="GitHubin käyttö jakautuu käyttäjäpaikkoihin ja mitattuihin tuotteisiin; nimeä laskutuksen vastuuhenkilö ja käytä kustannuspaikkoja ja budjetteja mitattuihin kuluihin."></a>
+  <figcaption>Kustannuspaikat kohdistavat mitattua käyttöä; ne eivät koske volyymikäyttöpaikkoja.</figcaption>
+</figure>
+<table>
+  <tr><th>Tuote</th><th>Laskutustapa</th></tr>
+  <tr><td>GitHub Enterprise</td><td>Lisenssikohtaisesti: volyymi, Visual Studio -tilaukseen sisältyvä tai käyttöperusteinen.</td></tr>
+  <tr><td>Copilot Business / Enterprise</td><td>19 / 39 dollaria käyttäjää kohti kuukaudessa, sisältäen 1 900 / 3 900 yhteiseen käyttöön koottua AI credits -krediittiä. Lisäkäyttö mitataan.</td></tr>
+  <tr><td>Copilot access <span class="new">uusi</span></td><td>28.10.2026 alkaen asiakkuustiimien kautta: 0 dollarin käyttöpaikka GitHub Enterprise Cloud -lisenssin käyttäjille, muille 10 dollarin Standalone. Kaikki käyttö mitataan. Koskee koko yritystä eikä sitä voi yhdistää Businessiin tai Enterpriseen.</td></tr>
+  <tr><td>Actions</td><td>Enterprise Cloud sisältää 300 dollarin arvosta laskentakäyttöä kuukaudessa, nyt rahana minuuttien sijaan. Itse isännöidyt ajurit ovat maksuttomia.</td></tr>
+  <tr><td>Secret Protection / Code Security</td><td>Kaksi Advanced Security -tuotetta, jotka laskutetaan kunkin yksilöllisen 90 päivän aikana aktiivisen commit-tekijän mukaan.</td></tr>
+  <tr><td>Codespaces, Packages, Git LFS</td><td>Mitattu käyttö.</td></tr>
+</table>
+<ul class="qs">
+  <li data-id="k1"><p class="q">Onko GitHub-laskulle ja sen maksutavalle tai Azure-tilaukselle nimetty yksi vastuuhenkilö? <a class="doc" href="https://docs.github.com/en/billing/how-tos/set-up-payment/connect-azure-sub">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="k1" value="y"><span>Kyllä</span></label><label><input type="radio" name="k1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Nimeä sellainen. Mitatut tuotteet, kuten Copilotin käyttö ja Actions, voidaan laskuttaa yhdistetyn Azure-tilauksen kautta.</p></li>
+  <li data-id="k2"><p class="q">Ovatko kustannuspaikat ja budjetit kunnossa ennen mitattujen tuotteiden käyttöönottoa? <a class="doc" href="https://docs.github.com/en/billing/concepts/cost-centers">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="k2" value="y"><span>Kyllä</span></label><label><input type="radio" name="k2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Luo ne ensin liiketoimintayksiköittäin. Kustannuspaikat kattavat vain mitatun käytön, eivät volyymikäyttöpaikkoja, ja kukin voi laskuttaa omaa Azure-tilaustaan.</p></li>
+  <li data-id="k3"><p class="q">Olemmeko valinneet Copilot-paketin ja määrittäneet AI credits -kulutuskäytännön? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/whats-changing-with-github-enterprise-and-copilot">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="k3" value="y"><span>Kyllä</span></label><label><input type="radio" name="k3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Päätä ennen käyttöönottoa. Pakettien hinnat ja niihin sisältyvät AI credits -krediitit eroavat toisistaan, ja lisäkäyttö mitataan.</p></li>
+</ul>
+</div>
+</details>
+
+<details id="itsm">
+<summary><span class="n">9</span>ITSM ja toteutus</summary>
+<div class="body">
+<p>Pidä ITSM-työkalu ensisijaisena kirjausjärjestelmänä. Anna IdP:n myöntää oikeudet. Vältä manuaalista klikkailua GitHubissa.</p>
+<ul class="qs">
+  <li data-id="t1"><p class="q">Kerääkö pyyntölomake roolin, liiketoimintaperusteen, sponsorin (ulkoisille käyttäjille) ja päättymispäivän?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="t1" value="y"><span>Kyllä</span></label><label><input type="radio" name="t1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Lisää nämä kentät. Hyväksyjät, tarkistajat ja auditoijat tarvitsevat niitä myöhemmin.</p></li>
+  <li data-id="t2"><p class="q">Menevätkö hyväksynnät ensin lähiesihenkilölle ja sitten vastuulliselle omistajalle? <a class="doc" href="https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-overview">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="t2" value="y"><span>Kyllä</span></label><label><input type="radio" name="t2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Käytä kahta vaihetta: esihenkilö vahvistaa henkilön ja tarpeen, omistaja käyttöoikeuden. Entran käyttöoikeuspaketit tukevat monivaiheista hyväksyntää.</p></li>
+  <li data-id="t3"><p class="q">Toteutetaanko pyyntö muuttamalla Entra-ryhmää sen sijaan, että joku kutsuisi käyttäjät GitHubissa? <a class="doc" href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/assign-user-or-group-access-portal">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="t3" value="y"><span>Kyllä</span></label><label><input type="radio" name="t3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Muuta sen sijaan ryhmää. Suorat kutsut ohittavat IdP:n, jättävät tilit linkittämättä eikä niitä poisteta automaattisesti.</p></li>
+  <li data-id="t4"><p class="q">Suljetaanko tiketti vasta, kun provisiointi on vahvistettu ja näyttö liitetty?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="t4" value="y"><span>Kyllä</span></label><label><input type="radio" name="t4" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Sulje näytön perusteella: ryhmämuutos ja GitHubin auditointitapahtuma. Ne tekevät tiketistä auditointitietueen.</p></li>
+  <li data-id="t5"><p class="q">Noudattavatko poistopyynnöt samaa polkua?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="t5" value="y"><span>Kyllä</span></label><label><input type="radio" name="t5" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Toteuta poistot saman työnkulun kautta käänteisessä järjestyksessä, jotta nekin hyväksytään ja dokumentoidaan.</p></li>
+</ul>
+</div>
+</details>
+
+<details id="rollout">
+<summary><span class="n">10</span>Pilotti ja vaiheittainen käyttöönotto</summary>
+<div class="body">
+<ol class="phases">
+  <li><b>Edeltävät vaatimukset</b> <span>omistaja nimetty, alustapäätös tehty, IdP-ryhmät ja luettelo luonnosteltu, suoratoisto käytössä ja palautuskoodit tallennettu.</span></li>
+  <li><b>Pilotti</b> <span>yksi organisaatio, kaksi tai kolme tiimiä, sisäisiä käyttäjiä ja vähintään yksi ulkoinen käyttäjä. Käy koko työnkulku pyynnöstä poistoon läpi alusta loppuun.</span></li>
+  <li><b>Laajenna</b> <span>yksi organisaatio tai liiketoimintayksikkö kerrallaan. Täsmäytä lisenssit jokaisen aallon jälkeen.</span></li>
+  <li><b>Ylläpidä</b> <span>neljännesvuosittaiset käyttöoikeus- ja lisenssitarkistukset, kuukausittainen kustannustarkistus ja vuosittainen luettelon tarkistus.</span></li>
+</ol>
+<ul class="qs">
+  <li data-id="o1"><p class="q">Onko jokaiselle vaiheelle määritetty palautusmenettely? <a class="doc" href="https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/managing-recovery-codes-for-your-enterprise/downloading-your-enterprise-accounts-single-sign-on-recovery-codes">Dokumentaatio</a></p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="o1" value="y"><span>Kyllä</span></label><label><input type="radio" name="o1" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Määritä se, esimerkiksi miten SCIM poistetaan käytöstä tai sovellusmääritykset palautetaan estämättä omistajien pääsyä. Pidä palautuskoodit saatavilla.</p></li>
+  <li data-id="o2"><p class="q">Onko pilotin onnistumiskriteereistä sovittu etukäteen?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="o2" value="y"><span>Kyllä</span></label><label><input type="radio" name="o2" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Sovi niistä, esimerkiksi myöntämiseen ja poistamiseen kuluvasta ajasta sekä täydellisestä näytöstä.</p></li>
+  <li data-id="o3"><p class="q">Onko jokainen organisaatiolle jäävä päätös listattu vastuuhenkilön ja päivämäärän kanssa?</p>
+    <div class="yn" role="radiogroup" aria-label="Vastaus"><label><input type="radio" name="o3" value="y"><span>Kyllä</span></label><label><input type="radio" name="o3" value="n"><span>Ei</span></label></div>
+    <p class="a if-y ok"><b>Tilanne kunnossa.</b></p>
+    <p class="a if-n fix"><b>Suositus:</b> Listaa ne. Avoimet päätökset ilman vastuuhenkilöä pysäyttävät käyttöönoton.</p></li>
+</ul>
+</div>
+</details>
+</main>
+</div>
+
+<footer>
+  <p>Yleistä ohjeistusta, jota ei ole sidottu mihinkään organisaatioon. Tuotteet ja hinnat muuttuvat, joten tarkista <a href="ledger.html">lähdeluettelo</a> ja varmista asiakaskohtaiset ehdot asiakkuustiimiltäsi. Laajemmista suunnittelupäätöksistä katso <a href="https://learn.github.com/well-architected/">GitHub Well-Architected</a>.</p>
+</footer>
+<script>
+const items=[...document.querySelectorAll('.qs li')],K='ghe-field-guide-v2';
+let s=JSON.parse(localStorage.getItem(K)||'{}');
+const secs=[...document.querySelectorAll('main details')],links=[...document.querySelectorAll('nav a')],wide=matchMedia('(min-width:1024px)');
+const link=d=>links.find(a=>a.hash==='#'+d.id);
+const fix=li=>li.dataset.a&&li.querySelector('.if-'+li.dataset.a).classList.contains('fix');
+links.forEach(a=>a.insertAdjacentHTML('beforeend','<span class="c"></span>'));
+const draw=()=>{const n=items.filter(li=>li.dataset.a).length;count.textContent=n;total.textContent=items.length;todo.textContent=items.filter(fix).length;bar.style.width=(100*n/items.length)+'%';
+secs.forEach(d=>{const q=items.filter(li=>d.contains(li)),k=q.filter(li=>li.dataset.a).length,a=link(d);a.lastChild.textContent=k+'/'+q.length;a.classList.toggle('done',k===q.length);a.classList.toggle('fix',q.some(fix))})};
+items.forEach(li=>{const id=li.dataset.id;if(s[id])li.dataset.a=s[id];li.querySelectorAll('input').forEach(r=>{r.checked=s[id]===r.value;r.onchange=()=>{s[id]=li.dataset.a=r.value;localStorage.setItem(K,JSON.stringify(s));draw()}})});
+reset.onclick=()=>{s={};localStorage.removeItem(K);items.forEach(li=>{delete li.dataset.a;li.querySelectorAll('input').forEach(r=>r.checked=false)});draw()};
+const fit=()=>{if(wide.matches)secs.forEach(d=>d.open=true)};fit();wide.addEventListener('change',fit);
+document.querySelectorAll('summary').forEach(x=>x.addEventListener('click',e=>{if(wide.matches)e.preventDefault()}));
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a===link(e.target)))}),{rootMargin:'-15% 0px -75% 0px'});secs.forEach(d=>spy.observe(d));
+[...links,...document.querySelectorAll('.part-card a')].forEach(a=>a.onclick=()=>{document.querySelector(a.hash).open=true});
+if(location.hash){const d=document.querySelector(location.hash);if(d&&d.tagName==='DETAILS')d.open=true}
+draw();
+</script>
+</body>
+</html>
