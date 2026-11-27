@@ -1,0 +1,24 @@
+<svg viewBox="0 0 696 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="code-response-title code-response-desc">
+<title id="code-response-title">Three paths for a code finding</title><desc id="code-response-desc">Fix and verify with a later scan, dismiss with an evidence-backed reason and comment, or route a real but deferred issue to the exception process. Merge protection stops new findings.</desc>
+<defs><marker id="code-response-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="696" height="200" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="24" y="24" width="200" height="64" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="124.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Fix</text>
+<text x="124.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">verified by later scan</text>
+<rect x="248" y="24" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="348.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Dismiss</text>
+<text x="348.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">reason and comment</text>
+<rect x="472" y="24" width="200" height="64" rx="6" class="warn" fill="#fff8c5" stroke="#854d0e"/>
+<text x="572.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Defer</text>
+<text x="572.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">exception process</text>
+<rect x="24" y="108" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="124.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Autofix</text>
+<text x="124.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">review before merge</text>
+<rect x="248" y="108" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="348.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Campaign</text>
+<text x="348.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">time-boxed burn-down</text>
+<rect x="472" y="108" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="572.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Merge protection</text>
+<text x="572.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">stop new findings</text>
+</g></svg>

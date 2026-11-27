@@ -10,7 +10,7 @@ for (const guide of guides) {
   assert.doesNotMatch(guide.description, /\bguides?\b/i, `${guide.name} description must describe the topic without "guide"`);
 }
 
-const base = 'http://127.0.0.1:4173/field-guides/';
+const base = `http://127.0.0.1:${process.env.PORT || 4173}/field-guides/`;
 const server = spawn('bun', ['run', 'preview'], { stdio: 'inherit' });
 let browser;
 try {
@@ -169,6 +169,29 @@ try {
       }
     }
   }
+  const securityBase = `${base}github-security-operations/`;
+  await page.goto(securityBase);
+  assert.match(await page.locator('.part-card').nth(0).locator('a').textContent(), /^View chapters/);
+  assert.match(await page.locator('.part-card').nth(3).locator('a').textContent(), /^View part/);
+  await page.evaluate(() => localStorage.setItem('security-operations-progress-v1', JSON.stringify([
+    'operating-model', 'route', 'coverage', 'triage', 'secrets',
+  ])));
+  await page.goto(`${securityBase}part-4/1-secrets/`);
+  assert.equal(await page.locator('h1').innerText(), 'Part 4: Respond to a leaked secret');
+  assert.equal(await page.title(), 'Part 4: Respond to a leaked secret · Secret scanning response · GitHub Security Operations');
+  const securityParts = page.locator('.sidebar .course-part');
+  for (const index of [1, 2, 3, 4, 5]) {
+    assert.equal(await securityParts.nth(index).locator('h2 a').count(), 1);
+    assert.equal(await securityParts.nth(index).locator('.chapter-pages').count(), 0);
+  }
+  assert.equal(await securityParts.nth(3).locator('h2 a[aria-current="page"]').count(), 1);
+  assert.equal(await securityParts.nth(0).locator('.chapter-pages a').count(), 2);
+  assert.match(await securityParts.nth(0).locator('.chapter-pages a').nth(0).textContent(), /^1\.1 /);
+  assert.match(await securityParts.nth(0).locator('.chapter-pages a').nth(1).textContent(), /^1\.2 /);
+  assert.match(await page.locator('.pagination [rel="prev"]').textContent(), /Part 3:/);
+  assert.match(await page.locator('.pagination [rel="next"]').textContent(), /Part 5:/);
+  await page.goto(`${securityBase}part-1/1-operating-model/`);
+  assert.equal(await page.locator('h1').innerText(), '1.1 Why alerts stall and what fixes it');
   await page.goto(`${base}github-enterprise-field-guide/ledger.html`);
   const ledgerHubLink = page.getByRole('link', { name: 'Enterprise enablement', exact: true });
   assert.equal(await ledgerHubLink.evaluate(link => link.href), base, 'Evidence ledger breadcrumb must link to the hub');
@@ -203,7 +226,7 @@ try {
   });
   if (checks.error) throw checks.error;
   assert.equal(checks.status, 0, 'Existing Champions checks must pass');
-  console.log(`Site checks passed: ${targets.size} routes/assets, all five guides, shared themes, keyboard navigation and mobile widths.`);
+  console.log(`Site checks passed: ${targets.size} routes/assets, all six guides, shared themes, keyboard navigation and mobile widths.`);
 } finally {
   await browser?.close();
   server.kill();

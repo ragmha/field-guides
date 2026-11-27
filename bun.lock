@@ -51,6 +51,19 @@
         "typescript": "^5.9.3",
       },
     },
+    "guides/github-security-operations": {
+      "name": "github-security-operations-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
     "hub": {
       "name": "field-guides-hub",
       "dependencies": {

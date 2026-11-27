@@ -34,4 +34,11 @@ export const guides = [
     description: 'Mobile-first guidance for designing a GitHub Enterprise service: deployment options, identity, roles, licensing, audit.',
     type: 'static',
   },
+  {
+    name: 'github-security-operations',
+    title: 'GitHub Security Operations',
+    parts: 8,
+    description: 'A source-linked playbook for triaging, remediating and governing security alerts across repositories.',
+    type: 'astro',
+  },
 ];

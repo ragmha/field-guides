@@ -1,0 +1,18 @@
+<svg viewBox="0 0 640 272" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="coverage-layers-title coverage-layers-desc">
+<title id="coverage-layers-title">Four layers before you trust an empty view</title><desc id="coverage-layers-desc">Check scope, enablement, freshness and visibility in order. A gap at any layer can make an unscanned repository look clean.</desc>
+<defs><marker id="coverage-layers-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="640" height="272" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="40" y="24" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="320.0" y="44.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">01  Scope</text>
+<text x="320.0" y="62.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">is the repository in the agreed population?</text>
+<rect x="40" y="84" width="560" height="48" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="320.0" y="104.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">02  Enablement</text>
+<text x="320.0" y="122.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">is the feature on and configured?</text>
+<rect x="40" y="144" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="320.0" y="164.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">03  Freshness</text>
+<text x="320.0" y="182.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">has a recent scan run on the default branch?</text>
+<rect x="40" y="204" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="320.0" y="224.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">04  Visibility</text>
+<text x="320.0" y="242.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">can the report author see these alerts?</text>
+</g></svg>

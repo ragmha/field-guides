@@ -1,0 +1,25 @@
+<svg viewBox="0 0 696 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="intake-record-title intake-record-desc">
+<title id="intake-record-title">A minimum intake record</title><desc id="intake-record-desc">Six fields make every alert decision repeatable: the alert link, its location, the owner, priority and due date, exposure context, and the decision with evidence.</desc>
+<defs><marker id="intake-record-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="696" height="224" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="24" y="24" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="124.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Alert link and type</text>
+<text x="124.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">source of truth</text>
+<rect x="248" y="24" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="348.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Repository and location</text>
+<text x="348.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">scope</text>
+<rect x="472" y="24" width="200" height="64" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="572.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Owner and date</text>
+<text x="572.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">starts the clock</text>
+<rect x="24" y="108" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="124.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Priority and due date</text>
+<text x="124.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">agreed target</text>
+<rect x="248" y="108" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="348.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Exposure context</text>
+<text x="348.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">deployed, reachable</text>
+<rect x="472" y="108" width="200" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="572.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Decision and evidence</text>
+<text x="572.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">how it closed</text>
+<text x="348" y="204" text-anchor="middle" font-size="11" class="muted" fill="#59636e">Link to the restricted alert; never copy secrets</text>
+</g></svg>

@@ -10,7 +10,7 @@ interface Props {
   stale: boolean;
   start: string;
   secondary: { href: string; label: string };
-  parts: { title: string; description: string; href: string }[];
+  parts: { title: string; description: string; href: string; linkLabel?: string }[];
 }
 const { name, art, alt, reviewed, stale, start, secondary, parts } = Astro.props;
 const guide = guides.find(guide => guide.name === name);
@@ -39,7 +39,7 @@ const reviewedOn = new Date(`${reviewed}T00:00:00Z`).toLocaleDateString('en-GB',
           <div class="part-top"><span aria-hidden="true">↖</span><span>{String(index + 1).padStart(2, '0')}</span></div>
           <h3>{part.title}</h3>
           <p>{part.description}</p>
-          <a href={part.href}>View chapters<span class="sr-only"> in {part.title}</span> <span aria-hidden="true">→</span></a>
+          <a href={part.href}>{part.linkLabel ?? 'View chapters'}<span class="sr-only">{part.linkLabel ? `: ${part.title}` : ` in ${part.title}`}</span> <span aria-hidden="true">→</span></a>
         </li>
       ))}
     </ol>
