@@ -146,6 +146,10 @@ try {
             await preview.locator('summary').click();
             await codeBlock.locator('[data-loaded="true"]').waitFor();
             assert.equal(await codeBlock.locator('code').textContent(), skillSource, 'The first code block must show its actual skill source');
+            assert.ok(await codeBlock.locator('.md-yaml-key').count() > 0, 'Skill front matter must be syntax highlighted');
+            assert.ok(await codeBlock.locator('.md-heading-text').count() > 0, 'Skill headings must be syntax highlighted');
+            assert.ok(await codeBlock.locator('.md-list-marker').count() > 0, 'Skill list markers must be syntax highlighted');
+            assert.ok(await codeBlock.locator('.md-strong').count() > 0, 'Skill emphasis must be syntax highlighted');
             assert.equal(await codeBlock.locator('.code-block-copy').isEnabled(), true, 'The skill copy action must be enabled once its source loads');
             const wrapButton = codeBlock.locator('.code-block-wrap');
             await wrapButton.click();
