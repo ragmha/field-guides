@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="permission-modes-dark-root" viewBox="0 0 704 428" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="permission-modes-dark-title permission-modes-dark-desc">
+        <title id="permission-modes-dark-title">Compare permission modes</title>
+        <desc id="permission-modes-dark-desc">Manual asks you, assisted sends requests to an AI safety review that can escalate, and allow-all approves tools, paths and URLs; none replaces the sandbox.</desc>
+        <defs><marker id="permission-modes-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="428" fill="#07090d"/>
+        <rect x="40" y="40" width="128" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="104.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Mode</text>
+        <rect x="168" y="40" width="160" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Who decides</text>
+        <rect x="328" y="40" width="168" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Good fit</text>
+        <rect x="496" y="40" width="168" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Limit</text>
+        <rect x="168" y="80" width="160" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="108.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">You, for requests that</text>
+        <text x="248.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">need approval</text>
+        <rect x="328" y="80" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="108.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Novel or exploratory</text>
+        <text x="412.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">work</text>
+        <rect x="496" y="80" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="108.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Prompt fatigue; approvals</text>
+        <text x="580.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">can grow broad</text>
+        <rect x="40" y="144" width="128" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="104.0" y="180.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assisted</text>
+        <rect x="168" y="144" width="160" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="172.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">AI safety review;</text>
+        <text x="248.0" y="188.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">escalates the rest</text>
+        <rect x="328" y="144" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="172.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Routine, well-understood</text>
+        <text x="412.0" y="188.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">work with sandbox on</text>
+        <rect x="496" y="144" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="172.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Uses AI credits; does not</text>
+        <text x="580.0" y="188.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">review sandbox bypass</text>
+        <rect x="40" y="208" width="128" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="104.0" y="244.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allow-all</text>
+        <rect x="168" y="208" width="160" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="236.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Nobody: tools, paths</text>
+        <text x="248.0" y="252.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">and URLs approved</text>
+        <rect x="328" y="208" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="236.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Disposable environments</text>
+        <text x="412.0" y="252.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">only</text>
+        <rect x="496" y="208" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="236.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise can block it;</text>
+        <text x="580.0" y="252.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">no prompts at all</text>
+        <text x="40" y="304" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Autopilot is a separate agent mode: requests that still need approval are denied.</text>
+        <text x="40" y="320" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">CLI: /permissions manual, assisted or allow-all; --allow-all and --yolo approve everything.</text>
+        <text x="40" y="336" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No mode replaces local sandboxing, and Allow all does not turn the sandbox off.</text>
+        <rect x="40" y="80" width="128" height="64" rx="0" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="104.0" y="116.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Manual</text>
+        <line x1="40" y1="368" x2="664" y2="368" stroke="#3d444d"/>
+        <text x="40" y="392" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rows: permission modes; columns: what each mode means in practice</text>
+        <text x="40" y="412" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

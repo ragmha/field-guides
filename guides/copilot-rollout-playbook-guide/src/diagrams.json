@@ -1,0 +1,50 @@
+{
+  "rollout-raci": {
+    "title": "Rollout RACI matrix",
+    "description": "A hypothetical matrix assigns responsible, accountable, consulted and informed roles for six rollout decisions, with one accountable owner per row."
+  },
+  "ai-manager-delegation": {
+    "title": "Delegating AI administration",
+    "description": "Create a custom role, create an enterprise team and assign the role to the team, with optional ruleset bypass and the settings that stay outside the role."
+  },
+  "pilot-group-selection": {
+    "title": "Selecting the pilot population",
+    "description": "Use an existing organization if one fits or create a dedicated one, then confirm each participant is licensed through the pilot organization."
+  },
+  "pilot-cost-ceiling": {
+    "title": "Pilot cost ceiling trace",
+    "description": "Twenty Business users at 3,000 credits each exceed a 38,000-credit pool by 22,000 credits, about $220, so a hypothetical $250 ceiling stops usage at the limit."
+  },
+  "pre-enable-baseline": {
+    "title": "Pre-enable baseline",
+    "description": "Confirm the license source, set policies, enable one organization and cap spend, on a baseline that keeps defaults on and restricts only what must be restricted."
+  },
+  "exception-handling": {
+    "title": "Exception lifecycle",
+    "description": "An exception moves from request to assessment to a scoped grant and an expiry review, which either renews after reassessment or reverts and confirms in the audit log."
+  },
+  "enablement-timeline": {
+    "title": "Enablement timeline and support path",
+    "description": "Preparation 45 days out, announcement at 14 days, workshop at 7 days, launch-day support and ongoing training, with a support path from developer to GitHub Support."
+  },
+  "license-request-flow": {
+    "title": "Two license request flows",
+    "description": "In the built-in flow a member asks and an owner reviews requests; in the API flow an internal request passes optional checks before a seat is assigned automatically."
+  },
+  "go-no-go-decision": {
+    "title": "Go/no-go decision",
+    "description": "Without enough evidence, extend the pilot; with evidence, criteria met leads to staged expansion, partly met to a hold and fix, and not met to rollback."
+  },
+  "stage-gates": {
+    "title": "Expansion stage gates",
+    "description": "Access widens from the pilot organization to more organizations and then the enterprise, with the same gate checklist before each stage."
+  },
+  "outcome-reporting": {
+    "title": "Outcome reporting pipeline",
+    "description": "A report moves from decision to comparison, evidence, separated observations and conclusions, and a narrative, with each evidence type limited to what it can show."
+  },
+  "steady-state-review": {
+    "title": "Steady-state review cadence",
+    "description": "Changelog, audit log, usage metrics and spend feed weekly, monthly and quarterly reviews that end in a leadership report."
+  }
+}

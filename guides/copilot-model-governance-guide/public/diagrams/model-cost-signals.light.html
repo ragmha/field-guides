@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signals that change model cost</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Model Governance · Matrix</p>
+    <h1>Signals that change model cost</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Signals that change model cost. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="model-cost-signals-light-title model-cost-signals-light-desc">
+        <title id="model-cost-signals-light-title">Signals that change model cost</title>
+        <desc id="model-cost-signals-light-desc">Token types, long-context tiers, Auto and Fusion discounts, the FedRAMP uplift and promotions change AI credit use, and budgets go to the AI credits process.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="720" fill="#f3f5f7"/>
+        <text x="48" y="60" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">SIGNAL</text>
+        <text x="288" y="60" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">DOCUMENTED EFFECT ON AI CREDITS</text>
+        <rect x="40" y="72" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="98.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Input and cached input</text>
+        <rect x="280" y="72" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="98.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Priced per model; one AI credit is $0.01 USD</text>
+        <rect x="40" y="124" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="150.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cache write</text>
+        <rect x="280" y="124" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="150.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Charged where the model lists a cache write rate</text>
+        <rect x="40" y="176" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="202.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Output tokens</text>
+        <rect x="280" y="176" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="202.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Priced per model at its own output rate</text>
+        <rect x="40" y="228" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="254.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Long-context tier</text>
+        <rect x="280" y="228" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="254.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Higher rates above a token threshold, some models only</text>
+        <rect x="40" y="280" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="306.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Auto</text>
+        <rect x="280" y="280" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="306.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">10% discount in Chat or cloud agent on paid plans</text>
+        <rect x="40" y="332" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="358.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Fusion</text>
+        <rect x="280" y="332" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="358.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Time-bound promotion; higher effort can use more credits</text>
+        <rect x="40" y="384" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="410.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">FedRAMP restriction</text>
+        <rect x="280" y="384" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="410.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">10% more AI credits under enforcement</text>
+        <rect x="40" y="436" width="232" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="156.0" y="462.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Promotional pricing</text>
+        <rect x="280" y="436" width="384" height="44" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="472.0" y="462.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Listed promotional rates with end dates</text>
+        <rect x="40" y="504" width="624" height="56" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="528.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Record signals; hand budgets to the AI credits process</text>
+        <text x="352.0" y="544.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Budget design lives in the AI credits course, not the model review</text>
+        <text x="40" y="600" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Code completions and next edit suggestions are not billed in AI credits on paid plans.</text>
+        <text x="40" y="616" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Use model usage breakdowns in the usage metrics to see whether an enabled model is used.</text>
+        <line x1="40" y1="648" x2="664" y2="648" stroke="#d1d9e0"/>
+        <text x="40" y="672" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: cost signal; columns: signal and documented effect</text>
+        <text x="40" y="692" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

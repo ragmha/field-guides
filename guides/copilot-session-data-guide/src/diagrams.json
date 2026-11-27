@@ -1,0 +1,50 @@
+{
+  "session-data-anatomy": {
+    "title": "Four parts, four questions",
+    "description": "A session record holds prompts, responses, tools used and file changes. Where it runs, where it is stored, whether it syncs and who can access it are separate questions."
+  },
+  "where-sessions-run": {
+    "title": "Where a session runs and what persists",
+    "description": "Local, cloud sandbox and GitHub Actions sessions differ in whether the working environment persists, where the record lives and whether it is shared by default."
+  },
+  "cli-session-directory": {
+    "title": "Inside the CLI configuration directory",
+    "description": "The configuration directory holds the full session record, a rebuildable SQLite store, process logs and command history, each with a documented deletion risk."
+  },
+  "local-store-maintenance": {
+    "title": "Prune, delete and reindex local sessions",
+    "description": "Check storage, prune by age or delete by ID with a preview, then reindex if session folders were removed by hand. Local commands never remove synced copies."
+  },
+  "sync-controls": {
+    "title": "Does a local CLI session sync?",
+    "description": "With the policy allowing sync, a run flag decides first, then the remoteExport setting; by default the session syncs to the personal account and stays private."
+  },
+  "sync-policy-access": {
+    "title": "Availability is not access",
+    "description": "Administrators decide whether local sessions can sync. Users own synced sessions and choose what to share. Collaborators see only what is shared, view-only."
+  },
+  "share-visibility": {
+    "title": "What sharing grants",
+    "description": "Actions cloud agent sessions are shared by default; sandbox and synced local sessions are shared only on request. Recipients can view but cannot steer or query them."
+  },
+  "export-formats": {
+    "title": "Share targets and standalone copies",
+    "description": "Links and gists stay on GitHub and can be revoked or deleted there. Markdown, HTML, JSON and copied text are standalone copies that you must manage separately."
+  },
+  "delete-archive-hide": {
+    "title": "Which removal control works where",
+    "description": "Share, delete and archive availability by session type and surface. Cloud agent sessions on GitHub Actions can be archived but not deleted."
+  },
+  "retention-windows": {
+    "title": "Documented retention windows",
+    "description": "GitHub.com Chat messages are deleted after 28 days and audit events after 180 days. Synced and local session records have no documented expiry and stay until deleted."
+  },
+  "session-vs-audit-log": {
+    "title": "Session record or audit event?",
+    "description": "Session records hold content and belong to the user; audit events record actions for administrators. The agent session ID connects an event to its session."
+  },
+  "evidence-tracing": {
+    "title": "Trace one agent change",
+    "description": "A cloud agent commit links to its session log, and the audit event carries the same agent session ID. Access rules and retention limits shape each hop."
+  }
+}

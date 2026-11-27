@@ -1,0 +1,50 @@
+{
+  "customization-layers": {
+    "title": "Map the customization layers",
+    "description": "Customizations live at enterprise, organization, repository and personal layers, and plugins can carry agents and skills to any of them."
+  },
+  "surface-support-check": {
+    "title": "Check surface support",
+    "description": "Mark each customization as supported, public preview or not supported on each surface, then choose the governance action for that status."
+  },
+  "ownership-model": {
+    "title": "Assign an owner to every layer",
+    "description": "Each scope has its own owner and review path, from enterprise owners to repository maintainers and individual developers."
+  },
+  "change-review": {
+    "title": "Review a customization change",
+    "description": "A branch edits a customization, a human owner reviews it, and only merged changes reach the default branch before you verify each surface."
+  },
+  "agent-release-path": {
+    "title": "Release a custom agent in stages",
+    "description": "Draft a profile, test it privately in .github/agents, release it by moving it to agents/, and track each version by commit SHA."
+  },
+  "skill-plugin-versioning": {
+    "title": "Version skills and plugins",
+    "description": "Preview a skill, install it at a reviewed tag or SHA, update deliberately because pinned skills are skipped, and keep plugin and marketplace names stable."
+  },
+  "distribution-channels": {
+    "title": "Choose a distribution channel",
+    "description": "Four channels reach progressively wider audiences, from one person to every member, so pick the narrowest channel that reaches the audience."
+  },
+  "managed-plugin-distribution": {
+    "title": "Distribute plugins with the right control",
+    "description": "Plugins move from available to installed to enabled, and personal, repository default or enterprise managed settings decide who controls each step."
+  },
+  "instruction-precedence": {
+    "title": "Resolve instruction conflicts",
+    "description": "GitHub.com Chat ranks personal, repository and organization instructions but provides all of them, while Copilot CLI and VS Code combine files without a general order."
+  },
+  "agent-name-collisions": {
+    "title": "Predict which agent wins",
+    "description": "When agent profiles share a filename, the repository agent wins over the organization agent, which wins over the enterprise agent."
+  },
+  "stale-customization-review": {
+    "title": "Find stale customizations",
+    "description": "Place each customization by recent signal and recent edit, then send rows with neither to the owner to confirm, update or retire."
+  },
+  "retire-and-migrate": {
+    "title": "Retire and migrate a customization",
+    "description": "Announce a deprecation, provide and verify a replacement, remove the original in a reviewed pull request, then confirm it no longer appears."
+  }
+}

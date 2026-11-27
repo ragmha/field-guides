@@ -1,0 +1,50 @@
+{
+  "model-inventory": {
+    "title": "Why a listed model may not appear",
+    "description": "The supported model catalog narrows by plan, client surface, administrator policy and release timing before a user sees the model picker."
+  },
+  "release-stages": {
+    "title": "Release stages from evaluation to retirement",
+    "description": "Models move from evaluation through private and public preview to general availability and retirement, and preview models stay unconfigured until set."
+  },
+  "availability-baseline": {
+    "title": "Predict a model status",
+    "description": "Check for an explicit state, then delegation to the default policy, then default exclusions such as open-weight and preview models."
+  },
+  "delegation-modes": {
+    "title": "Who decides model access",
+    "description": "The enterprise sets model policy and a control mode, then organizations decide delegated models or enterprise teams receive additive access."
+  },
+  "provider-hosting": {
+    "title": "Hosting and data statements by provider family",
+    "description": "Each provider family has documented hosting and data statements, and none trains on Copilot Business or Enterprise customer data."
+  },
+  "retention-exceptions": {
+    "title": "Handle a model outside zero retention",
+    "description": "A model outside the zero data retention agreement stays off unless an exemption is approved and an administrator enables it, then the exception is registered."
+  },
+  "auto-selection": {
+    "title": "What Auto can choose",
+    "description": "Auto removes models outside the plan, disabled models and restricted models, applies the tier preference and bills at the selected model rate."
+  },
+  "fusion-routing": {
+    "title": "Fusion execution patterns",
+    "description": "Fusion routes a prompt through a Single, Cascade or Critique pattern and returns one response, billed per model used."
+  },
+  "model-cost-signals": {
+    "title": "Signals that change model cost",
+    "description": "Token types, long-context tiers, Auto and Fusion discounts, the FedRAMP uplift and promotions change AI credit use, and budgets go to the AI credits process."
+  },
+  "bring-your-own-key": {
+    "title": "Two request paths for your own models",
+    "description": "User BYOK sends requests from the client directly to the provider, while enterprise custom models route through the Copilot API with central keys."
+  },
+  "model-review-intake": {
+    "title": "Model intake to decision",
+    "description": "A request moves through status, scope, data terms, routing, cost and a scoped pilot before a go, hold or no-go decision."
+  },
+  "model-lifecycle-review": {
+    "title": "Lifecycle events to review",
+    "description": "Base model designation, automatic enablement within 60 days, LTS terms, retirements and a monthly drift check each trigger a review."
+  }
+}

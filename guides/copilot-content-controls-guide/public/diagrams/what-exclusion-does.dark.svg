@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="what-exclusion-does-dark-root" viewBox="0 0 704 592" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="what-exclusion-does-dark-title what-exclusion-does-dark-desc">
+        <title id="what-exclusion-does-dark-title">What an exclusion changes</title>
+        <desc id="what-exclusion-does-dark-desc">An excluded file loses inline suggestions, stops informing suggestions and responses, and is skipped by Copilot code review, while human access is unchanged.</desc>
+        <defs><marker id="what-exclusion-does-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="592" fill="#07090d"/>
+        <path d="M 240 188 L 264 188 A 8 8 0 0 0 272 180 L 272 76 A 8 8 0 0 1 280 68 L 304 68" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#what-exclusion-does-dark-arrow)"/>
+        <path d="M 240 188 L 264 188 A 8 8 0 0 0 272 180 L 272 156 A 8 8 0 0 1 280 148 L 304 148" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#what-exclusion-does-dark-arrow)"/>
+        <path d="M 240 188 L 264 188 A 8 8 0 0 1 272 196 L 272 220 A 8 8 0 0 0 280 228 L 304 228" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#what-exclusion-does-dark-arrow)"/>
+        <path d="M 240 188 L 264 188 A 8 8 0 0 1 272 196 L 272 300 A 8 8 0 0 0 280 308 L 304 308" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#what-exclusion-does-dark-arrow)"/>
+        <rect x="40" y="148" width="200" height="80" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="140.0" y="176.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Excluded file</text>
+        <text x="140.0" y="192.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Saved rule matches</text>
+        <text x="140.0" y="208.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">on a supported surface</text>
+        <rect x="304" y="40" width="360" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="484.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">No inline suggestions in the file</text>
+        <text x="484.0" y="80.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Typing in the excluded file returns nothing</text>
+        <rect x="304" y="120" width="360" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="484.0" y="144.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Does not inform other suggestions</text>
+        <text x="484.0" y="160.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not used for suggestions in other files</text>
+        <rect x="304" y="200" width="360" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="484.0" y="224.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Does not inform responses</text>
+        <text x="484.0" y="240.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Chat and agent answers do not draw on it</text>
+        <rect x="304" y="280" width="360" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="484.0" y="304.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Skipped by Copilot code review</text>
+        <text x="484.0" y="320.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Excluded files are not reviewed</text>
+        <rect x="40" y="376" width="624" height="72" rx="6" fill="#07090d" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="352.0" y="400.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Not changed by exclusion</text>
+        <text x="352.0" y="416.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Human read and write access to the file</text>
+        <text x="352.0" y="432.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Access by tools that GitHub does not control</text>
+        <text x="40" y="488" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Effects apply only where the surface supports exclusion; see the surface matrix in Part 3.</text>
+        <line x1="40" y1="532" x2="664" y2="532" stroke="#3d444d"/>
+        <text x="40" y="556" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: documented effect; gray box: unchanged; arrow: effect of the rule</text>
+        <text x="40" y="576" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

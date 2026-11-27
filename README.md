@@ -1,13 +1,28 @@
 # Enterprise enablement
 
 Independent, source-backed guidance for GitHub Enterprise, Copilot and AI
-adoption, starting with five guides. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
+adoption, starting with 20 guides. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
 
 | Guide | Source | Site path |
 | --- | --- | --- |
 | AI Credits | Astro | `/field-guides/ai-credits-guide/` |
 | EU Data Residency | Astro | `/field-guides/data-residency-guide/` |
 | Copilot Governance | Astro | `/field-guides/copilot-governance-guide/` |
+| Copilot Control Map | Astro | `/field-guides/copilot-control-map-guide/` |
+| Copilot Policy Conflicts | Astro | `/field-guides/copilot-policy-conflicts-guide/` |
+| Copilot Managed Settings | Astro | `/field-guides/copilot-managed-settings-guide/` |
+| MCP Server Governance | Astro | `/field-guides/copilot-mcp-governance-guide/` |
+| Copilot Customization Governance | Astro | `/field-guides/copilot-customization-governance-guide/` |
+| Copilot Local Sandboxing | Astro | `/field-guides/copilot-local-sandboxing-guide/` |
+| Copilot Cloud Agent Security | Astro | `/field-guides/copilot-cloud-agent-security-guide/` |
+| Copilot Automations Governance | Astro | `/field-guides/copilot-automations-governance-guide/` |
+| Copilot Network Controls | Astro | `/field-guides/copilot-network-controls-guide/` |
+| Copilot Content Controls | Astro | `/field-guides/copilot-content-controls-guide/` |
+| Copilot Session Data | Astro | `/field-guides/copilot-session-data-guide/` |
+| Copilot Audit & Telemetry | Astro | `/field-guides/copilot-audit-telemetry-guide/` |
+| Copilot Metrics & Adoption | Astro | `/field-guides/copilot-metrics-guide/` |
+| Copilot Model Governance | Astro | `/field-guides/copilot-model-governance-guide/` |
+| Copilot Governance Rollout | Astro | `/field-guides/copilot-rollout-playbook-guide/` |
 | Champions at Scale | Static HTML | `/field-guides/champions-at-scale/` |
 | GitHub Enterprise | Static HTML | `/field-guides/github-enterprise-field-guide/` |
 
@@ -17,7 +32,7 @@ agent-engineering course is not included.
 
 `hub/` contains the single-page collection. It imports the AI Credits guide's
 CSS and uses its Octicons brand mark, system fonts and theme selector.
-The hub and all five guides share the `theme` localStorage preference.
+The hub and all 20 guides share the `theme` localStorage preference.
 `guides.mjs` is the collection list; descriptions come from the source
 repositories. Each guide's start page opens with a shared landing: a hero
 with the guide's pen-and-ink illustration and a Parts grid. The Astro guides
@@ -101,7 +116,7 @@ Existing guide screenshot output stays in ignored `test-results/`.
 
 ## Deployment and maintenance
 
-`.github/workflows/pages.yml` checks pull requests and builds all five guides
+`.github/workflows/pages.yml` checks pull requests and builds all 20 guides
 into one Pages artifact. On `master`, it deploys with `actions/deploy-pages`
 once Pages is configured to use GitHub Actions.
 No repository settings are changed by the build.

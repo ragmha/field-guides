@@ -203,7 +203,7 @@ try {
   });
   if (checks.error) throw checks.error;
   assert.equal(checks.status, 0, 'Existing Champions checks must pass');
-  console.log(`Site checks passed: ${targets.size} routes/assets, all five guides, shared themes, keyboard navigation and mobile widths.`);
+  console.log(`Site checks passed: ${targets.size} routes/assets, all ${guides.length} guides, shared themes, keyboard navigation and mobile widths.`);
 } finally {
   await browser?.close();
   server.kill();

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which token Copilot CLI uses</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Local Sandboxing · Flowchart</p>
+    <h1>Which token Copilot CLI uses</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Which token Copilot CLI uses. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="least-privilege-tokens-dark-title least-privilege-tokens-dark-desc">
+        <title id="least-privilege-tokens-dark-title">Which token Copilot CLI uses</title>
+        <desc id="least-privilege-tokens-dark-desc">Copilot CLI checks three environment variables, then the keychain OAuth token, then the GitHub CLI token, and uses the first one it finds.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="600" fill="#07090d"/>
+        <path d="M 328 68 L 376 68" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="334" y="52" width="35.5" height="12" rx="2" fill="#07090d"/><text x="351.75" y="61" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">FOUND</text>
+        <path d="M 184 96 L 184 128" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="106" width="46.5" height="12" rx="2" fill="#07090d"/><text x="215.25" y="115" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <path d="M 328 156 L 376 156" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 184 184 L 184 216" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="194" width="46.5" height="12" rx="2" fill="#07090d"/><text x="215.25" y="203" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <path d="M 328 244 L 376 244" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 184 272 L 184 304" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="282" width="46.5" height="12" rx="2" fill="#07090d"/><text x="215.25" y="291" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <path d="M 328 332 L 376 332" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 184 360 L 184 392" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="370" width="46.5" height="12" rx="2" fill="#07090d"/><text x="215.25" y="379" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <path d="M 328 420 L 376 420" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="40" width="288" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="184.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">COPILOT_GITHUB_TOKEN</text>
+        <text x="184.0" y="80.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Environment variable</text>
+        <rect x="40" y="128" width="288" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="184.0" y="152.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">GH_TOKEN</text>
+        <text x="184.0" y="168.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Often set for other tools</text>
+        <rect x="40" y="216" width="288" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="184.0" y="240.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">GITHUB_TOKEN</text>
+        <text x="184.0" y="256.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Environment variable</text>
+        <rect x="40" y="304" width="288" height="56" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="184.0" y="328.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">OAuth token in keychain</text>
+        <text x="184.0" y="344.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">From copilot login (recommended)</text>
+        <rect x="40" y="392" width="288" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="184.0" y="416.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">GitHub CLI token</text>
+        <text x="184.0" y="432.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Last fallback</text>
+        <rect x="376" y="40" width="288" height="408" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="520.0" y="232.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">First token found is used</text>
+        <text x="520.0" y="248.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Environment variables silently</text>
+        <text x="520.0" y="264.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">override a stored OAuth login</text>
+        <text x="40" y="488" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Fine-grained PATs need the Copilot Requests permission; classic PATs are not supported.</text>
+        <text x="40" y="504" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Without a keychain, the CLI offers plaintext storage in ~/.copilot/config.json.</text>
+        <line x1="40" y1="540" x2="664" y2="540" stroke="#3d444d"/>
+        <text x="40" y="564" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: result; rectangle: token source, checked top to bottom; arrow: next check</text>
+        <text x="40" y="584" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

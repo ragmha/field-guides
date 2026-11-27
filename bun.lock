@@ -38,6 +38,216 @@
         "typescript": "^5.9.3",
       },
     },
+    "guides/copilot-control-map-guide": {
+      "name": "copilot-control-map-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-policy-conflicts-guide": {
+      "name": "copilot-policy-conflicts-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-managed-settings-guide": {
+      "name": "copilot-managed-settings-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-mcp-governance-guide": {
+      "name": "copilot-mcp-governance-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-customization-governance-guide": {
+      "name": "copilot-customization-governance-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-local-sandboxing-guide": {
+      "name": "copilot-local-sandboxing-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-cloud-agent-security-guide": {
+      "name": "copilot-cloud-agent-security-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-automations-governance-guide": {
+      "name": "copilot-automations-governance-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-network-controls-guide": {
+      "name": "copilot-network-controls-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-content-controls-guide": {
+      "name": "copilot-content-controls-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-session-data-guide": {
+      "name": "copilot-session-data-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-audit-telemetry-guide": {
+      "name": "copilot-audit-telemetry-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-metrics-guide": {
+      "name": "copilot-metrics-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-model-governance-guide": {
+      "name": "copilot-model-governance-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
+    "guides/copilot-rollout-playbook-guide": {
+      "name": "copilot-rollout-playbook-guide",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@playwright/test": "^1.56.0",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
     "guides/data-residency-guide": {
       "name": "eu-data-residency-guide",
       "version": "1.0.0",
@@ -484,6 +694,36 @@
     "cookie-es": ["cookie-es@1.2.3", "", {}, "sha512-lXVyvUvrNXblMqzIRrxHb57UUVmqsSWlxqt3XIjCkUP0wDAf6uicO6KMbEgYrMNtEvWgWHwe42CKxPu9MYAnWw=="],
 
     "copilot-governance-guide": ["copilot-governance-guide@workspace:guides/copilot-governance-guide"],
+
+    "copilot-control-map-guide": ["copilot-control-map-guide@workspace:guides/copilot-control-map-guide"],
+
+    "copilot-policy-conflicts-guide": ["copilot-policy-conflicts-guide@workspace:guides/copilot-policy-conflicts-guide"],
+
+    "copilot-managed-settings-guide": ["copilot-managed-settings-guide@workspace:guides/copilot-managed-settings-guide"],
+
+    "copilot-mcp-governance-guide": ["copilot-mcp-governance-guide@workspace:guides/copilot-mcp-governance-guide"],
+
+    "copilot-customization-governance-guide": ["copilot-customization-governance-guide@workspace:guides/copilot-customization-governance-guide"],
+
+    "copilot-local-sandboxing-guide": ["copilot-local-sandboxing-guide@workspace:guides/copilot-local-sandboxing-guide"],
+
+    "copilot-cloud-agent-security-guide": ["copilot-cloud-agent-security-guide@workspace:guides/copilot-cloud-agent-security-guide"],
+
+    "copilot-automations-governance-guide": ["copilot-automations-governance-guide@workspace:guides/copilot-automations-governance-guide"],
+
+    "copilot-network-controls-guide": ["copilot-network-controls-guide@workspace:guides/copilot-network-controls-guide"],
+
+    "copilot-content-controls-guide": ["copilot-content-controls-guide@workspace:guides/copilot-content-controls-guide"],
+
+    "copilot-session-data-guide": ["copilot-session-data-guide@workspace:guides/copilot-session-data-guide"],
+
+    "copilot-audit-telemetry-guide": ["copilot-audit-telemetry-guide@workspace:guides/copilot-audit-telemetry-guide"],
+
+    "copilot-metrics-guide": ["copilot-metrics-guide@workspace:guides/copilot-metrics-guide"],
+
+    "copilot-model-governance-guide": ["copilot-model-governance-guide@workspace:guides/copilot-model-governance-guide"],
+
+    "copilot-rollout-playbook-guide": ["copilot-rollout-playbook-guide@workspace:guides/copilot-rollout-playbook-guide"],
 
     "cose-base": ["cose-base@1.0.3", "", { "dependencies": { "layout-base": "^1.0.0" } }, "sha512-s9whTXInMSgAp/NVXVNuVxVKzGH2qck3aQlVHxDCdAEPgtMKwc4Wq6/QKhgdEdgbLSi9rBTAcPoRa6JpiG4ksg=="],
 
