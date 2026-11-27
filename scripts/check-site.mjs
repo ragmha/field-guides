@@ -89,6 +89,7 @@ try {
       buttonRadius: style('.landing-button').borderTopLeftRadius,
     };
   });
+  const sharedLandingStyle = style => Object.fromEntries(Object.entries(style).filter(([key]) => key !== 'headingFont'));
   const expectLanding = async (guide, width) => {
     const landing = page.locator('.landing');
     assert.equal(await page.locator('h1').count(), 1, `${guide.name} needs exactly one page title`);
@@ -117,6 +118,9 @@ try {
         assert.equal(await page.locator('svg[data-diagram="architecture-delta"]').count(), 1);
         assert.match(await page.locator('.diagram-embed').first().locator('figcaption').textContent(), /Central policy and specialist support remain in place/);
       } else if (guide.name === 'agentic-engineering-guide') {
+        await page.evaluate(() => document.fonts.ready);
+        assert.match(await landing.locator('h1').evaluate(heading => getComputedStyle(heading).fontFamily), /^"Mona Sans"/, 'Agentic title must use Mona Sans');
+        assert.equal(await landing.locator('h1').evaluate(heading => document.fonts.check(`700 ${getComputedStyle(heading).fontSize} "Mona Sans"`)), true, 'Mona Sans must load for the agentic title');
         const chapters = page.locator('.chapter[data-part]');
         assert.equal(await chapters.count(), guide.parts, 'Each agentic engineering part needs a chapter');
         for (const [index, id] of agenticChapters.entries()) {
@@ -182,7 +186,7 @@ try {
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
         await expectLanding(guide, width);
         if (guide.name === 'agentic-engineering-guide') {
-          assert.deepEqual(await landingStyle(), collectionStyle, `Agentic landing must match the collection at ${width}px in ${theme} mode`);
+          assert.deepEqual(sharedLandingStyle(await landingStyle()), sharedLandingStyle(collectionStyle), `Agentic landing layout must match the collection at ${width}px in ${theme} mode`);
         }
         if (process.env.SCREENSHOT_DIR && [1440, 390].includes(width)) {
           await page.screenshot({

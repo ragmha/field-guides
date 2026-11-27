@@ -1,4 +1,11 @@
 * { box-sizing: border-box }
+@font-face {
+  font-family: "Mona Sans";
+  src: url("https://raw.githubusercontent.com/github/mona-sans/4bc6ba8b354c36b4fb66d32cd67b4c1f2beb0a06/fonts/webfonts/variable/MonaSansVF%5Bopsz%2Cwght%5D.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
@@ -90,7 +97,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .landing { max-width: 1180px; margin: 0 auto; padding: 0 44px }
 .landing-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 56px; padding: 72px 0 64px }
 .landing-copy { min-width: 0 }
-.landing h1 { margin: 0 0 26px; color: var(--ink); font: 700 clamp(46px, 5.6vw, 80px)/1.02 var(--serif); letter-spacing: -.02em }
+.landing h1 { margin: 0 0 26px; color: var(--ink); font: 700 clamp(46px, 5.6vw, 80px)/1.02 "Mona Sans", var(--font-sans); font-optical-sizing: auto }
 .landing-intro { max-width: 56ch; margin: 0; color: var(--body); font-size: 18px; line-height: 1.7 }
 .landing-note { margin: 16px 0 0; color: var(--muted); font: italic 16px/1.6 var(--serif) }
 .landing-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px }
