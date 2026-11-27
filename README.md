@@ -1,7 +1,7 @@
 # Enterprise enablement
 
 Independent, source-backed guidance for GitHub Enterprise, Copilot and AI
-adoption, starting with five guides. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
+adoption. One monorepo, one site: <https://ragmha.github.io/field-guides/>.
 
 | Guide | Source | Site path |
 | --- | --- | --- |
@@ -10,19 +10,20 @@ adoption, starting with five guides. One monorepo, one site: <https://ragmha.git
 | Copilot Governance | Astro | `/field-guides/copilot-governance-guide/` |
 | Champions at Scale | Static HTML | `/field-guides/champions-at-scale/` |
 | GitHub Enterprise | Static HTML | `/field-guides/github-enterprise-field-guide/` |
+| Agentic Engineering | Static HTML | `/field-guides/agentic-engineering-guide/` |
 
-Each guide lives in `guides/<name>/`, with its original Git history and license
-notices retained. Original repositories remain unchanged. The private
+Each guide lives in `guides/<name>/`. Imported guides retain their original Git
+history and license notices; their source repositories remain unchanged. The private
 agent-engineering course is not included.
 
 `hub/` contains the single-page collection. It imports the AI Credits guide's
 CSS and uses its Octicons brand mark, system fonts and theme selector.
-The hub and all five guides share the `theme` localStorage preference.
-`guides.mjs` is the collection list; descriptions come from the source
-repositories. Each guide's start page opens with a shared landing: a hero
+The hub and all six guides share the `theme` localStorage preference.
+`guides.mjs` is the collection list; its descriptions match each guide's landing.
+Each guide's start page opens with a shared landing: a hero
 with the guide's pen-and-ink illustration and a Parts grid. The Astro guides
-render `shared/Landing.astro`; the two static guides carry the same markup
-and CSS in their own files. Astro landings retain introductory notes and sources
+render `shared/Landing.astro`; the static guides use the same landing structure
+in their own files. Astro landings retain introductory notes and sources
 without repeating chapter sidebars or course indexes. Every topic has a visible
 return to the collection on mobile. Chapter-page layouts and the static topics'
 substantive content are retained.
@@ -101,7 +102,7 @@ Existing guide screenshot output stays in ignored `test-results/`.
 
 ## Deployment and maintenance
 
-`.github/workflows/pages.yml` checks pull requests and builds all five guides
+`.github/workflows/pages.yml` checks pull requests and builds all six guides
 into one Pages artifact. On `master`, it deploys with `actions/deploy-pages`
 once Pages is configured to use GitHub Actions.
 No repository settings are changed by the build.

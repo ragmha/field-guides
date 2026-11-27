@@ -6,11 +6,24 @@ import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import { guides } from '../guides.mjs';
 
+const agenticChapters = [
+  'terminology',
+  'aiops-devops',
+  'factories',
+  'mcp-api',
+  'agentic-observability',
+  'ai-observability',
+  'harness',
+  'evaluation',
+  'llm-observability',
+  'llmops',
+];
+
 for (const guide of guides) {
   assert.doesNotMatch(guide.description, /\bguides?\b/i, `${guide.name} description must describe the topic without "guide"`);
 }
 
-const base = 'http://127.0.0.1:4173/field-guides/';
+const base = `http://127.0.0.1:${process.env.PORT || 4173}/field-guides/`;
 const server = spawn('bun', ['run', 'preview'], { stdio: 'inherit' });
 let browser;
 try {
@@ -65,6 +78,17 @@ try {
     if (response.status() >= 400 && response.url().startsWith(base)) errors.push(`${response.status()} ${response.url()}`);
   });
   const checkedLinks = new Set();
+  const landingStyle = () => page.locator('.landing').evaluate(landing => {
+    const style = selector => getComputedStyle(landing.querySelector(selector));
+    return {
+      background: getComputedStyle(document.body).backgroundColor,
+      cardBackground: style('.part-card').backgroundColor,
+      headingFont: style('h1').fontFamily,
+      headingWeight: style('h1').fontWeight,
+      cardAlignment: style('.part-card').textAlign,
+      buttonRadius: style('.landing-button').borderTopLeftRadius,
+    };
+  });
   const expectLanding = async (guide, width) => {
     const landing = page.locator('.landing');
     assert.equal(await page.locator('h1').count(), 1, `${guide.name} needs exactly one page title`);
@@ -87,11 +111,28 @@ try {
         assert.match(await page.locator('.scope-note').textContent(), /Where this fits:/);
         assert.equal(await page.locator('nav[aria-label="Assessment sections"] a').count(), guide.parts);
         assert.equal(await page.locator('.prog #reset').isVisible(), true);
-      } else {
+      } else if (guide.name === 'champions-at-scale') {
         assert.equal(await page.locator('.chapter-nav').count(), 1, 'Champions contents must remain');
         assert.equal(await page.getByRole('complementary', { name: 'On this page', includeHidden: true }).count(), 1);
         assert.equal(await page.locator('svg[data-diagram="architecture-delta"]').count(), 1);
         assert.match(await page.locator('.diagram-embed').first().locator('figcaption').textContent(), /Central policy and specialist support remain in place/);
+      } else if (guide.name === 'agentic-engineering-guide') {
+        const chapters = page.locator('.chapter[data-part]');
+        assert.equal(await chapters.count(), guide.parts, 'Each agentic engineering part needs a chapter');
+        for (const [index, id] of agenticChapters.entries()) {
+          const chapter = chapters.nth(index);
+          assert.equal(await chapter.getAttribute('data-part'), String(index + 1), 'Chapters must stay in topic order');
+          assert.equal(await chapter.getAttribute('id'), id, `Part ${index + 1} needs its fragment target`);
+          assert.equal(await landing.locator('.part-card a').nth(index).getAttribute('href'), `#${id}`, `Part ${index + 1} card must open its chapter`);
+          assert.ok(await chapter.locator('a[href^="https://docs.github.com/"]').count() > 0, `Part ${index + 1} needs GitHub documentation`);
+        }
+        const diagrams = page.locator('figure.diagram-embed');
+        assert.equal(await diagrams.count(), 7, 'Agentic guide needs its seven concept diagrams');
+        for (const svg of await diagrams.locator('.diagram-scroll > svg[role="img"]').all()) {
+          const [title, desc] = (await svg.getAttribute('aria-labelledby')).split(' ');
+          assert.ok(await svg.locator(`title#${title}`).count() && await svg.locator(`desc#${desc}`).count(), 'Each diagram needs an accessible title and description');
+        }
+        assert.equal(await diagrams.locator('.diagram-scroll > svg[role="img"]').count(), 7, 'Each diagram needs an accessible SVG');
       }
     }
     assert.equal(await landing.locator('.landing-button').count(), 2, `${guide.name} landing needs two buttons`);
@@ -132,12 +173,17 @@ try {
         await mkdir(process.env.SCREENSHOT_DIR, { recursive: true });
         await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `hub-${theme}-${width}.png`), fullPage: true });
       }
+      await page.goto(`${base}github-enterprise-field-guide/`);
+      const collectionStyle = await landingStyle();
       for (const guide of guides) {
         await page.goto(`${base}${guide.name}/`);
         assert.equal(await page.locator('html').getAttribute('data-theme'), theme, `${guide.name} must inherit ${theme}`);
         assert.equal(await page.locator('header a', { hasText: 'Enterprise enablement' }).evaluate(link => link.href), base, `${guide.name} breadcrumb must link to the hub`);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
         await expectLanding(guide, width);
+        if (guide.name === 'agentic-engineering-guide') {
+          assert.deepEqual(await landingStyle(), collectionStyle, `Agentic landing must match the collection at ${width}px in ${theme} mode`);
+        }
         if (process.env.SCREENSHOT_DIR && [1440, 390].includes(width)) {
           await page.screenshot({
             path: join(process.env.SCREENSHOT_DIR, `landing-${guide.name}-${theme}-${width}.png`),
@@ -192,7 +238,7 @@ try {
     await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'ai-credits-guide.png'), fullPage: true });
   }
   assert.deepEqual(errors, []);
-  const checks = spawnSync('bun', ['checks.mjs'], {
+  const checks = spawnSync(process.execPath, ['checks.mjs'], {
     cwd: 'guides/champions-at-scale',
     stdio: 'inherit',
     env: {
@@ -203,7 +249,7 @@ try {
   });
   if (checks.error) throw checks.error;
   assert.equal(checks.status, 0, 'Existing Champions checks must pass');
-  console.log(`Site checks passed: ${targets.size} routes/assets, all five guides, shared themes, keyboard navigation and mobile widths.`);
+  console.log(`Site checks passed: ${targets.size} routes/assets, ${guides.length} guides, shared themes, keyboard navigation and mobile widths.`);
 } finally {
   await browser?.close();
   server.kill();

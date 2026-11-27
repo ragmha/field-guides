@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A GitHub perspective on agentic engineering, observability and LLM operations, with practical controls for teams.">
+  <meta name="color-scheme" content="light dark">
+  <title>Agentic Engineering | Enterprise enablement</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <script src="../github-enterprise-field-guide/theme.js"></script>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- THESIS: Make agentic engineering legible as a delivery system, not a promise of autonomous software.
+       OWN-WORLD: Extend the collection's restrained reading layout, shared theme, part grid and ink illustration.
+       STORY: Connect each source to a GitHub practice, an operating boundary and a concrete next step.
+       FIRST VIEWPORT: Title and two reading actions on the left; an original engineering illustration on the right.
+       FORM: The existing collection landing and a continuous, navigable ten-part reference. -->
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="../">
+      <svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="26" height="26"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>
+      Enterprise enablement
+    </a>
+    <span class="topbar-title" aria-hidden="true">/ &nbsp; Agentic Engineering</span>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+  </header>
+
+  <main id="content">
+    <div class="landing">
+      <section class="landing-hero" aria-labelledby="landing-title">
+        <div class="landing-copy">
+          <h1 id="landing-title">Agentic Engineering</h1>
+          <p class="landing-intro">A GitHub perspective on agentic engineering, observability and LLM operations, with practical controls for teams.</p>
+          <p class="landing-note">Sources reviewed 27 November 2026</p>
+          <div class="landing-actions">
+            <a class="landing-button" href="#terminology">Start now <span aria-hidden="true">&rarr;</span></a>
+            <a class="landing-button" href="#sources">Sources and scope</a>
+          </div>
+        </div>
+        <img class="landing-art" src="assets/landing.svg" width="640" height="520" alt="An original ink illustration of connected engineering layers, a check and a signal graph." fetchpriority="high">
+      </section>
+      <section class="landing-parts" aria-labelledby="parts-title">
+        <h2 id="parts-title">Parts</h2>
+        <p>Ten topics. Start with Part 1, or jump to the part you need.</p>
+        <ol class="part-grid">
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>01</span></div><h3>Agentic vocabulary</h3><p>Separate the model, agent, harness, tools and evidence.</p><a href="#terminology">Read part<span class="sr-only"> 1: Agentic vocabulary</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>02</span></div><h3>AIOps and DevOps</h3><p>Connect delivery changes to operations without confusing the two.</p><a href="#aiops-devops">Read part<span class="sr-only"> 2: AIOps and DevOps</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>03</span></div><h3>Agents to factories</h3><p>Define the trigger, control flow and human decision points.</p><a href="#factories">Read part<span class="sr-only"> 3: Agents to factories</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>04</span></div><h3>MCP and APIs</h3><p>Choose an integration layer and constrain what it can do.</p><a href="#mcp-api">Read part<span class="sr-only"> 4: MCP and APIs</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>05</span></div><h3>Agentic observability</h3><p>Distinguish observing an agent from an agent observing production.</p><a href="#agentic-observability">Read part<span class="sr-only"> 5: Agentic observability</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>06</span></div><h3>AI observability</h3><p>Join delivery evidence to model, data, application and infrastructure signals.</p><a href="#ai-observability">Read part<span class="sr-only"> 6: AI observability</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>07</span></div><h3>Agent harnesses</h3><p>Build the environment, instructions and independent guardrails around the model.</p><a href="#harness">Read part<span class="sr-only"> 7: Agent harnesses</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>08</span></div><h3>LLM evaluation</h3><p>Test quality before release and sample outcomes after it.</p><a href="#evaluation">Read part<span class="sr-only"> 8: LLM evaluation</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>09</span></div><h3>LLM observability</h3><p>Measure latency, usage and quality without collecting unnecessary content.</p><a href="#llm-observability">Read part<span class="sr-only"> 9: LLM observability</span> <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="part-card"><div class="part-top"><span aria-hidden="true">&nwarr;</span><span>10</span></div><h3>LLMOps</h3><p>Version the system, gate changes, monitor releases and learn from failures.</p><a href="#llmops">Read part<span class="sr-only"> 10: LLMOps</span> <span aria-hidden="true">&rarr;</span></a></li>
+        </ol>
+      </section>
+    </div>
+
+    <div class="reading-shell">
+      <aside class="guide-nav" aria-label="Guide navigation">
+        <details open>
+          <summary>In this guide</summary>
+          <nav aria-label="Guide parts">
+            <a href="#terminology">01 &nbsp; Agentic vocabulary</a>
+            <a href="#aiops-devops">02 &nbsp; AIOps and DevOps</a>
+            <a href="#factories">03 &nbsp; Agents to factories</a>
+            <a href="#mcp-api">04 &nbsp; MCP and APIs</a>
+            <a href="#agentic-observability">05 &nbsp; Agentic observability</a>
+            <a href="#ai-observability">06 &nbsp; AI observability</a>
+            <a href="#harness">07 &nbsp; Agent harnesses</a>
+            <a href="#evaluation">08 &nbsp; LLM evaluation</a>
+            <a href="#llm-observability">09 &nbsp; LLM observability</a>
+            <a href="#llmops">10 &nbsp; LLMOps</a>
+            <a href="#sources">Sources and scope</a>
+          </nav>
+        </details>
+      </aside>
+
+      <article class="guide-content">
+        <p>GitHub can be the place where a team records intent, reviews changes and runs delivery controls. It is not automatically the runtime, the evaluator or the observability backend for every AI system. This distinction makes the following choices easier.</p>
+        <p>The examples below describe a fictional service and are starting points, not default policies. Feature availability depends on your plan, environment and organization settings.</p>
+
+        <section class="chapter" id="terminology" data-part="1" aria-labelledby="terminology-title">
+          <h2 id="terminology-title"><span>PART 01</span> A shared vocabulary for agentic work</h2>
+          <p>An agent is more than a model response: it works toward a goal, chooses actions, observes results and may try again. A <strong>harness</strong> supplies the execution loop, tools, context and limits around that model. A <strong>skill</strong> supplies reusable task guidance; an <strong>evaluation</strong> tests an outcome or behavior against stated criteria.</p>
+          <h3>The GitHub perspective</h3>
+          <p>A repository holds code and versioned instructions. A Copilot session can investigate and propose work; a pull request records a proposed change; Actions checks and human review supply different kinds of evidence. A session, a workflow run and a pull request are related records, not interchangeable names for the same thing.</p>
+          <p>Separate <strong>context</strong> from <strong>authority</strong>. A repository instruction can tell an agent how to work, but access controls and merge requirements determine what it is allowed to do. A useful answer or a passing test is evidence, not proof that every requirement was met.</p>
+          <figure class="diagram-embed" id="fig-vocab">
+            <h3>Where agentic work leaves a record</h3>
+            <p class="diagram-hint">On a narrow screen, scroll sideways to see the whole diagram.</p>
+            <div class="diagram-scroll" role="region" aria-label="Where agentic work leaves a record diagram; scroll horizontally" tabindex="0">
+              <svg viewBox="0 0 672 240" role="img" aria-labelledby="vocab-title vocab-desc"><title id="vocab-title">Records and responsibilities in agentic work</title><desc id="vocab-desc">An issue leads to an agent session, a pull request, review and a merge; context, evidence and authority are supplied by different parts of that path.</desc><defs><marker id="vocab-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="diagram-arrowhead" d="M0 0 8 4 0 8z"/></marker></defs><path class="diagram-connector" d="M128 72 H148" marker-end="url(#vocab-arrow)"/><path class="diagram-connector" d="M260 72 H280" marker-end="url(#vocab-arrow)"/><path class="diagram-connector" d="M392 72 H412" marker-end="url(#vocab-arrow)"/><path class="diagram-connector" d="M524 72 H544" marker-end="url(#vocab-arrow)"/><rect class="diagram-node" x="16" y="40" width="112" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="72" y="68" text-anchor="middle">Issue</text><text class="node-sub" x="72" y="86" text-anchor="middle">the goal</text><rect class="diagram-node" x="148" y="40" width="112" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="204" y="68" text-anchor="middle">Agent session</text><text class="node-sub" x="204" y="86" text-anchor="middle">model + harness</text><rect class="diagram-node" x="280" y="40" width="112" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="336" y="68" text-anchor="middle">Pull request</text><text class="node-sub" x="336" y="86" text-anchor="middle">proposed change</text><rect class="diagram-node focal" x="412" y="40" width="112" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="468" y="68" text-anchor="middle">Review</text><text class="node-sub" x="468" y="86" text-anchor="middle">checks + people</text><rect class="diagram-node" x="544" y="40" width="112" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="600" y="68" text-anchor="middle">Merge</text><text class="node-sub" x="600" y="86" text-anchor="middle">a person decides</text><rect class="diagram-band" x="16" y="136" width="244" height="56" rx="4"/><text class="diagram-eyebrow" x="28" y="158" text-anchor="start">CONTEXT</text><text class="node-sub" x="28" y="178">instructions · skills · issue text</text><rect class="diagram-band" x="280" y="136" width="112" height="56" rx="4"/><text class="diagram-eyebrow" x="292" y="158" text-anchor="start">EVIDENCE</text><text class="node-sub" x="292" y="178">logs · commits</text><rect class="diagram-band" x="412" y="136" width="244" height="56" rx="4"/><text class="diagram-eyebrow" x="424" y="158" text-anchor="start">AUTHORITY</text><text class="node-sub" x="424" y="178">permissions · rulesets · approval</text><text class="diagram-legend" x="16" y="224">Context guides the work. Evidence records it. Authority decides what may change.</text></svg>
+            </div>
+            <figcaption>Each record answers a different question. Repository instructions add context; permissions, rulesets and required approval decide what can actually change.</figcaption>
+          </figure>
+          <div class="practice">
+            <h3>Try it with your team</h3>
+            <ol>
+              <li>Pick one proposed change in a noncritical repository. Write down the goal, the agent's available tools and the intended stopping point.</li>
+              <li>Identify the session, commit, pull request and checks that provide evidence of what happened.</li>
+              <li>Name the person who decides whether the change is acceptable and the control that enforces that decision.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> Definitions and product surfaces change. Use terms to clarify responsibility, not as a maturity score.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github">Copilot on GitHub</a> &middot; <a href="https://docs.github.com/en/copilot/concepts/customizations/agent-skills">Agent skills</a></p>
+        </section>
+
+        <section class="chapter" id="aiops-devops" data-part="2" aria-labelledby="aiops-title">
+          <h2 id="aiops-title"><span>PART 02</span> AIOps complements DevOps</h2>
+          <p>DevOps concerns how people build, deliver and operate software together. AIOps commonly describes using analytics or AI to help interpret operational events. They address different problems: faster pull requests do not by themselves improve incident detection, and event correlation does not establish ownership of a service.</p>
+          <h3>The GitHub perspective</h3>
+          <p>Issues, pull requests, commits, Actions runs and deployments can explain what changed and when. Your monitoring and observability system supplies production health, alerts and traces. Connect these records deliberately; GitHub does not become an event-correlation or telemetry backend merely because a repository contains your code.</p>
+          <p>Use a consistent service name, environment, release identifier and commit SHA where your systems support them. Compare delivery outcomes such as change lead time and deployment frequency with stability outcomes such as change failure and recovery time. Look at a service over time rather than ranking individuals.</p>
+          <div class="practice">
+            <h3>Try it: follow one incident</h3>
+            <ol>
+              <li>Start with a synthetic incident for a fictional catalog service. Link its alert to the affected service, environment and release in the incident record.</li>
+              <li>Find the corresponding commit, pull request and deployment record. If a link is missing, record the gap rather than guessing causality.</li>
+              <li>Open an issue for an approved fix, review the pull request and compare the next deployment with the same operational signals.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> An AI-generated diagnosis is a hypothesis. Confirm it against production evidence and keep remediation approvals appropriate to the risk.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows">GitHub Actions workflows</a> &middot; <a href="https://dora.dev/guides/dora-metrics/">DORA delivery metrics</a></p>
+        </section>
+
+        <section class="chapter" id="factories" data-part="3" aria-labelledby="factories-title">
+          <h2 id="factories-title"><span>PART 03</span> From an agent to a software factory</h2>
+          <p>A workflow defines a process and its triggers; individual steps may or may not use AI. An agent chooses actions within its permitted tools. An automation starts work on a trigger. A software factory is a broader arrangement of people, agents, workflows and controls. Teams use these terms differently, so ask what actually runs and who makes the final decision.</p>
+          <h3>The GitHub perspective</h3>
+          <p>GitHub Actions workflows are versioned in the repository. Copilot automations can run agent tasks on schedules or repository events, but their configuration is stored separately from repository contents. They require an eligible private or internal repository, plan and policies. Neither a trigger nor an agent makes a factory safe to operate without review.</p>
+          <p>GitHub auto-merge waits for the configured requirements; it does not decide whether those requirements are adequate. A <em>dark factory</em> usually means changes proceed without someone reviewing every change. It is an operating choice, not a feature to switch on or an unavoidable goal. Some paths may always need a person.</p>
+          <figure class="diagram-embed" id="fig-factory">
+            <h3>A factory path with a human gate</h3>
+            <p class="diagram-hint">On a narrow screen, scroll sideways to see the whole diagram.</p>
+            <div class="diagram-scroll" role="region" aria-label="A factory path with a human gate diagram; scroll horizontally" tabindex="0">
+              <svg viewBox="0 0 672 272" role="img" aria-labelledby="factory-title factory-desc"><title id="factory-title">A bounded software factory path</title><desc id="factory-desc">A trigger starts an agent that opens a pull request; checks run, a human reviews and the change merges, while a dark factory skips the human review step.</desc><defs><marker id="factory-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="diagram-arrowhead" d="M0 0 8 4 0 8z"/></marker></defs><rect class="diagram-zone" x="4" y="16" width="664" height="212" rx="8" fill="none" stroke-dasharray="5 4"/><rect class="diagram-mask" x="14" y="10" width="131" height="14" fill="#fff"/><text class="diagram-eyebrow" x="20" y="20" text-anchor="start">SOFTWARE FACTORY</text><path class="diagram-connector" d="M128 76 H148" marker-end="url(#factory-arrow)"/><path class="diagram-connector" d="M260 76 H280" marker-end="url(#factory-arrow)"/><path class="diagram-connector" d="M392 76 H412" marker-end="url(#factory-arrow)"/><path class="diagram-connector dashed" d="M524 76 H544" marker-end="url(#factory-arrow)"/><path class="diagram-connector" d="M448 104 V172 Q448 180 456 180 H480" marker-end="url(#factory-arrow)"/><path class="diagram-connector" d="M592 180 H612 Q620 180 620 172 V104" marker-end="url(#factory-arrow)"/><rect class="diagram-node" x="16" y="48" width="112" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="72" y="72" text-anchor="middle">Trigger</text><text class="node-sub" x="72" y="90" text-anchor="middle">event or schedule</text><rect class="diagram-node" x="148" y="48" width="112" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="204" y="72" text-anchor="middle">Agent</text><text class="node-sub" x="204" y="90" text-anchor="middle">chooses actions</text><rect class="diagram-node" x="280" y="48" width="112" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="336" y="72" text-anchor="middle">Pull request</text><text class="node-sub" x="336" y="90" text-anchor="middle">proposed change</text><rect class="diagram-node" x="412" y="48" width="112" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="468" y="72" text-anchor="middle">Checks</text><text class="node-sub" x="468" y="90" text-anchor="middle">Actions workflows</text><rect class="diagram-node" x="544" y="48" width="112" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="600" y="72" text-anchor="middle">Merge</text><text class="node-sub" x="600" y="90" text-anchor="middle">meets rules</text><rect class="diagram-node focal" x="480" y="152" width="112" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="536" y="176" text-anchor="middle">Human review</text><text class="node-sub" x="536" y="194" text-anchor="middle">code owners</text><text class="diagram-legend" x="16" y="256">Solid: the reviewed path. Dashed: a dark factory, where changes merge without a person reviewing each one.</text></svg>
+            </div>
+            <figcaption>Automations, agents and workflows are parts of the factory. Whether a person reviews each change is an operating decision, shown here as the dashed bypass.</figcaption>
+          </figure>
+          <div class="practice">
+            <h3>Design a bounded first path</h3>
+            <ol>
+              <li>Choose a low-risk task, such as proposing tests for a small module. Define the trigger, allowed tools, spending limit and expected pull request.</li>
+              <li>Require relevant checks and human review. Use CODEOWNERS with required code-owner approval for sensitive paths; verify ruleset bypass permissions as well.</li>
+              <li>Measure accepted and rejected proposals, missed problems and reversions. Only consider increasing autonomy after a risk owner reviews the evidence and rollback plan.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> Agent Merge can address selected pull request blockers; it is not the same as auto-merge and does not replace review or repository merge requirements.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations">Copilot automations</a> &middot; <a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/watch-and-fix-pull-requests">Agent Merge</a> &middot; <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets">Rulesets</a> &middot; <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">Code owners</a></p>
+        </section>
+
+        <section class="chapter" id="mcp-api" data-part="4" aria-labelledby="mcp-title">
+          <h2 id="mcp-title"><span>PART 04</span> MCP and APIs solve different integration problems</h2>
+          <p>An API exposes operations to software clients. Model Context Protocol (MCP) standardizes how an application connects an AI assistant to capabilities such as tools and context. An MCP server may call an existing API underneath; using MCP does not eliminate the API's authentication, rate limits or failure modes.</p>
+          <h3>The GitHub perspective</h3>
+          <p>Use the GitHub REST or GraphQL API directly when application code already knows the operation and sequence. Consider an MCP server when an assistant needs to discover and choose among tools during a task. The host still executes the calls and controls access; the model's choice does not grant authorization.</p>
+          <p>Copilot surfaces differ. GitHub documents that its cloud agent and code review consume MCP <em>tools</em>, not server-provided resources or prompts. Repository-configured tools can be used autonomously in delegated work, so evaluate permissions before enabling them rather than assuming a confirmation will appear for every call.</p>
+          <figure class="diagram-embed" id="fig-mcp">
+            <h3>Two ways to reach the same API</h3>
+            <p class="diagram-hint">On a narrow screen, scroll sideways to see the whole diagram.</p>
+            <div class="diagram-scroll" role="region" aria-label="Two ways to reach the same API diagram; scroll horizontally" tabindex="0">
+              <svg viewBox="0 0 672 296" role="img" aria-labelledby="mcp-title mcp-desc"><title id="mcp-title">MCP path and direct API path</title><desc id="mcp-desc">A model picks a tool that the host executes through an MCP server, while application code calls the API directly; both are authorized by the API.</desc><defs><marker id="mcp-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="diagram-arrowhead" d="M0 0 8 4 0 8z"/></marker></defs><rect class="diagram-zone" x="512" y="36" width="152" height="208" rx="8" fill="none" stroke-dasharray="5 4"/><rect class="diagram-mask" x="518" y="30" width="109" height="14" fill="#fff"/><text class="diagram-eyebrow" x="524" y="40" text-anchor="start">AUTHORIZATION</text><text class="diagram-eyebrow" x="24" y="44" text-anchor="start">MCP · ASSISTANT CHOOSES A TOOL</text><text class="diagram-eyebrow" x="24" y="152" text-anchor="start">API · CODE KNOWS THE CALL</text><path class="diagram-connector" d="M144 88 H192" marker-end="url(#mcp-arrow)"/><path class="diagram-connector" d="M312 88 H360" marker-end="url(#mcp-arrow)"/><path class="diagram-connector" d="M480 88 H528" marker-end="url(#mcp-arrow)"/><path class="diagram-connector" d="M144 196 H528" marker-end="url(#mcp-arrow)"/><rect class="diagram-node" x="24" y="56" width="120" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="84" y="84" text-anchor="middle">Model</text><text class="node-sub" x="84" y="102" text-anchor="middle">picks a tool</text><rect class="diagram-node focal" x="192" y="56" width="120" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="252" y="84" text-anchor="middle">Host</text><text class="node-sub" x="252" y="102" text-anchor="middle">executes calls</text><rect class="diagram-node" x="360" y="56" width="120" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="420" y="84" text-anchor="middle">MCP server</text><text class="node-sub" x="420" y="102" text-anchor="middle">wraps operations</text><rect class="diagram-node" x="24" y="164" width="120" height="64" rx="6" stroke="currentColor"/><text class="node-name" x="84" y="192" text-anchor="middle">Application</text><text class="node-sub" x="84" y="210" text-anchor="middle">fixed sequence</text><rect class="diagram-node focal" x="528" y="56" width="120" height="172" rx="6" stroke="currentColor"/><text class="node-name" x="588" y="130" text-anchor="middle">GitHub API</text><text class="node-sub" x="588" y="148" text-anchor="middle">REST · GraphQL</text><text class="node-sub" x="588" y="164" text-anchor="middle">scoped token</text><text class="diagram-legend" x="16" y="280">Both paths reach the same API. The token's scope, not the model's choice, decides what is allowed.</text></svg>
+            </div>
+            <figcaption>MCP helps an assistant discover and choose tools at run time. It sits in front of the API; it does not replace the API’s authentication, limits or failure modes.</figcaption>
+          </figure>
+          <div class="practice">
+            <h3>Try it: connect a read-only investigation</h3>
+            <ol>
+              <li>Define the question and minimum data needed, such as recent issues and a specific pull request. Start with read-only operations and a narrowly scoped identity.</li>
+              <li>Review the server, tool descriptions, destination and underlying permissions. Treat issue text, tool results and repository content as untrusted input.</li>
+              <li>Exercise failures, timeouts and access denial. Add a separate, explicitly authorized write path only if the workflow actually needs one.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> A tool's read-only label is not a substitute for server-side authorization. Do not put credentials in the repository or in example prompts.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/copilot/concepts/customizations/mcp">MCP with Copilot</a> &middot; <a href="https://github.com/github/github-mcp-server">GitHub MCP server</a> &middot; <a href="https://modelcontextprotocol.io/specification/latest/basic/security_best_practices">MCP security</a></p>
+        </section>
+
+        <section class="chapter" id="agentic-observability" data-part="5" aria-labelledby="agentic-observability-title">
+          <h2 id="agentic-observability-title"><span>PART 05</span> Observe agents; use agents to investigate</h2>
+          <p>There are two distinct questions. <strong>Observing an agent</strong> asks what happened during its run: its tools, failures, retries and result. <strong>Agent-assisted observability</strong> asks an agent to inspect operational signals and propose an investigation or fix. The first is evidence about the agent; the second is a task performed by it.</p>
+          <h3>The GitHub perspective</h3>
+          <p>For coding work, start with the Copilot session, pull request timeline, commits and Actions logs available for that surface. These records help a reviewer inspect the proposed work, but are not a promise that every model decision or production span is exported as OpenTelemetry.</p>
+          <p>For an agent in your own application, instrument the application and its tool calls with an observability stack. Correlate a run with the relevant release and, where appropriate, the pull request. GitHub records and application traces answer complementary questions.</p>
+          <figure class="diagram-embed" id="fig-agentobs">
+            <h3>Two different questions</h3>
+            <p class="diagram-hint">On a narrow screen, scroll sideways to see the whole diagram.</p>
+            <div class="diagram-scroll" role="region" aria-label="Two different questions diagram; scroll horizontally" tabindex="0">
+              <svg viewBox="0 0 672 440" role="img" aria-labelledby="agentobs-title agentobs-desc"><title id="agentobs-title">Observing agents versus agent investigation</title><desc id="agentobs-desc">Observing an agent turns its run into records a reviewer inspects, whereas an investigation agent reads production signals and a person reviews its diagnosis before a fix.</desc><defs><marker id="agentobs-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="diagram-arrowhead" d="M0 0 8 4 0 8z"/></marker></defs><rect class="diagram-zone" x="16" y="16" width="312" height="376" rx="8" fill="none"/><rect class="diagram-zone" x="344" y="16" width="312" height="376" rx="8" fill="none"/><text class="diagram-eyebrow" x="36" y="44" text-anchor="start">OBSERVING AN AGENT</text><text class="diagram-eyebrow" x="364" y="44" text-anchor="start">AN AGENT INVESTIGATES</text><path class="diagram-connector" d="M172 116 V148" marker-end="url(#agentobs-arrow)"/><path class="diagram-connector" d="M172 204 V236" marker-end="url(#agentobs-arrow)"/><path class="diagram-connector" d="M500 116 V148" marker-end="url(#agentobs-arrow)"/><path class="diagram-connector" d="M500 204 V236" marker-end="url(#agentobs-arrow)"/><path class="diagram-connector" d="M500 292 V324" marker-end="url(#agentobs-arrow)"/><rect class="diagram-node" x="52" y="60" width="240" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="172" y="84" text-anchor="middle">Agent run</text><text class="node-sub" x="172" y="102" text-anchor="middle">tools · retries · result</text><rect class="diagram-node focal" x="52" y="148" width="240" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="172" y="172" text-anchor="middle">Run records</text><text class="node-sub" x="172" y="190" text-anchor="middle">session · PR timeline · logs</text><rect class="diagram-node" x="52" y="236" width="240" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="172" y="260" text-anchor="middle">Reviewer</text><text class="node-sub" x="172" y="278" text-anchor="middle">judges the proposed work</text><rect class="diagram-node" x="380" y="60" width="240" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="500" y="84" text-anchor="middle">Production signals</text><text class="node-sub" x="500" y="102" text-anchor="middle">metrics · logs · traces</text><rect class="diagram-node" x="380" y="148" width="240" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="500" y="172" text-anchor="middle">Investigation agent</text><text class="node-sub" x="500" y="190" text-anchor="middle">read-only access</text><rect class="diagram-node focal" x="380" y="236" width="240" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="500" y="260" text-anchor="middle">Person reviews</text><text class="node-sub" x="500" y="278" text-anchor="middle">evidence + uncertainty</text><rect class="diagram-node" x="380" y="324" width="240" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="500" y="348" text-anchor="middle">Issue or pull request</text><text class="node-sub" x="500" y="366" text-anchor="middle">a scoped, approved fix</text><text class="diagram-legend" x="16" y="424">Left: evidence about the agent. Right: a task the agent performs, with a person deciding.</text></svg>
+            </div>
+            <figcaption>The same word covers two jobs. Keep their evidence, permissions and decision points separate.</figcaption>
+          </figure>
+          <div class="practice">
+            <h3>Try it: create an evidence trail</h3>
+            <ol>
+              <li>During an incident, give an investigation agent read-only access to the relevant signals. Ask for supporting evidence and uncertainty, not a production action.</li>
+              <li>Have a person review the diagnosis before creating a scoped issue or accepting a proposed pull request. Record the session and workflow links where your policies permit.</li>
+              <li>After deployment, compare the affected service's signals and capture the outcome for the next evaluation.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> Session access, sharing and retention vary by environment. Treat logs and tool results as potentially sensitive; collect the minimum needed and apply your organization's access and retention rules.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents">Agent sessions</a> &middot; <a href="https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data">Session data</a> &middot; <a href="https://github.com/open-telemetry/semantic-conventions-genai">OpenTelemetry GenAI conventions</a></p>
+        </section>
+
+        <section class="chapter" id="ai-observability" data-part="6" aria-labelledby="ai-observability-title">
+          <h2 id="ai-observability-title"><span>PART 06</span> AI observability spans the whole system</h2>
+          <p>AI observability covers more than a language model. Infrastructure can be healthy while retrieval serves stale material or a predictive model's inputs drift. Conversely, an application may return plausible answers while latency, spend or downstream errors are rising.</p>
+          <h3>The GitHub perspective</h3>
+          <p>Use GitHub to version the application, infrastructure definitions, tests and operational runbooks, and to review the changes between releases. Your runtime platform and observability backend still need to emit and analyze the signals. Connect the two through identifiers you actually record, such as service, environment, deployment and commit.</p>
+          <ul>
+            <li><strong>Infrastructure and serving:</strong> request failures, latency, resource saturation and provider errors.</li>
+            <li><strong>Data and retrieval:</strong> freshness, input distributions and retrieval relevance for the use case.</li>
+            <li><strong>Application and agent:</strong> user-visible outcomes, evaluation results, tool failures and repeated steps.</li>
+          </ul>
+          <figure class="diagram-embed" id="fig-aiobs">
+            <h3>Signals at every layer, joined to a release</h3>
+            <p class="diagram-hint">On a narrow screen, scroll sideways to see the whole diagram.</p>
+            <div class="diagram-scroll" role="region" aria-label="Signals at every layer, joined to a release diagram; scroll horizontally" tabindex="0">
+              <svg viewBox="0 0 672 288" role="img" aria-labelledby="aiobs-title aiobs-desc"><title id="aiobs-title">AI observability layers joined to a release</title><desc id="aiobs-desc">Application, data and infrastructure signals are each linked to a GitHub release record through recorded identifiers such as commit, deployment, service and environment.</desc><defs><marker id="aiobs-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="diagram-arrowhead" d="M0 0 8 4 0 8z"/></marker></defs><text class="diagram-eyebrow" x="16" y="36" text-anchor="start">GITHUB</text><text class="diagram-eyebrow" x="216" y="36" text-anchor="start">RUNTIME AND OBSERVABILITY</text><path class="diagram-connector dashed" d="M168 80 H216" marker-end="url(#aiobs-arrow)"/><path class="diagram-connector dashed" d="M168 144 H216" marker-end="url(#aiobs-arrow)"/><path class="diagram-connector dashed" d="M168 208 H216" marker-end="url(#aiobs-arrow)"/><rect class="diagram-node focal" x="16" y="48" width="152" height="192" rx="6" stroke="currentColor"/><text class="node-name" x="92" y="132" text-anchor="middle">Release record</text><text class="node-sub" x="92" y="150" text-anchor="middle">commit · deployment</text><text class="node-sub" x="92" y="166" text-anchor="middle">service · environment</text><rect class="diagram-node" x="216" y="48" width="440" height="64" stroke="currentColor"/><text class="diagram-eyebrow" x="232" y="84" text-anchor="start">L3</text><text class="node-name" x="268" y="76">Application and agent</text><text class="node-sub" x="268" y="94">outcomes · evaluation results · tool failures</text><rect class="diagram-node" x="216" y="112" width="440" height="64" stroke="currentColor"/><text class="diagram-eyebrow" x="232" y="148" text-anchor="start">L2</text><text class="node-name" x="268" y="140">Data and retrieval</text><text class="node-sub" x="268" y="158">freshness · input drift · retrieval relevance</text><rect class="diagram-node" x="216" y="176" width="440" height="64" stroke="currentColor"/><text class="diagram-eyebrow" x="232" y="212" text-anchor="start">L1</text><text class="node-name" x="268" y="204">Infrastructure and serving</text><text class="node-sub" x="268" y="222">latency · saturation · provider errors</text><text class="diagram-legend" x="16" y="272">Dashed: joined only through identifiers you actually record. Verify each join.</text></svg>
+            </div>
+            <figcaption>A healthy infrastructure layer can hide stale retrieval or a quality regression. Joining each layer to the release tells you which change to examine.</figcaption>
+          </figure>
+          <div class="practice">
+            <h3>Try it: map a release to signals</h3>
+            <ol>
+              <li>Choose one user journey and its service owner. For each layer, identify one useful signal and the system that owns it.</li>
+              <li>Record a release or commit identifier in deployment metadata and propagate trace context where supported. Verify the join rather than assuming it exists.</li>
+              <li>Set an investigation and rollback path for a quality regression even when HTTP errors remain low.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> OpenTelemetry GenAI conventions are evolving. Pin the version your instrumentation emits and verify field names before relying on dashboards.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs">Actions run logs</a> &middot; <a href="https://github.com/open-telemetry/semantic-conventions-genai">OpenTelemetry GenAI conventions</a></p>
+        </section>
+
+        <section class="chapter" id="harness" data-part="7" aria-labelledby="harness-title">
+          <h2 id="harness-title"><span>PART 07</span> The harness makes work executable</h2>
+          <p>The harness is the surrounding software that gives a model a way to act: tool execution, context, state, limits and a stopping condition. Different harnesses using the same model can behave differently because their tools, instructions and access differ.</p>
+          <h3>The GitHub perspective</h3>
+          <p>Repository instructions can describe how to build, test and navigate the code. Skills can package a repeatable task. Actions provides an independent place to run checks, while rulesets and protected environments can constrain merging and deployment. Together these are parts of a delivery harness; they are not all the same as Copilot's own runtime.</p>
+          <p>Instructions are guidance, not a security boundary. Protect the underlying identity, network access, tool permissions and branch independently. Review any scripts or skills before use, and keep setup reproducible without storing credentials in the repository.</p>
+          <figure class="diagram-embed" id="fig-harness">
+            <h3>What surrounds the model</h3>
+            <p class="diagram-hint">On a narrow screen, scroll sideways to see the whole diagram.</p>
+            <div class="diagram-scroll" role="region" aria-label="What surrounds the model diagram; scroll horizontally" tabindex="0">
+              <svg viewBox="0 0 672 380" role="img" aria-labelledby="harness-title harness-desc"><title id="harness-title">The harness and the controls around it</title><desc id="harness-desc">The model sits inside a harness of instructions, skills, tools and limits, which sits inside access controls and repository delivery controls.</desc><defs><marker id="harness-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="diagram-arrowhead" d="M0 0 8 4 0 8z"/></marker></defs><rect class="diagram-ring" x="16" y="16" width="640" height="320" rx="8" fill="none"/><rect class="diagram-ring" x="44" y="52" width="584" height="248" rx="8" fill="none"/><rect class="diagram-ring focal" x="72" y="88" width="528" height="176" rx="8" fill="none"/><rect class="diagram-mask" x="26" y="10" width="138" height="14" fill="#fff"/><text class="diagram-eyebrow" x="32" y="20" text-anchor="start">DELIVERY CONTROLS</text><text class="node-sub" x="640" y="40" text-anchor="end">rulesets · required checks · environments</text><rect class="diagram-mask" x="54" y="46" width="57" height="14" fill="#fff"/><text class="diagram-eyebrow" x="60" y="56" text-anchor="start">ACCESS</text><text class="node-sub" x="612" y="76" text-anchor="end">identity · network · tool permissions</text><rect class="diagram-mask" x="82" y="82" width="64" height="14" fill="#fff"/><text class="diagram-eyebrow" x="88" y="92" text-anchor="start">HARNESS</text><text class="node-sub" x="584" y="112" text-anchor="end">instructions · skills · tools · limits</text><rect class="diagram-node" x="100" y="124" width="472" height="104" rx="6" stroke="currentColor"/><text class="node-name" x="336" y="172" text-anchor="middle">Model</text><text class="node-sub" x="336" y="190" text-anchor="middle">proposes the next action</text><text class="diagram-legend" x="16" y="364">Inner layers guide or propose. Outer layers enforce what the work may do.</text></svg>
+            </div>
+            <figcaption>Instructions are guidance, not a security boundary. Identity, tool permissions, rulesets and required checks must hold even when the guidance is ignored.</figcaption>
+          </figure>
+          <div class="practice">
+            <h3>Try it: improve one repository</h3>
+            <ol>
+              <li>Document the verified build and focused test commands, directory conventions and a short definition of done in repository instructions.</li>
+              <li>Give the agent only the tools and environment it needs. Define what to do when a test fails, a permission is denied or a budget is exhausted.</li>
+              <li>Run the same representative task several times before and after the change. Compare outcomes, unnecessary retries and reviewer corrections.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> A better harness reduces avoidable failures; it does not guarantee a correct or safe change. Human review and independently enforced checks still matter.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions">Repository instructions</a> &middot; <a href="https://docs.github.com/en/copilot/concepts/customizations/agent-skills">Agent skills</a> &middot; <a href="https://docs.github.com/en/actions/reference/security/secure-use">Secure Actions use</a></p>
+        </section>
+
+        <section class="chapter" id="evaluation" data-part="8" aria-labelledby="evaluation-title">
+          <h2 id="evaluation-title"><span>PART 08</span> Evaluate behavior, not just syntax</h2>
+          <p>An evaluation asks whether an output or action meets a defined standard. A valid response can still be unsupported, irrelevant or unsafe. Use deterministic tests where an exact rule is possible, and use human review or a carefully calibrated model judge for qualities that need judgment.</p>
+          <h3>The GitHub perspective</h3>
+          <p>Version approved prompts, evaluation code, rubrics and non-sensitive fixtures with the application. An Actions workflow can run your chosen evaluation harness and publish appropriately sanitized results as an artifact; a required status check can gate a pull request. These are your team's evaluation components, not an automatic guarantee provided by GitHub.</p>
+          <p>Keep genuinely held-out cases outside the agent's read scope. Do not expose protected datasets or credentials to untrusted pull request code. A model judge can be inconsistent or biased by length and ordering, so compare it with human labels and investigate disagreements.</p>
+          <div class="practice">
+            <h3>Try it: evaluate an incident summary</h3>
+            <ol>
+              <li>Prepare synthetic cases: supported conclusions, missing evidence and misleading instructions. Define correctness, citation support and refusal to perform an unauthorized action separately.</li>
+              <li>For a small pilot, record results per case and repeat runs. An illustrative gate might require at least 9 of 10 supported-summary cases to pass and zero unauthorized actions in 20 adversarial attempts. Agree your own criteria; these small samples do not prove safety.</li>
+              <li>Compare the candidate with the previous version, review disagreements and run independent holdouts through a trusted, isolated evaluation path before changing the release decision.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> Offline tests catch known regressions; permissioned, sampled production evaluation can reveal new ones. GitHub Models was retired in July 2026, so do not design a new evaluation workflow around it.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows">Actions workflows</a> &middot; <a href="https://docs.github.com/en/actions/concepts/workflows-and-actions/workflow-artifacts">Workflow artifacts</a> &middot; <a href="https://docs.github.com/en/github-models">GitHub Models retirement</a></p>
+        </section>
+
+        <section class="chapter" id="llm-observability" data-part="9" aria-labelledby="llm-observability-title">
+          <h2 id="llm-observability-title"><span>PART 09</span> Observe the LLM application, not only its uptime</h2>
+          <p>Traditional latency and error rates remain useful, but they do not tell you whether an answer is grounded or whether a multi-step request consumed unexpectedly many tokens. Track operational behavior, quality and cost together, with enough context to compare versions.</p>
+          <h3>The GitHub perspective</h3>
+          <p>Copilot usage reports help authorized administrators understand adoption and supported activity; their coverage and aggregation depend on the documented surface and policy. They are not a substitute for telemetry from an LLM application your team builds. Use application instrumentation and an appropriate backend for that runtime.</p>
+          <p>For your own system, compare provider errors, duration or time to first response, token usage, tool-call failures and sampled evaluation outcomes by release and model where available. Define what each measure includes, especially retries, cached tokens and incomplete calls, before calculating cost or trends.</p>
+          <div class="practice">
+            <h3>Try it: define a minimum useful record</h3>
+            <ol>
+              <li>Capture a trace or request identifier, service, release, duration, status and usage metadata. Add prompt or model version identifiers only when available and approved.</li>
+              <li>Connect an evaluation result or user feedback to the relevant request without assuming a thumbs-down explains the cause.</li>
+              <li>Default to metadata. Collect prompt, response or retrieved content only with an approved purpose, redaction, access controls and retention period.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> A successful HTTP response is not a quality verdict. Avoid putting raw prompts, secrets or personal data in public issues, workflow logs or artifacts.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics">Copilot usage metrics</a> &middot; <a href="https://docs.github.com/en/actions/reference/security/secure-use">Secure Actions use</a> &middot; <a href="https://github.com/open-telemetry/semantic-conventions-genai">OpenTelemetry GenAI conventions</a></p>
+        </section>
+
+        <section class="chapter" id="llmops" data-part="10" aria-labelledby="llmops-title">
+          <h2 id="llmops-title"><span>PART 10</span> LLMOps is a versioned feedback loop</h2>
+          <p>LLMOps joins development, evaluation, deployment and ongoing observation for systems that depend on language models. The reproducible unit is bigger than an application commit: a prompt, model or provider version, retrieval configuration, evaluator and data can all change the result.</p>
+          <h3>The GitHub perspective</h3>
+          <p>Use pull requests to review changes to prompts, application code, test cases and operational configuration together. Actions can run the team's tests and evaluation harness; protected environments can add deployment controls where available. Your selected model service and telemetry platform provide the runtime and production signals. GitHub Models is retired, so it is not that model service.</p>
+          <p>For each release, record the commit, prompt version, evaluation version and retrieval index or data version. Record the actual served model identifier when the provider supplies it; a model alias alone may not identify an immutable version. Do not promise exact replay when provider behavior or external data can change.</p>
+          <figure class="diagram-embed" id="fig-llmops">
+            <h3>The LLMOps loop</h3>
+            <p class="diagram-hint">On a narrow screen, scroll sideways to see the whole diagram.</p>
+            <div class="diagram-scroll" role="region" aria-label="The LLMOps loop diagram; scroll horizontally" tabindex="0">
+              <svg viewBox="0 0 672 468" role="img" aria-labelledby="llmops-title llmops-desc"><title id="llmops-title">A versioned LLMOps feedback loop</title><desc id="llmops-desc">Changes are evaluated, gated, released and observed, and observed failures become new cases, while each pass records versions and results in a shared release record.</desc><defs><marker id="llmops-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="diagram-arrowhead" d="M0 0 8 4 0 8z"/></marker></defs><path class="diagram-connector" d="M408.00 62.67 A184 184 0 0 1 499.16 146.93" marker-end="url(#llmops-arrow)"/><path class="diagram-connector" d="M517.86 204.00 A184 184 0 0 1 476.26 351.09" marker-end="url(#llmops-arrow)"/><path class="diagram-connector" d="M389.67 408.00 A184 184 0 0 1 283.48 408.35" marker-end="url(#llmops-arrow)"/><path class="diagram-connector" d="M196.52 352.00 A184 184 0 0 1 153.96 205.19" marker-end="url(#llmops-arrow)"/><path class="diagram-connector" d="M172.29 148.00 A184 184 0 0 1 262.90 63.15" marker-end="url(#llmops-arrow)"/><path class="diagram-connector dashed" d="M440 196 H424" marker-end="url(#llmops-arrow)"/><path class="diagram-connector dashed" d="M276 352 V276" marker-end="url(#llmops-arrow)"/><rect class="diagram-node" x="264" y="20" width="144" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="336" y="44" text-anchor="middle">Change</text><text class="node-sub" x="336" y="62" text-anchor="middle">prompt · code · cases</text><rect class="diagram-node" x="440" y="148" width="144" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="512" y="172" text-anchor="middle">Evaluate</text><text class="node-sub" x="512" y="190" text-anchor="middle">eval suite in Actions</text><rect class="diagram-node focal" x="372" y="352" width="144" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="444" y="376" text-anchor="middle">Gate</text><text class="node-sub" x="444" y="394" text-anchor="middle">check + review</text><rect class="diagram-node" x="156" y="352" width="144" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="228" y="376" text-anchor="middle">Release</text><text class="node-sub" x="228" y="394" text-anchor="middle">protected environment</text><rect class="diagram-node" x="88" y="148" width="144" height="56" rx="6" stroke="currentColor"/><text class="node-name" x="160" y="172" text-anchor="middle">Observe</text><text class="node-sub" x="160" y="190" text-anchor="middle">outcomes · usage · cost</text><rect class="diagram-node" x="248" y="188" width="176" height="88" rx="6" stroke="currentColor"/><text class="node-name" x="336" y="220" text-anchor="middle">Release record</text><text class="node-sub" x="336" y="238" text-anchor="middle">commit · prompt · model</text><text class="node-sub" x="336" y="254" text-anchor="middle">evaluation · data version</text><text class="diagram-legend" x="16" y="452">Solid: the release loop. Dashed: results and version identifiers written to the release record.</text></svg>
+            </div>
+            <figcaption>Observed failures become new evaluation cases. The release record makes each pass comparable with the last.</figcaption>
+          </figure>
+          <div class="practice">
+            <h3>A four-week starting plan</h3>
+            <ol>
+              <li><strong>Week 1:</strong> Name an owner, user journey, risk boundaries and baseline signals. Inventory prompt, model and data dependencies.</li>
+              <li><strong>Week 2:</strong> Create synthetic regression cases and an independent holdout; agree quality and safety criteria with a reviewer.</li>
+              <li><strong>Week 3:</strong> Run the evaluation in a trusted delivery path, protect the release decision and record version identifiers.</li>
+              <li><strong>Week 4:</strong> Review sampled outcomes, latency and usage after release. Revert or pause on an agreed condition, and turn reviewed failures into new cases.</li>
+            </ol>
+          </div>
+          <p class="boundary"><strong>Boundary:</strong> Store secrets in an approved secret manager or CI secret facility, never in source, prompts, examples or logs. Review data access, retention and model-provider terms before using real records.</p>
+          <p class="source-note"><a href="https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments">Deployment environments</a> &middot; <a href="https://docs.github.com/en/github-models">GitHub Models retirement</a> &middot; <a href="https://docs.github.com/en/actions/reference/security/secure-use">Secure Actions use</a></p>
+        </section>
+
+        <section class="sources" id="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">Sources and scope</h2>
+          <p>Each part links to relevant public documentation. The descriptions and recommendations are independent guidance.</p>
+          <p>GitHub documentation is the source of truth for current capabilities and availability. OpenTelemetry documentation describes the telemetry conventions; your own platform, security and data policies determine what you can collect and automate.</p>
+          <p>GitHub and Copilot are trademarks of GitHub, Inc. This independent material is not affiliated with or endorsed by GitHub.</p>
+          <a href="../">Return to Enterprise enablement &rarr;</a>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="footer">Enterprise enablement &middot; Independent guidance. Official sources, clearly linked.</footer>
+</body>
+</html>
