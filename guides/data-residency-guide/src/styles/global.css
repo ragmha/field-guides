@@ -26,6 +26,8 @@ a:focus-visible,summary:focus-visible,select:focus-visible,button:focus-visible,
 .brand-mark{display:block;flex-shrink:0;width:30px;height:30px;fill:currentColor}
 .breadcrumbs{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--muted)}
 .breadcrumbs span:last-child{color:var(--body)}
+.history-link{margin-left:auto;color:var(--body);font-size:13px;text-decoration:none;white-space:nowrap}
+.history-link + .theme-label{margin-left:0}
 .theme-label{margin-left:auto;display:flex;align-items:center;gap:8px;color:var(--muted)}
 .theme-label>span{font-size:23px}
 select{font-size:13px;color:var(--body);background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:6px 10px}
@@ -131,6 +133,7 @@ h1,.page-title{font-size:clamp(36px,4vw,60px);font-weight:800;line-height:1.08;l
   .landing-page .article-grid{padding:0 22px 12px}
   .topbar{height:64px;padding:0 18px;gap:12px}.brand{font-size:14px}
   .brand-mark{height:26px;width:26px}.breadcrumbs{display:none}
+  .brand{min-width:0;white-space:normal;line-height:1.15}.history-link{font-size:12px}.theme-label>span[aria-hidden]{display:none}
   .shell{display:block}.sidebar{position:static;height:auto;padding:12px 18px;border-right:0;border-bottom:1px solid var(--rule)}
   .edition,.sidebar-note{display:none}
   .chapter-nav>summary{display:flex;justify-content:space-between;font-size:13px;cursor:pointer;list-style:none}

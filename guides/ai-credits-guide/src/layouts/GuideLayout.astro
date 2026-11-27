@@ -58,7 +58,7 @@ const landingParts = parts.map(part => ({
       })();
     </script>
   </head>
-  <body>
+  <body data-reading-guide="ai-credits-guide" data-reading-page={page.id} data-reading-page-title={titleFor(page)} data-reading-part={chapter?.part} data-reading-chapters={chapter && JSON.stringify(parts[chapter.part - 1].pages)}>
     <a class="skip" href={page.id === 'start' ? '#landing-title' : '#content'}>Skip to content</a>
     <header class="topbar">
       <a class="brand" href={`${base}/`} aria-label="AI Credits home">
@@ -66,6 +66,7 @@ const landingParts = parts.map(part => ({
         AI Credits
       </a>
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={base.replace(/[^/]+$/, '')}>Enterprise enablement</a><span aria-hidden="true">/</span><span>{chapter ? `Part ${chapter.part}: ${chapter.partTitle}` : page.data.section}</span></nav>
+      <a class="history-link" href={`${base.replace(/[^/]+$/, '')}history/`}>Reading history</a>
       <label class="theme-label"><span aria-hidden="true">◐</span><span class="sr-only">Color theme</span><select id="theme" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
     </header>
     <a class="hub-home" href={base.replace(/[^/]+$/, '')}><span aria-hidden="true">← </span>Enterprise enablement</a>
@@ -130,6 +131,7 @@ const landingParts = parts.map(part => ({
               <p>Source review: <time datetime={page.data.verified}>{page.data.verified}</time>. This independent guide is not a contract or a substitute for your billing settings. Source links are authoritative; recommendations are labeled as guide advice.</p>
               <ul>{page.data.sources.map((source) => <li><a href={source} target="_blank" rel="noopener noreferrer">{new URL(source).hostname} / {new URL(source).pathname.split('/').filter(Boolean).at(-1)?.replaceAll('-', ' ')} ↗</a></li>)}</ul>
             </section>
+            {chapter && <span data-reading-chapter-end aria-hidden="true" style="display:block;height:1px"></span>}
             {page.id !== 'start' && <nav class="pagination" aria-label="Reading sequence">{previous ? <a rel="prev" href={href(previous.id)}><small>← PREVIOUS</small>{titleFor(previous)}</a> : <span></span>}{next ? <a class="next" rel="next" href={href(next.id)}><small>NEXT CHAPTER →</small>{titleFor(next)}</a> : <a class="next" href={href('start')}><small>{page.id === 'sources' ? 'RETURN TO COURSE →' : 'COURSE COMPLETE →'}</small>Course index</a>}</nav>}
             <footer class="article-footer">AI Credits <span>Independent guidance. Official sources, clearly linked.</span></footer>
           </article>
@@ -183,5 +185,6 @@ const landingParts = parts.map(part => ({
       media.addEventListener('change', applyTheme);
       applyTheme();
     </script>
+    <script is:inline src={`${base}/reading-progress.js`}></script>
   </body>
 </html>

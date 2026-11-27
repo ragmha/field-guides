@@ -4,6 +4,7 @@ import { guides } from '../guides.mjs';
 
 rmSync('dist', { recursive: true, force: true });
 mkdirSync('dist');
+cpSync('shared/reading-progress.js', 'dist/reading-progress.js');
 for (const { name, type } of [{ name: 'hub', type: 'astro' }, ...guides]) {
   const source = name === 'hub' ? 'hub' : `guides/${name}`;
   const target = name === 'hub' ? 'dist' : `dist/${name}`;
@@ -21,4 +22,5 @@ for (const { name, type } of [{ name: 'hub', type: 'astro' }, ...guides]) {
       }
     }
   }
+  cpSync('shared/reading-progress.js', `${target}/reading-progress.js`);
 }

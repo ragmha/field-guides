@@ -15,7 +15,7 @@ Each guide lives in `guides/<name>/`, with its original Git history and license
 notices retained. Original repositories remain unchanged. The private
 agent-engineering course is not included.
 
-`hub/` contains the single-page collection. It imports the AI Credits guide's
+`hub/` contains the collection and reading-history page. It imports the AI Credits guide's
 CSS and uses its Octicons brand mark, system fonts and theme selector.
 The hub and all five guides share the `theme` localStorage preference.
 `guides.mjs` is the collection list; descriptions come from the source
@@ -26,6 +26,14 @@ and CSS in their own files. Astro landings retain introductory notes and sources
 without repeating chapter sidebars or course indexes. Every topic has a visible
 return to the collection on mobile. Chapter-page layouts and the static topics'
 substantive content are retained.
+
+The header's GitHub mark opens a reading-history menu with the five most recent
+pages, a link to the full history dashboard and a clear action. The dashboard
+shows a filterable list of saved pages; its activity chart counts each page once,
+on its latest visit. History stores up to 50 pages in the current browser.
+A part is marked read when the end of every chapter in that part has been
+reached. Progress stays on this device; clearing history does not reset
+completed parts.
 
 ## Build and preview
 
