@@ -47,6 +47,8 @@ The original sources were reviewed on **12 November 2026**; the GitHub Enterpris
 | [Model hosting](https://docs.github.com/en/copilot/reference/ai-models/model-hosting) | Provider retention and training commitments |
 | [Content exclusion](https://docs.github.com/en/copilot/concepts/context/content-exclusion) | Content exclusion limits |
 | [Copilot audit logs](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs) | What the audit log records and retains |
+| [Copilot session data](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data) | Local Copilot app and CLI session history and sync behavior |
+| [Matching public code](https://docs.github.com/en/copilot/using-github-copilot/finding-public-code-that-matches-github-copilot-suggestions) | How Copilot identifies suggestions matching public code |
 | [Copilot metrics](https://docs.github.com/en/copilot/concepts/copilot-metrics) | Usage metrics |
 | [Streaming the audit log](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) | SIEM streaming |
 | [Compliance reports](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/accessing-compliance-reports-for-your-enterprise) | SOC, ISO, CSA STAR and other reports |
