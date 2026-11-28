@@ -1,0 +1,50 @@
+{
+  "audit-surfaces": {
+    "title": "Where Copilot evidence lives",
+    "description": "Copilot evidence sits in separate layers: the audit log for settings and agent actions, the agent sessions view, usage records and client-side telemetry, each owned and retained differently."
+  },
+  "access-methods": {
+    "title": "Four ways to read the audit log",
+    "description": "Compare the web view, export, REST API and streaming by time range, API request events and Git events before choosing how to collect Copilot audit evidence."
+  },
+  "plan-policy-events": {
+    "title": "Copilot event families",
+    "description": "Group Copilot audit events into seat changes, policy and settings changes, content and memory changes, plan and terms changes and access changes, then search each by action prefix."
+  },
+  "agent-audit-fields": {
+    "title": "Read an agent audit record",
+    "description": "An agent audit record pairs the action with actor_is_agent, agent_session_id and the initiating user, and links to the commit co-author and session log for context."
+  },
+  "agent-session-view": {
+    "title": "From session view to audit log",
+    "description": "Open AI controls, review recent agent sessions, open the 24-hour list, filter it, then move to the audit log with actor:Copilot for anything older or more detailed."
+  },
+  "usage-records-stream": {
+    "title": "Turn on usage records",
+    "description": "Check eligibility, enable the Copilot usage records streaming policy and send records to a destination, or read them with the usage records API instead."
+  },
+  "retention-windows": {
+    "title": "How long each record lasts",
+    "description": "Compare retention: the agent sessions list covers 24 hours, Git events 7 days, the audit log 180 days, and a stream keeps whatever your destination keeps from the day you enable it."
+  },
+  "stream-operations": {
+    "title": "Keep a stream healthy",
+    "description": "A paused stream buffers up to seven days, resumes from a week earlier after longer pauses and needs a new stream after three weeks; run the health check and fix failures within six days."
+  },
+  "investigation-playbook": {
+    "title": "Five steps to a bounded finding",
+    "description": "Scope the question, triage with the audit log, collect from each source in its window, attribute actions to users and agents, then write a bounded conclusion."
+  },
+  "alert-design": {
+    "title": "Design an alert you can act on",
+    "description": "Each alert pairs a signal with a precise match condition and a named owner response, so a firing alert leads to a check rather than a guess."
+  },
+  "otel-correlation": {
+    "title": "Join telemetry to the audit log",
+    "description": "Client OpenTelemetry nests chat and tool spans under an invoke_agent root; join them to audit records on identity and time, since matching conversation and session IDs is not documented."
+  },
+  "evidence-limits": {
+    "title": "What each record proves",
+    "description": "For each source, separate what the record shows from what it does not show, so findings stay within the evidence."
+  }
+}

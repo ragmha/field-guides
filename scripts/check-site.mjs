@@ -1,10 +1,52 @@
 import assert from 'node:assert/strict';
+import { existsSync } from 'node:fs';
 import { readdir, readFile, mkdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createServer } from 'node:net';
 import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import { guides } from '../guides.mjs';
+import { finnishGuideStatus } from '../shared/translation-status.mjs';
+import { platformReferences } from '../guides.mjs';
+import { guides as howTos } from '../guides/copilot-how-tos/src/manifest.ts';
+import { landingPath, lessonRoutes, sourcePath } from '../guides/copilot-how-tos/src/course.ts';
+
+const existingGuides = [
+  ['ai-credits-guide', 4, 'astro'],
+  ['data-residency-guide', 10, 'astro'],
+  ['copilot-governance-guide', 6, 'astro'],
+  ['github-security-operations', 8, 'astro'],
+  ['copilot-control-map-guide', 6, 'astro'],
+  ['copilot-policy-conflicts-guide', 6, 'astro'],
+  ['copilot-managed-settings-guide', 6, 'astro'],
+  ['copilot-mcp-governance-guide', 6, 'astro'],
+  ['copilot-customization-governance-guide', 6, 'astro'],
+  ['copilot-local-sandboxing-guide', 6, 'astro'],
+  ['copilot-cloud-agent-security-guide', 6, 'astro'],
+  ['copilot-automations-governance-guide', 6, 'astro'],
+  ['copilot-network-controls-guide', 6, 'astro'],
+  ['copilot-content-controls-guide', 6, 'astro'],
+  ['copilot-session-data-guide', 6, 'astro'],
+  ['copilot-audit-telemetry-guide', 6, 'astro'],
+  ['copilot-metrics-guide', 6, 'astro'],
+  ['copilot-model-governance-guide', 6, 'astro'],
+  ['copilot-rollout-playbook-guide', 6, 'astro'],
+  ['champions-at-scale', 3, 'static'],
+  ['github-enterprise-field-guide', 10, 'static'],
+  ['agentic-engineering-guide', 10, 'static'],
+];
+assert.equal(guides.length, existingGuides.length + howTos.length);
+for (const [name, parts, type] of existingGuides) {
+  const matches = guides.filter(guide => guide.name === name);
+  assert.equal(matches.length, 1, `${name} must remain registered exactly once`);
+  assert.equal(matches[0].parts, parts);
+  assert.equal(matches[0].type, type);
+}
+assert.deepEqual(
+  guides.filter(guide => guide.workspace === 'copilot-how-tos').map(guide => guide.name).sort(),
+  howTos.map(guide => guide.slug).sort(),
+);
 
 const agenticChapters = [
   'terminology',
@@ -18,13 +60,33 @@ const agenticChapters = [
   'llm-observability',
   'llmops',
 ];
+const readingHistoryGuides = new Set([
+  'ai-credits-guide',
+  'data-residency-guide',
+  'copilot-governance-guide',
+  'champions-at-scale',
+  'github-enterprise-field-guide',
+]);
 
 for (const guide of guides) {
   assert.doesNotMatch(guide.description, /\bguides?\b/i, `${guide.name} description must describe the topic without "guide"`);
 }
 
-const base = `http://127.0.0.1:${process.env.PORT || 4173}/field-guides/`;
-const server = spawn('bun', ['run', 'preview'], { stdio: 'inherit' });
+async function findFreePort() {
+  const probe = createServer();
+  await new Promise((resolve, reject) => {
+    probe.once('error', reject);
+    probe.listen(0, '127.0.0.1', resolve);
+  });
+  const { port } = probe.address();
+  await new Promise((resolve, reject) => probe.close(error => error ? reject(error) : resolve()));
+  return port;
+}
+
+const requestedPort = Number(process.env.PORT);
+const port = requestedPort > 0 ? requestedPort : await findFreePort();
+const base = `http://127.0.0.1:${port}/field-guides/`;
+const server = spawn('bun', ['run', 'preview'], { stdio: 'inherit', env: { ...process.env, PORT: String(port) } });
 let browser;
 try {
   await new Promise((ready, reject) => {
@@ -49,7 +111,8 @@ try {
         const pageURL = new URL(path, base);
         targets.add(pageURL.href);
         const html = await readFile(join(directory, entry.name), 'utf8');
-        for (const [, value] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
+        const markup = html.replace(/(<script\b[^>]*>)[\s\S]*?(<\/script>)/gi, '$1$2');
+        for (const [, value] of markup.matchAll(/(?:href|src)="([^"]+)"/g)) {
           const url = new URL(value.replaceAll('&amp;', '&'), pageURL);
           if (url.origin === pageURL.origin) {
             assert.ok(url.pathname.startsWith('/field-guides/'), `Escaped project base: ${url}`);
@@ -78,6 +141,10 @@ try {
     if (response.status() >= 400 && response.url().startsWith(base)) errors.push(`${response.status()} ${response.url()}`);
   });
   const checkedLinks = new Set();
+  const collectionLink = guide => page.getByRole('link', {
+      name: guide.type === 'astro' && guide.workspace !== 'copilot-how-tos' && guide.name !== 'github-security-operations' ? 'All guides' : 'Enterprise enablement',
+    exact: true,
+  });
   const landingStyle = () => page.locator('.landing').evaluate(landing => {
     const style = selector => getComputedStyle(landing.querySelector(selector));
     return {
@@ -95,12 +162,20 @@ try {
     assert.equal(await page.locator('h1').count(), 1, `${guide.name} needs exactly one page title`);
     assert.equal(await landing.locator('h1').isVisible(), true, `${guide.name} landing needs a title`);
     assert.equal(await landing.locator('.landing-intro').textContent(), guide.description, `${guide.name} hero description must match the collection`);
-    assert.equal(await page.locator('.topbar svg').isVisible(), true, `${guide.name} header needs the GitHub mark`);
-    assert.equal(await page.getByRole('link', { name: 'Enterprise enablement', exact: true }).isVisible(), true, `${guide.name} needs a visible return to the collection at ${width}px`);
-    if (guide.type === 'astro') {
+    assert.equal(await page.locator('.topbar .brand-mark').isVisible(), true, `${guide.name} header needs the GitHub mark`);
+    assert.equal(await collectionLink(guide).isVisible(), true, `${guide.name} needs a visible return to the collection at ${width}px`);
+    if (guide.type === 'astro' && guide.workspace !== 'copilot-how-tos' && guide.name !== 'github-security-operations') {
+      const breadcrumb = page.getByRole('navigation', { name: 'Breadcrumb' });
+      assert.equal(await breadcrumb.locator('ol').count(), 1, `${guide.name} breadcrumb needs an ordered hierarchy`);
+      const current = breadcrumb.locator('[aria-current=page]');
+      assert.equal(await current.count(), 1, `${guide.name} breadcrumb needs one current page`);
+      assert.equal((await current.textContent()).trim(), guide.title, `${guide.name} breadcrumb must identify the guide overview`);
       assert.equal(await page.locator('main .landing').count(), 1, `${guide.name} landing belongs in the main landmark`);
       assert.equal(await page.locator('.sidebar, .toc, .course-outline, .page-title').count(), 0, `${guide.name} landing must not repeat the legacy course index`);
       assert.equal(await page.locator('#page-sources').isVisible(), true, `${guide.name} must retain source notes`);
+      const hero = await page.locator('.landing-hero').boundingBox();
+      const parts = await page.locator('#parts-title').boundingBox();
+      assert.ok(parts.y >= hero.y + hero.height, `${guide.name} parts must follow the landing hero`);
       for (let part = 1; part <= guide.parts; part++) {
         assert.equal(await page.locator(`#part-${part}`).count(), 1, `${guide.name} must preserve Part ${part}'s fragment target`);
       }
@@ -202,7 +277,29 @@ try {
       checkedLinks.add(href);
     }
   };
-  for (const width of [1600, 1440, 390, 320]) {
+  const expectHeaderLayout = async context => {
+    const layout = await page.locator('.topbar').evaluate(header => {
+      const menu = header.querySelector('.history-menu');
+      const actions = menu.parentElement;
+      const actionParent = header.querySelector('.header-main') || header;
+      const theme = header.querySelector('#theme, [data-theme-toggle]');
+      const rect = actionParent.getBoundingClientRect();
+      const menuRect = menu.getBoundingClientRect();
+      const label = theme.closest('.theme-label');
+      return {
+        last: actionParent.lastElementChild === actions && actions.lastElementChild === menu,
+        themeBeforeMenu: Boolean(theme.compareDocumentPosition(menu) & Node.DOCUMENT_POSITION_FOLLOWING),
+        rightOffset: rect.right - menuRect.right - parseFloat(getComputedStyle(actionParent).paddingRight),
+        consolidated: !label || (parseFloat(getComputedStyle(label).borderLeftWidth) > 0 &&
+          parseFloat(getComputedStyle(theme).borderLeftWidth) === 0),
+      };
+    });
+    assert.equal(layout.last, true, `${context} history menu must be last in the header`);
+    assert.equal(layout.themeBeforeMenu, true, `${context} theme control must precede the history menu`);
+    assert.ok(Math.abs(layout.rightOffset) < 2, `${context} history menu must align to the right edge`);
+    assert.equal(layout.consolidated, true, `${context} theme icon and selector must share one border`);
+  };
+  for (const width of [1600, 1440, 855, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
     for (const theme of ['light', 'dark']) {
       await page.goto(base);
@@ -211,26 +308,99 @@ try {
       assert.equal(await page.title(), 'Enterprise enablement', 'Hub must use the approved collection name');
       assert.equal(await page.locator('.brand').getAttribute('aria-label'), 'Enterprise enablement home');
       assert.equal((await page.locator('.brand').textContent()).trim(), 'Enterprise enablement');
+      assert.equal(await page.locator('header .github-link').getAttribute('href'), 'https://github.com/ragmha/field-guides', 'Hub header must retain its GitHub link');
+      assert.equal(await page.locator('header.topbar a[href="#guides"]').count(), 0, 'Hub header must not repeat the Browse guides action');
       assert.equal(await page.locator('meta[property="og:title"]').getAttribute('content'), 'Enterprise enablement');
       assert.ok((await page.locator('.article-footer').textContent()).startsWith('Enterprise enablement '));
+      const hubHeader = await page.locator('header.topbar').evaluate(header => {
+        const brand = header.querySelector('.brand');
+        const icon = header.querySelector('.brand-mark');
+        const theme = header.querySelector('.theme-label');
+        return {
+          display: getComputedStyle(header).display,
+          position: getComputedStyle(header).position,
+          iconFill: getComputedStyle(icon).fill,
+          brandColor: getComputedStyle(brand).color,
+          brandRight: brand.getBoundingClientRect().right,
+          themeLeft: theme.getBoundingClientRect().left,
+        };
+      });
+      assert.equal(hubHeader.display, 'flex', `Hub header must retain its layout at ${width}px`);
+      assert.equal(hubHeader.position, 'sticky', `Hub header must remain sticky at ${width}px`);
+      assert.equal(hubHeader.iconFill, hubHeader.brandColor, `Hub mark must follow the theme at ${width}px`);
+      assert.ok(hubHeader.brandRight <= hubHeader.themeLeft, `Hub header controls must not overlap at ${width}px`);
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
-      assert.equal(await page.locator('.guide-card').count(), guides.length);
-      assert.deepEqual(await page.locator('.guide-card > p').allTextContents(), guides.map(guide => guide.description));
+      assert.equal(await page.locator('#guides .guide-card').count(), guides.length);
+      assert.deepEqual(await page.locator('#guides .guide-card .card-meta').allTextContents(), guides.map(guide =>
+        `${guide.parts} PARTS / EN${finnishGuideStatus[guide.name] === 'complete' ? ' · FI' : finnishGuideStatus[guide.name] === 'partial' ? ' · FI (partial)' : ''}`));
+      assert.deepEqual(await page.locator('#guides .guide-card > p:not([data-reading-progress])').allTextContents(), guides.map(guide => guide.description));
+      assert.equal(await page.locator('header [data-history-menu]').getAttribute('data-history-href'), `${base}history/`);
+      assert.equal(await page.locator('header .history-trigger').isVisible(), true);
+      assert.equal(await page.locator('header .history-trigger svg').count(), 1);
+      assert.equal(await page.locator('header .history-trigger img').count(), 0);
+      await expectHeaderLayout(`Hub at ${width}px`);
+      assert.deepEqual(await page.locator('#guides .guide-card h3').allTextContents(), guides.map(guide => guide.title));
+      assert.deepEqual(
+        await page.locator('#guides .guide-card .get-started').evaluateAll(links => links.map(link => link.href)),
+        guides.map(guide => `${base}${guide.name}/`),
+      );
+      assert.equal(await page.locator('#platform-references .reference-card').count(), platformReferences.length);
+      assert.equal(
+        await page.locator('#platform-references a').getAttribute('href'),
+        new URL(`${platformReferences[0].name}/`, base).pathname,
+      );
       assert.equal(await page.locator('.hero-art').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero illustration must load');
       const art = await page.locator('.hero-art').boundingBox();
       const copy = await page.locator('.hero-copy').boundingBox();
       assert.ok(width > 760 ? art.x >= copy.x + copy.width : art.y >= copy.y + copy.height, 'Hero illustration must sit right of the copy on desktop and below it on mobile');
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `Hub overflow at ${width}px`);
+      const hubTheme = await page.evaluate(() => {
+        const card = getComputedStyle(document.querySelector('.guide-card'));
+        return {
+          surface: card.backgroundColor,
+          border: card.borderTopColor,
+          radius: card.borderTopLeftRadius,
+          grid: getComputedStyle(document.querySelector('main')).backgroundImage,
+          accent: getComputedStyle(document.querySelector('.title-emphasis')).color,
+        };
+      });
       if (process.env.SCREENSHOT_DIR && [1440, 390].includes(width)) {
         await mkdir(process.env.SCREENSHOT_DIR, { recursive: true });
         await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `hub-${theme}-${width}.png`), fullPage: true });
+      }
+      await page.goto(`${base}history/`);
+      assert.equal(await page.getByRole('heading', { name: 'Reading history' }).count(), 1);
+      await expectHeaderLayout(`History at ${width}px`);
+      assert.equal(await page.locator('.metric-card').count(), 0, 'History must not show summary metric cards');
+      const historyTheme = await page.evaluate(() => {
+        const card = getComputedStyle(document.querySelector('.chart-card'));
+        return {
+          surface: card.backgroundColor,
+          border: card.borderTopColor,
+          radius: card.borderTopLeftRadius,
+          grid: getComputedStyle(document.querySelector('main')).backgroundImage,
+          accent: getComputedStyle(document.querySelector('h1 span')).color,
+        };
+      });
+      assert.deepEqual(historyTheme, hubTheme, `History must use the hub theme at ${width}px in ${theme} mode`);
+      assert.equal(await page.locator('#activity-line').evaluate(line => getComputedStyle(line).stroke), hubTheme.accent);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `History overflow at ${width}px`);
+      if (width <= 540) assert.equal(await page.locator('#activity-ticks span:visible').count(), 3, 'Mobile chart labels must stay legible');
+      if (process.env.SCREENSHOT_DIR && [1440, 390].includes(width)) {
+        await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `history-${theme}-${width}.png`), fullPage: true });
       }
       await page.goto(`${base}github-enterprise-field-guide/`);
       const collectionStyle = await landingStyle();
       for (const guide of guides) {
         await page.goto(`${base}${guide.name}/`);
         assert.equal(await page.locator('html').getAttribute('data-theme'), theme, `${guide.name} must inherit ${theme}`);
-        assert.equal(await page.locator('header a', { hasText: 'Enterprise enablement' }).evaluate(link => link.href), base, `${guide.name} breadcrumb must link to the hub`);
+        assert.equal(await collectionLink(guide).evaluate(link => link.href), base, `${guide.name} collection link must lead to the hub`);
+        if (readingHistoryGuides.has(guide.name)) {
+          assert.equal(await page.locator('header [data-history-menu]').getAttribute('data-history-href'), `${base}history/`, `${guide.name} header must link to history`);
+          assert.equal(await page.locator('header .history-trigger').isVisible(), true);
+          assert.equal(await page.locator('header .history-trigger svg').count(), 1);
+          await expectHeaderLayout(`${guide.name} at ${width}px`);
+        }
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
         await expectLanding(guide, width);
         if (guide.name === 'agentic-engineering-guide') {
@@ -259,11 +429,102 @@ try {
           await page.reload();
           assert.equal(await page.locator('input:checked').count(), 0, 'Reset must clear saved assessment answers');
         }
-        if (width <= 760) {
-          await page.getByRole('link', { name: 'Enterprise enablement', exact: true }).focus();
+        if (guide.type === 'astro' && guide.workspace !== 'copilot-how-tos' && guide.name !== 'github-security-operations' && [855, 320].includes(width) && theme === 'light') {
+          await page.locator('#parts-title').evaluate(heading => heading.scrollIntoView({ block: 'start', behavior: 'instant' }));
+          const landingPosition = await page.evaluate(() => ({
+            header: document.querySelector('header.topbar').getBoundingClientRect().bottom,
+            heading: document.querySelector('#parts-title').getBoundingClientRect().top,
+          }));
+          assert.ok(landingPosition.heading >= landingPosition.header - 1, `${guide.name} header must not cover the parts heading at ${width}px`);
+          const start = await page.locator('.landing-button').first().getAttribute('href');
+          await page.goto(new URL(start, page.url()).href);
+          assert.equal(await collectionLink(guide).isVisible(), true, `${guide.name} lessons need collection navigation`);
+          const breadcrumb = page.getByRole('navigation', { name: 'Breadcrumb' });
+          const overview = breadcrumb.getByRole('link', { name: guide.title, exact: true });
+          assert.equal(await overview.isVisible(), true, `${guide.name} lessons need overview navigation`);
+          const current = breadcrumb.locator('[aria-current=page]');
+          assert.equal(await current.count(), 1, `${guide.name} lessons need one current page`);
+          assert.equal((await current.textContent()).replace(/\s+/g, ' ').trim(), (await page.locator('h1.page-title').textContent()).replace(/\s+/g, ' ').trim(), `${guide.name} breadcrumb must identify the lesson`);
+          assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} lesson header overflow at ${width}px`);
+          await page.locator('#page-sources').evaluate(heading => heading.scrollIntoView({ block: 'start', behavior: 'instant' }));
+          const lessonPosition = await page.evaluate(() => {
+            const sidebar = document.querySelector('.sidebar');
+            return {
+              header: document.querySelector('header.topbar').getBoundingClientRect().bottom,
+              heading: document.querySelector('#page-sources').getBoundingClientRect().top,
+              sidebar: sidebar.getBoundingClientRect().top,
+              sticky: getComputedStyle(sidebar).position === 'sticky',
+            };
+          });
+          assert.ok(lessonPosition.heading >= lessonPosition.header - 1, `${guide.name} header must not cover in-page headings at ${width}px`);
+          if (lessonPosition.sticky) assert.ok(lessonPosition.sidebar >= lessonPosition.header - 1, `${guide.name} sidebar must start below the header at ${width}px`);
+          if (guide.name === 'copilot-customization-governance-guide' && width === 855) {
+            await page.setViewportSize({ width: 320, height: 1000 });
+            await page.waitForFunction(() => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--guide-header-height')) === Math.ceil(document.querySelector('header.topbar').getBoundingClientRect().height));
+            const section = page.locator('.prose h2[id]').first();
+            await section.evaluate(heading => heading.scrollIntoView({ block: 'start', behavior: 'instant' }));
+            const visible = await section.evaluate(heading => heading.getBoundingClientRect().top >= document.querySelector('header.topbar').getBoundingClientRect().bottom - 1);
+            assert.equal(visible, true, 'Header offset must follow breadcrumb wrapping when the viewport changes');
+            await page.setViewportSize({ width, height: 1000 });
+          }
+          await overview.focus();
+          await Promise.all([page.waitForURL(`${base}${guide.name}/`), page.keyboard.press('Enter')]);
+        }
+        if (width <= 760 || width === 855) {
+          await collectionLink(guide).focus();
           await Promise.all([page.waitForURL(base), page.keyboard.press('Enter')]);
           assert.equal(page.url(), base, `${guide.name} mobile home link must work with the keyboard`);
         }
+      }
+    }
+  }
+  const securityBase = `${base}github-security-operations/`;
+  await page.goto(securityBase);
+  assert.match(await page.locator('.part-card').nth(0).locator('a').textContent(), /^View chapters/);
+  assert.match(await page.locator('.part-card').nth(3).locator('a').textContent(), /^View part/);
+  await page.evaluate(() => localStorage.setItem('security-operations-progress-v1', JSON.stringify([
+    'operating-model', 'route', 'coverage', 'triage', 'secrets',
+  ])));
+  await page.goto(`${securityBase}part-4/1-secrets/`);
+  assert.equal(await page.locator('h1').innerText(), 'Part 4: Respond to a leaked secret');
+  assert.equal(await page.title(), 'Part 4: Respond to a leaked secret · Secret scanning response · GitHub Security Operations');
+  const securityParts = page.locator('.sidebar .course-part');
+  for (const index of [1, 2, 3, 4, 5]) {
+    assert.equal(await securityParts.nth(index).locator('h2 a').count(), 1);
+    assert.equal(await securityParts.nth(index).locator('.chapter-pages').count(), 0);
+  }
+  assert.equal(await securityParts.nth(3).locator('h2 a[aria-current="page"]').count(), 1);
+  assert.equal(await securityParts.nth(0).locator('.chapter-pages a').count(), 2);
+  assert.match(await securityParts.nth(0).locator('.chapter-pages a').nth(0).textContent(), /^1\.1 /);
+  assert.match(await securityParts.nth(0).locator('.chapter-pages a').nth(1).textContent(), /^1\.2 /);
+  assert.match(await page.locator('.pagination [rel="prev"]').textContent(), /Part 3:/);
+  assert.match(await page.locator('.pagination [rel="next"]').textContent(), /Part 5:/);
+  await page.goto(`${securityBase}part-1/1-operating-model/`);
+  assert.equal(await page.locator('h1').innerText(), '1.1 Why alerts stall and what fixes it');
+  const noJavaScript = await browser.newPage({ viewport: { width: 320, height: 1000 }, javaScriptEnabled: false });
+  try {
+    await noJavaScript.goto(`${base}copilot-customization-governance-guide/part-1/3-surface-support-check/`);
+    const heading = noJavaScript.locator('.prose h2[id]').first();
+    await heading.evaluate(element => element.scrollIntoView({ block: 'start', behavior: 'instant' }));
+    assert.equal(await heading.evaluate(element => element.getBoundingClientRect().top >= document.querySelector('header.topbar').getBoundingClientRect().bottom - 1), true, 'Mobile headings must remain visible without JavaScript');
+  } finally {
+    await noJavaScript.close();
+  }
+
+  for (const guide of howTos) {
+    const lessons = lessonRoutes(guide);
+    assert.equal(lessons.length, 6);
+    const paths = [landingPath(guide), ...lessons.map(lesson => lesson.path), sourcePath(guide)];
+    for (let index = 1; index < paths.length; index++) {
+      await page.goto(new URL(paths[index].slice(1), base).href);
+      assert.equal(await page.locator('h1').count(), 1, `${paths[index]} needs a title`);
+      assert.equal(await page.locator('nav[aria-label="Guide chapters"] .chapter-pages a').count(), 6);
+      assert.equal(await page.locator('a[rel="prev"]').getAttribute('href'), `/field-guides${paths[index - 1]}`);
+      assert.equal(await page.locator('a[rel="next"]').getAttribute('href'), `/field-guides${paths[index + 1] ?? paths[0]}`);
+      if (index < paths.length - 1) {
+        assert.equal(await page.locator('#page-sources').count(), 1, `${paths[index]} needs sources`);
+      } else {
+        assert.ok(await page.locator('.source-index a').count() > 0, `${paths[index]} needs a source index`);
       }
     }
   }
@@ -272,6 +533,85 @@ try {
   assert.equal(await ledgerHubLink.evaluate(link => link.href), base, 'Evidence ledger breadcrumb must link to the hub');
   await ledgerHubLink.click();
   assert.equal(page.url(), base, 'Evidence ledger breadcrumb must return to the collection');
+  if (existsSync('dist/fi')) {
+    const paths = ['', 'history/', ...guides.map(guide => `${guide.name}/`), 'github-enterprise-field-guide/ledger.html', 'champions-at-scale/charter.html'];
+    for (const width of [1440, 320]) {
+      await page.setViewportSize({ width, height: 1000 });
+      for (const path of paths) {
+        await page.goto(`${base}${path}`);
+        const toggle = page.locator('header').getByRole('switch', { name: 'Finnish / Suomi' });
+        await toggle.waitFor({ state: 'visible' });
+        assert.equal(await toggle.count(), 1, `${path} needs a language switch in its header`);
+        assert.equal(await toggle.isChecked(), false, `${path} must start in English`);
+        assert.equal(await toggle.evaluate(el => {
+          const box = el.getBoundingClientRect();
+          return box.left >= 0 && box.right <= innerWidth;
+        }), true, `${path} language switch must fit at ${width}px`);
+        await toggle.focus();
+        await Promise.all([page.waitForURL(`${base}fi/${path}`), page.keyboard.press('Space')]);
+        const finnishToggle = page.locator('header').getByRole('switch', { name: 'Finnish / Suomi' });
+        assert.equal(await finnishToggle.isChecked(), true, `${path} must show Finnish as selected`);
+        assert.equal(await page.locator('html').getAttribute('lang'), 'fi');
+        if (!path) {
+          assert.deepEqual(await page.locator('#guides .guide-card .card-meta').allTextContents(), guides.map(guide =>
+            `${guide.parts} OSAA / EN${finnishGuideStatus[guide.name] === 'complete' ? ' · FI' : finnishGuideStatus[guide.name] === 'partial' ? ' · FI (osittain)' : ''}`));
+          assert.equal(await page.locator('header [data-history-menu]').getAttribute('data-history-href'), `${base}fi/history/`);
+        }
+        assert.equal(await finnishToggle.evaluate(el => {
+          const box = el.getBoundingClientRect();
+          return box.left >= 0 && box.right <= innerWidth;
+        }), true, `Finnish ${path} language switch must fit at ${width}px`);
+        await Promise.all([page.waitForURL(`${base}${path}`), finnishToggle.click()]);
+      }
+    }
+    const noScript = await browser.newContext({ javaScriptEnabled: false });
+    const fallbackPage = await noScript.newPage();
+    await fallbackPage.goto(base);
+    assert.equal(await fallbackPage.locator('header .language-switch-fallback').getAttribute('href'), '/field-guides/fi/');
+    await noScript.close();
+  }
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto(`${base}platform-references/`);
+    assert.equal(await page.title(), 'GitHub and Azure AI landscape');
+    assert.equal(await page.locator('[data-testid="treemap"]').isVisible(), true);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `Landscape overflow at ${width}px`);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollHeight <= innerHeight), true, `Landscape page scroll at ${width}px`);
+    if (process.env.SCREENSHOT_DIR) {
+      await mkdir(process.env.SCREENSHOT_DIR, { recursive: true });
+      await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `platform-references-${width}.png`), fullPage: true });
+    }
+  }
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto(`${base}platform-references/`);
+  const firstGroup = page.locator('[data-testid="treemap"] section').first();
+  const groupId = await firstGroup.getAttribute('data-group');
+  await firstGroup.locator(':scope > div > button').last().click();
+  await page.waitForFunction(id => new URLSearchParams(location.hash.slice(1)).get('category') === id, groupId);
+  await page.reload();
+  assert.equal(await page.locator(`[data-group="${groupId}"]`).getByRole('button', { name: 'All categories' }).isVisible(), true, 'Category zoom must survive reload');
+  await page.keyboard.press('Escape');
+  await page.waitForFunction(() => !new URLSearchParams(location.hash.slice(1)).has('category'));
+  await page.locator(`[data-group="${groupId}"] > div > button`).last().click();
+  await page.locator(`[data-group="${groupId}"] [data-item]`).first().click();
+  assert.equal(await page.getByText('Open official documentation').isVisible(), true, 'Selecting an item must open its details');
+  await page.keyboard.press('Escape');
+  await page.getByRole('button', { name: 'Landscape view' }).click();
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('view') === 'landscape');
+  await page.reload();
+  assert.equal(await page.locator('[data-testid="landscape"]').isVisible(), true, 'Landscape view must survive reload');
+  await page.getByRole('searchbox', { name: 'Search the landscape' }).fill('Copilot');
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('q') === 'Copilot');
+  await page.reload();
+  assert.equal(await page.getByRole('searchbox', { name: 'Search the landscape' }).inputValue(), 'Copilot', 'Search must survive reload');
+  await page.goto(base);
+  await page.selectOption('#theme', 'dark');
+  await page.goto(`${base}platform-references/`);
+  assert.equal(await page.locator('html').evaluate(root => root.classList.contains('dark')), true, 'Landscape must read the hub theme preference');
+  await page.getByRole('button', { name: 'Use light theme' }).click();
+  assert.equal(await page.evaluate(() => localStorage.getItem('theme')), 'light', 'Landscape theme must use compatible theme values');
+  await page.goto(base);
+  await page.waitForFunction(() => document.documentElement.dataset.theme === 'light');
   await page.goto(base);
   await page.selectOption('#theme', 'system');
   for (const colorScheme of ['dark', 'light']) {
@@ -279,11 +619,125 @@ try {
     await page.waitForFunction(theme => document.documentElement.dataset.theme === theme, colorScheme);
     assert.equal(await page.locator('html').getAttribute('data-theme'), colorScheme);
   }
+  await page.evaluate(() => {
+    localStorage.removeItem('field-guides-reading-progress:v1');
+    localStorage.removeItem('eu-residency-progress-v1');
+  });
+  await page.setViewportSize({ width: 1280, height: 800 });
+  for (const guide of guides.filter(item => item.type === 'astro' && readingHistoryGuides.has(item.name))) {
+    await page.goto(`${base}${guide.name}/`);
+    await page.locator('.part-card a').first().click();
+    const chapterLinks = await page.locator('.course-part').first().locator('.chapter-pages a')
+      .evaluateAll(links => links.map(link => link.href));
+    assert.ok(chapterLinks.length > 1, `${guide.name} first part needs multiple chapters for this test`);
+    for (const [index, href] of chapterLinks.entries()) {
+      await page.goto(href);
+      const chapter = await page.locator('body').getAttribute('data-reading-page');
+      if (index === 0) {
+        const state = await page.evaluate(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')));
+        assert.ok(!(state.chapters?.[guide.name] || []).includes(chapter), 'Opening a chapter alone must not mark it read');
+      }
+      await page.locator('[data-reading-chapter-end]').scrollIntoViewIfNeeded();
+      await page.waitForFunction(({ name, id }) => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')).chapters?.[name]?.includes(id), { name: guide.name, id: chapter });
+      const state = await page.evaluate(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')));
+      assert.equal((state.completed[guide.name] || []).includes(1), index === chapterLinks.length - 1, `${guide.name} completes only after every chapter`);
+      if (guide.name === 'data-residency-guide') {
+        await page.locator('#chapter-quiz').evaluate(form => {
+          for (const field of form.querySelectorAll('fieldset')) {
+            [...field.querySelectorAll('input')].find(input => input.value === field.dataset.answer).checked = true;
+          }
+          form.requestSubmit();
+        });
+        await page.waitForFunction(id => JSON.parse(localStorage.getItem('eu-residency-progress-v1') || '[]').includes(id), chapter);
+      }
+    }
+    await page.reload();
+    const state = await page.evaluate(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')));
+    assert.ok(state.completed[guide.name].includes(1), `${guide.name} progress survives reload`);
+  }
+  await page.goto(`${base}champions-at-scale/`);
+  for (const id of ['why', 'now']) {
+    await page.locator(`#${id} [data-reading-end]`).scrollIntoViewIfNeeded();
+    await page.waitForFunction(chapter => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')).chapters?.['champions-at-scale']?.includes(chapter), id);
+    const state = await page.evaluate(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')));
+    assert.equal((state.completed['champions-at-scale'] || []).includes(1), id === 'now', 'Champions completes after both chapters');
+  }
+  await page.setViewportSize({ width: 390, height: 800 });
+  await page.goto(`${base}github-enterprise-field-guide/`);
+  assert.equal(await page.locator('#identity').evaluate(section => section.open), false);
+  await page.locator('#platform [data-reading-end]').scrollIntoViewIfNeeded();
+  await page.waitForFunction(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')).completed['github-enterprise-field-guide']?.includes(1));
+  const staticState = await page.evaluate(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')));
+  assert.ok(!(staticState.completed['github-enterprise-field-guide'] || []).includes(2), 'Collapsed sections must not be marked read');
+  await page.goto(base);
+  assert.equal(await page.locator('[data-reading-guide-card="ai-credits-guide"] [data-reading-progress]').textContent(), '1 of 4 parts read');
+  assert.equal(await page.locator('[data-reading-guide-card="data-residency-guide"] [data-reading-progress]').textContent(), '1 of 10 parts read');
+  assert.equal(await page.locator('[data-reading-guide-card="copilot-governance-guide"] [data-reading-progress]').textContent(), '1 of 6 parts read');
+  assert.equal(await page.locator('[data-reading-guide-card="champions-at-scale"] [data-reading-progress]').textContent(), '1 of 3 parts read');
+  assert.equal(await page.locator('[data-reading-guide-card="github-enterprise-field-guide"] [data-reading-progress]').textContent(), '1 of 10 parts read');
+  await page.locator('[data-reading-guide-card="ai-credits-guide"] [data-continue-reading]').click();
+  assert.match(page.url(), /ai-credits-guide\/part-1\//, 'Continue reading returns to the last opened page');
+  await page.locator('header .history-trigger').click();
+  assert.equal(await page.locator('.history-account strong').textContent(), 'Reading history');
+  assert.equal(await page.locator('.history-dropdown a.history-item').count(), 6, 'History menu shows five recent pages plus View all');
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('.history-dropdown').isHidden(), true, 'Escape closes the history menu');
+  assert.equal(await page.locator('header .history-trigger').evaluate(element => element === document.activeElement), true, 'Escape returns focus to the avatar');
+  await page.keyboard.press('ArrowDown');
+  await page.getByRole('menuitem', { name: 'View all history' }).click();
+  assert.ok(await page.locator('#reading-history [data-history-entry]').count() > 8, 'History page lists more than the former hub limit');
+  assert.ok((await page.locator('#reading-history [data-history-entry]').first().textContent()).includes('AI Credits'), 'History shows guide titles');
+  assert.equal(await page.evaluate(() => Object.values(JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')).completed)
+    .reduce((total, parts) => total + parts.length, 0)), 5, 'Completed parts are saved');
+  await page.locator('#clear-reading-history').click();
+  assert.equal(await page.locator('#reading-history [data-history-entry]').count(), 0, 'Clear history removes visits without resetting part completion');
+  await page.goto(base);
+  assert.equal(await page.locator('[data-reading-guide-card="ai-credits-guide"] [data-reading-progress]').textContent(), '1 of 4 parts read');
   await page.reload();
   await page.keyboard.press('Tab');
   assert.equal(await page.locator(':focus').textContent(), 'Skip to content');
   await page.locator('.browse').click();
   assert.equal(new URL(page.url()).hash, '#guides');
+  await page.evaluate(baseURL => {
+    const daysAgo = days => {
+      const date = new Date();
+      date.setDate(date.getDate() - days);
+      return date.getTime();
+    };
+    const entry = (guide, pageName, age) => ({
+      guide, page: pageName, title: pageName, url: `${baseURL}${guide}/`, visitedAt: daysAgo(age),
+    });
+    localStorage.setItem('field-guides-reading-progress:v1', JSON.stringify({
+      version: 1,
+      completed: { 'ai-credits-guide': [1, 2], 'champions-at-scale': [1] },
+      history: [
+        entry('ai-credits-guide', 'Today', 0),
+        entry('data-residency-guide', 'Ten days ago', 10),
+        entry('ai-credits-guide', 'Forty days ago', 40),
+        entry('champions-at-scale', 'Older page', 100),
+      ],
+    }));
+  }, base);
+  await page.goto(`${base}history/`);
+  assert.equal(await page.locator('#reading-history [data-history-entry]').count(), 4);
+  assert.match(await page.locator('#activity-summary').textContent(), /^3 saved pages were last opened in the last 90 days/);
+  await page.locator('[data-activity-range="30"]').click();
+  assert.match(await page.locator('#activity-summary').textContent(), /^2 saved pages were last opened in the last 30 days/);
+  await page.locator('[data-activity-range="7"]').click();
+  assert.match(await page.locator('#activity-summary').textContent(), /^1 saved page was last opened in the last 7 days/);
+  await page.selectOption('#history-guide-filter', 'ai-credits-guide');
+  assert.equal(await page.locator('#reading-history [data-history-entry]').count(), 2);
+  await page.locator('[data-history-period="7"]').click();
+  assert.equal(await page.locator('#reading-history [data-history-entry]').count(), 1);
+  assert.match(await page.locator('#reading-history [data-history-entry]').first().textContent(), /Today/);
+  await page.selectOption('#history-guide-filter', 'champions-at-scale');
+  assert.equal(await page.locator('#reading-history [data-history-entry]').count(), 0);
+  assert.equal(await page.locator('#reading-history-empty').isVisible(), true);
+  await page.locator('#clear-reading-history').click();
+  assert.equal(await page.locator('#reading-history [data-history-entry]').count(), 0);
+  assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')).completed),
+    { 'ai-credits-guide': [1, 2], 'champions-at-scale': [1] }, 'Clearing history preserves completed parts');
+  assert.equal(await page.locator('#activity-empty').isVisible(), true);
   if (process.env.SCREENSHOT_DIR) {
     await page.setViewportSize({ width: 1440, height: 1000 });
     await page.goto(`${base}ai-credits-guide/`);
@@ -301,7 +755,7 @@ try {
   });
   if (checks.error) throw checks.error;
   assert.equal(checks.status, 0, 'Existing Champions checks must pass');
-  console.log(`Site checks passed: ${targets.size} routes/assets, ${guides.length} guides, shared themes, keyboard navigation and mobile widths.`);
+  console.log(`Site checks passed: ${targets.size} routes/assets, ${guides.length} guides, platform references, landscape interactions, shared themes, keyboard navigation and mobile widths.`);
 } finally {
   await browser?.close();
   server.kill();

@@ -1,0 +1,25 @@
+<svg viewBox="0 0 902 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dependency-paths-title dependency-paths-desc">
+<title id="dependency-paths-title">Dependency risk flows from alert to prevention</title><desc id="dependency-paths-desc">Auto-triage reduces noise, security updates fix what can be patched, decisions cover the rest, and dependency review stops new vulnerable packages arriving.</desc>
+<defs><marker id="dependency-paths-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="902" height="128" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="24" y="32" width="150" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="99.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Alert</text>
+<text x="99.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">vulnerable package</text>
+<line x1="174" y1="64.0" x2="198" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#dependency-paths-arrow)"/>
+<rect x="200" y="32" width="150" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="275.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Auto-triage</text>
+<text x="275.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">reduce noise</text>
+<line x1="350" y1="64.0" x2="374" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#dependency-paths-arrow)"/>
+<rect x="376" y="32" width="150" height="64" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="451.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Security update</text>
+<text x="451.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">patch via PR</text>
+<line x1="526" y1="64.0" x2="550" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#dependency-paths-arrow)"/>
+<rect x="552" y="32" width="150" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="627.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Decide</text>
+<text x="627.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">defer or dismiss</text>
+<line x1="702" y1="64.0" x2="726" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#dependency-paths-arrow)"/>
+<rect x="728" y="32" width="150" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="803.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Dependency review</text>
+<text x="803.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">prevent new risk</text>
+</g></svg>

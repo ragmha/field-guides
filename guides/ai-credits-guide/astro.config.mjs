@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import { legacyRoutes } from './src/course.ts';
 
-const base = '/field-guides/ai-credits-guide';
+const base = `${process.env.SITE_BASE ?? '/field-guides'}/ai-credits-guide`;
 
 function projectLinks() {
   return (tree) => {

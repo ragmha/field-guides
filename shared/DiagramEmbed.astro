@@ -1,0 +1,65 @@
+---
+interface Props {
+  name: string;
+  title: string;
+  description: string;
+  base: string;
+  width?: number;
+  zoom?: boolean;
+}
+
+const { name, title, description, base, width = 704, zoom = false } = Astro.props;
+const diagramPath = `${base}diagrams/${name}`;
+const headingId = `${name}-heading`;
+---
+
+<figure class:list={['diagram-embed', { 'diagram-zoomable': zoom }]} style={`--diagram-width:${width}px`} aria-labelledby={headingId}>
+  <h3 id={headingId}>{title}</h3>
+  <div class="diagram-tools">
+    {zoom && <button class="diagram-zoom" type="button" data-diagram-size aria-pressed="false" aria-controls={`${name}-viewport`} hidden>Zoom figure</button>}
+    <a data-diagram-link={name} href={`${diagramPath}.light.html`} target="_blank" rel="noopener noreferrer">Open full-size</a>
+  </div>
+  {zoom && <p class="diagram-hint">Fits your screen. Zoom for larger labels; scroll with touch or arrow keys.</p>}
+  <div id={`${name}-viewport`} class="diagram-scroll" tabindex="0" role="region" aria-label={`${title}. Scroll horizontally to explore.`}>
+    <img class="diagram-light" src={`${diagramPath}.light.svg`} alt={description} width={width} data-diagram={name} />
+    <img class="diagram-dark" src={`${diagramPath}.dark.svg`} alt={description} width={width} data-diagram={name} />
+  </div>
+  <figcaption>
+    <p>{description}</p>
+    <div class="diagram-links">
+      <a data-diagram-link={name} href={`${diagramPath}.light.html`} download>Download editable HTML</a>
+    </div>
+  </figcaption>
+</figure>
+
+<style>
+  .diagram-embed { min-width: 0; margin: 1rem 0 2rem; }
+  h3 { color: var(--ink); font: 650 19px/1.4 var(--font-sans); margin: 0 0 16px; }
+  .diagram-tools { display: flex; align-items: center; gap: 20px; margin-bottom: 12px; font-size: 13px; }
+  .diagram-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); }
+  img { display: block; width: 100%; min-width: var(--diagram-width, 704px); height: auto; }
+  figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+  figcaption p { margin: 0 0 8px; }
+  .diagram-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .diagram-dark { display: none; }
+  :global([data-theme=dark]) .diagram-light { display: none; }
+  :global([data-theme=dark]) .diagram-dark { display: block; }
+  .diagram-zoomable .diagram-zoom {
+    display: none;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 10px 14px;
+    cursor: pointer;
+  }
+  .diagram-zoomable .diagram-zoom:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .diagram-hint { display: none; }
+  @media (max-width: 760px) {
+    .diagram-zoomable .diagram-hint { display: block; color: var(--muted); font-size: 12px; margin: 0 0 12px; }
+    .diagram-zoomable .diagram-zoom:not([hidden]) { display: inline-block; }
+    .diagram-zoomable .diagram-scroll img { min-width: 0; }
+    .diagram-zoomable.diagram-zoomed .diagram-scroll img { min-width: var(--diagram-width, 640px); }
+  }
+  @media print { .diagram-scroll { overflow: visible; } img { min-width: 0; } }
+</style>

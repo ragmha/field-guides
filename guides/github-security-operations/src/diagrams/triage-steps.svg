@@ -1,0 +1,19 @@
+<svg viewBox="0 0 640 272" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="triage-steps-title triage-steps-desc">
+<title id="triage-steps-title">Four triage questions, in order</title><desc id="triage-steps-desc">Confirm the finding, assess real exposure, set an agreed priority and record the decision with an owner and due date.</desc>
+<defs><marker id="triage-steps-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="640" height="272" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="40" y="24" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="320.0" y="44.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">01  Confirm</text>
+<text x="320.0" y="62.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">is it real and in scope?</text>
+<rect x="40" y="84" width="560" height="48" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="320.0" y="104.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">02  Assess exposure</text>
+<text x="320.0" y="122.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">reachable, deployed, public?</text>
+<rect x="40" y="144" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="320.0" y="164.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">03  Set priority</text>
+<text x="320.0" y="182.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">agreed service level</text>
+<rect x="40" y="204" width="560" height="48" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="320.0" y="224.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">04  Record decision</text>
+<text x="320.0" y="242.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">owner, due date, evidence</text>
+
+</g></svg>

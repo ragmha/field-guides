@@ -1,0 +1,54 @@
+{
+  "access-assignment": {
+    "title": "Kaksi tietä käyttöpaikkaan",
+    "description": "Tarkista edellytykset, valitse palvelupaketin tukema suora tai organisaation määritystapa ja tarkista repositorion käyttöoikeus erikseen."
+  },
+  "policy-scope": {
+    "title": "Selvitä käytännön lähde",
+    "description": "Selvitä käyttöpaikan lähde, tarkista delegoidut oletukset tai ominaisuuskohtaiset organisaatioristiriidat ja varmista asetus todellisessa käyttöympäristössä."
+  },
+  "consumption-controls": {
+    "title": "Selvitä todellinen raja",
+    "description": "Selvitä ensimmäinen soveltuva käyttäjäkohtainen budjetti tarkkuuden perusteella; sen ehdoton pysäytys edeltää erillisiä mukana tulevan ja mitatun käytön hallintakeinoja."
+  },
+  "budget-scenario": {
+    "title": "Kaksi erillistä budjettipysäytystä",
+    "description": "Esimerkki pysähtyy loppuun käytettyyn henkilökohtaiseen $15:n ULB:hen; muunnelmassa ULB:ssä on tilaa mutta täytäntöön pantu mitatun käytön raja pysäyttää käytön."
+  },
+  "agent-operating-scope": {
+    "title": "Rajaa agentin käyttöönotto",
+    "description": "Pilvikäytäntö ja repositorion poissulku rajaavat pilotin; repositorion kirjoitusoikeus erottaa vain luku -istunnot ehdotetuista muutoksista, joihin sovelletaan tarkistuksia ja ihmisen tekemää tarkastusta."
+  },
+  "agent-tools-network": {
+    "title": "Arvioi MCP-palvelimen merkintä",
+    "description": "Tarkista hallitun sallittujen luettelon laajuus, sisäänrakennetut oletukset, eston etusija ja kaikki käyttöön otetut luettelot sekä tarkastele erikseen niiden ulkopuolisia profiileja ja tunnistetietoja."
+  },
+  "instructions-context": {
+    "title": "Paranna ohjeistusta tarkastamalla",
+    "description": "Valitse tuettu ohjeiden laajuus, kirjoita tehtävään sopiva ohjeistus ja toista tehtävä uudessa istunnossa. Tarkenna ohjeita, jos vastauksesta puuttuu vastaava suoritusnäyttö."
+  },
+  "model-feature-baseline": {
+    "title": "Tarkista saatavuus ennen käyttöönottoa",
+    "description": "Kirjaa erilliset määrittämättömien GA-mallien ja -ominaisuuksien oletukset, tarkista mallin julkaisutila ja rajoitukset, tee nimenomainen päätös ja varmista kelpoisen käyttäjän kokemus."
+  },
+  "agent-activity": {
+    "title": "Valitse näyttö huolellisesti",
+    "description": "Käytä ensin riittävää olemassa olevaa istunto- tai auditointinäyttöä; arvioi muutoin valinnainen keruu ja esiversion kelpoisuus, minimoi keruu ja ehdota yksityisyyden suojakeinoja ennen muutoksia."
+  },
+  "billing-ownership": {
+    "title": "Ohjaa budjettihälytys",
+    "description": "Kuvitteellisessa pilotissa alustatiimi vastaa käyttöpaikoista, taloustiimi säilyttää mitattujen menojen hyväksyntävallan ja nimeää hälytyksiä selvittävän henkilön."
+  },
+  "sensitive-content": {
+    "title": "Käytä täydentäviä suojauksia",
+    "description": "Tuetut sisällön poissulut jättävät pääsyaukkoja, joten rajoita erikseen repositorion ja tiedostojärjestelmän käyttöä ja tarkastele ulkoisia työkaluja sekä huomioi nimenomainen jäännösriski."
+  },
+  "adoption-measurement": {
+    "title": "Laske yksilölliset käyttäjät, älä summaa kokonaislukuja",
+    "description": "Kuvitteellisella päättyneellä jaksolla organisaatioiden 8 ja 7 aktiivisesta käyttäjästä 3 kuuluu molempiin, joten 20 lisenssin saaneesta käyttäjästä 12 eli 60 % on yksilöllisiä aktiivisia käyttäjiä."
+  },
+  "access-lifecycle": {
+    "title": "Ylläpidä käyttöpaikan elinkaarta",
+    "description": "Käyttöpaikka etenee määrityksestä käyttöönoton ja rajatun tarkastelun kautta vastuuhenkilön päätökseen. Tuki ja määritystapojen selvittäminen edeltävät valtuutettua, ajoituksesta riippuvaa poistoa."
+  }
+}

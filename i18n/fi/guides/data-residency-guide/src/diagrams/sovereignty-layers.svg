@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="sovereignty-layers-title sovereignty-layers-desc">
+  <title id="sovereignty-layers-title">Suvereniteetin neljä kerrosta</title>
+  <desc id="sovereignty-layers-desc">Sijaintiin, operatiiviseen hallintaan, oikeudelliseen toimivaltaan ja siirrettävyyteen liittyy erilaisia hallintakeinoja ja jäännösriskejä; alueellinen sijainti kattaa vain osan kokonaisuudesta.</desc>
+  <g font-size="13" font-weight="600" letter-spacing=".6" class="muted">
+    <text x="24" y="30">KERROS JA KYSYMYS</text>
+    <text x="380" y="30">MITÄ GHE.COM EU:SSA TARJOAA</text>
+    <text x="700" y="30">MITÄ LISÄÄT</text>
+  </g>
+
+  <rect class="focus" x="24" y="46" width="912" height="84" rx="8"/>
+  <text class="ink" x="44" y="80" font-size="17" font-weight="700">1  Datan sijainti</text>
+  <text class="muted" x="44" y="104" font-size="14">Missä data tallennetaan levossa?</text>
+  <text class="accent" x="380" y="72" font-size="15" font-weight="700">Vahva</text>
+  <text class="ink" x="380" y="94" font-size="14">Koodi, historia, lokit ja varmuuskopiot</text>
+  <text class="ink" x="380" y="114" font-size="14">tallennetaan EU-alueella (DPA §7.A)</text>
+  <text class="ink" x="700" y="84" font-size="14">Päätä jokaisesta dokumentoidusta</text>
+  <text class="ink" x="700" y="104" font-size="14">poikkeuksesta</text>
+
+  <rect class="box" x="24" y="144" width="912" height="84" rx="8"/>
+  <text class="ink" x="44" y="178" font-size="17" font-weight="700">2  Operatiivinen hallinta</text>
+  <text class="muted" x="44" y="202" font-size="14">Kuka operoi ja käyttää palvelua?</text>
+  <text class="ink" x="380" y="170" font-size="15" font-weight="700">Jaettu</text>
+  <text class="ink" x="380" y="192" font-size="14">GitHub operoi palvelua;</text>
+  <text class="ink" x="380" y="212" font-size="14">SOC 2- ja ISO 27001 -näyttö</text>
+  <text class="ink" x="700" y="182" font-size="14">IdP:si omistaa identiteetit;</text>
+  <text class="ink" x="700" y="202" font-size="14">suoratoista auditointiloki</text>
+
+  <rect class="warn" x="24" y="242" width="912" height="84" rx="8"/>
+  <text class="ink" x="44" y="276" font-size="17" font-weight="700">3  Oikeudellinen toimivalta</text>
+  <text class="muted" x="44" y="300" font-size="14">Mikä laki voi määrätä pääsyn?</text>
+  <text class="amber" x="380" y="268" font-size="15" font-weight="700">Vaihteleva</text>
+  <text class="ink" x="380" y="290" font-size="14">Yhdysvaltalainen tarjoaja, USA:n laki;</text>
+  <text class="ink" x="380" y="310" font-size="14">DPA sitouttaa ilmoittamaan ja riitauttamaan</text>
+  <text class="ink" x="700" y="280" font-size="14">Salaa arkaluonteisin data;</text>
+  <text class="ink" x="700" y="300" font-size="14">arvioi tiedonsiirrot</text>
+
+  <rect class="box" x="24" y="340" width="912" height="84" rx="8"/>
+  <text class="ink" x="44" y="374" font-size="17" font-weight="700">4  Siirrettävyys</text>
+  <text class="muted" x="44" y="398" font-size="14">Voimmeko irtautua?</text>
+  <text class="ink" x="380" y="366" font-size="15" font-weight="700">Hyvä koodille</text>
+  <text class="ink" x="380" y="388" font-size="14">Täydet kloonit säilyttävät historian;</text>
+  <text class="ink" x="380" y="408" font-size="14">tarkista soveltuvat irtautumisehdot</text>
+  <text class="ink" x="700" y="378" font-size="14">Peilaa keskeinen koodi;</text>
+  <text class="ink" x="700" y="398" font-size="14">testaa irtautuminen vuosittain</text>
+
+  <text class="muted" x="24" y="455" font-size="14">Alueellinen sijainti vastaa suoraan kerrokseen 1. Kerrokset 2–4 tarvitsevat sopimuksia, hallintakeinoja ja irtautumissuunnitelman.</text>
+</svg>

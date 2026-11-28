@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two network boundaries</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Control Map · Boundary map</p>
+    <h1>Two network boundaries</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Two network boundaries. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 596" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="network-boundaries-light-title network-boundaries-light-desc">
+        <title id="network-boundaries-light-title">Two network boundaries</title>
+        <desc id="network-boundaries-light-desc">The corporate firewall controls which plan endpoints devices reach, while the cloud agent firewall covers only some agent traffic.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="596" fill="#f3f5f7"/>
+        <rect x="40" y="56" width="392" height="168" rx="8" fill="#f3f5f7" stroke="#59636e" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <text x="56" y="76" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">CORPORATE NETWORK</text>
+        <rect x="64" y="96" width="144" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="136.0" y="120.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Developer device</text>
+        <text x="136.0" y="136.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">IDE, CLI, Mobile</text>
+        <path d="M 208 124 L 264 124" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="264" y="96" width="144" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="336.0" y="120.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Firewall or proxy</text>
+        <text x="336.0" y="136.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Network team</text>
+        <text x="56" y="200" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Routing covers suggestions, chat and Copilot CLI</text>
+        <path d="M 408 116 L 448 116 L 448 100 L 480 100" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 408 132 L 448 132 L 448 180 L 480 180" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="480" y="72" width="184" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="572.0" y="96.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Business or enterprise</text>
+        <text x="572.0" y="112.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Allowed plan endpoints</text>
+        <rect x="480" y="152" width="184" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="572.0" y="176.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Individual endpoint</text>
+        <text x="572.0" y="192.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Blocked: personal plans</text>
+        <text x="40" y="252" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The corporate firewall does not see cloud agent traffic</text>
+        <rect x="40" y="272" width="624" height="224" rx="8" fill="#f3f5f7" stroke="#59636e" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <text x="56" y="292" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">GITHUB CLOUD AGENT ENVIRONMENT</text>
+        <rect x="64" y="312" width="160" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="144.0" y="340.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot in the cloud</text>
+        <text x="144.0" y="356.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Runs on GitHub</text>
+        <path d="M 224 344 L 272 344" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="272" y="312" width="168" height="64" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="356.0" y="340.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent firewall</text>
+        <text x="356.0" y="356.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Set by org owners</text>
+        <path d="M 440 344 L 464 344" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="464" y="312" width="184" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="556.0" y="340.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Covered</text>
+        <text x="556.0" y="356.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Bash and built-in Playwright</text>
+        <path d="M 144 376 L 144 432 L 464 432" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="464" y="400" width="184" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="556.0" y="428.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Not covered</text>
+        <text x="556.0" y="444.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Other MCP servers, setup</text>
+        <line x1="40" y1="528" x2="664" y2="528" stroke="#d1d9e0"/>
+        <text x="40" y="552" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Dashed outline: network boundary; arrow: traffic path</text>
+        <text x="40" y="572" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

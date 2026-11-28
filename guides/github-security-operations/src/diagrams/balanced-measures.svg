@@ -1,0 +1,19 @@
+<svg viewBox="0 0 624 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="balanced-measures-title balanced-measures-desc">
+<title id="balanced-measures-title">Four measures that balance each other</title><desc id="balanced-measures-desc">Coverage, responsiveness, backlog health and quality are read together; no single count proves security.</desc>
+<defs><marker id="balanced-measures-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="624" height="200" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="24" y="24" width="288" height="64" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="168.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Coverage</text>
+<text x="168.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">in-scope repos scanned</text>
+<rect x="336" y="24" width="288" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="480.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Responsiveness</text>
+<text x="480.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">time to remediate by class</text>
+<rect x="24" y="108" width="288" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="168.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Backlog health</text>
+<text x="168.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">age and ownership</text>
+<rect x="336" y="108" width="288" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="480.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Quality</text>
+<text x="480.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">reopened and recurring</text>
+
+</g></svg>

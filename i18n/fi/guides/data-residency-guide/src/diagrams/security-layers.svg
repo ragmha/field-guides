@@ -1,0 +1,21 @@
+<svg viewBox="0 0 640 316" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="security-layers-title security-layers-desc">
+  <title id="security-layers-title">Tietoturvan hallintakeinot ja jäännösriski</title>
+  <desc id="security-layers-desc">Identiteetti, repositorioiden hallintakeinot, valvonta ja häiriötilanteisiin vastaaminen toimivat yhdessä; minkä tahansa kerroksen puutteet jättävät jäännösriskin, jonka asiakas arvioi.</desc>
+  <rect width="640" height="316" fill="#fff" class="paper"/>
+  <rect x="40" y="24" width="560" height="52" rx="4" fill="#fff" stroke="#d1d9e0" class="node"/>
+  <rect x="40" y="76" width="560" height="52" rx="4" fill="#fff" stroke="#d1d9e0" class="node"/>
+  <rect x="40" y="128" width="560" height="52" rx="4" fill="#eaf6ed" stroke="#1a7f37" class="focal"/>
+  <rect x="40" y="180" width="560" height="52" rx="4" fill="#fff" stroke="#d1d9e0" class="node"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <g fill="#1f2328" font-size="12" font-weight="600" class="ink">
+      <text x="64" y="55">Identiteetti ja pääsy</text><text x="64" y="107">Repositorion hallintakeinot</text>
+      <text x="64" y="159">Valvonta</text><text x="64" y="211">Vastaaminen ja palautuminen</text>
+    </g>
+    <g fill="#59636e" font-size="10" text-anchor="end" class="muted">
+      <text x="576" y="55">IdP-käytännöt · vähimmät oikeudet</text><text x="576" y="107">katselmointi · säännöt · tarkistus</text>
+      <text x="576" y="159">auditointitapahtumat · hälytykset</text><text x="576" y="211">toimintaohjeet · testatut viennit</text>
+    </g>
+    <text x="40" y="268" font-size="11" font-weight="600" fill="#1f2328" class="ink">Jäännösriski jää jäljelle.</text>
+    <text x="40" y="288" font-size="10" fill="#59636e" class="muted">Tarkista jokaisen kerroksen saatavuus, soveltamisala, omistajuus ja puutteet.</text>
+  </g>
+</svg>

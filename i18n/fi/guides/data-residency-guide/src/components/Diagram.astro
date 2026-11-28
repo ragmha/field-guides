@@ -1,0 +1,103 @@
+---
+import { extraDiagrams } from '../extra-diagrams';
+// ponytail: inline SVG themed by CSS variables; one file per diagram, no light/dark export pipeline.
+const svgs = import.meta.glob<string>('../diagrams/*.svg', { query: '?raw', import: 'default', eager: true });
+
+const diagrams: Record<string, { title: string; description: string; sources?: string[] }> = {
+  ...extraDiagrams,
+  'sovereignty-layers': {
+    title: 'Alueellinen sijainti on yksi suvereniteetin kerros',
+    description: 'Datasuvereniteetti koostuu neljästä kysymyksestä: missä data tallennetaan, kuka voi operoida palvelua, mikä laki voi velvoittaa antamaan pääsyn ja voiko palvelusta irtautua. GHE.com EU:ssa vastaa suoraan ensimmäiseen ja edistää muita; sopimukset, salausvalinnat ja irtautumissuunnitelma kattavat loput.',
+  },
+  'data-map': {
+    title: 'Mikä pysyy EU-alueella ja dokumentoidut poikkeukset',
+    description: 'Koodi, yhteistyöhistoria, Actions-lokit, varmuuskopiot ja käyttäjien identiteettitiedot tallennetaan EU-alueelle, johon kuuluvat Norja ja Sveitsi. GitHub dokumentoi luokat, joita voidaan tallentaa sen ulkopuolelle, mukaan lukien Copilotin tiedot, ellei alueellisen sijainnin käytäntöä oteta käyttöön. Omat integraatiosi ovat GitHubin alueellisen sijainnin lupauksen ulkopuolella.',
+  },
+  'adoption-path': {
+    title: 'Viisi askelta kysymyksestä tuotantoon',
+    description: 'Päätä vaatimus, allekirjoita sopimus, valmistele identiteetti ja verkko, siirrä aalloissa ja operoi sitten todistusaineiston avulla. Jokaisella vaiheella on nimetty omistaja ja irtautumiseen liittyvä tuotos.',
+  },
+  'breach-notification': {
+    title: 'Kuka ilmoittaa kenelle tietoturvaloukkauksen jälkeen',
+    description: 'GitHub ilmoittaa asiakkaalle ilman aiheetonta viivytystä ja avustaa soveltuvan lain edellyttämällä tavalla. Rekisterinpitäjä arvioi GDPR:n 33 ja 34 artiklan mukaiset ilmoitusvelvollisuudet: ilmoitus viranomaiselle ilman aiheetonta viivytystä ja mahdollisuuksien mukaan 72 tunnin kuluessa, ellei riski ole epätodennäköinen. Korkea riski voi edellyttää myös ilmoitusta rekisteröidyille.',
+  },
+  'identity-sequence': {
+    title: 'Identiteetintarjoajasta hallittuun pääsyyn',
+    description: 'IdP provisioi hallitut tilit SCIMillä ja tunnistaa käyttäjät. Tarkka kirjautumisprotokolla riippuu tuetusta identiteetintarjoajasta ja määrityksistä.',
+  },
+  'security-layers': {
+    title: 'Kerrosta hallintakeinot ja arvioi jäljelle jäävä riski',
+    description: 'Nämä ovat oppaan suosituksia, eivät väite siitä, että jokainen hallintakeino on käytössä. Varmista ominaisuuksien saatavuus, raportin soveltamisala ja omistajuus ennen hallintakeinoon tukeutumista.',
+  },
+  'copilot-flow': {
+    title: 'Käytäntö muuttaa päättelyn suorituspaikkaa',
+    description: 'Kun yrityksen käytäntö on käytössä, GitHub reitittää pyynnöt alueen vaatimukset täyttävien mallien päätepisteisiin. Varmista asiakasohjelmien versiot, käytettävissä olevat mallit ja nykyinen ominaisuuskattavuus linkitetystä dokumentaatiosta.',
+  },
+  'platform-architecture': {
+    title: 'Yritys, identiteetti ja data-alue',
+    description: 'GHE.com on GitHubin hallinnoima pilvipalvelu. Valittu alue koskee dokumentoituja tietoluokkia, ei automaattisesti jokaista ulkoista integraatiota tai poikkeusta.',
+  },
+  'regulation-timeline': {
+    title: 'Valittuja päivämääriä, erilaisia velvoitteita',
+    description: 'Nämä virstanpylväät eivät osoita soveltuvuutta organisaatioosi. Tarkista lainsäädäntö, kansallinen täytäntöönpano ja myöhemmät muutokset lakiasiantuntijan kanssa.',
+  },
+  'migration-window': {
+    title: 'Suunnittele päällekkäisyys ja erillinen irtautumisaika',
+    description: 'Tässä esitetyt kokeilun, migraation ja päättymisen päivämäärät ovat hypoteettisia. General Terms §9.5 sallii enintään 90 päivää sopimuksen päättymisen jälkeen repositoriodatan siirtämiseen tai siirtopyynnön tekemiseen ilman tuotantokäyttöä. Varmista oman sopimuksesi ehdot.',
+  },
+  'sovereignty-drivers': {
+    title: 'Useat paineet johtavat yhteen päätökseen',
+    description: 'Tietosuoja, ulkomaisen lain ulottuvuus ja häiriönsietokyky vaativat kukin arviointia. Alueellinen sijainti käsittelee sijaintia, mutta ei ratkaise kaikkia hallintaa koskevia kysymyksiä.',
+  },
+};
+
+interface Props { name: string }
+const { name } = Astro.props;
+const diagram = diagrams[name];
+if (!diagram) throw new Error(`Unknown diagram: ${name}`);
+const { title, description, sources } = diagram;
+const svg = svgs[`../diagrams/${name}.svg`];
+if (!svg) throw new Error(`Missing diagram source: ${name}`);
+const width = Number(svg.match(/viewBox="0 0 (\d+) /)?.[1]);
+if (!width) throw new Error(`Missing diagram viewBox width: ${name}`);
+const headingId = `${name}-heading`;
+---
+
+<figure class="diagram-embed" aria-labelledby={headingId}>
+  <h3 id={headingId}>{title}</h3>
+  <div id={`${name}-viewport`} class="diagram-scroll" style={`--diagram-width:${width}px`} tabindex="0" role="region" aria-label={`${title}. Vieritä vaakasuunnassa tarkastellaksesi.`}>
+    <Fragment set:html={svg} />
+  </div>
+  <p class="scroll-hint">Vieritä tarvittaessa vaakasuunnassa tarkastellaksesi kaaviota.</p>
+  <figcaption><p>{description}</p>{sources && <p>Lähteet: {sources.map((source, index) => <a href={source}>[{index + 1}]</a>)}</p>}</figcaption>
+</figure>
+
+<style>
+  .diagram-embed { min-width: 0; margin: 1rem 0 2rem; }
+  h3 { color: var(--ink); font: 650 19px/1.4 var(--font-sans); margin: 0 0 16px; }
+  .diagram-scroll {
+    --surface:#fff; --inset:#f6f8fa; --ink:#1f2328; --muted:#59636e;
+    --rule:#d1d9e0; --accent:#1a7f37; --tint:#eaf6ed; --amber:#854d0e; --amber-bg:#fff8c5;
+    overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface);
+  }
+  .diagram-scroll :global(svg) { display: block; width: 100%; min-width: var(--diagram-width); height: auto; font-family: var(--font-sans); }
+  .scroll-hint { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+  @media print { .diagram-scroll { overflow-x: visible; } .diagram-scroll :global(svg) { min-width: 0; } .scroll-hint { display: none; } }
+  figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+  figcaption p { margin: 0; }
+  .diagram-scroll :global(.ink) { fill: var(--ink); }
+  .diagram-scroll :global(.muted) { fill: var(--muted); }
+  .diagram-scroll :global(.box) { fill: var(--inset); stroke: var(--rule); }
+  .diagram-scroll :global(.focus) { fill: var(--tint); stroke: var(--accent); stroke-width: 2; }
+  .diagram-scroll :global(.warn) { fill: var(--amber-bg); stroke: var(--amber); }
+  .diagram-scroll :global(.accent) { fill: var(--accent); }
+  .diagram-scroll :global(.amber) { fill: var(--amber); }
+  .diagram-scroll :global(.line) { stroke: var(--muted); fill: none; stroke-width: 1.5; }
+  .diagram-scroll :global(.paper) { fill: var(--surface); }
+  .diagram-scroll :global(.rule) { stroke: var(--rule); }
+  .diagram-scroll :global(.node) { fill: var(--surface); stroke: var(--ink); }
+  .diagram-scroll :global(.focal) { fill: var(--tint); stroke: var(--accent); }
+  .diagram-scroll :global(.store), .diagram-scroll :global(.external), .diagram-scroll :global(.optional) { fill: var(--ink); stroke: var(--muted); }
+  .diagram-scroll :global(.arrow) { stroke: var(--muted); fill: none; }
+  .diagram-scroll :global(.arrow-accent) { stroke: var(--accent); fill: none; }
+</style>

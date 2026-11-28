@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="license-request-flow-dark-root" viewBox="0 0 704 424" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="license-request-flow-dark-title license-request-flow-dark-desc">
+        <title id="license-request-flow-dark-title">Two license request flows</title>
+        <desc id="license-request-flow-dark-desc">In the built-in flow a member asks and an owner reviews requests; in the API flow an internal request passes optional checks before a seat is assigned automatically.</desc>
+        <defs><marker id="license-request-flow-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="424" fill="#07090d"/>
+        <text x="40" y="56" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">REQUEST ACCESS · COPILOT BUSINESS</text>
+        <rect x="40" y="72" width="176" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="128.0" y="108.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Member asks</text>
+        <text x="128.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Ask admin for access</text>
+        <path d="M 216 112 L 264 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#license-request-flow-dark-arrow)"/>
+        <rect x="264" y="72" width="176" height="80" rx="8" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Owner reviews</text>
+        <text x="352.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Requests from members</text>
+        <text x="352.0" y="132.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">On a set cadence</text>
+        <path d="M 440 112 L 488 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#license-request-flow-dark-arrow)"/>
+        <rect x="488" y="72" width="176" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="576.0" y="108.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Seat assigned</text>
+        <text x="576.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Member gets access</text>
+        <line x1="40" y1="184" x2="664" y2="184" stroke="#3d444d"/>
+        <text x="40" y="212" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">INTERNAL REQUEST + API</text>
+        <rect x="40" y="228" width="176" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="128.0" y="264.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Internal request</text>
+        <text x="128.0" y="280.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Issue form or portal</text>
+        <path d="M 216 268 L 264 268" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#license-request-flow-dark-arrow)"/>
+        <rect x="264" y="228" width="176" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="352.0" y="264.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Optional check</text>
+        <text x="352.0" y="280.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Team membership</text>
+        <path d="M 440 268 L 488 268" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#license-request-flow-dark-arrow)"/>
+        <rect x="488" y="228" width="176" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="576.0" y="256.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">API assigns seat</text>
+        <text x="576.0" y="272.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Org or enterprise</text>
+        <text x="576.0" y="288.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">endpoint</text>
+        <text x="40" y="348" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Publish expectations with the launch, such as revoking inactive licenses.</text>
+        <line x1="40" y1="364" x2="664" y2="364" stroke="#3d444d"/>
+        <text x="40" y="388" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Lanes: request patterns; rectangle: step; dashed box: optional step</text>
+        <text x="40" y="408" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

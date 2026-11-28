@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="pilot-cost-ceiling-light-root" viewBox="0 0 704 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pilot-cost-ceiling-light-title pilot-cost-ceiling-light-desc">
+        <title id="pilot-cost-ceiling-light-title">Pilot cost ceiling trace</title>
+        <desc id="pilot-cost-ceiling-light-desc">Twenty Business users at 3,000 credits each exceed a 38,000-credit pool by 22,000 credits, about $220, so a hypothetical $250 ceiling stops usage at the limit.</desc>
+        <defs><marker id="pilot-cost-ceiling-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="628" fill="#f3f5f7"/>
+        <text x="40" y="56" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">HYPOTHETICAL CALCULATION TRACE</text>
+        <rect x="152" y="72" width="400" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="96.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Estimated use</text>
+        <text x="352.0" y="112.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">20 users × 3,000 credits = 60,000</text>
+        <path d="M 352 128 L 352 160" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-cost-ceiling-light-arrow)"/>
+        <rect x="360.0" y="138" width="79.5" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="399.75" y="147" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SUBTRACT POOL</text>
+        <rect x="152" y="160" width="400" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="184.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Included pool</text>
+        <text x="352.0" y="200.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">20 licenses × 1,900 credits = 38,000</text>
+        <path d="M 352 216 L 352 248" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-cost-ceiling-light-arrow)"/>
+        <rect x="360.0" y="226" width="57.5" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="388.75" y="235" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">REMAINDER</text>
+        <rect x="152" y="248" width="400" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="272.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Metered credits</text>
+        <text x="352.0" y="288.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">60,000 − 38,000 = 22,000</text>
+        <path d="M 352 304 L 352 336" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-cost-ceiling-light-arrow)"/>
+        <rect x="360.0" y="314" width="63.0" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="391.5" y="323" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">APPLY RATE</text>
+        <rect x="152" y="336" width="400" height="56" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="360.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Estimated overage</text>
+        <text x="352.0" y="376.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">22,000 × $0.01 = $220</text>
+        <path d="M 352 392 L 352 424" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-cost-ceiling-light-arrow)"/>
+        <rect x="360.0" y="402" width="52.0" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="386.0" y="411" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ROUND UP</text>
+        <rect x="152" y="424" width="400" height="72" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="448.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Ceiling: $250</text>
+        <text x="352.0" y="464.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Organization budget</text>
+        <text x="352.0" y="480.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Stop usage when budget limit is reached: on</text>
+        <text x="40" y="536" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Spend can be $0 early while usage stays inside the included pool.</text>
+        <text x="40" y="552" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A universal user-level budget is always a hard stop; an organization budget is not by default.</text>
+        <line x1="40" y1="568" x2="664" y2="568" stroke="#d1d9e0"/>
+        <text x="40" y="592" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: calculation step; arrow: next step; figures are illustrative</text>
+        <text x="40" y="612" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

@@ -1,0 +1,32 @@
+<svg viewBox="0 0 960 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="runner-deployment-title runner-deployment-desc">
+  <title id="runner-deployment-title">Esimerkki runnerin käyttöönottorajoista</title>
+  <desc id="runner-deployment-desc">Tässä esimerkkikäyttöönotossa itse hallittu runner suoritetaan asiakkaan hallitsemalla palvelimella yksityisverkossa ja se muodostaa yhteyden GitHub Actionsiin. Työnkulku voi myös lähettää tietoja asiakkaan valitsemaan palveluun. Asiakas valitsee sijainnit, versiot ja verkkosäännöt.</desc>
+  <defs><marker id="runner-deployment-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#0550ae"/></marker></defs>
+  <rect width="960" height="360" fill="#fff" class="paper"/>
+  <rect x="16" y="52" width="264" height="236" rx="8" fill="#f6f8fa" stroke="#59636e" stroke-dasharray="4,4"/>
+  <rect x="340" y="52" width="264" height="236" rx="8" fill="#f6f8fa" stroke="#59636e" stroke-dasharray="4,4"/>
+  <rect x="664" y="52" width="280" height="236" rx="8" fill="#f6f8fa" stroke="#59636e" stroke-dasharray="4,4"/>
+  <text x="32" y="76" font-size="12" font-weight="600" class="muted">GITHUB · VALITTU ALUE</text>
+  <text x="356" y="76" font-size="12" font-weight="600" class="muted">ASIAKAS · YKSITYISVERKKO</text>
+  <text x="680" y="76" font-size="12" font-weight="600" class="muted">ASIAKKAAN VALITSEMA PALVELU</text>
+  <path d="M376 160 H244" fill="none" stroke="#0550ae" stroke-width="1.5" marker-end="url(#runner-deployment-arrow)"/>
+  <path d="M568 160 H700" fill="none" stroke="#0550ae" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#runner-deployment-arrow)"/>
+  <rect x="272" y="124" width="76" height="20" fill="#fff"/>
+  <text x="310" y="138" text-anchor="middle" font-size="10" fill="#0550ae">HTTPS</text>
+  <rect x="604" y="124" width="64" height="20" fill="#fff"/>
+  <text x="636" y="138" text-anchor="middle" font-size="10" fill="#0550ae">VALINNAINEN</text>
+  <rect x="52" y="112" width="192" height="96" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+  <text x="68" y="132" font-size="10" class="muted">HALLITTU PALVELU</text>
+  <text x="68" y="160" font-size="14" font-weight="600" class="ink">GitHub Actions</text>
+  <text x="68" y="184" font-size="11" class="muted">GHE.com-yritys</text>
+  <rect x="376" y="112" width="192" height="96" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+  <text x="392" y="132" font-size="10" class="muted">ASIAKKAAN PALVELIN</text>
+  <text x="392" y="156" font-size="14" font-weight="600" class="ink">Itse hallittu runner</text>
+  <rect x="392" y="168" width="160" height="24" rx="4" fill="#fff" stroke="#59636e"/>
+  <text x="400" y="184" font-size="10" class="ink">Runner · versio vaihtelee</text>
+  <rect x="700" y="112" width="208" height="96" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+  <text x="716" y="132" font-size="10" class="muted">ULKOINEN KOHDE</text>
+  <text x="716" y="160" font-size="14" font-weight="600" class="ink">Työnkulkupalvelu</text>
+  <text x="716" y="184" font-size="11" class="muted">Päätepiste ja protokolla vaihtelevat</text>
+  <text x="24" y="324" font-size="12" class="muted">Vain esimerkki. Valitse runnerin sijainti, palvelukohde ja palomuurisäännöt käyttöönotollesi.</text>
+</svg>

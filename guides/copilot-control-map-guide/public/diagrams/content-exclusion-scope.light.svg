@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="content-exclusion-scope-light-root" viewBox="0 0 704 652" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="content-exclusion-scope-light-title content-exclusion-scope-light-desc">
+        <title id="content-exclusion-scope-light-title">Content exclusion scope</title>
+        <desc id="content-exclusion-scope-light-desc">Repository, organization and enterprise rules reduce what Copilot reads for different users, but known gaps mean exclusion is not a security boundary.</desc>
+        <defs><marker id="content-exclusion-scope-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="652" fill="#f3f5f7"/>
+        <text x="40" y="52" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">RULE</text>
+        <text x="400" y="52" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WHO IT AFFECTS</text>
+        <rect x="40" y="64" width="224" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="152.0" y="92.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository rule</text>
+        <text x="152.0" y="108.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Set by a repository admin</text>
+        <path d="M 264 96 L 400 96" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#content-exclusion-scope-light-arrow)"/>
+        <rect x="308.75" y="90" width="46.5" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="332" y="99" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">AFFECTS</text>
+        <rect x="400" y="64" width="264" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="532.0" y="92.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Every enterprise user</text>
+        <text x="532.0" y="108.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Working in that repository</text>
+        <rect x="40" y="152" width="224" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="152.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Organization rule</text>
+        <text x="152.0" y="196.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Set by an organization owner</text>
+        <path d="M 264 184 L 400 184" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#content-exclusion-scope-light-arrow)"/>
+        <rect x="308.75" y="178" width="46.5" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="332" y="187" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">AFFECTS</text>
+        <rect x="400" y="152" width="264" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="532.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Users seated by the org</text>
+        <text x="532.0" y="196.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Seat source decides reach</text>
+        <rect x="40" y="240" width="224" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="152.0" y="268.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise rule</text>
+        <text x="152.0" y="284.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Set by an enterprise owner</text>
+        <path d="M 264 272 L 400 272" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#content-exclusion-scope-light-arrow)"/>
+        <rect x="308.75" y="266" width="46.5" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="332" y="275" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">AFFECTS</text>
+        <rect x="400" y="240" width="264" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="532.0" y="268.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Scope per the how-to</text>
+        <text x="532.0" y="284.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Record it; do not assume</text>
+        <text x="40" y="332" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">EFFECT ON EXCLUDED FILES</text>
+        <rect x="40" y="344" width="624" height="64" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="372.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot skips the file</text>
+        <text x="352.0" y="388.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No inline suggestions, not used as context, not reviewed in code review</text>
+        <text x="40" y="436" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">KNOWN GAPS</text>
+        <rect x="40" y="448" width="624" height="104" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="480.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Reduced exposure, not a guarantee</text>
+        <text x="352.0" y="496.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not a file system security boundary; indirect access may slip through</text>
+        <text x="352.0" y="512.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Third-party MCP servers and clients may not honor it</text>
+        <text x="352.0" y="528.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Client support differs; symbolic links and remote file systems are not covered</text>
+        <line x1="40" y1="584" x2="664" y2="584" stroke="#d1d9e0"/>
+        <text x="40" y="608" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Left: where the rule is set; right: whose Copilot it changes; arrow: reach</text>
+        <text x="40" y="628" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

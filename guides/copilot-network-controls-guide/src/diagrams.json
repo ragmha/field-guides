@@ -1,0 +1,50 @@
+{
+  "copilot-traffic-paths": {
+    "title": "Three Copilot network paths",
+    "description": "Client egress crosses the corporate proxy, browser streaming uses WebSockets to a Web PubSub host, and agent egress passes the agent firewall."
+  },
+  "network-ownership-map": {
+    "title": "Who owns each network control",
+    "description": "A matrix of five Copilot network controls with where each is configured and a recommended owning team."
+  },
+  "build-client-allowlist": {
+    "title": "Build a client allowlist",
+    "description": "Query the meta API, add the apex host, Copilot reference hosts and editor hosts, then test a real client before approving."
+  },
+  "websockets-data-residency": {
+    "title": "Stream a cloud session through a proxy",
+    "description": "The browser opens a WebSocket to the documented Web PubSub host, the proxy relays both directions, and a retry confirms streaming beyond the 101 upgrade."
+  },
+  "proxy-configuration": {
+    "title": "How Copilot picks a proxy",
+    "description": "Copilot checks four proxy variables in order, uses the first one found for HTTP and HTTPS, needs an http proxy URL and authenticates with Basic or Kerberos."
+  },
+  "tls-inspection-certificates": {
+    "title": "Certificate trust for inspected traffic",
+    "description": "The Copilot client validates TLS with system stores and NODE_EXTRA_CA_CERTS, so an inspecting proxy works only when its root is trusted."
+  },
+  "subscription-routing": {
+    "title": "Plan endpoints and network rules",
+    "description": "A matrix of githubcopilot.com patterns, the plans they serve and the network rule a company would apply."
+  },
+  "routing-change-plan": {
+    "title": "Routing change timeline",
+    "description": "Five steps from inventory to ongoing review, with the enterprise pattern allowed before any billing change and a piloted block."
+  },
+  "firewall-settings-hierarchy": {
+    "title": "Firewall settings from organization to session",
+    "description": "Organization firewall settings are inherited or locked, repository rules combine with organization entries, and new sessions use the result."
+  },
+  "firewall-coverage-limits": {
+    "title": "What the agent firewall covers",
+    "description": "A matrix of agent traffic sources, whether the firewall covers each and a compensating control for each gap."
+  },
+  "private-runner-networking": {
+    "title": "Choose where the agent runs",
+    "description": "Cloud sandboxes use the agent firewall; Actions sessions can use standard, Azure private networking or self-hosted runners that need explicit egress."
+  },
+  "connectivity-troubleshooting": {
+    "title": "Connectivity triage loop",
+    "description": "Test the endpoints, classify the error, collect redacted evidence and fix one control before retesting."
+  }
+}

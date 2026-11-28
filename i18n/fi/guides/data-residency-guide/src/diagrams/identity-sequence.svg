@@ -1,0 +1,27 @@
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="identity-sequence-title identity-sequence-desc">
+  <title id="identity-sequence-title">Hallittu identiteetti ja pääsy</title>
+  <desc id="identity-sequence-desc">Identiteetintarjoaja provisioi hallitut tilit GitHubiin SCIMillä. Kehittäjät tunnistautuvat identiteetintarjoajan kautta ja pääsevät yritysympäristöönsä GHE.comissa.</desc>
+  <defs><marker id="identity-sequence-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+  <rect width="640" height="320" fill="#fff" class="paper"/>
+  <line x1="104" y1="76" x2="104" y2="264" stroke="#59636e" stroke-dasharray="4,4" class="line"/>
+  <line x1="320" y1="76" x2="320" y2="264" stroke="#59636e" stroke-dasharray="4,4" class="line"/>
+  <line x1="536" y1="76" x2="536" y2="264" stroke="#59636e" stroke-dasharray="4,4" class="line"/>
+  <line x1="320" y1="120" x2="536" y2="120" stroke="#59636e" class="arrow" marker-end="url(#identity-sequence-arrow)"/>
+  <line x1="104" y1="168" x2="320" y2="168" stroke="#59636e" class="arrow" marker-end="url(#identity-sequence-arrow)"/>
+  <line x1="320" y1="216" x2="536" y2="216" stroke="#1a7f37" class="arrow-accent" marker-end="url(#identity-sequence-arrow)"/>
+  <rect x="40" y="28" width="128" height="48" rx="6" fill="#fff" stroke="#1f2328" class="node"/>
+  <rect x="256" y="28" width="128" height="48" rx="6" fill="#eaf6ed" stroke="#1a7f37" class="focal"/>
+  <rect x="472" y="28" width="128" height="48" rx="6" fill="#fff" stroke="#1f2328" class="node"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" text-anchor="middle">
+    <text x="104" y="49" font-size="12" font-weight="600" fill="#1f2328" class="ink">Kehittäjä</text>
+    <text x="104" y="65" font-size="9" fill="#59636e" class="muted">hallittu tili</text>
+    <text x="320" y="49" font-size="12" font-weight="600" fill="#1f2328" class="ink">Identiteetintarjoaja</text>
+    <text x="320" y="65" font-size="9" fill="#59636e" class="muted">asiakkaan hallinnassa</text>
+    <text x="536" y="49" font-size="12" font-weight="600" fill="#1f2328" class="ink">GHE.com</text>
+    <text x="536" y="65" font-size="9" fill="#59636e" class="muted">yritys</text>
+    <text x="428" y="111" font-size="11" fill="#1f2328" class="ink">Tilin provisiointi · SCIM</text>
+    <text x="212" y="159" font-size="11" fill="#1f2328" class="ink">Tunnistautuminen</text>
+    <text x="428" y="207" font-size="11" fill="#1f2328" class="ink">Yrityskirjautuminen</text>
+    <text x="320" y="292" font-size="10" fill="#59636e" class="muted">Testaa käyttöönotto, käyttöoikeuksien muutokset ja poisto.</text>
+  </g>
+</svg>

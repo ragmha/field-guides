@@ -1,0 +1,19 @@
+<svg viewBox="0 0 672 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="audit-trail-title audit-trail-desc">
+<title id="audit-trail-title">Four evidence sources, four purposes</title><desc id="audit-trail-desc">The alert timeline shows every status change, the audit log covers supported alert types, webhooks deliver events to store, and the REST API shows current state. Code scanning does not create audit log timeline events.</desc>
+<defs><marker id="audit-trail-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="672" height="224" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="24" y="24" width="300" height="64" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="174.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Alert timeline</text>
+<text x="174.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">every status change, per alert</text>
+<rect x="348" y="24" width="300" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="498.0" y="52.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Audit log</text>
+<text x="498.0" y="70.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">secret scanning and Dependabot events</text>
+<rect x="24" y="108" width="300" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="174.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Webhooks</text>
+<text x="174.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">store events for all alert types</text>
+<rect x="348" y="108" width="300" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="498.0" y="136.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">REST API</text>
+<text x="498.0" y="154.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">current state only</text>
+<text x="336" y="204" text-anchor="middle" font-size="11" class="muted" fill="#59636e">Code scanning does not create audit log timeline events</text>
+</g></svg>

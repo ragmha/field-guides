@@ -1,0 +1,285 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Diagram from '../components/Diagram.astro';
+import { chapters, coursePath, parts } from '../course';
+import Landing from '../../../../shared/Landing.astro';
+import landingArt from '../assets/landing.jpg';
+import { quizzes, quizValues } from '../quizzes';
+import { highlights } from '../highlights';
+import '../styles/global.css';
+
+interface Props {
+  page: CollectionEntry<'guide'>;
+  headings: { depth: number; slug: string; text: string }[];
+}
+const { page, headings } = Astro.props;
+const pages = await getCollection('guide');
+const entryFor = (id: string) => {
+  const entry = pages.find(entry => entry.id === id);
+  if (!entry) throw new Error(`Missing course content: ${id}`);
+  return entry;
+};
+const sequence = ['start', ...chapters.map(chapter => chapter.id)];
+const current = sequence.indexOf(page.id);
+const previous = current > 0 ? entryFor(sequence[current - 1]) : undefined;
+const next = current >= 0 && current < sequence.length - 1 ? entryFor(sequence[current + 1]) : undefined;
+const chapter = chapters.find(chapter => chapter.id === page.id);
+const quiz = chapter && quizzes[chapter.id];
+const values = chapter && quizValues[chapter.id];
+const highlight = chapter && highlights[chapter.id];
+if (chapter && (!quiz || quiz.length !== 5)) throw new Error(`Missing five-question quiz: ${chapter.id}`);
+if (chapter && !highlight) throw new Error(`Missing chapter highlights: ${chapter.id}`);
+const titleFor = (entry: CollectionEntry<'guide'>) => {
+  const chapter = chapters.find(chapter => chapter.id === entry.id);
+  return chapter ? `${chapter.number} ${entry.data.title}` : entry.id === 'start' ? 'Kurssin sisällysluettelo' : entry.data.title;
+};
+const outlineParts = parts.filter((_, index) => chapter?.kind === 'overview' && chapter.part === index + 1);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (id: string) => `${base}/${coursePath(id)}${id === 'start' ? '' : '/'}`;
+const stale = Date.now() - new Date(`${page.data.verified}T00:00:00Z`).getTime() > 30 * 86400000;
+const titleWords = page.data.title.split(' ');
+const titleEmphasis = page.id === 'start' ? titleWords.splice(-3).join(' ') : '';
+const TitleTag = page.id === 'start' ? 'h2' : 'h1';
+const landingParts = parts.map(part => ({
+  title: part.title,
+  href: href(part.pages[0]),
+  description: part.pages[0].endsWith('-overview') ? entryFor(part.pages[0]).data.description : part.pages.map(id => entryFor(id).data.title).join(' · '),
+}));
+---
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={page.data.description} />
+    <meta name="color-scheme" content="light dark" />
+    <title>{titleFor(page)}{chapter ? ` · ${chapter.partTitle}` : ''} · Datan alueellinen sijainti EU:ssa</title>
+    <script is:inline>
+      (() => {
+        let preference = 'system';
+        try { preference = localStorage.getItem('theme') || 'system'; } catch {}
+        const dark = preference === 'dark' || (preference === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.documentElement.dataset.preference = preference;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href={page.id === 'start' ? '#landing-title' : '#content'}>Siirry sisältöön</a>
+    <header class="topbar">
+      <a class="brand" href={`${base}/`} aria-label="Datan alueellinen sijainti EU:ssa – etusivu">
+        <svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="30" height="30"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>
+        Datan alueellinen sijainti EU:ssa
+      </a>
+      <nav class="breadcrumbs" aria-label="Murupolku"><a href={base.replace(/[^/]+$/, '')}>Enterprise enablement</a><span aria-hidden="true">/</span><span>{chapter ? `Osa ${chapter.part}: ${chapter.partTitle}` : page.data.section}</span></nav>
+      <label class="theme-label"><span aria-hidden="true">◐</span><span class="sr-only">Väriteema</span><select id="theme" aria-label="Väriteema"><option value="system">Järjestelmä</option><option value="light">Vaalea</option><option value="dark">Tumma</option></select></label>
+    </header>
+    <a class="hub-home" href={base.replace(/[^/]+$/, '')}><span aria-hidden="true">← </span>Enterprise enablement</a>
+    <div class:list={['shell', { 'landing-page': page.id === 'start' }]}>
+      {page.id !== 'start' && <aside class="sidebar">
+        <div class="edition">KURSSIN SISÄLTÖ<span>GitHubin datan alueellinen sijainti · EU</span></div>
+        <details class="chapter-nav" open>
+          <summary>Tutustu kurssiin <span aria-hidden="true">⌄</span></summary>
+          <nav aria-label="Oppaan luvut">
+            <a class="course-home" href={href('start')} aria-current={page.id === 'start' ? 'page' : undefined}>Kurssin sisällysluettelo</a>
+            {parts.map((part, index) => (
+              <section class="course-part">
+                <h2><span class="chapter-number">Osa {index + 1}</span> {part.title}</h2>
+                <div class="chapter-pages">{part.pages.map(id => {
+                  const entry = entryFor(id);
+                  return <a href={href(id)} aria-current={id === page.id ? 'page' : undefined}>{titleFor(entry)}</a>;
+                })}</div>
+              </section>
+            ))}
+            <div class="course-appendix"><span>Liite</span><a href={href('glossary')} aria-current={page.id === 'glossary' ? 'page' : undefined}>Sanasto</a><a href={href('sources')} aria-current={page.id === 'sources' ? 'page' : undefined}>Lähteet ja tarkistukset</a></div>
+          </nav>
+        </details>
+        <div class="sidebar-note">Tiedä, missä datasi sijaitsee.<br />Osoita se lähteillä.</div>
+        <button type="button" id="reset-progress">Nollaa kurssin edistyminen</button>
+        <p id="progress-status" role="status" aria-live="polite"></p>
+      </aside>}
+      <main id="content">
+        {page.id === 'start' && <Landing name="data-residency-guide" art={landingArt} alt="Mustepiirros avoimesta kiviholvin ovesta, jonka takana näkyy palvelintelineitä pilvien yllä." reviewed={page.data.verified} stale={stale} start={href(chapters[0].id)} secondary={{ href: href('sources'), label: 'Lähteet ja tarkistukset' }} parts={landingParts} />}
+        <div class="article-grid">
+          {chapter && <div id="course-locked" class="course-locked" role="status">
+            <h2>Luku on lukittu</h2>
+            <p id="locked-message">Ota JavaScript ja selaimen tallennustila käyttöön suorittaaksesi vaaditut tietovisat ja seurataksesi edistymistä tällä laitteella.</p>
+            <a href={href('start')}>Palaa kurssin sisällysluetteloon</a>
+          </div>}
+          <article id="course-article" hidden={!!chapter}>
+            {page.id !== 'start' && <><div class="eyebrow">{chapter ? `Osa ${chapter.part}: ${chapter.partTitle}` : page.data.section}<span class="eyebrow-line"></span></div>
+            <TitleTag class="page-title">{chapter && <span class="lesson-number">{chapter.number} </span>}{titleWords.join(' ')}{titleEmphasis && <> <span class="title-emphasis">{titleEmphasis}</span></>}</TitleTag>
+            <p class="lede">{page.data.description}</p>
+            <div class="page-meta"><span>RIIPPUMATON</span><span>Tarkistettu {page.data.verified}</span>{stale && <strong class="status caution">Tarkistus myöhässä · varmista lähteistä</strong>}</div>
+            {highlight && <section class="at-a-glance" aria-label="Yhdellä silmäyksellä">
+              <div><strong>OLENNAISTA</strong><p>{highlight[0]}</p></div>
+              <div><strong>OMA PÄÄTÖKSESI</strong><p>{highlight[1]}</p></div>
+            </section>}
+            {page.data.diagram && <section class="diagram-section" aria-label="Visuaalinen selitys">
+              <div class="figure-label">VISUAALINEN OPETUS</div>
+              <Diagram name={page.data.diagram} />
+            </section>}
+            {page.data.additionalDiagrams?.map(name => <section class="diagram-section" aria-label="Visuaalinen selitys">
+              <div class="figure-label">VISUAALINEN OPETUS</div>
+              <Diagram name={name} />
+            </section>)}</>}
+            <div class="prose"><slot /></div>
+            {outlineParts.length > 0 && <div class="course-outline prose">
+              {outlineParts.map(part => {
+                const partNumber = parts.indexOf(part) + 1;
+                return <section>
+                  <h2 id={`part-${partNumber}`}>{page.id === 'start' ? `Osa ${partNumber}: ${part.title}` : 'Tämän osan luvut'}</h2>
+                  <ol>{part.pages.filter(id => id !== page.id).map(id => {
+                    const entry = entryFor(id);
+                    return <li><a href={href(id)}>{titleFor(entry)}</a><p>{entry.data.description}</p></li>;
+                  })}</ol>
+                </section>;
+              })}
+            </div>}
+            {page.data.scenarioDiagram && <section class="diagram-section" aria-label="Tilanteen visualisointi">
+              <div class="figure-label">SOVELLA KÄSITETTÄ</div>
+              <Diagram name={page.data.scenarioDiagram} />
+            </section>}
+            {quiz && <section class="self-check prose" aria-labelledby="check-your-understanding">
+              <h2 id="check-your-understanding">Luvun tietovisa</h2>
+              <p>Vastaa kaikkiin viiteen kysymykseen. Jatkamiseen tarvitaan vähintään 80 %. Voit yrittää uudelleen niin usein kuin tarvitset. Edistyminen tallennetaan vain tähän selaimeen; se ei ole tietoturvan hallintakeino.</p>
+              <form id="chapter-quiz" data-chapter={page.id}>
+                {quiz.map(([question, correct, wrong1, wrong2, explanation], index) => {
+                  const answers = values![index];
+                  const options = [correct, wrong1, wrong2].map((label, optionIndex) => ({ label, value: answers[optionIndex] }));
+                  const offset = index % options.length;
+                  const ordered = [...options.slice(offset), ...options.slice(0, offset)];
+                  return <fieldset data-answer={answers[0]}>
+                    <legend>{index + 1}. {question}</legend>
+                    {ordered.map(option => <label><input type="radio" name={`q${index}`} value={option.value} required /> {option.label}</label>)}
+                    <p class="quiz-feedback" hidden><strong>Oikea vastaus:</strong> {correct}. {explanation}</p>
+                  </fieldset>;
+                })}
+                <button type="submit">Tarkista vastaukset</button>
+                <p id="quiz-status" role="status" aria-live="polite"></p>
+              </form>
+            </section>}
+            <section class="source-note" aria-labelledby="page-sources">
+              <h2 id="page-sources">Lähteet ja ajantasaisuus</h2>
+              <p>Lähteet tarkistettu: <time datetime={page.data.verified}>{page.data.verified}</time>. Tämä riippumaton opas ei ole oikeudellista neuvontaa, sopimus tai omien sopimustesi korvike. Lähdelinkit ovat ensisijaisia; suositukset on merkitty oppaan suosituksiksi.</p>
+              <ul>{page.data.sources.map((source) => <li><a href={source} target="_blank" rel="noopener noreferrer">{new URL(source).hostname} / {new URL(source).pathname.split('/').filter(Boolean).at(-1)?.replaceAll('-', ' ')} ↗</a></li>)}</ul>
+            </section>
+            {page.id !== 'start' && <nav class="pagination" aria-label="Lukujärjestys">{previous ? <a rel="prev" href={href(previous.id)}><small>← EDELLINEN</small>{titleFor(previous)}</a> : <span></span>}{next ? <a class="next" rel="next" href={href(next.id)} hidden={!!chapter}><small>SEURAAVA LUKU →</small>{titleFor(next)}</a> : <a class="next" href={href('start')} hidden={!!chapter}><small>{page.id === 'sources' ? 'PALAA KURSSILLE →' : 'KURSSI SUORITETTU →'}</small>Kurssin sisällysluettelo</a>}</nav>}
+            <footer class="article-footer">Datan alueellinen sijainti EU:ssa <span>Riippumatonta opastusta. Viralliset lähteet selkeästi linkitettyinä.</span></footer>
+          </article>
+          {page.id !== 'start' && <aside class="toc" aria-label="Tällä sivulla"><div>TÄLLÄ SIVULLA</div>{headings.filter((h) => h.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}{outlineParts.map(part => <a href={`#part-${parts.indexOf(part) + 1}`}>{page.id === 'start' ? part.title : 'Tämän osan luvut'}</a>)}{quiz && <a href="#check-your-understanding">Luvun tietovisa</a>}<a href="#page-sources">Lähteet ja ajantasaisuus</a></aside>}
+        </div>
+      </main>
+    </div>
+    <script>
+      import { chapters } from '../course';
+      import { canOpenChapter, scoreQuiz } from '../progress';
+
+      const progressKey = 'eu-residency-progress-v1';
+      const form = document.querySelector<HTMLFormElement>('#chapter-quiz');
+      const article = document.querySelector<HTMLElement>('#course-article')!;
+      const locked = document.querySelector<HTMLElement>('#course-locked');
+      const lockedMessage = document.querySelector<HTMLElement>('#locked-message');
+      const nextLink = document.querySelector<HTMLAnchorElement>('.pagination .next');
+      const status = document.querySelector<HTMLElement>('#quiz-status');
+      // The landing page has no sidebar, so progress controls are absent there.
+      const progressStatus = document.querySelector<HTMLElement>('#progress-status');
+      const chapterIndex = chapters.findIndex(chapter => chapter.id === form?.dataset.chapter);
+      let progress: string[] = [];
+
+      function showStorageError() {
+        const message = 'Edistymistä ei voitu tallentaa tai lukea. Ota selaimen tallennustila käyttöön ja lataa sivu uudelleen tai nollaa edistyminen.';
+        if (progressStatus) progressStatus.textContent = message;
+        if (status) status.textContent = message;
+        if (lockedMessage) lockedMessage.textContent = message;
+      }
+
+      function refreshProgress() {
+        if (progressStatus) progressStatus.textContent = `${progress.length}/${chapters.length} luvun tietovisaa läpäisty tässä selaimessa.`;
+        if (chapterIndex < 0) return;
+        const unlocked = canOpenChapter(chapters.map(chapter => chapter.id), progress, chapterIndex);
+        article.hidden = !unlocked;
+        if (locked) locked.hidden = unlocked;
+        if (!unlocked && lockedMessage) lockedMessage.textContent = 'Läpäise kaikki aiempien lukujen tietovisat ennen tämän luvun avaamista.';
+        if (nextLink) nextLink.hidden = !progress.includes(chapters[chapterIndex].id);
+      }
+
+      try {
+        const saved = localStorage.getItem(progressKey);
+        const parsed: unknown = saved ? JSON.parse(saved) : [];
+        if (!Array.isArray(parsed) || !parsed.every(id => typeof id === 'string' && chapters.some(chapter => chapter.id === id))) throw new Error('Invalid progress');
+        progress = parsed;
+        refreshProgress();
+      } catch {
+        showStorageError();
+      }
+
+      form?.addEventListener('submit', event => {
+        event.preventDefault();
+        const fields = [...form.querySelectorAll<HTMLFieldSetElement>('fieldset')];
+        const score = scoreQuiz(fields.map(field => field.querySelector<HTMLInputElement>('input:checked')?.value), fields.map(field => field.dataset.answer!));
+        fields.forEach(field => { field.querySelector<HTMLElement>('.quiz-feedback')!.hidden = false; });
+        if (score >= 4) {
+          const updated = [...new Set([...progress, form.dataset.chapter!])];
+          try {
+            localStorage.setItem(progressKey, JSON.stringify(updated));
+            progress = updated;
+            refreshProgress();
+            status!.textContent = `${score}/5. Läpäisty; seuraava luku on avattu.`;
+          } catch {
+            showStorageError();
+          }
+        } else {
+          status!.textContent = `${score}/5. Tarvitset 4 oikeaa vastausta; tutustu selityksiin ja yritä uudelleen.`;
+        }
+      });
+
+      document.querySelector<HTMLButtonElement>('#reset-progress')?.addEventListener('click', () => {
+        if (!confirm('Nollataanko kaikki tietovisaedistyminen tässä selaimessa?')) return;
+        try {
+          localStorage.removeItem(progressKey);
+          location.href = document.querySelector<HTMLAnchorElement>('.brand')!.href;
+        } catch {
+          showStorageError();
+        }
+      });
+
+      const select = document.querySelector<HTMLSelectElement>('#theme')!;
+      const media = matchMedia('(prefers-color-scheme: dark)');
+      const mobile = matchMedia('(max-width: 760px)');
+      const navigation = document.querySelector<HTMLDetailsElement>('.chapter-nav');
+      function syncNavigation() {
+        if (!navigation) return;
+        navigation.open = !mobile.matches;
+        const sidebar = navigation.closest<HTMLElement>('.sidebar')!;
+        if (!mobile.matches && sidebar.scrollHeight > sidebar.clientHeight) {
+          const active = navigation.querySelector<HTMLAnchorElement>('[aria-current="page"]')!.getBoundingClientRect();
+          const bounds = sidebar.getBoundingClientRect();
+          if (active.top < bounds.top || active.bottom > bounds.bottom) {
+            sidebar.scrollTop += active.top - bounds.top - (sidebar.clientHeight - active.height) / 2;
+          }
+        }
+      }
+      syncNavigation();
+      mobile.addEventListener('change', syncNavigation);
+      select.value = document.documentElement.dataset.preference || 'system';
+      function applyTheme() {
+        const preference = select.value;
+        const theme = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.preference = preference;
+        document.querySelectorAll<HTMLAnchorElement>('[data-diagram-link]').forEach((link) => {
+          const url = new URL(link.href);
+          url.hash = theme;
+          link.href = url.href;
+        });
+      }
+      select.addEventListener('change', () => {
+        try { localStorage.setItem('theme', select.value); } catch {}
+        applyTheme();
+      });
+      media.addEventListener('change', applyTheme);
+      applyTheme();
+    </script>
+  </body>
+</html>

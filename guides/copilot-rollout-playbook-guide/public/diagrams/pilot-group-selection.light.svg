@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="pilot-group-selection-light-root" viewBox="0 0 704 724" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pilot-group-selection-light-title pilot-group-selection-light-desc">
+        <title id="pilot-group-selection-light-title">Selecting the pilot population</title>
+        <desc id="pilot-group-selection-light-desc">Use an existing organization if one fits or create a dedicated one, then confirm each participant is licensed through the pilot organization.</desc>
+        <defs><marker id="pilot-group-selection-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="724" fill="#f3f5f7"/>
+        <polygon points="252.0 112, 352 72.0, 452.0 112, 352 152.0" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="116" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Existing org fits?</text>
+        <path d="M 252 112 L 136 112 A 8 8 0 0 0 128 120 L 128 184" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <rect x="177.75" y="94" width="24.5" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="190" y="103" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <rect x="40" y="184" width="176" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="128.0" y="212.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Use that org</text>
+        <text x="128.0" y="228.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Real work, mixed teams</text>
+        <path d="M 452 112 L 556 112 A 8 8 0 0 1 564 120 L 564 184" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <rect x="498.5" y="94" width="19.0" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="508" y="103" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="464" y="184" width="200" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="564.0" y="212.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Create dedicated org</text>
+        <text x="564.0" y="228.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Duplicate repo access</text>
+        <text x="564.0" y="244.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">May not suit cloud agent</text>
+        <rect x="232" y="312" width="240" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="340.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">List licensed population</text>
+        <text x="352.0" y="356.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Who is licensed through it?</text>
+        <path d="M 128 248 L 128 336 A 8 8 0 0 0 136 344 L 232 344" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <path d="M 564 264 L 564 336 A 8 8 0 0 1 556 344 L 472 344" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <path d="M 352 376 L 352 408" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <polygon points="238.0 448, 352 408.0, 466.0 448, 352 488.0" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="452" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Licensed via pilot org?</text>
+        <path d="M 352 488 L 352 544" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <rect x="359.75" y="510" width="24.5" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="372" y="519" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 466 448 L 496 448" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <rect x="471.5" y="430" width="19.0" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="481" y="439" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="496" y="416" width="168" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="580.0" y="444.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Move license</text>
+        <text x="580.0" y="460.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">or exclude the member</text>
+        <path d="M 580 480 L 580 568 A 8 8 0 0 1 572 576 L 472 576" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pilot-group-selection-light-arrow)"/>
+        <rect x="232" y="544" width="240" height="64" rx="20" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="572.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Pilot population confirmed</text>
+        <text x="352.0" y="588.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Record criteria and list</text>
+        <text x="40" y="648" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Features and models are enabled per organization for the people licensed through it.</text>
+        <line x1="40" y1="664" x2="664" y2="664" stroke="#d1d9e0"/>
+        <text x="40" y="688" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="708" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

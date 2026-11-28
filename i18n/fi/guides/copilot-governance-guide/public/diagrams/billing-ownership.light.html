@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohjaa budjettihälytys</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Hallintaopas · Organisaatiokaavio</p>
+    <h1>Ohjaa budjettihälytys</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Ohjaa budjettihälytys. Tutki vierittämällä vaakasuunnassa.">
+      <svg viewBox="0 0 704 736" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="billing-ownership-light-title billing-ownership-light-desc">
+        <title id="billing-ownership-light-title">Ohjaa budjettihälytys</title>
+        <desc id="billing-ownership-light-desc">Kuvitteellisessa pilotissa alustatiimi vastaa käyttöpaikoista, taloustiimi säilyttää mitattujen menojen hyväksyntävallan ja nimeää hälytyksiä selvittävän henkilön.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="736" fill="#f3f5f7"/>
+        <path d="M 296 104 L 296 144 A 8 8 0 0 1 288 152 L 192 152 A 8 8 0 0 0 184 160 L 184 204" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 408 104 L 408 128 A 8 8 0 0 0 416 136 L 512 136 A 8 8 0 0 1 520 144 L 520 204" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 520 300 L 520 400" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="192" y="40" width="320" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="68.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Kuvitteellinen Copilot Business -pilotti</text>
+        <text x="352.0" y="84.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Ohjaa budjettihälytys</text>
+        <rect x="40" y="204" width="288" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="248.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Alustatiimi</text>
+        <text x="184.0" y="264.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Vastaa käyttöpaikkojen määrityksestä ja ylläpidosta</text>
+        <rect x="376" y="204" width="288" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="240.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Taloushallinto</text>
+        <text x="520.0" y="256.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Hyväksyy mitatut menot</text>
+        <text x="520.0" y="272.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Säilyttää hyväksyntävallan; nimeää reagoijan</text>
+        <rect x="376" y="400" width="288" height="96" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="520.0" y="436.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Nimetty hälytyksiin reagoija</text>
+        <text x="520.0" y="452.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Selvittää budjettihälytykset</text>
+        <text x="520.0" y="468.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Taloushallinnon on kirjattava nimi</text>
+        <text x="40" y="548" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Hyväksyntäportti: vie muutosehdotukset organisaation hyväksymisprosessiin.</text>
+        <text x="40" y="564" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Ennuste ei ole hyväksyntä; mitatun kulutuksen budjetti ei rajoita lisenssimaksuja.</text>
+        <text x="40" y="612" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Vain hälyttävä kynnys: sen voi ylittää veloitusten jatkuessa.</text>
+        <text x="40" y="628" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Vastuuhenkilöiden nimeäminen ei määritä kynnystä tai hyväksy lisämenoja.</text>
+        <line x1="40" y1="676" x2="664" y2="676" stroke="#d1d9e0"/>
+        <text x="40" y="700" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Laatikot: vastuut; nuolet: vastuu ja ohjaus, eivät menojen hyväksyntä</text>
+        <text x="40" y="720" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Vihreä laatikko: oppitunnin painotus, ei hyväksyntä tai turvallisuusluokitus</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

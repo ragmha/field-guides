@@ -1,0 +1,50 @@
+{
+  "metrics-surfaces": {
+    "title": "Choose a metrics surface",
+    "description": "Compare the usage, code generation and impact dashboards with the report endpoints and NDJSON exports by window and best use."
+  },
+  "metrics-access": {
+    "title": "Who can read Copilot metrics",
+    "description": "Check the usage metrics policy, then the enterprise or organization role or permission, and run automated downloads under a dedicated identity with the right token scope."
+  },
+  "active-user-definitions": {
+    "title": "Active user counting windows",
+    "description": "Daily, weekly and monthly active users count distinct users over the report day, the trailing 7 days and the trailing 28 days, while the dashboard total covers the calendar month to date."
+  },
+  "adoption-phases": {
+    "title": "Assign an adoption phase",
+    "description": "Find features engaged on at least two distinct days in a trailing 28-day window, then assign the highest qualifying phase: multi-agent, agent first, code first or No Cohort."
+  },
+  "org-attribution-dedup": {
+    "title": "One person across report scopes",
+    "description": "A hypothetical developer with one seat who belongs to two organizations appears in both organization reports but only once in the enterprise report."
+  },
+  "team-level-joins": {
+    "title": "Build a team view",
+    "description": "Join the daily per-user and user-teams reports on user, day and entity, group by team, count distinct users and sum volume, then publish with the five-user and multi-team caveats."
+  },
+  "latency-and-windows": {
+    "title": "When daily data is final",
+    "description": "A report day closes, two full UTC days of processing follow, early exports are provisional and should be re-exported, history is limited to one year and download links expire."
+  },
+  "coverage-gaps": {
+    "title": "Layers between activity and reports",
+    "description": "Developer activity reaches usage reports only through a supported client, enabled telemetry and an open network path; server-side telemetry still identifies some active users."
+  },
+  "kpi-design": {
+    "title": "A small adoption KPI sheet",
+    "description": "Four group-level adoption KPIs, each with the decision it informs, a numerator and a denominator measured over the same window and scope."
+  },
+  "privacy-safe-reporting": {
+    "title": "Who sees which metrics",
+    "description": "A reporting charter limits per-user files to named analysts, gives team leads views of five or more people and gives leaders headline KPIs, with no individual performance use."
+  },
+  "qualitative-evidence": {
+    "title": "Metrics raise questions, people answer",
+    "description": "Spot a metric change, ask developers through surveys, retrospectives or support trends, record respondent counts and dates, then explain and act before the next cycle."
+  },
+  "impact-reporting": {
+    "title": "Impact report lifecycle",
+    "description": "Define the decision, fix the comparison, assemble evidence, separate observations from conclusions, then write the narrative with a next review date that restarts the cycle."
+  }
+}

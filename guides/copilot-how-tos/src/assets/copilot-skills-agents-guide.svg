@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="600" viewBox="0 0 720 600" role="img" aria-labelledby="title desc">
+  <title id="title">A kit for repeatable work</title>
+  <desc id="desc">An engraved field kit containing a workflow card, compass and tools.</desc>
+  <defs><pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(42)"><path d="M0 0v6" stroke="#333" stroke-width=".7"/></pattern></defs>
+  <g fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M85 355C51 252 96 138 200 98M520 98c105 40 150 153 115 256M100 351C76 259 112 153 206 112M514 113c89 35 128 133 107 228" stroke-width=".8"/>
+    <path d="M356 57v23m-11-11h22M109 150l-12-7m19-8-10-9m494 24 12-7m-19-8 10-9"/>
+    <path d="M98 293l241-66 269 72-244 79z" fill="#fff" stroke-width="2.5"/>
+    <path d="M98 293v133l266 87V378z" fill="url(#h)" stroke-width="2.5"/>
+    <path d="M364 378v135l244-84V299z" fill="#fff" stroke-width="2.5"/>
+    <path d="M110 307v109l242 79V387z" fill="#fff" stroke-width="1"/>
+    <path d="M376 387v108l220-76V313z" fill="url(#h)" stroke-width="1"/>
+    <path d="M123 322l213 70m-213-60 213 70m-213-60 213 70M387 396l196-66m-196 76 196-66" stroke-width=".6"/>
+    <path d="M223 346v47l32 11v-47zM468 353v47l32-11v-47z" fill="#fff" stroke-width="1.5"/>
+    <path d="M244 169l179-27 21 133-179 27z" fill="#fff" stroke-width="2.3"/>
+    <path d="M254 178l161-24 18 112-161 24z" stroke-width=".8"/>
+    <path d="M266 190l102-15m-99 28 130-19m-127 32 94-14m-91 27 120-18m-117 31 98-14m-95 27 124-18m-121 31 78-12" stroke-width="1.4"/>
+    <path d="M378 210l8 6 12-17" stroke-width="2"/>
+    <circle cx="500" cy="228" r="58" fill="#fff" stroke-width="2.5"/><circle cx="500" cy="228" r="48" fill="url(#h)" stroke-width="1"/>
+    <circle cx="500" cy="228" r="39" fill="#fff" stroke-width="1"/>
+    <path d="M500 194l9 34-9 34-9-34z" fill="#fff" stroke-width="1.5"/><path d="M500 194l9 34-9 2z" fill="#222"/><circle cx="500" cy="228" r="4" fill="#fff"/>
+    <path d="M500 184v-8m0 104v-8m-44-44h-8m104 0h-8"/>
+    <path d="M150 274l72-87 12 10-72 87-20 10z" fill="#fff" stroke-width="2"/><path d="M155 279l73-87m-86 102 12-8 5 4" stroke-width="1"/>
+    <path d="M124 528c145 14 335 16 482-1M174 538c119 9 258 11 378 0M231 548c82 5 174 5 251 0" stroke-width=".8"/>
+    <path d="M158 510l-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7" stroke-width=".6"/>
+  </g>
+</svg>

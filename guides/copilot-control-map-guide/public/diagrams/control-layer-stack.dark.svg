@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="control-layer-stack-dark-root" viewBox="0 0 704 664" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="control-layer-stack-dark-title control-layer-stack-dark-desc">
+        <title id="control-layer-stack-dark-title">Seven control layers</title>
+        <desc id="control-layer-stack-dark-desc">Policies, repository controls, managed settings, network, content exclusion, budgets and evidence each answer a separate question, and none overrides another.</desc>
+        <defs><marker id="control-layer-stack-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="664" fill="#07090d"/>
+        <text x="40" y="44" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">FROM AVAILABILITY TO EVIDENCE</text>
+        <text x="644" y="44" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">TYPICAL OWNER</text>
+        <rect x="40" y="56" width="624" height="52" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="60" y="78" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise and organization policies</text>
+        <text x="60" y="94" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Which features, models and agents are available</text>
+        <text x="644" y="86" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise owners, AI managers</text>
+        <rect x="40" y="118" width="624" height="52" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="60" y="140" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository controls</text>
+        <text x="60" y="156" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">What agent work can land on branches</text>
+        <text x="644" y="148" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Repository administrators</text>
+        <rect x="40" y="180" width="624" height="52" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="60" y="202" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Client managed settings</text>
+        <text x="60" y="218" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">What clients and agents may do</text>
+        <text x="644" y="210" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Endpoint and platform teams</text>
+        <rect x="40" y="242" width="624" height="52" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="60" y="264" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Network routing and agent firewall</text>
+        <text x="60" y="280" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Which endpoints traffic can reach</text>
+        <text x="644" y="272" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Network team, org owners</text>
+        <rect x="40" y="304" width="624" height="52" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="60" y="326" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Content exclusion</text>
+        <text x="60" y="342" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Which files Copilot should not read</text>
+        <text x="644" y="334" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Repo admins, org owners</text>
+        <rect x="40" y="366" width="624" height="52" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="60" y="388" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Billing and budgets</text>
+        <text x="60" y="404" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">How much metered usage may be spent</text>
+        <text x="644" y="396" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Finance, billing managers</text>
+        <rect x="40" y="428" width="624" height="52" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="60" y="450" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Audit log and metrics</text>
+        <text x="60" y="466" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">What changed and what was used</text>
+        <text x="644" y="458" text-anchor="end" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Security operations</text>
+        <rect x="40" y="506" width="624" height="56" rx="8" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="530.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">No layer overrides another</text>
+        <text x="352.0" y="546.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Check every layer separately for each requirement</text>
+        <line x1="40" y1="594" x2="664" y2="594" stroke="#3d444d"/>
+        <text x="40" y="618" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Bar: one control layer; left: the question it answers; right: a typical owner</text>
+        <text x="40" y="638" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

@@ -1,0 +1,66 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { lessonRoutes, validateGuideWorkspace } from '../course';
+import { guides } from '../manifest';
+
+type SourceRecord = { url: string; pages: string[] };
+type RouteProps = {
+  guide: (typeof guides)[number];
+  page: CollectionEntry<'guide'>;
+  pageKind: 'landing' | 'lesson' | 'sources';
+  reviewed: string;
+  sourceRecords: SourceRecord[];
+};
+
+export async function getStaticPaths() {
+  const pages = await getCollection('guide');
+  validateGuideWorkspace(guides, pages);
+  const pageById = new Map(pages.map(page => [page.id, page]));
+  const paths = [];
+
+  for (const guide of guides) {
+    const landing = pageById.get(`${guide.slug}/index`)!;
+    const lessons = lessonRoutes(guide).map(route => ({
+      route,
+      page: pageById.get(`${guide.slug}/${route.id}`)!,
+    }));
+    const reviewedDates = [landing, ...lessons.map(lesson => lesson.page)].map(page => page.data.reviewed);
+    const latestReviewed = reviewedDates.reduce((latest, date) => date > latest ? date : latest);
+    const sourcePages = [landing, ...lessons.map(lesson => lesson.page)];
+    const sourceMap = new Map<string, Set<string>>();
+    for (const page of sourcePages) {
+      for (const source of page.data.sources) {
+        const usedBy = sourceMap.get(source) ?? new Set<string>();
+        usedBy.add(page.id);
+        sourceMap.set(source, usedBy);
+      }
+    }
+    const sourceRecords = [...sourceMap.entries()]
+      .sort(([left], [right]) => left.localeCompare(right))
+      .map(([url, usedBy]): SourceRecord => ({ url, pages: [...usedBy] }));
+
+    paths.push({
+      params: { slug: guide.slug },
+      props: { guide, page: landing, pageKind: 'landing', reviewed: landing.data.reviewed, sourceRecords },
+    });
+    for (const { route, page } of lessons) {
+      paths.push({
+        params: { slug: route.path.replace(/^\/|\/$/g, '') },
+        props: { guide, page, pageKind: 'lesson', reviewed: page.data.reviewed, sourceRecords },
+      });
+    }
+    paths.push({
+      params: { slug: `${guide.slug}/sources` },
+      props: { guide, page: landing, pageKind: 'sources', reviewed: latestReviewed, sourceRecords },
+    });
+  }
+  return paths;
+}
+
+const { guide, page, pageKind, reviewed, sourceRecords } = Astro.props as RouteProps;
+const { Content, headings } = await render(page);
+---
+<GuideLayout {guide} {page} {pageKind} {reviewed} {sourceRecords} headings={pageKind === 'sources' ? [] : headings}>
+  {pageKind !== 'sources' && <Content />}
+</GuideLayout>

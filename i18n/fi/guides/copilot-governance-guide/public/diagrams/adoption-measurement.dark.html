@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laske yksilölliset käyttäjät, älä summaa kokonaislukuja</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Hallintaopas · Venn-kaavio</p>
+    <h1>Laske yksilölliset käyttäjät, älä summaa kokonaislukuja</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Laske yksilölliset käyttäjät, älä summaa kokonaislukuja. Tutki vierittämällä vaakasuunnassa.">
+      <svg viewBox="0 0 704 740" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="adoption-measurement-dark-title adoption-measurement-dark-desc">
+        <title id="adoption-measurement-dark-title">Laske yksilölliset käyttäjät, älä summaa kokonaislukuja</title>
+        <desc id="adoption-measurement-dark-desc">Kuvitteellisella päättyneellä jaksolla organisaatioiden 8 ja 7 aktiivisesta käyttäjästä 3 kuuluu molempiin, joten 20 lisenssin saaneesta käyttäjästä 12 eli 60 % on yksilöllisiä aktiivisia käyttäjiä.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="740" fill="#07090d"/>
+        <circle cx="264" cy="248" r="152" fill="#f0f6fc" fill-opacity="0.04" stroke="#9198a1"/>
+        <circle cx="424" cy="248" r="144" fill="#9198a1" fill-opacity="0.05" stroke="#9198a1"/>
+        <text x="208" y="68" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="14" font-weight="600">Organisaatio A · 8</text>
+        <text x="504" y="68" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="14" font-weight="600">Organisaatio B · 7</text>
+        <text x="212" y="252" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">5 vain A:ssa</text>
+        <text x="348" y="244" text-anchor="middle" fill="#3fb950" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">3 molemmissa</text>
+        <text x="348" y="264" text-anchor="middle" fill="#3fb950" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">laskettu kahdesti</text>
+        <text x="488" y="252" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">4 vain B:ssä</text>
+        <text x="352" y="448" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">8 + 7 = 15 ei ole yksilöllinen määrä</text>
+        <text x="352" y="480" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">15 - 3 = 12 yksilöllistä aktiivista käyttäjää</text>
+        <text x="352" y="512" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="14" font-weight="600">12 / 20 määritettyä lisenssiä = 60 %</text>
+        <text x="40" y="568" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Käytä päättyneen jakson ja määritetyn joukon lisenssinimittäjää.</text>
+        <text x="40" y="584" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Odota kaksi täyttä UTC-päivää päivän päättymisestä; tarkista mittarin ja käyttöympäristön kattavuus.</text>
+        <text x="40" y="632" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Suurempi läpimeno on yhteys, ei todiste siitä, että Copilot aiheutti muutoksen.</text>
+        <line x1="40" y1="680" x2="664" y2="680" stroke="#3d444d"/>
+        <text x="40" y="704" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Ympyrät: organisaatiojoukot; päällekkäisyys: yhteiset henkilöt; vihreä: painotus; alueet likimääräisiä</text>
+        <text x="40" y="724" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Vihreä laatikko: oppitunnin painotus, ei hyväksyntä tai turvallisuusluokitus</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

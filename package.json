@@ -5,15 +5,19 @@
   "workspaces": ["hub", "guides/*"],
   "scripts": {
     "build": "bun scripts/build.mjs",
-    "test": "bun run --cwd guides/ai-credits-guide test && bun run --cwd guides/data-residency-guide test && bun run --cwd guides/copilot-governance-guide test",
-    "check": "bun run --cwd hub check && bun run --cwd guides/ai-credits-guide check && bun run --cwd guides/data-residency-guide check && bun run --cwd guides/copilot-governance-guide check",
     "check:freshness": "node scripts/check-freshness.mjs",
+    "test": "bun test scripts/copy-output.test.mjs && bun run --cwd guides/ai-credits-guide test && bun run --cwd guides/data-residency-guide test && bun run --cwd guides/copilot-governance-guide test && bun run --cwd guides/copilot-control-map-guide test && bun run --cwd guides/copilot-policy-conflicts-guide test && bun run --cwd guides/copilot-managed-settings-guide test && bun run --cwd guides/copilot-mcp-governance-guide test && bun run --cwd guides/copilot-customization-governance-guide test && bun run --cwd guides/copilot-local-sandboxing-guide test && bun run --cwd guides/copilot-cloud-agent-security-guide test && bun run --cwd guides/copilot-automations-governance-guide test && bun run --cwd guides/copilot-network-controls-guide test && bun run --cwd guides/copilot-content-controls-guide test && bun run --cwd guides/copilot-session-data-guide test && bun run --cwd guides/copilot-audit-telemetry-guide test && bun run --cwd guides/copilot-metrics-guide test && bun run --cwd guides/copilot-model-governance-guide test && bun run --cwd guides/copilot-rollout-playbook-guide test && bun run --cwd guides/copilot-how-tos test && bun run --cwd guides/github-security-operations test",
+    "check": "bun run --cwd hub check && bun run --cwd guides/ai-credits-guide check && bun run --cwd guides/data-residency-guide check && bun run --cwd guides/copilot-governance-guide check && bun run --cwd guides/copilot-control-map-guide check && bun run --cwd guides/copilot-policy-conflicts-guide check && bun run --cwd guides/copilot-managed-settings-guide check && bun run --cwd guides/copilot-mcp-governance-guide check && bun run --cwd guides/copilot-customization-governance-guide check && bun run --cwd guides/copilot-local-sandboxing-guide check && bun run --cwd guides/copilot-cloud-agent-security-guide check && bun run --cwd guides/copilot-automations-governance-guide check && bun run --cwd guides/copilot-network-controls-guide check && bun run --cwd guides/copilot-content-controls-guide check && bun run --cwd guides/copilot-session-data-guide check && bun run --cwd guides/copilot-audit-telemetry-guide check && bun run --cwd guides/copilot-metrics-guide check && bun run --cwd guides/copilot-model-governance-guide check && bun run --cwd guides/copilot-rollout-playbook-guide check && bun run --cwd guides/copilot-how-tos check && bun run --cwd guides/github-security-operations check",
     "preview": "bun scripts/preview.mjs",
-    "test:site": "bun scripts/check-site.mjs",
+    "test:site": "node scripts/check-site.mjs",
     "test:browser": "bun run --cwd guides/ai-credits-guide test:browser && bun run --cwd guides/copilot-governance-guide test:browser && bun run test:site",
-    "test:diagrams": "bun run --cwd guides/ai-credits-guide test:diagrams"
+    "check:diagrams": "node scripts/check-diagrams.mjs",
+    "test:diagrams": "bun run check:diagrams && bun run --cwd guides/ai-credits-guide test:diagrams"
   },
   "devDependencies": {
+    "@base-ui/react": "^1.9.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "@playwright/test": "^1.56.0"
   }
 }
