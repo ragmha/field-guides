@@ -35,6 +35,9 @@ adoption across 27 guides. One monorepo, one site: <https://ragmha.github.io/fie
 | GitHub Enterprise | Static HTML | `/field-guides/github-enterprise-field-guide/` |
 | Agentic Engineering | Static HTML | `/field-guides/agentic-engineering-guide/` |
 
+The [GitHub and Azure AI reference](https://ragmha.github.io/field-guides/platform-references/)
+is a searchable map of products, services and learning resources.
+
 `hub/` contains the single-page collection. It imports the AI Credits guide's
 CSS and uses its Octicons brand mark, system fonts and theme selector.
 The hub and all 27 guides share the `theme` localStorage preference.
@@ -113,7 +116,7 @@ checks PRs and builds the site; updates to `main` deploy to GitHub Pages.
 
 The IDE and prompting how-tos share the
 [`guides/copilot-how-tos/`](guides/copilot-how-tos/README.md) Astro workspace,
-which builds the six guide routes and their shared assets.
+which builds all six guide routes and their shared assets.
 
 For individual Astro development:
 
