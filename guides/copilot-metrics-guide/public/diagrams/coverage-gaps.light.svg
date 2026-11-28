@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="coverage-gaps-light-root" viewBox="0 0 704 584" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="coverage-gaps-light-title coverage-gaps-light-desc">
+        <title id="coverage-gaps-light-title">Layers between activity and reports</title>
+        <desc id="coverage-gaps-light-desc">Developer activity reaches usage reports only through a supported client, enabled telemetry and an open network path; server-side telemetry still identifies some active users.</desc>
+        <defs><marker id="coverage-gaps-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="584" fill="#f3f5f7"/>
+        <rect x="104" y="40" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="68.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Developer activity</text>
+        <text x="352.0" y="84.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">IDE, CLI, github.com, mobile and agents</text>
+        <rect x="104" y="128" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="156.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Supported client and version</text>
+        <text x="352.0" y="172.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Below minimum: below_usage_metrics_minimum_user_count</text>
+        <path d="M 352 104 L 352 128" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#coverage-gaps-light-arrow)"/>
+        <rect x="104" y="216" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="244.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Client telemetry enabled</text>
+        <text x="352.0" y="260.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">For example, VS Code telemetry.telemetryLevel</text>
+        <path d="M 352 192 L 352 216" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#coverage-gaps-light-arrow)"/>
+        <rect x="104" y="304" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="332.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Network path open</text>
+        <text x="352.0" y="348.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A proxy or firewall can block the telemetry endpoint</text>
+        <path d="M 352 280 L 352 304" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#coverage-gaps-light-arrow)"/>
+        <rect x="104" y="392" width="496" height="64" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="420.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Usage reports</text>
+        <text x="352.0" y="436.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Server-side-only users: client_telemetry_present is false</text>
+        <path d="M 352 368 L 352 392" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#coverage-gaps-light-arrow)"/>
+        <text x="40" y="484" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Unknown values appear in the API but not in the dashboard.</text>
+        <text x="40" y="500" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Missing data from known attribution issues cannot be backfilled.</text>
+        <line x1="40" y1="524" x2="664" y2="524" stroke="#d1d9e0"/>
+        <text x="40" y="548" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: layer that activity passes through; arrow: direction of data</text>
+        <text x="40" y="568" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

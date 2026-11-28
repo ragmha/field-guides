@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="github-private-source-light-root" viewBox="0 0 704 796" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="github-private-source-light-title github-private-source-light-desc">
+        <title id="github-private-source-light-title">Publish from .github-private</title>
+        <desc id="github-private-source-light-desc">Create an internal .github-private repository, add copilot/managed-settings.json, protect it with rulesets and code owners, fix any validation issues, then merge so supported clients apply the settings.</desc>
+        <defs><marker id="github-private-source-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="796" fill="#f3f5f7"/>
+        <path d="M 336.0 96 L 336.0 136" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-private-source-light-arrow)"/>
+        <path d="M 336.0 192 L 336.0 232" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-private-source-light-arrow)"/>
+        <path d="M 336.0 288 L 336.0 328" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-private-source-light-arrow)"/>
+        <path d="M 336.0 536 L 336.0 576" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-private-source-light-arrow)"/>
+        <path d="M 336.0 432 L 336.0 480" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-private-source-light-arrow)"/><rect x="344.0" y="446" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="356.25" y="455" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 456.0 380 L 560 380" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-private-source-light-arrow)"/><rect x="500" y="364" width="19.0" height="12" rx="2" fill="#f3f5f7"/><text x="509.5" y="373" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 612 352 L 612 172 A 8 8 0 0 0 604 164 L 496 164" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-private-source-light-arrow)"/>
+        <rect x="176" y="40" width="320" height="56" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="336.0" y="64.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Create internal .github-private</text>
+        <text x="336.0" y="80.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise owners and AI managers edit</text>
+        <rect x="176" y="136" width="320" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="336.0" y="160.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Add copilot/managed-settings.json</text>
+        <text x="336.0" y="176.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Optional team mappings and team files</text>
+        <rect x="176" y="232" width="320" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="336.0" y="256.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Protect with rulesets and code owners</text>
+        <text x="336.0" y="272.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Others propose changes by pull request</text>
+        <polygon points="336.0,328 456.0,380 336.0,432 216.0,380" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="336.0" y="384" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Validation clean?</text>
+        <rect x="176" y="480" width="320" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="336.0" y="512.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Merge to the default branch</text>
+        <rect x="176" y="576" width="320" height="56" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="336.0" y="600.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Supported clients apply it</text>
+        <text x="336.0" y="616.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">About an hour; restart or sign-in is immediate</text>
+        <rect x="560" y="352" width="104" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="612.0" y="384.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Fix the files</text>
+        <text x="40" y="672" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">If validation is unavailable, existing settings continue to apply.</text>
+        <text x="40" y="688" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes path continues down; the fix loop returns to the settings files.</text>
+        <line x1="40" y1="736" x2="664" y2="736" stroke="#d1d9e0"/>
+        <text x="40" y="760" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="780" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>

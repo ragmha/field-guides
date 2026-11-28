@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which clients honor which keys</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Managed Settings · Matrix</p>
+    <h1>Which clients honor which keys</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Which clients honor which keys. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="client-support-matrix-light-title client-support-matrix-light-desc">
+        <title id="client-support-matrix-light-title">Which clients honor which keys</title>
+        <desc id="client-support-matrix-light-desc">A matrix of eight managed-settings keys against Copilot CLI, VS Code, the Copilot app, cloud sandbox and Actions sessions, and JetBrains IDEs, highlighting unsupported combinations.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="540" fill="#f3f5f7"/>
+        <line x1="40" y1="80" x2="664" y2="80" stroke="#d1d9e0"/>
+        <text x="279.0" y="60" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">CLI</text>
+        <text x="349.0" y="60" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">VS Code</text>
+        <text x="419.0" y="60" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">App</text>
+        <text x="489.0" y="52" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Cloud</text>
+        <text x="489.0" y="66" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">sandbox</text>
+        <text x="559.0" y="52" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Cloud</text>
+        <text x="559.0" y="66" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Actions</text>
+        <text x="629.0" y="60" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">JetBrains</text>
+        <text x="40" y="60" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Key</text>
+        <text x="40" y="108" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">permissions.deny</text>
+        <rect x="252" y="92" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="92" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="92" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="419.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="462" y="92" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="489.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="532" y="92" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="559.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="602" y="92" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="629.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="144" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">disableBypassPermissionsMode</text>
+        <rect x="252" y="128" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="128" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="128" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="419.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="462" y="128" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="489.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="532" y="128" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="559.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="602" y="128" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="629.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <text x="40" y="180" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">allowedMcpServers</text>
+        <rect x="252" y="164" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="164" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="164" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="419.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="462" y="164" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="489.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="532" y="164" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="559.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="602" y="164" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="629.0" y="180.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <text x="40" y="216" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">enabledPlugins</text>
+        <rect x="252" y="200" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="216.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="200" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="216.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="200" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="419.0" y="216.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="462" y="200" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="489.0" y="216.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="532" y="200" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="559.0" y="216.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="602" y="200" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="629.0" y="216.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <text x="40" y="252" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">model</text>
+        <rect x="252" y="236" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="252.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="236" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="252.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="236" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="419.0" y="252.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="462" y="236" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="489.0" y="252.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="532" y="236" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="559.0" y="252.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="602" y="236" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="629.0" y="252.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="288" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">autoTier</text>
+        <rect x="252" y="272" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="288.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="272" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="288.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="272" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="419.0" y="288.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="462" y="272" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="489.0" y="288.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="532" y="272" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="559.0" y="288.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="602" y="272" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="629.0" y="288.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="324" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">sandbox</text>
+        <rect x="252" y="308" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="308" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="308" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="419.0" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="462" y="308" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="489.0" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="532" y="308" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="559.0" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="602" y="308" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="629.0" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="360" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">telemetry</text>
+        <rect x="252" y="344" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="279.0" y="360.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="322" y="344" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="349.0" y="360.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="392" y="344" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="419.0" y="360.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <rect x="462" y="344" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="489.0" y="360.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="532" y="344" width="54" height="24" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="559.0" y="360.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <rect x="602" y="344" width="54" height="24" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="629.0" y="360.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Yes</text>
+        <text x="40" y="416" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Sample of keys only. Several keys also need a minimum client version.</text>
+        <text x="40" y="432" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">disableBypassPermissionsMode is under permissions. Recheck the reference before acting.</text>
+        <line x1="40" y1="480" x2="664" y2="480" stroke="#d1d9e0"/>
+        <text x="40" y="504" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rows: keys; columns: clients and session types</text>
+        <text x="40" y="524" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green cell: gap to plan for, not a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

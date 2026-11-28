@@ -1,7 +1,7 @@
 export const parts = [
   { title: 'Käsitteet', pages: ['part-1-overview', 'understand', 'controls', 'part-1-summary'] },
   { title: 'Suunnittelu ja päätökset', pages: ['part-2-overview', 'identify-needs', 'planning', 'part-2-summary'] },
-  { title: 'Käyttöönotto ja ylläpito', pages: ['part-3-overview', 'implementation', 'operate', 'reporting', 'part-3-summary'] },
+  { title: 'Käyttöönotto ja ylläpito', pages: ['part-3-overview', 'implementation', 'operate', 'reporting', 'token-optimization', 'part-3-summary'] },
   { title: 'Tiedon visualisointi', pages: ['part-4-overview', 'github-insights', 'visualise-exports', 'azure-cost-tools', 'grafana-local', 'part-4-summary'] },
 ];
 

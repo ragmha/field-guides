@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="stage-gates-light-root" viewBox="0 0 704 556" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stage-gates-light-title stage-gates-light-desc">
+        <title id="stage-gates-light-title">Expansion stage gates</title>
+        <desc id="stage-gates-light-desc">Access widens from the pilot organization to more organizations and then the enterprise, with the same gate checklist before each stage.</desc>
+        <defs><marker id="stage-gates-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="556" fill="#f3f5f7"/>
+        <text x="40" y="72" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">EXPANSION STAGES</text>
+        <rect x="40" y="88" width="144" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="112.0" y="116.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Pilot org</text>
+        <text x="112.0" y="132.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">One organization</text>
+        <rect x="288" y="88" width="144" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="360.0" y="116.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">More orgs</text>
+        <text x="360.0" y="132.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Own budgets each</text>
+        <rect x="536" y="88" width="128" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="600.0" y="116.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise</text>
+        <text x="600.0" y="132.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise policy</text>
+        <path d="M 184 120 L 208 120" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#stage-gates-light-arrow)"/>
+        <polygon points="208.0 120, 236 96.0, 264.0 120, 236 144.0" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="236" y="124" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Gate</text>
+        <path d="M 264 120 L 288 120" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#stage-gates-light-arrow)"/>
+        <path d="M 432 120 L 456 120" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#stage-gates-light-arrow)"/>
+        <polygon points="456.0 120, 484 96.0, 512.0 120, 484 144.0" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="484" y="124" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Gate</text>
+        <path d="M 512 120 L 536 120" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#stage-gates-light-arrow)"/>
+        <path d="M 236 144 L 236 200" fill="none" stroke="#59636e" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#stage-gates-light-arrow)"/>
+        <path d="M 484 144 L 484 200" fill="none" stroke="#59636e" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#stage-gates-light-arrow)"/>
+        <rect x="152" y="200" width="400" height="128" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="228.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Gate checklist (guide advice)</text>
+        <text x="352.0" y="244.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Adoption stable</text>
+        <text x="352.0" y="260.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Spend within budget</text>
+        <text x="352.0" y="276.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Next budgets raised or added</text>
+        <text x="352.0" y="292.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Policy and agent activity as intended</text>
+        <text x="352.0" y="308.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Feedback reviewed</text>
+        <path d="M 352 328 L 352 376" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#stage-gates-light-arrow)"/>
+        <rect x="361.0" y="346" width="30.0" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="376" y="355" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">FAIL</text>
+        <rect x="152" y="376" width="400" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="404.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Hold or roll back</text>
+        <text x="352.0" y="420.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Turn off policy, tell participants, keep data</text>
+        <text x="40" y="480" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Never skip a stage after a failed gate; fix and recheck instead.</text>
+        <line x1="40" y1="496" x2="664" y2="496" stroke="#d1d9e0"/>
+        <text x="40" y="520" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: stage; diamond: gate; dashed arrow: checklist applied at the gate</text>
+        <text x="40" y="540" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

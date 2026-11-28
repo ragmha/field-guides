@@ -47,6 +47,11 @@ sources:
   - https://learn.microsoft.com/en-us/azure/managed-grafana/grafana-opentelemetry-app-insights
   - https://learn.microsoft.com/en-us/azure/azure-monitor/containers/opentelemetry-protocol-ingestion
   - https://grafana.com/grafana/dashboards/25053-github-copilot/
+  - https://docs.github.com/en/copilot/tutorials/optimize-ai-usage
+  - https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing
+  - https://docs.github.com/en/copilot/reference/custom-instructions-support
+  - https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/
+  - https://learn.github.com/product-guides/github-copilot/accelerate-usage/improve-agent-quality-and-token-optimization
 ---
 
 ## What you will learn
@@ -83,6 +88,17 @@ Release status is reviewed separately from behavior. An absent preview warning i
 | Infinity data source and catalog Copilot dashboard | **Status unverified** for release phase | Reviewed **2026-11-12**: [plugin documentation](https://grafana.com/docs/plugins/yesoreyeram-infinity-datasource/latest/) and [dashboard 25053](https://grafana.com/grafana/dashboards/25053-github-copilot/) document capabilities and prerequisites, not a GA claim |
 | VS Code client OpenTelemetry | **Status unverified** for release phase | Reviewed **2026-11-12**: [monitoring guide](https://code.visualstudio.com/docs/agents/guides/monitoring-agents) has no preview/GA label; Local harness is deprecated, removal planned February 2027 |
 | Azure Monitor OTLP Collector ingestion | <span class="status caution">public preview - use with caution</span> | Reviewed **2026-11-12**: [Grafana guide](https://learn.microsoft.com/en-us/azure/managed-grafana/grafana-opentelemetry-app-insights) labels the [related ingestion article](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/opentelemetry-protocol-ingestion) "(Preview)"; the linked article itself has no visible preview label; tension retained |
+
+## Token optimization sources reviewed 2026-11-27
+
+| Source | Reviewed evidence and limits |
+| --- | --- |
+| [Optimize AI usage](https://docs.github.com/en/copilot/tutorials/optimize-ai-usage) | Model selection, focused prompts, context, caching, session limits and deterministic checks; availability and cache behavior depend on the surface and model. |
+| [Models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing) | Rates distinguish input, cached input, output and applicable cache writes; rates differ by model. |
+| [Custom instruction support](https://docs.github.com/en/copilot/reference/custom-instructions-support) | Supported instruction types differ by client and feature. |
+| [Agentic workflow case study](https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/) | Observed tool-schema overhead, deterministic preparation, usage instrumentation and workload/quality confounders; reported results are not universal savings. |
+| [Agent quality and token optimization](https://learn.github.com/product-guides/github-copilot/accelerate-usage/improve-agent-quality-and-token-optimization) | Indexed excerpts support task scoping, model choice, phased work and deterministic checks. The full JavaScript-rendered page was not accessible to this review; do not infer further claims from it. |
+| [CLI session limits](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/set-session-limit) | Public preview; limits are soft and an in-progress response may exceed the setting. |
 
 ## Visualisation sources reviewed 2026-11-12
 

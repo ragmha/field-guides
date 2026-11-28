@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="network-ownership-map-light-root" viewBox="0 0 704 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="network-ownership-map-light-title network-ownership-map-light-desc">
+        <title id="network-ownership-map-light-title">Who owns each network control</title>
+        <desc id="network-ownership-map-light-desc">A matrix of five Copilot network controls with where each is configured and a recommended owning team.</desc>
+        <defs><marker id="network-ownership-map-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="460" fill="#f3f5f7"/>
+        <rect x="40" y="40" width="200" height="32" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="59.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">CONTROL</text>
+        <rect x="240" y="40" width="248" height="32" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="252" y="59.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">CONFIGURED IN</text>
+        <rect x="488" y="40" width="176" height="32" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1"/>
+        <text x="500" y="59.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">OWNER (GUIDE ADVICE)</text>
+        <rect x="40" y="72" width="200" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="98.0" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Corporate allowlist</text>
+        <rect x="240" y="72" width="248" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="252" y="98.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Firewall and proxy rules</text>
+        <rect x="488" y="72" width="176" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="500" y="98.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Network team</text>
+        <rect x="40" y="116" width="200" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="142.0" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Plan endpoint rules</text>
+        <rect x="240" y="116" width="248" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="252" y="142.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Firewall and proxy rules</text>
+        <rect x="488" y="116" width="176" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="500" y="142.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Network team</text>
+        <rect x="40" y="160" width="200" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="186.0" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Client proxy and trust</text>
+        <rect x="240" y="160" width="248" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="252" y="186.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Editor settings and env variables</text>
+        <rect x="488" y="160" width="176" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="500" y="186.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Desktop team</text>
+        <rect x="40" y="204" width="200" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="230.0" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent firewall</text>
+        <rect x="240" y="204" width="248" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="252" y="230.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Org and repo Internet access tab</text>
+        <rect x="488" y="204" width="176" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="500" y="230.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Organization owners</text>
+        <rect x="40" y="248" width="200" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="274.0" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Runner type</text>
+        <rect x="240" y="248" width="248" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="252" y="274.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Org Copilot Cloud settings</text>
+        <rect x="488" y="248" width="176" height="44" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="500" y="274.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Organization owners</text>
+        <rect x="488" y="40" width="176" height="32" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1"/>
+        <text x="500" y="59.0" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">OWNER (GUIDE ADVICE)</text>
+        <text x="40" y="332" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Owners are a guide recommendation, not GitHub roles.</text>
+        <text x="40" y="348" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Organizations can lock firewall settings so repositories cannot change them.</text>
+        <line x1="40" y1="400" x2="664" y2="400" stroke="#d1d9e0"/>
+        <text x="40" y="424" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: item; column: attribute; header row: column names</text>
+        <text x="40" y="444" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green cell: lesson focus, not approval or a safety rating</text>
+      </svg>

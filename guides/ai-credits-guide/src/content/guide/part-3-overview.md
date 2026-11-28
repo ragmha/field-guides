@@ -16,5 +16,6 @@ A configuration is not an operating model until people can verify its behavior, 
 - Apply the Start, Adopt and Advance roadmap without automating an unproven process.
 - Diagnose the limiting control and route recovery through the right approver.
 - Map and reconcile usage before using it for showback or chargeback.
+- Reduce unnecessary agent work while measuring task quality and credit usage.
 
-Begin with a small pilot and explicit acceptance checks. Next, rehearse an alert-to-decision response so spare budget in the wrong scope does not lead to an ineffective change. Finally, follow a usage record through ownership mapping and reconciliation. The summary closes the course with the operating habits that keep the design reliable.
+Begin with a small pilot and explicit acceptance checks. Next, rehearse an alert-to-decision response so spare budget in the wrong scope does not lead to an ineffective change. Follow a usage record through ownership mapping and reconciliation, then improve efficiency without weakening quality or controls. The summary closes with the operating habits that keep the design reliable.

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="repository-mcp-config-light-root" viewBox="0 0 704 508" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="repository-mcp-config-light-title repository-mcp-config-light-desc">
+        <title id="repository-mcp-config-light-title">Configure and validate repository MCP</title>
+        <desc id="repository-mcp-config-light-desc">Write the configuration with a tools list, save it for validation, add COPILOT_MCP_ secrets, assign an issue, and check the Start MCP Servers step.</desc>
+        <defs><marker id="repository-mcp-config-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="508" fill="#f3f5f7"/>
+        <path d="M 40 200 L 656 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#repository-mcp-config-light-arrow)"/>
+        <line x1="128" y1="195" x2="128" y2="144" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="107.5" y="214" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="128" y="223" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 1</text>
+        <line x1="240" y1="205" x2="240" y2="256" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="219.5" y="174" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="240" y="183" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 2</text>
+        <line x1="352" y1="195" x2="352" y2="144" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="331.5" y="214" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="352" y="223" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 3</text>
+        <line x1="464" y1="205" x2="464" y2="256" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="443.5" y="174" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="464" y="183" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 4</text>
+        <line x1="576" y1="195" x2="576" y2="144" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="555.5" y="214" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="576" y="223" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 5</text>
+        <circle cx="128" cy="200" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="40" y="64" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="128" y="100" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Write config</text>
+        <text x="128" y="116" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">mcpServers with tools list</text>
+        <circle cx="240" cy="200" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="152" y="256" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="240" y="292" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Save configuration</text>
+        <text x="240" y="308" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Syntax is validated</text>
+        <circle cx="352" cy="200" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="264" y="64" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="100" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Add Agents secrets</text>
+        <text x="352" y="116" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">COPILOT_MCP_ prefix</text>
+        <circle cx="464" cy="200" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="376" y="256" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="464" y="292" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assign an issue</text>
+        <text x="464" y="308" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Open View session</text>
+        <circle cx="576" cy="200" r="5" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <rect x="488" y="64" width="176" height="80" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="576" y="100" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Start MCP Servers</text>
+        <text x="576" y="116" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Only allowed tools listed</text>
+        <text x="40" y="392" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Code review evidence appears under Setting up environment.</text>
+        <text x="40" y="408" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Configured tools run without approval, so list specific read-only tools.</text>
+        <line x1="40" y1="448" x2="664" y2="448" stroke="#d1d9e0"/>
+        <text x="40" y="472" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Axis: order of steps; boxes alternate above and below for readability</text>
+        <text x="40" y="492" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>

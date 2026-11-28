@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="investigation-playbook-light-root" viewBox="0 0 704 684" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="investigation-playbook-light-title investigation-playbook-light-desc">
+        <title id="investigation-playbook-light-title">Five steps to a bounded finding</title>
+        <desc id="investigation-playbook-light-desc">Scope the question, triage with the audit log, collect from each source in its window, attribute actions to users and agents, then write a bounded conclusion.</desc>
+        <defs><marker id="investigation-playbook-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="684" fill="#f3f5f7"/>
+        <path d="M 352 120 L 352 152" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#investigation-playbook-light-arrow)"/>
+        <path d="M 352 232 L 352 264" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#investigation-playbook-light-arrow)"/>
+        <path d="M 352 344 L 352 376" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#investigation-playbook-light-arrow)"/>
+        <path d="M 352 456 L 352 488" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#investigation-playbook-light-arrow)"/>
+        <rect x="40" y="40" width="624" height="80" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="76" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Scope</text>
+        <text x="352" y="92" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Question, time range, people</text>
+        <rect x="40" y="152" width="624" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="188" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Triage</text>
+        <text x="352" y="204" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">action:copilot and actor:Copilot</text>
+        <rect x="40" y="264" width="624" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="300" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Collect</text>
+        <text x="352" y="316" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Each source within its window</text>
+        <rect x="40" y="376" width="624" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="412" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Attribute</text>
+        <text x="352" y="428" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Initiating user, agent session, commit</text>
+        <rect x="40" y="488" width="624" height="80" rx="20" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352" y="524" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Conclude</text>
+        <text x="352" y="540" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">What it shows, what it does not, gaps</text>
+        <line x1="40" y1="624" x2="664" y2="624" stroke="#d1d9e0"/>
+        <text x="40" y="648" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; arrow: next step</text>
+        <text x="40" y="668" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

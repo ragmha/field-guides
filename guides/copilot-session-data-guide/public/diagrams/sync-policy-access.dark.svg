@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="sync-policy-access-dark-root" viewBox="0 0 704 532" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sync-policy-access-dark-title sync-policy-access-dark-desc">
+        <title id="sync-policy-access-dark-title">Availability is not access</title>
+        <desc id="sync-policy-access-dark-desc">Administrators decide whether local sessions can sync. Users own synced sessions and choose what to share. Collaborators see only what is shared, view-only.</desc>
+        <defs><marker id="sync-policy-access-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="532" fill="#07090d"/>
+        <text x="40" y="92" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Administrator</text>
+        <text x="40" y="212" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User</text>
+        <line x1="40" y1="148" x2="664" y2="148" stroke="#3d444d"/>
+        <text x="40" y="332" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Collaborators</text>
+        <line x1="40" y1="268" x2="664" y2="268" stroke="#3d444d"/>
+        <path d="M 292 116 L 292 178" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#sync-policy-access-dark-arrow)"/><rect x="257.2" y="141" width="69.6" height="12" rx="2" fill="#07090d"/><text x="292" y="150" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ENABLES SYNC</text>
+        <path d="M 400 208 L 446 208" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#sync-policy-access-dark-arrow)"/>
+        <path d="M 556 236 L 556 298" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#sync-policy-access-dark-arrow)"/><rect x="529.1" y="261" width="53.7" height="12" rx="2" fill="#07090d"/><text x="556" y="270" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">VIEW-ONLY</text>
+        <rect x="184" y="60" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="292.0" y="84.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Set cloud storage policy</text>
+        <text x="292.0" y="100.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">At least View from cloud</text>
+        <rect x="448" y="60" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="556.0" y="84.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">No content access</text>
+        <text x="556.0" y="100.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enabling grants no access</text>
+        <rect x="184" y="180" width="216" height="56" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="292.0" y="204.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Owns synced sessions</text>
+        <text x="292.0" y="220.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Personal account, private</text>
+        <rect x="448" y="180" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="556.0" y="204.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Chooses to share</text>
+        <text x="556.0" y="220.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Or opts out with remoteExport</text>
+        <rect x="448" y="300" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="556.0" y="324.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">View shared sessions</text>
+        <text x="556.0" y="340.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Repository access; no steering</text>
+        <text x="40" y="408" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Policy disabled or not configured: sessions stay local only.</text>
+        <text x="40" y="424" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">VS Code adds the CopilotSessionSync group policy; users cannot override either.</text>
+        <line x1="40" y1="472" x2="664" y2="472" stroke="#3d444d"/>
+        <text x="40" y="496" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: who acts; rectangle: responsibility; arrow: what it enables</text>
+        <text x="40" y="516" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

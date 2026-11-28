@@ -1,0 +1,26 @@
+<svg viewBox="0 0 772 148" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="weekly-review-title weekly-review-desc">
+<title id="weekly-review-title">A thirty-minute weekly review</title><desc id="weekly-review-desc">Coverage gaps, unowned and overdue alerts, pending decisions, one recurring pattern, then owned actions. Active exposure goes to incident response immediately.</desc>
+<defs><marker id="weekly-review-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="772" height="148" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="24" y="32" width="124" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="86.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Coverage</text>
+<text x="86.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">5 min</text>
+<line x1="148" y1="64.0" x2="172" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#weekly-review-arrow)"/>
+<rect x="174" y="32" width="124" height="64" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="236.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Unowned, overdue</text>
+<text x="236.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">10 min</text>
+<line x1="298" y1="64.0" x2="322" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#weekly-review-arrow)"/>
+<rect x="324" y="32" width="124" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="386.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Decisions</text>
+<text x="386.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">5 min</text>
+<line x1="448" y1="64.0" x2="472" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#weekly-review-arrow)"/>
+<rect x="474" y="32" width="124" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="536.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">One pattern</text>
+<text x="536.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">5 min</text>
+<line x1="598" y1="64.0" x2="622" y2="64.0" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#weekly-review-arrow)"/>
+<rect x="624" y="32" width="124" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="686.0" y="60.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Actions</text>
+<text x="686.0" y="78.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">5 min</text>
+<text x="386" y="128" text-anchor="middle" font-size="11" class="muted" fill="#59636e">Active exposure never waits for this meeting</text>
+</g></svg>

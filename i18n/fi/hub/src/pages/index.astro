@@ -1,5 +1,5 @@
 ---
-import { guides } from '../../../guides.mjs';
+import { guides, platformReferences } from '../../../guides.mjs';
 import { finnishGuideStatus } from '../../../shared/translation-status.mjs';
 import heroArt from '../assets/enterprise-network.jpg';
 import '../../../guides/ai-credits-guide/src/styles/global.css';
@@ -36,6 +36,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </a>
       <nav class="breadcrumbs" aria-label="Navigointi"><a href="#guides">Tutustu kokoelmaan</a></nav>
       <a class="github-link" href="https://github.com/ragmha/field-guides">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="history-link" href={`${base}/history/`}>Lukuhistoria</a>
       <label class="theme-label"><span aria-hidden="true">◐</span><span class="sr-only">Väriteema</span><select id="theme" aria-label="Väriteema"><option value="system">Järjestelmä</option><option value="light">Vaalea</option><option value="dark">Tumma</option></select></label>
     </header>
     <main id="content">
@@ -56,11 +57,29 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           </div>
           <div class="guide-grid">
             {guides.map(guide => (
-              <article class="guide-card">
+              <article class="guide-card" data-reading-guide-card={guide.name} data-part-count={guide.parts}>
                 <div class="card-meta">{guide.parts} OSAA / EN{finnishGuideStatus[guide.name] === 'complete' ? ' · FI' : finnishGuideStatus[guide.name] === 'partial' ? ' · FI (osittain)' : ''}</div>
                 <h3>{guide.title}</h3>
                 <p>{guide.description}</p>
+                <p class="reading-progress-count" data-reading-progress>0 / {guide.parts} osaa luettu</p>
+                <a class="continue-reading" href={`${base}/${guide.name}/`} data-continue-reading hidden>Jatka lukemista <span aria-hidden="true">→</span></a>
                 <a class="get-started" href={`${base}/${guide.name}/`} aria-label={`Aloita: ${guide.title}`}>Aloita <span aria-hidden="true">→</span></a>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section id="platform-references" aria-labelledby="platform-references-heading">
+          <div class="collection-heading">
+            <h2 id="platform-references-heading">Alustaviitteet</h2>
+            <p>Tutustu interaktiivisiin karttoihin GitHub-alustasta ja Azure AI -palveluista.</p>
+          </div>
+          <div class="reference-grid">
+            {platformReferences.map(reference => (
+              <article class="guide-card reference-card">
+                <div class="card-meta">INTERAKTIIVINEN KARTTA / EN</div>
+                <h3>{reference.title}</h3>
+                <p>{reference.description}</p>
+                <a class="get-started" href={`${base}/${reference.name}/`} aria-label={`Tutustu: ${reference.title}`}>Tutustu karttaan <span aria-hidden="true">→</span></a>
               </article>
             ))}
           </div>
@@ -83,12 +102,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       });
       media.addEventListener('change', applyTheme);
     </script>
+    <script is:inline src={`${base}/reading-progress.js`}></script>
   </body>
 </html>
 <style>
   .hub{max-width:1120px;margin:0 auto}
   main{padding:0 44px 20px}
   .github-link{margin-left:auto;color:var(--muted);font-size:13px;text-decoration:none;white-space:nowrap}
+  .history-link{color:var(--body);font-size:13px;text-decoration:none;white-space:nowrap}
   .theme-label{margin-left:0}
   .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:center;gap:52px;padding:80px 0;border-bottom:1px solid var(--rule)}
   .hero-copy{min-width:0}
@@ -107,8 +128,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .card-meta{font:600 11px/1.6 var(--font-mono);letter-spacing:1px;color:var(--muted)}
   .guide-card h3{font-size:24px;letter-spacing:-.5px;line-height:1.3;color:var(--ink);margin:20px 0 14px}
   .guide-card p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 28px}
+  .reading-progress-count{font:12px/1.5 var(--font-mono)!important;color:var(--muted)!important;margin:0 0 8px!important}
+  .continue-reading{font-size:13px;font-weight:600;text-decoration:none;margin-bottom:10px}
   .get-started{display:flex;justify-content:space-between;margin-top:auto;padding-top:18px;border-top:1px solid var(--rule);font-size:14px;font-weight:650;text-decoration:none}
   @media(max-width:1000px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(max-width:760px){main{padding:0 22px 12px}.hero{grid-template-columns:1fr;gap:32px;padding:56px 0}.guide-grid{grid-template-columns:1fr;gap:18px}.guide-card{padding:24px}.topbar{gap:12px}.brand{min-width:0;white-space:normal;line-height:1.25}.github-link{font-size:12px}.collection-heading{padding-top:36px}}
+  .reference-grid{display:block}
+  .reference-card{max-width:560px}
   @media(max-width:400px){.topbar{padding:0 12px;gap:8px}.brand{gap:6px;font-size:13px}.brand-mark{width:22px;height:22px}.theme-label>span[aria-hidden]{display:none}}
 </style>

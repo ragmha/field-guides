@@ -10,9 +10,10 @@ interface Props {
   stale: boolean;
   start: string;
   secondary: { href: string; label: string };
-  parts: { title: string; description: string; href: string }[];
+  readingProgress?: boolean;
+  parts: { title: string; description: string; href: string; linkLabel?: string }[];
 }
-const { name, art, alt, reviewed, stale, start, secondary, parts } = Astro.props;
+const { name, art, alt, reviewed, stale, start, secondary, readingProgress = false, parts } = Astro.props;
 const guide = guides.find(guide => guide.name === name);
 if (!guide) throw new Error(`Unknown guide: ${name}`);
 const reviewedOn = new Date(`${reviewed}T00:00:00Z`).toLocaleDateString('fi-FI', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -35,11 +36,12 @@ const reviewedOn = new Date(`${reviewed}T00:00:00Z`).toLocaleDateString('fi-FI',
     <p>Aloita osasta 1 tai siirry suoraan tarvitsemaasi osaan.</p>
     <ol class="part-grid">
       {parts.map((part, index) => (
-        <li class="part-card" id={`part-${index + 1}`}>
+        <li class="part-card" id={`part-${index + 1}`} data-reading-part={index + 1}>
           <div class="part-top"><span aria-hidden="true">↖</span><span>{String(index + 1).padStart(2, '0')}</span></div>
           <h3>{part.title}</h3>
           <p>{part.description}</p>
-          <a href={part.href}>Näytä luvut<span class="sr-only">: {part.title}</span> <span aria-hidden="true">→</span></a>
+          {readingProgress && <span class="reading-part-status" data-part-status>Ei luettu</span>}
+          <a href={part.href}>{part.linkLabel ?? 'Näytä luvut'}<span class="sr-only">{part.linkLabel ? `: ${part.title}` : ` ${part.title}`}</span> <span aria-hidden="true">→</span></a>
         </li>
       ))}
     </ol>

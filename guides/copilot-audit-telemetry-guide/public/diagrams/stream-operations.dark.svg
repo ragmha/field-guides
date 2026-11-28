@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="stream-operations-dark-root" viewBox="0 0 704 508" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stream-operations-dark-title stream-operations-dark-desc">
+        <title id="stream-operations-dark-title">Keep a stream healthy</title>
+        <desc id="stream-operations-dark-desc">A paused stream buffers up to seven days, resumes from a week earlier after longer pauses and needs a new stream after three weeks; run the health check and fix failures within six days.</desc>
+        <defs><marker id="stream-operations-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="508" fill="#07090d"/>
+        <text x="40" y="284" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">IF THE DAILY CHECK FAILS</text>
+        <path d="M 352 120 L 352 160" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#stream-operations-dark-arrow)"/>
+        <rect x="40" y="40" width="624" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="76" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Stream enabled</text>
+        <text x="352" y="92" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Health checked every 24 hours</text>
+        <rect x="40" y="160" width="197.33333333333334" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="138.66666666666669" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Paused under 7 days</text>
+        <text x="138.66666666666669" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Buffered events are sent</text>
+        <rect x="253.33333333333334" y="160" width="197.33333333333334" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Paused over 7 days</text>
+        <text x="352" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Resumes from one week earlier</text>
+        <rect x="466.6666666666667" y="160" width="197.33333333333334" height="80" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="565.3333333333334" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Paused 3+ weeks</text>
+        <text x="565.3333333333334" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Create a new stream</text>
+        <rect x="40" y="296" width="624" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="332" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Health check fails</text>
+        <text x="352" y="348" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Fix the destination within 6 days</text>
+        <text x="40" y="408" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Every pause is a possible gap. Record the pause window next to any finding that spans it.</text>
+        <line x1="40" y1="448" x2="664" y2="448" stroke="#3d444d"/>
+        <text x="40" y="472" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: state; rectangle: pause outcome; arrow: what can happen next</text>
+        <text x="40" y="492" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

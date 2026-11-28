@@ -9,9 +9,10 @@
 <script src="theme.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="guide">
+<body class="guide" data-reading-guide="github-enterprise-field-guide" data-reading-page="overview" data-reading-page-title="GitHub Enterprise">
 <header class="topbar">
   <p class="breadcrumb"><a class="collection-home" href="../"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="26" height="26"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>Enterprise enablement</a><span aria-hidden="true">/</span><a href="./">GitHub Enterprise</a><span aria-hidden="true">/</span><span aria-current="page">Platform governance</span></p>
+  <a class="history-link" href="../history/">Reading history</a>
   <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
 </header>
 
@@ -32,16 +33,16 @@
     <h2 id="parts-title">Parts</h2>
     <p>Ten decisions. Start with the platform, or jump to the one you need.</p>
     <ol class="part-grid">
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>01</span></div><h3>Choose the platform and account type</h3><p>The biggest decision, and the hardest to reverse. Identity, external access and migration effort all follow from it.</p><a href="#platform">Open section<span class="sr-only">: Choose the platform and account type</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>02</span></div><h3>Identity: sign-in and provisioning</h3><p>SSO decides who can sign in. SCIM decides who exists and in which groups.</p><a href="#identity">Open section<span class="sr-only">: Identity: sign-in and provisioning</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>03</span></div><h3>Roles and authorization</h3><p>A short role catalogue: what each role allows, who approves it and how often it’s reviewed.</p><a href="#roles">Open section<span class="sr-only">: Roles and authorization</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>04</span></div><h3>External users</h3><p>Partners and contractors: hard to identify, hard to review and easy to forget.</p><a href="#external">Open section<span class="sr-only">: External users</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>05</span></div><h3>On- and offboarding</h3><p>Request roles, swap groups when people move and let SCIM remove leavers.</p><a href="#lifecycle">Open section<span class="sr-only">: On- and offboarding</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>06</span></div><h3>Audit and compliance</h3><p>Three records that line up: the ticket, the IdP log and the GitHub audit log.</p><a href="#audit">Open section<span class="sr-only">: Audit and compliance</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>07</span></div><h3>Licensing and rollout at scale</h3><p>Know who holds a licence, match Visual Studio subscribers and reconcile against the IdP.</p><a href="#licensing">Open section<span class="sr-only">: Licensing and rollout at scale</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>08</span></div><h3>Cost: what else gets billed</h3><p>The seat is only part of the bill. Every other meter needs an owner and a budget.</p><a href="#cost">Open section<span class="sr-only">: Cost: what else gets billed</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>09</span></div><h3>ITSM and fulfilment</h3><p>Keep the ITSM tool as the system of record and let the IdP do the granting.</p><a href="#itsm">Open section<span class="sr-only">: ITSM and fulfilment</span> <span aria-hidden="true">→</span></a></li>
-    <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>10</span></div><h3>Pilot and phased rollout</h3><p>Prerequisites, a pilot, expansion in waves, then regular reviews.</p><a href="#rollout">Open section<span class="sr-only">: Pilot and phased rollout</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="1"><div class="part-top"><span aria-hidden="true">↖</span><span>01</span></div><h3>Choose the platform and account type</h3><p>The biggest decision, and the hardest to reverse. Identity, external access and migration effort all follow from it.</p><a href="#platform">Open section<span class="sr-only">: Choose the platform and account type</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="2"><div class="part-top"><span aria-hidden="true">↖</span><span>02</span></div><h3>Identity: sign-in and provisioning</h3><p>SSO decides who can sign in. SCIM decides who exists and in which groups.</p><a href="#identity">Open section<span class="sr-only">: Identity: sign-in and provisioning</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="3"><div class="part-top"><span aria-hidden="true">↖</span><span>03</span></div><h3>Roles and authorization</h3><p>A short role catalogue: what each role allows, who approves it and how often it’s reviewed.</p><a href="#roles">Open section<span class="sr-only">: Roles and authorization</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="4"><div class="part-top"><span aria-hidden="true">↖</span><span>04</span></div><h3>External users</h3><p>Partners and contractors: hard to identify, hard to review and easy to forget.</p><a href="#external">Open section<span class="sr-only">: External users</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="5"><div class="part-top"><span aria-hidden="true">↖</span><span>05</span></div><h3>On- and offboarding</h3><p>Request roles, swap groups when people move and let SCIM remove leavers.</p><a href="#lifecycle">Open section<span class="sr-only">: On- and offboarding</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="6"><div class="part-top"><span aria-hidden="true">↖</span><span>06</span></div><h3>Audit and compliance</h3><p>Three records that line up: the ticket, the IdP log and the GitHub audit log.</p><a href="#audit">Open section<span class="sr-only">: Audit and compliance</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="7"><div class="part-top"><span aria-hidden="true">↖</span><span>07</span></div><h3>Licensing and rollout at scale</h3><p>Know who holds a licence, match Visual Studio subscribers and reconcile against the IdP.</p><a href="#licensing">Open section<span class="sr-only">: Licensing and rollout at scale</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="8"><div class="part-top"><span aria-hidden="true">↖</span><span>08</span></div><h3>Cost: what else gets billed</h3><p>The seat is only part of the bill. Every other meter needs an owner and a budget.</p><a href="#cost">Open section<span class="sr-only">: Cost: what else gets billed</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="9"><div class="part-top"><span aria-hidden="true">↖</span><span>09</span></div><h3>ITSM and fulfilment</h3><p>Keep the ITSM tool as the system of record and let the IdP do the granting.</p><a href="#itsm">Open section<span class="sr-only">: ITSM and fulfilment</span> <span aria-hidden="true">→</span></a></li>
+    <li class="part-card" data-reading-part="10"><div class="part-top"><span aria-hidden="true">↖</span><span>10</span></div><h3>Pilot and phased rollout</h3><p>Prerequisites, a pilot, expansion in waves, then regular reviews.</p><a href="#rollout">Open section<span class="sr-only">: Pilot and phased rollout</span> <span aria-hidden="true">→</span></a></li>
     </ol>
   </section>
 </div>
@@ -64,7 +65,7 @@
 <p>Each recommendation links to official documentation, which remains the source of truth.</p>
 <p class="scope-note"><b>Where this fits:</b> This assessment focuses on GitHub Well-Architected <a href="https://learn.github.com/well-architected/governance/overview">Governance</a> and <a href="https://learn.github.com/well-architected/architecture/overview">Architecture</a>—especially enterprise boundaries, identity, access, audit and operating decisions. It is not a full review of application security, collaboration or developer productivity; use the <a href="https://learn.github.com/well-architected/">full framework</a> for those pillars.</p>
 
-<details id="platform" open>
+<details id="platform" data-reading-part="1" open>
 <summary><span class="n">1</span>Choose the platform and account type</summary>
 <div class="body">
 <p>The biggest decision, and the hardest to reverse. Answer it first because identity, external access and migration effort all follow from it.</p>
@@ -101,7 +102,7 @@
 </div>
 </details>
 
-<details id="identity">
+<details id="identity" data-reading-part="2">
 <summary><span class="n">2</span>Identity: sign-in and provisioning</summary>
 <div class="body">
 <p>Two separate controls. <b>SSO</b> decides who can sign in. <b>SCIM</b> decides who exists and in which groups. Without SCIM, removing someone in the IdP does not remove them from GitHub.</p>
@@ -140,7 +141,7 @@
 </div>
 </details>
 
-<details id="roles">
+<details id="roles" data-reading-part="3">
 <summary><span class="n">3</span>Roles and authorization</summary>
 <div class="body">
 <p>A role catalogue is a short table: role, layer, what it allows, who approves it and how often it's reviewed.</p>
@@ -174,7 +175,7 @@
 </div>
 </details>
 
-<details id="external">
+<details id="external" data-reading-part="4">
 <summary><span class="n">4</span>External users</summary>
 <div class="body">
 <p>Partners and contractors are usually the riskiest group: they're hard to identify, hard to review and easy to forget.</p>
@@ -203,7 +204,7 @@
 </div>
 </details>
 
-<details id="lifecycle">
+<details id="lifecycle" data-reading-part="5">
 <summary><span class="n">5</span>On- and offboarding</summary>
 <div class="body">
 <a href="assets/access-lifecycle.svg"><img src="assets/access-lifecycle.svg" alt="Eight steps from ITSM request through approvals, Entra group change, provisioning, evidence, review and removal"></a>
@@ -232,7 +233,7 @@
 </div>
 </details>
 
-<details id="audit">
+<details id="audit" data-reading-part="6">
 <summary><span class="n">6</span>Audit and compliance</summary>
 <div class="body">
 <p>An auditor wants three records that line up: the <b>ticket</b> (why, who approved), the <b>IdP log</b> (group change) and the <b>GitHub audit log</b> (what happened).</p>
@@ -265,7 +266,7 @@
 </div>
 </details>
 
-<details id="licensing">
+<details id="licensing" data-reading-part="7">
 <summary><span class="n">7</span>Licensing and rollout at scale</summary>
 <div class="body">
 <ul class="qs">
@@ -290,7 +291,7 @@
 </div>
 </details>
 
-<details id="cost">
+<details id="cost" data-reading-part="8">
 <summary><span class="n">8</span>Cost: what else gets billed</summary>
 <div class="body">
 <p>The seat is only part of the bill. Everything below has its own meter and needs an owner and a budget.</p>
@@ -324,7 +325,7 @@
 </div>
 </details>
 
-<details id="itsm">
+<details id="itsm" data-reading-part="9">
 <summary><span class="n">9</span>ITSM and fulfilment</summary>
 <div class="body">
 <p>Keep the ITSM tool as the system of record. Let the IdP do the granting. Avoid a person clicking in GitHub.</p>
@@ -353,7 +354,7 @@
 </div>
 </details>
 
-<details id="rollout">
+<details id="rollout" data-reading-part="10">
 <summary><span class="n">10</span>Pilot and phased rollout</summary>
 <div class="body">
 <ol class="phases">
@@ -402,5 +403,6 @@ const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.
 if(location.hash){const d=document.querySelector(location.hash);if(d&&d.tagName==='DETAILS')d.open=true}
 draw();
 </script>
+<script src="../reading-progress.js" defer></script>
 </body>
 </html>

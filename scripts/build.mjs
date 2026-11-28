@@ -1,21 +1,35 @@
 import { cpSync, existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, rmSync, symlinkSync, unlinkSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { guides } from '../guides.mjs';
+import { guides, platformReferences } from '../guides.mjs';
+import { copyOutput } from './copy-output.mjs';
 
-const sites = [{ name: 'hub', type: 'astro' }, ...guides];
-const sourceOf = name => (name === 'hub' ? 'hub' : `guides/${name}`);
+const sites = [{ name: 'hub', type: 'astro' }, ...guides, ...platformReferences];
+const sourceOf = guide => (guide.name === 'hub' ? 'hub' : `guides/${guide.workspace ?? guide.name}`);
 const locales = existsSync('i18n') ? readdirSync('i18n').filter(locale => /^[a-z]{2}$/.test(locale)) : [];
 
 function build(root, out, base) {
-  for (const { name, type } of sites) {
-    const source = join(root, sourceOf(name));
-    const target = name === 'hub' ? out : join(out, name);
+  mkdirSync(out, { recursive: true });
+  cpSync(join(root, 'shared/reading-progress.js'), join(out, 'reading-progress.js'));
+  const builtWorkspaces = new Set();
+  for (const guide of sites) {
+    const { name, type } = guide;
+    const source = join(root, sourceOf(guide));
+    if (builtWorkspaces.has(source)) continue;
+    builtWorkspaces.add(source);
+    const target = name === 'hub' || guide.workspace ? out : join(out, name);
     if (type === 'astro') {
       const result = spawnSync('bun', ['run', 'build'], { cwd: source, stdio: 'inherit', env: { ...process.env, SITE_BASE: base } });
       if (result.error) throw result.error;
       if (result.status !== 0) process.exit(result.status ?? 1);
-      cpSync(join(source, 'dist'), target, { recursive: true });
+      if (guide.workspace) {
+        for (const entry of guides.filter(entry => entry.workspace === guide.workspace)) {
+          if (!existsSync(join(source, 'dist', entry.name, 'index.html'))) {
+            throw new Error(`Missing output for ${entry.name} in ${source}/dist`);
+          }
+        }
+      }
+      copyOutput(join(source, 'dist'), target);
     } else {
       // ponytail: static guides need copying, not a bundler.
       mkdirSync(target, { recursive: true });
@@ -25,13 +39,15 @@ function build(root, out, base) {
         }
       }
     }
+    if (target !== out) cpSync(join(root, 'shared/reading-progress.js'), join(target, 'reading-progress.js'));
   }
 }
 
 // Translations are an overlay: i18n/<locale>/ mirrors source paths, and untranslated files fall back to English.
 function buildLocale(locale) {
   const work = resolve('.i18n-build', locale);
-  const links = sites.map(({ name }) => join(work, sourceOf(name), 'node_modules'));
+  const packageSources = [...new Set(sites.filter(guide => guide.type === 'astro').map(sourceOf))];
+  const links = packageSources.map(source => join(work, source, 'node_modules'));
   const unlink = () => links.forEach(path => { try { if (lstatSync(path).isSymbolicLink()) unlinkSync(path); } catch {} });
   unlink();
   rmSync(work, { recursive: true, force: true });
@@ -39,9 +55,10 @@ function buildLocale(locale) {
     for (const entry of ['guides.mjs', 'shared', 'hub', 'guides']) {
       cpSync(entry, join(work, entry), { recursive: true, filter: path => !/[\\/](node_modules|dist|\.astro)$/.test(path) });
     }
-    for (const { name } of sites) {
-      const modules = resolve(sourceOf(name), 'node_modules');
-      if (existsSync(modules)) symlinkSync(modules, join(work, sourceOf(name), 'node_modules'), 'junction');
+    cpSync('guides.mjs', join(work, 'guides.en.mjs'));
+    for (const source of packageSources) {
+      const modules = resolve(source, 'node_modules');
+      if (existsSync(modules)) symlinkSync(modules, join(work, source, 'node_modules'), 'junction');
     }
     cpSync(join('i18n', locale), work, { recursive: true });
     build(work, join('dist', locale), `/field-guides/${locale}`);

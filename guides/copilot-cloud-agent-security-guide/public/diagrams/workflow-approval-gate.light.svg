@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="workflow-approval-gate-light-root" viewBox="0 0 704 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="workflow-approval-gate-light-title workflow-approval-gate-light-desc">
+        <title id="workflow-approval-gate-light-title">Workflow approval gate timeline</title>
+        <desc id="workflow-approval-gate-light-desc">Timeline from agent push to workflow inspection, Approve and run workflows, and CI results on the pull request.</desc>
+        <defs><marker id="workflow-approval-gate-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="580" fill="#f3f5f7"/>
+        <path d="M 40 152 L 664 152" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#workflow-approval-gate-light-arrow)"/>
+        <line x1="96" y1="152" x2="96" y2="216" stroke="#59636e" stroke-width="1.5"/>
+        <line x1="224" y1="152" x2="224" y2="216" stroke="#59636e" stroke-width="1.5"/>
+        <line x1="352" y1="152" x2="352" y2="216" stroke="#59636e" stroke-width="1.5"/>
+        <line x1="480" y1="152" x2="480" y2="216" stroke="#59636e" stroke-width="1.5"/>
+        <line x1="608" y1="152" x2="608" y2="216" stroke="#59636e" stroke-width="1.5"/>
+        <path d="M 608 288 L 608 352" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#workflow-approval-gate-light-arrow)"/><rect x="616" y="314" width="30" height="12" rx="2" fill="#f3f5f7"/><text x="631" y="323" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">THEN</text>
+        <text x="40" y="96" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">DEFAULT: REQUIRE APPROVAL FOR WORKFLOW RUNS</text>
+        <text x="96" y="132" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="600">STEP 1</text>
+        <circle cx="96" cy="152" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="40" y="216" width="112" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="96" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent pushes</text>
+        <text x="96" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">copilot/ branch</text>
+        <text x="224" y="132" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="600">STEP 2</text>
+        <circle cx="224" cy="152" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="168" y="216" width="112" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="224" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Runs wait</text>
+        <text x="224" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not automatic</text>
+        <text x="352" y="132" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="600">STEP 3</text>
+        <circle cx="352" cy="152" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="296" y="216" width="112" height="72" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Inspect diff</text>
+        <text x="352" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Workflow files</text>
+        <text x="480" y="132" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="600">STEP 4</text>
+        <circle cx="480" cy="152" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="424" y="216" width="112" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="480" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Approve runs</text>
+        <text x="480" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Write access</text>
+        <text x="608" y="132" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="600">STEP 5</text>
+        <circle cx="608" cy="152" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="552" y="216" width="112" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="608" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">CI results</text>
+        <text x="608" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Evidence only</text>
+        <rect x="40" y="352" width="624" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="384" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Pull request approval is a separate decision</text>
+        <text x="352" y="400" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Independent reviewer approves; a human merges</text>
+        <text x="40" y="464" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">An approved run executes the pushed code with the workflow token and any secrets it uses.</text>
+        <text x="40" y="480" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">If a repository turns approval off, runs start right after the push with no human checkpoint.</text>
+        <line x1="40" y1="512" x2="664" y2="512" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="40" y="536" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Timeline: order of events on one push; markers: steps; arrow: next decision</text>
+        <text x="40" y="556" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

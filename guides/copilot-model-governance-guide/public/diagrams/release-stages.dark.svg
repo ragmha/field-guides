@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="release-stages-dark-root" viewBox="0 0 704 416" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="release-stages-dark-title release-stages-dark-desc">
+        <title id="release-stages-dark-title">Release stages from evaluation to retirement</title>
+        <desc id="release-stages-dark-desc">Models move from evaluation through private and public preview to general availability and retirement, and preview models stay unconfigured until set.</desc>
+        <defs><marker id="release-stages-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="416" fill="#07090d"/>
+        <circle cx="96" cy="64" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <line x1="96" y1="70" x2="96" y2="104" stroke="#3d444d" stroke-width="1.5"/>
+        <path d="M 104 64 L 216 64" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#release-stages-dark-arrow)"/>
+        <rect x="40" y="104" width="112" height="120" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="96.0" y="144.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Evaluation</text>
+        <text x="96.0" y="160.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Codenames</text>
+        <text x="96.0" y="176.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">May change</text>
+        <text x="96.0" y="192.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">without notice</text>
+        <circle cx="224" cy="64" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <line x1="224" y1="70" x2="224" y2="104" stroke="#3d444d" stroke-width="1.5"/>
+        <path d="M 232 64 L 344 64" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#release-stages-dark-arrow)"/>
+        <rect x="168" y="104" width="112" height="120" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="224.0" y="136.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Private</text>
+        <text x="224.0" y="152.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">preview</text>
+        <text x="224.0" y="168.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Invitation only</text>
+        <text x="224.0" y="184.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Check preview</text>
+        <text x="224.0" y="200.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">terms</text>
+        <circle cx="352" cy="64" r="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <line x1="352" y1="70" x2="352" y2="104" stroke="#3d444d" stroke-width="1.5"/>
+        <path d="M 360 64 L 472 64" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#release-stages-dark-arrow)"/>
+        <rect x="296" y="104" width="112" height="120" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="136.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Public</text>
+        <text x="352.0" y="152.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">preview</text>
+        <text x="352.0" y="168.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Opt-in, may</text>
+        <text x="352.0" y="184.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">change; stays</text>
+        <text x="352.0" y="200.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">unconfigured</text>
+        <circle cx="480" cy="64" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <line x1="480" y1="70" x2="480" y2="104" stroke="#3d444d" stroke-width="1.5"/>
+        <path d="M 488 64 L 600 64" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#release-stages-dark-arrow)"/>
+        <rect x="424" y="104" width="112" height="120" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="480.0" y="136.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">General</text>
+        <text x="480.0" y="152.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">availability</text>
+        <text x="480.0" y="168.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">For production</text>
+        <text x="480.0" y="184.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Follows default</text>
+        <text x="480.0" y="200.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">unless excluded</text>
+        <circle cx="608" cy="64" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <line x1="608" y1="70" x2="608" y2="104" stroke="#3d444d" stroke-width="1.5"/>
+        <rect x="552" y="104" width="112" height="120" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="608.0" y="144.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Retired</text>
+        <text x="608.0" y="160.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">History lists</text>
+        <text x="608.0" y="176.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">dates and</text>
+        <text x="608.0" y="192.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">alternatives</text>
+        <text x="40" y="264" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not every model passes through every stage.</text>
+        <text x="40" y="280" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Evaluation and preview models do not follow the default availability policy for released models.</text>
+        <text x="40" y="296" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Confirm Data Protection Agreement coverage for each preview instead of assuming it.</text>
+        <line x1="40" y1="344" x2="664" y2="344" stroke="#3d444d"/>
+        <text x="40" y="368" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Dot: release stage; rectangle: what to check; arrow: typical progression</text>
+        <text x="40" y="388" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

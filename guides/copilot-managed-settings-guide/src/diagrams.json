@@ -1,0 +1,50 @@
+{
+  "managed-settings-keys": {
+    "title": "What managed settings control",
+    "description": "One managed-settings.json file groups supported keys into permissions, MCP servers, plugins and marketplaces, models, features and sandbox, and operational settings."
+  },
+  "client-support-matrix": {
+    "title": "Which clients honor which keys",
+    "description": "A matrix of eight managed-settings keys against Copilot CLI, VS Code, the Copilot app, cloud sandbox and Actions sessions, and JetBrains IDEs, highlighting unsupported combinations."
+  },
+  "github-private-source": {
+    "title": "Publish from .github-private",
+    "description": "Create an internal .github-private repository, add copilot/managed-settings.json, protect it with rulesets and code owners, fix any validation issues, then merge so supported clients apply the settings."
+  },
+  "team-overrides": {
+    "title": "How team overrides resolve",
+    "description": "An overridable enterprise default, a team mapping and a team file combine: mapped team members get the team value, which replaces the whole default, and everyone else keeps the enterprise default."
+  },
+  "mdm-delivery": {
+    "title": "Deliver settings by MDM",
+    "description": "An administrator authors policy values, the MDM service assigns them to a test device group, the client checks hourly without restarting, and the change is verified on a device before the assignment widens."
+  },
+  "file-based-delivery": {
+    "title": "Deliver settings as a file",
+    "description": "Write the settings file, place it with device management, and have users restart supported clients so the file loads at startup; until they restart, the previous policy stays loaded."
+  },
+  "deployment-precedence": {
+    "title": "Which source wins",
+    "description": "For replaceable keys, native MDM takes precedence over server-managed settings, which take precedence over a file-based settings file, which takes precedence over user and repository settings."
+  },
+  "restrictive-composition": {
+    "title": "How restrictive keys compose",
+    "description": "A matrix of six keys showing how values from several managed sources combine: unions for deny lists, intersections for allow lists, most restrictive for bypass mode, and whole-object replacement for telemetry."
+  },
+  "endpoint-verification": {
+    "title": "Verify on an endpoint",
+    "description": "Pick a test user and device, confirm a supported client version, refresh the policy, check that a test action is blocked, run a permitted action, and record the evidence; if not blocked, investigate the source, mapping and version."
+  },
+  "drift-detection": {
+    "title": "Where drift appears",
+    "description": "A timeline after a server-managed change: the change merges, online clients refresh within about an hour, an offline laptop keeps its earlier policy, an old client falls below the minimum version, and a reconciliation check tests sample endpoints."
+  },
+  "change-review": {
+    "title": "Stage a settings change",
+    "description": "A change lifecycle: propose by pull request, pass code owner review, validate, pilot with a mapped team, verify with a member and a non-member, change the default, then begin the next change."
+  },
+  "rollback-plan": {
+    "title": "Roll back by delivery method",
+    "description": "Rollback lanes for server-managed, native MDM and file-based delivery, each with an action, a propagation time and a re-test, followed by a check that restrictive values from other sources still apply."
+  }
+}
