@@ -238,10 +238,10 @@ try {
       assert.ok((await page.locator('.article-footer').textContent()).startsWith('Enterprise enablement '));
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
       assert.equal(await page.locator('#guides .guide-card').count(), guides.length);
-      assert.deepEqual(await page.locator('.guide-card h3').allTextContents(), guides.map(guide => guide.title));
-      assert.deepEqual(await page.locator('.guide-card > p').allTextContents(), guides.map(guide => guide.description));
+      assert.deepEqual(await page.locator('#guides .guide-card h3').allTextContents(), guides.map(guide => guide.title));
+      assert.deepEqual(await page.locator('#guides .guide-card > p').allTextContents(), guides.map(guide => guide.description));
       assert.deepEqual(
-        await page.locator('.guide-card .get-started').evaluateAll(links => links.map(link => link.href)),
+        await page.locator('#guides .guide-card .get-started').evaluateAll(links => links.map(link => link.href)),
         guides.map(guide => `${base}${guide.name}/`),
       );
       assert.equal(await page.locator('#platform-references .reference-card').count(), platformReferences.length);
