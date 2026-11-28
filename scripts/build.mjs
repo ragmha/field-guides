@@ -1,12 +1,12 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { guides } from '../guides.mjs';
+import { guides, platformReferences } from '../guides.mjs';
 import { copyOutput } from './copy-output.mjs';
 
 rmSync('dist', { recursive: true, force: true });
 mkdirSync('dist');
 const builtWorkspaces = new Set();
-for (const guide of [{ name: 'hub', type: 'astro' }, ...guides]) {
+for (const guide of [{ name: 'hub', type: 'astro' }, ...guides, ...platformReferences]) {
   const { name, type } = guide;
   const source = name === 'hub' ? 'hub' : `guides/${guide.workspace ?? name}`;
   if (builtWorkspaces.has(source)) continue;

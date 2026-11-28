@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
-import { guides } from '../guides.mjs';
+import { guides, platformReferences } from '../guides.mjs';
 import { guides as howTos } from '../guides/copilot-how-tos/src/manifest.ts';
 import { landingPath, lessonRoutes, sourcePath } from '../guides/copilot-how-tos/src/course.ts';
 
@@ -14,6 +14,7 @@ const existingGuides = [
   ['copilot-governance-guide', 6, 'astro'],
   ['champions-at-scale', 3, 'static'],
   ['github-enterprise-field-guide', 10, 'static'],
+  ['agentic-engineering-guide', 10, 'static'],
 ];
 assert.equal(guides.length, existingGuides.length + howTos.length);
 for (const [name, parts, type] of existingGuides) {
@@ -70,7 +71,8 @@ try {
         const pageURL = new URL(path, base);
         targets.add(pageURL.href);
         const html = await readFile(join(directory, entry.name), 'utf8');
-        for (const [, value] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
+        const markup = html.replace(/(<script\b[^>]*>)[\s\S]*?(<\/script>)/gi, '$1$2');
+        for (const [, value] of markup.matchAll(/(?:href|src)="([^"]+)"/g)) {
           const url = new URL(value.replaceAll('&amp;', '&'), pageURL);
           if (url.origin === pageURL.origin) {
             assert.ok(url.pathname.startsWith('/field-guides/'), `Escaped project base: ${url}`);
@@ -235,12 +237,17 @@ try {
       assert.equal(await page.locator('meta[property="og:title"]').getAttribute('content'), 'Enterprise enablement');
       assert.ok((await page.locator('.article-footer').textContent()).startsWith('Enterprise enablement '));
       assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
-      assert.equal(await page.locator('.guide-card').count(), guides.length);
+      assert.equal(await page.locator('#guides .guide-card').count(), guides.length);
       assert.deepEqual(await page.locator('.guide-card h3').allTextContents(), guides.map(guide => guide.title));
       assert.deepEqual(await page.locator('.guide-card > p').allTextContents(), guides.map(guide => guide.description));
       assert.deepEqual(
         await page.locator('.guide-card .get-started').evaluateAll(links => links.map(link => link.href)),
         guides.map(guide => `${base}${guide.name}/`),
+      );
+      assert.equal(await page.locator('#platform-references .reference-card').count(), platformReferences.length);
+      assert.equal(
+        await page.locator('#platform-references a').getAttribute('href'),
+        new URL(`${platformReferences[0].name}/`, base).pathname,
       );
       assert.equal(await page.locator('.hero-art').evaluate(image => image.complete && image.naturalWidth > 0), true, 'Hero illustration must load');
       const art = await page.locator('.hero-art').boundingBox();
@@ -315,6 +322,48 @@ try {
   assert.equal(await ledgerHubLink.evaluate(link => link.href), base, 'Evidence ledger breadcrumb must link to the hub');
   await ledgerHubLink.click();
   assert.equal(page.url(), base, 'Evidence ledger breadcrumb must return to the collection');
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto(`${base}platform-references/`);
+    assert.equal(await page.title(), 'GitHub and Azure AI landscape');
+    assert.equal(await page.locator('[data-testid="treemap"]').isVisible(), true);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `Landscape overflow at ${width}px`);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollHeight <= innerHeight), true, `Landscape page scroll at ${width}px`);
+    if (process.env.SCREENSHOT_DIR) {
+      await mkdir(process.env.SCREENSHOT_DIR, { recursive: true });
+      await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, `platform-references-${width}.png`), fullPage: true });
+    }
+  }
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto(`${base}platform-references/`);
+  const firstGroup = page.locator('[data-testid="treemap"] section').first();
+  const groupId = await firstGroup.getAttribute('data-group');
+  await firstGroup.locator(':scope > div > button').last().click();
+  await page.waitForFunction(id => new URLSearchParams(location.hash.slice(1)).get('category') === id, groupId);
+  await page.reload();
+  assert.equal(await page.locator(`[data-group="${groupId}"]`).getByRole('button', { name: 'All categories' }).isVisible(), true, 'Category zoom must survive reload');
+  await page.keyboard.press('Escape');
+  await page.waitForFunction(() => !new URLSearchParams(location.hash.slice(1)).has('category'));
+  await page.locator(`[data-group="${groupId}"] > div > button`).last().click();
+  await page.locator(`[data-group="${groupId}"] [data-item]`).first().click();
+  assert.equal(await page.getByText('Open official documentation').isVisible(), true, 'Selecting an item must open its details');
+  await page.keyboard.press('Escape');
+  await page.getByRole('button', { name: 'Landscape view' }).click();
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('view') === 'landscape');
+  await page.reload();
+  assert.equal(await page.locator('[data-testid="landscape"]').isVisible(), true, 'Landscape view must survive reload');
+  await page.getByRole('searchbox', { name: 'Search the landscape' }).fill('Copilot');
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('q') === 'Copilot');
+  await page.reload();
+  assert.equal(await page.getByRole('searchbox', { name: 'Search the landscape' }).inputValue(), 'Copilot', 'Search must survive reload');
+  await page.goto(base);
+  await page.selectOption('#theme', 'dark');
+  await page.goto(`${base}platform-references/`);
+  assert.equal(await page.locator('html').evaluate(root => root.classList.contains('dark')), true, 'Landscape must read the hub theme preference');
+  await page.getByRole('button', { name: 'Use light theme' }).click();
+  assert.equal(await page.evaluate(() => localStorage.getItem('theme')), 'light', 'Landscape theme must use compatible theme values');
+  await page.goto(base);
+  await page.waitForFunction(() => document.documentElement.dataset.theme === 'light');
   await page.goto(base);
   await page.selectOption('#theme', 'system');
   for (const colorScheme of ['dark', 'light']) {
@@ -344,7 +393,7 @@ try {
   });
   if (checks.error) throw checks.error;
   assert.equal(checks.status, 0, 'Existing Champions checks must pass');
-  console.log(`Site checks passed: ${targets.size} routes/assets, ${guides.length} guides, shared themes, keyboard navigation and mobile widths.`);
+  console.log(`Site checks passed: ${targets.size} routes/assets, ${guides.length} guides, platform references, landscape interactions, shared themes, keyboard navigation and mobile widths.`);
 } finally {
   await browser?.close();
   server.kill();
