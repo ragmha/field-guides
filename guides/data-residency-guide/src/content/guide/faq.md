@@ -3,7 +3,7 @@ title: Frequently asked questions
 section: Adopt with confidence
 order: 10
 description: Short, sourced answers to the questions DPOs, lawyers, security teams and developers ask about GitHub data residency in the EU.
-verified: "2026-11-12"
+verified: "2026-11-27"
 checks:
   - question: A consultant works for two of your enterprises, one on github.com and one on GHE.com. How many licences does she need?
     answer: Two. The General Terms (section 1.3) say one licence gives access to one cloud environment, and give the example of a user who accesses both a US-based and a Europe-based enterprise needing two licences.
@@ -19,6 +19,10 @@ sources:
   - https://docs.github.com/en/site-policy/other-site-policies/guidelines-for-legal-requests-of-user-data
   - https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn
   - https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs
+  - https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data
+  - https://docs.github.com/en/copilot/reference/ai-models/model-hosting
+  - https://docs.github.com/en/copilot/concepts/context/content-exclusion
+  - https://docs.github.com/en/copilot/using-github-copilot/finding-public-code-that-matches-github-copilot-suggestions
   - https://www.law.cornell.edu/uscode/text/18/2713
 ---
 
@@ -28,7 +32,7 @@ sources:
 - Know which source to quote for each answer.
 - Spot the questions that still need a direct answer from GitHub.
 
-Answers reflect public sources on 12 November 2026. Where no public source answers a question, the answer says so.
+Answers reflect public sources on 27 November 2026. Where no public source answers a question, the answer says so.
 
 ## Data and location
 
@@ -52,15 +56,27 @@ We found no public documentation of customer-managed keys for GHE.com at the rev
 
 ### Is our code used to train AI models?
 
-No. The [Generative AI Services Terms](https://github.com/customer-terms/github-generative-ai-services-terms), section 3: GitHub will not use Inputs or Outputs to train generative AI models without your documented instructions.
+For Copilot Business and Enterprise, GitHub says it will not use Inputs or Outputs to train generative AI models unless you give documented instructions. See section 3 of the [Generative AI Services Terms](https://github.com/customer-terms/github-generative-ai-services-terms).
 
-### Does Copilot inference happen in GitHub's EU region?
+### What leaves the developer's machine, and is it stored?
 
-The enabled **Restrict Copilot to data residency compliant models** policy enforces regional processing for supported inference. It is off by default and adds 10% to AI credit consumption. Use compatible clients and review supported features. See [Copilot](/part-6/1-copilot/).
+A request may include relevant workspace context, attachments or conversation history, not just the text a developer types; the exact context depends on the feature and client. Retention varies by feature and model provider, so check [model hosting](https://docs.github.com/en/copilot/reference/ai-models/model-hosting). Separately, the Copilot app and CLI can store session history locally and may sync it to GitHub depending on policy; see [session data](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data).
+
+### Can Copilot processing stay in the EU?
+
+Yes, for supported Copilot use in an eligible GitHub Enterprise Cloud deployment with EU data residency, when the **Restrict Copilot to data residency compliant models** policy is enabled. It is off by default, applies only to supported models and features, and increases AI credit consumption by 10%. Verify the tenant, models and features before making an EU-only commitment. See [Copilot with data residency](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/github-copilot-with-data-residency).
 
 ### Are prompts recorded in the audit log?
 
-No. The [audit log](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs) "does not include client session data, such as the prompts a user sends to Copilot locally." It records settings, policy, seat and agent activity events.
+The enterprise audit log covers selected policy, license and agent activity, but does not include prompts sent from local clients. Events are retained for 180 days, so stream the log to a SIEM if you need longer history. See [reviewing audit logs for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs).
+
+### Can we exclude sensitive files?
+
+Content exclusion is a useful guardrail, not a security boundary. Its behavior varies by client and feature, and GitHub says third-party MCP servers or clients may not respect it. Test it on approved clients and features, and use access controls rather than relying on exclusions alone. See [content exclusion for GitHub Copilot](https://docs.github.com/en/copilot/concepts/context/content-exclusion).
+
+### Can we merge generated code?
+
+Yes, after the same human review, tests, security scans and license checks used for other code. Do not treat public-code blocking as a universal guarantee: not every product or feature supports block mode. Review any surfaced matches and follow your organization's license policy. See [finding public code that matches Copilot suggestions](https://docs.github.com/en/copilot/using-github-copilot/finding-public-code-that-matches-github-copilot-suggestions).
 
 ### Can we use every model that github.com offers?
 
