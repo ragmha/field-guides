@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="outcome-reporting-dark-root" viewBox="0 0 704 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="outcome-reporting-dark-title outcome-reporting-dark-desc">
+        <title id="outcome-reporting-dark-title">Outcome reporting pipeline</title>
+        <desc id="outcome-reporting-dark-desc">A report moves from decision to comparison, evidence, separated observations and conclusions, and a narrative, with each evidence type limited to what it can show.</desc>
+        <defs><marker id="outcome-reporting-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="540" fill="#07090d"/>
+        <text x="40" y="56" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">REPORT STEPS</text>
+        <rect x="40" y="72" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="96.0" y="108.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">1  Decision</text>
+        <text x="96.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">What it supports</text>
+        <path d="M 152 112 L 168 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#outcome-reporting-dark-arrow)"/>
+        <rect x="168" y="72" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="224.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">2  Comparison</text>
+        <text x="224.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Scope, period,</text>
+        <text x="224.0" y="132.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">other changes</text>
+        <path d="M 280 112 L 296 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#outcome-reporting-dark-arrow)"/>
+        <rect x="296" y="72" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">3  Evidence</text>
+        <text x="352.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Adoption to</text>
+        <text x="352.0" y="132.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">feedback</text>
+        <path d="M 408 112 L 424 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#outcome-reporting-dark-arrow)"/>
+        <rect x="424" y="72" width="112" height="80" rx="8" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="480.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">4  Separate</text>
+        <text x="480.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Observation vs</text>
+        <text x="480.0" y="132.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">conclusion</text>
+        <path d="M 536 112 L 552 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#outcome-reporting-dark-arrow)"/>
+        <rect x="552" y="72" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="608.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">5  Narrative</text>
+        <text x="608.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Options, owner,</text>
+        <text x="608.0" y="132.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">next review</text>
+        <text x="40" y="196" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WHAT EACH EVIDENCE TYPE CAN SHOW</text>
+        <rect x="40" y="212" width="624" height="212" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="52" y="232" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Evidence</text>
+        <text x="212" y="232" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Use it to describe</text>
+        <text x="444" y="232" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">It does not establish</text>
+        <line x1="40" y1="244" x2="664" y2="244" stroke="#3d444d"/>
+        <text x="52" y="266" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Adoption</text>
+        <text x="212" y="266" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Who uses it, the trend</text>
+        <text x="444" y="266" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Value delivered</text>
+        <line x1="40" y1="280" x2="664" y2="280" stroke="#3d444d"/>
+        <text x="52" y="302" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cost (billing)</text>
+        <text x="212" y="302" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Actual spend</text>
+        <text x="444" y="302" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Savings or return</text>
+        <line x1="40" y1="316" x2="664" y2="316" stroke="#3d444d"/>
+        <text x="52" y="338" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Code generation</text>
+        <text x="212" y="338" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Activity</text>
+        <text x="444" y="338" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Productivity or quality</text>
+        <line x1="40" y1="352" x2="664" y2="352" stroke="#3d444d"/>
+        <text x="52" y="374" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Delivery</text>
+        <text x="212" y="374" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Throughput, time to merge</text>
+        <text x="444" y="374" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">That Copilot caused it</text>
+        <line x1="40" y1="388" x2="664" y2="388" stroke="#3d444d"/>
+        <text x="52" y="410" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Feedback</text>
+        <text x="212" y="410" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Perceived help, barriers</text>
+        <text x="444" y="410" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A measured outcome</text>
+        <line x1="200" y1="212" x2="200" y2="424" stroke="#3d444d"/>
+        <line x1="432" y1="212" x2="432" y2="424" stroke="#3d444d"/>
+        <text x="40" y="464" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Do not convert lines of code or time saved into financial returns.</text>
+        <line x1="40" y1="480" x2="664" y2="480" stroke="#3d444d"/>
+        <text x="40" y="504" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Numbered boxes: report steps; table: limits of each evidence type</text>
+        <text x="40" y="524" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

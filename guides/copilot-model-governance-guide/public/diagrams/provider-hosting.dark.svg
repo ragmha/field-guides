@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="provider-hosting-dark-root" viewBox="0 0 704 688" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="provider-hosting-dark-title provider-hosting-dark-desc">
+        <title id="provider-hosting-dark-title">Hosting and data statements by provider family</title>
+        <desc id="provider-hosting-dark-desc">Each provider family has documented hosting and data statements, and none trains on Copilot Business or Enterprise customer data.</desc>
+        <defs><marker id="provider-hosting-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="688" fill="#07090d"/>
+        <text x="48" y="60" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">PROVIDER FAMILY</text>
+        <text x="216" y="60" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">DOCUMENTED HOSTING</text>
+        <text x="440" y="60" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">DOCUMENTED DATA STATEMENT</text>
+        <rect x="40" y="72" width="160" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="120.0" y="104.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">OpenAI</text>
+        <rect x="208" y="72" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="316.0" y="96.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">OpenAI and GitHub Azure</text>
+        <text x="316.0" y="112.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">infrastructure</text>
+        <rect x="432" y="72" width="232" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="96.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Zero data retention agreement</text>
+        <text x="548.0" y="112.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No training on business data</text>
+        <rect x="40" y="136" width="160" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="120.0" y="168.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Anthropic</text>
+        <rect x="208" y="136" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="316.0" y="160.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">AWS, Anthropic and</text>
+        <text x="316.0" y="176.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Google Cloud</text>
+        <rect x="432" y="136" width="232" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="160.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Zero retention for GA features</text>
+        <text x="548.0" y="176.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Prompt caching is used</text>
+        <rect x="40" y="200" width="160" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="120.0" y="232.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Google</text>
+        <rect x="208" y="200" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="316.0" y="232.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Google Cloud</text>
+        <rect x="432" y="200" width="232" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="224.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No training on prompts or responses</text>
+        <text x="548.0" y="240.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Encrypted cache up to 24 hours</text>
+        <rect x="40" y="264" width="160" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="120.0" y="296.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">xAI</text>
+        <rect x="208" y="264" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="316.0" y="296.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">xAI</text>
+        <rect x="432" y="264" width="232" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="296.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Zero data retention API policy</text>
+        <rect x="40" y="328" width="160" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="120.0" y="360.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Microsoft first-party</text>
+        <rect x="208" y="328" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="316.0" y="352.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Azure AI Foundry in</text>
+        <text x="316.0" y="368.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">the GitHub tenant</text>
+        <rect x="432" y="328" width="232" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="352.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">GitHub data handling</text>
+        <text x="548.0" y="368.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">configuration applies</text>
+        <rect x="40" y="392" width="160" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="120.0" y="424.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Open-weight</text>
+        <rect x="208" y="392" width="216" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="316.0" y="416.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Hosted by GitHub on a</text>
+        <text x="316.0" y="432.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">third-party provider</text>
+        <rect x="432" y="392" width="232" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="416.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Zero retention with the host</text>
+        <text x="548.0" y="432.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not sent to the developer</text>
+        <rect x="40" y="472" width="624" height="56" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="496.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">No training on Copilot Business or Enterprise customer data</text>
+        <text x="352.0" y="512.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Stated across the provider sections of the model hosting reference</text>
+        <text x="40" y="568" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Individual plans: interaction data may be used for training for some cloud-hosted models.</text>
+        <text x="40" y="584" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">All families use Copilot content filters; a locally hosted model may not use the same filters.</text>
+        <line x1="40" y1="616" x2="664" y2="616" stroke="#3d444d"/>
+        <text x="40" y="640" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: provider family; columns: documented hosting and data statement</text>
+        <text x="40" y="660" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

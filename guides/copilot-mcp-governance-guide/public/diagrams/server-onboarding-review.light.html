@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboard an MCP server</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">MCP Server Governance · Lifecycle</p>
+    <h1>Onboard an MCP server</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Onboard an MCP server. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="server-onboarding-review-light-title server-onboarding-review-light-desc">
+        <title id="server-onboarding-review-light-title">Onboard an MCP server</title>
+        <desc id="server-onboarding-review-light-desc">Review the server, allowlist it, validate settings, provision scoped secrets, configure explicit tools, confirm in a session log, then monitor and recheck.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="580" fill="#f3f5f7"/>
+        <path d="M 216 80 L 264 80" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 440 80 L 488 80" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 576 120 L 576 184" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 488 224 L 440 224" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 264 224 L 216 224" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 128 264 L 128 368 L 264 368" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="40" width="176" height="80" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="128" y="76" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Review server</text>
+        <text x="128" y="92" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Tools, auth, data access</text>
+        <rect x="264" y="40" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="76" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allowlist</text>
+        <text x="352" y="92" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">serverUrl or serverCommand</text>
+        <rect x="488" y="40" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="576" y="76" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Validate settings</text>
+        <text x="576" y="92" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Settings validation</text>
+        <rect x="488" y="184" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="576" y="220" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Provision secrets</text>
+        <text x="576" y="236" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Scoped COPILOT_MCP_</text>
+        <rect x="264" y="184" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="220" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Configure tools</text>
+        <text x="352" y="236" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Explicit read-only list</text>
+        <rect x="40" y="184" width="176" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="128" y="220" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Confirm in log</text>
+        <text x="128" y="236" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Only expected tools load</text>
+        <rect x="264" y="328" width="176" height="80" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="364" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Monitor and recheck</text>
+        <text x="352" y="380" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Owner on a cadence</text>
+        <text x="40" y="464" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Recheck when the vendor, tool list, owner or credential changes.</text>
+        <text x="40" y="480" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Order is guide advice: controls exist before access is granted.</text>
+        <line x1="40" y1="520" x2="664" y2="520" stroke="#d1d9e0"/>
+        <text x="40" y="544" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Boxes: lifecycle stages in order; arrow: next stage</text>
+        <text x="40" y="564" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

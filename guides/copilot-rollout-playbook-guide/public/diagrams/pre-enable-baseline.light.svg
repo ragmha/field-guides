@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="pre-enable-baseline-light-root" viewBox="0 0 704 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pre-enable-baseline-light-title pre-enable-baseline-light-desc">
+        <title id="pre-enable-baseline-light-title">Pre-enable baseline</title>
+        <desc id="pre-enable-baseline-light-desc">Confirm the license source, set policies, enable one organization and cap spend, on a baseline that keeps defaults on and restricts only what must be restricted.</desc>
+        <defs><marker id="pre-enable-baseline-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="540" fill="#f3f5f7"/>
+        <text x="40" y="56" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">SETUP ORDER</text>
+        <rect x="40" y="72" width="132" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="106.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">1  License source</text>
+        <text x="106.0" y="116.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Members licensed</text>
+        <text x="106.0" y="132.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">via pilot org</text>
+        <path d="M 172 112 L 204 112" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pre-enable-baseline-light-arrow)"/>
+        <rect x="204" y="72" width="132" height="80" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="270.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">2  Set policies</text>
+        <text x="270.0" y="116.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Before enabling,</text>
+        <text x="270.0" y="132.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">at org level</text>
+        <path d="M 336 112 L 368 112" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pre-enable-baseline-light-arrow)"/>
+        <rect x="368" y="72" width="132" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="434.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">3  Enable one org</text>
+        <text x="434.0" y="124.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Pilot org only</text>
+        <path d="M 500 112 L 532 112" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#pre-enable-baseline-light-arrow)"/>
+        <rect x="532" y="72" width="132" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="598.0" y="108.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">4  Cap spend</text>
+        <text x="598.0" y="124.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Set a budget</text>
+        <text x="40" y="196" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">BASELINE LAYERS</text>
+        <rect x="40" y="212" width="624" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="232.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Keep defaults on</text>
+        <text x="352.0" y="248.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Default availability for GA features and models</text>
+        <rect x="40" y="268" width="624" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="288.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Disable only non-negotiables</text>
+        <text x="352.0" y="304.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise default disabled only for hard restrictions</text>
+        <rect x="40" y="324" width="624" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="344.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Scope restrictions</text>
+        <text x="352.0" y="360.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Restrict sensitive organizations, not the whole enterprise</text>
+        <rect x="40" y="380" width="624" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="400.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Code guardrails</text>
+        <text x="352.0" y="416.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Rulesets, required checks, code and secret scanning</text>
+        <text x="40" y="464" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Very tight budgets can block the features you enabled.</text>
+        <line x1="40" y1="480" x2="664" y2="480" stroke="#d1d9e0"/>
+        <text x="40" y="504" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Numbered boxes: setup steps in order; bars: baseline layers</text>
+        <text x="40" y="524" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

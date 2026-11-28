@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Turn an alert into an owned decision</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; background: #f3f5f7; color: #1f2328; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 704px; margin: 0 auto; }
+    .eyebrow { color: #59636e; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 8px 0 20px; font-size: 24px; line-height: 1.2; }
+    .diagram-container { overflow-x: auto; border: 1px solid #d1d9e0; border-radius: 6px; background: #f3f5f7; }
+    .diagram-container:focus-visible { outline: 2px solid #1a7f37; outline-offset: 3px; }
+    svg { display: block; width: 100%; min-width: 640px; height: auto; }
+    figcaption { margin-top: 12px; color: #59636e; font-size: 12px; }
+    nav { display: flex; gap: 16px; margin-top: 12px; }
+    a { color: #0550ae; text-underline-offset: 3px; }
+    @media print { body { padding: 0; } .diagram-container { overflow: visible; } svg { min-width: 0; } nav { display: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">AI Credits guide · Loop</p>
+    <h1>Turn an alert into an owned decision</h1>
+    <figure>
+      <div class="diagram-container" tabindex="0" role="region" aria-label="Turn an alert into an owned decision. Scroll horizontally to explore."><svg viewBox="0 0 640 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="operating-loop-light-title operating-loop-light-desc">
+  <title id="operating-loop-light-title">Turn an alert into an owned decision</title>
+  <desc id="operating-loop-light-desc">Identify the actual limiting control, route the decision to its owner, apply an approved change, confirm recovery and review the result. An alert never authorizes extra spend by itself.</desc>
+  <defs><marker id="operating-loop-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M 0 0 L 8 3 L 0 6 Z" fill="#59636e"/></marker></defs>
+  <style>
+    svg { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1f2328; }
+    .paper { fill: #f3f5f7; }
+    .node, .step-card { fill: #ffffff; stroke: #d1d9e0; stroke-width: 1.5; }
+    .node.focus, .step-card.focus { fill: #eaf6ed; stroke: #1a7f37; stroke-width: 2; }
+    .decision { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+    .hub { fill: #eaf6ed; stroke: #1a7f37; stroke-width: 1.5; }
+    .step-number { fill: #f3f5f7; stroke: #d1d9e0; stroke-width: 1.5; }
+    .step-number.focus { fill: #1a7f37; stroke: #1a7f37; }
+    .eyebrow, .detail, .note { fill: #59636e; }
+    .node-name, .number { fill: #1f2328; }
+    .arrow { fill: none; stroke: #59636e; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#operating-loop-light-arrow); }
+    .spoke { fill: none; stroke: #59636e; stroke-width: 1; stroke-dasharray: 4 3; }
+    .eyebrow { font-size: 8px; font-weight: 600; letter-spacing: .12em; }
+    .node-name { font-size: 12px; font-weight: 600; }
+    .detail { font-size: 9px; }
+    .arrow-label { fill: #59636e; font-size: 8px; font-weight: 600; letter-spacing: .06em; }
+    .label-mask { fill: #f3f5f7; }
+    .number { font-size: 9px; font-weight: 600; }
+    .note { font-size: 10px; }
+  </style>
+  <rect x="0" y="0" width="640" height="560" class="paper"/>
+  <path d="M 320 42 A 208 208 0 0 1 504.861 184.656" class="arrow" marker-end="url(#operating-loop-light-arrow)"/><path d="M 525.156 245.724 A 208 208 0 0 1 476.178 417.377" class="arrow" marker-end="url(#operating-loop-light-arrow)"/><path d="M 382.855 478.276 A 208 208 0 0 1 258.289 478.635" class="arrow" marker-end="url(#operating-loop-light-arrow)"/><path d="M 164.617 418.276 A 208 208 0 0 1 114.649 246.909" class="arrow" marker-end="url(#operating-loop-light-arrow)"/><path d="M 134.592 185.724 A 208 208 0 0 1 318.8 72.003" class="arrow" marker-end="url(#operating-loop-light-arrow)"/><path d="M 320 102 L 320 246" class="spoke"/><path d="M 453.82 236.519 L 392 256.606" class="spoke"/><path d="M 420.463 418.276 L 344.702 314" class="spoke"/><path d="M 219.537 418.276 L 295.298 314" class="spoke"/><path d="M 186.18 236.519 L 248 256.606" class="spoke"/><g><rect x="248" y="246" width="144" height="68" rx="6" class="hub"/><text x="320" y="277" text-anchor="middle" class="node-name"><tspan>Response playbook</tspan></text><text x="320" y="294" text-anchor="middle" class="detail"><tspan>Reviewed outcomes</tspan></text></g><g><rect x="256" y="42" width="128" height="60" rx="6" class="node"/><text x="320" y="60" text-anchor="middle" class="eyebrow"><tspan>OPERATE</tspan></text><text x="320" y="84" text-anchor="middle" class="node-name"><tspan>Alert or block</tspan></text><text x="320" y="100" text-anchor="middle" class="detail"><tspan>A control triggers</tspan></text></g><g><rect x="453.81975538939196" y="185.72446517001094" width="128" height="60" rx="6" class="node"/><text x="517.819755389392" y="203.72446517001094" text-anchor="middle" class="eyebrow"><tspan>OPERATE</tspan></text><text x="517.819755389392" y="227.72446517001094" text-anchor="middle" class="node-name"><tspan>Identify the limit</tspan></text><text x="517.819755389392" y="243.72446517001094" text-anchor="middle" class="detail"><tspan>Find the actual</tspan><tspan x="517.819755389392" dy="12">limiting control</tspan></text></g><g><rect x="378.2593324768344" y="418.27553482998906" width="128" height="60" rx="6" class="node focus"/><text x="442.2593324768344" y="436.27553482998906" text-anchor="middle" class="eyebrow"><tspan>OPERATE</tspan></text><text x="442.2593324768344" y="460.27553482998906" text-anchor="middle" class="node-name"><tspan>Owner decides</tspan></text><text x="442.2593324768344" y="476.27553482998906" text-anchor="middle" class="detail"><tspan>Approved action</tspan><tspan x="442.2593324768344" dy="12">not automatic spend</tspan></text></g><g><rect x="133.7406675231656" y="418.27553482998906" width="128" height="60" rx="6" class="node"/><text x="197.7406675231656" y="436.27553482998906" text-anchor="middle" class="eyebrow"><tspan>OPERATE</tspan></text><text x="197.7406675231656" y="460.27553482998906" text-anchor="middle" class="node-name"><tspan>Admin applies</tspan></text><text x="197.7406675231656" y="476.27553482998906" text-anchor="middle" class="detail"><tspan>Confirm the</tspan><tspan x="197.7406675231656" dy="12">result</tspan></text></g><g><rect x="58.18024461060807" y="185.7244651700109" width="128" height="60" rx="6" class="node"/><text x="122.18024461060807" y="203.7244651700109" text-anchor="middle" class="eyebrow"><tspan>OPERATE</tspan></text><text x="122.18024461060807" y="227.7244651700109" text-anchor="middle" class="node-name"><tspan>Review outcome</tspan></text><text x="122.18024461060807" y="243.7244651700109" text-anchor="middle" class="detail"><tspan>Update the</tspan><tspan x="122.18024461060807" dy="12">response playbook</tspan></text></g>
+</svg></div>
+      <figcaption>Identify the actual limiting control, route the decision to its owner, apply an approved change, confirm recovery and review the result. An alert never authorizes extra spend by itself.</figcaption>
+    </figure>
+    <nav aria-label="Diagram variants"><a href="operating-loop.light.html">Light version</a><a href="operating-loop.dark.html">Dark version</a></nav>
+  </main>
+</body>
+</html>

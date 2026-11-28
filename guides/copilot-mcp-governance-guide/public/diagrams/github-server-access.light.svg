@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="github-server-access-light-root" viewBox="0 0 704 612" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="github-server-access-light-title github-server-access-light-desc">
+        <title id="github-server-access-light-title">Widen GitHub MCP access only as needed</title>
+        <desc id="github-server-access-light-desc">The built-in GitHub MCP server starts with a read-only token for the current repository; wider access uses a fine-grained read-only token or a GitHub App, with toolsets limited.</desc>
+        <defs><marker id="github-server-access-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="612" fill="#f3f5f7"/>
+        <path d="M 352 120 L 352 152 L 188 152 L 188 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-server-access-light-arrow)"/>
+        <path d="M 352 120 L 352 152 L 516 152 L 516 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-server-access-light-arrow)"/>
+        <rect x="301.25" y="130" width="101.5" height="12" rx="2" fill="#f3f5f7"/><text x="352" y="139" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NEEDS OTHER REPOS</text>
+        <path d="M 188 296 L 188 328 L 300 328 L 300 360" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-server-access-light-arrow)"/>
+        <path d="M 516 296 L 516 328 L 404 328 L 404 360" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#github-server-access-light-arrow)"/>
+        <rect x="136" y="40" width="432" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="76" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Default scoped token</text>
+        <text x="352" y="92" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Read-only access to the current repository</text>
+        <rect x="40" y="200" width="296" height="96" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="188" y="236" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Fine-grained read-only token</text>
+        <text x="188" y="252" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN</text>
+        <text x="188" y="268" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Service-account owned, with expiry</text>
+        <rect x="368" y="200" width="296" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="516" y="236" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">GitHub App token</text>
+        <text x="516" y="252" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Alternative to a personal token</text>
+        <text x="516" y="268" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Stored as an Agents secret</text>
+        <rect x="136" y="360" width="432" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="396" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Limit toolsets</text>
+        <text x="352" y="412" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Expose only the tools the task needs</text>
+        <text x="40" y="496" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Push protection covers GitHub MCP server interactions for public and GHAS repositories.</text>
+        <text x="40" y="512" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Use secrets, not variables, so values reach the cloud sandbox.</text>
+        <line x1="40" y1="552" x2="664" y2="552" stroke="#d1d9e0"/>
+        <text x="40" y="576" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Top: default access; middle: credential options; bottom: tool reduction</text>
+        <text x="40" y="596" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: recommended option in the lesson, not approval or a safety rating</text>
+      </svg>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who can trigger a cloud agent session</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Cloud Agent Security · Decision flowchart · Trigger check</p>
+    <h1>Who can trigger a cloud agent session</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Who can trigger a cloud agent session. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 676" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="repository-access-triggers-dark-title repository-access-triggers-dark-desc">
+        <title id="repository-access-triggers-dark-title">Who can trigger a cloud agent session</title>
+        <desc id="repository-access-triggers-dark-desc">Decision flow that checks policy, repository access, Copilot access and write permission before a session can push changes.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="676" fill="#07090d"/>
+        <path d="M 180 136 L 180 168" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 180 232 L 180 264" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="188" y="242" width="24.5" height="12" rx="2" fill="#07090d"/><text x="200.25" y="251" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 180 328 L 180 360" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="188" y="338" width="24.5" height="12" rx="2" fill="#07090d"/><text x="200.25" y="347" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 180 424 L 180 456" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="188" y="434" width="19" height="12" rx="2" fill="#07090d"/><text x="197.5" y="443" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 320 200 L 416 200" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="358.5" y="180" width="19" height="12" rx="2" fill="#07090d"/><text x="368" y="189" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 320 296 L 416 296" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="358.5" y="276" width="19" height="12" rx="2" fill="#07090d"/><text x="368" y="285" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 320 392 L 416 392" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="355.75" y="372" width="24.5" height="12" rx="2" fill="#07090d"/><text x="368" y="381" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <rect x="40" y="72" width="280" height="64" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="180" y="100" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Request to Copilot</text>
+        <text x="180" y="116" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Issue, PR comment, chat, CLI or app</text>
+        <rect x="40" y="168" width="280" height="64" rx="4" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="180" y="204" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Policy and repository access allow?</text>
+        <rect x="40" y="264" width="280" height="64" rx="4" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="180" y="292" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Requester has write access?</text>
+        <text x="180" y="308" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Comment authors included</text>
+        <rect x="40" y="360" width="280" height="64" rx="4" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="180" y="396" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assigned issue or @Copilot on a PR?</text>
+        <rect x="40" y="456" width="280" height="64" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="180" y="484" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cloud sandbox or Actions</text>
+        <text x="180" y="500" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Environment chosen at start</text>
+        <rect x="416" y="168" width="248" height="64" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="540" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent cannot work here</text>
+        <text x="540" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Out of scope</text>
+        <rect x="416" y="264" width="248" height="64" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="540" y="292" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Not presented to the agent</text>
+        <text x="540" y="308" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No push; read-only at most</text>
+        <rect x="416" y="360" width="248" height="64" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="540" y="388" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Runs on GitHub Actions</text>
+        <text x="540" y="404" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Single repository</text>
+        <text x="40" y="560" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Once the policy allows a repository, any user with Copilot access and write permission can delegate.</text>
+        <text x="40" y="576" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Organization sessions also require organization single sign-on where it is configured.</text>
+        <line x1="40" y1="608" x2="664" y2="608" stroke="#3d444d" stroke-width="1"/>
+        <text x="40" y="632" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Square corners: decisions; rounded: start and outcomes; dashed: no agent work</text>
+        <text x="40" y="652" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

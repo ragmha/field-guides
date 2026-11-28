@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layers that shape what a run can reach</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Automations Governance · Layered controls</p>
+    <h1>Layers that shape what a run can reach</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Layers that shape what a run can reach. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 568" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tool-and-write-scope-light-title tool-and-write-scope-light-desc">
+        <title id="tool-and-write-scope-light-title">Layers that shape what a run can reach</title>
+        <desc id="tool-and-write-scope-light-desc">Selected tools are the primary control, then write scope, inherited repository configuration and the prompt. Each layer has gaps the others must cover.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="568" fill="#f3f5f7"/>
+        <rect x="40" y="72" width="624" height="64" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Selected tools</text>
+        <text x="352.0" y="116.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Primary control; MCP tools can reach beyond the repository</text>
+        <rect x="64" y="160" width="576" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="188.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Write scope</text>
+        <text x="352.0" y="204.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Only this issue; ignores MCP tools and scheduled runs</text>
+        <rect x="88" y="248" width="528" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="276.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Inherited configuration</text>
+        <text x="352.0" y="292.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Instructions, skills, firewall and agent secrets</text>
+        <rect x="112" y="336" width="480" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="364.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Prompt</text>
+        <text x="352.0" y="380.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No secrets; use repository secrets instead</text>
+        <text x="40" y="444" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Write scope applies to issue and pull request triggers only.</text>
+        <text x="40" y="460" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Merge and retry tools were added in October 2026; treat them as high reach.</text>
+        <line x1="40" y1="508" x2="664" y2="508" stroke="#d1d9e0"/>
+        <text x="40" y="532" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Bands: controls that shape what a run can reach, widest reach first</text>
+        <text x="40" y="552" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

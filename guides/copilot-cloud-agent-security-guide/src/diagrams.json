@@ -1,0 +1,50 @@
+{
+  "enablement-policy-scope": {
+    "title": "Copilot in the cloud policy layers",
+    "description": "Layered view of enterprise policy, organization repository access and repository opt-out that together decide whether the cloud agent can work in a repository."
+  },
+  "repository-access-triggers": {
+    "title": "Who can trigger a cloud agent session",
+    "description": "Decision flow that checks policy, repository access, Copilot access and write permission before a session can push changes."
+  },
+  "copilot-branch-boundaries": {
+    "title": "Agent branch and pull request lifecycle",
+    "description": "Lifecycle from task to copilot branch, simple pushes, draft pull request and a human ready-for-review and merge decision."
+  },
+  "rulesets-for-agents": {
+    "title": "Ruleset checks on an agent push",
+    "description": "Decision flow showing how rulesets, bypass entries and code owner review apply to a pull request that Copilot opens or updates."
+  },
+  "review-independence": {
+    "title": "Independent approval of agent pull requests",
+    "description": "Swimlane showing the requester, Copilot and an independent reviewer, with the requester approval not counting toward required approvals."
+  },
+  "reviewing-agent-prs": {
+    "title": "Layers of evidence in an agent pull request review",
+    "description": "Layered review model combining built-in validation results, signed commits, session log links and human code review."
+  },
+  "workflow-approval-gate": {
+    "title": "Workflow approval gate timeline",
+    "description": "Timeline from agent push to workflow inspection, Approve and run workflows, and CI results on the pull request."
+  },
+  "auto-run-exception": {
+    "title": "Workflow approval setting trade-offs",
+    "description": "Matrix comparing the default approval setting with automatic workflow runs across exposure, owner and evidence."
+  },
+  "firewall-coverage": {
+    "title": "Agent firewall coverage map",
+    "description": "Coverage map showing which processes the firewall filters and which paths, such as other MCP servers and setup steps, it does not cover."
+  },
+  "firewall-allowlist-layers": {
+    "title": "Organization and repository firewall settings",
+    "description": "Decision flow showing when repository firewall settings are locked by organization settings and how custom allowlists combine."
+  },
+  "setup-steps-hardening": {
+    "title": "Setup steps hardening lifecycle",
+    "description": "Lifecycle from authoring copilot-setup-steps.yml through review, default branch merge, runner selection and session start."
+  },
+  "agents-secrets-variables": {
+    "title": "Agents secrets and variables availability",
+    "description": "Matrix comparing Agents secrets, Agents variables, COPILOT_MCP_ values and Actions secrets across environments and consumers."
+  }
+}

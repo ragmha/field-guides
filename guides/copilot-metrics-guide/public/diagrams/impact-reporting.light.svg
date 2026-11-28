@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="impact-reporting-light-root" viewBox="0 0 704 532" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="impact-reporting-light-title impact-reporting-light-desc">
+        <title id="impact-reporting-light-title">Impact report lifecycle</title>
+        <desc id="impact-reporting-light-desc">Define the decision, fix the comparison, assemble evidence, separate observations from conclusions, then write the narrative with a next review date that restarts the cycle.</desc>
+        <defs><marker id="impact-reporting-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="532" fill="#f3f5f7"/>
+        <rect x="136" y="40" width="384" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="328.0" y="64.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">1. Define the decision</text>
+        <text x="328.0" y="80.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Extend, pause or change the rollout</text>
+        <rect x="136" y="120" width="384" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="328.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">2. Fix the comparison</text>
+        <text x="328.0" y="160.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Scope, dates, baseline, population, confounders</text>
+        <path d="M 328 96 L 328 120" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#impact-reporting-light-arrow)"/>
+        <rect x="136" y="200" width="384" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="328.0" y="224.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">3. Assemble evidence</text>
+        <text x="328.0" y="240.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Usage, billed spend, delivery, quality, feedback</text>
+        <path d="M 328 176 L 328 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#impact-reporting-light-arrow)"/>
+        <rect x="136" y="280" width="384" height="56" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="328.0" y="304.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">4. Separate observations</text>
+        <text x="328.0" y="320.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">State conclusions as associations</text>
+        <path d="M 328 256 L 328 280" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#impact-reporting-light-arrow)"/>
+        <rect x="136" y="360" width="384" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="328.0" y="384.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">5. Write and schedule</text>
+        <text x="328.0" y="400.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Narrative plus the next review date</text>
+        <path d="M 328 336 L 328 360" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#impact-reporting-light-arrow)"/>
+        <path d="M 520 388 L 592 388 L 592 68 L 520 68" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#impact-reporting-light-arrow)"/><rect x="557.75" y="222" width="68.5" height="12" rx="2" fill="#f3f5f7"/><text x="592.0" y="231.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NEXT REVIEW</text>
+        <text x="40" y="450" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Do not convert lines of code or time saved into financial returns.</text>
+        <line x1="40" y1="472" x2="664" y2="472" stroke="#d1d9e0"/>
+        <text x="40" y="496" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: report step; arrow: sequence and review loop</text>
+        <text x="40" y="516" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

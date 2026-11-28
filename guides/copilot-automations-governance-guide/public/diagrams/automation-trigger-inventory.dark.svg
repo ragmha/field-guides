@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="automation-trigger-inventory-dark-root" viewBox="0 0 704 568" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="automation-trigger-inventory-dark-title automation-trigger-inventory-dark-desc">
+        <title id="automation-trigger-inventory-dark-title">Trigger families and what limits them</title>
+        <desc id="automation-trigger-inventory-dark-desc">Schedules, repository events, chained runs and manual or API runs differ in who starts the run and what limits its writes. Scheduled runs ignore write scope.</desc>
+        <defs><marker id="automation-trigger-inventory-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="568" fill="#07090d"/>
+        <text x="112.0" y="56" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">FAMILY</text>
+        <text x="308.0" y="56" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WHO STARTS IT</text>
+        <text x="548.0" y="56" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WHAT LIMITS WRITES</text>
+        <rect x="40" y="72" width="144" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="108.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Schedule</text>
+        <rect x="208" y="72" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="308.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Automation owner</text>
+        <text x="308.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No event actor</text>
+        <rect x="432" y="72" width="232" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="548.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Selected tools only</text>
+        <text x="548.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Write scope has no effect</text>
+        <rect x="40" y="160" width="144" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="196.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository event</text>
+        <rect x="208" y="160" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="308.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Event actor</text>
+        <text x="308.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Writers only by default</text>
+        <rect x="432" y="160" width="232" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Tools and write scope</text>
+        <text x="548.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">For issue and PR triggers</text>
+        <rect x="40" y="248" width="144" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="284.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Chained run</text>
+        <rect x="208" y="248" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="308.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Another automation run</text>
+        <text x="308.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot events off by default</text>
+        <rect x="432" y="248" width="232" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Tools and trigger settings</text>
+        <text x="548.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Draw chains to avoid loops</text>
+        <rect x="40" y="336" width="144" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="372.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Manual or API</text>
+        <rect x="208" y="336" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="308.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Token holder</text>
+        <text x="308.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">App or user token</text>
+        <rect x="432" y="336" width="232" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Selected tools</text>
+        <text x="548.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Revoke the token to stop</text>
+        <text x="40" y="444" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Event triggers can be narrowed by search query, paths, labels or issue statuses.</text>
+        <text x="40" y="460" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Issue status filters and the automations REST API are public preview.</text>
+        <line x1="40" y1="508" x2="664" y2="508" stroke="#3d444d"/>
+        <text x="40" y="532" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rows: trigger family; columns: who starts it and what limits its writes</text>
+        <text x="40" y="552" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green cell: lesson focus, not approval or a safety rating</text>
+      </svg>

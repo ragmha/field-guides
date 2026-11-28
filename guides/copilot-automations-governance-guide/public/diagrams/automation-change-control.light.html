@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review changes to automation definitions</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Automations Governance · Lifecycle</p>
+    <h1>Review changes to automation definitions</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Review changes to automation definitions. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 436" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="automation-change-control-light-title automation-change-control-light-desc">
+        <title id="automation-change-control-light-title">Review changes to automation definitions</title>
+        <desc id="automation-change-control-light-desc">Edits and proposals land in revision history outside Git. Compare snapshots, let the owner review, keep an approved baseline, and move to agentic workflows when pull request review is required.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="436" fill="#f3f5f7"/>
+        <path d="M 216 108 L 264 108" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 440 108 L 488 108" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 576 144 L 576 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 488 236 L 440 236" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 264 236 L 216 236" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="72" width="176" height="72" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="128.0" y="104.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Edit or proposal</text>
+        <text x="128.0" y="120.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Writers or automations</text>
+        <rect x="264" y="72" width="176" height="72" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="104.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Revision history</text>
+        <text x="352.0" y="120.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">UI and REST, preview</text>
+        <rect x="488" y="72" width="176" height="72" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="576.0" y="104.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Snapshot diff</text>
+        <text x="576.0" y="120.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Guide advice: weekly</text>
+        <rect x="488" y="200" width="176" height="72" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="576.0" y="232.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Owner review</text>
+        <text x="576.0" y="248.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Apply or dismiss</text>
+        <rect x="264" y="200" width="176" height="72" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="232.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Approved baseline</text>
+        <text x="352.0" y="248.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Restore if needed</text>
+        <rect x="40" y="200" width="176" height="72" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="128.0" y="232.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agentic workflow file</text>
+        <text x="128.0" y="248.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">If PR review is required</text>
+        <text x="40" y="312" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Automation definitions are stored outside the repository and are not reviewed in pull requests.</text>
+        <text x="40" y="328" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Revision history and the automations REST API are the documented records; the API is public preview.</text>
+        <line x1="40" y1="376" x2="664" y2="376" stroke="#d1d9e0"/>
+        <text x="40" y="400" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Boxes: lifecycle stages; arrows: order of stages</text>
+        <text x="40" y="420" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

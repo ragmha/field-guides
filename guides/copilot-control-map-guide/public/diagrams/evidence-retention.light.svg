@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="evidence-retention-light-root" viewBox="0 0 704 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="evidence-retention-light-title evidence-retention-light-desc">
+        <title id="evidence-retention-light-title">Where evidence lives</title>
+        <desc id="evidence-retention-light-desc">Agent sessions show 24 hours, audit events stay 180 days unless streamed, metrics arrive after two full UTC days, and local activity needs OpenTelemetry.</desc>
+        <defs><marker id="evidence-retention-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="500" fill="#f3f5f7"/>
+        <text x="40" y="52" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">EVIDENCE SOURCE</text>
+        <line x1="200" y1="72" x2="640" y2="72" stroke="#59636e" stroke-width="1.5"/>
+        <line x1="200" y1="66" x2="200" y2="78" stroke="#59636e" stroke-width="1.5"/>
+        <text x="200" y="58" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Day 0</text>
+        <line x1="248" y1="66" x2="248" y2="78" stroke="#59636e" stroke-width="1.5"/>
+        <text x="248" y="58" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">24 h</text>
+        <line x1="296" y1="66" x2="296" y2="78" stroke="#59636e" stroke-width="1.5"/>
+        <text x="296" y="58" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">2 days</text>
+        <line x1="520" y1="66" x2="520" y2="78" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520" y="58" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">180 days</text>
+        <line x1="640" y1="66" x2="640" y2="78" stroke="#59636e" stroke-width="1.5"/>
+        <text x="640" y="58" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Beyond</text>
+        <text x="40" y="118" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent sessions view</text>
+        <text x="40" y="134" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Under AI controls</text>
+        <line x1="40" y1="156" x2="664" y2="156" stroke="#d1d9e0"/>
+        <text x="40" y="190" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise audit log</text>
+        <text x="40" y="206" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Policy and agent events</text>
+        <line x1="40" y1="228" x2="664" y2="228" stroke="#d1d9e0"/>
+        <text x="40" y="262" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Usage metrics</text>
+        <text x="40" y="278" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Dashboards and API</text>
+        <line x1="40" y1="300" x2="664" y2="300" stroke="#d1d9e0"/>
+        <text x="40" y="334" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Local client activity</text>
+        <text x="40" y="350" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Prompts on devices</text>
+        <rect x="200" y="108" width="48" height="24" rx="4" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="264" y="124" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Recent sessions only</text>
+        <rect x="200" y="180" width="320" height="24" rx="4" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="360" y="196" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Searchable for 180 days</text>
+        <rect x="520" y="180" width="120" height="24" rx="4" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="580" y="196" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Stream to SIEM</text>
+        <circle cx="296" cy="264" r="6" fill="#59636e"/>
+        <text x="316" y="268" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Each day arrives within two full UTC days</text>
+        <rect x="200" y="324" width="440" height="24" rx="4" fill="#ffffff" stroke="#59636e" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <text x="420" y="340" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not in the audit log: export with OpenTelemetry</text>
+        <text x="40" y="400" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not to scale. History beyond 180 days needs a stream you own.</text>
+        <line x1="40" y1="432" x2="664" y2="432" stroke="#d1d9e0"/>
+        <text x="40" y="456" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Bar: when evidence is available; dot: arrival delay; dashed bar: kept outside GitHub</text>
+        <text x="40" y="476" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green bar: lesson focus, not approval or a safety rating</text>
+      </svg>

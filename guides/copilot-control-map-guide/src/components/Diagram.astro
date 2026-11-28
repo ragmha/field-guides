@@ -1,0 +1,12 @@
+---
+import diagrams from '../diagrams.json';
+import DiagramEmbed from '../../../../shared/DiagramEmbed.astro';
+
+interface Props { name: string }
+const { name } = Astro.props;
+const diagram = diagrams[name as keyof typeof diagrams];
+if (!diagram) throw new Error(`Unknown diagram: ${name}`);
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<DiagramEmbed name={name} title={diagram.title} description={diagram.description} base={base} />

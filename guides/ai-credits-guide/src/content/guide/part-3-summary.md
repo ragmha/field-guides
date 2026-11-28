@@ -15,12 +15,15 @@ The response exercise showed why recovery starts with diagnosis. If the applicab
 
 Reporting completed the loop. A reconciled total can still be attributed to the wrong team, so keep unknown ownership visible and maintain transfer records. Showback makes usage visible; chargeback needs financial agreement.
 
+Efficiency improves that loop only when the work still meets its acceptance criteria. Scope context and tools to the task, retain security controls, and compare comparable outcomes and billing evidence rather than treating token counts as an invoice.
+
 ## Key Takeaways
 
 - Test behavior against the approved brief before broad rollout.
 - Start recovery with the limiting control, not a speculative budget increase.
 - Keep approvers, responders, backups and review dates explicit.
 - Reconcile periods and totals while keeping unmapped usage visible.
+- Evaluate credit use alongside completed work, quality and review outcomes.
 - Review a working manual process before automating it.
 
 Part 4 turns these reporting principles into useful views. Choose GitHub's built-in insights, an export-based report, Azure cost tools where applicable or a local Grafana dashboard according to the question you need to answer.

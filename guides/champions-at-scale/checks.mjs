@@ -11,6 +11,7 @@ if (!process.env.PLAYWRIGHT_MODULE) {
 }
 const { chromium } = await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE));
 const baseURL = process.env.GUIDE_URL || 'http://127.0.0.1:4173/';
+const onWindows = process.platform === 'win32';
 const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'chrome' });
 const errors = [];
 const temp = await mkdtemp(join(tmpdir(), 'champions-check-'));
@@ -153,8 +154,8 @@ try {
   assert.equal(await blockedPage.locator('#quest-levels input').first().isChecked(), true);
   await blocked.close();
 
-  await symlink(resolve('.'), join(temp, 'champions-at-scale'), 'dir');
-  server = spawn('python3', ['-u', '-m', 'http.server', '0', '--bind', '127.0.0.1', '--directory', temp], { stdio: ['ignore', 'pipe', 'pipe'] });
+  await symlink(resolve('.'), join(temp, 'champions-at-scale'), onWindows ? 'junction' : 'dir');
+  server = spawn(onWindows ? 'python' : 'python3', ['-u', '-m', 'http.server', '0', '--bind', '127.0.0.1', '--directory', temp], { stdio: ['ignore', 'pipe', 'pipe'] });
   const address = await new Promise((resolveAddress, reject) => {
     server.once('error', reject);
     server.once('exit', code => reject(new Error(`Subpath server exited: ${code}`)));

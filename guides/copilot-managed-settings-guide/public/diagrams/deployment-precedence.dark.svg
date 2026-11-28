@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="deployment-precedence-dark-root" viewBox="0 0 704 528" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="deployment-precedence-dark-title deployment-precedence-dark-desc">
+        <title id="deployment-precedence-dark-title">Which source wins</title>
+        <desc id="deployment-precedence-dark-desc">For replaceable keys, native MDM takes precedence over server-managed settings, which take precedence over a file-based settings file, which takes precedence over user and repository settings.</desc>
+        <defs><marker id="deployment-precedence-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="528" fill="#07090d"/>
+        <path d="M 64 344 L 64 56" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#deployment-precedence-dark-arrow)"/>
+        <rect x="96" y="56" width="568" height="60" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="380.0" y="82.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Native MDM</text>
+        <text x="380.0" y="98.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Device policy values; highest precedence</text>
+        <rect x="120" y="132" width="520" height="60" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="380.0" y="158.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Server-managed</text>
+        <text x="380.0" y="174.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">.github-private default and team files</text>
+        <rect x="144" y="208" width="472" height="60" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="380.0" y="234.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">File-based</text>
+        <text x="380.0" y="250.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Settings file placed on the device</text>
+        <rect x="168" y="284" width="424" height="60" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="380.0" y="310.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User and repository settings</text>
+        <text x="380.0" y="326.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Lowest precedence</text>
+        <text x="40" y="404" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Applies to keys that replace by precedence. Restrictive keys compose instead.</text>
+        <text x="40" y="420" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Combining methods makes the effective policy harder to understand.</text>
+        <line x1="40" y1="468" x2="664" y2="468" stroke="#3d444d"/>
+        <text x="40" y="492" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Top band wins; arrow: direction of higher precedence</text>
+        <text x="40" y="512" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>

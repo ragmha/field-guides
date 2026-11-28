@@ -1,0 +1,13 @@
+import { constants, copyFileSync, mkdirSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+export function copyOutput(source, target) {
+  mkdirSync(target, { recursive: true });
+  for (const entry of readdirSync(source, { withFileTypes: true })) {
+    const from = join(source, entry.name);
+    const to = join(target, entry.name);
+    if (entry.isDirectory()) copyOutput(from, to);
+    else if (entry.isFile()) copyFileSync(from, to, constants.COPYFILE_EXCL);
+    else throw new Error(`Unsupported build output: ${from}`);
+  }
+}

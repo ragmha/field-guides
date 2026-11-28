@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How restrictive keys compose</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Managed Settings · Matrix</p>
+    <h1>How restrictive keys compose</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="How restrictive keys compose. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 488" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="restrictive-composition-dark-title restrictive-composition-dark-desc">
+        <title id="restrictive-composition-dark-title">How restrictive keys compose</title>
+        <desc id="restrictive-composition-dark-desc">A matrix of six keys showing how values from several managed sources combine: unions for deny lists, intersections for allow lists, most restrictive for bypass mode, and whole-object replacement for telemetry.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="488" fill="#07090d"/>
+        <line x1="40" y1="76" x2="664" y2="76" stroke="#3d444d"/>
+        <text x="40" y="60" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Key</text>
+        <text x="384" y="60" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">How sources combine</text>
+        <text x="584" y="60" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Lower layer relaxes?</text>
+        <text x="40" y="106" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">permissions.deny</text>
+        <rect x="272" y="90" width="224" height="26" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="384.0" y="107.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Union</text>
+        <rect x="520" y="90" width="128" height="26" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="107.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="146" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">permissions.allow</text>
+        <rect x="272" y="130" width="224" height="26" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="384.0" y="147.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Intersection</text>
+        <rect x="520" y="130" width="128" height="26" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="147.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="186" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">disableBypassPermissionsMode</text>
+        <rect x="272" y="170" width="224" height="26" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="384.0" y="187.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Most restrictive</text>
+        <rect x="520" y="170" width="128" height="26" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="187.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="226" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">allowedMcpServers</text>
+        <rect x="272" y="210" width="224" height="26" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="384.0" y="227.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Intersection</text>
+        <rect x="520" y="210" width="128" height="26" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="227.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="266" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">deniedMcpServers</text>
+        <rect x="272" y="250" width="224" height="26" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="384.0" y="267.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Union</text>
+        <rect x="520" y="250" width="128" height="26" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="267.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No</text>
+        <text x="40" y="306" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">telemetry</text>
+        <rect x="272" y="290" width="224" height="26" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="384.0" y="307.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Highest source, whole object</text>
+        <rect x="520" y="290" width="128" height="26" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="307.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not merged</text>
+        <text x="40" y="364" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Union: blocked by any source. Intersection: allowed only if every declaring source allows.</text>
+        <text x="40" y="380" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">sandbox, permissions.ask and strictPluginOnlyCustomization also compose restrictively.</text>
+        <line x1="40" y1="428" x2="664" y2="428" stroke="#3d444d"/>
+        <text x="40" y="452" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rows: keys; columns: combination rule and whether a lower layer can relax it</text>
+        <text x="40" y="472" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: restrictive composition, not a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

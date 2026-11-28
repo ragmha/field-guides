@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare isolation tiers</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Local Sandboxing · Matrix</p>
+    <h1>Compare isolation tiers</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Compare isolation tiers. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="isolation-tiers-dark-title isolation-tiers-dark-desc">
+        <title id="isolation-tiers-dark-title">Compare isolation tiers</title>
+        <desc id="isolation-tiers-dark-desc">A local sandbox, dev container, codespace and cloud sandbox each separate different things from your machine, and each leaves a residual risk.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="480" fill="#07090d"/>
+        <rect x="40" y="40" width="128" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="104.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Tier</text>
+        <rect x="168" y="40" width="160" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Runs where</text>
+        <rect x="328" y="40" width="168" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Separates</text>
+        <rect x="496" y="40" width="168" height="40" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Residual risk</text>
+        <rect x="40" y="80" width="128" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="104.0" y="116.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Local sandbox</text>
+        <rect x="168" y="80" width="160" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Your machine, as you</text>
+        <rect x="328" y="80" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="108.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">OS limits on files,</text>
+        <text x="412.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">network, credentials</text>
+        <rect x="496" y="80" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="108.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Same user; a bypass</text>
+        <text x="580.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">exposes real secrets</text>
+        <rect x="40" y="144" width="128" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="104.0" y="180.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Dev container</text>
+        <rect x="168" y="144" width="160" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="180.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Container on a host</text>
+        <rect x="328" y="144" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="172.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Processes and files</text>
+        <text x="412.0" y="188.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">from the host</text>
+        <rect x="496" y="144" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="172.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Docker options relaxed</text>
+        <text x="580.0" y="188.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">for the agent sandbox</text>
+        <rect x="168" y="208" width="160" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="244.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Own VM per codespace</text>
+        <rect x="328" y="208" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="236.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Machine and network</text>
+        <text x="412.0" y="252.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">from your laptop</text>
+        <rect x="496" y="208" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="236.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Outbound internet;</text>
+        <text x="580.0" y="252.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">devcontainer.json runs code</text>
+        <rect x="40" y="272" width="128" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="104.0" y="308.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cloud sandbox</text>
+        <rect x="168" y="272" width="160" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="248.0" y="308.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">GitHub-hosted Linux</text>
+        <rect x="328" y="272" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="412.0" y="300.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Whole session off</text>
+        <text x="412.0" y="316.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">your machine</text>
+        <rect x="496" y="272" width="168" height="64" rx="0" fill="#0d1117" stroke="#3d444d" stroke-width="1"/>
+        <text x="580.0" y="300.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Local sandbox settings</text>
+        <text x="580.0" y="316.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">do not apply</text>
+        <text x="40" y="368" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Match the tier to repository trust: untrusted code never runs directly on a credentialed laptop.</text>
+        <text x="40" y="384" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Cloud agent security is covered by a separate course.</text>
+        <rect x="40" y="208" width="128" height="64" rx="0" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="104.0" y="244.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Codespace</text>
+        <line x1="40" y1="420" x2="664" y2="420" stroke="#3d444d"/>
+        <text x="40" y="444" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rows: isolation tiers; columns: where it runs, what it separates and what remains</text>
+        <text x="40" y="464" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

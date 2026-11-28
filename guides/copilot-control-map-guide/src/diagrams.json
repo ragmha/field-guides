@@ -1,0 +1,50 @@
+{
+  "control-layer-stack": {
+    "title": "Seven control layers",
+    "description": "Policies, repository controls, managed settings, network, content exclusion, budgets and evidence each answer a separate question, and none overrides another."
+  },
+  "control-owner-map": {
+    "title": "Who owns each layer",
+    "description": "Each layer pairs an accountable owner with a configuring role, and the two often sit on different teams."
+  },
+  "policy-delegation": {
+    "title": "How a policy is delegated",
+    "description": "An enterprise enables, disables or delegates a policy; only delegated policies let organization owners choose, and conflicts follow the reference."
+  },
+  "repository-guardrails": {
+    "title": "Repository guardrails stack",
+    "description": "Enterprise, organization and repository rulesets add up around Copilot pull requests, whose workflows wait for approval by default."
+  },
+  "managed-settings-sources": {
+    "title": "Managed settings precedence",
+    "description": "Device management outranks the server file, which outranks the local file and user settings, while deny rules win across every source."
+  },
+  "network-boundaries": {
+    "title": "Two network boundaries",
+    "description": "The corporate firewall controls which plan endpoints devices reach, while the cloud agent firewall covers only some agent traffic."
+  },
+  "content-exclusion-scope": {
+    "title": "Content exclusion scope",
+    "description": "Repository, organization and enterprise rules reduce what Copilot reads for different users, but known gaps mean exclusion is not a security boundary."
+  },
+  "budget-evaluation": {
+    "title": "When a budget stops usage",
+    "description": "Inline completions continue, user-level budgets always block at the limit, and spending budgets block only when Stop usage is enabled."
+  },
+  "evidence-retention": {
+    "title": "Where evidence lives",
+    "description": "Agent sessions show 24 hours, audit events stay 180 days unless streamed, metrics arrive after two full UTC days, and local activity needs OpenTelemetry."
+  },
+  "metrics-signals": {
+    "title": "Match signals to questions",
+    "description": "Usage metrics, the audit log, OpenTelemetry and budget alerts each answer different evidence questions, and organization totals overlap."
+  },
+  "risk-control-matrix": {
+    "title": "Map risks to controls",
+    "description": "Each risk row marks its primary and supporting layers, and an empty row shows a gap that needs a control or an accepted risk."
+  },
+  "layer-selection": {
+    "title": "Choose the layer",
+    "description": "Ask what kind of requirement it is, who it must reach, whether users can override it and what proves it, then choose the narrowest scope."
+  }
+}

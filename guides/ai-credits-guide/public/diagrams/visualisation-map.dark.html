@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Choose a view by the question</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; background: #07090d; color: #f0f6fc; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 704px; margin: 0 auto; }
+    .eyebrow { color: #9198a1; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 8px 0 20px; font-size: 24px; line-height: 1.2; }
+    .diagram-container { overflow-x: auto; border: 1px solid #3d444d; border-radius: 6px; background: #07090d; }
+    .diagram-container:focus-visible { outline: 2px solid #3fb950; outline-offset: 3px; }
+    svg { display: block; width: 100%; min-width: 640px; height: auto; }
+    figcaption { margin-top: 12px; color: #9198a1; font-size: 12px; }
+    nav { display: flex; gap: 16px; margin-top: 12px; }
+    a { color: #4493f8; text-underline-offset: 3px; }
+    @media print { body { padding: 0; } .diagram-container { overflow: visible; } svg { min-width: 0; } nav { display: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">AI Credits guide · Architecture</p>
+    <h1>Choose a view by the question</h1>
+    <figure>
+      <div class="diagram-container" tabindex="0" role="region" aria-label="Choose a view by the question. Scroll horizontally to explore."><svg viewBox="0 0 640 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="visualisation-map-dark-title visualisation-map-dark-desc">
+  <title id="visualisation-map-dark-title">Choose a view by the question</title>
+  <desc id="visualisation-map-dark-desc">Billing data answers spend and attribution questions. Copilot usage metrics describe adoption and activity. Instrumented client telemetry diagnoses agent behavior; it does not replace billing.</desc>
+  <defs><marker id="visualisation-map-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M 0 0 L 8 3 L 0 6 Z" fill="#9198a1"/></marker></defs>
+  <style>
+    svg { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #f0f6fc; }
+    .paper { fill: #07090d; }
+    .node, .step-card { fill: #0d1117; stroke: #3d444d; stroke-width: 1.5; }
+    .node.focus, .step-card.focus { fill: #0f2d19; stroke: #3fb950; stroke-width: 2; }
+    .decision { fill: #0d1117; stroke: #f0f6fc; stroke-width: 1.5; }
+    .hub { fill: #0f2d19; stroke: #3fb950; stroke-width: 1.5; }
+    .step-number { fill: #07090d; stroke: #3d444d; stroke-width: 1.5; }
+    .step-number.focus { fill: #3fb950; stroke: #3fb950; }
+    .eyebrow, .detail, .note { fill: #9198a1; }
+    .node-name, .number { fill: #f0f6fc; }
+    .arrow { fill: none; stroke: #9198a1; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#visualisation-map-dark-arrow); }
+    .spoke { fill: none; stroke: #9198a1; stroke-width: 1; stroke-dasharray: 4 3; }
+    .eyebrow { font-size: 8px; font-weight: 600; letter-spacing: .12em; }
+    .node-name { font-size: 12px; font-weight: 600; }
+    .detail { font-size: 9px; }
+    .arrow-label { fill: #9198a1; font-size: 8px; font-weight: 600; letter-spacing: .06em; }
+    .label-mask { fill: #07090d; }
+    .number { font-size: 9px; font-weight: 600; }
+    .note { font-size: 10px; }
+  </style>
+  <rect x="0" y="0" width="640" height="560" class="paper"/>
+  <path d="M 192 120 L 236 120" class="arrow" marker-end="url(#visualisation-map-dark-arrow)"/><path d="M 404 120 L 448 120" class="arrow" marker-end="url(#visualisation-map-dark-arrow)"/><path d="M 192 272 L 236 272" class="arrow" marker-end="url(#visualisation-map-dark-arrow)"/><path d="M 404 272 L 448 272" class="arrow" marker-end="url(#visualisation-map-dark-arrow)"/><path d="M 192 424 L 236 424" class="arrow" marker-end="url(#visualisation-map-dark-arrow)"/><path d="M 404 424 L 448 424" class="arrow" marker-end="url(#visualisation-map-dark-arrow)"/><g><rect x="24" y="72" width="168" height="96" rx="6" class="node focus"/><text x="108" y="90" text-anchor="middle" class="eyebrow"><tspan>SOURCE</tspan></text><text x="108" y="114" text-anchor="middle" class="node-name"><tspan>Billing data</tspan></text><text x="108" y="130" text-anchor="middle" class="detail"><tspan>AI usage CSV / REST</tspan></text></g><g><rect x="236" y="72" width="168" height="96" rx="6" class="node"/><text x="320" y="90" text-anchor="middle" class="eyebrow"><tspan>VIEW</tspan></text><text x="320" y="114" text-anchor="middle" class="node-name"><tspan>Billing or BI</tspan></text><text x="320" y="130" text-anchor="middle" class="detail"><tspan>Local Grafana</tspan></text></g><g><rect x="448" y="72" width="168" height="96" rx="6" class="node"/><text x="532" y="90" text-anchor="middle" class="eyebrow"><tspan>QUESTION</tspan></text><text x="532" y="114" text-anchor="middle" class="node-name"><tspan>Where did spend go?</tspan></text><text x="532" y="130" text-anchor="middle" class="detail"><tspan>Charges + attribution</tspan></text></g><g><rect x="24" y="224" width="168" height="96" rx="6" class="node"/><text x="108" y="242" text-anchor="middle" class="eyebrow"><tspan>SOURCE</tspan></text><text x="108" y="266" text-anchor="middle" class="node-name"><tspan>Copilot metrics</tspan></text><text x="108" y="282" text-anchor="middle" class="detail"><tspan>Adoption + activity</tspan></text></g><g><rect x="236" y="224" width="168" height="96" rx="6" class="node"/><text x="320" y="242" text-anchor="middle" class="eyebrow"><tspan>VIEW</tspan></text><text x="320" y="266" text-anchor="middle" class="node-name"><tspan>GitHub dashboard</tspan></text><text x="320" y="282" text-anchor="middle" class="detail"><tspan>Metrics API</tspan></text></g><g><rect x="448" y="224" width="168" height="96" rx="6" class="node"/><text x="532" y="242" text-anchor="middle" class="eyebrow"><tspan>QUESTION</tspan></text><text x="532" y="266" text-anchor="middle" class="node-name"><tspan>Who is using it?</tspan></text><text x="532" y="282" text-anchor="middle" class="detail"><tspan>Adoption signal</tspan></text></g><g><rect x="24" y="376" width="168" height="96" rx="6" class="node"/><text x="108" y="394" text-anchor="middle" class="eyebrow"><tspan>SOURCE</tspan></text><text x="108" y="418" text-anchor="middle" class="node-name"><tspan>Client telemetry</tspan></text><text x="108" y="434" text-anchor="middle" class="detail"><tspan>Instrumented clients</tspan></text></g><g><rect x="236" y="376" width="168" height="96" rx="6" class="node"/><text x="320" y="394" text-anchor="middle" class="eyebrow"><tspan>VIEW</tspan></text><text x="320" y="418" text-anchor="middle" class="node-name"><tspan>Local tracing</tspan></text><text x="320" y="434" text-anchor="middle" class="detail"><tspan>Or Azure route</tspan></text></g><g><rect x="448" y="376" width="168" height="96" rx="6" class="node"/><text x="532" y="394" text-anchor="middle" class="eyebrow"><tspan>QUESTION</tspan></text><text x="532" y="418" text-anchor="middle" class="node-name"><tspan>Why is an agent slow?</tspan></text><text x="532" y="434" text-anchor="middle" class="detail"><tspan>Behavior diagnostics</tspan></text></g><text x="320" y="536" text-anchor="middle" class="note"><tspan>Only billing answers the spending question. Do not substitute adoption or telemetry.</tspan></text>
+</svg></div>
+      <figcaption>Billing data answers spend and attribution questions. Copilot usage metrics describe adoption and activity. Instrumented client telemetry diagnoses agent behavior; it does not replace billing.</figcaption>
+    </figure>
+    <nav aria-label="Diagram variants"><a href="visualisation-map.light.html">Light version</a><a href="visualisation-map.dark.html">Dark version</a></nav>
+  </main>
+</body>
+</html>

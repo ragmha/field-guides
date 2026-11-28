@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resolving the public code policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Content Controls · Decision flowchart</p>
+    <h1>Resolving the public code policy</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Resolving the public code policy. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="public-code-policy-light-title public-code-policy-light-desc">
+        <title id="public-code-policy-light-title">Resolving the public code policy</title>
+        <desc id="public-code-policy-light-desc">Trace whether an enterprise selection or organization settings determine Allow or Block, then check surface support before relying on Block.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="760" fill="#f3f5f7"/>
+        <path d="M 352 96 L 352 120" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 456 176 L 496 176" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="464.5" y="170" width="23" height="12" rx="2" fill="#f3f5f7"/><text x="476" y="179" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 352 232 L 352 264" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="361.5" y="242" width="17" height="12" rx="2" fill="#f3f5f7"/><text x="370" y="251" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 248 320 L 208 320" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="216.5" y="314" width="23" height="12" rx="2" fill="#f3f5f7"/><text x="228" y="323" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 352 376 L 352 408" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="361.5" y="386" width="17" height="12" rx="2" fill="#f3f5f7"/><text x="370" y="395" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 580 204 L 580 520" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 124 348 L 124 520" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 352 464 L 352 520" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="232" y="40" width="240" height="56" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="64.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User with a Copilot seat</text>
+        <text x="352.0" y="80.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Public code policy applies</text>
+        <polygon points="352,120 456,176 352,232 248,176" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="172" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise</text>
+        <text x="352" y="188" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">selected a value?</text>
+        <rect x="496" y="148" width="168" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="580.0" y="172.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise value</text>
+        <text x="580.0" y="188.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Allow or Block</text>
+        <polygon points="352,264 456,320 352,376 248,320" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="316" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Seats from</text>
+        <text x="352" y="332" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="400">several orgs?</text>
+        <rect x="40" y="292" width="168" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="124.0" y="316.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Most restrictive</text>
+        <text x="124.0" y="332.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">org setting applies</text>
+        <rect x="248" y="408" width="208" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="432.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Organization value</text>
+        <text x="352.0" y="448.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Settings, Copilot, Policies</text>
+        <rect x="40" y="520" width="624" height="80" rx="20" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="548.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Check surface support before relying on Block</text>
+        <text x="352.0" y="564.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported: IDEs, and cloud on Actions (annotate only)</text>
+        <text x="352.0" y="580.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not listed: cloud sandbox, CLI, app, code review</text>
+        <text x="40" y="640" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Block hides matches and near matches; Allow shows them with reference details.</text>
+        <text x="40" y="656" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Organization-assigned users on GitHub Enterprise Cloud cannot set the policy personally.</text>
+        <line x1="40" y1="700" x2="664" y2="700" stroke="#d1d9e0"/>
+        <text x="40" y="724" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="744" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
