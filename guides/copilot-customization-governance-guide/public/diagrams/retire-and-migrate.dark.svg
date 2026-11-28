@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="retire-and-migrate-dark-root" viewBox="0 0 704 432" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="retire-and-migrate-dark-title retire-and-migrate-dark-desc">
+        <title id="retire-and-migrate-dark-title">Retire and migrate a customization</title>
+        <desc id="retire-and-migrate-dark-desc">Announce a deprecation, provide and verify a replacement, remove the original in a reviewed pull request, then confirm it no longer appears.</desc>
+        <defs><marker id="retire-and-migrate-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="432" fill="#07090d"/>
+        <path d="M 172 88 L 204 88" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#retire-and-migrate-dark-arrow)"/>
+        <path d="M 336 88 L 368 88" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#retire-and-migrate-dark-arrow)"/>
+        <path d="M 500 88 L 532 88" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#retire-and-migrate-dark-arrow)"/>
+        <rect x="40" y="40" width="132" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="106" y="76" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Announce</text>
+        <text x="106" y="92" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Mark deprecated</text>
+        <text x="106" y="108" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">with a date</text>
+        <rect x="204" y="40" width="132" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="270" y="76" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Replace</text>
+        <text x="270" y="92" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Provide a skill</text>
+        <text x="270" y="108" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">or other successor</text>
+        <rect x="368" y="40" width="132" height="96" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="434" y="76" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Remove</text>
+        <text x="434" y="92" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A reviewed PR</text>
+        <text x="434" y="108" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">deletes the original</text>
+        <rect x="532" y="40" width="132" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="598" y="76" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Verify</text>
+        <text x="598" y="92" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Discovery lists</text>
+        <text x="598" y="108" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">no longer show it</text>
+        <rect x="40" y="184" width="624" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="212" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Documented example: prompt files to skills in VS Code</text>
+        <text x="352" y="228" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The Local harness is deprecated, with removal by February 2027; migration is experimental</text>
+        <text x="352" y="244" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Originals and migrated copies do not sync, so retire the original after verifying</text>
+        <text x="40" y="312" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Guide advice: retire through the same review path used to add the customization.</text>
+        <line x1="40" y1="372" x2="664" y2="372" stroke="#3d444d"/>
+        <text x="40" y="396" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Box: retirement step; arrow: next step; wide box: documented example</text>
+        <text x="40" y="416" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

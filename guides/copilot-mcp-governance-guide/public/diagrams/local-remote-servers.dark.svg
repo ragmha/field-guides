@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="local-remote-servers-dark-root" viewBox="0 0 704 556" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="local-remote-servers-dark-title local-remote-servers-dark-desc">
+        <title id="local-remote-servers-dark-title">Local and remote servers</title>
+        <desc id="local-remote-servers-dark-desc">Local stdio servers are matched by exact command and can run in the local sandbox; remote servers are matched by canonical URL and run outside it.</desc>
+        <defs><marker id="local-remote-servers-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="556" fill="#07090d"/>
+        <rect x="40" y="40" width="624" height="160" rx="6" fill="#07090d" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="56" y="64" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Local stdio server</text>
+        <rect x="40" y="232" width="624" height="160" rx="6" fill="#07090d" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="56" y="256" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Remote HTTP or SSE server</text>
+        <path d="M 232 128 L 268 128" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#local-remote-servers-dark-arrow)"/>
+        <path d="M 436 128 L 472 128" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#local-remote-servers-dark-arrow)"/>
+        <path d="M 232 320 L 268 320" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#local-remote-servers-dark-arrow)"/>
+        <path d="M 436 320 L 472 320" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#local-remote-servers-dark-arrow)"/>
+        <rect x="64" y="88" width="168" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="148" y="124" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Process on device</text>
+        <text x="148" y="140" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Command, args and env</text>
+        <rect x="268" y="88" width="168" height="80" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352" y="124" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">serverCommand match</text>
+        <text x="352" y="140" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Exact command and args</text>
+        <rect x="472" y="88" width="168" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="556" y="124" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Local sandbox</text>
+        <text x="556" y="140" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">May contain the process</text>
+        <rect x="64" y="280" width="168" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="148" y="316" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Endpoint by URL</text>
+        <text x="148" y="332" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Headers carry keys</text>
+        <rect x="268" y="280" width="168" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="316" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">serverUrl match</text>
+        <text x="352" y="332" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Canonical URL, wildcards</text>
+        <rect x="472" y="280" width="168" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="556" y="316" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Provider boundary</text>
+        <text x="556" y="332" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not in the local sandbox</text>
+        <text x="40" y="440" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">serverName is a user-chosen label; prefer command or URL matchers to pin identity.</text>
+        <text x="40" y="456" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The cloud agent firewall does not apply directly to most MCP servers.</text>
+        <line x1="40" y1="496" x2="664" y2="496" stroke="#3d444d"/>
+        <text x="40" y="520" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Lane: server transport; boxes: how it runs, how it is matched, what contains it</text>
+        <text x="40" y="540" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>

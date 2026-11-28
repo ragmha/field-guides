@@ -4,15 +4,17 @@ import { chapters, parts } from '../src/course';
 import diagrams from '../src/diagrams.json';
 import { quizzes, quizReviewLessons } from '../src/quizzes';
 
+const readText = async (path: string) => (await readFile(path, 'utf8')).replace(/\r\n/g, '\n');
+
 test('course pages have sources, checks and editable lesson diagrams', async () => {
   const files = await readdir('src/content/guide');
-  const registry = await readFile('src/content/guide/sources.md', 'utf8');
+  const registry = await readText('src/content/guide/sources.md');
   expect(files.filter(file => file.endsWith('.md')).sort()).toEqual(
     ['start.md', 'sources.md', ...chapters.map(chapter => `${chapter.id}.md`)].sort(),
   );
   expect(parts).toHaveLength(6);
   for (const chapter of chapters) {
-    const text = await readFile(`src/content/guide/${chapter.id}.md`, 'utf8');
+    const text = await readText(`src/content/guide/${chapter.id}.md`);
     expect(text).toMatch(/verified: "\d{4}-\d{2}-\d{2}"/);
     const sources = [...text.matchAll(/^  - (https:\/\/.+)$/gm)].map(match => match[1]);
     expect(sources.length).toBeGreaterThan(0);
@@ -40,8 +42,8 @@ test('diagram sources and exports have accessible, offline metadata', async () =
   const escapeXml = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
   for (const [slug, metadata] of Object.entries(diagrams)) {
     for (const theme of ['light', 'dark']) {
-      const source = await readFile(`public/diagrams/${slug}.${theme}.html`, 'utf8');
-      const svg = await readFile(`public/diagrams/${slug}.${theme}.svg`, 'utf8');
+      const source = await readText(`public/diagrams/${slug}.${theme}.html`);
+      const svg = await readText(`public/diagrams/${slug}.${theme}.svg`);
       expect(source).toContain('<svg ');
       expect(svg).toMatch(/<svg\b[^>]*role="img"[^>]*>\s*<title\b/);
       expect(svg).toMatch(/viewBox="0 0 704 \d+"/);
@@ -98,8 +100,8 @@ test('diagram themes preserve identical geometry with only house-token substitut
     ['#d1d9e0', '#3d444d'],
   ];
   for (const slug of Object.keys(diagrams)) {
-    const light = await readFile(`public/diagrams/${slug}.light.html`, 'utf8');
-    const dark = await readFile(`public/diagrams/${slug}.dark.html`, 'utf8');
+    const light = await readText(`public/diagrams/${slug}.light.html`);
+    const dark = await readText(`public/diagrams/${slug}.dark.html`);
     let expected = light.replaceAll(`${slug}-light-`, `${slug}-dark-`);
     for (const [from, to] of colors) expected = expected.replaceAll(from, to);
     expect(dark).toBe(expected);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="team-level-joins-light-root" viewBox="0 0 704 728" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="team-level-joins-light-title team-level-joins-light-desc">
+        <title id="team-level-joins-light-title">Build a team view</title>
+        <desc id="team-level-joins-light-desc">Join the daily per-user and user-teams reports on user, day and entity, group by team, count distinct users and sum volume, then publish with the five-user and multi-team caveats.</desc>
+        <defs><marker id="team-level-joins-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="728" fill="#f3f5f7"/>
+        <rect x="40" y="40" width="240" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="160.0" y="68.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Daily per-user report</text>
+        <text x="160.0" y="84.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">users-1-day</text>
+        <rect x="424" y="40" width="240" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="544.0" y="68.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Daily user-teams report</text>
+        <text x="544.0" y="84.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">user-teams-1-day</text>
+        <path d="M 160 104 L 160 192 L 192 192" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#team-level-joins-light-arrow)"/>
+        <path d="M 544 104 L 544 192 L 512 192" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#team-level-joins-light-arrow)"/>
+        <rect x="192" y="160" width="320" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="188.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Join on three keys</text>
+        <text x="352.0" y="204.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">user_id, day and enterprise or org ID</text>
+        <path d="M 352 224 L 352 272" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#team-level-joins-light-arrow)"/>
+        <rect x="192" y="272" width="320" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="300.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Group by team_id</text>
+        <text x="352.0" y="316.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Left join a team list to keep zero rows</text>
+        <path d="M 352 336 L 352 384" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#team-level-joins-light-arrow)"/>
+        <rect x="192" y="384" width="320" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="412.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Distinct users, summed volume</text>
+        <text x="352.0" y="428.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">COUNT(DISTINCT user_id); SUM counters</text>
+        <path d="M 352 448 L 352 496" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#team-level-joins-light-arrow)"/>
+        <rect x="192" y="496" width="320" height="80" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="524.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Publish with caveats</text>
+        <text x="352.0" y="540.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Teams under five seated users excluded</text>
+        <text x="352.0" y="556.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Multi-team users counted in each team</text>
+        <text x="40" y="624" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Never join users-28-day files to daily user-teams files; the windows differ.</text>
+        <line x1="40" y1="668" x2="664" y2="668" stroke="#d1d9e0"/>
+        <text x="40" y="692" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: report or step; arrow: data flow</text>
+        <text x="40" y="712" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

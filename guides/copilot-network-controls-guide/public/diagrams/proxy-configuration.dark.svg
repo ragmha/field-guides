@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="proxy-configuration-dark-root" viewBox="0 0 704 728" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="proxy-configuration-dark-title proxy-configuration-dark-desc">
+        <title id="proxy-configuration-dark-title">How Copilot picks a proxy</title>
+        <desc id="proxy-configuration-dark-desc">Copilot checks four proxy variables in order, uses the first one found for HTTP and HTTPS, needs an http proxy URL and authenticates with Basic or Kerberos.</desc>
+        <defs><marker id="proxy-configuration-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="728" fill="#07090d"/>
+        <rect x="40" y="40" width="248" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="164.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">1. HTTPS_PROXY</text>
+        <text x="164.0" y="80.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Checked first</text>
+        <path d="M 288 68 L 376 68" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="319.8" y="62" width="24.5" height="12" rx="2" fill="#07090d"/><text x="332.0" y="71" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SET</text>
+        <path d="M 164 96 L 164 128" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="172" y="106" width="46.5" height="12" rx="2" fill="#07090d"/><text x="195.2" y="115" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <rect x="40" y="128" width="248" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="164.0" y="152.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">2. https_proxy</text>
+        <text x="164.0" y="168.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Checked second</text>
+        <path d="M 288 156 L 376 156" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="319.8" y="150" width="24.5" height="12" rx="2" fill="#07090d"/><text x="332.0" y="159" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SET</text>
+        <path d="M 164 184 L 164 216" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="172" y="194" width="46.5" height="12" rx="2" fill="#07090d"/><text x="195.2" y="203" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <rect x="40" y="216" width="248" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="164.0" y="240.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">3. HTTP_PROXY</text>
+        <text x="164.0" y="256.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Checked third</text>
+        <path d="M 288 244 L 376 244" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="319.8" y="238" width="24.5" height="12" rx="2" fill="#07090d"/><text x="332.0" y="247" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SET</text>
+        <path d="M 164 272 L 164 304" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="172" y="282" width="46.5" height="12" rx="2" fill="#07090d"/><text x="195.2" y="291" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <rect x="40" y="304" width="248" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="164.0" y="328.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">4. http_proxy</text>
+        <text x="164.0" y="344.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Checked last</text>
+        <path d="M 288 332 L 376 332" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="319.8" y="326" width="24.5" height="12" rx="2" fill="#07090d"/><text x="332.0" y="335" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SET</text>
+        <rect x="376" y="40" width="288" height="320" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="520.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Use the first one found</text>
+        <text x="520.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">For both HTTP and HTTPS</text>
+        <text x="520.0" y="220.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Differs from per-scheme tools</text>
+        <path d="M 164 360 L 164 400" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="172" y="374" width="46.5" height="12" rx="2" fill="#07090d"/><text x="195.2" y="383" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT SET</text>
+        <rect x="40" y="400" width="248" height="64" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="164.0" y="428.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Direct HTTPS connection</text>
+        <text x="164.0" y="444.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Default behavior</text>
+        <path d="M 520 360 L 520 400" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="376" y="400" width="288" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="520.0" y="428.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Proxy URL uses the http scheme</text>
+        <text x="520.0" y="444.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The https scheme is unsupported</text>
+        <path d="M 520 464 L 520 496" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#proxy-configuration-dark-arrow)"/>
+        <rect x="376" y="496" width="288" height="64" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="520.0" y="524.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Authenticate</text>
+        <text x="520.0" y="540.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Basic or Kerberos; Kerberos needs a ticket</text>
+        <text x="40" y="600" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Editors also have their own proxy settings; see the lesson.</text>
+        <line x1="40" y1="668" x2="664" y2="668" stroke="#3d444d"/>
+        <text x="40" y="692" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="712" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

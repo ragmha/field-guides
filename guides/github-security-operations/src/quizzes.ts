@@ -1,0 +1,81 @@
+// The first option is correct; presentation rotates it so it is not always first.
+type Question = [question: string, correct: string, distractor1: string, distractor2: string, explanation: string];
+export const quizzes: Record<string, Question[]> = {
+  'operating-model': [
+    ['What is usually the bottleneck after enabling security features?', 'Deciding who acts and how', 'Detecting enough findings', 'Buying more scanners', 'Detection is quick; ownership, context and decision rules are what stall alerts.'],
+    ['What are the four steps of the alert loop?', 'Detect, route, respond, verify', 'Scan, dismiss, report, archive', 'Assign, escalate, close, forget', 'Every alert should travel the same loop regardless of type.'],
+    ['Who owns organization-wide feature configuration and coverage?', 'The platform administrator', 'Each alert responder', 'The risk approver', 'Coverage is a platform responsibility, separate from individual remediation.'],
+    ['Who handles a usable leaked credential?', 'Incident response', 'The weekly backlog review', 'Whoever next opens the repository', 'Credible active exposure moves out of routine triage.'],
+    ['When should the operating rules be agreed?', 'Before broad rollout', 'After the backlog exceeds a threshold', 'Only after the first incident', 'Agreeing rules before volume arrives avoids negotiating every alert.'],
+  ],
+  route: [
+    ['How many accountable response owners should each finding have?', 'One, with supporting teams visible', 'None until the next review meeting', 'Everyone with repository access', 'One named owner prevents alerts from sitting in a shared queue.'],
+    ['Where should an alert go when repository ownership is unclear?', 'A named fallback intake owner', 'An unassigned backlog', 'The most recent committer automatically', 'Intake establishes ownership instead of letting the alert wait.'],
+    ['Who is notified about a new secret scanning alert regardless of preferences?', 'The commit author', 'Every organization member', 'Nobody until it is assigned', 'GitHub notifies commit authors regardless of their notification preferences.'],
+    ['What should never be copied into the intake ticket?', 'Credential values or sensitive code', 'The alert link', 'The named owner and due date', 'Link to the restricted alert instead of copying sensitive material.'],
+    ['Which security overview filter helps route by repository attribute?', 'A custom property filter', 'A commit message filter', 'A file size filter', 'Filters such as props.NAME:value use the same attributes that route alerts.'],
+  ],
+  coverage: [
+    ['What can an empty alert view mean?', 'Clean, disabled, stale or not visible', 'Only that the repository is clean', 'Only that scanning failed', 'Check scope, enablement, freshness and visibility before concluding.'],
+    ['Which repositories does an organization default configuration apply to?', 'New repositories', 'Every existing repository retroactively', 'Only archived repositories', 'Existing and transferred repositories need a configuration applied.'],
+    ['What does enforcing a configuration do?', 'Prevents owners changing the features it sets', 'Enables every feature on every plan', 'Hides alerts from repository owners', 'Settings left not set are not enforced.'],
+    ['Can enforcement be relied on without checking coverage?', 'No; it has edge cases', 'Yes, always', 'Only on public repositories', 'API changes can appear to succeed and missing Actions can interrupt enforcement.'],
+    ['Why record who produced a security overview report?', 'Visibility depends on role', 'Reports expire after a day', 'Only owners can export CSV', 'A viewer without full visibility silently under-counts.'],
+  ],
+  triage: [
+    ['Which level does code scanning prefer when an alert has both?', 'Security severity', 'General severity', 'The newest label', 'GitHub displays and uses security severity in preference to severity.'],
+    ['By default, which code scanning results fail a pull request check?', 'Error, critical or high', 'Any note or warning', 'Only critical', 'Lower severities appear as warnings or notes and the check succeeds.'],
+    ['What does an EPSS score estimate?', 'Probability of exploitation soon', 'Time required to fix', 'Number of affected users', 'EPSS estimates the probability of exploitation in the next 30 days.'],
+    ['What is the second triage question?', 'Assess real exposure', 'Dismiss the alert', 'Publish the metric', 'Confirm, assess exposure, set priority, record the decision.'],
+    ['Why can a medium finding outrank a critical one?', 'It is reachable in a public path', 'Medium is always more urgent', 'Labels are random', 'Exposure and reachability complete the priority decision.'],
+  ],
+  secrets: [
+    ['What should you assume about a committed secret?', 'It is compromised', 'It is harmless if private', 'It is safe once deleted', 'GitHub advises treating any committed secret as compromised.'],
+    ['Does removing a token from the repository close its alert?', 'No; close it manually', 'Yes, automatically', 'Only after history rewrite', 'Secret scanning does not close alerts automatically when the token is removed.'],
+    ['What is the first response step?', 'Revoke or rotate with the provider', 'Rewrite git history', 'Dismiss as false positive', 'The response is about the credential, not the file.'],
+    ['Which bypass reason leaves the alert open?', "I'll fix it later", "It's used in tests", "It's a false positive", 'The other two reasons create closed alerts.'],
+    ['What does delegated bypass add?', 'Review of bypass requests', 'Automatic rotation', 'Unlimited bypass for everyone', 'It limits who can bypass and requires review for others.'],
+  ],
+  code: [
+    ['When does a code scanning alert close after a fix?', 'When a later default-branch analysis no longer finds it', 'When any pull request merges', 'When the owner comments', 'Confirm the closed state after the scan runs.'],
+    ['How should Copilot Autofix suggestions be treated?', 'Reviewed like any contribution', 'Merged without review', 'Ignored entirely', 'GitHub describes autofix as best-effort and not guaranteed.'],
+    ['Where does a dismissal comment appear?', 'On the alert timeline', 'Nowhere', 'Only in email', 'The comment can serve as justification in later review.'],
+    ['What is the best path for a real issue that will not be fixed now?', 'The exception process', 'False positive dismissal', 'Ignore it', 'A quiet dismissal hides real risk.'],
+    ['Does merge protection enable code scanning?', 'No', 'Yes', 'Only for public repositories', 'It blocks merges using results from a required tool; it does not enable scanning.'],
+  ],
+  dependencies: [
+    ['What is a Dependabot security update?', 'A pull request upgrading the dependency', 'An alert email', 'A dismissal rule', 'Updates fix the vulnerable dependency; alerts report it.'],
+    ['What happens when a security update is merged?', 'The related alert closes', 'Nothing', 'All alerts in the organization close', 'Merging the update closes the related alert.'],
+    ['When do auto-triage rules run?', 'Before notifications are sent', 'Only weekly', 'After the alert is fixed', 'Rules act before notifications, reducing noise.'],
+    ['Which dismissal reason signals a risk decision needing review?', 'tolerable_risk', 'inaccurate', 'not_used', 'Tolerable risk and no bandwidth need an owner and review date.'],
+    ['When does the dependency review action block merging?', 'When its check is required', 'Always by default', 'Never', 'The check fails by default but only blocks merging when required.'],
+  ],
+  exceptions: [
+    ['How does an accepted risk differ from a fix?', 'The issue is real but deferred', 'They are the same', 'The alert was wrong', 'Accepted risk needs an approver, scope, controls and expiry.'],
+    ['With delegated dismissal enabled, what do write users do?', 'Request a dismissal', 'Dismiss directly', 'Delete the alert', 'Owners, security managers or permitted custom roles review the request.'],
+    ['Which detail belongs on an accepted-risk record?', 'An expiry or review date', 'The credential value', 'A screenshot of the source code', 'Time-bounded exceptions get reassessed.'],
+    ['What happens when an exception expires?', 'It needs a new authorized decision', 'It becomes permanent', 'The alert is deleted', 'Expired exceptions should not silently persist.'],
+    ['Why can a falling queue mislead?', 'It may be built from dismissals', 'Queues never change', 'It always means more risk', 'A queue reduced by dismissals is not reduced risk.'],
+  ],
+  audit: [
+    ['Does code scanning create audit log timeline events?', 'No', 'Yes, for every action', 'Only for dismissals', 'GitHub states code scanning does not create timeline events in an audit log.'],
+    ['Which source shows every status change on one alert?', 'The alert timeline', 'The REST API', 'A CSV export', 'The timeline records every status change regardless of cause.'],
+    ['What does the REST API report about an alert?', 'Its current state', 'Its full history', 'Its deleted values', 'Use the timeline, audit log or stored webhooks for history.'],
+    ['How can you keep a durable history across alert types?', 'Store webhook events', 'Take weekly screenshots', 'Rely on email', 'Webhooks deliver events for all three alert types as they happen.'],
+    ['What should a CSV export be labelled with?', 'Date, filters and producer role', 'Nothing', 'Only the file name', 'Exports are snapshots shaped by filters and visibility.'],
+  ],
+  measure: [
+    ['Why read the four measures together?', 'Each can be gamed alone', 'They are identical', 'Only one is ever reported', 'Fast dismissals or dropped coverage can flatter a single measure.'],
+    ['What do security overview detection and remediation figures cover?', 'The default branch', 'Every branch', 'Only forks', 'Record scope and role with every screenshot or export.'],
+    ['Which alerts do average-age metrics exclude?', 'Alerts closed as false positives', 'Critical alerts', 'Secret scanning alerts', 'Know metric definitions before comparing.'],
+    ['What should be defined before comparing measures?', 'Numerator, denominator, population and window', 'Only the chart colour', 'The meeting time', 'Definitions make comparisons meaningful.'],
+    ['Should alert data rank individuals?', 'No', 'Yes, weekly', 'Only for senior staff', 'Alert counts reflect codebase and coverage as much as effort.'],
+  ],
+  'weekly-review': [
+    ['What does the weekly review start with?', 'Coverage gaps', 'Individual rankings', 'Closed alerts', 'System problems come before alert counts.'],
+    ['What if the review finds likely active exposure?', 'Hand it to incident response now', 'Add it to next week', 'Dismiss it', 'Live exposure never waits for the meeting.'],
+    ['What is a likely cause of alerts sitting unowned?', 'Stale ownership data', 'Too many scanners', 'Short meetings', 'Required properties and a fallback owner address it.'],
+    ['How should a repeated rule across repositories be handled?', 'A campaign or shared fix', 'Dismiss each one', 'Disable the rule', 'Fix the shared pattern rather than each copy.'],
+    ['How is an improvement judged successful?', 'Recurrence falls', 'The queue moves once', 'The meeting ends early', 'Track recurrence, not one-off queue changes.'],
+  ],
+};

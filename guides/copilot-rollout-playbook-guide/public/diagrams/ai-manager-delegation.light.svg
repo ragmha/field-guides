@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ai-manager-delegation-light-root" viewBox="0 0 704 584" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ai-manager-delegation-light-title ai-manager-delegation-light-desc">
+        <title id="ai-manager-delegation-light-title">Delegating AI administration</title>
+        <desc id="ai-manager-delegation-light-desc">Create a custom role, create an enterprise team and assign the role to the team, with optional ruleset bypass and the settings that stay outside the role.</desc>
+        <defs><marker id="ai-manager-delegation-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="584" fill="#f3f5f7"/>
+        <text x="40" y="56" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">DELEGATION STEPS</text>
+        <rect x="40" y="72" width="320" height="96" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="200.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">1  Create custom role</text>
+        <text x="200.0" y="116.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Manage enterprise AI controls</text>
+        <text x="200.0" y="132.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Read enterprise audit logs</text>
+        <text x="200.0" y="148.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">View Enterprise Copilot Metrics</text>
+        <path d="M 200 168 L 200 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#ai-manager-delegation-light-arrow)"/>
+        <rect x="40" y="200" width="320" height="64" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="200.0" y="228.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">2  Create enterprise team</text>
+        <text x="200.0" y="244.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Add the AI managers</text>
+        <path d="M 200 264 L 200 296" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#ai-manager-delegation-light-arrow)"/>
+        <rect x="40" y="296" width="320" height="64" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="200.0" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">3  Assign role to team</text>
+        <text x="200.0" y="340.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Role assignments page</text>
+        <path d="M 200 360 L 200 400" fill="none" stroke="#59636e" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ai-manager-delegation-light-arrow)"/>
+        <rect x="210.0" y="374" width="52.0" height="12" rx="2" fill="#f3f5f7"/>
+        <text x="236" y="383" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">OPTIONAL</text>
+        <rect x="40" y="400" width="320" height="80" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="200.0" y="428.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Optional: ruleset bypass</text>
+        <text x="200.0" y="444.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Agent profile files ruleset</text>
+        <text x="200.0" y="460.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Review and merge custom agents</text>
+        <text x="408" y="216" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">ROLE BOUNDARY</text>
+        <rect x="408" y="232" width="256" height="112" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="536.0" y="260.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Outside the role</text>
+        <text x="536.0" y="276.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Unless more is granted:</text>
+        <text x="536.0" y="292.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot access management</text>
+        <text x="536.0" y="308.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Billing section settings</text>
+        <text x="536.0" y="324.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Metrics section settings</text>
+        <path d="M 360 328 L 408 328" fill="none" stroke="#59636e" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ai-manager-delegation-light-arrow)"/>
+        <text x="408" y="380" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise custom roles are in</text>
+        <text x="408" y="396" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">public preview; keep owner access.</text>
+        <line x1="40" y1="524" x2="664" y2="524" stroke="#d1d9e0"/>
+        <text x="40" y="548" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: setup step; dashed box: optional step; dashed arrow: boundary or optional path</text>
+        <text x="40" y="568" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

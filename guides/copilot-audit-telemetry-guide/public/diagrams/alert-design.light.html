@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design an alert you can act on</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Audit &amp; Telemetry · Matrix</p>
+    <h1>Design an alert you can act on</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Design an alert you can act on. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 408" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="alert-design-light-title alert-design-light-desc">
+        <title id="alert-design-light-title">Design an alert you can act on</title>
+        <desc id="alert-design-light-desc">Each alert pairs a signal with a precise match condition and a named owner response, so a firing alert leads to a check rather than a guess.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="408" fill="#f3f5f7"/>
+        <rect x="40" y="40" width="624" height="228" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="308.5" y="63" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Match</text>
+        <text x="545.5" y="63" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Owner response</text>
+        <line x1="40" y1="76" x2="664" y2="76" stroke="#d1d9e0"/>
+        <text x="56" y="104" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Settings changed</text>
+        <text x="308.5" y="104" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">cfb_enterprise_settings_changed</text>
+        <text x="545.5" y="104" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Compare old and new values</text>
+        <line x1="40" y1="124" x2="664" y2="124" stroke="#d1d9e0"/>
+        <text x="56" y="152" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Exclusion edited</text>
+        <text x="308.5" y="152" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">content_exclusion_changed</text>
+        <text x="545.5" y="152" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Review excluded_paths</text>
+        <line x1="40" y1="172" x2="664" y2="172" stroke="#d1d9e0"/>
+        <rect x="44" y="176" width="616" height="40" rx="4" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="56" y="200" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent burst</text>
+        <text x="308.5" y="193" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">actor_is_agent, one user</text>
+        <text x="308.5" y="207" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Short window, above baseline</text>
+        <text x="545.5" y="200" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Check the sessions view</text>
+        <line x1="40" y1="220" x2="664" y2="220" stroke="#d1d9e0"/>
+        <text x="56" y="248" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Stream silence</text>
+        <text x="308.5" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">No events for a set period</text>
+        <text x="545.5" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Check stream and health email</text>
+        <line x1="190" y1="40" x2="190" y2="268" stroke="#d1d9e0"/>
+        <text x="40" y="308" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">An alert says something happened. The owner response decides whether it matters.</text>
+        <line x1="40" y1="348" x2="664" y2="348" stroke="#d1d9e0"/>
+        <text x="40" y="372" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: signal; column: match and response</text>
+        <text x="40" y="392" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green row: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg viewBox="0 0 728 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="response-loop-title response-loop-desc">
+<title id="response-loop-title">Every alert travels one loop</title><desc id="response-loop-desc">Detect, route to a named owner, respond, then verify with evidence. Review measures feed back into intake.</desc>
+<defs><marker id="response-loop-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#59636e" class="muted"/></marker></defs>
+<rect width="728" height="196" fill="#fff" class="paper"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<rect x="24" y="50" width="150" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="99.0" y="78.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Detect</text>
+<text x="99.0" y="96.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">alert raised</text>
+<line x1="174" y1="82" x2="198" y2="82" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#response-loop-arrow)"/>
+<rect x="200" y="50" width="150" height="64" rx="6" class="focal" fill="#eaf6ed" stroke="#1a7f37"/>
+<text x="275.0" y="78.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Route</text>
+<text x="275.0" y="96.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">name an owner</text>
+<line x1="350" y1="82" x2="374" y2="82" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#response-loop-arrow)"/>
+<rect x="376" y="50" width="150" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="451.0" y="78.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Respond</text>
+<text x="451.0" y="96.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">fix or rotate</text>
+<line x1="526" y1="82" x2="550" y2="82" class="arrow" stroke="#59636e" stroke-width="1.5" marker-end="url(#response-loop-arrow)"/>
+<rect x="552" y="50" width="150" height="64" rx="6" class="node" fill="#fff" stroke="#1f2328"/>
+<text x="627.0" y="78.0" text-anchor="middle" font-size="12" class="ink" font-weight="600" fill="#1f2328">Verify</text>
+<text x="627.0" y="96.0" text-anchor="middle" font-size="11" class="muted" fill="#59636e">evidence recorded</text>
+<path d="M 650 114 V 150 H 99 V 118" class="arrow" stroke="#59636e" stroke-width="1.5" fill="none" marker-end="url(#response-loop-arrow)"/>
+<text x="374" y="172" text-anchor="middle" font-size="11" class="muted" fill="#59636e">Measures feed the next review</text>
+
+</g></svg>

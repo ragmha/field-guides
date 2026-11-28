@@ -1,0 +1,99 @@
+---
+// Inline SVGs share the course theme; keep one source file per diagram.
+const svgs = import.meta.glob<string>('../diagrams/*.svg', { query: '?raw', import: 'default', eager: true });
+
+const diagrams: Record<string, { title: string; description: string }> = {
+  'response-loop': {
+    title: 'Every alert travels one loop',
+    description: 'Detect, route to a named owner, respond, then verify with evidence. Weekly measures feed back into intake so ownership and coverage gaps are fixed at the source.',
+  },
+  'triage-steps': {
+    title: 'Four triage questions, in order',
+    description: 'Confirm the finding is real and in scope, assess exposure in your environment, set a priority against agreed service levels, and record the decision.',
+  },
+  'exception-record': {
+    title: 'An exception is a recorded decision',
+    description: 'A requester proposes, a delegated approver decides, and the record keeps scope, compensating controls and an expiry date so the decision is reviewed.',
+  },
+  'intake-record': {
+    title: 'A minimum intake record',
+    description: 'Six fields make every alert decision repeatable: the alert link, its location, the owner, priority and due date, exposure context, and the decision with evidence.',
+  },
+  'coverage-layers': {
+    title: 'Four layers before you trust an empty view',
+    description: 'Check scope, enablement, freshness and visibility in order. A gap at any layer can make an unscanned repository look clean.',
+  },
+  'secret-response': {
+    title: 'A leaked secret is closed by rotation',
+    description: 'Revoke or rotate the credential, update dependent systems, investigate use, then close the alert with an accurate reason. Deleting the string from code does not close the alert or the risk.',
+  },
+  'code-response': {
+    title: 'Three paths for a code finding',
+    description: 'Fix and verify with a later scan, dismiss with an evidence-backed reason and comment, or route a real but deferred issue to the exception process. Campaigns and merge protection reduce the backlog and stop new findings.',
+  },
+  'dependency-paths': {
+    title: 'Dependency risk flows from alert to prevention',
+    description: 'Auto-triage reduces noise, security updates fix what can be patched, decisions cover the rest, and dependency review stops new vulnerable packages arriving.',
+  },
+  'audit-trail': {
+    title: 'Four evidence sources, four purposes',
+    description: 'The alert timeline shows every status change, the audit log covers supported alert types, webhooks deliver events to store, and the REST API shows current state.',
+  },
+  'weekly-review': {
+    title: 'A thirty-minute weekly review',
+    description: 'Coverage gaps, unowned and overdue alerts, pending decisions, one recurring pattern, then owned actions. Active exposure goes to incident response immediately.',
+  },
+  'balanced-measures': {
+    title: 'Four measures that balance each other',
+    description: 'Coverage, responsiveness, backlog health and quality are read together. A falling queue alone can hide closures without remediation.',
+  },
+};
+
+interface Props { name: string }
+const { name } = Astro.props;
+const diagram = diagrams[name];
+if (!diagram) throw new Error(`Unknown diagram: ${name}`);
+const { title, description } = diagram;
+const svg = svgs[`../diagrams/${name}.svg`];
+if (!svg) throw new Error(`Missing diagram source: ${name}`);
+const width = Number(svg.match(/viewBox="0 0 (\d+) /)?.[1]);
+if (!width) throw new Error(`Missing diagram viewBox width: ${name}`);
+const headingId = `${name}-heading`;
+---
+
+<figure class="diagram-embed" aria-labelledby={headingId}>
+  <h3 id={headingId}>{title}</h3>
+  <div id={`${name}-viewport`} class="diagram-scroll" style={`--diagram-width:${width}px`} tabindex="0" role="region" aria-label={`${title}. Scroll horizontally to explore.`}>
+    <Fragment set:html={svg} />
+  </div>
+  <p class="scroll-hint">Scroll horizontally to explore the diagram when needed.</p>
+  <figcaption><p>{description}</p></figcaption>
+</figure>
+
+<style>
+  .diagram-embed { min-width: 0; margin: 1rem 0 2rem; }
+  h3 { color: var(--ink); font: 650 19px/1.4 var(--font-sans); margin: 0 0 16px; }
+  .diagram-scroll {
+    overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface);
+  }
+  .diagram-scroll :global(svg) { display: block; width: 100%; min-width: var(--diagram-width); height: auto; font-family: var(--font-sans); }
+  .scroll-hint { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+  @media print { .diagram-scroll { overflow-x: visible; } .diagram-scroll :global(svg) { min-width: 0; } .scroll-hint { display: none; } }
+  figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+  figcaption p { margin: 0; }
+  .diagram-scroll :global(.ink) { fill: var(--ink); }
+  .diagram-scroll :global(.muted) { fill: var(--muted); }
+  .diagram-scroll :global(.box) { fill: var(--inset); stroke: var(--rule); }
+  .diagram-scroll :global(.focus) { fill: var(--tint); stroke: var(--accent); stroke-width: 2; }
+  .diagram-scroll :global(.warn) { fill: var(--amber-bg); stroke: var(--amber); }
+  .diagram-scroll :global(.accent) { fill: var(--accent); }
+  .diagram-scroll :global(.amber) { fill: var(--amber); }
+  .diagram-scroll :global(.line) { stroke: var(--muted); fill: none; stroke-width: 1.5; }
+  .diagram-scroll :global(.paper) { fill: var(--surface); }
+  .diagram-scroll :global(.rule) { stroke: var(--rule); }
+  .diagram-scroll :global(.node) { fill: var(--surface); stroke: var(--ink); }
+  .diagram-scroll :global(.focal) { fill: var(--tint); stroke: var(--accent); }
+  .diagram-scroll :global(.store), .diagram-scroll :global(.external), .diagram-scroll :global(.optional) { fill: var(--ink); stroke: var(--muted); }
+  .diagram-scroll :global(.arrow) { stroke: var(--muted); fill: none; }
+  .diagram-scroll :global(.arrow-accent) { stroke: var(--accent); fill: none; }
+</style>
