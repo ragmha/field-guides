@@ -5,6 +5,7 @@
   "workspaces": ["hub", "guides/*"],
   "scripts": {
     "build": "bun scripts/build.mjs",
+    "check:freshness": "node scripts/check-freshness.mjs",
     "test": "bun test scripts/copy-output.test.mjs && bun run --cwd guides/ai-credits-guide test && bun run --cwd guides/data-residency-guide test && bun run --cwd guides/copilot-governance-guide test && bun run --cwd guides/copilot-how-tos test",
     "check": "bun run --cwd hub check && bun run --cwd guides/ai-credits-guide check && bun run --cwd guides/data-residency-guide check && bun run --cwd guides/copilot-governance-guide check && bun run --cwd guides/copilot-how-tos check",
     "preview": "bun scripts/preview.mjs",
