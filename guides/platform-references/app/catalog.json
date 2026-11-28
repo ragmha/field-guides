@@ -1,0 +1,2029 @@
+{
+  "asOf": "2026-11-14",
+  "landscapes": {
+    "github": {
+      "name": "GitHub",
+      "title": "Everything GitHub ships, on one map",
+      "description": "Products, features, tools, services, programs, learning resources, and agentic development across GitHub.",
+      "docsLabel": "GitHub Docs",
+      "docsUrl": "https://docs.github.com/en",
+      "groups": [
+        {
+          "id": "ai",
+          "name": "AI & agents",
+          "subtitle": "Understand, create, and delegate",
+          "color": "#8250df",
+          "icon": "ai",
+          "items": [
+            {
+              "id": "copilot",
+              "name": "GitHub Copilot",
+              "type": "Product",
+              "featured": true,
+              "description": "AI coding assistant across IDEs, CLI, app, github.com, and Mobile. GHEC customers can get Copilot for all licensed users; Copilot Business, Enterprise, and Standalone plans are available.",
+              "tags": [
+                "AI",
+                "Agents",
+                "Code completion",
+                "Chat"
+              ],
+              "url": "https://docs.github.com/en/copilot/get-started/about-github-copilot",
+              "universe": {
+                "note": "GitHub Enterprise Cloud customers working with a GitHub or Microsoft account team get Copilot for every licensed user, with usage metered against the enterprise budget. Users without an Enterprise license can get Copilot Standalone; features match Copilot Enterprise but without monthly AI credits per seat, and Copilot Business and Enterprise stay available.",
+                "url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot/"
+              }
+            },
+            {
+              "id": "copilot-app",
+              "name": "Copilot app",
+              "type": "Tool",
+              "description": "A dedicated desktop workspace for parallel agent tasks, multiple repositories, and the issue-to-pull-request workflow.",
+              "tags": [
+                "Desktop",
+                "Agents",
+                "Multi-repository"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/copilot-surfaces/github-copilot-app"
+            },
+            {
+              "id": "copilot-cli",
+              "name": "Copilot CLI",
+              "type": "Tool",
+              "icon": "terminal",
+              "description": "Plan, edit, run commands, and collaborate with a coding agent from your terminal.",
+              "tags": [
+                "Terminal",
+                "AI",
+                "Agents"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli"
+            },
+            {
+              "id": "copilot-ide",
+              "name": "Copilot in IDEs",
+              "type": "Feature",
+              "icon": "code",
+              "description": "Copilot in VS Code and JetBrains: Fusion model option, session continuity with cloud sessions, Agent Host (VS Code), Copilot harness default, GA local sandboxes and next edit suggestions in JetBrains.",
+              "tags": [
+                "VS Code",
+                "Visual Studio",
+                "JetBrains",
+                "Xcode",
+                "Eclipse"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides",
+              "universe": {
+                "note": "Universe ’26 added session continuity and Agent Host, alongside new model, tool, and customization integrations.",
+                "url": "https://github.blog/changelog/label/universe26/"
+              }
+            },
+            {
+              "id": "copilot-cloud",
+              "name": "Copilot in the cloud",
+              "type": "Feature",
+              "icon": "cloud",
+              "description": "Ask questions, plan changes, and delegate repository work on GitHub.com and Mobile. Supported sessions can continue across local and cloud clients.",
+              "tags": [
+                "Cloud agent",
+                "Coding agent",
+                "Web",
+                "Mobile"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github"
+            },
+            {
+              "id": "copilot-sdk",
+              "name": "Microsoft Copilot SDK",
+              "type": "Tool",
+              "icon": "code",
+              "description": "SDK for embedding the Copilot agent runtime in your own apps. Renamed from GitHub Copilot SDK; the repo moves to Microsoft's org in phases while existing package names and docs stay unchanged for now.",
+              "tags": [
+                "SDK",
+                "Integrations",
+                "Agents"
+              ],
+              "url": "https://docs.github.com/en/copilot/get-started/sdk-quickstart",
+              "universe": {
+                "note": "The GitHub Copilot SDK is being renamed Microsoft Copilot SDK, with the repository moving to the Microsoft organization in phases. Existing package names and docs still say GitHub Copilot SDK and users see no immediate change.",
+                "url": "https://github.blog/changelog/2026-10-28-github-copilot-sdk-is-becoming-microsoft-copilot-sdk/"
+              }
+            },
+            {
+              "id": "spaces",
+              "name": "Copilot Spaces",
+              "type": "Feature",
+              "description": "Organize and share relevant context so Copilot can answer questions grounded in your team's material.",
+              "tags": [
+                "Context",
+                "Knowledge",
+                "Collaboration"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/prompting-and-context/spaces"
+            },
+            {
+              "id": "automations",
+              "name": "Copilot automations",
+              "type": "Feature",
+              "description": "Prompt, trigger, and tool workflows that run in the cloud. Now shareable with repo collaborators, with REST API and 24 new triggers, chaining, 20 new tools plus custom MCP, credit limits, and self-improvement.",
+              "tags": [
+                "Automation",
+                "Agents",
+                "Triage"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations",
+              "universe": {
+                "note": "Universe ’26 added shared team workflows, VS Code management, learning from outcomes, more triggers and tools, and credit controls.",
+                "url": "https://github.blog/changelog/label/universe26/"
+              }
+            },
+            {
+              "id": "copilot-fusion",
+              "name": "Copilot Fusion",
+              "type": "Feature",
+              "tags": [
+                "models",
+                "routing",
+                "orchestration",
+                "model picker"
+              ],
+              "description": "Model-picker option that routes and orchestrates models per task (Single, Cascade, Critique workflows) at Standard, High, or Max effort. Replaces Auto; admins control the model set. Experimental local-model routing.",
+              "url": "https://docs.github.com/en/copilot/concepts/models/copilot-fusion",
+              "status": "GA",
+              "universe": {
+                "note": "Copilot Fusion is a model-picker option that routes and orchestrates models per task using Single, Cascade, or Critique workflows at Standard, High, or Max effort. It merges Project HydraFusion with auto model selection and replaces Auto; admins control the model set and can make it the default.",
+                "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/"
+              }
+            },
+            {
+              "id": "copilot-projects",
+              "name": "Copilot projects",
+              "type": "Feature",
+              "tags": [
+                "copilot app",
+                "multi-repo",
+                "agents",
+                "automations"
+              ],
+              "description": "Project workspace in the Copilot app that brings work across multiple repositories and sources into one place, with project-level automations. Not the same as GitHub Projects (planning boards).",
+              "url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-projects",
+              "status": "Public preview",
+              "universe": {
+                "note": "Adds Copilot projects (public preview), a single home for work spanning multiple repos and sources, with project automations. Also adds connected tools such as Slack and Figma, image generation in chat, and computer use (public preview on macOS and Windows) that lets Copilot operate desktop apps with approval.",
+                "url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/"
+              }
+            },
+            {
+              "id": "copilot-computer-use",
+              "name": "Copilot computer use",
+              "type": "Feature",
+              "tags": [
+                "copilot app",
+                "desktop",
+                "agents",
+                "macOS",
+                "Windows"
+              ],
+              "description": "Lets Copilot in the app read content, click controls, and enter text across desktop apps, including those without an API, CLI, or MCP. Needs user approval; orgs can disable it via managed settings.",
+              "url": "https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/computer-use",
+              "status": "Public preview (macOS, Windows)",
+              "universe": {
+                "note": "Adds Copilot projects (public preview), a single home for work spanning multiple repos and sources, with project automations. Also adds connected tools such as Slack and Figma, image generation in chat, and computer use (public preview on macOS and Windows) that lets Copilot operate desktop apps with approval.",
+                "url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/"
+              }
+            },
+            {
+              "id": "github-intelligence",
+              "name": "GitHub intelligence",
+              "type": "Feature",
+              "tags": [
+                "context",
+                "memory",
+                "semantic search",
+                "agents"
+              ],
+              "description": "Context and learning layer over GitHub's data graph that gives Copilot repository, code, and history context: Copilot Memory (GA), dreaming (preview), and code/semantic search.",
+              "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work/",
+              "status": "GA / public preview",
+              "universe": {
+                "note": "GitHub intelligence is the context and learning layer over GitHub's data graph. It covers Copilot Memory (GA on paid plans across app, CLI, VS Code, cloud agent, code review, Slack, Teams, and Mobile), Copilot dreaming (opt-in public preview), and code and semantic search used by Copilot.",
+                "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work/"
+              }
+            },
+            {
+              "id": "copilot-memory",
+              "name": "Copilot Memory",
+              "type": "Feature",
+              "tags": [
+                "memory",
+                "context",
+                "personalization",
+                "agents"
+              ],
+              "description": "Copilot remembers preferences and repository context across sessions and surfaces (app, CLI, VS Code, cloud agent, code review, Slack, Teams, Mobile). GA on paid Copilot plans.",
+              "url": "https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory",
+              "status": "GA",
+              "universe": {
+                "note": "GitHub intelligence is the context and learning layer over GitHub's data graph. It covers Copilot Memory (GA on paid plans across app, CLI, VS Code, cloud agent, code review, Slack, Teams, and Mobile), Copilot dreaming (opt-in public preview), and code and semantic search used by Copilot.",
+                "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work/"
+              }
+            },
+            {
+              "id": "copilot-dreaming",
+              "name": "Copilot dreaming",
+              "type": "Feature",
+              "tags": [
+                "memory",
+                "learning",
+                "customization",
+                "agents"
+              ],
+              "description": "Opt-in process that reflects on past Copilot work to improve future agent sessions: curates personal memory and tunes repository and code review customization.",
+              "url": "https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-dreaming",
+              "status": "Public preview",
+              "universe": {
+                "note": "GitHub intelligence is the context and learning layer over GitHub's data graph. It covers Copilot Memory (GA on paid plans across app, CLI, VS Code, cloud agent, code review, Slack, Teams, and Mobile), Copilot dreaming (opt-in public preview), and code and semantic search used by Copilot.",
+                "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work/"
+              }
+            },
+            {
+              "id": "copilot-plugins",
+              "name": "Copilot plugins",
+              "type": "Feature",
+              "tags": [
+                "plugins",
+                "customization",
+                "marketplace",
+                "governance"
+              ],
+              "description": "Installable bundles of Copilot customizations for VS Code, CLI, and the app. Repos can set a marketplace and default plugins; enterprises can require or block plugins and restrict marketplaces.",
+              "url": "https://docs.github.com/en/copilot/concepts/customizations/plugins",
+              "status": "GA",
+              "universe": {
+                "note": "Repo maintainers can define a plugin marketplace and default plugins for their repository, and enterprises can require or block plugins and restrict marketplaces. Available in VS Code, Copilot CLI, and the Copilot app.",
+                "url": "https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available/"
+              }
+            },
+            {
+              "id": "copilot-image-generation",
+              "name": "Copilot image generation",
+              "type": "Feature",
+              "tags": [
+                "images",
+                "chat",
+                "multimodal",
+                "policies"
+              ],
+              "description": "Generate and edit images by prompt in Copilot chat (VS Code, app, CLI) with inline preview and saving to your project. Billed in image tokens against AI credits; admins can disable via model policies.",
+              "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/",
+              "status": "Public preview",
+              "universe": {
+                "note": "Copilot chat in VS Code, the Copilot app, and CLI can generate and edit images from natural language using an image-generation tool (GPT Image 2.5 Flare), preview them inline, and save them to the project. It is billed in image tokens against AI credits, can be disabled via model policies, and offers an opt-in Made with AI watermark.",
+                "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/"
+              }
+            },
+            {
+              "id": "copilot-connectors",
+              "name": "Copilot connectors",
+              "type": "Feature",
+              "tags": [
+                "MCP",
+                "connectors",
+                "integrations",
+                "Slack",
+                "Figma"
+              ],
+              "description": "GitHub-verified MCP servers for 26 services (Slack, Figma, Notion, Sentry, Linear, and more). Connect once and use across the Copilot app, CLI, VS Code, cloud agent, and Mobile.",
+              "url": "https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors",
+              "status": "Public preview",
+              "universe": {
+                "note": "GitHub-verified MCP servers, called connectors, launch with 26 services including Slack, Figma, Notion, Sentry, Linear, Atlassian Rovo, Cloudflare, and Vercel. You connect once and use them across the app, CLI, VS Code, cloud agent, and Mobile; Business and Enterprise admins must enable the Editor preview features policy.",
+                "url": "https://github.blog/changelog/2026-10-28-connect-your-tools-to-copilot-without-all-the-setup/"
+              }
+            },
+            {
+              "id": "copilot-cloud-sandboxes",
+              "name": "Copilot cloud sandboxes",
+              "type": "Feature",
+              "tags": [
+                "sandbox",
+                "cloud agent",
+                "isolation",
+                "compute"
+              ],
+              "description": "Secure cloud environments on GitHub-managed infrastructure where each Copilot cloud session runs by default; they start fast, snapshot on shutdown, and resume from any surface.",
+              "url": "https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes",
+              "status": "GA (paid plans)",
+              "universe": {
+                "note": "Cloud tasks started on github.com, Mobile, CLI, app, VS Code, Slack, or Teams share one session list and can be continued from any surface. Each session runs by default in a cloud sandbox that snapshots on shutdown and resumes later; compute draws on the Actions entitlement, which becomes one pool for builds, sandboxes, and larger runners on Team and Enterprise Cloud.",
+                "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/"
+              }
+            },
+            {
+              "id": "copilot-session-continuity",
+              "name": "Session continuity",
+              "type": "Feature",
+              "tags": [
+                "sessions",
+                "cross-device",
+                "mobile",
+                "cloud agent"
+              ],
+              "description": "Start a Copilot cloud task on github.com, Mobile, CLI, app, VS Code, Slack, or Teams and continue the same session on another surface; every surface shows the same session list.",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents",
+              "status": "GA (paid plans)",
+              "universe": {
+                "note": "Cloud tasks started on github.com, Mobile, CLI, app, VS Code, Slack, or Teams share one session list and can be continued from any surface. Each session runs by default in a cloud sandbox that snapshots on shutdown and resumes later; compute draws on the Actions entitlement, which becomes one pool for builds, sandboxes, and larger runners on Team and Enterprise Cloud.",
+                "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/"
+              }
+            },
+            {
+              "id": "replica",
+              "name": "Replica",
+              "type": "Tool",
+              "tags": [
+                "prototyping",
+                "design system",
+                "open source",
+                "copilot app"
+              ],
+              "description": "Open-source AI prototyping tool from GitHub Design that turns ideas into interactive prototypes using your own design system, used from the Copilot app; optional self-hosted Replica Hub for sharing.",
+              "url": "https://github.com/github/replica",
+              "status": "Open source",
+              "universe": {
+                "note": "GitHub Design open-sourced Replica, an AI prototyping tool that turns ideas into interactive prototypes using your own design system and is used from the Copilot app. An optional self-hosted Replica Hub supports sharing and comments.",
+                "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/"
+              }
+            },
+            {
+              "id": "copilot-custom-instructions",
+              "name": "Copilot custom instructions",
+              "type": "Feature",
+              "tags": [
+                "customization",
+                "instructions",
+                "conventions",
+                "prompts"
+              ],
+              "description": "Tailor Copilot responses to your preferences, project conventions, and organization requirements with repository, path, personal, and organization instructions.",
+              "url": "https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions"
+            },
+            {
+              "id": "copilot-custom-agents",
+              "name": "Copilot custom agents",
+              "type": "Feature",
+              "tags": [
+                "agents",
+                "customization",
+                "cloud agent",
+                "CLI"
+              ],
+              "description": "Create specialized agents with tailored expertise for specific development tasks, for Copilot cloud agent (all paid plans) and Copilot CLI.",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents"
+            },
+            {
+              "id": "copilot-agent-skills",
+              "name": "Copilot agent skills",
+              "type": "Feature",
+              "tags": [
+                "skills",
+                "customization",
+                "agents",
+                "instructions"
+              ],
+              "description": "Folders of instructions, scripts, and resources Copilot loads when relevant; work with cloud agent, code review, Copilot CLI, the Copilot app, and VS Code agent mode.",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills"
+            },
+            {
+              "id": "copilot-hooks",
+              "name": "Copilot hooks",
+              "type": "Feature",
+              "tags": [
+                "hooks",
+                "customization",
+                "governance",
+                "agents"
+              ],
+              "description": "Run your own shell commands at defined points in an agent's workflow, such as session start or end, prompt entry, or tool calls, for checks and logging.",
+              "url": "https://docs.github.com/en/copilot/concepts/customizations/hooks"
+            }
+          ]
+        },
+        {
+          "id": "code",
+          "name": "Code & develop",
+          "subtitle": "Your code and the tools around it",
+          "color": "#0969da",
+          "icon": "code",
+          "items": [
+            {
+              "id": "repositories",
+              "name": "Repositories",
+              "type": "Product",
+              "featured": true,
+              "icon": "repo",
+              "description": "Store source code, Git history, and documentation in one place, with collaboration and access controls.",
+              "tags": [
+                "Git",
+                "Source control",
+                "Version control"
+              ],
+              "url": "https://docs.github.com/en/repositories"
+            },
+            {
+              "id": "codespaces",
+              "name": "Codespaces",
+              "type": "Product",
+              "icon": "cloud",
+              "description": "Configurable cloud development environments built around development containers, available in your browser or supported editors.",
+              "tags": [
+                "Cloud IDE",
+                "Dev containers",
+                "Development environments"
+              ],
+              "url": "https://docs.github.com/en/codespaces"
+            },
+            {
+              "id": "code-search",
+              "name": "Code search",
+              "type": "Feature",
+              "icon": "search",
+              "description": "Find code with specialized search syntax and navigate symbols and references across repositories.",
+              "tags": [
+                "Search",
+                "Symbols",
+                "Code navigation"
+              ],
+              "url": "https://docs.github.com/en/search-github"
+            },
+            {
+              "id": "github-dev",
+              "name": "github.dev",
+              "type": "Tool",
+              "description": "A lightweight browser editor for browsing and changing repository files. It is not a compute environment like Codespaces.",
+              "tags": [
+                "Web editor",
+                "Browser",
+                "Editing"
+              ],
+              "url": "https://docs.github.com/en/codespaces/the-githubdev-web-based-editor"
+            },
+            {
+              "id": "gh-cli",
+              "name": "GitHub CLI",
+              "type": "Tool",
+              "icon": "terminal",
+              "description": "Use the gh command to work with repositories, pull requests, issues, Actions, and GitHub APIs without leaving the terminal.",
+              "tags": [
+                "gh",
+                "Terminal",
+                "Automation"
+              ],
+              "url": "https://docs.github.com/en/github-cli"
+            },
+            {
+              "id": "desktop",
+              "name": "GitHub Desktop",
+              "type": "Tool",
+              "icon": "repo",
+              "description": "A graphical Git client for reviewing changes, committing, managing branches, and collaborating on repositories.",
+              "tags": [
+                "Git",
+                "GUI",
+                "Desktop"
+              ],
+              "url": "https://docs.github.com/en/desktop"
+            },
+            {
+              "id": "mobile",
+              "name": "GitHub Mobile",
+              "type": "Tool",
+              "description": "Keep up with notifications, issues, pull requests, and Copilot while away from your development machine.",
+              "tags": [
+                "iOS",
+                "Android",
+                "Notifications"
+              ],
+              "url": "https://docs.github.com/en/get-started/using-github/github-mobile"
+            },
+            {
+              "id": "gists",
+              "name": "Gists",
+              "type": "Feature",
+              "tags": [
+                "snippets",
+                "sharing",
+                "git",
+                "notes"
+              ],
+              "description": "Share code snippets, notes, and small files as Git-versioned gists, public or secret, at gist.github.com.",
+              "url": "https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists"
+            }
+          ]
+        },
+        {
+          "id": "plan",
+          "name": "Plan & collaborate",
+          "subtitle": "Turn ideas into shared work",
+          "color": "#1a7f64",
+          "icon": "plan",
+          "items": [
+            {
+              "id": "projects",
+              "name": "GitHub Projects",
+              "type": "Product",
+              "featured": true,
+              "description": "Plan and track work in tables, boards, and roadmaps connected to GitHub issues and pull requests.",
+              "tags": [
+                "Planning",
+                "Kanban",
+                "Roadmaps",
+                "Project management"
+              ],
+              "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects"
+            },
+            {
+              "id": "issues",
+              "name": "GitHub Issues",
+              "type": "Product",
+              "description": "Track bugs and tasks in repositories. The new Moderate role lets users edit and moderate issues and manage labels and milestones without access to code. Issue artifacts are in public preview.",
+              "tags": [
+                "Planning",
+                "Bugs",
+                "Tasks",
+                "Backlog"
+              ],
+              "url": "https://docs.github.com/en/issues",
+              "universe": {
+                "note": "A new Moderate repository role lets users edit issues they did not author, transfer, hide, lock, and comment on locked issues, and manage labels, milestones, and discussion categories without code access.",
+                "url": "https://github.blog/changelog/2026-10-28-moderate-role-for-github-issues-generally-available/"
+              }
+            },
+            {
+              "id": "discussions",
+              "name": "Discussions",
+              "type": "Feature",
+              "description": "Host questions, announcements, and open-ended conversations for an open source or internal community.",
+              "tags": [
+                "Community",
+                "Q&A",
+                "Collaboration"
+              ],
+              "url": "https://docs.github.com/en/discussions"
+            },
+            {
+              "id": "wikis",
+              "name": "Wikis",
+              "type": "Feature",
+              "icon": "repo",
+              "description": "Maintain longer-form documentation alongside a repository in a collaborative, versioned wiki.",
+              "tags": [
+                "Documentation",
+                "Knowledge"
+              ],
+              "url": "https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis"
+            },
+            {
+              "id": "insights",
+              "name": "Project insights",
+              "type": "Feature",
+              "description": "Create charts from project data to understand progress and communicate the state of your work.",
+              "tags": [
+                "Charts",
+                "Reporting",
+                "Planning"
+              ],
+              "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/viewing-insights-from-your-project/about-insights-for-projects"
+            },
+            {
+              "id": "issue-artifacts",
+              "name": "Issue artifacts",
+              "type": "Feature",
+              "tags": [
+                "issues",
+                "artifacts",
+                "plans",
+                "gh CLI"
+              ],
+              "description": "Attach Markdown, links, and HTML documents to an issue with version history. Manage them in the UI, with gh issue artifact commands, or via the REST API.",
+              "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/using-artifacts-with-issues",
+              "status": "Public preview",
+              "universe": {
+                "note": "Issue artifacts attach Markdown, links, and HTML to an issue, with version history, and can be managed with gh issue artifact commands (create, edit, list, view, download, delete) and a REST API.",
+                "url": "https://github.blog/changelog/2026-10-28-issue-artifacts-are-now-in-public-preview/"
+              }
+            },
+            {
+              "id": "notifications",
+              "name": "Notifications",
+              "type": "Feature",
+              "tags": [
+                "notifications",
+                "inbox",
+                "subscriptions",
+                "email"
+              ],
+              "description": "Notification inbox and subscriptions for issues, pull requests, and other activity, delivered on github.com, by email, and in GitHub Mobile.",
+              "url": "https://docs.github.com/en/subscriptions-and-notifications/concepts/about-notifications"
+            }
+          ]
+        },
+        {
+          "id": "review",
+          "name": "Review & merge",
+          "subtitle": "Make every change deliberate",
+          "color": "#bf5b04",
+          "icon": "review",
+          "items": [
+            {
+              "id": "pull-requests",
+              "name": "Pull requests",
+              "type": "Feature",
+              "featured": true,
+              "description": "Propose, review, and merge changes. Pull request limits for contributors without write access can now exempt accounts by age or merged-PR history (Moderation > Interaction limits).",
+              "tags": [
+                "Code review",
+                "Collaboration",
+                "Merge"
+              ],
+              "url": "https://docs.github.com/en/pull-requests",
+              "universe": {
+                "note": "In Moderation > Interaction limits, pull request limits for contributors without write access can now exempt accounts by minimum age in days or by number of merged PRs in the repo. A contributor is exempt if they meet at least one enabled rule, and repo settings override org settings.",
+                "url": "https://github.blog/changelog/2026-10-28-pull-request-limits-exempt-contributors-by-age-or-history/"
+              }
+            },
+            {
+              "id": "copilot-review",
+              "name": "Copilot code review",
+              "type": "Feature",
+              "icon": "ai",
+              "description": "Copilot reviews pull requests. New Max effort (preview) runs multiple review agents across providers with an aggregator; Copilot approvals are GA and count toward required approvals.",
+              "tags": [
+                "AI",
+                "Code review",
+                "Quality"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review",
+              "universe": {
+                "note": "A new Max review effort level runs multiple independent review agents across model providers plus an aggregator. Copilot approvals are GA, count toward required approvals, and are dismissed on new commits; admins can cap the maximum effort level, and the feature is off by default.",
+                "url": "https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/"
+              }
+            },
+            {
+              "id": "stacked-prs",
+              "name": "Stacked pull requests",
+              "type": "Feature",
+              "description": "Split a larger change into a chain of smaller, dependent pull requests that can be reviewed incrementally.",
+              "tags": [
+                "Code review",
+                "Stacks",
+                "Incremental delivery"
+              ],
+              "url": "https://docs.github.com/en/pull-requests/get-started/about-stacked-prs"
+            },
+            {
+              "id": "rulesets",
+              "name": "Repository rulesets",
+              "type": "Feature",
+              "icon": "security",
+              "description": "Apply rules to branches, tags, and pushes, including requirements for reviews, status checks, and permitted changes.",
+              "tags": [
+                "Governance",
+                "Branch protection",
+                "Policies"
+              ],
+              "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets"
+            },
+            {
+              "id": "merge-queue",
+              "name": "Merge queue",
+              "type": "Feature",
+              "description": "Check pull requests against the latest target branch and queued changes before merging.",
+              "tags": [
+                "Merge",
+                "CI",
+                "Branch protection"
+              ],
+              "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue"
+            },
+            {
+              "id": "codeowners",
+              "name": "CODEOWNERS",
+              "type": "Feature",
+              "description": "Define the people or teams responsible for repository paths and automatically request their reviews.",
+              "tags": [
+                "Ownership",
+                "Reviews",
+                "Governance"
+              ],
+              "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"
+            },
+            {
+              "id": "agent-merge",
+              "name": "Agent Merge",
+              "type": "Feature",
+              "tags": [
+                "pull requests",
+                "cloud agent",
+                "CI fixes",
+                "merge conflicts",
+                "auto-merge"
+              ],
+              "description": "Copilot watches a pull request and fixes failing Actions workflows and merge conflicts in a cloud environment until it is ready to merge. Also in the Copilot app and VS Code; works with auto-merge.",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/watch-and-fix-pull-requests",
+              "status": "Available (paid Copilot plans)",
+              "universe": {
+                "note": "Agent Merge lets Copilot watch a pull request and fix failing Actions workflows and merge conflicts in a cloud development environment, started from a Watch and fix control in the merge box. It was already in the Copilot app and VS Code and can be combined with auto-merge.",
+                "url": "https://github.blog/changelog/2026-10-28-agent-merge-watches-and-fixes-pull-requests-in-the-cloud/"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ship",
+          "name": "Automate & ship",
+          "subtitle": "Build, package, and deliver",
+          "color": "#0e748f",
+          "icon": "ship",
+          "items": [
+            {
+              "id": "actions",
+              "name": "GitHub Actions",
+              "type": "Product",
+              "featured": true,
+              "description": "Automate builds, tests, deployments, and repository tasks with event-driven workflows defined alongside your code.",
+              "tags": [
+                "CI/CD",
+                "Automation",
+                "Workflows",
+                "Testing"
+              ],
+              "url": "https://docs.github.com/en/actions"
+            },
+            {
+              "id": "agentic-workflows",
+              "name": "Agentic Workflows",
+              "type": "Tool",
+              "icon": "ai",
+              "description": "Open-source GitHub Next project that compiles Markdown into Actions workflows run by AI agents, with integrity filtering, a network firewall, and safe outputs. GA on github.com Free, Team, and Enterprise.",
+              "tags": [
+                "AI",
+                "Automation",
+                "Markdown",
+                "CI/CD"
+              ],
+              "url": "https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-github-agentic-workflows",
+              "status": "GA",
+              "universe": {
+                "note": "GitHub Agentic Workflows, an open source GitHub Next project that compiles Markdown into Actions workflows run by agents, is GA on github.com for Free, Team, and Enterprise. GA adds ARC with Docker-in-Docker support, gh aw forecast, a model router, and micro-VM isolation; the default CLI engine needs a Copilot license.",
+                "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/"
+              }
+            },
+            {
+              "id": "runners",
+              "name": "Workflow runners",
+              "type": "Feature",
+              "icon": "terminal",
+              "description": "GitHub-hosted, larger, and self-hosted runners for Actions. Eligible Linux hosted jobs may now run on AWS as well as Azure, so update IP allowlists from the meta API; GHEC opts in via policy.",
+              "tags": [
+                "CI/CD",
+                "Hosted runners",
+                "Self-hosted runners",
+                "Compute"
+              ],
+              "url": "https://docs.github.com/en/actions/concepts/runners",
+              "universe": {
+                "note": "Eligible 2-core and 4-core Linux hosted jobs, and compatible larger runners, may now run on AWS in addition to Azure. It is automatic for Free, Pro, and Team; Enterprise Cloud is opt-in via the Hosted compute cloud providers policy, and IP allowlists should be updated from GET /meta.",
+                "url": "https://github.blog/changelog/2026-10-28-github-actions-adds-multi-cloud-compute-to-improve-reliability/"
+              }
+            },
+            {
+              "id": "packages",
+              "name": "GitHub Packages",
+              "type": "Product",
+              "icon": "box",
+              "description": "Publish and consume packages alongside your code, including container images through GitHub's Container registry.",
+              "tags": [
+                "Registry",
+                "Containers",
+                "GHCR",
+                "Artifacts",
+                "Packages"
+              ],
+              "url": "https://docs.github.com/en/packages"
+            },
+            {
+              "id": "pages",
+              "name": "GitHub Pages",
+              "type": "Product",
+              "icon": "code",
+              "description": "Host static websites directly from a GitHub repository, including documentation and project sites.",
+              "tags": [
+                "Static hosting",
+                "Websites",
+                "Documentation"
+              ],
+              "url": "https://docs.github.com/en/pages"
+            },
+            {
+              "id": "releases",
+              "name": "Releases",
+              "type": "Feature",
+              "icon": "box",
+              "description": "Publish tagged versions of a project with release notes and downloadable assets.",
+              "tags": [
+                "Versioning",
+                "Distribution",
+                "Release notes"
+              ],
+              "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases"
+            },
+            {
+              "id": "environments",
+              "name": "Deployment environments",
+              "type": "Feature",
+              "icon": "cloud",
+              "description": "Scope deployment secrets and variables and apply protection rules, such as approvals, where supported by your plan.",
+              "tags": [
+                "Deployment",
+                "Approvals",
+                "Secrets",
+                "CI/CD"
+              ],
+              "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments"
+            },
+            {
+              "id": "attestations",
+              "name": "Artifact attestations",
+              "type": "Feature",
+              "icon": "security",
+              "description": "Generate and verify provenance records that connect build artifacts to the workflow and source that produced them.",
+              "tags": [
+                "Supply chain",
+                "Provenance",
+                "SBOM",
+                "Artifacts"
+              ],
+              "url": "https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations"
+            },
+            {
+              "id": "workflow-lockfiles",
+              "name": "Workflow lockfiles",
+              "type": "Feature",
+              "tags": [
+                "actions",
+                "supply chain",
+                "dependencies",
+                "pinning"
+              ],
+              "description": "gh actions-lock generates .github/workflows/actions.lock, pinning actions and their transitive dependencies. Dependabot regenerates entries; a Require lockfile policy enforces use.",
+              "url": "https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles",
+              "status": "GA",
+              "universe": {
+                "note": "The gh actions-lock CLI extension generates .github/workflows/actions.lock pinning actions and their transitive dependencies. Dependabot can regenerate lock entries and a Require lockfile policy can enforce their use.",
+                "url": "https://github.blog/changelog/2026-10-28-github-actions-workflow-lockfiles-are-generally-available/"
+              }
+            },
+            {
+              "id": "immutable-releases",
+              "name": "Immutable releases",
+              "type": "Feature",
+              "tags": [
+                "releases",
+                "supply chain",
+                "integrity",
+                "tags"
+              ],
+              "description": "Releases whose assets and associated Git tag cannot be changed after publication, blocking tampering with published release artifacts.",
+              "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases"
+            }
+          ]
+        },
+        {
+          "id": "security",
+          "name": "Security & quality",
+          "subtitle": "Find risk and fix it in the workflow",
+          "color": "#cf374d",
+          "icon": "security",
+          "items": [
+            {
+              "id": "code-security",
+              "name": "GitHub Code Security",
+              "type": "Product",
+              "featured": true,
+              "description": "A GitHub Advanced Security product for finding and fixing vulnerabilities, including code scanning, dependency review, and premium Dependabot capabilities.",
+              "tags": [
+                "Advanced Security",
+                "GHAS",
+                "Code scanning",
+                "SAST",
+                "Dependency review"
+              ],
+              "url": "https://docs.github.com/en/code-security/getting-started/github-security-features#available-with-github-code-security"
+            },
+            {
+              "id": "secret-protection",
+              "name": "Secret Protection",
+              "type": "Product",
+              "description": "Secret scanning and push protection for repos. AI-detected secrets (public preview) let push protection block credentials with no predefined pattern; off by default and uses AI credits.",
+              "tags": [
+                "Advanced Security",
+                "GHAS",
+                "Secret scanning",
+                "Push protection",
+                "Credentials"
+              ],
+              "url": "https://docs.github.com/en/code-security/getting-started/github-security-features#available-with-github-secret-protection",
+              "universe": {
+                "note": "An AI classifier built with Microsoft Applied Sciences lets push protection block secrets that have no known format. It is off by default, requires AI-detected secrets alongside push protection, and consumes AI credits.",
+                "url": "https://github.blog/changelog/2026-10-28-push-protection-beyond-predefined-secret-patterns/"
+              }
+            },
+            {
+              "id": "dependabot",
+              "name": "Dependabot",
+              "type": "Tool",
+              "description": "Automated dependency alerts and update PRs. Reachability analysis (public preview, JS/TS) uses a CodeQL call graph to mark alerts Reachable, Potentially reachable, Unreachable, or Unavailable.",
+              "tags": [
+                "Dependencies",
+                "SCA",
+                "Security updates",
+                "Supply chain"
+              ],
+              "url": "https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart",
+              "universe": {
+                "note": "A CodeQL call graph labels Dependabot alerts Reachable, Potentially reachable, Unreachable, or Unavailable for JavaScript and TypeScript. It is off by default, never auto-dismisses alerts, and is free on Enterprise Cloud during the preview.",
+                "url": "https://github.blog/changelog/2026-10-28-prioritize-dependabot-alerts-with-reachability-analysis/"
+              }
+            },
+            {
+              "id": "codeql",
+              "name": "CodeQL",
+              "type": "Tool",
+              "icon": "code",
+              "description": "Analyze code to find vulnerabilities and errors. CodeQL powers GitHub code scanning and can also run through its CLI.",
+              "tags": [
+                "SAST",
+                "Code scanning",
+                "Static analysis"
+              ],
+              "url": "https://docs.github.com/en/code-security/codeql-cli"
+            },
+            {
+              "id": "autofix",
+              "name": "Copilot Autofix",
+              "type": "Feature",
+              "icon": "ai",
+              "description": "Copilot Autofix for code scanning. Agentic autofix (GA) lets you assign an alert to Copilot, which fixes it, reruns CodeQL, and opens a draft PR for up to 25 alerts.",
+              "tags": [
+                "AI",
+                "Remediation",
+                "Code scanning"
+              ],
+              "url": "https://docs.github.com/en/code-security/concepts/code-scanning/autofix-for-code-scanning",
+              "status": "GA",
+              "universe": {
+                "note": "You can assign a code scanning alert to Copilot, which explores the code, fixes it, reruns CodeQL, and opens a draft PR covering up to 25 alerts. It needs the Agentic autofix enterprise policy and consumes AI credits and Actions minutes.",
+                "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/"
+              }
+            },
+            {
+              "id": "code-quality",
+              "name": "GitHub Code Quality",
+              "type": "Product",
+              "description": "Identify code quality issues before merge and track code health across repositories and teams.",
+              "tags": [
+                "Quality",
+                "Maintainability",
+                "Code health"
+              ],
+              "url": "https://docs.github.com/en/code-security/tutorials/code-quality-adoption-path"
+            },
+            {
+              "id": "campaigns",
+              "name": "Security campaigns",
+              "type": "Feature",
+              "description": "Group security alerts into coordinated remediation campaigns across repositories.",
+              "tags": [
+                "Remediation",
+                "Campaigns",
+                "Security at scale"
+              ],
+              "url": "https://docs.github.com/en/code-security/concepts/security-at-scale/about-security-campaigns"
+            },
+            {
+              "id": "security-overview",
+              "name": "Security overview",
+              "type": "Feature",
+              "description": "Review security coverage, risks, trends, and configurations across organizations and repositories.",
+              "tags": [
+                "Security at scale",
+                "Reporting",
+                "Governance"
+              ],
+              "url": "https://docs.github.com/en/code-security/concepts/security-at-scale/security-overview"
+            },
+            {
+              "id": "copilot-security-extension",
+              "name": "Copilot security extension",
+              "type": "Tool",
+              "tags": [
+                "copilot app",
+                "code scanning",
+                "alerts",
+                "plugin",
+                "security review"
+              ],
+              "description": "GitHub security extension for the Copilot app: browse, explain, fix, and dismiss code scanning alerts, with fixes kept in your local working copy, and run /security-review on local changes.",
+              "url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app/view-and-fix-security-alerts",
+              "status": "Public preview",
+              "universe": {
+                "note": "The GitHub security extension for the Copilot app lets you browse, explain, fix, and dismiss code scanning alerts, with fixes applied to your local working copy, and run /security-review on local changes. Install with copilot plugin install github-security@awesome-copilot; not supported on GHES.",
+                "url": "https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app/"
+              }
+            },
+            {
+              "id": "public-monitoring",
+              "name": "Public monitoring",
+              "type": "Feature",
+              "tags": [
+                "secret scanning",
+                "leaks",
+                "enterprise",
+                "monitoring"
+              ],
+              "description": "Scans public github.com content for leaked secrets attributed to your enterprise by membership or verified domain. Free with Secret Protection on Enterprise Cloud; never scans private repos.",
+              "url": "https://docs.github.com/en/code-security/concepts/secret-security/public-monitoring",
+              "status": "GA",
+              "universe": {
+                "note": "Public monitoring scans public github.com content for leaked secrets that belong to your enterprise, attributed by membership or verified domain. It is free with Secret Protection or Advanced Security on Enterprise Cloud, including data residency, and does not scan private repos.",
+                "url": "https://github.blog/changelog/2026-10-28-public-monitoring-for-enterprises-generally-available/"
+              }
+            },
+            {
+              "id": "code-scanning-ai-apps",
+              "name": "Code scanning for AI apps",
+              "type": "Feature",
+              "tags": [
+                "code scanning",
+                "prompt injection",
+                "AI security",
+                "pull requests"
+              ],
+              "description": "Pull request code scanning for AI-application risks: indirect prompt injection (XPIA), sensitive information disclosure, and excessive agency. Requires GitHub Advanced Security; not on GHES.",
+              "url": "https://docs.github.com/en/code-security/concepts/code-scanning/ai-applications-scanning-for-pull-requests",
+              "status": "Public preview",
+              "universe": {
+                "note": "Code scanning on pull requests now detects AI-application risks including indirect prompt injection (XPIA), sensitive information disclosure, and excessive agency. It requires GitHub Advanced Security and is not available on GHES.",
+                "url": "https://github.blog/changelog/2026-10-28-code-scanning-for-ai-applications-in-public-preview/"
+              }
+            },
+            {
+              "id": "package-firewall",
+              "name": "GitHub package firewall",
+              "type": "Feature",
+              "tags": [
+                "supply chain",
+                "npm",
+                "registry",
+                "policy"
+              ],
+              "description": "Install-time policy gate between developer endpoints and upstream package registries (npm). Supports a new-version cooldown, Advisory Database checks, and attestation-downgrade checks.",
+              "url": "https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/protecting-endpoints-with-package-firewall",
+              "status": "Public preview (Enterprise Cloud)",
+              "universe": {
+                "note": "A policy gate at install time between developer endpoints and upstream registries, currently for npm. It supports a cooldown on new versions, Advisory Database checks, and attestation-downgrade checks; free during the preview and metered afterward.",
+                "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview/"
+              }
+            },
+            {
+              "id": "license-compliance",
+              "name": "Open source license compliance",
+              "type": "Feature",
+              "tags": [
+                "licenses",
+                "compliance",
+                "rulesets",
+                "supply chain"
+              ],
+              "description": "Define an enterprise license policy and enforce it through a ruleset requiring license compliance results before merge. Adds an Enterprise Open-Source License Manager role, audit events, and APIs.",
+              "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/open-source-license-compliance",
+              "status": "GA (Enterprise Cloud)",
+              "universe": {
+                "note": "Enterprises can define a license policy and enforce it through a ruleset condition that requires license compliance results before merging. It adds an Enterprise Open-Source License Manager role, audit events, and API endpoints.",
+                "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available/"
+              }
+            },
+            {
+              "id": "ai-scan",
+              "name": "AI Scan",
+              "type": "Feature",
+              "tags": [
+                "code scanning",
+                "AI",
+                "pull requests",
+                "agentic"
+              ],
+              "description": "AI-powered security scanning for pull requests (GA) and whole repositories (public preview), covering languages CodeQL does not. Advisory only; results appear as code scanning alerts.",
+              "url": "https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections",
+              "status": "GA (PRs) / public preview (repos)",
+              "universe": {
+                "note": "AI Scan reviews pull requests for security issues in languages and file types CodeQL does not cover, such as PHP, Shell, Terraform HCL, Dockerfiles, JSP, and Blazor. It is advisory only, does not block merges, and does not run on forks or Dependabot PRs.",
+                "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/"
+              }
+            },
+            {
+              "id": "advisory-database",
+              "name": "GitHub Advisory Database",
+              "type": "Service",
+              "tags": [
+                "advisories",
+                "vulnerabilities",
+                "malware",
+                "OSV"
+              ],
+              "description": "Searchable database of known security vulnerabilities and malware in open source packages, published in OSV format; the source for Dependabot alerts.",
+              "url": "https://docs.github.com/en/code-security/concepts/vulnerability-reporting-and-management/github-advisory-database"
+            },
+            {
+              "id": "dependency-graph",
+              "name": "Dependency graph & SBOM",
+              "type": "Feature",
+              "tags": [
+                "dependencies",
+                "SBOM",
+                "supply chain",
+                "manifests"
+              ],
+              "description": "Maps a repository's dependencies and dependents from manifest and lock files, powers Dependabot alerts, and lets you export a software bill of materials (SBOM).",
+              "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-graph"
+            },
+            {
+              "id": "dependency-review",
+              "name": "Dependency review",
+              "type": "Feature",
+              "tags": [
+                "dependencies",
+                "pull requests",
+                "vulnerabilities",
+                "licenses"
+              ],
+              "description": "Shows dependency changes in a pull request, with known vulnerabilities and license information, before you merge.",
+              "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-review"
+            },
+            {
+              "id": "private-vulnerability-reporting",
+              "name": "Private vulnerability reporting",
+              "type": "Feature",
+              "tags": [
+                "disclosure",
+                "advisories",
+                "maintainers",
+                "vulnerabilities"
+              ],
+              "description": "Lets security researchers privately report vulnerabilities to maintainers of public repositories; maintainers can then draft and publish repository security advisories.",
+              "url": "https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository"
+            },
+            {
+              "id": "security-lab",
+              "name": "GitHub Security Lab",
+              "type": "Program",
+              "tags": [
+                "research",
+                "open source",
+                "vulnerabilities",
+                "community"
+              ],
+              "description": "Team of security experts running a collaborative community of developers and security researchers to secure open source software.",
+              "url": "https://securitylab.github.com/"
+            },
+            {
+              "id": "bug-bounty",
+              "name": "GitHub Bug Bounty",
+              "type": "Program",
+              "tags": [
+                "bounty",
+                "vulnerability disclosure",
+                "researchers"
+              ],
+              "description": "Public bug bounty program that rewards security researchers for reporting vulnerabilities in GitHub products.",
+              "url": "https://bounty.github.com/"
+            }
+          ]
+        },
+        {
+          "id": "enterprise",
+          "name": "Enterprise & governance",
+          "subtitle": "Operate the platform at scale",
+          "color": "#5768b8",
+          "icon": "enterprise",
+          "items": [
+            {
+              "id": "enterprise-cloud",
+              "name": "GitHub Enterprise Cloud",
+              "type": "Product",
+              "featured": true,
+              "icon": "cloud",
+              "description": "Hosted GitHub for organizations with SSO, governance, and compliance controls. Now includes Copilot for every licensed user for enterprises with a GitHub or Microsoft account team; usage counts against the budget.",
+              "tags": [
+                "Enterprise",
+                "SaaS",
+                "Managed cloud",
+                "Governance"
+              ],
+              "url": "https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud",
+              "universe": {
+                "note": "GitHub Enterprise Cloud customers working with a GitHub or Microsoft account team get Copilot for every licensed user, with usage metered against the enterprise budget. Users without an Enterprise license can get Copilot Standalone; features match Copilot Enterprise but without monthly AI credits per seat, and Copilot Business and Enterprise stay available.",
+                "url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot/"
+              }
+            },
+            {
+              "id": "enterprise-server",
+              "name": "Enterprise Server",
+              "type": "Product",
+              "description": "Deploy and manage GitHub on infrastructure you control, on premises or in your own cloud environment.",
+              "tags": [
+                "Enterprise",
+                "Self-managed",
+                "On premises"
+              ],
+              "url": "https://docs.github.com/en/enterprise-server@3.22/admin/overview/about-github-enterprise-server"
+            },
+            {
+              "id": "data-residency",
+              "name": "Data residency",
+              "type": "Feature",
+              "icon": "cloud",
+              "description": "Use Enterprise Cloud with covered data stored in a supported region. Check the documentation for the exact data and region scope.",
+              "tags": [
+                "Enterprise",
+                "Compliance",
+                "Region",
+                "GHE.com"
+              ],
+              "url": "https://github.com/enterprise/data-residency"
+            },
+            {
+              "id": "organizations",
+              "name": "Organizations & teams",
+              "type": "Feature",
+              "description": "Coordinate people and repositories with shared ownership, roles, and team-based access.",
+              "tags": [
+                "Teams",
+                "Access",
+                "Collaboration",
+                "Roles"
+              ],
+              "url": "https://docs.github.com/en/organizations"
+            },
+            {
+              "id": "identity",
+              "name": "Enterprise identity",
+              "type": "Feature",
+              "icon": "security",
+              "description": "Connect enterprise identity and access management, including SAML single sign-on and Enterprise Managed Users where supported.",
+              "tags": [
+                "SAML",
+                "SSO",
+                "SCIM",
+                "EMU",
+                "Identity"
+              ],
+              "url": "https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam"
+            },
+            {
+              "id": "audit",
+              "name": "Audit logs",
+              "type": "Feature",
+              "description": "Review and export activity records for enterprise administration, security investigations, and governance.",
+              "tags": [
+                "Audit",
+                "Compliance",
+                "Governance",
+                "Logs"
+              ],
+              "url": "https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise"
+            },
+            {
+              "id": "billing",
+              "name": "Billing & usage",
+              "type": "Feature",
+              "description": "Monitor metered usage and spending, attribute costs, and configure budgets and alerts.",
+              "tags": [
+                "FinOps",
+                "Budgets",
+                "Cost management",
+                "Usage"
+              ],
+              "url": "https://docs.github.com/en/billing"
+            },
+            {
+              "id": "copilot-usage-metrics",
+              "name": "Copilot usage metrics",
+              "type": "Feature",
+              "tags": [
+                "metrics",
+                "adoption",
+                "dashboards",
+                "admin"
+              ],
+              "description": "Dashboards and API data that help administrators see how teams adopt Copilot, track engagement, and find enablement opportunities.",
+              "url": "https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics"
+            },
+            {
+              "id": "expert-services",
+              "name": "GitHub Expert Services",
+              "type": "Service",
+              "tags": [
+                "consulting",
+                "training",
+                "adoption",
+                "workshops"
+              ],
+              "description": "Hands-on consulting, guided workshops, and training from the GitHub Expert Services team to help organizations adopt GitHub.",
+              "url": "https://github.com/services"
+            },
+            {
+              "id": "premium-support",
+              "name": "GitHub Premium Support",
+              "type": "Service",
+              "tags": [
+                "support",
+                "enterprise",
+                "24/7",
+                "SLA"
+              ],
+              "description": "Paid enterprise support plan with 24/7 coverage and dedicated GitHub experts.",
+              "url": "https://github.com/enterprise/premium-support"
+            },
+            {
+              "id": "github-connect",
+              "name": "GitHub Connect",
+              "type": "Feature",
+              "tags": [
+                "enterprise server",
+                "hybrid",
+                "enterprise cloud",
+                "integration"
+              ],
+              "description": "Connects a GitHub Enterprise Server instance to your Enterprise Cloud enterprise to share selected data and workflows.",
+              "url": "https://docs.github.com/en/enterprise-server@3.22/admin/configuring-settings/configuring-github-connect/about-github-connect"
+            }
+          ]
+        },
+        {
+          "id": "ecosystem",
+          "name": "Ecosystem & services",
+          "subtitle": "Connect, extend, and grow",
+          "color": "#9a6700",
+          "icon": "ecosystem",
+          "items": [
+            {
+              "id": "marketplace",
+              "name": "GitHub Marketplace",
+              "type": "Service",
+              "featured": true,
+              "description": "Discover apps and Actions that extend GitHub and connect development workflows to other tools.",
+              "tags": [
+                "Integrations",
+                "Apps",
+                "Actions",
+                "Partners"
+              ],
+              "url": "https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-github-marketplace-for-your-personal-account"
+            },
+            {
+              "id": "apis",
+              "name": "REST & GraphQL APIs",
+              "type": "Tool",
+              "icon": "code",
+              "description": "Query GitHub data and automate workflows with its REST and GraphQL APIs; use webhooks to respond to events.",
+              "tags": [
+                "API",
+                "REST",
+                "GraphQL",
+                "Webhooks",
+                "Automation"
+              ],
+              "url": "https://docs.github.com/en/integrations"
+            },
+            {
+              "id": "apps",
+              "name": "GitHub Apps",
+              "type": "Tool",
+              "description": "Build integrations with fine-grained permissions, installation-based access, and webhook events.",
+              "tags": [
+                "Integrations",
+                "Apps",
+                "Webhooks",
+                "Permissions"
+              ],
+              "url": "https://docs.github.com/en/apps"
+            },
+            {
+              "id": "mcp",
+              "name": "GitHub MCP server",
+              "type": "Tool",
+              "icon": "ai",
+              "description": "Give compatible AI tools access to GitHub capabilities through the Model Context Protocol, subject to authentication and permissions.",
+              "tags": [
+                "MCP",
+                "AI",
+                "Integrations",
+                "Agents"
+              ],
+              "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server"
+            },
+            {
+              "id": "education",
+              "name": "GitHub Education",
+              "type": "Program",
+              "icon": "repo",
+              "description": "Learning and teaching resources, classroom tools, and eligible student and educator benefits.",
+              "tags": [
+                "Students",
+                "Teachers",
+                "Classroom",
+                "Learning",
+                "Skills"
+              ],
+              "url": "https://docs.github.com/en/education"
+            },
+            {
+              "id": "sponsors",
+              "name": "GitHub Sponsors",
+              "type": "Program",
+              "description": "Fund open source contributors and projects, or receive financial support for eligible open source work.",
+              "tags": [
+                "Open source",
+                "Funding",
+                "Community"
+              ],
+              "url": "https://docs.github.com/en/sponsors"
+            },
+            {
+              "id": "support",
+              "name": "GitHub Support",
+              "type": "Service",
+              "description": "Get help with GitHub products through the support channels included with your plan, with additional Premium Support options.",
+              "tags": [
+                "Support",
+                "Premium Support",
+                "Help"
+              ],
+              "url": "https://docs.github.com/en/support"
+            },
+            {
+              "id": "migrations",
+              "name": "Migration tools",
+              "type": "Tool",
+              "description": "Move repositories and supported project data to GitHub or between GitHub products using migration tooling.",
+              "tags": [
+                "Enterprise Importer",
+                "Migration",
+                "Adoption"
+              ],
+              "url": "https://docs.github.com/en/migrations"
+            },
+            {
+              "id": "npm-registry",
+              "name": "npm registry",
+              "type": "Service",
+              "tags": [
+                "npm",
+                "javascript",
+                "registry",
+                "packages"
+              ],
+              "description": "The npm public package registry and CLI for publishing and installing JavaScript packages; npm is owned by GitHub. Distinct from the npm registry in GitHub Packages.",
+              "url": "https://docs.npmjs.com/about-npm/"
+            },
+            {
+              "id": "github-docs",
+              "name": "GitHub Docs",
+              "type": "Service",
+              "tags": [
+                "documentation",
+                "reference",
+                "guides"
+              ],
+              "description": "Official documentation for GitHub products and features, with guides, concepts, and reference for each plan and product.",
+              "url": "https://docs.github.com/en"
+            },
+            {
+              "id": "github-status",
+              "name": "GitHub Status",
+              "type": "Service",
+              "tags": [
+                "status",
+                "incidents",
+                "uptime",
+                "notifications"
+              ],
+              "description": "Real-time GitHub service status with incident updates and email, SMS, and other subscription options.",
+              "url": "https://www.githubstatus.com/"
+            },
+            {
+              "id": "community-forum",
+              "name": "GitHub Community",
+              "type": "Service",
+              "tags": [
+                "community",
+                "forum",
+                "feedback",
+                "discussions"
+              ],
+              "description": "Community discussion forum for questions, feature feedback, and announcements from GitHub staff and users.",
+              "url": "https://github.com/orgs/community/discussions"
+            },
+            {
+              "id": "partner-program",
+              "name": "GitHub Partner Program",
+              "type": "Program",
+              "tags": [
+                "partners",
+                "technology",
+                "channel",
+                "startups"
+              ],
+              "description": "Partner programs for Technology, Service and Channel, Startups, and Education partners, with co-branding and specialist guidance.",
+              "url": "https://github.com/partners"
+            },
+            {
+              "id": "secure-open-source-fund",
+              "name": "GitHub Secure Open Source Fund",
+              "type": "Program",
+              "tags": [
+                "funding",
+                "open source",
+                "security",
+                "sponsors"
+              ],
+              "description": "Funding program powered by GitHub Sponsors that pays maintainers of fast-growing open source dependencies to improve security, with expert guidance and emergency support.",
+              "url": "https://github.com/open-source/github-secure-open-source-fund"
+            },
+            {
+              "id": "github-stars",
+              "name": "GitHub Stars",
+              "type": "Program",
+              "tags": [
+                "community",
+                "recognition",
+                "advocates"
+              ],
+              "description": "Program that recognizes and supports community leaders who educate and inspire developers.",
+              "url": "https://stars.github.com/"
+            },
+            {
+              "id": "archive-program",
+              "name": "GitHub Archive Program",
+              "type": "Program",
+              "tags": [
+                "preservation",
+                "open source",
+                "arctic code vault"
+              ],
+              "description": "Initiative to preserve open source software for future generations, including the Arctic Code Vault snapshot.",
+              "url": "https://archiveprogram.github.com/"
+            },
+            {
+              "id": "github-next",
+              "name": "GitHub Next",
+              "type": "Program",
+              "tags": [
+                "research",
+                "prototypes",
+                "experiments"
+              ],
+              "description": "GitHub's research and engineering team that prototypes future developer tools; origin of Agentic Workflows.",
+              "url": "https://githubnext.com/"
+            },
+            {
+              "id": "profiles",
+              "name": "Profiles",
+              "type": "Feature",
+              "tags": [
+                "profile",
+                "identity",
+                "portfolio",
+                "README"
+              ],
+              "description": "Personal profile pages that show your repositories, contributions, and activity, and can be customized.",
+              "url": "https://docs.github.com/en/account-and-profile/concepts/personal-profile"
+            },
+            {
+              "id": "webhooks",
+              "name": "Webhooks",
+              "type": "Feature",
+              "tags": [
+                "webhooks",
+                "events",
+                "integrations",
+                "automation"
+              ],
+              "description": "Receive HTTP callbacks when events occur on GitHub, to integrate with external services and automate workflows.",
+              "url": "https://docs.github.com/en/webhooks/about-webhooks"
+            },
+            {
+              "id": "trending",
+              "name": "Trending",
+              "type": "Feature",
+              "tags": [
+                "discovery",
+                "explore",
+                "repositories",
+                "developers"
+              ],
+              "description": "See which repositories and developers the GitHub community is most excited about today, filterable by language.",
+              "url": "https://github.com/trending"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "name": "Learn & practice",
+          "subtitle": "Build GitHub and Copilot skills hands-on",
+          "color": "#8250df",
+          "icon": "book",
+          "items": [
+            {
+              "id": "github-skills",
+              "name": "GitHub Skills",
+              "type": "Program",
+              "icon": "book",
+              "description": "Hands-on, repository-based courses for Git, GitHub, pull requests, Actions, and more. Learn by completing practical exercises in real GitHub workflows.",
+              "tags": [
+                "Tutorials",
+                "Hands-on",
+                "Git",
+                "GitHub Actions"
+              ],
+              "url": "https://skills.github.com/"
+            },
+            {
+              "id": "microsoft-learn-github",
+              "name": "Microsoft Learn for GitHub",
+              "type": "Program",
+              "icon": "book",
+              "description": "GitHub learning paths from Microsoft Learn, including GitHub Foundations and Copilot modules on prompt engineering, agent mode, cloud Copilot, and MCP.",
+              "tags": [
+                "Microsoft Learn",
+                "GitHub Copilot",
+                "Learning paths",
+                "Agents"
+              ],
+              "url": "https://learn.microsoft.com/en-us/training/github/"
+            }
+          ]
+        }
+      ]
+    },
+    "azure": {
+      "name": "Azure AI",
+      "title": "Azure AI and agents, on one map",
+      "description": "A focused guide to Microsoft Foundry, agent frameworks, models, grounding, safety, and AI learning. General Azure infrastructure is intentionally out of scope.",
+      "docsLabel": "Microsoft Learn",
+      "docsUrl": "https://learn.microsoft.com/en-us/azure/foundry/",
+      "groups": [
+        {
+          "id": "agents",
+          "name": "Agents & orchestration",
+          "subtitle": "Build, connect, and operate AI agents",
+          "color": "#0078d4",
+          "icon": "ai",
+          "items": [
+            {
+              "id": "microsoft-foundry",
+              "name": "Microsoft Foundry",
+              "type": "Product",
+              "icon": "ai",
+              "description": "Unified platform for building and managing AI applications and agents, with models, tools, evaluations, tracing, governance, and enterprise controls.",
+              "tags": [
+                "AI platform",
+                "Agents",
+                "Models",
+                "Tools"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry"
+            },
+            {
+              "id": "foundry-agent-service",
+              "name": "Foundry Agent Service",
+              "type": "Service",
+              "icon": "ai",
+              "description": "Managed runtime for building, deploying, and scaling prompt and hosted agents with model access, tools, identities, and lifecycle management.",
+              "tags": [
+                "Agent runtime",
+                "Hosted agents",
+                "Tools",
+                "Governance"
+              ],
+              "status": "Generally available",
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview"
+            },
+            {
+              "id": "microsoft-agent-framework",
+              "name": "Microsoft Agent Framework",
+              "type": "Tool",
+              "icon": "workflow",
+              "description": "Open-source SDK for building agents and multi-agent workflows across model providers, tools, MCP servers, memory, and hosting options.",
+              "tags": [
+                "SDK",
+                "Agents",
+                "Multi-agent",
+                "Workflows"
+              ],
+              "url": "https://learn.microsoft.com/en-us/agent-framework/overview/"
+            },
+            {
+              "id": "foundry-toolbox",
+              "name": "Foundry Toolboxes",
+              "type": "Feature",
+              "icon": "workflow",
+              "description": "Curate tools once and expose them through a shared MCP-compatible endpoint with centralized credentials, governance, observability, and versioning.",
+              "tags": [
+                "Tools",
+                "MCP",
+                "Governance",
+                "Agents"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/toolbox-overview"
+            },
+            {
+              "id": "agent-routines",
+              "name": "Agent routines",
+              "type": "Feature",
+              "icon": "workflow",
+              "description": "Run Foundry agents automatically on schedules or events, with permissions, connections, and run history managed alongside the agent.",
+              "tags": [
+                "Automation",
+                "Triggers",
+                "Agents",
+                "Scheduling"
+              ],
+              "status": "Generally available",
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/routines"
+            },
+            {
+              "id": "agent-to-agent",
+              "name": "Agent-to-agent (A2A)",
+              "type": "Feature",
+              "icon": "network",
+              "description": "Connect agents across frameworks and services so they can discover one another and coordinate work through the A2A protocol.",
+              "tags": [
+                "A2A",
+                "Interoperability",
+                "Multi-agent"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/agent-to-agent"
+            },
+            {
+              "id": "foundry-mcp",
+              "name": "MCP for Foundry agents",
+              "type": "Feature",
+              "icon": "network",
+              "description": "Connect Foundry agents and toolboxes to remote MCP servers, with authentication and centralized tool configuration.",
+              "tags": [
+                "MCP",
+                "Tools",
+                "Integrations"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/model-context-protocol"
+            },
+            {
+              "id": "long-running-agents",
+              "name": "Long-running hosted agents",
+              "type": "Feature",
+              "icon": "workflow",
+              "description": "Keep agent work running after a client disconnects and recover it after process restarts with durable task identity, persisted inputs, and stream replay.",
+              "tags": [
+                "Hosted agents",
+                "Durability",
+                "Background work",
+                "Reliability"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/long-running-agent-resilience"
+            },
+            {
+              "id": "azure-foundry-skill",
+              "name": "Azure skill for Microsoft Foundry",
+              "type": "Tool",
+              "icon": "book",
+              "description": "A reusable agent skill covering Foundry model deployment, agent development, routines, A2A, evaluation, monitoring, and troubleshooting.",
+              "tags": [
+                "Agent skills",
+                "Azure Developer CLI",
+                "Agents",
+                "Learning"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/developer/azure-skills/skills/microsoft-foundry"
+            }
+          ]
+        },
+        {
+          "id": "models",
+          "name": "Models & inference",
+          "subtitle": "Choose, route, and run AI models",
+          "color": "#8250df",
+          "icon": "layers",
+          "items": [
+            {
+              "id": "foundry-models",
+              "name": "Microsoft Foundry Models",
+              "type": "Service",
+              "icon": "layers",
+              "description": "Discover, compare, evaluate, and deploy models from Microsoft, Azure OpenAI, and partner or community providers through one catalog.",
+              "tags": [
+                "Model catalog",
+                "Inference",
+                "Evaluation",
+                "Multimodal"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/foundry-models-overview"
+            },
+            {
+              "id": "foundry-model-router",
+              "name": "Foundry Model Router",
+              "type": "Feature",
+              "icon": "workflow",
+              "description": "Route each prompt to a suitable model in real time, balancing quality, cost, and latency through a single model deployment.",
+              "tags": [
+                "Model routing",
+                "Optimization",
+                "Cost",
+                "Latency"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router"
+            },
+            {
+              "id": "foundry-local",
+              "name": "Foundry Local",
+              "type": "Tool",
+              "icon": "cloud",
+              "description": "Run generative AI models locally for low-latency, offline-capable applications, including assistants, search, translation, speech, and vision.",
+              "tags": [
+                "Local inference",
+                "On-device AI",
+                "Models",
+                "Offline"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry-local/"
+            }
+          ]
+        },
+        {
+          "id": "grounding",
+          "name": "Knowledge & grounding",
+          "subtitle": "Give agents trusted context",
+          "color": "#1a7f64",
+          "icon": "repo",
+          "items": [
+            {
+              "id": "azure-ai-search",
+              "name": "Azure AI Search",
+              "type": "Service",
+              "icon": "search",
+              "description": "AI-ready search and retrieval, including vector and hybrid search and agentic retrieval, to ground models and agents in enterprise content.",
+              "tags": [
+                "RAG",
+                "Vector search",
+                "Agentic retrieval",
+                "Grounding"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search"
+            },
+            {
+              "id": "foundry-iq",
+              "name": "Foundry IQ",
+              "type": "Feature",
+              "icon": "layers",
+              "description": "Managed knowledge layer built on Azure AI Search that turns enterprise content into permission-aware knowledge bases for agents.",
+              "tags": [
+                "Knowledge bases",
+                "Agents",
+                "Grounding",
+                "Azure AI Search"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-foundry-iq"
+            },
+            {
+              "id": "document-intelligence",
+              "name": "Azure Document Intelligence",
+              "type": "Service",
+              "icon": "repo",
+              "description": "Extract text, tables, key-value pairs, and structured fields from forms and documents to prepare content for AI applications and agents.",
+              "tags": [
+                "Documents",
+                "Extraction",
+                "OCR",
+                "RAG"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview?view=doc-intel-4.0.0"
+            },
+            {
+              "id": "content-understanding",
+              "name": "Azure Content Understanding",
+              "type": "Service",
+              "icon": "repo",
+              "description": "Use generative AI to analyze documents, images, video, and audio, then transform unstructured content into structured, searchable data.",
+              "tags": [
+                "Multimodal",
+                "Documents",
+                "Audio",
+                "Video"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview"
+            }
+          ]
+        },
+        {
+          "id": "trust",
+          "name": "Evaluation & safety",
+          "subtitle": "Measure and govern model behavior",
+          "color": "#cf374d",
+          "icon": "security",
+          "items": [
+            {
+              "id": "foundry-evaluations",
+              "name": "Foundry evaluations",
+              "type": "Feature",
+              "icon": "search",
+              "description": "Measure model and agent quality, safety, and reliability with datasets, simulations, production traces, and built-in or custom evaluators.",
+              "tags": [
+                "Evaluations",
+                "Agents",
+                "Quality",
+                "Safety"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-overview"
+            },
+            {
+              "id": "foundry-observability",
+              "name": "Foundry observability",
+              "type": "Feature",
+              "icon": "search",
+              "description": "Trace and monitor AI applications and agents across development and production, with quality, safety, performance, and operational signals.",
+              "tags": [
+                "Observability",
+                "Tracing",
+                "Monitoring",
+                "Agents"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability"
+            },
+            {
+              "id": "azure-ai-content-safety",
+              "name": "Azure AI Content Safety",
+              "type": "Service",
+              "icon": "security",
+              "description": "Detect harmful user- and AI-generated content and apply guardrails to models, agents, and applications.",
+              "tags": [
+                "Guardrails",
+                "Moderation",
+                "Prompt shields",
+                "Safety"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "name": "Learn & build",
+          "subtitle": "Get hands-on with Azure AI agents",
+          "color": "#9a6700",
+          "icon": "book",
+          "items": [
+            {
+              "id": "develop-ai-agents-azure",
+              "name": "Develop AI agents on Azure",
+              "type": "Program",
+              "icon": "book",
+              "description": "Microsoft Learn path for developing AI agents with Microsoft Foundry Agent Service and Microsoft Agent Framework, including multi-agent orchestration.",
+              "tags": [
+                "Microsoft Learn",
+                "Agents",
+                "Multi-agent",
+                "Tutorials"
+              ],
+              "url": "https://learn.microsoft.com/en-us/training/paths/develop-ai-agents-azure/"
+            },
+            {
+              "id": "microsoft-foundry-capabilities",
+              "name": "Microsoft Foundry capability map",
+              "type": "Program",
+              "icon": "book",
+              "description": "Official map of Microsoft Foundry capabilities across agents, tools, knowledge, evaluation, observability, trust, and model operations.",
+              "tags": [
+                "Microsoft Learn",
+                "Reference",
+                "Agents",
+                "AI platform"
+              ],
+              "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/capability-reference"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

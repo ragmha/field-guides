@@ -38,6 +38,19 @@
         "typescript": "^5.9.3",
       },
     },
+    "guides/copilot-how-tos": {
+      "name": "copilot-how-tos",
+      "version": "1.0.0",
+      "dependencies": {
+        "astro": "^5.15.0",
+      },
+      "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@types/bun": "^1.4.4",
+        "@types/node": "^26.6.6",
+        "typescript": "^5.9.3",
+      },
+    },
     "guides/data-residency-guide": {
       "name": "eu-data-residency-guide",
       "version": "1.0.0",
@@ -484,6 +497,8 @@
     "cookie-es": ["cookie-es@1.2.3", "", {}, "sha512-lXVyvUvrNXblMqzIRrxHb57UUVmqsSWlxqt3XIjCkUP0wDAf6uicO6KMbEgYrMNtEvWgWHwe42CKxPu9MYAnWw=="],
 
     "copilot-governance-guide": ["copilot-governance-guide@workspace:guides/copilot-governance-guide"],
+
+    "copilot-how-tos": ["copilot-how-tos@workspace:guides/copilot-how-tos"],
 
     "cose-base": ["cose-base@1.0.3", "", { "dependencies": { "layout-base": "^1.0.0" } }, "sha512-s9whTXInMSgAp/NVXVNuVxVKzGH2qck3aQlVHxDCdAEPgtMKwc4Wq6/QKhgdEdgbLSi9rBTAcPoRa6JpiG4ksg=="],
 

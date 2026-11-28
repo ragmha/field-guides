@@ -21,6 +21,54 @@ export const guides = [
     type: 'astro',
   },
   {
+    name: 'copilot-ide-guide',
+    title: 'Copilot in your IDE',
+    parts: 3,
+    description: 'Set up and use GitHub Copilot in VS Code, with client-specific differences called out.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
+    name: 'copilot-prompting-guide',
+    title: 'Better prompts and context',
+    parts: 3,
+    description: 'Give Copilot useful goals, repository context and constraints, then verify its work.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
+    name: 'copilot-cli-guide',
+    title: 'Copilot CLI workflows',
+    parts: 3,
+    description: 'Delegate a bounded terminal task, control permissions, and review the result.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
+    name: 'copilot-agent-mode-guide',
+    title: 'Agent mode in your IDE',
+    parts: 3,
+    description: 'Supervise an interactive agent through a small change, tool approvals, and review.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
+    name: 'copilot-instructions-guide',
+    title: 'Repository instructions',
+    parts: 3,
+    description: 'Write, scope, and check reusable instructions for Copilot in a repository.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
+    name: 'copilot-skills-agents-guide',
+    title: 'Agent skills and custom agents',
+    parts: 3,
+    description: 'Package a repeatable workflow as a skill and define a focused custom agent.',
+    type: 'astro',
+    workspace: 'copilot-how-tos',
+  },
+  {
     name: 'champions-at-scale',
     title: 'Champions at Scale',
     parts: 3,
@@ -39,6 +87,15 @@ export const guides = [
     title: 'Agentic Engineering',
     parts: 10,
     description: 'A GitHub perspective on agentic engineering, observability and LLM operations, with practical controls for teams.',
+    type: 'static',
+  },
+];
+
+export const platformReferences = [
+  {
+    name: 'platform-references',
+    title: 'GitHub and Azure AI landscape',
+    description: 'An independent, searchable map of GitHub and Azure AI products, services, agentic tools, and learning resources.',
     type: 'static',
   },
 ];
