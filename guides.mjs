@@ -42,3 +42,12 @@ export const guides = [
     type: 'static',
   },
 ];
+
+export const platformReferences = [
+  {
+    name: 'platform-references',
+    title: 'GitHub and Azure AI landscape',
+    description: 'An independent, searchable map of GitHub and Azure AI products, services, agentic tools, and learning resources.',
+    type: 'static',
+  },
+];
