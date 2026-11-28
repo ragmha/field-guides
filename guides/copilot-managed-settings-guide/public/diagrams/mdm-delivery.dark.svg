@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="mdm-delivery-dark-root" viewBox="0 0 704 532" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mdm-delivery-dark-title mdm-delivery-dark-desc">
+        <title id="mdm-delivery-dark-title">Deliver settings by MDM</title>
+        <desc id="mdm-delivery-dark-desc">An administrator authors policy values, the MDM service assigns them to a test device group, the client checks hourly without restarting, and the change is verified on a device before the assignment widens.</desc>
+        <defs><marker id="mdm-delivery-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="532" fill="#07090d"/>
+        <rect x="40" y="40" width="624" height="104" rx="6" fill="#07090d" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="52" y="60" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ADMINISTRATOR</text>
+        <rect x="40" y="152" width="624" height="104" rx="6" fill="#07090d" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="52" y="172" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">MDM SERVICE</text>
+        <rect x="40" y="264" width="624" height="104" rx="6" fill="#07090d" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="52" y="284" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">DEVICE AND CLIENT</text>
+        <path d="M 192 102 L 196 102 A 8 8 0 0 1 204 110 L 204 206 A 8 8 0 0 0 212 214 L 208 214" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#mdm-delivery-dark-arrow)"/>
+        <path d="M 344 214 L 348 214 A 8 8 0 0 1 356 222 L 356 318 A 8 8 0 0 0 364 326 L 360 326" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#mdm-delivery-dark-arrow)"/>
+        <path d="M 496 326 L 512 326" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#mdm-delivery-dark-arrow)"/>
+        <path d="M 580 296 L 580 132" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#mdm-delivery-dark-arrow)"/>
+        <rect x="56" y="72" width="136" height="60" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="124.0" y="98.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Author values</text>
+        <text x="124.0" y="114.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Policy names, not IDs</text>
+        <rect x="208" y="184" width="136" height="60" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="276.0" y="210.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assign to test</text>
+        <text x="276.0" y="226.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Small device group</text>
+        <rect x="360" y="296" width="136" height="60" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="428.0" y="322.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Client checks</text>
+        <text x="428.0" y="338.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Hourly, no restart</text>
+        <rect x="512" y="296" width="136" height="60" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="580.0" y="322.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Verify on device</text>
+        <text x="580.0" y="338.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Blocked and permitted</text>
+        <rect x="512" y="72" width="136" height="60" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="580.0" y="98.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Widen assignment</text>
+        <text x="580.0" y="114.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">After evidence</text>
+        <text x="40" y="408" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">In VS Code, Developer: Sync Account Policy forces a check for testing.</text>
+        <text x="40" y="424" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Device settings apply to every user of the machine, regardless of plan.</text>
+        <line x1="40" y1="472" x2="664" y2="472" stroke="#3d444d"/>
+        <text x="40" y="496" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Lanes: who acts; arrows: hand-offs</text>
+        <text x="40" y="516" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>

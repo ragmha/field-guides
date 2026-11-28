@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Same threshold, different operational outcome</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; background: #f3f5f7; color: #1f2328; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 704px; margin: 0 auto; }
+    .eyebrow { color: #59636e; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 8px 0 20px; font-size: 24px; line-height: 1.2; }
+    .diagram-container { overflow-x: auto; border: 1px solid #d1d9e0; border-radius: 6px; background: #f3f5f7; }
+    .diagram-container:focus-visible { outline: 2px solid #1a7f37; outline-offset: 3px; }
+    svg { display: block; width: 100%; min-width: 640px; height: auto; }
+    figcaption { margin-top: 12px; color: #59636e; font-size: 12px; }
+    nav { display: flex; gap: 16px; margin-top: 12px; }
+    a { color: #0550ae; text-underline-offset: 3px; }
+    @media print { body { padding: 0; } .diagram-container { overflow: visible; } svg { min-width: 0; } nav { display: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">AI Credits guide · Flowchart</p>
+    <h1>Same threshold, different operational outcome</h1>
+    <figure>
+      <div class="diagram-container" tabindex="0" role="region" aria-label="Same threshold, different operational outcome. Scroll horizontally to explore."><svg viewBox="0 0 640 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cap-or-continuity-light-title cap-or-continuity-light-desc">
+  <title id="cap-or-continuity-light-title">Same threshold, different operational outcome</title>
+  <desc id="cap-or-continuity-light-desc">A metered hard stop blocks credit-consuming work at its limit. An alert-only threshold keeps work and charges running while an owner responds. ULBs remain hard stops in either design.</desc>
+  <defs><marker id="cap-or-continuity-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M 0 0 L 8 3 L 0 6 Z" fill="#59636e"/></marker></defs>
+  <style>
+    svg { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1f2328; }
+    .paper { fill: #f3f5f7; }
+    .node, .step-card { fill: #ffffff; stroke: #d1d9e0; stroke-width: 1.5; }
+    .node.focus, .step-card.focus { fill: #eaf6ed; stroke: #1a7f37; stroke-width: 2; }
+    .decision { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+    .hub { fill: #eaf6ed; stroke: #1a7f37; stroke-width: 1.5; }
+    .step-number { fill: #f3f5f7; stroke: #d1d9e0; stroke-width: 1.5; }
+    .step-number.focus { fill: #1a7f37; stroke: #1a7f37; }
+    .eyebrow, .detail, .note { fill: #59636e; }
+    .node-name, .number { fill: #1f2328; }
+    .arrow { fill: none; stroke: #59636e; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#cap-or-continuity-light-arrow); }
+    .spoke { fill: none; stroke: #59636e; stroke-width: 1; stroke-dasharray: 4 3; }
+    .eyebrow { font-size: 8px; font-weight: 600; letter-spacing: .12em; }
+    .node-name { font-size: 12px; font-weight: 600; }
+    .detail { font-size: 9px; }
+    .arrow-label { fill: #59636e; font-size: 8px; font-weight: 600; letter-spacing: .06em; }
+    .label-mask { fill: #f3f5f7; }
+    .number { font-size: 9px; font-weight: 600; }
+    .note { font-size: 10px; }
+  </style>
+  <rect x="0" y="0" width="640" height="540" class="paper"/>
+  <path d="M 240 112 L 240 140 Q 240 148 232 148 L 168 148 Q 160 148 160 156 L 160 184" class="arrow" marker-end="url(#cap-or-continuity-light-arrow)"/><path d="M 400 112 L 400 140 Q 400 148 408 148 L 472 148 Q 480 148 480 156 L 480 184" class="arrow" marker-end="url(#cap-or-continuity-light-arrow)"/><path d="M 160 256 L 160 328" class="arrow" marker-end="url(#cap-or-continuity-light-arrow)"/><path d="M 480 256 L 480 328" class="arrow" marker-end="url(#cap-or-continuity-light-arrow)"/><g><rect x="180" y="40" width="280" height="72" rx="6" class="node"/><text x="320" y="58" text-anchor="middle" class="eyebrow"><tspan>THRESHOLD</tspan></text><text x="320" y="82" text-anchor="middle" class="node-name"><tspan>Same metered limit</tspan></text><text x="320" y="98" text-anchor="middle" class="detail"><tspan>Reached in either configuration</tspan></text></g><g><rect x="40" y="184" width="240" height="72" rx="6" class="node focus"/><text x="160" y="202" text-anchor="middle" class="eyebrow"><tspan>CONFIGURATION A</tspan></text><text x="160" y="226" text-anchor="middle" class="node-name"><tspan>Hard stop ON</tspan></text><text x="160" y="242" text-anchor="middle" class="detail"><tspan>Metered limit enforced</tspan></text></g><g><rect x="360" y="184" width="240" height="72" rx="6" class="node"/><text x="480" y="202" text-anchor="middle" class="eyebrow"><tspan>CONFIGURATION B</tspan></text><text x="480" y="226" text-anchor="middle" class="node-name"><tspan>Hard stop OFF</tspan></text><text x="480" y="242" text-anchor="middle" class="detail"><tspan>Alert-only threshold</tspan></text></g><g><rect x="40" y="328" width="240" height="88" rx="6" class="node"/><text x="160" y="346" text-anchor="middle" class="eyebrow"><tspan>OUTCOME</tspan></text><text x="160" y="370" text-anchor="middle" class="node-name"><tspan>Work is blocked</tspan></text><text x="160" y="386" text-anchor="middle" class="detail"><tspan>Credit-consuming activity</tspan><tspan x="160" dy="12">stops at the limit</tspan></text></g><g><rect x="360" y="328" width="240" height="88" rx="6" class="node"/><text x="480" y="346" text-anchor="middle" class="eyebrow"><tspan>OUTCOME</tspan></text><text x="480" y="370" text-anchor="middle" class="node-name"><tspan>Owner chooses response</tspan></text><text x="480" y="386" text-anchor="middle" class="detail"><tspan>Charges continue while</tspan><tspan x="480" dy="12">the owner investigates</tspan></text></g><g><rect x="72" y="464" width="496" height="52" rx="6" class="node"/><text x="320" y="482" text-anchor="middle" class="eyebrow"><tspan>ALWAYS</tspan></text><text x="320" y="506" text-anchor="middle" class="node-name"><tspan>ULB remains a hard stop in both</tspan></text><text x="320" y="522" text-anchor="middle" class="detail"><tspan>Forecast ≠ cap ≠ purchase approval</tspan></text></g>
+</svg></div>
+      <figcaption>A metered hard stop blocks credit-consuming work at its limit. An alert-only threshold keeps work and charges running while an owner responds. ULBs remain hard stops in either design.</figcaption>
+    </figure>
+    <nav aria-label="Diagram variants"><a href="cap-or-continuity.light.html">Light version</a><a href="cap-or-continuity.dark.html">Dark version</a></nav>
+  </main>
+</body>
+</html>

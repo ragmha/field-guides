@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="surface-support-matrix-light-root" viewBox="0 0 704 584" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="surface-support-matrix-light-title surface-support-matrix-light-desc">
+        <title id="surface-support-matrix-light-title">Exclusion support by surface</title>
+        <desc id="surface-support-matrix-light-desc">Inline and chat or agent support for content exclusion across IDEs, the Copilot app and CLI, cloud surfaces and code review.</desc>
+        <defs><marker id="surface-support-matrix-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="584" fill="#f3f5f7"/>
+        <rect x="40" y="40" width="304" height="32" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="60" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Tool</text>
+        <rect x="344" y="40" width="160" height="32" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="60" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Inline suggestions</text>
+        <rect x="504" y="40" width="160" height="32" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="60" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Chat and agent</text>
+        <rect x="40" y="72" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="92" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Visual Studio</text>
+        <rect x="344" y="72" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="92" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="504" y="72" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="92" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="40" y="104" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="124" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">VS Code</text>
+        <rect x="344" y="104" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="124" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="504" y="104" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="124" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="40" y="136" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="156" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">JetBrains IDEs</text>
+        <rect x="344" y="136" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="156" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="504" y="136" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="156" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="40" y="168" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="188" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Vim/Neovim</text>
+        <rect x="344" y="168" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="188" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="504" y="168" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="188" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">N/A</text>
+        <rect x="40" y="200" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="220" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Xcode</text>
+        <rect x="344" y="200" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="220" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="504" y="200" width="160" height="32" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="584.0" y="220" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not supported</text>
+        <rect x="40" y="232" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="252" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Eclipse</text>
+        <rect x="344" y="232" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="252" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="504" y="232" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="252" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not supported</text>
+        <rect x="40" y="264" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="284" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Azure Data Studio</text>
+        <rect x="344" y="264" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="284" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not supported</text>
+        <rect x="504" y="264" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="284" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">N/A</text>
+        <rect x="40" y="296" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="316" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot app</text>
+        <rect x="344" y="296" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="316" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">N/A</text>
+        <rect x="504" y="296" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="316" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="40" y="328" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="348" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot CLI</text>
+        <rect x="344" y="328" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="348" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">N/A</text>
+        <rect x="504" y="328" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="348" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="40" y="360" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="380" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot in the cloud</text>
+        <rect x="344" y="360" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="380" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">N/A</text>
+        <rect x="504" y="360" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="380" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <rect x="40" y="392" width="304" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="52" y="412" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot code review</text>
+        <rect x="344" y="392" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="424.0" y="412" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">N/A</text>
+        <rect x="504" y="392" width="160" height="32" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="584.0" y="412" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported</text>
+        <text x="40" y="464" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot in the cloud covers the web, Mobile and cloud sandboxes. N/A: the tool does not offer that feature.</text>
+        <text x="40" y="480" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Highlighted cell: an example gap that needs compensating guidance.</text>
+        <line x1="40" y1="524" x2="664" y2="524" stroke="#d1d9e0"/>
+        <text x="40" y="548" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: tool; column: feature type; cell: documented content exclusion support</text>
+        <text x="40" y="568" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

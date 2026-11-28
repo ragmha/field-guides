@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup steps hardening lifecycle</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Cloud Agent Security · Lifecycle · Setup steps</p>
+    <h1>Setup steps hardening lifecycle</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Setup steps hardening lifecycle. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="setup-steps-hardening-light-title setup-steps-hardening-light-desc">
+        <title id="setup-steps-hardening-light-title">Setup steps hardening lifecycle</title>
+        <desc id="setup-steps-hardening-light-desc">Lifecycle from authoring copilot-setup-steps.yml through review, default branch merge, runner selection and session start.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="600" fill="#f3f5f7"/>
+        <path d="M 216 108 L 264 108" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="230.5" y="88" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="240" y="97" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">PR</text>
+        <path d="M 440 108 L 488 108" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="446.25" y="88" width="35.5" height="12" rx="2" fill="#f3f5f7"/><text x="464" y="97" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">MERGE</text>
+        <path d="M 576 144 L 576 216" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="584" y="174" width="46.5" height="12" rx="2" fill="#f3f5f7"/><text x="607.25" y="183" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">TRIGGER</text>
+        <path d="M 488 252 L 440 252" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="451.75" y="232" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="464" y="241" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">RUN</text>
+        <path d="M 264 252 L 216 252" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="222.25" y="232" width="35.5" height="12" rx="2" fill="#f3f5f7"/><text x="240" y="241" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">START</text>
+        <text x="40" y="52" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">ACTIONS SESSIONS ONLY</text>
+        <rect x="40" y="72" width="176" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="128" y="104" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Author file</text>
+        <text x="128" y="120" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">copilot-setup-steps.yml</text>
+        <rect x="264" y="72" width="176" height="72" rx="8" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352" y="104" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Code owner review</text>
+        <text x="352" y="120" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Minimal permissions</text>
+        <rect x="488" y="72" width="176" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="576" y="104" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Merge to default</text>
+        <text x="576" y="120" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Required to trigger</text>
+        <rect x="40" y="216" width="176" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="128" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent works</text>
+        <text x="128" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Own token; 59 min max</text>
+        <rect x="264" y="216" width="176" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Setup steps run</text>
+        <text x="352" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Outside the firewall</text>
+        <rect x="488" y="216" width="176" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="576" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Runner chosen</text>
+        <text x="576" y="264" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Org may enforce type</text>
+        <text x="40" y="344" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">RUNNER OPTIONS</text>
+        <rect x="40" y="364" width="304" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="192" y="396" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">GitHub-hosted (recommended)</text>
+        <text x="192" y="412" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Fresh virtual machine each time</text>
+        <rect x="360" y="364" width="304" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="512" y="388" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Self-hosted</text>
+        <text x="512" y="404" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Ephemeral, single-use runners</text>
+        <text x="512" y="420" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Disable firewall; add network controls</text>
+        <text x="40" y="484" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Only steps, permissions, runs-on, services, snapshot and timeout-minutes are honored.</text>
+        <text x="40" y="500" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A failed step skips the remaining steps; the agent still continues.</text>
+        <line x1="40" y1="532" x2="664" y2="532" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="40" y="556" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Boxes: stages in order; arrows: transitions; lower row: runner choices</text>
+        <text x="40" y="576" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

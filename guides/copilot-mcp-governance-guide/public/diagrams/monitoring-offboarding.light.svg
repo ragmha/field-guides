@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="monitoring-offboarding-light-root" viewBox="0 0 704 716" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="monitoring-offboarding-light-title monitoring-offboarding-light-desc">
+        <title id="monitoring-offboarding-light-title">Offboard an MCP server</title>
+        <desc id="monitoring-offboarding-light-desc">Deny the server first, remove its configuration, delete and revoke secrets, wait for settings to refresh, confirm in a session, and update the inventory.</desc>
+        <defs><marker id="monitoring-offboarding-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="716" fill="#f3f5f7"/>
+        <path d="M 120 32 L 120 560" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#monitoring-offboarding-light-arrow)"/>
+        <line x1="125" y1="72" x2="168" y2="72" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="51.5" y="66" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="72" y="75" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 1</text>
+        <line x1="125" y1="160" x2="168" y2="160" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="51.5" y="154" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="72" y="163" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 2</text>
+        <line x1="125" y1="248" x2="168" y2="248" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="51.5" y="242" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="72" y="251" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 3</text>
+        <line x1="125" y1="336" x2="168" y2="336" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="51.5" y="330" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="72" y="339" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 4</text>
+        <line x1="125" y1="424" x2="168" y2="424" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="51.5" y="418" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="72" y="427" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 5</text>
+        <line x1="125" y1="512" x2="168" y2="512" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="51.5" y="506" width="41" height="12" rx="2" fill="#f3f5f7"/><text x="72" y="515" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">STEP 6</text>
+        <circle cx="120" cy="72" r="5" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <rect x="168" y="40" width="496" height="64" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="416" y="68" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Deny the server</text>
+        <text x="416" y="84" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Use the same matcher that allowed it</text>
+        <circle cx="120" cy="160" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="168" y="128" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="416" y="156" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Remove configuration</text>
+        <text x="416" y="172" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Repository, project and personal files</text>
+        <circle cx="120" cy="248" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="168" y="216" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="416" y="244" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Delete and revoke secrets</text>
+        <text x="416" y="260" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">COPILOT_MCP_ secret and the upstream key</text>
+        <circle cx="120" cy="336" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="168" y="304" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="416" y="332" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Wait for refresh</text>
+        <text x="416" y="348" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">About an hour; file-based settings need a restart</text>
+        <circle cx="120" cy="424" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="168" y="392" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="416" y="420" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Confirm in a session</text>
+        <text x="416" y="436" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The server no longer starts</text>
+        <circle cx="120" cy="512" r="5" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="168" y="480" width="496" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="416" y="508" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Update the inventory</text>
+        <text x="416" y="524" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Keep the deny entry until no copies remain</text>
+        <text x="40" y="600" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Clients that cannot fetch policy keep the previous one, never a looser one.</text>
+        <text x="40" y="616" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Order is guide advice; deny wins over allow wherever managed settings apply.</text>
+        <line x1="40" y1="656" x2="664" y2="656" stroke="#d1d9e0"/>
+        <text x="40" y="680" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Axis: order of steps from top to bottom</text>
+        <text x="40" y="700" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: first step and lesson focus, not approval or a safety rating</text>
+      </svg>

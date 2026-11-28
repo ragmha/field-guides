@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="customization-layers-dark-root" viewBox="0 0 704 532" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="customization-layers-dark-title customization-layers-dark-desc">
+        <title id="customization-layers-dark-title">Map the customization layers</title>
+        <desc id="customization-layers-dark-desc">Customizations live at enterprise, organization, repository and personal layers, and plugins can carry agents and skills to any of them.</desc>
+        <defs><marker id="customization-layers-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="532" fill="#07090d"/>
+        <rect x="40" y="40" width="624" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="68" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise: agents and plugin requirements</text>
+        <text x="352" y="84" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise-designated .github-private repository and managed settings</text>
+        <rect x="40" y="128" width="624" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="156" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Organization: instructions and agents</text>
+        <text x="352" y="172" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Org Copilot settings and agents/ in the org .github or .github-private repository</text>
+        <rect x="40" y="216" width="624" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352" y="244" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository: instructions, prompt files, agents and skills</text>
+        <text x="352" y="260" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Files under .github/ that change through reviewed pull requests</text>
+        <rect x="40" y="304" width="624" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="332" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Personal: instructions, skills and agents</text>
+        <text x="352" y="348" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Profile settings, ~/.copilot/skills and client installs</text>
+        <text x="40" y="412" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Plugins bundle agents, skills and more, and reach any layer through marketplaces.</text>
+        <text x="40" y="432" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Each surface reads a different subset of these files; check support next.</text>
+        <line x1="40" y1="472" x2="664" y2="472" stroke="#3d444d"/>
+        <text x="40" y="496" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Band: customization layer, broadest scope at the top</text>
+        <text x="40" y="516" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

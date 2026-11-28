@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="connectivity-troubleshooting-dark-root" viewBox="0 0 704 528" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="connectivity-troubleshooting-dark-title connectivity-troubleshooting-dark-desc">
+        <title id="connectivity-troubleshooting-dark-title">Connectivity triage loop</title>
+        <desc id="connectivity-troubleshooting-dark-desc">Test the endpoints, classify the error, collect redacted evidence and fix one control before retesting.</desc>
+        <defs><marker id="connectivity-troubleshooting-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="528" fill="#07090d"/>
+        <rect x="40" y="56" width="256" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="168.0" y="92.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Test the endpoints</text>
+        <text x="168.0" y="108.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Suggestions and Chat ping URLs</text>
+        <text x="168.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Directly and through the proxy</text>
+        <rect x="408" y="56" width="256" height="96" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="536.0" y="92.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Classify the error</text>
+        <text x="536.0" y="108.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">ETIMEDOUT or ECONNRESET: proxy</text>
+        <text x="536.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Verify errors: certificate trust</text>
+        <rect x="408" y="264" width="256" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="536.0" y="300.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Collect evidence</text>
+        <text x="536.0" y="316.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Output channel, Chat Diagnostics</text>
+        <text x="536.0" y="332.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Redact tokens and cookies</text>
+        <rect x="40" y="264" width="256" height="96" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="168.0" y="300.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Fix one control</text>
+        <text x="168.0" y="316.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Never disable validation</text>
+        <text x="168.0" y="332.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Reset the log level afterward</text>
+        <path d="M 296 104 L 408 104" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#connectivity-troubleshooting-dark-arrow)"/>
+        <path d="M 536 152 L 536 264" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#connectivity-troubleshooting-dark-arrow)"/>
+        <path d="M 408 312 L 296 312" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#connectivity-troubleshooting-dark-arrow)"/>
+        <path d="M 168 264 L 168 152" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#connectivity-troubleshooting-dark-arrow)"/>
+        <rect x="176" y="202" width="41.0" height="12" rx="2" fill="#07090d"/><text x="196.5" y="211" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">RETEST</text>
+        <text x="352" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Change nothing until evidence points to one path</text>
+        <text x="40" y="400" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Success only with --insecure points to certificates; use it to classify, never as a fix.</text>
+        <text x="40" y="416" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A browser session that connects but never streams points to WebSocket handling.</text>
+        <line x1="40" y1="468" x2="664" y2="468" stroke="#3d444d"/>
+        <text x="40" y="492" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: stage; arrow: next stage in the loop</text>
+        <text x="40" y="512" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

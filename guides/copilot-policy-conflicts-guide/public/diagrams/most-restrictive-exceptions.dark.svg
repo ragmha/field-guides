@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="most-restrictive-exceptions-dark-root" viewBox="0 0 704 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="most-restrictive-exceptions-dark-title most-restrictive-exceptions-dark-desc">
+        <title id="most-restrictive-exceptions-dark-title">Which conflict rule applies?</title>
+        <desc id="most-restrictive-exceptions-dark-desc">Least restrictive is the usual rule across organizations; a short list of sensitive policies uses most restrictive, semantic indexing needs explicit enables, and multiple enterprises usually use most restrictive.</desc>
+        <defs><marker id="most-restrictive-exceptions-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="600" fill="#07090d"/>
+        <rect x="40" y="72" width="624" height="72" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="104.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Several organizations, one enterprise: least restrictive</text>
+        <text x="352.0" y="120.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Usual rule for listed policies such as Copilot CLI and Spark</text>
+        <rect x="40" y="168" width="624" height="88" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="200.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Most-restrictive policies</text>
+        <text x="352.0" y="216.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Metrics API · public code matching · unlicensed code review</text>
+        <text x="352.0" y="232.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Any disable in a licensing organization wins</text>
+        <rect x="40" y="280" width="624" height="72" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="312.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Semantic indexing for non-GitHub repositories</text>
+        <text x="352.0" y="328.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Every organization must explicitly enable it; Unconfigured counts as disabled</text>
+        <rect x="40" y="376" width="624" height="72" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="408.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Several enterprises: usually most restrictive</text>
+        <text x="352.0" y="424.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Exceptions: AI credit paid usage (per enterprise) and GitHub Spark</text>
+        <text x="40" y="492" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Look up each policy in the conflicts reference; a name does not reveal its rule.</text>
+        <line x1="40" y1="540" x2="664" y2="540" stroke="#3d444d"/>
+        <text x="40" y="564" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Band: one rule tier, read top to bottom</text>
+        <text x="40" y="584" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

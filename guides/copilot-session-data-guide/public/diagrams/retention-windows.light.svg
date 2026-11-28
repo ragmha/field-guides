@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="retention-windows-light-root" viewBox="0 0 704 556" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="retention-windows-light-title retention-windows-light-desc">
+        <title id="retention-windows-light-title">Documented retention windows</title>
+        <desc id="retention-windows-light-desc">GitHub.com Chat messages are deleted after 28 days and audit events after 180 days. Synced and local session records have no documented expiry and stay until deleted.</desc>
+        <defs><marker id="retention-windows-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="556" fill="#f3f5f7"/>
+        <path d="M 40 200 L 662 200" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#retention-windows-light-arrow)"/>
+        <text x="632" y="220" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NOT TO SCALE</text>
+        <path d="M 120 136 L 120 198" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#retention-windows-light-arrow)"/>
+        <path d="M 352 136 L 352 198" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#retention-windows-light-arrow)"/>
+        <path d="M 584 136 L 584 198" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#retention-windows-light-arrow)"/>
+        <rect x="40" y="72" width="160" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="120.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Day 0</text>
+        <text x="120.0" y="116.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Record created</text>
+        <rect x="256" y="72" width="192" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="92.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">28 days</text>
+        <text x="352.0" y="108.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">GitHub.com Chat messages</text>
+        <text x="352.0" y="124.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">permanently deleted</text>
+        <rect x="504" y="72" width="160" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="584.0" y="92.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">180 days</text>
+        <text x="584.0" y="108.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Audit log events age out</text>
+        <text x="584.0" y="124.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">unless streamed</text>
+        <rect x="40" y="248" width="624" height="56" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="272.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">No documented expiry: synced and local session records</text>
+        <text x="352.0" y="288.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Retained until you delete them; turning off sync deletes nothing</text>
+        <rect x="40" y="328" width="300" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="190.0" y="352.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot Memory</text>
+        <text x="190.0" y="368.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Expires after a period without reinforcement</text>
+        <rect x="364" y="328" width="300" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="514.0" y="352.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cloud sandbox snapshot</text>
+        <text x="514.0" y="368.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Kept while stopped; billed per GiB-month</text>
+        <text x="40" y="432" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">GitHub.com Chat stores up to 100 recent conversations.</text>
+        <text x="40" y="448" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Visibility windows, such as a seven-day session list, are not retention.</text>
+        <line x1="40" y1="496" x2="664" y2="496" stroke="#d1d9e0"/>
+        <text x="40" y="520" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Arrow: time from creation; rectangle: record and its window</text>
+        <text x="40" y="540" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

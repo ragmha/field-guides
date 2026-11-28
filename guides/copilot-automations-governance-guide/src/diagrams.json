@@ -1,0 +1,50 @@
+{
+  "automation-trigger-inventory": {
+    "title": "Trigger families and what limits them",
+    "description": "Schedules, repository events, chained runs and manual or API runs differ in who starts the run and what limits its writes. Scheduled runs ignore write scope."
+  },
+  "api-and-assignment-entry-points": {
+    "title": "Programmatic routes into agent work",
+    "description": "Four routes start unattended agent work. Each carries its own credential, acting identity and payer, so inventory all three per route."
+  },
+  "personal-vs-shared-identity": {
+    "title": "Personal and shared automations compared",
+    "description": "The automation type is fixed at creation and decides visibility, editing, billing and the identity used for actions on GitHub."
+  },
+  "ownership-and-continuity": {
+    "title": "Ownership lifecycle for an automation",
+    "description": "Create, run and discover an automation, then review its owner, recreate a personal routine as shared and retire the old one."
+  },
+  "tool-and-write-scope": {
+    "title": "Layers that shape what a run can reach",
+    "description": "Selected tools are the primary control, then write scope, inherited repository configuration and the prompt. Each layer has gaps the others must cover."
+  },
+  "untrusted-input-and-chaining": {
+    "title": "Which events can start a run",
+    "description": "An event starts a run only if its actor has write access and it was not created by Copilot, unless the automation opts in. Resulting pull requests wait for workflow approval."
+  },
+  "credit-limits-and-billing": {
+    "title": "How credit limits play out over one day",
+    "description": "In a hypothetical hourly automation, per-run limits cap each run, the run that crosses the daily limit can finish, and later runs are blocked until the daily reset."
+  },
+  "run-volume-and-rate-control": {
+    "title": "Levers for run volume and API rate",
+    "description": "Cadence, filters, serialization and credit limits shape how often runs start. Scripts that start runs must follow REST rate limit guidance."
+  },
+  "review-and-workflow-gates": {
+    "title": "Review gates on an automation pull request",
+    "description": "Copilot pushes to one branch and opens a draft pull request. A writer approves workflow runs, people review, and branch rules require the approvals before merge."
+  },
+  "pause-disable-and-revoke": {
+    "title": "Pick the switch that matches the scope",
+    "description": "Stop one session, disable one automation, turn off automations for an organization, or use the enterprise policy. Then verify and revoke script tokens."
+  },
+  "run-evidence-and-audit": {
+    "title": "Trace one automation run",
+    "description": "Follow a commit to its session log and automation page, match audit log events and task records, and join them into one evidence trace."
+  },
+  "automation-change-control": {
+    "title": "Review changes to automation definitions",
+    "description": "Edits and proposals land in revision history outside Git. Compare snapshots, let the owner review, keep an approved baseline, and move to agentic workflows when pull request review is required."
+  }
+}

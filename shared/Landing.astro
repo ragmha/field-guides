@@ -10,9 +10,10 @@ interface Props {
   stale: boolean;
   start: string;
   secondary: { href: string; label: string };
+  readingProgress?: boolean;
   parts: { title: string; description: string; href: string; linkLabel?: string }[];
 }
-const { name, art, alt, reviewed, stale, start, secondary, parts } = Astro.props;
+const { name, art, alt, reviewed, stale, start, secondary, readingProgress = false, parts } = Astro.props;
 const guide = guides.find(guide => guide.name === name);
 if (!guide) throw new Error(`Unknown guide: ${name}`);
 const reviewedOn = new Date(`${reviewed}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -35,10 +36,11 @@ const reviewedOn = new Date(`${reviewed}T00:00:00Z`).toLocaleDateString('en-GB',
     <p>Start with Part 1, or jump to the part you need.</p>
     <ol class="part-grid">
       {parts.map((part, index) => (
-        <li class="part-card" id={`part-${index + 1}`}>
+        <li class="part-card" id={`part-${index + 1}`} data-reading-part={index + 1}>
           <div class="part-top"><span aria-hidden="true">↖</span><span>{String(index + 1).padStart(2, '0')}</span></div>
           <h3>{part.title}</h3>
           <p>{part.description}</p>
+          {readingProgress && <span class="reading-part-status" data-part-status>Not read</span>}
           <a href={part.href}>{part.linkLabel ?? 'View chapters'}<span class="sr-only">{part.linkLabel ? `: ${part.title}` : ` in ${part.title}`}</span> <span aria-hidden="true">→</span></a>
         </li>
       ))}
@@ -71,5 +73,5 @@ const reviewedOn = new Date(`${reviewed}T00:00:00Z`).toLocaleDateString('en-GB',
   .part-card a{margin-top:auto;color:var(--ink);font-weight:500;text-decoration:none}
   .part-card a:hover{color:var(--link);text-decoration:underline}
   @media(max-width:1000px){.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media(max-width:760px){.landing{padding:0 22px}.landing-hero{grid-template-columns:1fr;gap:28px;padding:44px 0 40px}.landing-art{max-height:420px}.landing-parts{padding:44px 0 56px}.part-grid{grid-template-columns:1fr}.part-card{padding:22px 24px 28px}}
+  @media(max-width:760px){.landing{padding:0 22px}h1{font-size:clamp(34px,11vw,46px);overflow-wrap:break-word}.landing-hero{grid-template-columns:1fr;gap:28px;padding:44px 0 40px}.landing-art{max-height:420px}.landing-parts{padding:44px 0 56px}.part-grid{grid-template-columns:1fr}.part-card{padding:22px 24px 28px}}
 </style>

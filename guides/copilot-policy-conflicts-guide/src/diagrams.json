@@ -1,0 +1,50 @@
+{
+  "enterprise-decision-states": {
+    "title": "Who decides each enterprise state?",
+    "description": "Enabled everywhere, disabled everywhere and selected-organization states are decided by the enterprise; only let organizations decide hands the policy to organization settings."
+  },
+  "delegation-and-defaults": {
+    "title": "Follow an unconfigured GA feature",
+    "description": "The enterprise default for new features decides an unconfigured GA feature; when it delegates, an organization setting or the organization default decides."
+  },
+  "license-source-tracing": {
+    "title": "Membership is not the seat source",
+    "description": "Only organizations that grant the user a seat contribute delegated settings; billing selects one organization but does not narrow the policy inputs."
+  },
+  "enterprise-assigned-users": {
+    "title": "Which setting decides a delegated policy?",
+    "description": "Fixed enterprise states apply to everyone; for a delegated policy, organization-seated users follow the organization while enterprise-assigned users follow a separate default."
+  },
+  "least-restrictive-rule": {
+    "title": "Any enable wins",
+    "description": "For delegated policies on the least-restrictive list, a user seated by two organizations is enabled everywhere if either organization enables the feature."
+  },
+  "most-restrictive-exceptions": {
+    "title": "Which conflict rule applies?",
+    "description": "Least restrictive is the usual rule across organizations; a short list of sensitive policies uses most restrictive, semantic indexing needs explicit enables, and multiple enterprises usually use most restrictive."
+  },
+  "resource-scoped-controls": {
+    "title": "User scope and resource scope",
+    "description": "User policies come from seat sources and conflict rules; repository exclusions and cloud repository access apply to everyone working in the resource, so both scopes must allow an action."
+  },
+  "surface-coverage": {
+    "title": "Where selected policies apply",
+    "description": "A subset of the supported surfaces reference: coverage differs by policy across IDEs, the cloud sandbox, GitHub Actions, CLI, the Copilot app and code review."
+  },
+  "feature-visibility-triage": {
+    "title": "Triage a missing feature",
+    "description": "Rule out the account and client first, then check the enterprise state, seat-source conflicts and resource or surface gaps before recording the deciding step."
+  },
+  "model-availability-triage": {
+    "title": "Does the model default apply?",
+    "description": "Enterprise teams mode replaces organization model settings; otherwise the model status decides whether the default availability for released models applies."
+  },
+  "effective-policy-records": {
+    "title": "Fields in an effective-policy record",
+    "description": "Eight fields mirror the trace: policy and date, enterprise state, seat sources, conflict rule, resource controls, surface, result and owner."
+  },
+  "drift-and-change-evidence": {
+    "title": "Revalidate records when inputs change",
+    "description": "Review who can change policies, query Copilot audit events, compare them with each record and update records with evidence, then repeat."
+  }
+}

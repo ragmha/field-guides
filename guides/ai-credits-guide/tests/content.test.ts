@@ -1,6 +1,14 @@
 import { expect, test } from 'bun:test';
 import { readdir, readFile } from 'node:fs/promises';
-import { chapters } from '../src/course';
+import { chapters, coursePath, legacyRoutes } from '../src/course';
+
+test('optimization lesson precedes the summary and preserves its previous URL', () => {
+  const lesson = chapters.findIndex(chapter => chapter.id === 'token-optimization');
+  const summary = chapters.findIndex(chapter => chapter.id === 'part-3-summary');
+  expect(lesson).toBeGreaterThanOrEqual(0);
+  expect(summary).toBe(lesson + 1);
+  expect(legacyRoutes['/part-3/5-summary']).toBe(`/${coursePath('part-3-summary')}/`);
+});
 
 const readText = async (path: string) => (await readFile(path, 'utf8')).replace(/\r\n/g, '\n');
 

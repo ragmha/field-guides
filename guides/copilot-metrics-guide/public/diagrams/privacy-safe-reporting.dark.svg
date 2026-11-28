@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="privacy-safe-reporting-dark-root" viewBox="0 0 704 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="privacy-safe-reporting-dark-title privacy-safe-reporting-dark-desc">
+        <title id="privacy-safe-reporting-dark-title">Who sees which metrics</title>
+        <desc id="privacy-safe-reporting-dark-desc">A reporting charter limits per-user files to named analysts, gives team leads views of five or more people and gives leaders headline KPIs, with no individual performance use.</desc>
+        <defs><marker id="privacy-safe-reporting-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="520" fill="#07090d"/>
+        <rect x="152" y="40" width="400" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="68.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Reporting charter</text>
+        <text x="352.0" y="84.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Purpose: group decisions, not performance review</text>
+        <path d="M 352 104 L 352 132 L 136 132 L 136 160" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <path d="M 352 104 L 352 160" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <path d="M 352 104 L 352 132 L 568 132 L 568 160" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <rect x="40" y="160" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="136.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Named analysts</text>
+        <text x="136.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Two or three people</text>
+        <rect x="40" y="248" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="136.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Per-user files</text>
+        <text x="136.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Restricted storage, retention</text>
+        <path d="M 136 224 L 136 248" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <rect x="40" y="336" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="136.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">No review use</text>
+        <text x="136.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No inactive-person lists</text>
+        <path d="M 136 312 L 136 336" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <rect x="256" y="160" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Team leads</text>
+        <text x="352.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Groups of five or more</text>
+        <rect x="256" y="248" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Team views</text>
+        <text x="352.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No rankings or name lists</text>
+        <path d="M 352 224 L 352 248" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <rect x="256" y="336" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enablement actions</text>
+        <text x="352.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Clinics, training, setup</text>
+        <path d="M 352 312 L 352 336" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <rect x="472" y="160" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="568.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Leaders and staff</text>
+        <text x="568.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise and org trends</text>
+        <rect x="472" y="248" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="568.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Headline KPIs</text>
+        <text x="568.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Trends with coverage notes</text>
+        <path d="M 568 224 L 568 248" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <rect x="472" y="336" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="568.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Rollout decisions</text>
+        <text x="568.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Expand, pause or invest</text>
+        <path d="M 568 312 L 568 336" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#privacy-safe-reporting-dark-arrow)"/>
+        <text x="40" y="436" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Product floor: teams under five seated Copilot users are excluded from team reports.</text>
+        <line x1="40" y1="460" x2="664" y2="460" stroke="#3d444d"/>
+        <text x="40" y="484" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Column: audience; rectangle: access or use; arrow: charter applies</text>
+        <text x="40" y="504" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

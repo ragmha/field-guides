@@ -1,0 +1,50 @@
+{
+  "what-exclusion-does": {
+    "title": "What an exclusion changes",
+    "description": "An excluded file loses inline suggestions, stops informing suggestions and responses, and is skipped by Copilot code review, while human access is unchanged."
+  },
+  "exclusion-scope-levels": {
+    "title": "Who each rule level reaches",
+    "description": "Repository, organization and enterprise exclusions are configured by different owners and reach different sets of Copilot users."
+  },
+  "repository-path-rules": {
+    "title": "Choosing a path pattern",
+    "description": "Decide between an anchored path, a file name anywhere, a name wildcard or a directory tree when writing a repository exclusion."
+  },
+  "organization-repository-references": {
+    "title": "How an organization rule matches",
+    "description": "An organization rule applies to seat holders, matches a repository reference or the star key, then matches a path on a supported surface."
+  },
+  "surface-support-matrix": {
+    "title": "Exclusion support by surface",
+    "description": "Inline and chat or agent support for content exclusion across IDEs, the Copilot app and CLI, cloud surfaces and code review."
+  },
+  "exclusion-limitations": {
+    "title": "Layers around exclusion",
+    "description": "Repository access, operating-system permissions and content exclusion stack together, with documented exclusion gaps noted beside each layer."
+  },
+  "propagation-and-testing": {
+    "title": "From save to verified rule",
+    "description": "Save a rule, wait up to 30 minutes or reload the IDE, then test a control file, the excluded file and chat before recording the result."
+  },
+  "change-review-and-api": {
+    "title": "Exclusion change lifecycle",
+    "description": "Propose and review a rule, save it in the UI or preview API, find the audit log entry, compare excluded_paths and record the result."
+  },
+  "public-code-policy": {
+    "title": "Resolving the public code policy",
+    "description": "Trace whether an enterprise selection or organization settings determine Allow or Block, then check surface support before relying on Block."
+  },
+  "code-referencing-review": {
+    "title": "Acting on a code reference",
+    "description": "An accepted, unchanged suggestion that matches public code produces a log entry that a developer reviews to use, attribute or remove the code."
+  },
+  "repository-access-layer": {
+    "title": "Access sits beneath exclusion",
+    "description": "Base permissions, repository roles and deploy key reviews limit who can reach content before content exclusion limits what Copilot uses."
+  },
+  "secret-push-protection": {
+    "title": "A blocked push and its bypass",
+    "description": "A developer push containing a secret is blocked, then either fixed or bypassed with a reason that creates an alert and an audit log entry."
+  }
+}

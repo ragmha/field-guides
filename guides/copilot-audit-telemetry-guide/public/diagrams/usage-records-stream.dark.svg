@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="usage-records-stream-dark-root" viewBox="0 0 704 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="usage-records-stream-dark-title usage-records-stream-dark-desc">
+        <title id="usage-records-stream-dark-title">Turn on usage records</title>
+        <desc id="usage-records-stream-dark-desc">Check eligibility, enable the Copilot usage records streaming policy and send records to a destination, or read them with the usage records API instead.</desc>
+        <defs><marker id="usage-records-stream-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="540" fill="#07090d"/>
+        <text x="40" y="44" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">CHECK ELIGIBILITY</text>
+        <text x="40" y="180" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">CHOOSE A PATH</text>
+        <text x="40" y="316" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">LAND THE RECORDS</text>
+        <path d="M 352 136 L 352 176" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#usage-records-stream-dark-arrow)"/>
+        <path d="M 192 272 L 192 328" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#usage-records-stream-dark-arrow)"/>
+        <path d="M 512 272 L 512 328" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#usage-records-stream-dark-arrow)"/>
+        <rect x="40" y="56" width="624" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="92" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Eligible enterprise</text>
+        <text x="352" y="108" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Managed users or GHE.com, public preview</text>
+        <rect x="40" y="192" width="304" height="80" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="192" y="228" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Stream</text>
+        <text x="192" y="244" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot Usage Records Streaming policy</text>
+        <rect x="360" y="192" width="304" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="512" y="228" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">REST API</text>
+        <text x="512" y="244" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot Usage Records API policy</text>
+        <rect x="40" y="328" width="304" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="192" y="364" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Stream destination</text>
+        <text x="192" y="380" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Configured after the policy</text>
+        <rect x="360" y="328" width="304" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="512" y="364" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Scheduled pull</text>
+        <text x="512" y="380" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Your job, your storage</text>
+        <text x="40" y="440" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Usage records are a preview feature. Confirm the policy names and fields before you depend on them.</text>
+        <line x1="40" y1="480" x2="664" y2="480" stroke="#3d444d"/>
+        <text x="40" y="504" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Lane: step; rectangle: option; arrow: next step</text>
+        <text x="40" y="524" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

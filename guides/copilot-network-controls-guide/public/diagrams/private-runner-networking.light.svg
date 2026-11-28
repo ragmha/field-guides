@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="private-runner-networking-light-root" viewBox="0 0 704 824" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="private-runner-networking-light-title private-runner-networking-light-desc">
+        <title id="private-runner-networking-light-title">Choose where the agent runs</title>
+        <desc id="private-runner-networking-light-desc">Cloud sandboxes use the agent firewall; Actions sessions can use standard, Azure private networking or self-hosted runners that need explicit egress.</desc>
+        <defs><marker id="private-runner-networking-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="824" fill="#f3f5f7"/>
+        <polygon points="400,40 528,88 400,136 272,88" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="400.0" y="92.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Session runs on?</text>
+        <path d="M 272 88 L 208 88" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <rect x="216.8" y="82" width="46.5" height="12" rx="2" fill="#f3f5f7"/><text x="240.0" y="91" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SANDBOX</text>
+        <rect x="40" y="56" width="168" height="64" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="124.0" y="84.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent firewall applies</text>
+        <text x="124.0" y="100.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Runner settings unused</text>
+        <path d="M 400 136 L 400 184" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <rect x="408" y="154" width="46.5" height="12" rx="2" fill="#f3f5f7"/><text x="431.2" y="163" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ACTIONS</text>
+        <polygon points="400,184 528,232 400,280 272,232" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="400.0" y="236.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Need your network?</text>
+        <path d="M 272 232 L 208 232" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <rect x="230.5" y="226" width="19.0" height="12" rx="2" fill="#f3f5f7"/><text x="240.0" y="235" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="40" y="200" width="168" height="64" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="124.0" y="228.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Standard runner</text>
+        <text x="124.0" y="244.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Firewall still applies</text>
+        <path d="M 400 280 L 400 312" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <rect x="408" y="290" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="420.2" y="299" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <polygon points="400,312 496,360 400,408 304,360" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="400.0" y="364.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Which runner?</text>
+        <path d="M 304 360 L 192 360 A 8 8 0 0 0 184 368 L 184 432" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <rect x="192" y="390" width="41.0" height="12" rx="2" fill="#f3f5f7"/><text x="212.5" y="399" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">LARGER</text>
+        <path d="M 496 360 L 512 360 A 8 8 0 0 1 520 368 L 520 432" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <rect x="528" y="390" width="68.5" height="12" rx="2" fill="#f3f5f7"/><text x="562.2" y="399" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">SELF-HOSTED</text>
+        <rect x="40" y="432" width="288" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="468.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Azure private networking</text>
+        <text x="184.0" y="484.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Runner NIC in your virtual network</text>
+        <text x="184.0" y="500.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Block inbound traffic explicitly</text>
+        <rect x="376" y="432" width="288" height="96" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="468.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Ephemeral self-hosted runner</text>
+        <text x="520.0" y="484.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Disable the integrated firewall</text>
+        <text x="520.0" y="500.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Set proxy variables in the image</text>
+        <path d="M 184 528 L 184 576" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <path d="M 520 528 L 520 576" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#private-runner-networking-light-arrow)"/>
+        <rect x="40" y="576" width="624" height="80" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="604.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allow required outbound hosts</text>
+        <text x="352.0" y="620.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">uploads.github.com and user-images.githubusercontent.com</text>
+        <text x="352.0" y="636.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Plus the api host for each plan in use</text>
+        <text x="40" y="696" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Proxy variables: https_proxy, http_proxy, no_proxy, ssl_cert_file, node_extra_ca_certs.</text>
+        <text x="40" y="712" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Supported OS: Ubuntu x64 and Windows 64-bit; Windows needs one of these runner types.</text>
+        <line x1="40" y1="764" x2="664" y2="764" stroke="#d1d9e0"/>
+        <text x="40" y="788" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="808" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
