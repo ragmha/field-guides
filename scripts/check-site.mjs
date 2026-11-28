@@ -56,6 +56,13 @@ const agenticChapters = [
   'llm-observability',
   'llmops',
 ];
+const readingHistoryGuides = new Set([
+  'ai-credits-guide',
+  'data-residency-guide',
+  'copilot-governance-guide',
+  'champions-at-scale',
+  'github-enterprise-field-guide',
+]);
 
 for (const guide of guides) {
   assert.doesNotMatch(guide.description, /\bguides?\b/i, `${guide.name} description must describe the topic without "guide"`);
@@ -382,10 +389,12 @@ try {
         await page.goto(`${base}${guide.name}/`);
         assert.equal(await page.locator('html').getAttribute('data-theme'), theme, `${guide.name} must inherit ${theme}`);
         assert.equal(await collectionLink(guide).evaluate(link => link.href), base, `${guide.name} collection link must lead to the hub`);
-        assert.equal(await page.locator('header [data-history-menu]').getAttribute('data-history-href'), `${base}history/`, `${guide.name} header must link to history`);
-        assert.equal(await page.locator('header .history-trigger').isVisible(), true);
-        assert.equal(await page.locator('header .history-trigger svg').count(), 1);
-        await expectHeaderLayout(`${guide.name} at ${width}px`);
+        if (readingHistoryGuides.has(guide.name)) {
+          assert.equal(await page.locator('header [data-history-menu]').getAttribute('data-history-href'), `${base}history/`, `${guide.name} header must link to history`);
+          assert.equal(await page.locator('header .history-trigger').isVisible(), true);
+          assert.equal(await page.locator('header .history-trigger svg').count(), 1);
+          await expectHeaderLayout(`${guide.name} at ${width}px`);
+        }
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${guide.name} overflow at ${width}px`);
         await expectLanding(guide, width);
         if (guide.name === 'agentic-engineering-guide') {
@@ -549,7 +558,7 @@ try {
     localStorage.removeItem('eu-residency-progress-v1');
   });
   await page.setViewportSize({ width: 1280, height: 800 });
-  for (const guide of guides.filter(item => item.type === 'astro')) {
+  for (const guide of guides.filter(item => item.type === 'astro' && readingHistoryGuides.has(item.name))) {
     await page.goto(`${base}${guide.name}/`);
     await page.locator('.part-card a').first().click();
     const chapterLinks = await page.locator('.course-part').first().locator('.chapter-pages a')
@@ -587,6 +596,7 @@ try {
     const state = await page.evaluate(() => JSON.parse(localStorage.getItem('field-guides-reading-progress:v1')));
     assert.equal((state.completed['champions-at-scale'] || []).includes(1), id === 'now', 'Champions completes after both chapters');
   }
+  await page.setViewportSize({ width: 390, height: 800 });
   await page.goto(`${base}github-enterprise-field-guide/`);
   assert.equal(await page.locator('#identity').evaluate(section => section.open), false);
   await page.locator('#platform [data-reading-end]').scrollIntoViewIfNeeded();

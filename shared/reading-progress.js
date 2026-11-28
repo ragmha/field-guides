@@ -362,7 +362,7 @@ function setupMenus() {
     const theme = header.querySelector('.theme-label, [data-theme-toggle]');
     if (theme) actions.append(theme);
     actions.append(menu);
-    header.append(actions);
+    (header.querySelector('.header-main') || header).append(actions);
   });
 }
 
