@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="auto-selection-dark-root" viewBox="0 0 704 752" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="auto-selection-dark-title auto-selection-dark-desc">
+        <title id="auto-selection-dark-title">What Auto can choose</title>
+        <desc id="auto-selection-dark-desc">Auto removes models outside the plan, disabled models and restricted models, applies the tier preference and bills at the selected model rate.</desc>
+        <defs><marker id="auto-selection-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="752" fill="#07090d"/>
+        <rect x="40.0" y="40" width="624" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Supported model catalog</text>
+        <text x="352.0" y="80.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The current reference list</text>
+        <path d="M 352 96 L 352 120" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#auto-selection-dark-arrow)"/>
+        <rect x="64.0" y="120" width="576" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="144.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Minus models outside the plan</text>
+        <text x="352.0" y="160.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Plan availability comes first</text>
+        <path d="M 352 176 L 352 200" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#auto-selection-dark-arrow)"/>
+        <rect x="88.0" y="200" width="528" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="224.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Minus disabled models</text>
+        <text x="352.0" y="240.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Administrator policy exclusions</text>
+        <path d="M 352 256 L 352 280" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#auto-selection-dark-arrow)"/>
+        <rect x="112.0" y="280" width="480" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="304.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Minus residency or FedRAMP limits</text>
+        <text x="352.0" y="320.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">When those GHE.com policies apply</text>
+        <path d="M 352 336 L 352 360" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#auto-selection-dark-arrow)"/>
+        <rect x="136.0" y="360" width="432" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="384.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Minus restricted evaluation models</text>
+        <text x="352.0" y="400.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Local and network models never qualify</text>
+        <path d="M 352 416 L 352 440" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#auto-selection-dark-arrow)"/>
+        <rect x="160.0" y="440" width="384" height="56" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="464.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Tier preference picks a model</text>
+        <text x="352.0" y="480.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Efficiency, Balance or Intelligence</text>
+        <path d="M 352 496 L 352 520" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#auto-selection-dark-arrow)"/>
+        <rect x="184" y="520" width="336" height="56" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="544.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Billed at the selected model</text>
+        <text x="352.0" y="560.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Paid plans: 10% Auto discount in Chat</text>
+        <text x="40" y="616" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Business and Enterprise: Auto falls back to the long-term support model if nothing else is available.</text>
+        <text x="40" y="632" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Individual plans: Auto may use evaluation models unless the user turns that option off.</text>
+        <line x1="40" y1="680" x2="664" y2="680" stroke="#3d444d"/>
+        <text x="40" y="704" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: end result; rectangle: narrowing filter; arrow: next filter</text>
+        <text x="40" y="724" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

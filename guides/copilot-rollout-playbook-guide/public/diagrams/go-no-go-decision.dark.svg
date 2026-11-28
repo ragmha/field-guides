@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="go-no-go-decision-dark-root" viewBox="0 0 704 548" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="go-no-go-decision-dark-title go-no-go-decision-dark-desc">
+        <title id="go-no-go-decision-dark-title">Go/no-go decision</title>
+        <desc id="go-no-go-decision-dark-desc">Without enough evidence, extend the pilot; with evidence, criteria met leads to staged expansion, partly met to a hold and fix, and not met to rollback.</desc>
+        <defs><marker id="go-no-go-decision-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="548" fill="#07090d"/>
+        <polygon points="252.0 112, 352 72.0, 452.0 112, 352 152.0" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="116" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enough evidence?</text>
+        <path d="M 452 112 L 496 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#go-no-go-decision-dark-arrow)"/>
+        <rect x="464.5" y="94" width="19.0" height="12" rx="2" fill="#07090d"/>
+        <text x="474" y="103" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="496" y="80" width="168" height="64" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="580.0" y="108.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Extend the pilot</text>
+        <text x="580.0" y="124.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Then decide again</text>
+        <path d="M 352 152 L 352 208" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#go-no-go-decision-dark-arrow)"/>
+        <rect x="361.75" y="174" width="24.5" height="12" rx="2" fill="#07090d"/>
+        <text x="374" y="183" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <polygon points="252.0 248, 352 208.0, 452.0 248, 352 288.0" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="252" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Criteria met?</text>
+        <path d="M 452 248 L 496 248" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#go-no-go-decision-dark-arrow)"/>
+        <rect x="453.5" y="230" width="41.0" height="12" rx="2" fill="#07090d"/>
+        <text x="474" y="239" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">PARTLY</text>
+        <rect x="496" y="216" width="168" height="64" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="580.0" y="244.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Hold and fix</text>
+        <text x="580.0" y="260.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Fix, owner and date</text>
+        <path d="M 252 248 L 208 248" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#go-no-go-decision-dark-arrow)"/>
+        <rect x="220.5" y="230" width="19.0" height="12" rx="2" fill="#07090d"/>
+        <text x="230" y="239" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="40" y="216" width="168" height="64" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="124.0" y="244.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Roll back</text>
+        <text x="124.0" y="260.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Turn off policy, keep data</text>
+        <path d="M 352 288 L 352 352" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#go-no-go-decision-dark-arrow)"/>
+        <rect x="361.75" y="314" width="24.5" height="12" rx="2" fill="#07090d"/>
+        <text x="374" y="323" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <rect x="232" y="352" width="240" height="64" rx="20" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="380.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Expand in stages</text>
+        <text x="352.0" y="396.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">More orgs, then enterprise</text>
+        <text x="40" y="456" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Evidence: stable adoption, cohort data, a full billing cycle and representative feedback.</text>
+        <text x="40" y="472" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Guide advice: define &quot;partly met&quot; before the pilot ends.</text>
+        <line x1="40" y1="488" x2="664" y2="488" stroke="#3d444d"/>
+        <text x="40" y="512" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="532" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

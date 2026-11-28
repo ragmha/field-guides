@@ -1,5 +1,5 @@
 ---
-import { guides } from '../../../guides.mjs';
+import { guides, platformReferences } from '../../../guides.mjs';
 import heroArt from '../assets/enterprise-network.jpg';
 import Header from '../components/Header.astro';
 import '../../../guides/ai-credits-guide/src/styles/global.css';
@@ -59,6 +59,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             ))}
           </div>
         </section>
+        <section id="platform-references" aria-labelledby="platform-references-heading">
+          <div class="collection-heading">
+            <h2 id="platform-references-heading">Platform references</h2>
+            <p>Explore interactive maps of the GitHub platform and Azure AI services.</p>
+          </div>
+          <div class="reference-grid">
+            {platformReferences.map(reference => (
+              <article class="guide-card reference-card">
+                <div class="card-meta">INTERACTIVE LANDSCAPE / EN</div>
+                <h3>{reference.title}</h3>
+                <p>{reference.description}</p>
+                <a class="get-started" href={`${base}/${reference.name}/`} aria-label={`Explore ${reference.title}`}>Explore landscape <span aria-hidden="true">→</span></a>
+              </article>
+            ))}
+          </div>
+        </section>
         <footer class="article-footer">Enterprise enablement <span>Independent guidance. Official sources, clearly linked.</span></footer>
       </div>
     </main>
@@ -68,6 +84,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <style>
   .hub{max-width:1120px;margin:0 auto}
   main{padding:0 44px 20px}
+  .topbar{height:76px;border-bottom:1px solid var(--rule);display:flex;align-items:center;padding:0 32px;gap:40px;position:sticky;top:0;background:var(--header);z-index:5}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;white-space:nowrap;text-decoration:none;letter-spacing:-.3px}
+  .brand-mark{display:block;flex-shrink:0;width:30px;height:30px;fill:currentColor}
+  .theme-label{display:flex;align-items:center;gap:8px;color:var(--muted)}
+  .theme-label>span{font-size:23px}
+  .github-link{margin-left:auto;color:var(--muted);font-size:13px;text-decoration:none;white-space:nowrap}
+  .theme-label{margin-left:0}
   .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:center;gap:52px;padding:80px 0;border-bottom:1px solid var(--rule)}
   .hero-copy{min-width:0}
   /* White paper drops out against the page in light mode; inverted ink reads as light lines on dark. */
@@ -90,5 +113,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .reading-message{padding:12px 16px;border:1px solid var(--rule);background:var(--surface);color:var(--muted)}
   .get-started{display:flex;justify-content:space-between;margin-top:auto;padding-top:18px;border-top:1px solid var(--rule);font-size:14px;font-weight:650;text-decoration:none}
   @media(max-width:1000px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media(max-width:760px){main{padding:0 22px 12px}.hero{grid-template-columns:1fr;gap:32px;padding:56px 0}.guide-grid{grid-template-columns:1fr;gap:18px}.guide-card{padding:24px}.collection-heading{padding-top:36px}}
+  @media(max-width:760px){main{padding:0 22px 12px}.hero{grid-template-columns:1fr;gap:32px;padding:56px 0}.guide-grid{grid-template-columns:1fr;gap:18px}.guide-card{padding:24px}.topbar{height:64px;padding:0 18px;gap:12px}.brand{min-width:0;font-size:14px;white-space:normal;line-height:1.25}.brand-mark{width:26px;height:26px}.github-link{font-size:12px}.collection-heading{padding-top:36px}}
+  @media(max-width:400px){.topbar{padding:0 12px;gap:8px}.brand{gap:6px;font-size:13px}.brand-mark{width:22px;height:22px}.theme-label>span[aria-hidden]{display:none}}
+  .reference-grid{display:block}
+  .reference-card{max-width:560px}
 </style>

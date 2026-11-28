@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 25 840 630" role="img" aria-labelledby="title description">
+  <title id="title">Gathering context</title>
+  <desc id="description">An engraved illustration of a magnifying glass over a carefully annotated page, with reference sheets, a pen, and a ruler arranged around it.</desc>
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(42)">
+      <path d="M0 0V8" fill="none" stroke="#181818" stroke-width="1"/>
+    </pattern>
+    <pattern id="fine-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(42)">
+      <path d="M0 0V5" fill="none" stroke="#181818" stroke-width=".65"/>
+    </pattern>
+    <clipPath id="lens"><circle cx="451" cy="296" r="115"/></clipPath>
+  </defs>
+  <rect width="840" height="680" fill="#fff"/>
+  <g fill="none" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A loose engraved vignette, rather than a hard rectangular frame. -->
+    <g stroke-width="1">
+      <path d="M77 471C61 413 67 326 91 261M95 250c19-48 54-91 92-117M126 178c34-43 79-75 127-89"/>
+      <path d="M577 80c65 12 119 48 151 99M737 194c31 52 42 110 35 169M771 375c-6 44-21 77-41 107"/>
+      <path d="M168 568c62 31 130 40 193 41M471 610c65-5 126-20 174-47"/>
+      <path d="M71 353h-15m20-22-12-2m24-25-14-4m28-27-12-5m30-30-10-6M736 252l13-5m-4 27 14-4m-9 31 16-2m-15 33h14m-17 26 15 3"/>
+      <path d="M147 158l-12-9m28-9-10-10m31-9-8-12m30 2-5-12M644 109l7-12m13 24 9-11m9 26 11-9"/>
+      <path d="M80 420c-4-31-3-61 2-90m9-39c12-37 28-68 48-93m437-103c52 13 95 43 123 82m22 37c17 38 25 78 22 119"/>
+      <path d="M165 554c31 17 58 26 88 34m250 6c38-6 71-15 102-29" stroke-dasharray="14 5 3 6"/>
+    </g>
+    <path d="m205 461 71 26 211-47-4 12-211 48-73-27z" fill="url(#fine-hatch)" stroke="none"/>
+    <path d="m475 420 159 42 13-6-160-44z" fill="url(#fine-hatch)" stroke="none"/>
+    <!-- Back reference sheets. -->
+    <path d="M145 179 354 133l71 25 61 282-210 47-79-27Z" fill="#fff" stroke-width="3"/>
+    <path d="m354 133 7 47 64-22M151 187l51 265 71 22 203-45" stroke-width="1.5"/>
+    <path d="m169 221 135-29m-130 40 100-22m-96 42 126-27m-120 40 91-20" stroke-width="2"/>
+    <path d="m194 292 57-12 9 40-57 12zM206 324l14-18 10 5 13-21" stroke-width="1.5"/>
+    <path d="m198 300 48-11m-46 17 40-9m-38 15 26-6" stroke-width=".6"/>
+    <path d="m276 283 58-12m-55 22 84-18m-81 29 62-14m-59 25 76-16m-72 27 48-10" stroke-width="1.5"/>
+    <path d="m209 359 144-31m-140 43 118-26m-115 39 134-29m-131 41 80-18" stroke-width="1.5"/>
+    <path d="m150 187 45 255-12-9-46-242z" fill="url(#fine-hatch)" stroke-width="1"/>
+    <!-- A second, folded reference with a clipped corner. -->
+    <path d="m535 139 130 34 31 47-63 242-167-43z" fill="#fff" stroke-width="3"/>
+    <path d="m665 173-12 43 43 4M542 151l-62 258 145 38" stroke-width="1.5"/>
+    <path d="m554 185 72 19m-76-8 54 14m-57-3 85 22m-90-8 61 16" stroke-width="1.5"/>
+    <path d="m534 252 92 24-7 26-92-24z" fill="url(#hatch)" stroke-width="1"/>
+    <path d="m538 250 83 21m-86-16 87 22m-91-17 84 21" stroke-width=".55"/>
+    <path d="m521 304 91 23m-95-11 71 18m-74-7 95 25m-98-13 57 15m-61-4 89 23m-92-12 67 17" stroke-width="1.5"/>
+    <!-- Main sheet with an inset border and a folded lower edge. -->
+    <path d="m252 189 249-35 79 56 50 307-280 40-65-43z" fill="#fff" stroke-width="3"/>
+    <path d="m266 199 229-32 72 51 46 287-260 37-56-37z" stroke-width="1"/>
+    <path d="m275 206 209-29m-204 34 145-20m-132 307 51 34m8 3 246-35" stroke-width=".65"/>
+    <path d="m501 154 9 49 70 7M350 557l4-19-69-24" stroke-width="2"/>
+    <path d="m298 232 76-11m-74 19 113-16m-112 26 89-13" stroke-width="2"/>
+    <path d="m301 268 13-2 2 13-13 2zm22 1 77-11m-76 21 94-13m-91 22 71-10" stroke-width="1.6"/>
+    <path d="m311 313 13-2 2 13-13 2zm22 1 86-12m-84 22 105-15m-102 24 77-11" stroke-width="1.6"/>
+    <path d="m320 359 13-2 2 13-13 2zm22 1 76-11m-74 21 100-14m-97 23 73-10" stroke-width="1.6"/>
+    <path d="m332 413 159-22m-156 33 129-18m-126 29 147-21m-144 32 102-14" stroke-width="1.5"/>
+    <path d="m346 480 48-7m-46 17 81-11m-79 22 65-9M478 458l61-9-6 38-61 8z" stroke-width="1.4"/>
+    <path d="m479 484 13-14 10 6 18-21m-46 39 59-8" stroke-width="1.4"/>
+    <path d="m480 491 5-10m1 9 5-10m1 9 5-10m1 9 5-10m1 9 5-10m1 9 5-10m1 9 5-10" stroke-width=".65"/>
+    <!-- Magnifying glass: double rim, lens and engraved handle. -->
+    <path d="m522 385 24-20 91 107-24 20z" fill="#fff" stroke-width="3"/>
+    <path d="m532 385 11-9 85 101-11 9z" fill="url(#fine-hatch)" stroke-width="1.4"/>
+    <path d="m613 472 17-14 61 72c8 9 7 21-1 28s-20 6-28-3l-61-72z" fill="#fff" stroke-width="3"/>
+    <path d="m616 478 12-10 56 66c5 6 5 12 1 16s-11 3-16-3z" fill="url(#hatch)" stroke-width="1"/>
+    <path d="m622 486 46 55m-39-61 45 53m-43-42 37 44" stroke-width=".8"/>
+    <circle cx="451" cy="296" r="128" fill="#fff" stroke-width="4"/>
+    <circle cx="451" cy="296" r="120" stroke-width="2"/>
+    <circle cx="451" cy="296" r="115" stroke-width="1"/>
+    <!-- The lens enlarges a fragment of the annotated page. -->
+    <g clip-path="url(#lens)">
+      <path d="m318 201 276-39 49 333-279 39z" fill="#fff" stroke-width="2"/>
+      <path d="m345 242 87-12m-85 25 126-18" stroke-width="3"/>
+      <path d="m351 280 19-3 3 19-19 3z" stroke-width="2"/>
+      <path d="m357 287 5 5 8-12m15 3 111-16m-109 30 134-19m-130 34 96-14" stroke-width="2.5"/>
+      <path d="m361 338 19-3 3 19-19 3z" stroke-width="2"/>
+      <path d="m367 345 5 5 8-12m15 3 103-15m-101 29 126-18m-122 32 92-13" stroke-width="2.5"/>
+      <path d="m378 403 145-21m-141 35 111-16" stroke-width="2"/>
+      <path d="M341 215c21-27 56-46 92-51M326 240c-6 13-9 22-11 35" stroke-width="1.2"/>
+    </g>
+    <path d="M354 223c21-29 54-45 89-49M342 246c-7 15-11 31-12 46M511 396c-18 11-36 17-57 18" stroke-width="1.2"/>
+    <path d="m365 218 6-5m-14 16 6-6m-12 17 5-7m-10 18 4-7m-7 19 3-7" stroke-width="1"/>
+    <path d="m500 402 7-5m-15 9 8-4m-17 7 9-3m-18 5 9-2m-18 3 9-1" stroke-width=".8"/>
+    <!-- A fountain pen, with individual engraved facets. -->
+    <path d="m131 518 33-14 173 81-18 25-164-77z" fill="#fff" stroke-width="3"/>
+    <path d="m164 504 12-8 179 83-18 6m-18 25 17 3 19-34" stroke-width="2"/>
+    <path d="m176 506 145 67-8 11-145-67z" fill="url(#fine-hatch)" stroke-width="1"/>
+    <path d="m131 518-38-3 23 27 39-9z" fill="#fff" stroke-width="2"/>
+    <path d="m93 515 38 14-15 13m15-13 13-6" stroke-width="1.5"/>
+    <circle cx="130" cy="528" r="2" fill="#181818" stroke="none"/>
+    <path d="m331 592 14 7m-17-1 12 6" stroke-width="1"/>
+    <!-- Ruler and small, deliberately irregular marginal marks. -->
+    <path d="m532 567 164-76 18 38-164 76z" fill="#fff" stroke-width="2.5"/>
+    <path d="m541 574 9 20m4-26 6 13m6-19 9 20m3-26 6 13m6-19 9 20m3-26 6 13m6-19 9 20m3-26 6 13m6-19 9 20m3-26 6 13m6-19 9 20m3-26 6 13m6-19 9 20" stroke-width="1.3"/>
+    <path d="m89 438 17 5m-18 3 15 4m-13 4 11 3m585-232 14 4m-16 3 17 5m-19 2 12 3M207 574l16 6m-12-1 12 5m-8 0 10 4"/>
+    <path d="m119 280 17-8m-11 0-5-13m589 139 13 13m-4-16-13 13M233 109l3 13m-10-6 16-3" stroke-width="1.2"/>
+  </g>
+</svg>

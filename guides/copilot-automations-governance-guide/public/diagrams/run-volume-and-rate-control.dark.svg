@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="run-volume-and-rate-control-dark-root" viewBox="0 0 704 616" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="run-volume-and-rate-control-dark-title run-volume-and-rate-control-dark-desc">
+        <title id="run-volume-and-rate-control-dark-title">Levers for run volume and API rate</title>
+        <desc id="run-volume-and-rate-control-dark-desc">Cadence, filters, serialization and credit limits shape how often runs start. Scripts that start runs must follow REST rate limit guidance.</desc>
+        <defs><marker id="run-volume-and-rate-control-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="616" fill="#07090d"/>
+        <text x="112.0" y="56" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">LEVER</text>
+        <text x="318.0" y="56" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WHAT IT DOES</text>
+        <text x="558.0" y="56" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WATCH FOR</text>
+        <rect x="40" y="72" width="144" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="104.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cadence</text>
+        <rect x="208" y="72" width="220" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="318.0" y="104.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Hourly, daily or weekly</text>
+        <rect x="452" y="72" width="212" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="558.0" y="104.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Hourly means 24 runs a day</text>
+        <rect x="40" y="152" width="144" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="184.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Filters</text>
+        <rect x="208" y="152" width="220" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="318.0" y="184.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Query, paths and labels</text>
+        <rect x="452" y="152" width="212" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="558.0" y="184.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Busy triggers start many runs</text>
+        <rect x="40" y="232" width="144" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="264.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Serialization</text>
+        <rect x="208" y="232" width="220" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="318.0" y="256.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Runs one at a time</text>
+        <text x="318.0" y="272.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">With continuous_history</text>
+        <rect x="452" y="232" width="212" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="558.0" y="264.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Shares session history</text>
+        <rect x="40" y="312" width="144" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="344.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Credit limits</text>
+        <rect x="208" y="312" width="220" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="318.0" y="344.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Periodic limits block runs</text>
+        <rect x="452" y="312" width="212" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="558.0" y="344.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Set per-run limits too</text>
+        <rect x="40" y="392" width="144" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="112.0" y="424.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">API retries</text>
+        <rect x="208" y="392" width="220" height="56" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="318.0" y="424.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Honor retry-after, back off</text>
+        <rect x="452" y="392" width="212" height="56" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="558.0" y="424.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">404 may mean not yet created</text>
+        <text x="40" y="492" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No automation-specific run-rate limit is documented.</text>
+        <text x="40" y="508" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">REST secondary limits include 80 content-generating requests a minute and 500 an hour.</text>
+        <line x1="40" y1="556" x2="664" y2="556" stroke="#3d444d"/>
+        <text x="40" y="580" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rows: volume levers; columns: effect and caution</text>
+        <text x="40" y="600" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green cell: lesson focus, not approval or a safety rating</text>
+      </svg>

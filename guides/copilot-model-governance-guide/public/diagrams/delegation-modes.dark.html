@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who decides model access</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Model Governance · Swimlane</p>
+    <h1>Who decides model access</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Who decides model access. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 616" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="delegation-modes-dark-title delegation-modes-dark-desc">
+        <title id="delegation-modes-dark-title">Who decides model access</title>
+        <desc id="delegation-modes-dark-desc">The enterprise sets model policy and a control mode, then organizations decide delegated models or enterprise teams receive additive access.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="616" fill="#07090d"/>
+        <rect x="40" y="40" width="624" height="128" rx="6" fill="none" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="56" y="108" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise</text>
+        <rect x="40" y="176" width="624" height="128" rx="6" fill="none" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="56" y="244" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Organization</text>
+        <rect x="40" y="312" width="624" height="128" rx="6" fill="none" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="56" y="372" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise</text>
+        <text x="56" y="388" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">team</text>
+        <rect x="160" y="68" width="216" height="72" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="268.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Set model policy</text>
+        <text x="268.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enabled, Disabled or delegated</text>
+        <path d="M 376 104 L 424 104" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="424" y="68" width="224" height="72" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="536.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Choose control mode</text>
+        <text x="536.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Organizations, or teams (preview)</text>
+        <path d="M 472 140 L 472 160 L 268 160 L 268 204" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="330.25" y="154" width="79.5" height="12" rx="2" fill="#07090d"/><text x="370" y="163" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">ORGANIZATIONS</text>
+        <rect x="160" y="204" width="216" height="72" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="268.0" y="236.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Org owners decide</text>
+        <text x="268.0" y="252.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Only for delegated models</text>
+        <path d="M 600 140 L 600 340" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="582.25" y="290" width="35.5" height="12" rx="2" fill="#07090d"/><text x="600" y="299" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">TEAMS</text>
+        <rect x="424" y="340" width="224" height="72" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="536.0" y="372.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Team access is additive</text>
+        <text x="536.0" y="388.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Cannot exceed enterprise policy</text>
+        <text x="40" y="480" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Targeted access rules can grant a model to selected organizations without delegating it to all.</text>
+        <text x="40" y="496" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">In teams mode, organization model settings are deactivated and users get the union of their teams.</text>
+        <text x="40" y="512" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A user is governed by the enterprise or organization that grants their license.</text>
+        <line x1="40" y1="544" x2="664" y2="544" stroke="#3d444d"/>
+        <text x="40" y="568" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Band: owner lane; rectangle: action; arrow: next step</text>
+        <text x="40" y="588" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

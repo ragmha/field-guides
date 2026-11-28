@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How long an approval lasts</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Local Sandboxing · Timeline</p>
+    <h1>How long an approval lasts</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="How long an approval lasts. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 528" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="approval-persistence-dark-title approval-persistence-dark-desc">
+        <title id="approval-persistence-dark-title">How long an approval lasts</title>
+        <desc id="approval-persistence-dark-desc">One-time approvals end with the action, session approvals last until the session ends and return on resume, and saved choices and rules persist until removed.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="528" fill="#07090d"/>
+        <path d="M 172 64 L 204 64" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 336 64 L 368 64" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 500 64 L 532 64" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="40" width="132" height="48" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="106.0" y="68.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">This action</text>
+        <rect x="204" y="40" width="132" height="48" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="270.0" y="68.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">This session</text>
+        <rect x="368" y="40" width="132" height="48" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="434.0" y="68.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Resumed session</text>
+        <rect x="532" y="40" width="132" height="48" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="598.0" y="68.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Future sessions</text>
+        <rect x="40" y="120" width="132" height="48" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="106.0" y="148.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Yes / Allow Once</text>
+        <rect x="40" y="192" width="460" height="48" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="270.0" y="212.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">CLI session approval</text>
+        <text x="270.0" y="228.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Restored on resume; covers every argument</text>
+        <rect x="40" y="264" width="624" height="48" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="284.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Don&#x27;t ask again / Always Allow</text>
+        <text x="352.0" y="300.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Persists for the directory or future sessions</text>
+        <rect x="40" y="336" width="624" height="48" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="356.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User settings auto-approve rule</text>
+        <text x="352.0" y="372.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Survives Reset Tool Confirmations</text>
+        <text x="40" y="416" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Reset Tool Confirmations clears approvals; it does not delete User settings rules.</text>
+        <text x="40" y="432" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No reset revokes credentials that an approved command already used.</text>
+        <line x1="40" y1="468" x2="664" y2="468" stroke="#3d444d"/>
+        <text x="40" y="492" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Top row: time from left to right; bar length: how long each approval stays in effect</text>
+        <text x="40" y="512" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

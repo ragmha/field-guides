@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="websockets-data-residency-dark-root" viewBox="0 0 704 496" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="websockets-data-residency-dark-title websockets-data-residency-dark-desc">
+        <title id="websockets-data-residency-dark-title">Stream a cloud session through a proxy</title>
+        <desc id="websockets-data-residency-dark-desc">The browser opens a WebSocket to the documented Web PubSub host, the proxy relays both directions, and a retry confirms streaming beyond the 101 upgrade.</desc>
+        <defs><marker id="websockets-data-residency-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="496" fill="#07090d"/>
+        <rect x="48" y="40" width="192" height="40" rx="6" fill="#0d1117" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="144" y="64" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">BROWSER</text>
+        <rect x="256" y="40" width="192" height="40" rx="6" fill="#0d1117" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="352" y="64" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">CORPORATE PROXY</text>
+        <line x1="248" y1="40" x2="248" y2="320" stroke="#3d444d" stroke-dasharray="4 4"/>
+        <rect x="464" y="40" width="192" height="40" rx="6" fill="#0d1117" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="560" y="64" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">WEB PUBSUB HOST</text>
+        <line x1="456" y1="40" x2="456" y2="320" stroke="#3d444d" stroke-dasharray="4 4"/>
+        <rect x="56" y="112" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="144.0" y="140.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Open cloud session</text>
+        <text x="144.0" y="156.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">wss to documented host</text>
+        <rect x="264" y="112" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="140.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Match host pattern</text>
+        <text x="352.0" y="156.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not all webpubsub hosts</text>
+        <rect x="472" y="112" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="560.0" y="140.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Upgrade returns 101</text>
+        <text x="560.0" y="156.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Upgrade only, not proof</text>
+        <rect x="56" y="232" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="144.0" y="260.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Show live progress</text>
+        <text x="144.0" y="276.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Retry if only 101 seen</text>
+        <rect x="264" y="232" width="176" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="260.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Relay both directions</text>
+        <text x="352.0" y="276.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Keep inspection narrow</text>
+        <rect x="472" y="232" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="560.0" y="260.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Send session updates</text>
+        <text x="560.0" y="276.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Messages over WebSocket</text>
+        <path d="M 232 144 L 264 144" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#websockets-data-residency-dark-arrow)"/>
+        <path d="M 440 144 L 472 144" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#websockets-data-residency-dark-arrow)"/>
+        <path d="M 560 176 L 560 232" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#websockets-data-residency-dark-arrow)"/>
+        <path d="M 472 264 L 440 264" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#websockets-data-residency-dark-arrow)"/>
+        <path d="M 264 264 L 232 264" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#websockets-data-residency-dark-arrow)"/>
+        <text x="40" y="360" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">GHE.com: use the enterprise specific host, found with dev tools or GitHub Support.</text>
+        <text x="40" y="376" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Redact tokens, cookies and query strings from any captured evidence.</text>
+        <line x1="40" y1="436" x2="664" y2="436" stroke="#3d444d"/>
+        <text x="40" y="460" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Column: actor; rectangle: action; arrow: message or hand-off</text>
+        <text x="40" y="480" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

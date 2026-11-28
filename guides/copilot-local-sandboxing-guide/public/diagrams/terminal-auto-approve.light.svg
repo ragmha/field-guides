@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="terminal-auto-approve-light-root" viewBox="0 0 704 648" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="terminal-auto-approve-light-title terminal-auto-approve-light-desc">
+        <title id="terminal-auto-approve-light-title">Evaluate a terminal command</title>
+        <desc id="terminal-auto-approve-light-desc">VS Code splits chained commands and checks each part against auto-approve rules; an explicit ask beats an allow, and any part that needs approval prompts.</desc>
+        <defs><marker id="terminal-auto-approve-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="648" fill="#f3f5f7"/>
+        <path d="M 184 96 L 184 128" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#terminal-auto-approve-light-arrow)"/>
+        <path d="M 184 192 L 184 248" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#terminal-auto-approve-light-arrow)"/>
+        <path d="M 304 304 L 376 304" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#terminal-auto-approve-light-arrow)"/><rect x="316" y="288" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="328.25" y="297" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 184 360 L 184 416" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#terminal-auto-approve-light-arrow)"/><rect x="192" y="382" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="201.5" y="391" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="40" y="40" width="288" height="56" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="72.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent proposes a command</text>
+        <rect x="40" y="128" width="288" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="156.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Split chained parts</text>
+        <text x="184.0" y="172.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Commands joined with &amp;&amp; or pipes</text>
+        <polygon points="184,248 304,304 184,360 64,304" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184" y="308" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Any part ask or unmatched?</text>
+        <rect x="376" y="264" width="288" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="300.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Prompt for approval</text>
+        <text x="520.0" y="316.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">An explicit ask beats an allow</text>
+        <rect x="40" y="416" width="288" height="80" rx="20" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="184.0" y="452.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Runs without a prompt</text>
+        <text x="184.0" y="468.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Sandbox limits still apply if on</text>
+        <text x="40" y="536" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">String rules match by prefix: npm run build approves npm run build --watch, not deploy.</text>
+        <text x="40" y="552" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A false value means ask, not block. Matching is best effort, so pair rules with the sandbox.</text>
+        <line x1="40" y1="588" x2="664" y2="588" stroke="#d1d9e0"/>
+        <text x="40" y="612" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="632" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

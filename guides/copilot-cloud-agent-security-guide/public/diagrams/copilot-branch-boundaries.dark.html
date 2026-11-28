@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent branch and pull request lifecycle</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Cloud Agent Security · Lifecycle · Branch boundaries</p>
+    <h1>Agent branch and pull request lifecycle</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Agent branch and pull request lifecycle. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="copilot-branch-boundaries-dark-title copilot-branch-boundaries-dark-desc">
+        <title id="copilot-branch-boundaries-dark-title">Agent branch and pull request lifecycle</title>
+        <desc id="copilot-branch-boundaries-dark-desc">Lifecycle from task to copilot branch, simple pushes, draft pull request and a human ready-for-review and merge decision.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="540" fill="#07090d"/>
+        <path d="M 152 144 L 208 144" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="159.5" y="124" width="41" height="12" rx="2" fill="#07090d"/><text x="180" y="133" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">CREATE</text>
+        <path d="M 320 144 L 376 144" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="333" y="124" width="30" height="12" rx="2" fill="#07090d"/><text x="348" y="133" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">PUSH</text>
+        <path d="M 488 144 L 544 144" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="501" y="124" width="30" height="12" rx="2" fill="#07090d"/><text x="516" y="133" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">OPEN</text>
+        <path d="M 600 184 L 600 288" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="608" y="230" width="35.5" height="12" rx="2" fill="#07090d"/><text x="625.75" y="239" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">HUMAN</text>
+        <path d="M 552 328 L 496 328" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="503.5" y="308" width="41" height="12" rx="2" fill="#07090d"/><text x="524" y="317" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">REVIEW</text>
+        <path d="M 384 328 L 328 328" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="341" y="308" width="30" height="12" rx="2" fill="#07090d"/><text x="356" y="317" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">THEN</text>
+        <text x="40" y="80" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">AGENT CAN DO</text>
+        <rect x="40" y="104" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="96" y="140" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Task</text>
+        <text x="96" y="156" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Issue or chat</text>
+        <rect x="208" y="104" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="264" y="140" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">copilot/ branch</text>
+        <text x="264" y="156" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">New per task</text>
+        <rect x="376" y="104" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="432" y="140" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Simple pushes</text>
+        <text x="432" y="156" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">No direct git push</text>
+        <rect x="544" y="104" width="112" height="80" rx="8" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="600" y="140" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Draft PR</text>
+        <text x="600" y="156" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">One per task</text>
+        <text x="40" y="264" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">HUMAN ONLY</text>
+        <rect x="216" y="288" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="272" y="324" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Merge</text>
+        <text x="272" y="340" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Human decision</text>
+        <rect x="384" y="288" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="440" y="324" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Approval</text>
+        <text x="440" y="340" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Not the requester</text>
+        <rect x="552" y="288" width="112" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="608" y="324" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Ready for review</text>
+        <text x="608" y="340" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Human marks</text>
+        <text x="40" y="424" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Invoked with @copilot on a pull request, the agent pushes to that pull request branch instead.</text>
+        <text x="40" y="440" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Rules and required checks apply to every push. Stopping a session keeps commits already pushed.</text>
+        <line x1="40" y1="472" x2="664" y2="472" stroke="#3d444d" stroke-width="1"/>
+        <text x="40" y="496" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Top row: agent actions; bottom row: human-only actions; arrows: order of work</text>
+        <text x="40" y="516" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

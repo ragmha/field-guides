@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="budget-evaluation-dark-root" viewBox="0 0 704 684" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="budget-evaluation-dark-title budget-evaluation-dark-desc">
+        <title id="budget-evaluation-dark-title">When a budget stops usage</title>
+        <desc id="budget-evaluation-dark-desc">Inline completions continue, user-level budgets always block at the limit, and spending budgets block only when Stop usage is enabled.</desc>
+        <defs><marker id="budget-evaluation-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="684" fill="#07090d"/>
+        <rect x="232" y="40" width="240" height="48" rx="24" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="68.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">AI feature request</text>
+        <path d="M 352 88 L 352 112" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <polygon points="352,112 456,160 352,208 248,160" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="156" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Uses AI</text>
+        <text x="352" y="172" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">credits?</text>
+        <path d="M 248 160 L 132 160 L 132 248" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="180.5" y="154" width="19.0" height="12" rx="2" fill="#07090d"/>
+        <text x="190" y="163" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="40" y="248" width="184" height="72" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="132.0" y="272.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Request continues</text>
+        <text x="132.0" y="288.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Inline completions and</text>
+        <text x="132.0" y="304.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">next edit suggestions</text>
+        <path d="M 352 208 L 352 240" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="363.75" y="218" width="24.5" height="12" rx="2" fill="#07090d"/>
+        <text x="376" y="227" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <polygon points="352,240 456,288 352,336 248,288" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="284" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User-level</text>
+        <text x="352" y="300" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">budget reached?</text>
+        <path d="M 456 288 L 488 288" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="459.75" y="267" width="24.5" height="12" rx="2" fill="#07090d"/>
+        <text x="472" y="276" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <rect x="488" y="256" width="176" height="64" rx="8" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="576.0" y="284.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Blocked</text>
+        <text x="576.0" y="300.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">AI credit features stop</text>
+        <path d="M 352 336 L 352 384" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="358.5" y="354" width="19.0" height="12" rx="2" fill="#07090d"/>
+        <text x="368" y="363" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <polygon points="352,384 456,432 352,480 248,432" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="428" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Spending budget</text>
+        <text x="352" y="444" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">reached?</text>
+        <path d="M 456 432 L 488 432" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="459.75" y="411" width="24.5" height="12" rx="2" fill="#07090d"/>
+        <text x="472" y="420" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <polygon points="576,384 664,432 576,480 488,432" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="576" y="428" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Stop usage</text>
+        <text x="576" y="444" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">enabled?</text>
+        <path d="M 576 384 L 576 320" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="587.75" y="346" width="24.5" height="12" rx="2" fill="#07090d"/>
+        <text x="600" y="355" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 352 480 L 352 528" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="358.5" y="498" width="19.0" height="12" rx="2" fill="#07090d"/>
+        <text x="368" y="507" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="240" y="528" width="224" height="56" rx="24" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="552.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Request proceeds</text>
+        <text x="352.0" y="568.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Within budget</text>
+        <path d="M 576 480 L 576 528" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#budget-evaluation-dark-arrow)"/>
+        <rect x="582.5" y="498" width="19.0" height="12" rx="2" fill="#07090d"/>
+        <text x="592" y="507" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="488" y="528" width="176" height="56" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="576.0" y="552.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Alert only</text>
+        <text x="576.0" y="568.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Stop usage is off by default</text>
+        <line x1="40" y1="616" x2="664" y2="616" stroke="#3d444d"/>
+        <text x="40" y="640" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start or end; rectangle: result; diamond: decision; user-level budgets always stop</text>
+        <text x="40" y="660" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

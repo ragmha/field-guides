@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="drift-detection-dark-root" viewBox="0 0 704 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="drift-detection-dark-title drift-detection-dark-desc">
+        <title id="drift-detection-dark-title">Where drift appears</title>
+        <desc id="drift-detection-dark-desc">A timeline after a server-managed change: the change merges, online clients refresh within about an hour, an offline laptop keeps its earlier policy, an old client falls below the minimum version, and a reconciliation check tests sample endpoints.</desc>
+        <defs><marker id="drift-detection-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="460" fill="#07090d"/>
+        <line x1="56" y1="176" x2="648" y2="176" stroke="#9198a1" stroke-width="1.5"/>
+        <line x1="88" y1="170" x2="88" y2="120" stroke="#3d444d"/>
+        <line x1="208" y1="182" x2="208" y2="232" stroke="#3d444d"/>
+        <line x1="328" y1="170" x2="328" y2="120" stroke="#3d444d"/>
+        <line x1="448" y1="182" x2="448" y2="232" stroke="#3d444d"/>
+        <line x1="568" y1="170" x2="568" y2="120" stroke="#3d444d"/>
+        <circle cx="88" cy="176" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <rect x="28" y="56" width="120" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="88.0" y="84.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Change merged</text>
+        <text x="88.0" y="100.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Server default updated</text>
+        <circle cx="208" cy="176" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <rect x="148" y="232" width="120" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="208.0" y="260.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">About 1 hour</text>
+        <text x="208.0" y="276.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Online clients refresh</text>
+        <circle cx="328" cy="176" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <rect x="268" y="56" width="120" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="328.0" y="84.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Offline laptop</text>
+        <text x="328.0" y="100.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Keeps earlier policy</text>
+        <circle cx="448" cy="176" r="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <rect x="388" y="232" width="120" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="448.0" y="260.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Old client</text>
+        <text x="448.0" y="276.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Below minimum version</text>
+        <circle cx="568" cy="176" r="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <rect x="508" y="56" width="120" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="568.0" y="84.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Reconcile</text>
+        <text x="568.0" y="100.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Test sample endpoints</text>
+        <text x="40" y="336" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Hypothetical sequence. MDM is checked hourly; files load at startup.</text>
+        <text x="40" y="352" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">forceRemoteSettingsRefresh trades stale policy for blocked starts when a fetch fails.</text>
+        <line x1="40" y1="400" x2="664" y2="400" stroke="#3d444d"/>
+        <text x="40" y="424" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Line: time; circle: event; box: what endpoints see</text>
+        <text x="40" y="444" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>

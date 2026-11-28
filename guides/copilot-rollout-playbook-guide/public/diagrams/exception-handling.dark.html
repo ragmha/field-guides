@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exception lifecycle</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Governance Rollout · Lifecycle</p>
+    <h1>Exception lifecycle</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Exception lifecycle. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 444" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="exception-handling-dark-title exception-handling-dark-desc">
+        <title id="exception-handling-dark-title">Exception lifecycle</title>
+        <desc id="exception-handling-dark-desc">An exception moves from request to assessment to a scoped grant and an expiry review, which either renews after reassessment or reverts and confirms in the audit log.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="444" fill="#07090d"/>
+        <text x="40" y="52" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">EXCEPTION LIFECYCLE</text>
+        <rect x="40" y="96" width="132" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="106.0" y="124.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Request</text>
+        <text x="106.0" y="140.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Reason, scope,</text>
+        <text x="106.0" y="156.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">duration</text>
+        <path d="M 172 136 L 204 136" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="204" y="96" width="132" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="270.0" y="124.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assess</text>
+        <text x="270.0" y="140.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Accountable owner</text>
+        <text x="270.0" y="156.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">from the RACI</text>
+        <path d="M 336 136 L 368 136" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="368" y="96" width="132" height="80" rx="8" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="434.0" y="124.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Scoped grant</text>
+        <text x="434.0" y="140.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Narrowest scope,</text>
+        <text x="434.0" y="156.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">expiry date set</text>
+        <path d="M 500 136 L 532 136" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="532" y="96" width="132" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="598.0" y="132.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Expiry review</text>
+        <text x="598.0" y="148.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Renew or close</text>
+        <path d="M 598 96 L 598 80 A 8 8 0 0 0 590 72 L 278 72 A 8 8 0 0 0 270 80 L 270 96" fill="none" stroke="#9198a1" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <rect x="364.0" y="54" width="140.0" height="12" rx="2" fill="#07090d"/>
+        <text x="434" y="63" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">RENEW AFTER REASSESSMENT</text>
+        <path d="M 598 176 L 598 232" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="608.25" y="198" width="35.5" height="12" rx="2" fill="#07090d"/>
+        <text x="626" y="207" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">CLOSE</text>
+        <rect x="432" y="232" width="232" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="548.0" y="260.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Close</text>
+        <text x="548.0" y="276.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Revert the setting</text>
+        <text x="548.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Confirm with action:copilot</text>
+        <path d="M 270 176 L 270 232" fill="none" stroke="#9198a1" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <rect x="282.5" y="198" width="41.0" height="12" rx="2" fill="#07090d"/>
+        <text x="303" y="207" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">RECORD</text>
+        <rect x="40" y="232" width="336" height="80" rx="8" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="208.0" y="260.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Exception register</text>
+        <text x="208.0" y="276.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Requester, approver, scope,</text>
+        <text x="208.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">start, expiry, evidence</text>
+        <text x="40" y="352" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The audit log keeps events for 180 days; stream to a SIEM for longer reviews.</text>
+        <text x="40" y="368" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The register and expiry are guide advice; individual user-level budgets can expire.</text>
+        <line x1="40" y1="384" x2="664" y2="384" stroke="#3d444d"/>
+        <text x="40" y="408" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: stage; oval: end; dashed arrow: renewal or record-keeping</text>
+        <text x="40" y="428" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

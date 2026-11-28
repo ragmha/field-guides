@@ -1,0 +1,50 @@
+{
+  "mcp-policy-scope": {
+    "title": "Can an MCP server run at all?",
+    "description": "Check whether the seat is governed and whether the MCP servers in Copilot policy is enabled, then use allowlists, denylists or a registry to decide which servers run."
+  },
+  "server-inventory": {
+    "title": "Where MCP servers are configured",
+    "description": "Four configuration locations with their editors and whether managed-settings allow and deny lists apply; repository custom agent profiles are not covered."
+  },
+  "allowlist-evaluation": {
+    "title": "How a client evaluates an MCP server",
+    "description": "Built-in defaults are allowed first, any deny match blocks, an allowlist without a match blocks, and an unresolved variable blocks; otherwise the server runs."
+  },
+  "registry-tradeoffs": {
+    "title": "Allowlist or registry",
+    "description": "Compare managed-settings allowlists with public preview custom registries by status, matching, bypass risk, cloud agent support and scope."
+  },
+  "local-remote-servers": {
+    "title": "Local and remote servers",
+    "description": "Local stdio servers are matched by exact command and can run in the local sandbox; remote servers are matched by canonical URL and run outside it."
+  },
+  "connectors-and-plugins": {
+    "title": "Is a Copilot connector allowed?",
+    "description": "A connector request is blocked by Registry only, by a deny match, or by an allowlist without the connector URL; otherwise it is allowed."
+  },
+  "mcp-secret-scoping": {
+    "title": "How a secret reaches an MCP server",
+    "description": "Organization and repository Agents secrets with the COPILOT_MCP_ prefix flow only to MCP servers, are referenced in env or headers, and are masked in session logs."
+  },
+  "github-server-access": {
+    "title": "Widen GitHub MCP access only as needed",
+    "description": "The built-in GitHub MCP server starts with a read-only token for the current repository; wider access uses a fine-grained read-only token or a GitHub App, with toolsets limited."
+  },
+  "repository-mcp-config": {
+    "title": "Configure and validate repository MCP",
+    "description": "Write the configuration with a tools list, save it for validation, add COPILOT_MCP_ secrets, assign an issue, and check the Start MCP Servers step."
+  },
+  "personal-and-agent-servers": {
+    "title": "Which cloud session server wins?",
+    "description": "Defaults are processed first, then custom agent profiles, then repository settings, with later sources overriding earlier ones; a repository server also overrides a same-named personal server."
+  },
+  "server-onboarding-review": {
+    "title": "Onboard an MCP server",
+    "description": "Review the server, allowlist it, validate settings, provision scoped secrets, configure explicit tools, confirm in a session log, then monitor and recheck."
+  },
+  "monitoring-offboarding": {
+    "title": "Offboard an MCP server",
+    "description": "Deny the server first, remove its configuration, delete and revoke secrets, wait for settings to refresh, confirm in a session, and update the inventory."
+  }
+}
