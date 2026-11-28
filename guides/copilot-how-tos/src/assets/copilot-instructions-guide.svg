@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="600" viewBox="0 0 720 600" role="img" aria-labelledby="title desc">
+  <title id="title">A repository's field notes</title>
+  <desc id="desc">An engraved stack of annotated instruction pages with a pencil.</desc>
+  <defs><pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(42)"><path d="M0 0v6" stroke="#333" stroke-width=".65"/></pattern></defs>
+  <g fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M102 351C64 251 105 145 206 103M520 100c100 38 144 148 110 252M116 349C85 260 121 159 212 117M514 115c83 36 122 131 102 222" stroke-width=".8"/>
+    <path d="M358 57v23m-11-11h22M113 153l-12-7m19-8-10-9m492 24 12-7m-19-8 10-9"/>
+    <path d="M143 166l323-42 50 346-323 42z" fill="#fff" stroke-width="2"/>
+    <path d="M160 153l329-24 26 337-329 24z" fill="#fff" stroke-width="2"/>
+    <path d="M180 130h320v348H180z" fill="#fff" stroke-width="2.5"/>
+    <path d="M188 138h304v332H188z" stroke-width=".8"/>
+    <path d="M204 153h272v49H204z" fill="url(#h)" stroke-width="1"/>
+    <path d="M218 169h112m-112 14h171" stroke-width="2"/>
+    <path d="M213 227h12v12h-12zm0 47h12v12h-12zm0 47h12v12h-12zM238 232h151m-151 12h215m-215 35h183m-183 12h205m-205 35h151m-151 12h202" stroke-width="1.4"/>
+    <path d="M214 231l4 4 8-9m-12 52 4 4 8-9" stroke-width="1.4"/>
+    <path d="M211 380h238m-238 11h206m-206 11h228m-228 11h177m-177 11h211" stroke-width="1"/>
+    <path d="M509 231l73 28-68 178-73-28z" fill="#fff" stroke-width="2"/>
+    <path d="M518 249l48 18m-53-5 45 17m-50-4 49 19m-54-6 39 15m-44-2 48 18m-53-5 45 17m-50-4 50 19m-55-6 40 15" stroke-width="1"/>
+    <path d="M514 437l-33 28-40-56m5 10 56 21" stroke-width="1.2"/>
+    <path d="M109 458l84-148 12 7-84 149-22 19z" fill="#fff" stroke-width="2"/>
+    <path d="M115 456l84-145m-78 155 84-149m-106 168 13-11 6 4z" stroke-width="1"/>
+    <path d="M109 520c132 13 318 17 487-1M151 530c112 9 270 11 407 0M203 539c89 6 195 7 299 0" stroke-width=".8"/>
+    <path d="M151 504l-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7m24-7-13 7" stroke-width=".6"/>
+  </g>
+</svg>

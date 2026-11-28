@@ -8,9 +8,10 @@ and operations, and how to visualise. Each part has an overview, numbered chapte
 Chapters teach through self-contained explanations, explicitly hypothetical
 worked examples and two or three native answer-reveal questions. Sources remain
 an appendix, not a detour required to learn the lesson.
-Ten genuine editable Excalidraw diagrams have static light/dark SVG
-exports and prose alternatives. Worked scenarios illustrate behavior,
-not recommended budgets or real customer data.
+Nine semantic diagram definitions generate self-contained accessible HTML with
+inline SVG and paired light/dark SVG embeds. The Grafana dashboard is a
+semantic HTML wireframe. Worked scenarios illustrate behavior, not recommended
+budgets or real customer data.
 
 The Controls lesson uses a shared cookie jar, personal snack limit and
 buying extras to explain the pool, ULB and metered hard stops. `CreditJar.astro` uses native
@@ -25,6 +26,10 @@ wireframe names fields and questions without inventing values. Generic Infinity
 imports are guide advice, not a GitHub integration; telemetry is not billing.
 Sources include official Microsoft/VS Code and Grafana documentation, with
 endpoint-specific cautions and source tensions recorded in the register.
+
+Part 3 includes a token optimization lesson on scoped context, model and tool
+selection, recurring workflows, and measuring credits alongside task quality.
+The former `part-3/5-summary/` URL redirects to the renumbered summary.
 
 ## Run locally
 
@@ -51,7 +56,7 @@ required to serve the guide.
 ## Browser checks and screenshots
 
 The Playwright check exercises system/light/dark themes, persisted choice,
-internal project-base links, all diagrams and editable downloads, narrow-screen containment,
+internal project-base links, all themed diagrams, narrow-screen containment,
 and narrow-to-wide navigation. It also walks the complete previous/next chain
 across part boundaries, verifies the full sidebar outline and opens every
 self-check. It captures the course index, a part overview, a chapter with a
@@ -113,7 +118,7 @@ Content lives in `src/content/guide/*.md`. Each page has a title, section,
 order, description, ISO `verified` date, and canonical `sources`. Conceptual
 lessons declare a primary `diagram` shown before their supporting text;
 `scenarioDiagram` adds a second worked-example figure where useful.
-`Diagram.astro` displays static exports with a downloadable native source.
+`Diagram.astro` embeds the themed SVGs through the shared guide component.
 `src/course.ts` is the shared source for part order, numbering, routes and
 legacy redirects. The index, overview lists, sidebar and reading sequence use
 that same definition. Sources is outside the sequence. Lesson frontmatter
@@ -124,23 +129,21 @@ date. Do not refresh older review dates merely because another part was added.
 
 ## Editing the diagrams
 
-Open `public/diagrams/<name>.excalidraw` in Excalidraw to edit its native
-boxes, text and connectors. Commit that source with both themed exports and
-the standalone HTML wrapper. The existing diagram URLs remain available.
+Edit the semantic definitions in `scripts/export-diagrams.mjs`; generated
+assets are checked in so the guide remains static and self-contained. Keep
+labels, relationships, prose alternatives and worked-scenario arithmetic
+consistent.
 
 ```sh
 bun run diagrams:export
 bun run test:diagrams
 ```
 
-The export check uses Excalidraw's real import/export implementation; the
-reader site ships static SVGs, not an Excalidraw editor or React runtime.
-Keep the locked canvas element: its native `customData` carries the
-accessible title and description through ordinary Excalidraw saves.
-Keep source labels, exports, prose alternatives and scenario arithmetic
-consistent. Regenerate after changing a native source rather than editing
-an exported SVG by hand. When enabled, freshness automation audits every format
-read-only; the current manual reviewer checks the same formats.
+Regenerate after changing a definition rather than editing an exported SVG by
+hand. The diagram check validates generated assets, accessibility, theme pairs,
+self-contained output and the absence of legacy scene files. When enabled,
+freshness automation audits diagram text read-only; the current manual reviewer
+checks the same formats.
 
 ### Content rules
 
@@ -174,10 +177,7 @@ GitHub's name and logo are GitHub, Inc. trademarks; this independent guide is
 not affiliated with or endorsed by GitHub, and logo use should be confirmed
 against the [brand guidelines](https://brand.github.com/foundations/logo)
 before wider publication.
-Diagrams use readable native sans-serif text with Excalidraw strokes and
-no network font dependency.
-The dev-only `clsx` pin preserves Astro's named export when Excalidraw's
-older transitive version would otherwise be hoisted to the project root.
+Diagrams use readable native sans-serif text and no network font dependency.
 
 Theme defaults to the system preference; a visible select persists an
 override. The initial theme script runs before styles render. When browser

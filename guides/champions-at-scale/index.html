@@ -20,11 +20,12 @@
   <link rel="stylesheet" href="./style.css">
   <script src="./guide.js" defer></script>
 </head>
-<body>
+<body data-reading-guide="champions-at-scale" data-reading-page="overview" data-reading-page-title="Champions at Scale">
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Champions at Scale, back to top"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 16 16" width="30" height="30"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg><span>Champions<span class="brand-tail"> at Scale</span></span></a>
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Enterprise enablement</a><span aria-hidden="true">/</span><span>Champions at Scale</span></nav>
+    <a class="history-link" href="../history/">Reading history</a>
     <label class="theme-label" hidden><span aria-hidden="true">◐</span><span class="sr-only">Color theme</span><select id="theme" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
     <button class="print-button" type="button" hidden>Print guide <span aria-hidden="true">↗</span></button>
   </header>
@@ -46,9 +47,9 @@
       <h2 id="parts-title">Parts</h2>
       <p>Start with Part 1, or jump to the part you need.</p>
       <ol class="part-grid">
-          <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>01</span></div><h3>The enterprise case</h3><p>The case for champions · What changes in 2026</p><a href="#why">View chapters<span class="sr-only"> in The enterprise case</span> <span aria-hidden="true">→</span></a></li>
-          <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>02</span></div><h3>Build the network</h3><p>The operating model · Before you launch · Your first 90 days</p><a href="#model">View chapters<span class="sr-only"> in Build the network</span> <span aria-hidden="true">→</span></a></li>
-          <li class="part-card"><div class="part-top"><span aria-hidden="true">↖</span><span>03</span></div><h3>Keep it useful</h3><p>Measure what matters · Keep it sustainable</p><a href="#measure">View chapters<span class="sr-only"> in Keep it useful</span> <span aria-hidden="true">→</span></a></li>
+          <li class="part-card" data-reading-part="1"><div class="part-top"><span aria-hidden="true">↖</span><span>01</span></div><h3>The enterprise case</h3><p>The case for champions · What changes in 2026</p><a href="#why">View chapters<span class="sr-only"> in The enterprise case</span> <span aria-hidden="true">→</span></a></li>
+          <li class="part-card" data-reading-part="2"><div class="part-top"><span aria-hidden="true">↖</span><span>02</span></div><h3>Build the network</h3><p>The operating model · Before you launch · Your first 90 days</p><a href="#model">View chapters<span class="sr-only"> in Build the network</span> <span aria-hidden="true">→</span></a></li>
+          <li class="part-card" data-reading-part="3"><div class="part-top"><span aria-hidden="true">↖</span><span>03</span></div><h3>Keep it useful</h3><p>Measure what matters · Keep it sustainable</p><a href="#measure">View chapters<span class="sr-only"> in Keep it useful</span> <span aria-hidden="true">→</span></a></li>
       </ol>
     </section>
   </div>
@@ -141,7 +142,7 @@
         </figure>
         <p class="caption">An original synthesis informed by GitHub Well-Architected and DORA research. Not an official GitHub publication.</p>
 
-      <section class="chapter" id="why" aria-labelledby="why-title">
+      <section class="chapter" id="why" data-reading-part="1" aria-labelledby="why-title">
         <div class="section-heading"><span class="chapter-label">The case for champions</span><span class="reading-note">Start with the problem</span></div>
         <h2 id="why-title">Licences scale faster<br>than learning.</h2>
         <p class="lead">Buying access removes one barrier. It does not answer, “How does this help my team do better work?”</p>
@@ -166,7 +167,7 @@
         </aside>
       </section>
 
-      <section class="chapter" id="now" aria-labelledby="now-title">
+      <section class="chapter" id="now" data-reading-part="1" aria-labelledby="now-title">
         <div class="section-heading"><span class="chapter-label">What changes in 2026</span><span class="reading-note">More capability. More context.</span></div>
         <h2 id="now-title">AI raises the stakes<br>for shared judgment.</h2>
         <p class="lead">A prompt is easy to copy. Knowing when the result is useful, safe and correct takes more work.</p>
@@ -208,7 +209,7 @@
         <p><strong>Instructions are guidance, not enforcement.</strong> Use existing access controls, protected environments and human approval for consequential actions; verify outputs and supported behavior for each surface. <a class="citation" href="#source-customization">[6]</a></p>
       </section>
 
-      <section class="chapter" id="model" aria-labelledby="model-title">
+      <section class="chapter" id="model" data-reading-part="2" aria-labelledby="model-title">
         <div class="section-heading"><span class="chapter-label">The operating model</span><span class="reading-note">Clear ownership beats extra layers</span></div>
         <h2 id="model-title">A network needs<br>more than volunteers.</h2>
         <p class="lead">Give people permission, time and a route to someone who can make decisions.</p>
@@ -267,7 +268,7 @@
         <p>Use an existing Teams or Slack channel and one searchable home for answers. A possible pilot cadence is weekly asynchronous notes, a fortnightly peer clinic and a monthly sponsor review. This cadence is an editorial starting point; reduce it if it consumes more capacity than it returns. The learning loop comes from the handbook. <a class="citation" href="#source-handbook">[3]</a></p>
       </section>
 
-      <section class="chapter readiness-section" id="readiness" aria-labelledby="readiness-title">
+      <section class="chapter readiness-section" id="readiness" data-reading-part="2" aria-labelledby="readiness-title">
         <div class="section-heading"><span class="chapter-label">Before you launch</span><span class="reading-note">A working checklist, not a maturity score</span></div>
         <h2 id="readiness-title">Have the foundations<br>earned a pilot?</h2>
         <p>Check what is genuinely in place, not what is promised. Unchecked items are planning work. These are this guide's launch foundations, informed by the source guidance.</p>
@@ -288,7 +289,7 @@
         <noscript><p>Check the foundations manually, then use the pilot below. Printing and all guide content work without JavaScript.</p></noscript>
       </section>
 
-      <section class="chapter" id="playbook" aria-labelledby="playbook-title">
+      <section class="chapter" id="playbook" data-reading-part="2" aria-labelledby="playbook-title">
         <div class="section-heading"><span class="chapter-label">Your first 90 days</span><span class="reading-note">A suggested pilot, not a deadline</span></div>
         <h2 id="playbook-title">Start narrow.<br>Earn the next step.</h2>
         <p class="lead">One use case. A representative pilot. A decision at each gate.</p>
@@ -339,7 +340,7 @@
         </details>
       </section>
 
-      <section class="chapter" id="quest" aria-labelledby="quest-title">
+      <section class="chapter" id="quest" data-reading-part="3" aria-labelledby="quest-title">
         <div class="section-heading"><span class="chapter-label">Champion quest path</span><span class="reading-note">Learn, practice, share</span></div>
         <h2 id="quest-title">Power up your practice.<br>Choose your own path.</h2>
         <p class="lead">Four optional milestones combine learning with useful work. Start where it makes sense; nothing is locked.</p>
@@ -392,7 +393,7 @@
         <p class="caption"><a href="https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/">Certification</a> is optional and is not required for a milestone.</p>
       </section>
 
-      <section class="chapter" id="measure" aria-labelledby="measure-title">
+      <section class="chapter" id="measure" data-reading-part="3" aria-labelledby="measure-title">
         <div class="section-heading"><span class="chapter-label">Measure what matters</span><span class="reading-note">Evidence, not a leaderboard</span></div>
         <h2 id="measure-title">Activity is a signal.<br>Useful change is the goal.</h2>
         <p class="lead">Decide what evidence would change your mind before you launch.</p>
@@ -448,7 +449,7 @@
         </aside>
       </section>
 
-      <section class="chapter" id="sustain" aria-labelledby="sustain-title">
+      <section class="chapter" id="sustain" data-reading-part="3" aria-labelledby="sustain-title">
         <div class="section-heading"><span class="chapter-label">Keep it sustainable</span><span class="reading-note">Design for the quarter after launch</span></div>
         <h2 id="sustain-title">Protect the people<br>who make it work.</h2>
         <p>Programs drift when the most helpful people quietly become the support system. Review the network as a service with limits, not as an unlimited supply of goodwill.</p>
@@ -488,5 +489,6 @@
       </div>
     </main>
   </div>
+<script src="../reading-progress.js" defer></script>
 </body>
 </html>

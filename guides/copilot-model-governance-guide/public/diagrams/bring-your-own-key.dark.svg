@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="bring-your-own-key-dark-root" viewBox="0 0 704 496" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bring-your-own-key-dark-title bring-your-own-key-dark-desc">
+        <title id="bring-your-own-key-dark-title">Two request paths for your own models</title>
+        <desc id="bring-your-own-key-dark-desc">User BYOK sends requests from the client directly to the provider, while enterprise custom models route through the Copilot API with central keys.</desc>
+        <defs><marker id="bring-your-own-key-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="496" fill="#07090d"/>
+        <rect x="40" y="40" width="624" height="128" rx="6" fill="none" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="52" y="100" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User</text>
+        <text x="52" y="116" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">BYOK</text>
+        <rect x="40" y="192" width="624" height="128" rx="6" fill="none" stroke="#3d444d" stroke-width="1.5"/>
+        <text x="52" y="244" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Enterprise</text>
+        <text x="52" y="260" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">custom</text>
+        <text x="52" y="276" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">model</text>
+        <rect x="144" y="72" width="160" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="224.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">IDE client</text>
+        <text x="224.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">User-supplied key</text>
+        <path d="M 304 104 L 512 104" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#bring-your-own-key-dark-arrow)"/>
+        <rect x="387.5" y="98" width="41.0" height="12" rx="2" fill="#07090d"/><text x="408" y="107" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">DIRECT</text>
+        <rect x="512" y="72" width="144" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Model provider</text>
+        <text x="584.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Provider terms apply</text>
+        <rect x="144" y="224" width="160" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="224.0" y="252.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">IDE client</text>
+        <text x="224.0" y="268.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot license</text>
+        <path d="M 304 256 L 328 256" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#bring-your-own-key-dark-arrow)"/>
+        <rect x="328" y="224" width="160" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="408.0" y="252.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot API</text>
+        <text x="408.0" y="268.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Central key, metrics</text>
+        <path d="M 488 256 L 512 256" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#bring-your-own-key-dark-arrow)"/>
+        <rect x="512" y="224" width="144" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="584.0" y="252.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Model provider</text>
+        <text x="584.0" y="268.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Least-privilege key</text>
+        <text x="40" y="360" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">User BYOK: one user, local or cloud, no license needed; policy can disable it for Business and Enterprise.</text>
+        <text x="40" y="376" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">User BYOK usage is reported from client telemetry in supported clients only.</text>
+        <text x="40" y="392" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise custom models: public preview, recommended default, usage in Copilot usage metrics.</text>
+        <line x1="40" y1="424" x2="664" y2="424" stroke="#3d444d"/>
+        <text x="40" y="448" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Band: request path; rectangle: component; arrow: request direction</text>
+        <text x="40" y="468" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

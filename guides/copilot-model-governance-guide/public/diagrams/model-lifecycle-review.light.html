@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifecycle events to review</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Model Governance · Timeline</p>
+    <h1>Lifecycle events to review</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Lifecycle events to review. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 576" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="model-lifecycle-review-light-title model-lifecycle-review-light-desc">
+        <title id="model-lifecycle-review-light-title">Lifecycle events to review</title>
+        <desc id="model-lifecycle-review-light-desc">Base model designation, automatic enablement within 60 days, LTS terms, retirements and a monthly drift check each trigger a review.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="576" fill="#f3f5f7"/>
+        <text x="104" y="72" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Day 0</text>
+        <circle cx="128" cy="68" r="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <path d="M 128 76 L 128 140" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="152" y="40" width="512" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="408.0" y="64.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Base model designated</text>
+        <text x="408.0" y="80.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Start an intake record for the new base model</text>
+        <text x="104" y="152" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">By day 60</text>
+        <circle cx="128" cy="148" r="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <path d="M 128 156 L 128 220" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="152" y="120" width="512" height="56" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="408.0" y="144.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Automatic enablement</text>
+        <text x="408.0" y="160.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Business and Enterprise, even under a restrictive baseline</text>
+        <text x="104" y="232" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">One year</text>
+        <circle cx="128" cy="228" r="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <path d="M 128 236 L 128 300" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="152" y="200" width="512" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="408.0" y="224.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">LTS support term</text>
+        <text x="408.0" y="240.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Stable choice for instructions and workflows</text>
+        <text x="104" y="312" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Before date</text>
+        <circle cx="128" cy="308" r="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <path d="M 128 316 L 128 380" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="152" y="280" width="512" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="408.0" y="304.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Retirement announced</text>
+        <text x="408.0" y="320.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Update dependent instructions and pilots</text>
+        <text x="104" y="392" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Monthly</text>
+        <circle cx="128" cy="388" r="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <rect x="152" y="360" width="512" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="408.0" y="384.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Drift check</text>
+        <text x="408.0" y="400.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Compare approved models with the settings page</text>
+        <text x="40" y="456" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Utility models stay on while Copilot is enabled; monitor them for compliance.</text>
+        <text x="40" y="472" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Follow the Copilot changelog with the supported models and model comparison pages.</text>
+        <line x1="40" y1="504" x2="664" y2="504" stroke="#d1d9e0"/>
+        <text x="40" y="528" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Dot: review trigger; rectangle: what to do; arrow: next trigger</text>
+        <text x="40" y="548" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="managed-settings-keys-dark-root" viewBox="0 0 704 644" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="managed-settings-keys-dark-title managed-settings-keys-dark-desc">
+        <title id="managed-settings-keys-dark-title">What managed settings control</title>
+        <desc id="managed-settings-keys-dark-desc">One managed-settings.json file groups supported keys into permissions, MCP servers, plugins and marketplaces, models, features and sandbox, and operational settings.</desc>
+        <defs><marker id="managed-settings-keys-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="644" fill="#07090d"/>
+        <path d="M 352 96 L 352 128" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#managed-settings-keys-dark-arrow)"/>
+        <rect x="192" y="40" width="320" height="56" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352.0" y="64.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">managed-settings.json</text>
+        <text x="352.0" y="80.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">One file, many supported keys</text>
+        <rect x="40" y="128" width="624" height="52" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="56" y="150" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Permissions</text>
+        <text x="56" y="166" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">permissions.deny, ask, allow, disableBypassPermissionsMode, defaultMode</text>
+        <rect x="40" y="188" width="624" height="52" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="56" y="210" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">MCP servers</text>
+        <text x="56" y="226" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">allowedMcpServers, deniedMcpServers</text>
+        <rect x="40" y="248" width="624" height="52" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="56" y="270" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Plugins and marketplaces</text>
+        <text x="56" y="286" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">enabledPlugins, extraKnownMarketplaces, strictKnownMarketplaces</text>
+        <rect x="40" y="308" width="624" height="52" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="56" y="330" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Models</text>
+        <text x="56" y="346" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">model, autoTier, fusionTier</text>
+        <rect x="40" y="368" width="624" height="52" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="56" y="390" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Features and sandbox</text>
+        <text x="56" y="406" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">sandbox, features.browserUse, features.computerUse</text>
+        <rect x="40" y="428" width="624" height="52" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="56" y="450" text-anchor="start" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Operations</text>
+        <text x="56" y="466" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">telemetry, remoteControl, forceRemoteSettingsRefresh, support URL</text>
+        <text x="40" y="520" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Support for each key varies by client and version; check the reference matrix.</text>
+        <text x="40" y="536" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Key groups are a reading aid, not categories defined by GitHub.</text>
+        <line x1="40" y1="584" x2="664" y2="584" stroke="#3d444d"/>
+        <text x="40" y="608" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Stacked bands: key groups in one file</text>
+        <text x="40" y="628" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: lesson focus, not approval or a safety rating</text>
+      </svg>

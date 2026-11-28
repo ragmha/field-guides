@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What a local agent can reach</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Local Sandboxing · Layered</p>
+    <h1>What a local agent can reach</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="What a local agent can reach. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 616" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="local-trust-boundary-light-title local-trust-boundary-light-desc">
+        <title id="local-trust-boundary-light-title">What a local agent can reach</title>
+        <desc id="local-trust-boundary-light-desc">Agent requests pass approval choices, then an optional local sandbox, before reaching the files, network, credentials and processes your account can reach.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="616" fill="#f3f5f7"/>
+        <path d="M 352 104 L 352 136" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 352 200 L 352 232" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="360" y="210" width="68.5" height="12" rx="2" fill="#f3f5f7"/><text x="394.25" y="219" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">IF APPROVED</text>
+        <path d="M 352 296 L 352 340" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="360" y="312" width="79.5" height="12" rx="2" fill="#f3f5f7"/><text x="399.75" y="321" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">LIMITED IF ON</text>
+        <rect x="40" y="40" width="624" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="68.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent session</text>
+        <text x="352.0" y="84.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot CLI or a VS Code agent reads, edits and runs commands</text>
+        <rect x="40" y="136" width="624" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="164.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Approval choices</text>
+        <text x="352.0" y="180.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Prompts, rules and permission modes decide what runs</text>
+        <rect x="40" y="232" width="624" height="64" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="260.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Local sandbox (off by default)</text>
+        <text x="352.0" y="276.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">OS containment for shell commands, file search, local MCP and language servers</text>
+        <rect x="40" y="340" width="624" height="132" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="364" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Reach of your user account</text>
+        <rect x="56" y="384" width="136" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="124.0" y="412.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Files</text>
+        <text x="124.0" y="428.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Repo, home, .env</text>
+        <rect x="208" y="384" width="136" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="276.0" y="412.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Network</text>
+        <text x="276.0" y="428.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Internet and LAN</text>
+        <rect x="360" y="384" width="136" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="428.0" y="412.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Credentials</text>
+        <text x="428.0" y="428.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Env vars, helpers</text>
+        <rect x="512" y="384" width="136" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="580.0" y="412.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Processes</text>
+        <text x="580.0" y="428.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Child and MCP servers</text>
+        <text x="40" y="504" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Without the sandbox, approved commands reach everything in the bottom layer as you.</text>
+        <text x="40" y="520" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">A worktree separates files, not machine access. Remote MCP servers are never sandboxed.</text>
+        <line x1="40" y1="556" x2="664" y2="556" stroke="#d1d9e0"/>
+        <text x="40" y="580" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: layer or resource; arrow: path a request takes toward your machine</text>
+        <text x="40" y="600" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

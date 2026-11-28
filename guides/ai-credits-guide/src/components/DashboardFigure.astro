@@ -1,0 +1,65 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  base: string;
+}
+
+const { title, description, base } = Astro.props;
+const headingId = 'billing-dashboard-heading';
+const lightFigure = `${base}diagrams/grafana-dashboard.light.html`;
+---
+
+<figure class="dashboard-figure" aria-labelledby={headingId}>
+  <div class="figure-heading">
+    <h3 id={headingId}>{title}</h3>
+    <a data-diagram-link="grafana-dashboard" href={lightFigure} target="_blank" rel="noopener noreferrer">Open full-size</a>
+  </div>
+  <p class="notice">Panel definitions only — no live values are shown.</p>
+  <div class="panels">
+    <section class="panel" aria-labelledby="panel-models">
+      <p class="label">Usage</p>
+      <h4 id="panel-models">Consumption by model</h4>
+      <p><span class="label">Source fields</span><br /><code>model, unit_type, quantity</code></p>
+      <p><span class="label">Question</span><br />Which models drive reported usage?</p>
+    </section>
+    <section class="panel" aria-labelledby="panel-charges">
+      <p class="label">Cost attribution</p>
+      <h4 id="panel-charges">Net charges by cost owner</h4>
+      <p><span class="label">Source fields</span><br /><code>cost_center_name, net_amount</code></p>
+      <p><span class="label">Question</span><br />Where are charges attributed?</p>
+    </section>
+    <section class="panel" aria-labelledby="panel-unassigned">
+      <p class="label">Ownership review</p>
+      <h4 id="panel-unassigned">Unassigned usage</h4>
+      <p><span class="label">Source query</span><br /><code>cost_center_id = none</code></p>
+      <p><span class="label">Question</span><br />What needs ownership review?</p>
+    </section>
+    <section class="panel" aria-labelledby="panel-freshness">
+      <p class="label">Local metadata</p>
+      <h4 id="panel-freshness">Export freshness</h4>
+      <p><span class="label">Source field</span><br /><code>fetched_at</code></p>
+      <p><span class="label">Question</span><br />How current is this report?</p>
+    </section>
+  </div>
+  <figcaption>{description}</figcaption>
+</figure>
+
+<style>
+  .dashboard-figure { margin: 0 0 2rem; }
+  .figure-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  h3 { color: var(--ink); font: 650 19px/1.4 var(--font-sans); margin: 0 0 8px; }
+  .figure-heading a { flex: 0 0 auto; font-size: 13px; }
+  .notice { margin: 0 0 16px; color: var(--muted); font-size: 13px; }
+  .panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .panel { min-width: 0; padding: 16px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+  h4 { margin: 4px 0 12px; color: var(--ink); font-size: 15px; }
+  .panel p { margin: 8px 0 0; }
+  .label { color: var(--muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  code { overflow-wrap: anywhere; color: var(--ink); font: 12px/1.5 var(--font-mono); }
+  figcaption { margin-top: 16px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+  @media (max-width: 560px) {
+    .figure-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
+    .panels { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose the layer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Control Map · Decision flowchart</p>
+    <h1>Choose the layer</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Choose the layer. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 636" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="layer-selection-light-title layer-selection-light-desc">
+        <title id="layer-selection-light-title">Choose the layer</title>
+        <desc id="layer-selection-light-desc">Ask what kind of requirement it is, who it must reach, whether users can override it and what proves it, then choose the narrowest scope.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="636" fill="#f3f5f7"/>
+        <text x="40" y="52" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">ASK IN ORDER</text>
+        <text x="392" y="52" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">KIND OF REQUIREMENT</text>
+        <rect x="40" y="64" width="288" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="96.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">1. What kind of requirement?</text>
+        <text x="184.0" y="112.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Availability, behavior, reach, data, cost, code</text>
+        <path d="M 184 136 L 184 168" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="168" width="288" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="200.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">2. Who must it reach?</text>
+        <text x="184.0" y="216.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Licensed users, devices, network or repository</text>
+        <path d="M 184 240 L 184 272" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="272" width="288" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="304.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">3. Can users override it?</text>
+        <text x="184.0" y="320.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Prefer layers users cannot override</text>
+        <path d="M 184 344 L 184 376" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="376" width="288" height="72" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="408.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">4. What will prove it?</text>
+        <text x="184.0" y="424.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Add evidence or pick a layer with it</text>
+        <path d="M 184 448 L 184 480" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="40" y="480" width="288" height="56" rx="24" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="184.0" y="504.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Choose the narrowest scope</text>
+        <text x="184.0" y="520.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise-wide only for non-negotiables</text>
+        <path d="M 328 100 L 392 100" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="392" y="64" width="272" height="264" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="412" y="90" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Availability</text>
+        <text x="644" y="90" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Policies and models</text>
+        <line x1="392" y1="108" x2="664" y2="108" stroke="#d1d9e0"/>
+        <text x="412" y="134" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Behavior</text>
+        <text x="644" y="134" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Managed settings</text>
+        <line x1="392" y1="152" x2="664" y2="152" stroke="#d1d9e0"/>
+        <text x="412" y="178" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Reach</text>
+        <text x="644" y="178" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Network routing</text>
+        <line x1="392" y1="196" x2="664" y2="196" stroke="#d1d9e0"/>
+        <text x="412" y="222" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Data</text>
+        <text x="644" y="222" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Content exclusion</text>
+        <line x1="392" y1="240" x2="664" y2="240" stroke="#d1d9e0"/>
+        <text x="412" y="266" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Cost</text>
+        <text x="644" y="266" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Budgets</text>
+        <line x1="392" y1="284" x2="664" y2="284" stroke="#d1d9e0"/>
+        <text x="412" y="310" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Code landing</text>
+        <text x="644" y="310" text-anchor="end" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Rulesets</text>
+        <text x="392" y="372" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">WORKED EXAMPLE</text>
+        <rect x="392" y="384" width="272" height="96" rx="8" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="528.0" y="412.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Approved MCP servers only</text>
+        <text x="528.0" y="428.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Managed settings allowlist</text>
+        <text x="528.0" y="444.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Server file plus a device source</text>
+        <text x="528.0" y="460.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">MCP policy kept as its own row</text>
+        <line x1="40" y1="568" x2="664" y2="568" stroke="#d1d9e0"/>
+        <text x="40" y="592" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rectangle: a question; oval: the decision; right: the layer each kind points to</text>
+        <text x="40" y="612" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

@@ -2,10 +2,10 @@ import { test, expect } from '@playwright/test';
 import { mkdir, readdir, writeFile } from 'node:fs/promises';
 import { chapters, coursePath, legacyRoutes, parts } from '../../src/course';
 
-const lessons = ['understand', 'controls', 'planning', 'implementation', 'operate', 'reporting'];
+const lessons = ['understand', 'controls', 'planning', 'implementation', 'operate', 'reporting', 'token-optimization'];
 const shots = process.env.SCREENSHOT_DIR || 'test-results/screenshots';
 
-test('visual-first lessons, editable downloads, base paths and themed rendering', async ({ page }) => {
+test('visual-first lessons, full-size diagrams, base paths and themed rendering', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await mkdir(shots, { recursive: true });
@@ -24,20 +24,27 @@ test('visual-first lessons, editable downloads, base paths and themed rendering'
           return Boolean(visual.compareDocumentPosition(document.querySelector('.prose')!) & Node.DOCUMENT_POSITION_FOLLOWING);
         })).toBe(true);
         await expect(page.locator('iframe')).toHaveCount(0);
+        const dashboardFigure = page.locator('.dashboard-figure');
         for (const theme of ['light', 'dark']) {
           await page.emulateMedia({ colorScheme: theme === 'dark' ? 'light' : 'dark' });
           await page.getByLabel('Color theme').selectOption(theme);
-          const visibleImages = page.locator(`.diagram-${theme}`);
-          for (const image of await visibleImages.all()) {
-            await expect(image).toBeVisible();
-            await expect(image).toHaveAttribute('src', new RegExp(`\\.${theme}\\.svg$`));
-            await expect.poll(() => image.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+          if (await dashboardFigure.count()) {
+            await expect(dashboardFigure.locator('.panel')).toHaveCount(4);
+            await expect(dashboardFigure).toContainText('Panel definitions only');
+            await expect(dashboardFigure).toContainText('no live values are shown');
+          } else {
+            const visibleImages = page.locator(`.diagram-${theme}`);
+            for (const image of await visibleImages.all()) {
+              await expect(image).toBeVisible();
+              await expect(image).toHaveAttribute('src', new RegExp(`\\.${theme}\\.svg$`));
+              await expect.poll(() => image.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+            }
+            await expect(page.locator(`.diagram-${theme === 'dark' ? 'light' : 'dark'}`).first()).toBeHidden();
           }
-          await expect(page.locator(`.diagram-${theme === 'dark' ? 'light' : 'dark'}`).first()).toBeHidden();
           for (const link of await page.locator('[data-diagram-link]').all()) {
-            await expect(link).toHaveAttribute('href', new RegExp(`#${theme}$`));
+            await expect(link).toHaveAttribute('href', new RegExp(`\\.${theme}\\.html$`));
           }
-          if (width === 390) {
+          if (width === 390 && !(await dashboardFigure.count())) {
             const region = page.locator('.diagram-scroll').first();
             const image = region.locator('img:visible');
             expect((await image.boundingBox())!.width).toBeLessThanOrEqual(await region.evaluate((el) => el.clientWidth));
@@ -64,8 +71,15 @@ test('visual-first lessons, editable downloads, base paths and themed rendering'
         expect(link).toMatch(/^\/field-guides\/ai-credits-guide\//);
         const response = await page.request.get(link.split('#')[0]);
         expect(response.status(), link).toBe(200);
-        if (link.endsWith('.excalidraw')) {
-          expect((await response.json()).type).toBe('excalidraw');
+        if (link.endsWith('.light.html') || link.endsWith('.dark.html')) {
+          const diagramHtml = await response.text();
+          if (link.includes('grafana-dashboard')) {
+            expect(diagramHtml).toContain('class="dashboard-figure"');
+            expect(diagramHtml).toContain('aria-labelledby="panel-models"');
+          } else {
+            expect(diagramHtml).toContain('<svg ');
+            expect(diagramHtml).toContain('role="img" aria-labelledby=');
+          }
         }
         if (link.includes('#') && !link.includes('.html#')) {
           const id = link.split('#')[1];
@@ -330,15 +344,14 @@ test('theme persistence, system updates and narrow-to-wide navigation', async ({
   await expect(page.getByRole('navigation', { name: 'Guide chapters' })).toBeVisible();
 });
 
-test('every full-size diagram overrides the opposite OS theme', async ({ page }) => {
-  const sources = (await readdir('public/diagrams')).filter((name) => name.endsWith('.excalidraw'));
+test('every full-size diagram matches its named theme', async ({ page }) => {
+  const sources = (await readdir('public/diagrams')).filter((name) => name.endsWith('.light.html') && !name.startsWith('grafana-dashboard'));
   expect(sources.length).toBeGreaterThan(0);
   for (const source of sources) {
-    const slug = source.replace('.excalidraw', '');
+    const slug = source.replace('.light.html', '');
     for (const theme of ['light', 'dark']) {
-      await page.emulateMedia({ colorScheme: theme === 'dark' ? 'light' : 'dark' });
-      await page.goto(`diagrams/${slug}.html#${theme}`);
-      await expect(page.locator('body')).toHaveCSS('background-color', theme === 'dark' ? 'rgb(24, 24, 27)' : 'rgb(250, 250, 250)');
+      await page.goto(`diagrams/${slug}.${theme}.html`);
+      await expect(page.locator('body')).toHaveCSS('background-color', theme === 'dark' ? 'rgb(7, 9, 13)' : 'rgb(243, 245, 247)');
       const svg = page.locator('svg[role="img"]:visible');
       await expect(svg).toHaveCount(1);
       expect(await svg.locator('title').textContent()).toBeTruthy();

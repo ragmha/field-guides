@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="evidence-limits-light-root" viewBox="0 0 704 408" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="evidence-limits-light-title evidence-limits-light-desc">
+        <title id="evidence-limits-light-title">What each record proves</title>
+        <desc id="evidence-limits-light-desc">For each source, separate what the record shows from what it does not show, so findings stay within the evidence.</desc>
+        <defs><marker id="evidence-limits-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="408" fill="#f3f5f7"/>
+        <rect x="40" y="40" width="624" height="228" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="308.5" y="63" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Shows</text>
+        <text x="545.5" y="63" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Does not show</text>
+        <line x1="40" y1="76" x2="664" y2="76" stroke="#d1d9e0"/>
+        <text x="56" y="104" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Audit log</text>
+        <text x="308.5" y="104" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Who changed a setting</text>
+        <text x="545.5" y="104" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Why they changed it</text>
+        <line x1="40" y1="124" x2="664" y2="124" stroke="#d1d9e0"/>
+        <rect x="44" y="128" width="616" height="40" rx="4" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="56" y="152" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Agent record</text>
+        <text x="308.5" y="152" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Agent acted, who started it</text>
+        <text x="545.5" y="152" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Who wrote or approved code</text>
+        <line x1="40" y1="172" x2="664" y2="172" stroke="#d1d9e0"/>
+        <text x="56" y="200" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Sessions view</text>
+        <text x="308.5" y="200" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Recent agent sessions</text>
+        <text x="545.5" y="200" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Anything over 24 hours</text>
+        <line x1="40" y1="220" x2="664" y2="220" stroke="#d1d9e0"/>
+        <text x="56" y="248" text-anchor="start" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Telemetry</text>
+        <text x="308.5" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Client spans you collect</text>
+        <text x="545.5" y="248" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="11" font-weight="600">Clients you do not collect</text>
+        <line x1="190" y1="40" x2="190" y2="268" stroke="#d1d9e0"/>
+        <text x="40" y="308" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Absence of a record is not absence of activity. State the missing sources.</text>
+        <line x1="40" y1="348" x2="664" y2="348" stroke="#d1d9e0"/>
+        <text x="40" y="372" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: source; column: what it shows and does not show</text>
+        <text x="40" y="392" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green row: lesson focus, not approval or a safety rating</text>
+      </svg>

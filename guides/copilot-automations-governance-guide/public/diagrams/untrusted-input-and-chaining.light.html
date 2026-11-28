@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which events can start a run</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Automations Governance · Decision flowchart</p>
+    <h1>Which events can start a run</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Which events can start a run. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 748" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="untrusted-input-and-chaining-light-title untrusted-input-and-chaining-light-desc">
+        <title id="untrusted-input-and-chaining-light-title">Which events can start a run</title>
+        <desc id="untrusted-input-and-chaining-light-desc">An event starts a run only if its actor has write access and it was not created by Copilot, unless the automation opts in. Resulting pull requests wait for workflow approval.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="748" fill="#f3f5f7"/>
+        <path d="M 352 88 L 352 112" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 464 168 L 504 168" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="470" y="150" width="19.0" height="12" rx="2" fill="#f3f5f7"/><text x="479.5" y="159" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 352 224 L 352 264" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="360" y="238" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="372.25" y="247" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 464 320 L 504 320" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="468" y="302" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="480.25" y="311" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 352 376 L 352 416" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="360" y="390" width="19.0" height="12" rx="2" fill="#f3f5f7"/><text x="369.5" y="399" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 352 480 L 352 520" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="232" y="40" width="240" height="48" rx="24" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="68.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository event occurs</text>
+        <polygon points="352,112 464,168 352,224 240,168" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="172.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Actor can write?</text>
+        <rect x="504" y="136" width="160" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="584.0" y="164.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Event ignored</text>
+        <text x="584.0" y="180.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Default actor filter</text>
+        <polygon points="352,264 464,320 352,376 240,320" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352" y="324.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Created by Copilot?</text>
+        <rect x="504" y="288" width="160" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="584.0" y="316.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Event ignored</text>
+        <text x="584.0" y="332.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Unless Anyone is set</text>
+        <rect x="232" y="416" width="240" height="64" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="444.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Run starts</text>
+        <text x="352.0" y="460.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Event content reaches prompt</text>
+        <rect x="232" y="520" width="240" height="64" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="548.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Pull request waits</text>
+        <text x="352.0" y="564.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Writer approves workflow runs</text>
+        <text x="40" y="624" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">GitHub App label, assignment, closure, comment and review events never trigger runs.</text>
+        <text x="40" y="640" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Scheduled runs have no event actor, so neither filter applies to them.</text>
+        <line x1="40" y1="688" x2="664" y2="688" stroke="#d1d9e0"/>
+        <text x="40" y="712" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="732" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

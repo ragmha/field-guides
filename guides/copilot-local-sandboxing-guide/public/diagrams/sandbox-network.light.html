@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check an outbound connection</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #f3f5f7; color: #1f2328; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #59636e; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Local Sandboxing · Flowchart</p>
+    <h1>Check an outbound connection</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="Check an outbound connection. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 736" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sandbox-network-light-title sandbox-network-light-desc">
+        <title id="sandbox-network-light-title">Check an outbound connection</title>
+        <desc id="sandbox-network-light-desc">Deny rules win, any allow rule turns outbound access into an allowlist, and otherwise outbound access follows the Allow outbound switch.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="736" fill="#f3f5f7"/>
+        <path d="M 184 96 L 184 136" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 304 192 L 376 192" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="316" y="176" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="328.25" y="185" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 184 248 L 184 320" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="278" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="201.5" y="287" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <path d="M 304 376 L 376 376" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="316" y="360" width="24.5" height="12" rx="2" fill="#f3f5f7"/><text x="328.25" y="369" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">YES</text>
+        <path d="M 184 432 L 184 504" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="192" y="462" width="19" height="12" rx="2" fill="#f3f5f7"/><text x="201.5" y="471" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">NO</text>
+        <rect x="40" y="40" width="288" height="56" rx="20" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184.0" y="72.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Sandboxed command connects</text>
+        <polygon points="184,136 304,192 184,248 64,192" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184" y="196" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Host denied?</text>
+        <rect x="376" y="152" width="288" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="188.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Connection blocked</text>
+        <text x="520.0" y="204.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Subdomains of a denied domain too</text>
+        <polygon points="184,320 304,376 184,432 64,376" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="184" y="380" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Any allow rule set?</text>
+        <rect x="376" y="336" width="288" height="80" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="520.0" y="372.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allowlist only</text>
+        <text x="520.0" y="388.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Host must match an allow rule</text>
+        <rect x="40" y="504" width="288" height="80" rx="20" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="184.0" y="540.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allowed if outbound is on</text>
+        <text x="184.0" y="556.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Allow outbound is on by default</text>
+        <text x="40" y="624" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Local network is a separate switch: off by default in the CLI, on in the Copilot app.</text>
+        <text x="40" y="640" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">On Windows, restrictions rely on programs honoring proxy settings.</text>
+        <line x1="40" y1="676" x2="664" y2="676" stroke="#d1d9e0"/>
+        <text x="40" y="700" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; diamond: decision; arrow: next step</text>
+        <text x="40" y="720" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

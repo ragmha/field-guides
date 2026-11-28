@@ -1,0 +1,50 @@
+{
+  "local-trust-boundary": {
+    "title": "What a local agent can reach",
+    "description": "Agent requests pass approval choices, then an optional local sandbox, before reaching the files, network, credentials and processes your account can reach."
+  },
+  "trusted-directories": {
+    "title": "Decide where a session starts",
+    "description": "Launch only in a trusted folder, review untrusted folders first, and relaunch in a narrower project folder instead of your home directory or a broad root."
+  },
+  "permission-modes": {
+    "title": "Compare permission modes",
+    "description": "Manual asks you, assisted sends requests to an AI safety review that can escalate, and allow-all approves tools, paths and URLs; none replaces the sandbox."
+  },
+  "approval-persistence": {
+    "title": "How long an approval lasts",
+    "description": "One-time approvals end with the action, session approvals last until the session ends and return on resume, and saved choices and rules persist until removed."
+  },
+  "cli-tool-rules": {
+    "title": "Resolve a CLI tool request",
+    "description": "Deny rules win first, then allow rules or allow-all flags, otherwise Copilot CLI prompts; paths and URLs are checked separately."
+  },
+  "terminal-auto-approve": {
+    "title": "Evaluate a terminal command",
+    "description": "VS Code splits chained commands and checks each part against auto-approve rules; an explicit ask beats an allow, and any part that needs approval prompts."
+  },
+  "sandbox-filesystem": {
+    "title": "Resolve path access in the sandbox",
+    "description": "Denied beats any grant, the more specific of read-only and read/write grants wins, and anything not granted stays denied by default."
+  },
+  "sandbox-network": {
+    "title": "Check an outbound connection",
+    "description": "Deny rules win, any allow rule turns outbound access into an allowlist, and otherwise outbound access follows the Allow outbound switch."
+  },
+  "credential-masking": {
+    "title": "How credential masking works",
+    "description": "A sandboxed command sees a placeholder, the local proxy swaps in the real credential only for HTTPS to approved hosts, and an approved bypass skips both."
+  },
+  "least-privilege-tokens": {
+    "title": "Which token Copilot CLI uses",
+    "description": "Copilot CLI checks three environment variables, then the keychain OAuth token, then the GitHub CLI token, and uses the first one it finds."
+  },
+  "isolation-tiers": {
+    "title": "Compare isolation tiers",
+    "description": "A local sandbox, dev container, codespace and cloud sandbox each separate different things from your machine, and each leaves a residual risk."
+  },
+  "local-incident-response": {
+    "title": "Respond to an unexpected agent action",
+    "description": "Stop the session, inspect changes and commands, review granted access, recover files, then report and rotate credentials; resetting approvals is not revocation."
+  }
+}

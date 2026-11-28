@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From session view to audit log</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; background: #07090d; color: #f0f6fc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 704px; min-width: 0; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-size: .66rem; color: #9198a1; margin-bottom: .5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 704px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Copilot Audit &amp; Telemetry · Flowchart</p>
+    <h1>From session view to audit log</h1>
+    <div class="diagram-container" tabindex="0" role="region" aria-label="From session view to audit log. Scroll horizontally to explore.">
+      <svg viewBox="0 0 704 612" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="agent-session-view-dark-title agent-session-view-dark-desc">
+        <title id="agent-session-view-dark-title">From session view to audit log</title>
+        <desc id="agent-session-view-dark-desc">Open AI controls, review recent agent sessions, open the 24-hour list, filter it, then move to the audit log with actor:Copilot for anything older or more detailed.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="612" fill="#07090d"/>
+        <path d="M 352 120 L 352 160" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 352 240 L 352 280" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M 352 360 L 352 400" fill="none" stroke="#9198a1" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="360" y="379" width="90.5" height="12" rx="2" fill="#07090d"/><text x="405.25" y="388" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="8" font-weight="400">OLDER OR DEEPER</text>
+        <rect x="40" y="40" width="624" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="76" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Open AI controls</text>
+        <text x="352" y="92" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise or organization settings</text>
+        <rect x="40" y="160" width="624" height="80" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Review recent sessions</text>
+        <text x="352" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The three most recent appear first</text>
+        <rect x="40" y="280" width="624" height="80" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="352" y="316" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">View all, last 24 hours</text>
+        <text x="352" y="332" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Filter by agent, user or repository</text>
+        <rect x="40" y="400" width="624" height="80" rx="20" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="436" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Search the audit log</text>
+        <text x="352" y="452" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">actor:Copilot, 180 days</text>
+        <text x="40" y="512" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">The session view is a short window for live oversight. It is not a retention store.</text>
+        <line x1="40" y1="552" x2="664" y2="552" stroke="#3d444d"/>
+        <text x="40" y="576" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: start/end; rectangle: action; arrow: next step</text>
+        <text x="40" y="596" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

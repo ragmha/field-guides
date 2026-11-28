@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="model-inventory-light-root" viewBox="0 0 704 704" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="model-inventory-light-title model-inventory-light-desc">
+        <title id="model-inventory-light-title">Why a listed model may not appear</title>
+        <desc id="model-inventory-light-desc">The supported model catalog narrows by plan, client surface, administrator policy and release timing before a user sees the model picker.</desc>
+        <defs><marker id="model-inventory-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="704" fill="#f3f5f7"/>
+        <rect x="40.0" y="40" width="624" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="64.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Supported model catalog</text>
+        <text x="352.0" y="80.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Reference list of models, providers and status</text>
+        <path d="M 352 96 L 352 128" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#model-inventory-light-arrow)"/>
+        <rect x="64.0" y="128" width="576" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="152.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot plan</text>
+        <text x="352.0" y="168.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Free and Student plans get Auto only</text>
+        <path d="M 352 184 L 352 216" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#model-inventory-light-arrow)"/>
+        <rect x="88.0" y="216" width="528" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="240.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Client or surface</text>
+        <text x="352.0" y="256.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Each surface lists its own models</text>
+        <path d="M 352 272 L 352 304" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#model-inventory-light-arrow)"/>
+        <rect x="112.0" y="304" width="480" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="328.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Administrator policy</text>
+        <text x="352.0" y="344.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enabled, disabled, delegated or unconfigured</text>
+        <path d="M 352 360 L 352 392" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#model-inventory-light-arrow)"/>
+        <rect x="136.0" y="392" width="432" height="56" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="352.0" y="416.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Release timing</text>
+        <text x="352.0" y="432.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Rollouts, previews and retirements</text>
+        <path d="M 352 448 L 352 480" fill="none" stroke="#59636e" stroke-width="1.5" marker-end="url(#model-inventory-light-arrow)"/>
+        <rect x="160" y="480" width="384" height="56" rx="20" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="504.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Model picker for one user</text>
+        <text x="352.0" y="520.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">What the person can actually choose</text>
+        <text x="40" y="576" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Utility models for background tasks are not in the picker and cannot be disabled individually.</text>
+        <text x="40" y="592" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Record category, provider and status; link to the reference for current model names.</text>
+        <line x1="40" y1="632" x2="664" y2="632" stroke="#d1d9e0"/>
+        <text x="40" y="656" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Oval: end result; rectangle: narrowing filter; arrow: next filter</text>
+        <text x="40" y="676" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

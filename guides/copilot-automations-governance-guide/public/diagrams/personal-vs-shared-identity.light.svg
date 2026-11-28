@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="personal-vs-shared-identity-light-root" viewBox="0 0 704 724" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="personal-vs-shared-identity-light-title personal-vs-shared-identity-light-desc">
+        <title id="personal-vs-shared-identity-light-title">Personal and shared automations compared</title>
+        <desc id="personal-vs-shared-identity-light-desc">The automation type is fixed at creation and decides visibility, editing, billing and the identity used for actions on GitHub.</desc>
+        <defs><marker id="personal-vs-shared-identity-light-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#59636e"/></marker></defs>
+        <rect x="0" y="0" width="704" height="724" fill="#f3f5f7"/>
+        <rect x="256" y="72" width="192" height="48" rx="6" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="352" y="100" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Who can see it</text>
+        <rect x="256" y="144" width="192" height="48" rx="6" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="352" y="172" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Who can edit it</text>
+        <rect x="256" y="216" width="192" height="48" rx="6" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="352" y="244" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Who sees its runs</text>
+        <rect x="256" y="288" width="192" height="48" rx="6" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="352" y="316" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Who pays AI credits</text>
+        <rect x="256" y="360" width="192" height="48" rx="6" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="352" y="388" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">Acts on GitHub as</text>
+        <rect x="256" y="432" width="192" height="48" rx="6" fill="#f3f5f7" stroke="#d1d9e0" stroke-width="1"/>
+        <text x="352" y="460" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">When creator leaves</text>
+        <text x="136" y="56" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">PERSONAL</text>
+        <text x="352" y="56" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">PROPERTY</text>
+        <text x="568" y="56" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">SHARED</text>
+        <rect x="40" y="72" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="136.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Creator only</text>
+        <rect x="472" y="72" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="568.0" y="100.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Read access</text>
+        <rect x="40" y="144" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="136.0" y="172.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Creator only</text>
+        <rect x="472" y="144" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="568.0" y="172.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Write access</text>
+        <rect x="40" y="216" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="136.0" y="244.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Read access</text>
+        <rect x="472" y="216" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="568.0" y="244.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Read access</text>
+        <rect x="40" y="288" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="136.0" y="316.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Creator</text>
+        <rect x="472" y="288" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="568.0" y="316.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository owner</text>
+        <rect x="40" y="360" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="136.0" y="388.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Creator</text>
+        <rect x="472" y="360" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="568.0" y="388.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Copilot</text>
+        <rect x="40" y="432" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="136.0" y="460.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Not documented</text>
+        <rect x="472" y="432" width="192" height="48" rx="6" fill="#ffffff" stroke="#59636e" stroke-width="1.5"/>
+        <text x="568.0" y="460.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Keeps working</text>
+        <rect x="40" y="504" width="624" height="56" rx="6" fill="#eaf6ed" stroke="#1a7f37" stroke-width="1.5"/>
+        <text x="352.0" y="528.0" text-anchor="middle" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Type is fixed at creation</text>
+        <text x="352.0" y="544.0" text-anchor="middle" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Choose by who should own the work over time</text>
+        <text x="40" y="600" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Shared automations in organizations need the org-billed cloud agent policy.</text>
+        <text x="40" y="616" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Personal is the default type through the REST API, which is public preview.</text>
+        <line x1="40" y1="664" x2="664" y2="664" stroke="#d1d9e0"/>
+        <text x="40" y="688" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Left and right: automation types; center: property compared</text>
+        <text x="40" y="708" text-anchor="start" fill="#59636e" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>

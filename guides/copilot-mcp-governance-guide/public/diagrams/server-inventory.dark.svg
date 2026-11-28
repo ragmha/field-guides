@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="server-inventory-dark-root" viewBox="0 0 704 572" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="server-inventory-dark-title server-inventory-dark-desc">
+        <title id="server-inventory-dark-title">Where MCP servers are configured</title>
+        <desc id="server-inventory-dark-desc">Four configuration locations with their editors and whether managed-settings allow and deny lists apply; repository custom agent profiles are not covered.</desc>
+        <defs><marker id="server-inventory-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="572" fill="#07090d"/>
+        <text x="140" y="60" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Location</text>
+        <text x="352" y="60" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Edited by</text>
+        <text x="564" y="60" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Allow and deny lists</text>
+        <rect x="40" y="80" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="140" y="108" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">User settings</text>
+        <text x="140" y="124" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">CLI and IDE configuration</text>
+        <rect x="264" y="80" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="108" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">The developer</text>
+        <text x="352" y="124" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Local files</text>
+        <rect x="464" y="80" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="564" y="108" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Apply</text>
+        <text x="564" y="124" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Allow and deny evaluated</text>
+        <rect x="40" y="168" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="140" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository settings</text>
+        <text x="140" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Cloud agent and code review</text>
+        <rect x="264" y="168" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Repository admins</text>
+        <text x="352" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Used by write access holders</text>
+        <rect x="464" y="168" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="564" y="196" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Apply</text>
+        <text x="564" y="212" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Including cloud sandboxes</text>
+        <rect x="40" y="256" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="140" y="284" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Custom agent profiles</text>
+        <text x="140" y="300" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">mcp-servers property</text>
+        <rect x="264" y="256" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="284" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Profile authors</text>
+        <text x="352" y="300" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Repository files</text>
+        <rect x="464" y="256" width="200" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="564" y="284" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Do not apply</text>
+        <text x="564" y="300" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Use firewall and review</text>
+        <rect x="40" y="344" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="140" y="372" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Built-in servers</text>
+        <text x="140" y="388" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Such as GitHub MCP server</text>
+        <rect x="264" y="344" width="176" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352" y="372" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">GitHub</text>
+        <text x="352" y="388" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enabled by default</text>
+        <rect x="464" y="344" width="200" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="564" y="372" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Always allowed</text>
+        <text x="564" y="388" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Exempt from deny rules</text>
+        <text x="40" y="448" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Copilot CLI also reads .mcp.json and .github/mcp.json project files.</text>
+        <text x="40" y="464" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Inventory every location before writing allow or deny rules.</text>
+        <line x1="40" y1="512" x2="664" y2="512" stroke="#3d444d"/>
+        <text x="40" y="536" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Row: configuration location; columns: editor and allow or deny list coverage</text>
+        <text x="40" y="556" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green: coverage gap that needs a compensating control</text>
+      </svg>

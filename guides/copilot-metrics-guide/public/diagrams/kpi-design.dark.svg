@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="kpi-design-dark-root" viewBox="0 0 704 516" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="kpi-design-dark-title kpi-design-dark-desc">
+        <title id="kpi-design-dark-title">A small adoption KPI sheet</title>
+        <desc id="kpi-design-dark-desc">Four group-level adoption KPIs, each with the decision it informs, a numerator and a denominator measured over the same window and scope.</desc>
+        <defs><marker id="kpi-design-dark-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#9198a1"/></marker></defs>
+        <rect x="0" y="0" width="704" height="516" fill="#07090d"/>
+        <text x="136.0" y="56.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">KPI AND DECISION</text>
+        <text x="352.0" y="56.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">NUMERATOR</text>
+        <text x="568.0" y="56.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="600">DENOMINATOR</text>
+        <rect x="40" y="72" width="192" height="64" rx="6" fill="#102219" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="136.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Weekly reach</text>
+        <text x="136.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Where to run enablement</text>
+        <rect x="256" y="72" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">weekly_active_users</text>
+        <text x="352.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Enterprise, one day</text>
+        <rect x="472" y="72" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="568.0" y="100.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Assigned seats</text>
+        <text x="568.0" y="116.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">User management API</text>
+        <rect x="40" y="160" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="136.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Sustained use</text>
+        <text x="136.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Does onboarding stick?</text>
+        <rect x="256" y="160" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Active all four weeks</text>
+        <text x="352.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Group-level count</text>
+        <rect x="472" y="160" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="568.0" y="188.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Active in week one</text>
+        <text x="568.0" y="204.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Same group of users</text>
+        <rect x="40" y="248" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="136.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Breadth</text>
+        <text x="136.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Is agent training needed?</text>
+        <rect x="256" y="248" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Users in Phases 1 to 3</text>
+        <text x="352.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Trailing 28 days</text>
+        <rect x="472" y="248" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="568.0" y="276.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Monthly active users</text>
+        <text x="568.0" y="292.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Same window</text>
+        <rect x="40" y="336" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="136.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Coverage</text>
+        <text x="136.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Can the data be trusted?</text>
+        <rect x="256" y="336" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="352.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Client telemetry present</text>
+        <text x="352.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Daily, never summed</text>
+        <rect x="472" y="336" width="192" height="64" rx="6" fill="#0d1117" stroke="#9198a1" stroke-width="1.5"/>
+        <text x="568.0" y="364.0" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Daily active users</text>
+        <text x="568.0" y="380.0" text-anchor="middle" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Same day</text>
+        <text x="40" y="436" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="10" font-weight="400">Publish for groups of five or more. Usage reports do not contain seat data.</text>
+        <line x1="40" y1="456" x2="664" y2="456" stroke="#3d444d"/>
+        <text x="40" y="480" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Rows: KPI; columns: decision, numerator and denominator</text>
+        <text x="40" y="500" text-anchor="start" fill="#9198a1" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif" font-size="9" font-weight="400">Green box: lesson focus, not approval or a safety rating</text>
+      </svg>
